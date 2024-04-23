@@ -15,7 +15,7 @@ The system aims to achieve at least an 85% keyword match with job descriptions, 
 The project is currently in the **active development stage**. The following features have been implemented:
 
 1. **User Information Collection** ✅
-   - The system can extract and organize user data from provided text files. *(Completed)* ✅
+   - The system can extract and organize user data provided by the use in an unorganized way. *(Completed)* ✅
 
 2. **Job Description Analysis** 🔧
    - The system can analyze job descriptions to identify key keywords and requirements. *(In Progress)* ⏳
