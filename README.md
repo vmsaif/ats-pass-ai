@@ -10,6 +10,24 @@ ATS Pass AI is an innovative tool designed to automate the creation of personali
 
 The system aims to achieve at least an 85% keyword match with job descriptions, ensuring that the resumes are tailored and ATS-friendly.
 
+## Current Development Status 🚀
+
+The project is currently in the **active development stage**. The following features have been implemented:
+
+1. **User Information Collection** ✅
+   - The system can extract and organize user data from provided text files. *(Completed)* ✅
+
+2. **Job Description Analysis** 🔧
+   - The system can analyze job descriptions to identify key keywords and requirements. *(In Progress)* ⏳
+
+3. **Resume Creation** 🔧
+   - The system can integrate user information with job description analysis to draft resumes. *(Scheduled)* 📅
+
+4. **LaTeX Resume Generation** 🔧
+   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(Scheduled)* 📅
+
+
+
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 
 
