@@ -1,0 +1,502 @@
+A unique self-made philosophy has always guided my journey in software development: to
+create a "magic button" for users. That is, One button should do everything the user wants at this moment. Though this is not possible yet given our technological limitations, I have always believed, that programs should be as simple as that. 
+
+This concept is not just about simplifying interactions but
+about deeply understanding the user's needs and crafting solutions that feel intuitive,
+empowering, and, above all, magical. It's about creating experiences where complex processes
+vanish behind a single, seamless action. One button that will do everything the user is thinking
+at the moment. Though this is not possible yet, I have written every single code line while
+keeping this philosophy in my mind.
+
+name: Saif Mahmud
+saifmahmud.dev | linkedin.com/in/vmsaif
+msaifofficial@gmail.com | 204 955 5064 | Winnipeg, MB
+
+Education
+University of Manitoba
+BSc Major in Computer Science
+Graduated, October 2023 | GPA: 3.07
+
+Relevant Courses
+Distributed Computing (Python | JavaScript)
+Data Structures and Algorithms (Java)
+Object Orientation (Java | C++)
+Software Engineering (Java | Unit Testing)
+Database Implementation (SQL | Python)
+AI and Game Development (Java | Python)
+Technical Communication in CS
+
+Skills
+Programming: Python, Javascript, C++, Java
+Database: MySQL, JSON, noSQL, Schema
+Cloud & DevOps: CI/CD, GitHub Action, AWS(Basic)
+Soft Skills: Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis
+Programming Concepts: System Analysis, Web and Mobile Technologies, OOP, Data Structures, SDLC, Debugging and Troubleshooting, Test driven deployment
+
+VOLUNTEER
+.dev Programming Club
+Active Member | University of Manitoba Students Union (UMSU) | 2019-2023
+- Engaged with the latest software development technologies and tools.
+- Collaborated on team projects focused on Java and Cloud Technologies.
+
+ACTIVITIES
+Captain: Football Club Vikings, Dhaka, Bangladesh (2012 - 2014)
+Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)
+
+Career Goal
+As a Proactive, innovative-thinking Software Developer with a BSc in Computer Science, I am passionate about giving it all at SGA Tech Solutions. I aim to contribute innovative solutions in a collaborative environment and am committed to professional growth.
+
+Project Experience
+
+AI Path Finding | CI/CD | A* Algorithm | Java | Git
+Game Development - Sep 2023 - Dec 2023
+A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+- Utilized concurrent programming to enhance game performance.
+- Employed CI/CD practices to enhance project efficiency, reducing deployment time by 50%.
+- Project repository here on GitHub: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+
+Blockchain Car Mileage Tracker | Docker | Vue.js
+Innovative Project - January 2023 - Mar 2023
+Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
+- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording.
+- Collaborated closely as a team to design, develop, and test the application.
+- Project details available here on GitHub: https://github.com/vmsaif/blockChainCarMilageTracker
+
+Reversible Learning APP | SQL | UI | Android | Java
+Project Management | Team Player - January 2021 - April 2021
+Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits.
+- Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
+- Demonstrated adaptability and effective communication by working in a team environment.
+- Project accessible on GitHub: https://github.com/vmsaif/reversibleLearning
+
+Bank Account System | Java | File I/O
+Object-Oriented Design - Polymorphism
+Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
+- Developed scalable Java applications, optimizing process efficiency by 30%.
+- Implemented an intricate class hierarchy, demonstrating polymorphism.
+- Facilitated open-source collaboration with documentation, accessible here: https://github.com/vmsaif/bankAccountSystem
+
+
+
+\vspace{5pt}
+\runsubsection{ATS Pass AI}
+\descript{| Multiagent | AI | Python | RAG Search}
+\location{Resume Automation Tool - January 2024 - Present}
+
+\vspace{5pt}
+
+Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+
+\vspace{15pt}
+
+
+\begin{tightemize}
+    \item Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.
+    \item Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85\% keyword alignment and optimizing resumes for ATS.
+    \item Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.
+    \item Project repository available on \href{https://github.com/vmsaif/ats-pass-ai}{\underline{GitHub}}.
+    \end{tightemize}
+\sectionsep
+
+% Blockchain Car Mileage Tracker Project Description
+\runsubsection{Blockchain Car Mileage Tracker}
+\descript{| Docker | Vue.js }
+\location{Innovative Project - January 2023 - Mar 2023}
+\vspace{5pt}
+Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
+
+\vspace{15pt}
+% \vspace{5pt}
+
+\begin{tightemize}
+\item Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.
+\item Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.
+\item Solving a real-world problem by crafting a \textbf{smart contract} for tamper-proof mileage recording, enhancing trust in vehicle history.
+% \item Built a simple web interface for insurance companies to access up-to-date mileage data, ensuring transparency.
+% \item Successfully integrated blockchain technology, potentially \textbf{leading to a 30\% reduction} in mileage fraud claims.
+\item Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills.
+\item Project details \href{https://github.com/vmsaif/blockChainCarMilageTracker}{\underline{GitHub Link.}}
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+
+
+% For the AI Path Finding Project
+\runsubsection{AI Path Finding}
+\descript{| A* Algorithm | Java | Git | CI/CD}
+\location{Game Development - Jul 2023 - Sep 2023}
+
+\vspace{5pt}
+
+A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+
+% \vspace{15pt}
+\vspace{5pt}
+
+\begin{tightemize}
+% \item Leveraged Java to develop an AI-driven game, demonstrating strong object-oriented programming skills similar to C\#.
+\item Utilized Git for version control, ensuring efficient team collaboration and code management.
+\item Utilized CI/CD practices, \textbf{resulting in a 50\% reduction} in deployment time.
+\item Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+\item Applied fundamental software development and testing processes to ensure robust application performance.
+\item Project repository here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\underline{GitHub}}.
+\end{tightemize}
+\sectionsep
+
+% \vspace{5pt}
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+
+% For the Recursive Ray Tracing in OpenGL Project
+\runsubsection{Recursive Ray Tracing}
+\descript{| 3D Graphics | OpenGL | C++}
+\location{Graphics Programming - May 2023 - July 2023}
+
+\vspace{5pt}
+
+\begin{tightemize}
+\item Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating a deep understanding of C++ and 3D graphics principles.
+% \item Utilized C++ for algorithm development, showing proficiency in modern object-oriented languages akin to C\#.
+\item Applied geometry and generic math skills to calculate light paths and surface interactions.
+% \item Explored multi-threaded rendering processes, aligning with interests in multi-threaded parallel processing methodologies.
+\item Project repository and implementation details available on \href{https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL}{\underline{GitHub}}.
+\end{tightemize}
+\sectionsep
+
+
+% ------------------For the Bank Account System Project----------------%
+\vspace{5pt}
+\runsubsection{Bank Account System}
+\descript{| Java | File I/O}
+\location{Object-Oriented Design - Polymorphism}
+\vspace{5pt}
+
+Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
+
+\vspace{5pt}
+
+\begin{tightemize}
+    \item Developed scalable Java applications, showcasing a deep understanding of object-oriented programming \textbf{optimizing process efficiency by 30\%}.
+    \item Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling.
+    \item Facilitated open-source collaboration with documentation, accessible \href{https://github.com/vmsaif/bankAccountSystem}{\underline{here}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+
+% --------------- Hosting a Resume on GitHub Pages Project Description -------------------%
+
+\runsubsection{Hosting a Resume on GitHub Pages}
+\descript{| Documentation}
+\location{Technical Documentation - Apr 2023 - Apr 2023}
+A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.
+
+\vspace{2pt}
+
+\begin{tightemize}
+    \item Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.
+    \item Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.
+    \item Emphasized beginner-friendly methods for web hosting and documentation.
+    \item Showcased ability to create clear, structured technical documentation accessible online.
+    \item Find the project \href{https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/}{\underline{here}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+\vspace{5pt}
+
+% Further Reduced ELF Binary Analysis Project Description
+\runsubsection{ELF Binary Analysis}
+\descript{| C Programming | Debugging | Linux OS}
+\location{Nov 2022 - Dec 2022}
+Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.
+
+\begin{tightemize}
+\item Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.
+\item Enhanced debugging efficiency by 20\%, showcasing problem-solving abilities essential for customer technical assistance.
+\item Actively contributed to technical documentation for product and knowledge base improvement.
+\item Project repository: \href{https://github.com/vmsaif/readingAndInterpretingBinary}{\underline{here}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+% ----------- Reading and Interpreting Binary Files (ELF) Project Description----------------%
+\runsubsection{ELF Binary Analysis}
+\descript{| C | Storage System | OS}
+\location{November 2022 - December 2022}
+Developed a C program to extract key information from ELF headers of binary files.
+\begin{tightemize}
+    \item Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.
+\item Utilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.
+\item Enhanced system analysis efficiency by 20\%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.
+\item Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties.
+\item Project repository with source code and implementation details is available at \href{https://github.com/vmsaif/readingAndInterpretingBinary}{\underline{here}}, exemplifying a commitment to open-source collaboration and knowledge sharing with peers and customers.
+
+% \item Analyzed ELF formatted binaries, enhancing understanding of low-level system operations.
+% \item Increased efficiency in debugging and system analysis by 20\%.
+% \item Compiled and executed the program with detailed instructions and sample outputs.
+% \item Project repository available at \href{https://github.com/vmsaif/readingAndInterpretingBinary}{\underline{here}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+% ---------------OpenGL Sphere Lighting Project Description -------------------%
+
+
+\runsubsection{OpenGL Sphere Lighting}
+\descript{| OpenGL | C++}
+\location{Graphics Programming - April 2023 - June 2023}
+Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
+
+\vspace{2pt}
+
+\begin{tightemize}
+\item Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.
+\item Enhanced user interactivity by 50\% through an interactive menu system for real-time modifications of light and material.
+\item Utilized `glutSolidSphere` for accurate sphere rendering, showcasing the effects of different lighting conditions.
+\item Project repository and implementation details available on \href{https://github.com/vmsaif/openGL-sphere-lighting-program}{\underline{here}}.
+\end{tightemize}
+\sectionsep
+% \vspace{7pt}
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+\runsubsection{Reversible Learning APP}
+\descript{| SQL | Android Studio | Java}
+\location{Project Management | Team Player - January 2021 - April 2021}
+\vspace{5pt}
+Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.
+
+% \vspace{15pt}
+\vspace{5pt}
+
+\begin{tightemize}
+    \item Employed \textbf{JUnit} for comprehensive unit and integration testing, \textbf{resulting in a 25\% decrease} in post-release bugs.
+    \item Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives.
+    \item Developed an intuitive user interface (UI) for note organization and question archiving.
+    \item Project accessible on GitHub: \href{https://github.com/vmsaif/reversibleLearning}{\underline{\textbf{here}}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+-------------CONNECT 4 with AI Decision-Making----------------%
+
+\runsubsection{Connect 4 Game}
+\descript{| \space AI Decision-Making | Java }
+\location{CI/CD | Cross-Platform Deployment - February 2023 - April 2023}
+
+% \vspace{5pt}
+\vspace{3pt}
+
+Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
+
+% \vspace{5pt}
+\vspace{3pt}
+
+\begin{tightemize}
+% add a black new line 
+
+% \item Implemented minimax algorithm with alpha-beta pruning for efficient AI decisions.
+% \item Utilized CI/CD practices, \textbf{resulting in a 50\% reduction} in deployment time.
+% \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+% \item \textbf{Reduced deployment time by 50\%} through efficient CI/CD practices.
+% \item Enhanced user engagement through competitive AI gameplay.
+% \item Engaged in structured hands-on training for cross-platform deployment, optimizing CI/CD pipelines, available in this \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\underline{\textbf{link}}}.
+
+\item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+\item Implemented efficient CI/CD workflows to streamline development and deployment processes.
+\item Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+% \item Coordinated within a team environment, practicing effective communication and project management skills.
+\item Access to project details and code here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\underline{GitHub}}.
+
+\end{tightemize}
+\sectionsep
+
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+
+
+\vspace{3pt}
+
+% -------------TCP Chat Application----------------%
+
+\runsubsection{TCP Chat Application}
+\descript{| TCP/IP | Multithreading | Network}
+\location{Client-Server Communication - October 2022 - December 2022}
+Developed a Java chat application for real-time client-server communication using TCP.
+
+% \vspace{2pt}
+\vspace{5pt}
+
+\begin{tightemize}
+    \item Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling.
+    \item Implemented socket programming for robust client-server communication.
+    \item Enabled features like room creation, joining/leaving rooms, and viewing room details.
+    \item \textbf{Achieved a 99.9\% uptime and stability} rate, enhancing user experience and application stability.
+    % % \item Facilitated real-time message exchange across multiple chat rooms.
+    % \item Project repository and further details can be found \href{https://github.com/vmsaif/tcpChatJava}{\underline{here}}.
+    \item Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management.
+    % \item Developed with an agile methodology, adapting to changing requirements and incorporating feedback into the development process.
+    \item Source code and documentation available on GitHub: \href{https://github.com/vmsaif/tcpChatJava}{\underline{\textbf{here}}}
+\end{tightemize}
+\sectionsep
+
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+\runsubsection{Data Visualization with R}
+\descript{| Akin to Python | Data Analysis}
+\location{Course Project}
+
+\vspace{5pt}
+Utilized R for statistical analysis and data visualization, akin to Power BI tasks. Demonstrated ability to translate complex data into actionable insights.
+\vspace{5pt}
+
+\begin{tightemize}
+\item Utilized R for statistical analysis and data visualization, akin to Power BI tasks.
+\item Demonstrated ability to translate complex data into actionable insights.
+\item Learned to create interactive visualizations, enhancing data-driven decision-making.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+\runsubsection{Portfolio Website}
+\descript{| React | Styled-Components}
+\location{Self-Initiated Project - 2021}
+
+\vspace{5pt}
+
+Developed a comprehensive portfolio website to showcase my projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages.
+
+% \vspace{15pt}
+\vspace{5pt}
+
+\begin{tightemize}
+\item Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility.
+\item Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization.
+\item The site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating my full-stack development capabilities.
+\item Visit my portfolio website at \href{https://vmsaif.github.io/}{\underline{vmsaif.github.io}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+
+% For the CPU Scheduling Simulator Project
+\runsubsection{CPU Scheduling}
+\descript{| C | Multithreading | Linux | Bash | Git}
+\location{System Programming - June 2023 - August 2023}
+
+\vspace{15pt}
+% \vspace{5pt}
+
+\begin{tightemize}
+\item Developed a multi-threaded scheduling simulator in C, showcasing knowledge in parallel processing methodologies relevant to robotics and geometrical planning.
+\item Practiced Linux OS administration and Bash scripting for system programming, reflecting skills in managing unix-based environment systems.
+\item Employed Git for source control, aligning with industry-standard version control practices.
+% \item Focused on the full life cycle development, from design through unit testing and code reviews, mirroring the structured design methodologies sought by Lincoln Electric.
+\item Project repository here on \href{https://github.com/vmsaif/cpu_scheduling} {\underline{GitHub}}.
+\end{tightemize}
+\sectionsep
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+% GBN Protocol Simulation Project Description
+\runsubsection{Go-Back-N Protocol Simulation}
+\descript{| Python | Networking }
+\location{Data Visualization - Nov 2022 - Dec 2022}
+Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects.
+
+\vspace{15pt}
+% \vspace{10pt}
+
+\begin{tightemize}
+\item Simulated packet loss and generated visualizations with matplotlib to illustrate protocol performance. Increased understanding of networking protocols and data transmission by 65\%.
+\item Analyzed adaptive window sizing benefits for flow control in networking.
+\item Project repository \href{https://github.com/vmsaif/gbnProtocolSimulation}{\underline{\textbf{here}}}.
+\end{tightemize}
+\sectionsep
+
+
+\vspace{5pt}
+
+
+
+% ----------------------------------xxx-----------------------------------------%
+% ----------------------------------xxx-----------------------------------------%
+
+
+
+
+\section{Experience}
+\runsubsection{Programming Mentor - Online and In-Person}
+\descript{| Private Tutoring | Python, Java}
+\location{Winnipeg, Manitoba | February 2023 - December 2023}
+\vspace{5pt}
+
+Tutored a student in computer systems and programming, focusing on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role.
+
+\vspace{15pt}
+
+\begin{tightemize}
+    \item Delivered one-on-one lessons focusing on computer system principles and learning introductory programming.
+    \item Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.
+    \item Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.
+\end{tightemize}
