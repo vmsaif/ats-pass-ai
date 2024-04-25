@@ -1,12 +1,19 @@
 [tool.poetry]
 name = "ats_pass_ai"
 version = "0.1.0"
-description = "ats-pass-ai using crewAI"
-authors = ["Your Name <you@example.com>"]
+description = "A highly tailored resume maker tool powered by AI to pass the ats system." 
+authors = ["Saif Mahmud <msaifofficial@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<=3.13"
+python = ">=3.10,<3.13"
 crewai = {extras = ["tools"], version = "^0.28.8"}
+langchain-google-genai = "^1.0.2"
+langchain-google-vertexai = "^1.0.1"
+transformers = "^4.40.1"
+tiktoken = "^0.5.2"
+pip = "^24.0"
+install = "^1.3.5"
+pyinstaller = "^6.6.0"
 
 [tool.poetry.scripts]
 ats_pass_ai = "ats_pass_ai.main:run"

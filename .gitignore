@@ -29,6 +29,8 @@ build/
 *.log
 
 # Ignore database files
+db/
+*.sql
 *.db
 *.sqlite
 
@@ -39,3 +41,8 @@ Thumbs.db
 # Ignore Google Gemini credentials
 credentials/
 *.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
