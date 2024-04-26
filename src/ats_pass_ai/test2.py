@@ -1,16 +1,13 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
-import google.generativeai as genai
 from transformers import GPT2Tokenizer
 import getpass
 import os
-
-
 
 # Check and set the API key
 if "GOOGLE_API_KEY" not in os.environ:
     os.environ["GOOGLE_API_KEY"] = getpass.getpass("Provide your Google API Key")
 
-model = genai.GenerativeModel('gemini-pro')
+
 # Initialize the model
 llm = ChatGoogleGenerativeAI(
     model="gemini-pro",

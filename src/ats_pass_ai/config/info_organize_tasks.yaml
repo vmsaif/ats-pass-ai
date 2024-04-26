@@ -2,16 +2,45 @@
 
 personal_information_task:
   description: >
-    Gather comprehensive personal details including full name, contact information,
-    professional online profiles, and personal website. Ensure completeness and accuracy. Note that the user may not have all the information.
+    Utilize an automated tool to segment and organize a document from the specified local file path {user_info_file_path}. Employ the "action" command: "organize the document" to execute this task. Focus on creating a complete and well-structured profile that not only presents the information in a clear, organized, structured, and categorized format but also ensures that the output is detailed and comprehensive, integrating all segments cohesively. Ensure the inclusion of all essential sections and details:
+    * A detailed introduction or summary at the top of the resume.
+    * Complete descriptions and dates for all projects, including GitHub links and technologies used.
+    * Detailed information on the user's experiences, with descriptions for each listed experience.
+    Review the output to identify and correct any formatting issues and to improve the content's clarity and flow as necessary.
+
   expected_output: >
-    Information of the user
-    name: 
-    phonenumber:
-    email address:
-    LinkedIn profile:
-    other social media profiles:
-    personal website link:
+    A comprehensive profile that includes all necessary details about the user, a software developer. The output should provide a complete and accurate compilation of all data from the document, integrating the segments cohesively and filling any gaps in information. The profile must include:
+    * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
+    * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
+    * Comprehensive details on experiences, including descriptions of roles and achievements.
+    * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
+    * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
+    * A focused career goal section, with clear steps and skills to be acquired.
+    * Figures and statistics where applicable to substantiate claims made in the profile.
+    * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
+    Furthermore, ensure the document follows these formatting guidelines:
+    * Use of headings and subheadings for improved readability and organization.
+    * Consistent formatting throughout, including indenting and spacing.
+    * Text that is well-formatted and easy to read.
+    Consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
+
+
+
+
+
+# personal_information_task:
+#   description: >
+#     You will use the given tool to gather comprehensive personal details including full name, contact information,
+#     professional online profiles, and personal website from this local file path {user_info_file_path}.
+#   expected_output: >
+#     Information of the user \n
+#     name: \n
+#     phonenumber: \n
+#     email address: \n
+#     LinkedIn profile: \n
+#     other social media profiles: \n
+#     personal website link: \n
+#     portfolio link: \n
 
 # education_task:
 #   description: >

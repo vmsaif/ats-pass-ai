@@ -27,7 +27,6 @@ The project is currently in the **active development stage**. The following feat
    - The system can convert finalized resumes into professionally formatted LaTeX documents. *(Scheduled)* 📅
 
 
-
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 
 
@@ -57,30 +56,41 @@ git clone https://github.com/vmsaif/ats-pass-ai
 
 # for windows
 python -m venv venv
-.\.venv\Scripts\activate 
+.\venv\Scripts\activate 
 ```
     
 ```bash
 # for linux
 python3 -m venv venv
-source .venv/bin/activate 
+source venv/bin/activate 
 ```
 
-### 3: Install the required Python libraries:
+### 3: Install poetry
+
 ```bash
-cd ats-pass-ai
-pip install -r requirements.txt
+pip install poetry
+```
+
+Also, install the required libraries:
+
+```bash
+poetry install
+
 ```
 
 ### 4: Configure API Key
 - Obtain a GOOGLE_API_KEY by following the instructions at [Google Cloud Console](https://console.cloud.google.com/apis/credentials). Ensure the API key has appropriate permissions enabled.
 
-- Create a .env file in the root directory and add:
+- Obtain a GROQ_API_KEY by following the instructions at [GROQ](https://console.groq.com/keys). 
+
+- `Create` a .env file in the root directory and add:
+
 ```plaintext
 GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY_HERE
+GROQ_API_KEY=YOUR_GROQ_API_KEY_HERE
 ```
 
-
+Note: Replace `YOUR_GOOGLE_API_KEY_HERE ` and `YOUR_GROQ_API_KEY ` with your actual API keys. No need to include quotes.
 
 ### 5: Prepare Your Data
 
@@ -88,15 +98,14 @@ GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY_HERE
 - Add job descriptions to `job_description.txt`.
 
 ### 6: Run the Application
-```bash
-#Windows:
-python app_gem.py
+   
+From the root directory, run the following command:
 
-#Linux:
-python3 app_gem.py
+```bash
+poetry run ats_pass_ai
+
 ```
 
-
 ### 7. Retrieve Your Resumes
-- Find the generated resumes in the output directory, available in both LaTeX and plain text formats.
+- Find the generated resumes in the output directory, available in both LaTeX and plain text formats. (Coming soon)
 

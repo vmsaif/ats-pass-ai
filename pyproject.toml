@@ -8,12 +8,8 @@ authors = ["Saif Mahmud <msaifofficial@gmail.com>"]
 python = ">=3.10,<3.13"
 crewai = {extras = ["tools"], version = "^0.28.8"}
 langchain-google-genai = "^1.0.2"
-langchain-google-vertexai = "^1.0.1"
+langchain-groq = "^0.1.3"
 transformers = "^4.40.1"
-tiktoken = "^0.5.2"
-pip = "^24.0"
-install = "^1.3.5"
-pyinstaller = "^6.6.0"
 
 [tool.poetry.scripts]
 ats_pass_ai = "ats_pass_ai.main:run"
