@@ -425,7 +425,7 @@ Developed a comprehensive portfolio website to showcase my projects, skills, and
 \item Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility.
 \item Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization.
 \item The site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating my full-stack development capabilities.
-\item Visit my portfolio website at \href{https://vmsaif.github.io/}{\underline{vmsaif.github.io}}.
+\item Visit my portfolio website at \href{https://saifmahmud.dev/}{\underline{saifmahmud.dev}}.
 \end{tightemize}
 \sectionsep
 
