@@ -1,10 +1,14 @@
 from langchain.tools import BaseTool
 from langchain.pydantic_v1 import BaseModel, Field
 from transformers import GPT2Tokenizer
-from langchain_google_genai import ChatGoogleGenerativeAI
 from typing import Type, Optional
 from textwrap import dedent
-
+from langchain_groq import ChatGroq
+from langchain_google_genai import (
+    ChatGoogleGenerativeAI,
+    HarmBlockThreshold,
+    HarmCategory,
+)
 
 from langchain.callbacks.manager import (
     # AsyncCallbackManagerForToolRun, # need to turn on if want to use async, also change run method to async and the parameter
@@ -32,22 +36,30 @@ class TextFileReaderTool(BaseTool):
 
         llm = ChatGoogleGenerativeAI(
             model="gemini-pro",
-            top_k=50, 
-            top_p=0.95
+            temperature=0.8,
+            top_k=20, 
+            top_p=1.0,
+            safety_settings={
+                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+            }
         )
 
         tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
         token_limit = 2000
-        chunk_overlap_tokens = 20
+        chunk_overlap_tokens = 100
 
         document = self._read_text_file(file_path)
-        text_chunks = self._split_text(document, token_limit, tokenizer, chunk_overlap_tokens)
+        text_chunks = self._split_text(document, action, token_limit, tokenizer, chunk_overlap_tokens)
         payload = []
         summaries = []
 
         # Prepare the batch of inputs
+        
         for chunk in text_chunks:
-            payload.append(action + "\n" + chunk)
+            payload.append(action +'\n'+ chunk)
         response = llm.batch(payload)
 
         for res in response:
@@ -65,48 +77,112 @@ class TextFileReaderTool(BaseTool):
             print(f"File not found at the specified path: {file_path}")
         
 
-    def _split_text(self, text: str, limit: int, tokenizer: GPT2Tokenizer, chunk_overlap_tokens: int):
+    def _split_text(self, text: str, action: str, limit: int, tokenizer: GPT2Tokenizer, chunk_overlap_tokens: int):
         """
-        Splits the text into chunks that fit within the given token limit, with an overlap between consecutive chunks.
+        Splits the text into chunks at the nearest double newline character before exceeding the limit,
+        or based on token count if no suitable newline is found. It includes an overlap between consecutive chunks.
 
-        Overlap Mechanism: The function includes an overlap parameter that determines how many tokens (approximately, based on word count) are carried over to the next chunk. This helps in maintaining context across chunk boundaries.
-
-        Overlap Buffer: This buffer stores the last few words of the current chunk to prepend them to the next chunk, creating the overlap.
-        
-        Current Length Recalculation: When a new chunk starts, instead of resetting to zero or the length of the new word, the length is recalculated to include the entire new chunk starting with the overlap.
-        
         Parameters:
             text (str): The text to be split.
             limit (int): The maximum token count for each chunk.
             tokenizer (GPT2Tokenizer): The tokenizer to use for tokenizing text.
-            overlap (int): The number of tokens to overlap between consecutive chunks.
+            chunk_overlap_tokens (int): The number of tokens to overlap between consecutive chunks.
         """
         words = text.split()
         current_chunk = []
         chunks = []
         current_length = 0
         overlap_buffer = []
+        reconstructed_text = ' '.join(words)
+        last_newline_pos = 0  # Position of last encountered newline in reconstructed text
 
-        for word in words:
+        action_tokens = tokenizer.tokenize(action)
+        num_action_tokens = len(action_tokens)
+
+        start_index = 0  # Start index of the current chunk in reconstructed text
+
+        for i, word in enumerate(words):
             tokens = tokenizer.tokenize(word)
             num_tokens = len(tokens)
-            if current_length + num_tokens > limit:
-                # When the current chunk limit is reached
-                # Join the current chunk and store it
-                chunks.append(' '.join(current_chunk))
-                # Start new chunk with the overlap from the previous chunk
-                current_chunk = overlap_buffer + [word]
-                current_length = sum(len(tokenizer.tokenize(w)) for w in current_chunk)
-                # Prepare overlap buffer for the next chunk
-                overlap_buffer = current_chunk[-chunk_overlap_tokens:] if len(current_chunk) > chunk_overlap_tokens else current_chunk
+
+            if current_length + num_tokens + num_action_tokens > limit:
+                # Look for last double newline before the current position in the reconstructed text
+                last_newline_pos = reconstructed_text.rfind('\n\n', start_index, start_index + current_length)
+                
+                # If a newline is found and is a reasonable place to split
+                if last_newline_pos != -1:
+                    # Create the chunk up to the last newline
+                    chunks.append(reconstructed_text[start_index:last_newline_pos].strip())
+                    start_index = last_newline_pos + 2  # Start after the newline
+                    current_chunk = reconstructed_text[start_index:start_index + current_length].split()
+                    current_length = sum(len(tokenizer.tokenize(w)) for w in current_chunk)
+                    overlap_buffer = current_chunk[-chunk_overlap_tokens:] if len(current_chunk) > chunk_overlap_tokens else current_chunk
+                else:
+                    # No newline found, split at current position
+                    chunks.append(' '.join(current_chunk))
+                    current_chunk = overlap_buffer + [word]
+                    current_length = sum(len(tokenizer.tokenize(w)) for w in current_chunk)
+
             else:
                 current_chunk.append(word)
                 current_length += num_tokens
 
-        # add the last chunk if it exists
+        # Add the last chunk if it exists
         if current_chunk:
             chunks.append(' '.join(current_chunk))
 
         return chunks
+
+
+    # def _split_text(self, text: str, action: str, limit: int, tokenizer: GPT2Tokenizer, chunk_overlap_tokens: int):
+    #     """
+    #     Splits the text into chunks that fit within the given token limit, with an overlap between consecutive chunks.
+
+    #     Overlap Mechanism: The function includes an overlap parameter that determines how many tokens (approximately, based on word count) are carried over to the next chunk. This helps in maintaining context across chunk boundaries.
+
+    #     Overlap Buffer: This buffer stores the last few words of the current chunk to prepend them to the next chunk, creating the overlap.
+        
+    #     Current Length Recalculation: When a new chunk starts, instead of resetting to zero or the length of the new word, the length is recalculated to include the entire new chunk starting with the overlap.
+        
+    #     Parameters:
+    #         text (str): The text to be split.
+    #         limit (int): The maximum token count for each chunk.
+    #         tokenizer (GPT2Tokenizer): The tokenizer to use for tokenizing text.
+    #         overlap (int): The number of tokens to overlap between consecutive chunks.
+    #     """
+    #     words = text.split()
+    #     current_chunk = []
+    #     chunks = []
+    #     current_length = 0
+    #     overlap_buffer = []
+
+    #     action_tokens = tokenizer.tokenize(action)
+    #     num_action_tokens = len(action_tokens)
+
+    #     for word in words:
+    #         tokens = tokenizer.tokenize(word)
+            
+    #         num_tokens = len(tokens)
+    #         if current_length + num_tokens + num_action_tokens > limit:
+    #             # When the current chunk limit is reached
+    #             # Join the current chunk and store it
+    #             chunks.append(' '.join(current_chunk))
+    #             # Start new chunk with the overlap from the previous chunk
+    #             current_chunk = overlap_buffer + [word]
+    #             current_length = sum(len(tokenizer.tokenize(w)) for w in current_chunk)
+    #             # Prepare overlap buffer for the next chunk
+    #             overlap_buffer = current_chunk[-chunk_overlap_tokens:] if len(current_chunk) > chunk_overlap_tokens else current_chunk
+
+    #             print(f"current_chunk: \n\n{current_chunk}\n\n")
+    #         else:
+    #             current_chunk.append(word)
+    #             current_length += num_tokens
+
+    #     # add the last chunk if it exists
+    #     if current_chunk:
+    #         chunks.append(' '.join(current_chunk))
+    #         print(f"current_chunk: \n\n{current_chunk}\n\n")
+
+    #     return chunks
 
 

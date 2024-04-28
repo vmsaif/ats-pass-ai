@@ -1,0 +1,320 @@
+**User's Profile:**
+
+* Name: Saif Mahmud
+* Phone Number: 204 955 5064
+* Email: msaifofficial@gmail.com
+* LinkedIn Profile: linkedin.com/in/vmsaif
+* Personal Website Link: saifmahmud.dev
+* GitHub Profile: https://github.com/vmsaif
+
+**Education:**
+
+* University of Manitoba, BSc Major in Computer Science, Graduated October 2023, GPA: 3.07
+
+**Relevant Courses:**
+
+* Distributed Computing (Python | JavaScript)
+* Data Structures and Algorithms (Java)
+* Object Orientation (Java | C++)
+* Software Engineering (Java | Unit Testing)
+* Database Implementation (SQL | Python)
+* AI and Game Development (Java | Python)
+* Technical Communication in CS
+
+**Skills:**
+
+**Programming:**
+
+* Python
+* JavaScript
+* C++
+* Java
+
+**Database:**
+
+* MySQL
+* JSON
+* noSQL
+* Schema
+
+**Cloud & DevOps:**
+
+* CI/CD
+* GitHub Action
+* AWS (Basic)
+
+**Soft Skills:**
+
+* Good Interpersonal Skills
+* Communication
+* Teamwork
+* Problem Solving
+* Adaptability
+* Time Management
+* Critical Thinking
+* Complexity Analysis
+
+**Programming Concepts:**
+
+* System Analysis
+* Web and Mobile Technologies
+* OOP
+* Data Structures
+* SDLC
+* Debugging and Troubleshooting
+* Test driven deployment
+
+**Volunteer Experience:**
+
+* .dev Programming Club Active Member, University of Manitoba Students Union (UMSU), 2019-2023
+
+**Activities:**
+
+* Captain, Football Club Vikings, Dhaka, Bangladesh, 2012 - 2014
+* Gaming Achievements:
+    * FIFA Champion (UMBSA 2017 and CBA 2018)
+    * Intel PC Guru - 3rd Place (2007)
+
+**Career Goal:**
+
+As a Proactive, innovative-thinking Software Developer with a BSc in Computer Science, I am passionate about giving it all at SGA Tech Solutions. I aim to contribute innovative solutions in a collaborative environment and am committed to professional growth.
+
+**Project Experience:**
+
+**AI Path Finding | CI/CD | A* Algorithm | Java | Git**
+
+* Game Development, September 2023 - December 2023
+* Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+* Utilized concurrent programming to enhance game performance.
+* Employed CI/CD practices to enhance project efficiency, reducing deployment time by 50%.
+* Project repository: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+
+**Blockchain Car Mileage Tracker | Docker | Vue.js**
+
+* Innovative Project, January 2023 - March 2023
+* Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
+* Solved a real-world problem by crafting a smart contract for tamper-proof mileage recording.
+* Collaborated closely as a team to design, develop, and test the application.
+* Project details: https://github.com/vmsaif/blockChainCarMilageTracker
+
+**Reversible Learning APP | SQL | UI | Android | Java**
+
+* Project Management | Team Player, January 2021 - April 2021
+* Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits.
+* Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
+* Demonstrated adaptability and effective communication by working in a team environment.
+* Project: https://github.com/vmsaif/reversibleLearning
+
+**Bank Account System | Java | File I/O**
+
+* Object-Oriented Design - Polymorphism, Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
+* Developed scalable Java applications, optimizing process efficiency by 30%.
+* Implemented an intricate class hierarchy, demonstrating polymorphism.
+* Facilitated open-source collaboration with documentation: https://github.com/vmsaif/bankAccountSystem
+
+**ATS Pass AI | Multiagent | AI | Python | RAG Search**
+
+* Resume Automation Tool, January 2024 - Present
+* Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+* Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.
+* Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
+* Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.
+* Project repository: https://github.com/vmsaif/ats-pass-ai
+**User's Profile:**
+
+**Name:** Not provided
+**Phone Number:** Not provided
+**Email:** Not provided
+**LinkedIn Profile:** Not provided
+**other social media profiles links:** Not provided
+**Personal website link:** Not provided
+**Portfolio Link:** Not provided
+**GitHub Profile:** https://github.com/vmsaif
+
+**Projects:**
+
+**BlockChainCarMilageTracker**
+
+* **Description:** Not provided
+* **Dates:** Not provided
+* **Link:** https://github.com/vmsaif/blockChainCarMilageTracker
+* **Technologies Used:** Not provided
+
+**AI Path Finding**
+
+* **Description:** Java-based game development project using the A* algorithm
+* **Dates:** Jul 2023 - Sep 2023
+* **Link:** https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+* **Technologies Used:**
+    * Java
+    * Git
+    * CI/CD
+
+**Recursive Ray Tracing**
+
+* **Description:** Implemented 3D graphics rendering using OpenGL
+* **Dates:** May 2023 - July 2023
+* **Link:** https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL
+* **Technologies Used:**
+    * OpenGL
+    * C++
+
+**Bank Account System**
+
+* **Description:** Java application simulating a bank account system
+* **Dates:** Not provided
+* **Link:** https://github.com/vmsaif/bankAccountSystem
+* **Technologies Used:**
+    * Java
+    * File I/O
+
+**Hosting a Resume on GitHub Pages**
+
+* **Description:** Documentation for hosting a resume on GitHub Pages
+* **Dates:** Apr 2023 - Apr 2023
+* **Link:** https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/
+* **Technologies Used:**
+    * Markdown
+    * Jekyll
+    * Git
+
+**ELF Binary Analysis**
+
+* **Description:** C program for analyzing ELF headers
+* **Dates:** Nov 2022 - Dec 2022
+* **Link:** https://github.com/vmsaif/readingAndInterpretingBinary
+* **Technologies Used:**
+    * C
+
+**ELF Binary Analysis**
+
+* **Description:** C program for extracting information from ELF headers
+* **Dates:** November 2022 - December 2022
+* **Link:** https://github.com/vmsaif/readingAndInterpretingBinary
+* **Technologies Used:**
+    * C
+**User's Profile:**
+
+* **Name:** Not provided
+* **Phone Number:** Not provided
+* **Email:** Not provided
+* **LinkedIn Profile:** Not provided
+* **Other Social Media Profiles Links:** Not provided
+* **Personal Website Link:** Not provided
+* **Portfolio Link:** Not provided
+* **GitHub Profile:** https://github.com/vmsaif
+* **Address:** Not provided
+* **City:** Not provided
+* **State:** Not provided
+* **Zip Code:** Not provided
+* **Country:** Not provided
+
+**Projects:**
+
+**OpenGL Sphere Lighting**
+
+* **Description:** Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
+* **Location:** Graphics Programming - April 2023 - June 2023
+* **Technologies Used:** OpenGL, C++
+* **Features:**
+    * Developed three distinct light sources
+    * Implemented interactive menu system for real-time modifications of light and material
+    * Utilized glutSolidSphere for sphere rendering
+* **Links:**
+    * Project repository: https://github.com/vmsaif/readingAndInterpretingBinary
+    * Implementation details: https://github.com/vmsaif/openGL-sphere-lighting-program
+
+**Reversible Learning App**
+
+* **Description:** Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits.
+* **Location:** Project Management | Team Player - January 2021 - April 2021
+* **Technologies Used:** SQL, Android Studio, Java
+* **Features:**
+    * Implemented JUnit for unit and integration testing
+    * Developed intuitive user interface (UI) for note organization and question archiving
+* **Links:**
+    * Project GitHub: https://github.com/vmsaif/reversibleLearning
+
+**Connect 4 with AI Decision-Making**
+
+* **Description:** Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+* **Location:** CI/CD | Cross-Platform Deployment - February 2023 - April 2023
+* **Technologies Used:** AI Decision-Making, Java
+* **Features:**
+    * Implemented minimax algorithm with alpha-beta pruning for efficient AI decisions
+    * Utilized CI/CD practices to reduce deployment time
+    * Implemented strategic AI decision-making
+    * Enhanced user engagement through competitive AI gameplay
+* **Links:**
+    * Project GitHub: https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java
+
+**TCP Chat Application**
+
+* **Description:** Developed a Java chat application for real-time client-server communication using TCP.
+* **Location:** Client-Server Communication - October 2022 - December 2022
+* **Technologies Used:** TCP/IP, Multithreading, Network
+* **Features:**
+    * Implemented multithreading for simulation efficiency
+    * Implemented socket programming for robust client-server communication
+    * Enabled features like room creation and joining/leaving
+    * Achieved a 99.9% uptime and stability rate
+* **Links:**
+    * Project GitHub: https://github.com/vmsaif/tcpChatJava
+
+**Data Visualization with R**
+
+* **Description:** Utilized R for statistical analysis and data visualization, akin to Power BI tasks.
+* **Location:** Course Project
+* **Technologies Used:** R
+* **Features:**
+    * Translated complex data into actionable insights
+    * Created interactive visualizations for data-driven decision-making
+
+**Portfolio Website**
+
+* **Description:** Developed a comprehensive portfolio website to showcase projects, skills, and experiences.
+* **Location:** Self-Initiated Project - 2021
+* **Technologies Used:** React, Styled-Components
+* **Features:**
+    * Dynamic UI components
+    * Custom styling
+    * Responsive and interactive user experience
+    * Integrated GitHub Actions for CI/CD
+**User's Profile:**
+
+* Name: Not provided
+* Phone Number: Not provided
+* Email: Not provided
+* LinkedIn Profile: Not provided
+* Other Social Media Profiles Links: Not provided
+* Personal Website Link: https://saifmahmud.dev/
+* Portfolio Link: Not provided
+* GitHub Profile: https://github.com/vmsaif
+* Address: Not provided
+* City: Not provided
+* State: Not provided
+* Zip Code: Not provided
+* Country: Not provided
+
+**Projects:**
+
+**Portfolio Website**
+* Description: Designed a user-centric website with SEO strategies for enhanced visibility and accessibility. Implemented modern technologies like Apollo for GraphQL integration and Chart.js for data visualization. Includes a blog section, project showcases, and dynamic content fetched from GitHub.
+* Technologies Used: HTML, CSS, JavaScript, React, GraphQL, Chart.js
+* Link: https://saifmahmud.dev/
+
+**CPU Scheduling Simulator**
+* Description: Developed a multi-threaded scheduling simulator in C to demonstrate parallel processing methodologies relevant to robotics and geometrical planning. Utilized Linux OS administration and Bash scripting for system programming. Employed Git for source control.
+* Technologies Used: C, Multithreading, Linux, Bash, Git
+* Link: https://github.com/vmsaif/cpu_scheduling
+
+**Go-Back-N Protocol Simulation**
+* Description: Created Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects. Simulated packet loss and generated visualizations with matplotlib to illustrate protocol performance. Analyzed adaptive window sizing benefits for flow control in networking.
+* Technologies Used: Python, Network Simulation, Matplotlib
+* Link: https://github.com/vmsaif/gbnProtocolSimulation
+
+**Experience:**
+
+**Programming Mentor**
+* Description: Provided private tutoring in computer systems and programming, focusing on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in improved understanding and application of programming concepts. Facilitated hands-on sessions for software installation, debugging, and computer operations.
+* Technologies Used: Python, Java

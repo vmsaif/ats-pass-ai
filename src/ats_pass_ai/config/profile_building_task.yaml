@@ -1,46 +1,55 @@
 # --------------tasks of Multi-Domain Information Handler----------------
 
-personal_information_task:
-  description: >
-    Utilize an automated tool to segment and organize a document from the specified local file path {user_info_file_path}. Employ the "action" command: "organize the document" to execute this task. Focus on creating a complete and well-structured profile that not only presents the information in a clear, organized, structured, and categorized format but also ensures that the output is detailed and comprehensive, integrating all segments cohesively. Ensure the inclusion of all essential sections and details:
-    * A detailed introduction or summary at the top of the resume.
-    * Complete descriptions and dates for all projects, including GitHub links and technologies used.
-    * Detailed information on the user's experiences, with descriptions for each listed experience.
-    Review the output to identify and correct any formatting issues and to improve the content's clarity and flow as necessary.
-
-  expected_output: >
-    A comprehensive profile that includes all necessary details about the user, a software developer. The output should provide a complete and accurate compilation of all data from the document, integrating the segments cohesively and filling any gaps in information. The profile must include:
-    * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
-    * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
-    * Comprehensive details on experiences, including descriptions of roles and achievements.
-    * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
-    * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
-    * A focused career goal section, with clear steps and skills to be acquired.
-    * Figures and statistics where applicable to substantiate claims made in the profile.
-    * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
-    Furthermore, ensure the document follows these formatting guidelines:
-    * Use of headings and subheadings for improved readability and organization.
-    * Consistent formatting throughout, including indenting and spacing.
-    * Text that is well-formatted and easy to read.
-    Consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
-
-
-
-
-
 # personal_information_task:
 #   description: >
 #     You will use the given tool to gather comprehensive personal details including full name, contact information,
-#     professional online profiles, and personal website from this local file path {user_info_file_path}.
+#     professional online profiles, and personal website from this local file path {user_info_orgainzed_file_path}.
+
+#     use this path for your queries:
+#     "txt" argument: "{user_info_orgainzed_file_path}"
+
 #   expected_output: >
-#     Information of the user \n
-#     name: \n
-#     phonenumber: \n
-#     email address: \n
-#     LinkedIn profile: \n
-#     other social media profiles: \n
-#     personal website link: \n
-#     portfolio link: \n
+#     User's Profile: \n
+#     Name: \n
+#     Phone Number: \n
+#     Email: \n
+#     LinkedIn Profile: \n
+#     other social media profiles links: \n
+#     Personal website link: \n
+#     Portfolio Link: \n
+#     GitHub Profile: \n
+#     Address: \n
+#     City: \n
+#     State: \n
+#     Zip Code: \n
+#     Country: \n
+
+personal_information_task:
+  description: >
+    You will use the given tool to gather comprehensive personal details including full name, contact information,
+    professional online profiles, and personal website from this local file path {user_info_orgainzed_file_path}.
+
+    To use the tool, you will use the arguments of the provided tool as follows:
+    "action" argument: "What is the user's name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country?" 
+    "file_path" argument: "{user_info_orgainzed_file_path}"
+
+    The tool breaks down the content into smaller chunks and queries on each chunk to gather the required information. So it is possible that the tool return with no information mostly but will contain the information at least for a single time. Use that information to answer the queries. If totally no information is returned, you can just ignore. 
+  expected_output: >
+    User's Profile: \n
+    Name: \n
+    Phone Number: \n
+    Email: \n
+    LinkedIn Profile: \n
+    other social media profiles links: \n
+    Personal website link: \n
+    Portfolio Link: \n
+    GitHub Profile: \n
+    Address: \n
+    City: \n
+    State: \n
+    Zip Code: \n
+    Country: \n
+    
 
 # education_task:
 #   description: >
@@ -213,3 +222,57 @@ personal_information_task:
 #   expected_output: >
 #     A fully fledge reports with the mains topics, each with a full section of information.
 #     Formated as markdown with out '```'
+
+
+# personal_information_task:
+#   description: >
+#     Use a provided tool which will return the contents of specified local file path {user_info_file_path}. Use the "action" command: "organize the document, you will simple organize, do not remove information or make it concise. Do not remove any links." to instruct the tool to execute this task. You are responsible for ensuring that the output of the tool is a complete and well-structured profile. This profile should clearly present the information in an organized, structured, and categorized format, integrating all segments cohesively. You must ensure the inclusion of all essential sections and details:
+#     * A detailed introduction of the user.
+#     * Complete and detailed descriptions and dates for all projects, including GitHub links and technologies used. 
+#     * Detailed information on the user's experiences, with descriptions for each listed experience.
+    
+#     You should review the tool's output to identify and correct any formatting issues, and to improve the content's clarity and flow as necessary.
+#     Do not remove any information or links from the document. keep it detailed and organized.
+
+#     It is recommended to use the tool only once. If you need to use the tool again, please provide a valid reason for doing so.
+#   expected_output: >
+#     A comprehensive profile that includes all necessary details about the user. The output, produced by the automated tool should be a complete and accurate compilation of all data from the document. The profile must integrate the segments cohesively and fill any gaps in information. It should include:
+#     * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
+#     * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
+#     * Comprehensive details on experiences, including descriptions of roles and achievements.
+#     * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
+#     * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
+#     * A focused career goal section, with clear steps and skills to be acquired.
+#     * Figures and statistics where applicable to substantiate claims made in the profile.
+#     * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
+#     The document must follow these formatting guidelines:
+#     * Use of headings and subheadings for improved readability and organization.
+#     * Consistent formatting throughout, including indenting and spacing.
+#     * Text that is well-formatted and easy to read.
+#     You should consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
+
+
+# personal_information_task:
+#   description: >
+#     Utilize an automated tool to segment and organize a document from the specified local file path {user_info_file_path}. Employ the "action" command: "organize the document" to execute this task. Focus on creating a complete and well-structured profile that not only presents the information in a clear, organized, structured, and categorized format but also ensures that the output is detailed and comprehensive, integrating all segments cohesively. Ensure the inclusion of all essential sections and details:
+#     * A detailed introduction or summary at the top of the resume.
+#     * Complete descriptions and dates for all projects, including GitHub links and technologies used.
+#     * Detailed information on the user's experiences, with descriptions for each listed experience.
+#     Review the output to identify and correct any formatting issues and to improve the content's clarity and flow as necessary.
+
+#   expected_output: >
+#     A comprehensive profile that includes all necessary details about the user, a software developer. The output should provide a complete and accurate compilation of all data from the document, integrating the segments cohesively and filling any gaps in information. The profile must include:
+#     * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
+#     * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
+#     * Comprehensive details on experiences, including descriptions of roles and achievements.
+#     * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
+#     * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
+#     * A focused career goal section, with clear steps and skills to be acquired.
+#     * Figures and statistics where applicable to substantiate claims made in the profile.
+#     * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
+#     Furthermore, ensure the document follows these formatting guidelines:
+#     * Use of headings and subheadings for improved readability and organization.
+#     * Consistent formatting throughout, including indenting and spacing.
+#     * Text that is well-formatted and easy to read.
+#     Consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
+
