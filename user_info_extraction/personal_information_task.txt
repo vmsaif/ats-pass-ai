@@ -1,10 +1,11 @@
-Volunteer Work Information: 
-Organization: .dev Programming Club
-Role: Active Member
-Duration: 2019-2023
-Description: Engaged with the latest software development technologies and tools, Collaborated on team projects focused on Java and Cloud Technologies
+Awards and Recognitions Information:
 
-Organization: Football Club Vikings
-Role: Captain
-Duration: 2012-2014
-Description: No description provided
+Award Title: Intel PC Guru - 3rd Place
+Awarding Organization: 
+Date Received: 2007
+Description: 
+
+Award Title: FIFA Champion
+Awarding Organization: UMBSA 2017 and CBA 2018
+Date Received: 
+Description:

@@ -32,7 +32,6 @@ personal_information_extraction_task:
     Zip Code: \n
     Country: \n
 
-
 education_extraction_task:
   description: >
     Extract comprehensive educational details such as degrees, institutions, graduation dates, and academic achievements from the file specified at {user_info_orgainzed_file_path}.  
@@ -54,7 +53,6 @@ education_extraction_task:
     Institution: \n
     Graduation Date: \n
     Academic Achievements: \n
-
 
 volunteer_work_extraction_task:
   description: >
@@ -78,17 +76,57 @@ volunteer_work_extraction_task:
     Duration: \n
     Description: \n
 
-# awards_recognitions_task:
-#   description: >
-#     Gather all awards and recognitions received, detailing the nature of each award and the granting organization.
-#   expected_output: >
-#     A list of awards and recognitions with detailed descriptions of each, including the reasons and contexts for the awards.
+awards_recognitions_extraction_task:
+  description: >
+    Extract details about awards, recognitions, or honors received by the user from the file specified at {user_info_orgainzed_file_path}. 
 
-# references_task:
-#   description: >
-#     Collect contact details and descriptions of relationships for all professional references.
-#   expected_output: >
-#     A list of professional references including full contact information and a brief description of the relationship with each.
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about awards, recognitions, honors, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    If the information is not provided, you may disregard this segment. \n
+    Awards and Recognitions Information: \n
+    Award Title: \n
+    Awarding Organization: \n
+    Date Received: \n
+    Description: \n
+
+references_extraction_task:
+  description: >
+    Extract references or testimonials provided by the user from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about references, testimonials, recommendations, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 0.2
+    - top_k: 3
+    - top_p: 0.3
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    If the information is not provided, you may disregard this segment. \n
+    References Information: \n
+    Reference Name: \n
+    Reference Contact: \n
+    Relationship: \n
+    Testimonial: \n
 
 # personal_traits_interests_task:
 #   description: >

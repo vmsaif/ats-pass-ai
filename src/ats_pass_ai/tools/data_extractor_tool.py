@@ -31,8 +31,12 @@ class DataExtractorTool(BaseTool):
         top_k: int = Field(description="The top_k for the model.")
         top_p: float = Field(description="The top_p for the model.")
 
-        Note, the tool internally breaks down the document into chunks and query each chunks. So it is normal to see some repeated information or some missing information.
-        Ensure completeness and accuracy. Note that the user may not have all the information.
+        Restrictions:
+        - First check if the information is available, if not available, ignore it.
+        - Ensure completeness and accuracy. 
+        
+        The user may not have all the information. The tool internally breaks down the document into chunks and query each chunks. So it is normal to see some repeated information or some missing information.
+        
         """)
     args_schema: Type[BaseModel] = DocumentInput
 

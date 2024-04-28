@@ -61,10 +61,19 @@ class UserInfoOrganizerCrew:
 	# 		tools=[self.queryTool],
 	# 	)
  
+	# @task
+	# def volunteer_work_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["volunteer_work_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.personal_information_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
+ 
 	@task
-	def volunteer_work_extraction_task(self):
+	def awards_recognitions_extraction_task(self):
 		return Task(
-			config=self.tasks_config["volunteer_work_extraction_task"],
+			config=self.tasks_config["awards_recognitions_extraction_task"],
 			agent=self.generalist_agent(),
 			output_file=self.personal_information_task_file_path,
 			tools=[self.queryTool],
