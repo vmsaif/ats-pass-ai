@@ -1,46 +1,28 @@
 # --------------tasks of Multi-Domain Information Handler----------------
 
-# personal_information_task:
-#   description: >
-#     You will use the given tool to gather comprehensive personal details including full name, contact information,
-#     professional online profiles, and personal website from this local file path {user_info_orgainzed_file_path}.
-
-#     use this path for your queries:
-#     "txt" argument: "{user_info_orgainzed_file_path}"
-
-#   expected_output: >
-#     User's Profile: \n
-#     Name: \n
-#     Phone Number: \n
-#     Email: \n
-#     LinkedIn Profile: \n
-#     other social media profiles links: \n
-#     Personal website link: \n
-#     Portfolio Link: \n
-#     GitHub Profile: \n
-#     Address: \n
-#     City: \n
-#     State: \n
-#     Zip Code: \n
-#     Country: \n
-
-personal_information_task:
+personal_information_extraction_task:
   description: >
-    You will use the given tool to gather comprehensive personal details including full name, contact information,
-    professional online profiles, and personal website from this local file path {user_info_orgainzed_file_path}.
+    Extract comprehensive personal details such as full name, contact information, professional online profiles, and personal websites from the file specified at {user_info_orgainzed_file_path}.
+    
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temparature: 0.8
+    - top_k: 20
+    - top_p: 1.0
 
-    To use the tool, you will use the arguments of the provided tool as follows:
-    "action" argument: "What is the user's name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country?" 
-    "file_path" argument: "{user_info_orgainzed_file_path}"
+    IMPORTANT:
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
 
-    The tool breaks down the content into smaller chunks and queries on each chunk to gather the required information. So it is possible that the tool return with no information mostly but will contain the information at least for a single time. Use that information to answer the queries. If totally no information is returned, you can just ignore. 
+    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+
   expected_output: >
     User's Profile: \n
     Name: \n
     Phone Number: \n
     Email: \n
     LinkedIn Profile: \n
-    other social media profiles links: \n
+    Other social media profiles links: \n
     Personal website link: \n
     Portfolio Link: \n
     GitHub Profile: \n
@@ -49,21 +31,52 @@ personal_information_task:
     State: \n
     Zip Code: \n
     Country: \n
-    
 
-# education_task:
-#   description: >
-#     Compile all educational history including degrees obtained, institutions, graduation years,
-#     GPA, honors, and relevant coursework.
-#   expected_output: >
-#     An organized summary of educational background detailing degrees, schools attended,
-#     graduation dates, GPAs, and important courses.
 
-# volunteer_work_task:
-#   description: >
-#     Document all volunteer experiences including roles, organizations, durations, and specific contributions.
-#   expected_output: >
-#     A comprehensive list of volunteer activities with descriptions of roles, durations, contributions, and achievements.
+education_extraction_task:
+  description: >
+    Extract comprehensive educational details such as degrees, institutions, graduation dates, and academic achievements from the file specified at {user_info_orgainzed_file_path}.  
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about education, degrees, institutions, graduation dates, academic achievements, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 0.2
+    - top_k: 3
+    - top_p: 0.3
+
+    IMPORTANT:
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+  expected_output: >
+    Education Information: \n
+    Degree: \n
+    Institution: \n
+    Graduation Date: \n
+    Academic Achievements: \n
+
+
+volunteer_work_extraction_task:
+  description: >
+    Extract details about volunteer work, community service, or social initiatives from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about volunteer work, community service, social initiatives, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 0.2
+    - top_k: 3
+    - top_p: 0.3
+
+    IMPORTANT:
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+  expected_output: >
+    Volunteer Work Information: \n
+    Organization: \n
+    Role: \n
+    Duration: \n
+    Description: \n
 
 # awards_recognitions_task:
 #   description: >

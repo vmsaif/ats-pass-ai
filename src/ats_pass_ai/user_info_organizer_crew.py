@@ -10,7 +10,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 # from langchain_google_vertexai import VertexAI # to use codey - code-bison model to generate latex
 
-from ats_pass_ai.tools.text_reader_tool import TextFileReaderTool
+from ats_pass_ai.tools.data_extractor_tool import DataExtractorTool
 
 @CrewBase
 class UserInfoOrganizerCrew:
@@ -21,12 +21,12 @@ class UserInfoOrganizerCrew:
 	# Define the file paths
 	personal_information_task_file_path = 'user_info_extraction/personal_information_task.txt'
 	# initialize the tools
-	queryTool = TextFileReaderTool()
+	queryTool = DataExtractorTool()
 
 	# Define the model
 	llm = ChatGroq(
 			temperature=0.7, 
-			model_name="llama3-8b-8192", 
+			model_name="llama3-70b-8192", 
 			verbose=True
 		)
 
@@ -37,27 +37,38 @@ class UserInfoOrganizerCrew:
 			config=self.agents_config["generalist_agent"],
 			verbose=True,
 			allow_delegation=True,
+			cache=True,
 			llm=self.llm
 		)
 
-	# Define the tasks
+	# # Define the tasks
+	# @task
+	# def personal_information_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["personal_information_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.personal_information_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
+	
+	
+	# @task
+	# def education_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["education_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.personal_information_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
+ 
 	@task
-	def personal_information_task(self):
+	def volunteer_work_extraction_task(self):
 		return Task(
-			config=self.tasks_config["personal_information_task"],
+			config=self.tasks_config["volunteer_work_extraction_task"],
 			agent=self.generalist_agent(),
 			output_file=self.personal_information_task_file_path,
 			tools=[self.queryTool],
 		)
-	
-	# @task
-	# def education_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["education_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=self.personal_information_task_file_path,
-	# 		tools=[self.file_reader_tool],
-	# 	)
 
 	@crew
 	def crew(self) -> Crew:
