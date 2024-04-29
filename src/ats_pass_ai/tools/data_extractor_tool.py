@@ -81,7 +81,7 @@ class DataExtractorTool(BaseTool):
     def _read_text_file(self, file_path: str):
         """Read and return content from a file specified by its path."""
         try:
-            print('\n\nStarted reading the file...')
+            print('Started reading the file...')
             with open(file_path, 'r', encoding='utf-8') as file:
                 return file.read()
         except FileNotFoundError:

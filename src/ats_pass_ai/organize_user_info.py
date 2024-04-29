@@ -39,7 +39,7 @@ class OrganizeUserInfo:
                         * Do not create links yourself. If the content does not have any links, do not create them.
                         * Do not remove any information or links from the document. keep it detailed and organized.                    
                         """)
-        result = tool._run(file_path=self.user_info_file_path, action=action)
+        result = tool._run(file_path=self.user_info_file_path, action=action, temperature=0.8, top_k=20, top_p=0.9)
 
         self.write_to_file(result)
         # export the result to a file

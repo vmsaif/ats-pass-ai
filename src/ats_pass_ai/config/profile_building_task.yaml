@@ -109,9 +109,9 @@ references_extraction_task:
     Use the `DataExtractorTool` with the following parameters:
     - "action" argument: "Give me information about references, testimonials, recommendations, etc."
     - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 0.2
-    - top_k: 3
-    - top_p: 0.3
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
 
     Restrictions:
     To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
@@ -128,17 +128,59 @@ references_extraction_task:
     Relationship: \n
     Testimonial: \n
 
-# personal_traits_interests_task:
-#   description: >
-#     Identify personal qualities and hobbies that may be relevant to the job or company culture.
-#   expected_output: >
-#     A description of personal traits and interests that align with professional contexts and organizational culture.
+personal_traits_interests_extraction_task:
+  description: >
+    Extract personal traits, interests, hobbies, and other relevant details from the file specified at {user_info_orgainzed_file_path}. 
 
-# miscellaneous_task:
-#   description: >
-#     Collect any additional details relevant to the user's professional profile such as willingness to travel and availability for shifts.
-#   expected_output: >
-#     A list of miscellaneous details relevant to job applications, including travel willingness and shift availability.
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about personal traits, interests, hobbies, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    Personal Traits and Interests Information: \n
+    Traits: \n
+    Interests: \n
+    Hobbies: \n
+    Other Relevant Details: \n
+
+miscellaneous_extraction_task:
+  description: >
+    Extract any additional miscellaneous information that could be relevant to the user's profile from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me any additional information that could be relevant to the user's profile."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    Miscellaneous Information: \n
+    Additional Details: \n
+
+profile_building_task:
+  description: >
+    Compile all extracted information into a comprehensive user profile that includes personal details, education, volunteer work, awards, references, personal traits, interests, and any additional relevant information. Ensure the profile is well-organized, structured, and coherent.
+
+  expected_output: >
+    Everything you know about the user should be compiled into a comprehensive user profile. The profile should include all extracted information organized into relevant sections such as personal details, education, volunteer work, awards, references, personal traits, interests, and any additional relevant information. The profile should be well-structured, coherent, and easy to read, providing a detailed overview of the user's background and experiences.
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 

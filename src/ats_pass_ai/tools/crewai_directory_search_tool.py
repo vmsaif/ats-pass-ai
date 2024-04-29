@@ -1,11 +1,11 @@
 
-from crewai_tools import TXTSearchTool
+from crewai_tools import DirectorySearchTool
 # Create a new instance of the TXTSearchTool
 
-class CrewAITextSearchTool:
+class CrewAIDirectorySearchTool:
     @classmethod
-    def create(cls):
-        return TXTSearchTool(
+    def create(cls, directory: str):
+        return DirectorySearchTool(
             config=dict(
                 llm=dict(
                     provider="google", 
@@ -22,5 +22,6 @@ class CrewAITextSearchTool:
                     ),
                 ),
             ),
+            directory=directory
         )
             
