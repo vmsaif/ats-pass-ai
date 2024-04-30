@@ -2,21 +2,18 @@
 
 personal_information_extraction_task:
   description: >
-    Extract comprehensive personal details such as full name, contact information, professional online profiles, and personal websites from the file specified at {user_info_orgainzed_file_path}.
-    
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country etc."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temparature: 0.8
-    - top_k: 20
-    - top_p: 1.0
+    You are given a tool that retrieves info simply by asking question as a string. Use the tool to extract comprehensive personal details such as User's Profile: \n
+    Name, Phone Number, Email, LinkedIn Profile, Other social media profiles links, Personal website link, Portfolio Link, GitHub Profile, Address, City, State, Zip Code, Country.
 
-    IMPORTANT:
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+    Run the tool again if you see an information not available or not provided, try to use the tool 1 more time including them in the question.
 
-    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+    For example, if country: not available or not provided, then
+    question = "what is the country?"
 
+    The tool will return a chunk of relevant information from the database. You need to reorganize the extracted information into the required format for the final answer.
   expected_output: >
+    The tool will return a chunk of relevant information from the database. You need to reorganize the extracted information into the required format for the final answer.
+
     User's Profile: \n
     Name: \n
     Phone Number: \n
@@ -31,6 +28,38 @@ personal_information_extraction_task:
     State: \n
     Zip Code: \n
     Country: \n
+
+# personal_information_extraction_task:
+#   description: >
+#     Extract comprehensive personal details such as full name, contact information, professional online profiles, and personal websites from the file specified at {user_info_orgainzed_file_path}.
+    
+#     Use the `DataExtractorTool` with the following parameters:
+#     - "action" argument: "name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country etc."
+#     - "file_path" argument: "{user_info_orgainzed_file_path}"
+#     - temparature: 0.8
+#     - top_k: 20
+#     - top_p: 1.0
+
+#     IMPORTANT:
+#     The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+#     To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+
+#   expected_output: >
+#     User's Profile: \n
+#     Name: \n
+#     Phone Number: \n
+#     Email: \n
+#     LinkedIn Profile: \n
+#     Other social media profiles links: \n
+#     Personal website link: \n
+#     Portfolio Link: \n
+#     GitHub Profile: \n
+#     Address: \n
+#     City: \n
+#     State: \n
+#     Zip Code: \n
+#     Country: \n
 
 education_extraction_task:
   description: >

@@ -12,6 +12,7 @@ from crewai.project import CrewBase, agent, crew, task
 
 from ats_pass_ai.tools.data_extractor_tool import DataExtractorTool
 from ats_pass_ai.tools.crewai_directory_search_tool import CrewAIDirectorySearchTool
+from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 
 @CrewBase
 class UserInfoOrganizerCrew:
@@ -21,45 +22,34 @@ class UserInfoOrganizerCrew:
 	
 	# Info extraction task file path
  
-	profile_building_task_file_path = 'user_info_extraction/profile_building_task.txt'
 	personal_information_extraction_task_file_path = 'user_info_extraction/personal_information_extraction_task.txt'
-	education_extraction_task_file_path = 'user_info_extraction/education_extraction_task.txt'
-	volunteer_work_extraction_task_file_path = 'user_info_extraction/volunteer_work_extraction_task.txt'
-	awards_recognitions_extraction_task_file_path = 'user_info_extraction/awards_recognitions_extraction_task.txt'
-	references_extraction_task_file_path = 'user_info_extraction/references_extraction_task.txt'
-	personal_traits_interests_extraction_task_file_path = 'user_info_extraction/personal_traits_interests_extraction_task.txt'
-	miscellaneous_extraction_task_file_path = 'user_info_extraction/miscellaneous_extraction_task.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
-		"profile_building_task": profile_building_task_file_path,
 		"personal_information_extraction_task": personal_information_extraction_task_file_path,
-		"education_extraction_task": education_extraction_task_file_path,
-		"volunteer_work_extraction_task": volunteer_work_extraction_task_file_path,
-		"awards_recognitions_extraction_task": awards_recognitions_extraction_task_file_path,
-		"references_extraction_task": references_extraction_task_file_path,
-		"personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
-		"miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 	}
 
 	# initialize the tools
-	queryTool = DataExtractorTool()
+	# queryTool = DataExtractorTool()
+ 
+	# Define the tools
+	# queryTool = SearchInChromaDB().search()
 
 	# Directory search tool
-	directorySearchTool = CrewAIDirectorySearchTool.create('user_info_extraction')
+	# directorySearchTool = CrewAIDirectorySearchTool.create('user_info_extraction')
 
 	# Define the model
 	llm = ChatGroq(
-			temperature=0.7, 
-			model_name="llama3-70b-8192", 
+			temperature=0.6, 
+			model_name="llama3-8b-8192", 
 			verbose=True
 		)
 	
-	llm8b = ChatGroq(
-			temperature=0.7,
-			model_name="llama3-8b-8192",
-			verbose=True
-		)
+	# llm8b = ChatGroq(
+	# 		temperature=0.7,
+	# 		model_name="llama3-8b-8192",
+	# 		verbose=True
+	# 	)
 
 	# Define the agents
 	@agent
@@ -72,15 +62,15 @@ class UserInfoOrganizerCrew:
 			llm=self.llm
 		)
 	
-	@agent
-	def profile_builder_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["profile_builder_agent"],
-			verbose=True,
-			allow_delegation=False,
-			cache=True,
-			llm=self.llm
-		)
+	# @agent
+	# def profile_builder_agent(self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["profile_builder_agent"],
+	# 		verbose=True,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		llm=self.llm
+	# 	)
 
 	# Define the tasks
 	@task
@@ -89,27 +79,27 @@ class UserInfoOrganizerCrew:
 			config=self.tasks_config["personal_information_extraction_task"],
 			agent=self.generalist_agent(),
 			output_file=self.personal_information_extraction_task_file_path,
-			tools=[self.queryTool],
+			tools=[SearchInChromaDB().search],
 		)
 	
 	
-	@task
-	def education_extraction_task(self):
-		return Task(
-			config=self.tasks_config["education_extraction_task"],
-			agent=self.generalist_agent(),
-			output_file=self.education_extraction_task_file_path,
-			tools=[self.queryTool],
-		)
+	# @task
+	# def education_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["education_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.education_extraction_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
  
-	@task
-	def volunteer_work_extraction_task(self):
-		return Task(
-			config=self.tasks_config["volunteer_work_extraction_task"],
-			agent=self.generalist_agent(),
-			output_file=self.volunteer_work_extraction_task_file_path,
-			tools=[self.queryTool],
-		)
+	# @task
+	# def volunteer_work_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["volunteer_work_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.volunteer_work_extraction_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
  
 	# @task
 	# def awards_recognitions_extraction_task(self):
@@ -147,14 +137,14 @@ class UserInfoOrganizerCrew:
 	# 		tools=[self.queryTool],
 	# 	)	
 	
-	@task 
-	def profile_building_task(self):
-		return Task(
-			config=self.tasks_config["profile_building_task"],
-			agent=self.profile_builder_agent(),
-			output_file=self.profile_building_task_file_path,
-			tools=[self.directorySearchTool],
-		)
+	# @task 
+	# def profile_building_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["profile_building_task"],
+	# 		agent=self.profile_builder_agent(),
+	# 		output_file=self.profile_building_task_file_path,
+	# 		tools=[self.directorySearchTool],
+	# 	)
 
 	def create_files(self):
 		"""Creates the necessary files for the crew"""
@@ -172,12 +162,13 @@ class UserInfoOrganizerCrew:
 
 		# Return the crew
 		return Crew(
-			max_rpm=1,
+			max_rpm=4,
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
 			cache=True,
-			process=Process.hierarchical,
-			manager_llm=self.llm,
+			process=Process.sequential,
+			# process=Process.hierarchical,
+			# manager_llm=self.llm,
 			verbose=2,
 			memory=True,
 			embedder={
@@ -187,5 +178,5 @@ class UserInfoOrganizerCrew:
 					"task_type": "retrieval_document",
 					"title": "Embeddings for Embedchain"
 				}
-			},
+			}
 		)

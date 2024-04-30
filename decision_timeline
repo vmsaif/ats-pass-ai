@@ -1,0 +1,7 @@
+1. First, I tried to use gemini to organize the whole txt file to organize. It couldnt process the whole file,
+    - then i broke in into chunks, then asked it to process. It was able to process the chunks and "Almost" accurate
+2. Then I tried to use txt rag from crewai to build an user profile, or experience profile, didnt work with my current model llama3. the txt rag tool was always looking at the wrong place.
+3. Then I tried to rag using the organizer tool of step 1. but this time, sending the organized file to extract info. It was working really good, but when i started doing 6-7 tasks togather, the crewai was maxed out groq api token requests per minute. 
+    Consideration: need its own vector db so that I can reduce the token count.
+
+4. Working on local vectordb with chroma, i intened to do rag with llama3 on the vectordb.

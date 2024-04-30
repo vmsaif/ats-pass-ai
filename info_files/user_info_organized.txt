@@ -129,35 +129,6 @@ As a Proactive, innovative-thinking Software Developer with a BSc in Computer Sc
 * Project repository: https://github.com/vmsaif/ats-pass-ai
 **User's Profile**
 
-**Name:** Not provided
-
-**Contact Information:**
-
-* Phone Number: Not provided
-* Email: Not provided
-
-**Social Media Profiles:**
-
-* LinkedIn Profile: Not provided
-* Other social media profiles: Not provided
-
-**Website Links:**
-
-* Personal website link: Not provided
-* Portfolio Link: Not provided
-
-**GitHub Profile:**
-
-* GitHub Profile: Not provided
-
-**Address:**
-
-* Address: Not provided
-* City: Not provided
-* State: Not provided
-* Zip Code: Not provided
-* Country: Not provided
-
 **Projects:**
 
 **AI Path Finding**
@@ -363,19 +334,9 @@ As a Proactive, innovative-thinking Software Developer with a BSc in Computer Sc
 * Chart.js
 **User's Profile**
 
-* Name: Not available
-* Phone Number: Not available
-* Email: Not available
-* LinkedIn Profile: Not available
-* Other Social Media Profile Links: Not available
 * Personal Website Link: https://saifmahmud.dev/
-* Portfolio Link: Not available
+
 * GitHub Profile: https://github.com/vmsaif
-* Address: Not available
-* City: Not available
-* State: Not available
-* Zip Code: Not available
-* Country: Not available
 
 **Projects**
 
