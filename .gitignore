@@ -30,6 +30,7 @@ build/
 
 # Ignore database files
 db/
+chroma_db/
 *.sql
 *.db
 *.sqlite

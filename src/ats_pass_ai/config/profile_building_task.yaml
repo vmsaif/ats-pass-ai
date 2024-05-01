@@ -11,6 +11,8 @@ personal_information_extraction_task:
     question = "what is the country?"
 
     The tool will return a chunk of relevant information from the database. You need to reorganize the extracted information into the required format for the final answer.
+
+    If you want to reorganize the extracted information into the required format for the final answer, do not use the tool provided, you need to do it yourself.
   expected_output: >
     The tool will return a chunk of relevant information from the database. You need to reorganize the extracted information into the required format for the final answer.
 

@@ -11,7 +11,7 @@ from crewai.project import CrewBase, agent, crew, task
 # from langchain_google_vertexai import VertexAI # to use codey - code-bison model to generate latex
 
 from ats_pass_ai.tools.data_extractor_tool import DataExtractorTool
-from ats_pass_ai.tools.crewai_directory_search_tool import CrewAIDirectorySearchTool
+
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 
 @CrewBase
@@ -21,7 +21,7 @@ class UserInfoOrganizerCrew:
 	tasks_config = 'config/profile_building_task.yaml'
 	
 	# Info extraction task file path
- 
+
 	personal_information_extraction_task_file_path = 'user_info_extraction/personal_information_extraction_task.txt'
 
 	# Dictionary to store file paths
@@ -29,14 +29,8 @@ class UserInfoOrganizerCrew:
 		"personal_information_extraction_task": personal_information_extraction_task_file_path,
 	}
 
-	# initialize the tools
-	# queryTool = DataExtractorTool()
- 
 	# Define the tools
-	# queryTool = SearchInChromaDB().search()
-
-	# Directory search tool
-	# directorySearchTool = CrewAIDirectorySearchTool.create('user_info_extraction')
+	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
 
 	# Define the model
 	llm = ChatGroq(
@@ -44,12 +38,6 @@ class UserInfoOrganizerCrew:
 			model_name="llama3-8b-8192", 
 			verbose=True
 		)
-	
-	# llm8b = ChatGroq(
-	# 		temperature=0.7,
-	# 		model_name="llama3-8b-8192",
-	# 		verbose=True
-	# 	)
 
 	# Define the agents
 	@agent
@@ -79,7 +67,7 @@ class UserInfoOrganizerCrew:
 			config=self.tasks_config["personal_information_extraction_task"],
 			agent=self.generalist_agent(),
 			output_file=self.personal_information_extraction_task_file_path,
-			tools=[SearchInChromaDB().search],
+			tools=[self.queryTool],
 		)
 	
 	
@@ -153,6 +141,7 @@ class UserInfoOrganizerCrew:
 				open(file_path, 'w').close()
 			except Exception as e:
 				print(f"Error while creating the file: {e}")
+	
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the user info organizer crew"""

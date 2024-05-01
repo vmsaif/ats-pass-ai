@@ -1,3 +1,11 @@
+"""
+	Author: Saif Mahmud
+	Date: 04-23-2024
+	Description: This file contains a custom made text content splitter. It splits the text content into chunks based on the token limit and the overlap between the chunks. Also, prioritizes splitting at double newlines before exceeding the token limit.
+
+    The chunks are sent to the google gemini model for processing. This tool is being used outside of the crewai framework.
+"""
+
 from langchain.tools import BaseTool
 from langchain.pydantic_v1 import BaseModel, Field
 from transformers import GPT2Tokenizer
@@ -57,8 +65,8 @@ class DataExtractorTool(BaseTool):
         )
 
         tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-        token_limit = 2000
-        chunk_overlap_tokens = 100
+        token_limit = 1600
+        chunk_overlap_tokens = 500
 
         document = self._read_text_file(file_path)
         text_chunks = self._split_text(document, action, token_limit, tokenizer, chunk_overlap_tokens)
@@ -69,6 +77,13 @@ class DataExtractorTool(BaseTool):
         
         for chunk in text_chunks:
             payload.append(action +'\n'+ chunk)
+
+        # write payload to a file
+        with open('payload.txt', 'w') as f:
+            for item in payload:
+                f.write("%s\n" % item)
+
+        
         print('Sending the payload to the model...')
         response = llm.batch(payload)
 
@@ -104,8 +119,6 @@ class DataExtractorTool(BaseTool):
         chunks = []
         current_length = 0
         overlap_buffer = []
-        reconstructed_text = ' '.join(words)
-        last_newline_pos = 0  # Position of last encountered newline in reconstructed text
 
         action_tokens = tokenizer.tokenize(action)
         num_action_tokens = len(action_tokens)
@@ -117,15 +130,14 @@ class DataExtractorTool(BaseTool):
             num_tokens = len(tokens)
 
             if current_length + num_tokens + num_action_tokens > limit:
-                # Look for last double newline before the current position in the reconstructed text
-                last_newline_pos = reconstructed_text.rfind('\n\n', start_index, start_index + current_length)
-                
-                # If a newline is found and is a reasonable place to split
+                # Find the last double newline in the text before the current word
+                last_newline_pos = text.rfind('\n\n', 0, start_index + current_length)
+
                 if last_newline_pos != -1:
                     # Create the chunk up to the last newline
-                    chunks.append(reconstructed_text[start_index:last_newline_pos].strip())
+                    chunks.append(text[start_index:last_newline_pos].strip())
                     start_index = last_newline_pos + 2  # Start after the newline
-                    current_chunk = reconstructed_text[start_index:start_index + current_length].split()
+                    current_chunk = text[start_index:start_index + current_length].split()
                     current_length = sum(len(tokenizer.tokenize(w)) for w in current_chunk)
                     overlap_buffer = current_chunk[-chunk_overlap_tokens:] if len(current_chunk) > chunk_overlap_tokens else current_chunk
                 else:
