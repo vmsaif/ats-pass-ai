@@ -1,20 +1,14 @@
-User's Profile:
-
+User's Profile: 
 Name: Saif Mahmud
 Phone Number: 204 955 5064
 Email: msaifofficial@gmail.com
 LinkedIn Profile: linkedin.com/in/vmsaif
-Other social media profiles links: saifmahmud.dev
-Personal website link: saifmahmud.dev
-Portfolio Link: GitHub
-GitHub Profile: https://github.com/vmsaif/cpu_scheduling
-Address: Location: Winnipeg, MB
+Other social media profiles links: 
+Personal website link: https://saifmahmud.dev/
+Portfolio Link: 
+GitHub Profile: https://github.com/vmsaif/
+Address: 
 City: Winnipeg
 State: MB
 Zip Code: 
-Country: 
-Other Relevant Details(Entity): Good interpersonal skills, communication, teamwork, problem-solving, adaptability, time management, critical thinking, complexity analysis, strong work ethic, and willingness to learn
-Other Relevant Details(Characteristic): Good interpersonal skills, communication, teamwork, problem-solving, adaptability, time management, critical thinking, complexity analysis, strong work ethic, and willingness to learn
-Other Relevant Details(Characteristic): Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis, Strong work ethic, Excellent time management skills, Ability to prioritize and multitask, Ability to work under pressure, Willingness to learn new things
-
-Note: The country is not provided in the given information.
+Country:

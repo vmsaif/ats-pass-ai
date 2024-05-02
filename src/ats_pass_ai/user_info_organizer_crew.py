@@ -157,6 +157,7 @@ class UserInfoOrganizerCrew:
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
 			cache=True,
+			full_output=True,
 			process=Process.sequential,
 			# process=Process.hierarchical,
 			# manager_llm=self.llm,

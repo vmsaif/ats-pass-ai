@@ -23,7 +23,7 @@ def run():
 
     
     # Now, lets call the main crew to build the resume
-    # UserInfoOrganizerCrew().crew().kickoff()
+    UserInfoOrganizerCrew().crew().kickoff()
     
     # inputs = {
     #     'user_info_orgainzed_file_path': user_info_orgainzed_file_path

@@ -5,13 +5,14 @@ personal_information_extraction_task:
     You are given a tool that retrieves info simply by asking question as a string. Use the tool to extract comprehensive personal details such as User's Profile: \n
     Name, Phone Number, Email, LinkedIn Profile, Other social media profiles links, Personal website link, Portfolio Link, GitHub Profile, Address, City, State, Zip Code, Country.
 
-    Run the tool again if you see an information not available or not provided, try to use the tool 1 more time including them in the question.
+    How you should use the tool:
+    - "question" argument: "name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
 
-    For example, if country: not available or not provided, then
-    question = "what is the country, email, phone, linkedin, etc.?"
+    From the large chunk of information returned by the tool, look for the information you need. If you didn't find a field, ask the tool again with the missing field.
+    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
 
   expected_output: >
-    The tool will return a chunk of relevant information from the database. Look for the information you need inside the chunk of information returned by the tool.
+    The tool will return a large chunk of relevant information from the database. Look for the information you need inside the large chunk of information returned by the tool.
 
     User's Profile: 
     Name:

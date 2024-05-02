@@ -1,4 +1,5 @@
 import os
+from textwrap import dedent
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain.tools import tool
 from langchain_community.vectorstores import Chroma
@@ -11,16 +12,16 @@ embedding_function = OllamaEmbeddings(model='nomic-embed-text')
 
 # Tool to search in Chroma DB
 class SearchInChromaDB:
-    @tool("Search in vector database tool")
+    @tool("Search for the chunk of relevant content")
     def search(question: str) -> str:
-        """Search for relevant content based on a query from a vector database.
-        args:
+        """Search for relevant content based on a question.
+            argument:
             question (str): The question as a string to search for.
-        returns:
-            results (str): a chunk of relavent content based on the question. You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
-
-        Example:
-        Question: "What is the name?"
+            
+            return:
+            results (str): a chunk of relavent content based on the question. 
+            
+            You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
         results = vectorstore.similarity_search(question)
