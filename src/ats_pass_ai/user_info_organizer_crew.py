@@ -20,10 +20,12 @@ class UserInfoOrganizerCrew:
 	
 	# Info extraction task file path
 
-	personal_information_extraction_task_file_path = 'user_info_extraction/personal_information_extraction_task.txt'
+	personal_information_extraction_task_file_path = 'info_extraction/personal_information_extraction_task.txt'
+	job_description_keyword_and_phrases_extraction_task_file_path = 'info_extraction/job_description_keyword_and_phrases_extraction_task.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
+		"job_description_keyword_and_phrases_extraction_task": job_description_keyword_and_phrases_extraction_task_file_path,
 		"personal_information_extraction_task": personal_information_extraction_task_file_path,
 	}
 
@@ -52,16 +54,17 @@ class UserInfoOrganizerCrew:
 			llm=self.llm
 		)
 	
-	# @agent
-	# def profile_builder_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["profile_builder_agent"],
-	# 		verbose=True,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.llm
-	# 	)
-
+	@agent
+	def job_description_keyword_and_phrases_extractor_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["job_description_keyword_and_phrases_extractor_agent"],
+			verbose=True,
+			# max_iter=10,
+			allow_delegation=False,
+			cache=True,
+			llm=self.llm
+		)
+	
 	# Define the tasks
 	@task
 	def personal_information_extraction_task(self):
@@ -72,6 +75,14 @@ class UserInfoOrganizerCrew:
 			tools=[self.queryTool],
 		)
 	
+	@task
+	def job_description_keyword_and_phrases_extraction_task(self):
+		return Task(
+			config=self.tasks_config["job_description_keyword_and_phrases_extraction_task"],
+			agent=self.job_description_keyword_and_phrases_extractor_agent(),
+			output_file=self.job_description_keyword_and_phrases_extraction_task_file_path,
+			tools=[self.queryTool],
+		)
 	
 	# @task
 	# def education_extraction_task(self):

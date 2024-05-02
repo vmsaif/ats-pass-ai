@@ -1,0 +1,27 @@
+## Keyword and Phrase Extraction: AI Engineer Internship at Radical AI
+
+**Company Culture & Values:**
+
+* **Social Justice Focus:** People of Color, Black, Indigenous, Women, Queer, Trans, Gender Non-Conforming, Poor, Dis-abled, collective liberation, resisting oppression (Racism, Coloniality, Casteism, Heteropatriarchy, Capitalism, Ableism).
+* **AI Ethics & Power Dynamics:**  democratizing AI, AI for social good, responsible AI, critical of AI power structures, extractive/exploitative AI, human/AI systems, minimizing harm, AI abolition.
+* **Community & Collaboration:**  centering marginalized communities, co-conspiring, ceding power, listening. 
+* **Reflexivity & Positionality:**  understanding bias, "view from nowhere", acknowledging privilege.
+
+**Job Specific Keywords:**
+
+* **Technical Skills:**  Artificial Intelligence (AI), Machine Learning (ML), Deep Learning, Generative AI, Natural Language Processing (NLP), OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Python, TensorFlow, PyTorch.
+* **Responsibilities:**  AI model design & development, data analysis & preprocessing, algorithm & model enhancement, research & presentation, AI virtual agent development.
+* **Qualifications:**  Bachelor's/Master's in Computer Science, AI, or related fields, strong analytical & problem-solving skills, creative thinking, communication & teamwork skills. 
+* **Internship Specifics:**  Virtual internship, 3 months duration, flexible start dates, unpaid position, remote work, stable internet connection required. 
+
+**Additional Phrases for Resume/Cover Letter:**
+
+* Passion for social justice and using technology for good.
+* Alignment with Radical AI's principles and mission.
+* Experience with or interest in AI ethics and power dynamics.
+* Ability to work independently and as part of a team in a virtual environment.
+* Strong research and presentation skills.
+* Eagerness to learn and contribute to cutting-edge AI projects. 
+
+
+**Please note:** This list is not exhaustive and the importance of specific keywords may vary depending on the ATS system used.  

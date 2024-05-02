@@ -29,6 +29,9 @@ personal_information_extraction_task:
     Zip Code:
     Country:
 
+job_description_keyword_and_phrases_extraction_task:
+  description: >
+
 # personal_information_extraction_task:
 #   description: >
 #     Extract comprehensive personal details such as full name, contact information, professional online profiles, and personal websites from the file specified at {user_info_orgainzed_file_path}.
