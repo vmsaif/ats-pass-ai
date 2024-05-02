@@ -1,5 +1,7 @@
 # ATS Pass AI
 
+[![Hits](https://hits.sh/github.com/vmsaif/ats-pass-ai.svg?label=Visits&color=100b75)](https://hits.sh/github.com/vmsaif/ats-pass-ai/)
+
 ## Project Description
 
 The idea is to craft a unique resume for each job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 

@@ -119,14 +119,6 @@ Initiated and developed a blockchain application to securely track and verify ve
 \end{tightemize}
 \sectionsep
 
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
-
-
 % For the AI Path Finding Project
 \runsubsection{AI Path Finding}
 \descript{| A* Algorithm | Java | Git | CI/CD}
@@ -151,12 +143,6 @@ A Java-based game development project that leveraged the A* algorithm to create 
 
 % \vspace{5pt}
 
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
-
 % For the Recursive Ray Tracing in OpenGL Project
 \runsubsection{Recursive Ray Tracing}
 \descript{| 3D Graphics | OpenGL | C++}
@@ -174,7 +160,7 @@ A Java-based game development project that leveraged the A* algorithm to create 
 \sectionsep
 
 
-% ------------------For the Bank Account System Project----------------%
+
 \vspace{5pt}
 \runsubsection{Bank Account System}
 \descript{| Java | File I/O}
@@ -191,12 +177,6 @@ Developed a Java application to simulate a bank account system, showcasing objec
     \item Facilitated open-source collaboration with documentation, accessible \href{https://github.com/vmsaif/bankAccountSystem}{\underline{here}}.
 \end{tightemize}
 \sectionsep
-
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
 
 
 % --------------- Hosting a Resume on GitHub Pages Project Description -------------------%
@@ -217,12 +197,6 @@ A comprehensive guide for hosting and formatting a resume on GitHub Pages, demon
 \end{tightemize}
 \sectionsep
 
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
 \vspace{5pt}
 
 % Further Reduced ELF Binary Analysis Project Description
@@ -238,10 +212,6 @@ Implemented ELF header analysis tool in C, emphasizing debugging, system analysi
 \item Project repository: \href{https://github.com/vmsaif/readingAndInterpretingBinary}{\underline{here}}.
 \end{tightemize}
 \sectionsep
-
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
 
 
 % ----------- Reading and Interpreting Binary Files (ELF) Project Description----------------%
@@ -264,10 +234,6 @@ Developed a C program to extract key information from ELF headers of binary file
 \sectionsep
 
 
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
 % ---------------OpenGL Sphere Lighting Project Description -------------------%
 
 
@@ -288,11 +254,6 @@ Explored advanced lighting techniques in OpenGL by creating an interactive appli
 % \vspace{7pt}
 
 
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
 \runsubsection{Reversible Learning APP}
 \descript{| SQL | Android Studio | Java}
 \location{Project Management | Team Player - January 2021 - April 2021}
@@ -309,12 +270,6 @@ Collaborated with a team to develop "Reversible Learning", an Android app for en
     \item Project accessible on GitHub: \href{https://github.com/vmsaif/reversibleLearning}{\underline{\textbf{here}}}.
 \end{tightemize}
 \sectionsep
-
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
 
 -------------CONNECT 4 with AI Decision-Making----------------%
 
@@ -350,14 +305,6 @@ Developed a digital version of the classic Connect 4 game, facilitating user vs.
 \sectionsep
 
 
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
-
-
 \vspace{3pt}
 
 % -------------TCP Chat Application----------------%
@@ -384,12 +331,6 @@ Developed a Java chat application for real-time client-server communication usin
 \sectionsep
 
 
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
 \runsubsection{Data Visualization with R}
 \descript{| Akin to Python | Data Analysis}
 \location{Course Project}
@@ -404,10 +345,6 @@ Utilized R for statistical analysis and data visualization, akin to Power BI tas
 \item Learned to create interactive visualizations, enhancing data-driven decision-making.
 \end{tightemize}
 \sectionsep
-
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
 
 
 \runsubsection{Portfolio Website}
@@ -430,12 +367,6 @@ Developed a comprehensive portfolio website to showcase my projects, skills, and
 \sectionsep
 
 
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
-
-
-
 % For the CPU Scheduling Simulator Project
 \runsubsection{CPU Scheduling}
 \descript{| C | Multithreading | Linux | Bash | Git}
@@ -452,10 +383,6 @@ Developed a comprehensive portfolio website to showcase my projects, skills, and
 \item Project repository here on \href{https://github.com/vmsaif/cpu_scheduling} {\underline{GitHub}}.
 \end{tightemize}
 \sectionsep
-
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
 
 
 % GBN Protocol Simulation Project Description
@@ -476,12 +403,6 @@ Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynami
 
 
 \vspace{5pt}
-
-
-
-% ----------------------------------xxx-----------------------------------------%
-% ----------------------------------xxx-----------------------------------------%
-
 
 
 

@@ -1,11 +1,11 @@
-from crewai_tools import TXTSearchTool
 
+from crewai_tools import DirectorySearchTool
 # Create a new instance of the TXTSearchTool
 
-class MyTXTSearchTool:
-    @classmethod 
-    def create(cls, txt_path):
-        return TXTSearchTool(
+class CrewAIDirectorySearchTool:
+    @classmethod
+    def create(cls, directory: str):
+        return DirectorySearchTool(
             config=dict(
                 llm=dict(
                     provider="google", 
@@ -16,12 +16,12 @@ class MyTXTSearchTool:
                 embedder=dict(
                     provider="google",
                     config=dict(
-                        model="models/text-embedding-004",
+                        model="models/embedding-001",
                         task_type="retrieval_document",
-                        title=""
+                        # title=""
                     ),
                 ),
             ),
-            txt=txt_path
+            directory=directory
         )
             

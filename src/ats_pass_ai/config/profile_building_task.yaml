@@ -1,0 +1,403 @@
+# --------------tasks of Multi-Domain Information Handler----------------
+
+personal_information_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a string. Use the tool to extract comprehensive personal details such as User's Profile: \n
+    Name, Phone Number, Email, LinkedIn Profile, Other social media profiles links, Personal website link, Portfolio Link, GitHub Profile, Address, City, State, Zip Code, Country.
+
+    How you should use the tool:
+    - "question" argument: "name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+
+    From the large chunk of information returned by the tool, look for the information you need. If you didn't find a field, ask the tool again with the missing field.
+    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+
+  expected_output: >
+    The tool will return a large chunk of relevant information from the database. Look for the information you need inside the large chunk of information returned by the tool.
+
+    User's Profile: 
+    Name:
+    Phone Number:
+    Email:
+    LinkedIn Profile:
+    Other social media profiles links:
+    Personal website link:
+    Portfolio Link:
+    GitHub Profile:
+    Address:
+    City:
+    State:
+    Zip Code:
+    Country:
+
+job_description_keyword_and_phrases_extraction_task:
+  description: >
+
+# personal_information_extraction_task:
+#   description: >
+#     Extract comprehensive personal details such as full name, contact information, professional online profiles, and personal websites from the file specified at {user_info_orgainzed_file_path}.
+    
+#     Use the `DataExtractorTool` with the following parameters:
+#     - "action" argument: "name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country etc."
+#     - "file_path" argument: "{user_info_orgainzed_file_path}"
+#     - temparature: 0.8
+#     - top_k: 20
+#     - top_p: 1.0
+
+#     IMPORTANT:
+#     The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+#     To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+
+#   expected_output: >
+#     User's Profile: \n
+#     Name: \n
+#     Phone Number: \n
+#     Email: \n
+#     LinkedIn Profile: \n
+#     Other social media profiles links: \n
+#     Personal website link: \n
+#     Portfolio Link: \n
+#     GitHub Profile: \n
+#     Address: \n
+#     City: \n
+#     State: \n
+#     Zip Code: \n
+#     Country: \n
+
+education_extraction_task:
+  description: >
+    Extract comprehensive educational details such as degrees, institutions, graduation dates, and academic achievements from the file specified at {user_info_orgainzed_file_path}.  
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about education, degrees, institutions, graduation dates, academic achievements, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 0.2
+    - top_k: 3
+    - top_p: 0.3
+
+    IMPORTANT:
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+  expected_output: >
+    Education Information: \n
+    Degree: \n
+    Institution: \n
+    Graduation Date: \n
+    Academic Achievements: \n
+
+volunteer_work_extraction_task:
+  description: >
+    Extract details about volunteer work, community service, or social initiatives from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about volunteer work, community service, social initiatives, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 0.2
+    - top_k: 3
+    - top_p: 0.3
+
+    IMPORTANT:
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
+  expected_output: >
+    Volunteer Work Information: \n
+    Organization: \n
+    Role: \n
+    Duration: \n
+    Description: \n
+
+awards_recognitions_extraction_task:
+  description: >
+    Extract details about awards, recognitions, or honors received by the user from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about awards, recognitions, honors, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    If the information is not provided, you may disregard this segment. \n
+    Awards and Recognitions Information: \n
+    Award Title: \n
+    Awarding Organization: \n
+    Date Received: \n
+    Description: \n
+
+references_extraction_task:
+  description: >
+    Extract references or testimonials provided by the user from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about references, testimonials, recommendations, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    If the information is not provided, you may disregard this segment. \n
+    References Information: \n
+    Reference Name: \n
+    Reference Contact: \n
+    Relationship: \n
+    Testimonial: \n
+
+personal_traits_interests_extraction_task:
+  description: >
+    Extract personal traits, interests, hobbies, and other relevant details from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me information about personal traits, interests, hobbies, etc."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    Personal Traits and Interests Information: \n
+    Traits: \n
+    Interests: \n
+    Hobbies: \n
+    Other Relevant Details: \n
+
+miscellaneous_extraction_task:
+  description: >
+    Extract any additional miscellaneous information that could be relevant to the user's profile from the file specified at {user_info_orgainzed_file_path}. 
+
+    Use the `DataExtractorTool` with the following parameters:
+    - "action" argument: "Give me any additional information that could be relevant to the user's profile."
+    - "file_path" argument: "{user_info_orgainzed_file_path}"
+    - temperature: 1.0
+    - top_k: 60
+    - top_p: 0.95
+
+    Restrictions:
+    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
+
+    IMPORTANT:
+    
+    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
+
+  expected_output: >
+    Miscellaneous Information: \n
+    Additional Details: \n
+
+profile_building_task:
+  description: >
+    Compile all extracted information into a comprehensive user profile that includes personal details, education, volunteer work, awards, references, personal traits, interests, and any additional relevant information. Ensure the profile is well-organized, structured, and coherent.
+
+  expected_output: >
+    Everything you know about the user should be compiled into a comprehensive user profile. The profile should include all extracted information organized into relevant sections such as personal details, education, volunteer work, awards, references, personal traits, interests, and any additional relevant information. The profile should be well-structured, coherent, and easy to read, providing a detailed overview of the user's background and experiences.
+
+# -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
+
+# skills_task:
+#   description: >
+#     Identify and categorize all professional skills including technical, soft skills, and
+#     proficiency levels. Include certifications and licenses.
+#   expected_output: >
+#     A detailed breakdown of skills organized by category such as programming, database management,
+#     and soft skills with an indication of proficiency levels.
+
+# professional_affiliations_task:
+#   description: >
+#     List all memberships in professional organizations including roles and responsibilities within these groups.
+#   expected_output: >
+#     A detailed account of professional affiliations, positions held, and the role played in each organization.
+
+# ---------------Publications and Presentations Agent (Publications and Presentations Documenter)---------------
+
+# publications_presentations_task:
+#   description: >
+#     Compile a list of all publications and presentations, detailing authors, titles, dates, and events where presented.
+#   expected_output: >
+#     A detailed list of publications and presentations, including co-authors, titles, publication dates, and event names.
+
+# ------------------------ work_project_experience_agent ----------------
+
+# work_experience_task:
+#   description: >
+#     Organize and document comprehensive work histories including job titles, durations, employers, responsibilities, and achievements. Highlight skills utilized and developed in each role to showcase professional growth and capabilities.
+#   expected_output: >
+#     A detailed and structured overview of work experience, presenting each role with clarity and emphasizing key contributions and skills.
+
+# project_experience_task:
+#   description: >
+#     Compile and format detailed descriptions of projects including titles, technologies used, durations, roles, contributions, and outcomes. Ensure that each project is represented in a manner that highlights its significance and the user's role in achieving results.
+#   expected_output: >
+#     A comprehensive and organized presentation of project experiences, each described thoroughly with information on technologies, durations, roles, and achievements, along with links to repositories or live projects if applicable.
+
+# ------------------------ career_planning_analyst_agent ----------------
+
+# objective_summary_task:
+#   description: >
+#     Create a professional summary that highlights key qualifications, objectives, and aligns with the user's career goals.
+#   expected_output: >
+#     A concise professional summary that effectively communicates the user's strengths and career objectives.
+
+# career_aspirations_task:
+#   description: >
+#     Analyze long-term career goals and suggest potential job titles based on detailed user attributes. Evaluate and align these aspirations with current job market opportunities.
+#   expected_output: >
+#     A strategic analysis of career aspirations, including suggested job titles and paths tailored to the user’s skills and goals.
+
+# job_specific_requirements_task:
+#   description: >
+#     Assess and document specific job requirements such as availability, willingness to relocate, and salary expectations.
+#   expected_output: >
+#     A detailed list of job-specific requirements addressing the user's availability, relocation willingness, and expected salary, tailored to potential job applications.
+
+
+# activities_leadership_task:
+#   description: >
+#     Document all leadership roles and activities, including specific achievements and impacts within these roles.
+#   expected_output: >
+#     An in-depth overview of leadership activities, detailing the roles, durations, responsibilities, and key achievements.
+
+# languages_task:
+#   description: >
+#     Compile a detailed listing of all languages spoken by the user, along with proficiency levels for each.
+#   expected_output: >
+#     A comprehensive list of languages with an assessment of proficiency levels, enhancing the cultural and communication profile of the user.
+
+# strengths_task:
+#   description: >
+#     Analyze and document the user's strengths based on feedback, self-assessment, and observed performance.
+#   expected_output: >
+#     A balanced view of the user's strengths, providing insights for potential employers and personal development.
+
+# interests_task:
+#   description: >
+#     Identify and document detailed interests of the user that align with or enhance their professional profile.
+#   expected_output: >
+#     A detailed description of interests that complements the professional and personal traits, adding depth to the user's profile.
+
+# developmental_activities_task:
+#   description: >
+#     Gather information on all developmental activities such as courses, training, workshops, conferences, seminars, webinars, bootcamps, hackathons, competitions, and scholarships.
+#   expected_output: >
+#     A comprehensive list and descriptions of developmental activities, showcasing ongoing learning and engagement in professional growth.
+
+
+
+
+# _______________________________________________________________________________________________________________________
+
+# projects_task:
+#   description: >
+#     Document comprehensive details about significant projects including titles, technologies used, durations, roles, contributions, and outcomes.
+#   expected_output: >
+#     An exhaustive description of projects with detailed accounts of titles, technologies, durations, roles played, contributions, and outcomes.
+
+
+
+# career_aspirations_task:
+#   description: >
+#     Define long-term career goals and the types of roles and responsibilities the user is seeking in future positions.
+#   expected_output: >
+#     A detailed explanation of career aspirations, including specific roles and responsibilities the user aims to pursue.
+
+# job_specific_requirements_task:
+#   description: >
+#     Identify any job-specific requirements such as availability, willingness to relocate, and salary expectations.
+#   expected_output: >
+#     A list of job-specific requirements tailored to the user's preferences and potential job descriptions.
+
+
+# -----------------------------------------------------------
+
+
+# research_task:
+#   description: >
+#     Conduct a thorough research about {topic}
+#     Make sure you find any interesting and relevant information given
+#     the current year is 2024.
+#   expected_output: >
+#     A list with 10 bullet points of the most relevant information about {topic}
+
+# reporting_task:
+#   description: >
+#     Review the context you got and expand each topic into a full section for a report.
+#     Make sure the report is detailed and contains any and all relevant information.
+#   expected_output: >
+#     A fully fledge reports with the mains topics, each with a full section of information.
+#     Formated as markdown with out '```'
+
+
+# personal_information_task:
+#   description: >
+#     Use a provided tool which will return the contents of specified local file path {user_info_file_path}. Use the "action" command: "organize the document, you will simple organize, do not remove information or make it concise. Do not remove any links." to instruct the tool to execute this task. You are responsible for ensuring that the output of the tool is a complete and well-structured profile. This profile should clearly present the information in an organized, structured, and categorized format, integrating all segments cohesively. You must ensure the inclusion of all essential sections and details:
+#     * A detailed introduction of the user.
+#     * Complete and detailed descriptions and dates for all projects, including GitHub links and technologies used. 
+#     * Detailed information on the user's experiences, with descriptions for each listed experience.
+    
+#     You should review the tool's output to identify and correct any formatting issues, and to improve the content's clarity and flow as necessary.
+#     Do not remove any information or links from the document. keep it detailed and organized.
+
+#     It is recommended to use the tool only once. If you need to use the tool again, please provide a valid reason for doing so.
+#   expected_output: >
+#     A comprehensive profile that includes all necessary details about the user. The output, produced by the automated tool should be a complete and accurate compilation of all data from the document. The profile must integrate the segments cohesively and fill any gaps in information. It should include:
+#     * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
+#     * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
+#     * Comprehensive details on experiences, including descriptions of roles and achievements.
+#     * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
+#     * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
+#     * A focused career goal section, with clear steps and skills to be acquired.
+#     * Figures and statistics where applicable to substantiate claims made in the profile.
+#     * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
+#     The document must follow these formatting guidelines:
+#     * Use of headings and subheadings for improved readability and organization.
+#     * Consistent formatting throughout, including indenting and spacing.
+#     * Text that is well-formatted and easy to read.
+#     You should consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
+
+
+# personal_information_task:
+#   description: >
+#     Utilize an automated tool to segment and organize a document from the specified local file path {user_info_file_path}. Employ the "action" command: "organize the document" to execute this task. Focus on creating a complete and well-structured profile that not only presents the information in a clear, organized, structured, and categorized format but also ensures that the output is detailed and comprehensive, integrating all segments cohesively. Ensure the inclusion of all essential sections and details:
+#     * A detailed introduction or summary at the top of the resume.
+#     * Complete descriptions and dates for all projects, including GitHub links and technologies used.
+#     * Detailed information on the user's experiences, with descriptions for each listed experience.
+#     Review the output to identify and correct any formatting issues and to improve the content's clarity and flow as necessary.
+
+#   expected_output: >
+#     A comprehensive profile that includes all necessary details about the user, a software developer. The output should provide a complete and accurate compilation of all data from the document, integrating the segments cohesively and filling any gaps in information. The profile must include:
+#     * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
+#     * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
+#     * Comprehensive details on experiences, including descriptions of roles and achievements.
+#     * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
+#     * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
+#     * A focused career goal section, with clear steps and skills to be acquired.
+#     * Figures and statistics where applicable to substantiate claims made in the profile.
+#     * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
+#     Furthermore, ensure the document follows these formatting guidelines:
+#     * Use of headings and subheadings for improved readability and organization.
+#     * Consistent formatting throughout, including indenting and spacing.
+#     * Text that is well-formatted and easy to read.
+#     Consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
+
