@@ -10,8 +10,6 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 # from langchain_google_vertexai import VertexAI # to use codey - code-bison model to generate latex
 
-from ats_pass_ai.tools.data_extractor_tool_old import DataExtractorTool
-
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 
 @CrewBase

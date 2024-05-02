@@ -1,6 +1,6 @@
 # 
 
-from ats_pass_ai.tools.data_extractor_tool_old import DataExtractorTool
+from ats_pass_ai.tools.langchain_tool_template_data_extractor_tool_old import DataExtractorTool
 from textwrap import dedent
 
 class OrganizeUserInfo:

@@ -19,7 +19,7 @@ def run():
     organizer.run()
 
     # this will not run if the file is already indexed
-    # RagSearchTool.process_and_index(user_info_orgainzed_file_path)
+    RagSearchTool.process_and_index(user_info_orgainzed_file_path)
 
     
     # Now, lets call the main crew to build the resume
