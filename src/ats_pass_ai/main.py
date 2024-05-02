@@ -5,7 +5,7 @@
 """
 from ats_pass_ai.user_info_organizer_crew import UserInfoOrganizerCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool
-from ats_pass_ai.organize_user_info import OrganizeUserInfo
+from ats_pass_ai.tools.user_info_organizer import UserInfoOrganizer
 
 
 def run():
@@ -15,14 +15,15 @@ def run():
     user_info_orgainzed_file_path = 'info_files/user_info_organized.txt'
 
     # This will not run if there is already an organized file
-    OrganizeUserInfo(user_info_file_path, user_info_orgainzed_file_path).run()
+    organizer = UserInfoOrganizer(user_info_file_path, user_info_orgainzed_file_path)
+    organizer.run()
 
     # this will not run if the file is already indexed
-    RagSearchTool.process_and_index(user_info_orgainzed_file_path)
+    # RagSearchTool.process_and_index(user_info_orgainzed_file_path)
 
     
     # Now, lets call the main crew to build the resume
-    UserInfoOrganizerCrew().crew().kickoff()
+    # UserInfoOrganizerCrew().crew().kickoff()
     
     # inputs = {
     #     'user_info_orgainzed_file_path': user_info_orgainzed_file_path

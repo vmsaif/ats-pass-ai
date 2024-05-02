@@ -16,12 +16,11 @@ class SearchInChromaDB:
         """Search for relevant content based on a query from a vector database.
         args:
             question (str): The question as a string to search for.
-            example:
-                question = "Tell me about the user's name",
-                'or' 
-                question = "What are the skills of the user?"
         returns:
-            results (str): a chunk of relavent content based on the question.
+            results (str): a chunk of relavent content based on the question. You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
+
+        Example:
+        Question: "What is the name?"
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
         results = vectorstore.similarity_search(question)
@@ -88,7 +87,7 @@ class RagSearchTool:
             doc = loader.load()
             
             # Split the content into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=200)
+            text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=200)
             splits = text_splitter.split_documents(doc)  # Split large document content
             
             # Now index the content in Chroma DB

@@ -8,28 +8,25 @@ personal_information_extraction_task:
     Run the tool again if you see an information not available or not provided, try to use the tool 1 more time including them in the question.
 
     For example, if country: not available or not provided, then
-    question = "what is the country?"
+    question = "what is the country, email, phone, linkedin, etc.?"
 
-    The tool will return a chunk of relevant information from the database. You need to reorganize the extracted information into the required format for the final answer.
-
-    If you want to reorganize the extracted information into the required format for the final answer, do not use the tool provided, you need to do it yourself.
   expected_output: >
-    The tool will return a chunk of relevant information from the database. You need to reorganize the extracted information into the required format for the final answer.
+    The tool will return a chunk of relevant information from the database. Look for the information you need inside the chunk of information returned by the tool.
 
-    User's Profile: \n
-    Name: \n
-    Phone Number: \n
-    Email: \n
-    LinkedIn Profile: \n
-    Other social media profiles links: \n
-    Personal website link: \n
-    Portfolio Link: \n
-    GitHub Profile: \n
-    Address: \n
-    City: \n
-    State: \n
-    Zip Code: \n
-    Country: \n
+    User's Profile: 
+    Name:
+    Phone Number:
+    Email:
+    LinkedIn Profile:
+    Other social media profiles links:
+    Personal website link:
+    Portfolio Link:
+    GitHub Profile:
+    Address:
+    City:
+    State:
+    Zip Code:
+    Country:
 
 # personal_information_extraction_task:
 #   description: >

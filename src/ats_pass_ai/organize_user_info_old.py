@@ -1,6 +1,6 @@
 # 
 
-from ats_pass_ai.tools.data_extractor_tool import DataExtractorTool
+from ats_pass_ai.tools.data_extractor_tool_old import DataExtractorTool
 from textwrap import dedent
 
 class OrganizeUserInfo:
@@ -25,22 +25,22 @@ class OrganizeUserInfo:
             tool = DataExtractorTool()
             action = dedent("""
                             Task: Content Organization and Structuring
-                            Objective: You are being provided with content that is currently unorganized. Your task is to analyze, understand, and reorganize this content into a structured, human-readable format.
+                            Objective: Reorganize provided unstructured content into a clear, structured format
                             Instructions:
-                            1. Comprehension: Carefully read and interpret the content to grasp the themes, details, and nuances.
+                            1. Comprehension: Read the content to understand the themes and details.
                             2. Structure Development:
-                            - Main Categories: Identify key themes and create main categories. Use #
-                            - Subcategories: Within each main category, establish subcategories as necessary to further organize the details. Use ##
+                               - Main Categories: Identify and label key themes with '#'.
+                               - Subcategories: Create necessary subcategories under each main category with '##'.
                             3. Content Handling:
-                            - Preservation: Ensure that no details or pieces of information are omitted from the original content like links, dates, names, etc.
-                            - Clarity and Readability: Enhance the readability of the content by using clear headings, subheadings, and bullet points.
+                               - Preservation: Ensure all original information (links, dates, names) is included.
+                               - Clarity and Readability: Use clear headings, subheadings, and bullet points to enhance readability.
                             4. Personal Content Handling:
-                            - If any part of the content includes personal narratives or self-descriptions, do not categorize this information. Instead, summarize this portion to capture the essence of the individual’s message or story. Provide a third-person perspective.
-                            5. Final Review: After organizing, review the structured content to ensure completeness, accuracy, and coherence.
-                            Outcome: The end product should be a well-organized document that maintains all original details in a clear and accessible manner.
+                               - Summarize personal narratives or self-descriptions in third-person, without categorization.
+                            5. Final Review: Check the structured content for completeness, accuracy, and coherence.
+                            Outcome: Deliver a well-organized document that maintains all original details in an accessible format.
                             """)
 
-            result = tool._run(file_path=self.user_info_file_path, action=action, temperature=0.7, top_k=80, top_p=0.95)
+            result = tool._run(file_path=self.user_info_file_path, action=action, temperature=0.7, top_k=50, top_p=0.95)
 
             self.write_to_file(result)
             # export the result to a file

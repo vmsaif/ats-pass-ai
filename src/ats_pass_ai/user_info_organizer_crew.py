@@ -10,7 +10,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 # from langchain_google_vertexai import VertexAI # to use codey - code-bison model to generate latex
 
-from ats_pass_ai.tools.data_extractor_tool import DataExtractorTool
+from ats_pass_ai.tools.data_extractor_tool_old import DataExtractorTool
 
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 
@@ -34,8 +34,11 @@ class UserInfoOrganizerCrew:
 
 	# Define the model
 	llm = ChatGroq(
-			temperature=0.6, 
+			temperature=0.7,
 			model_name="llama3-8b-8192", 
+			# model_kwargs={
+			# 	# 'top_p': 0.95  # Nucleus sampling: cumulatively retains the top p% probability mass
+    		# },
 			verbose=True
 		)
 
@@ -45,6 +48,7 @@ class UserInfoOrganizerCrew:
 		return Agent(
 			config=self.agents_config["generalist_agent"],
 			verbose=True,
+			# max_iter=10,
 			allow_delegation=False,
 			cache=True,
 			llm=self.llm
@@ -151,7 +155,7 @@ class UserInfoOrganizerCrew:
 
 		# Return the crew
 		return Crew(
-			max_rpm=4,
+			max_rpm=6,
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
 			cache=True,
