@@ -16,16 +16,16 @@ The system aims to achieve at least an 85% keyword match with job descriptions, 
 
 The project is currently in the **active development stage**. The following features have been implemented:
 
-1. **User Information Collection** ✅
+1. **User Information Collection** 📋
    - The system can extract and organize user data provided by the user in an unorganized way. *(Completed)* ✅
 
-2. **Job Description Analysis** 🔧
-   - The system can analyze job descriptions to identify key keywords and requirements. *(In Progress)* ⏳
+2. **Job Description Analysis** 🤝
+   - The system can analyze job descriptions to identify key keywords and requirements. *(Completed)* ✅
 
-3. **Resume Creation** 🔧
-   - The system can integrate user information with job description analysis to draft resumes. *(Scheduled)* 📅
+3. **Resume Creation** 🧑‍💼
+   - The system can integrate user information with job description analysis to draft resumes. *(In Progress)* ⏳
 
-4. **LaTeX Resume Generation** 🔧
+4. **LaTeX Resume Generation** 🛠️
    - The system can convert finalized resumes into professionally formatted LaTeX documents. *(Scheduled)* 📅
 
 
