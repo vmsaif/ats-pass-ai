@@ -14,18 +14,18 @@ embedding_function = OllamaEmbeddings(model='nomic-embed-text')
 # Tool to search in Chroma DB
 class SearchInChromaDB:
     @tool("Search for the chunk of relevant content")
-    def search(input: str) -> str:
-        """Search for relevant content based on an input.
+    def search(question: str) -> str:
+        """Search for relevant content based on an question.
             argument:
-            input (str): The input as a string to search for.
+            question: (str) The question as a string to search for.
             
             return:
-            results (str): a chunk of relavent content based on the input. 
+            results: (str) a chunk of relavent content based on the question. 
             
             You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
-        results = vectorstore.similarity_search(input)
+        results = vectorstore.similarity_search(question)
         return results
 
 class RagSearchTool:

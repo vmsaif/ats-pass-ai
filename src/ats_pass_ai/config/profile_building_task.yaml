@@ -2,18 +2,18 @@
 
 personal_information_extraction_task:
   description: >
-    You are given a tool that retrieves info simply by asking question as a string. Use the tool to extract comprehensive personal details such as User's Profile: \n
-    Name, Phone Number, Email, LinkedIn Profile, Other social media profiles links, Personal website link, Portfolio Link, GitHub Profile, Address, City, State, Zip Code, Country.
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
 
     How you should use the tool:
-    - "question" argument: "name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+    argument:
+    "question" : "Give me name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
 
-    From the large chunk of information returned by the tool, look for the information you need. If you didn't find a field, ask the tool again with the missing field.
+    USE THE TOOL ONLY 1 TIME.
+
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
     for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
 
   expected_output: >
-    The tool will return a large chunk of relevant information from the database. Look for the information you need inside the large chunk of information returned by the tool.
-
     User's Profile: 
     Name:
     Phone Number:
@@ -29,190 +29,6 @@ personal_information_extraction_task:
     Zip Code:
     Country:
 
-job_description_keyword_and_phrases_extraction_task:
-  description: >
-
-# personal_information_extraction_task:
-#   description: >
-#     Extract comprehensive personal details such as full name, contact information, professional online profiles, and personal websites from the file specified at {user_info_orgainzed_file_path}.
-    
-#     Use the `DataExtractorTool` with the following parameters:
-#     - "action" argument: "name, phone number, email, LinkedIn profile, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country etc."
-#     - "file_path" argument: "{user_info_orgainzed_file_path}"
-#     - temparature: 0.8
-#     - top_k: 20
-#     - top_p: 1.0
-
-#     IMPORTANT:
-#     The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-#     To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
-
-#   expected_output: >
-#     User's Profile: \n
-#     Name: \n
-#     Phone Number: \n
-#     Email: \n
-#     LinkedIn Profile: \n
-#     Other social media profiles links: \n
-#     Personal website link: \n
-#     Portfolio Link: \n
-#     GitHub Profile: \n
-#     Address: \n
-#     City: \n
-#     State: \n
-#     Zip Code: \n
-#     Country: \n
-
-education_extraction_task:
-  description: >
-    Extract comprehensive educational details such as degrees, institutions, graduation dates, and academic achievements from the file specified at {user_info_orgainzed_file_path}.  
-
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "Give me information about education, degrees, institutions, graduation dates, academic achievements, etc."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 0.2
-    - top_k: 3
-    - top_p: 0.3
-
-    IMPORTANT:
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
-  expected_output: >
-    Education Information: \n
-    Degree: \n
-    Institution: \n
-    Graduation Date: \n
-    Academic Achievements: \n
-
-volunteer_work_extraction_task:
-  description: >
-    Extract details about volunteer work, community service, or social initiatives from the file specified at {user_info_orgainzed_file_path}. 
-
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "Give me information about volunteer work, community service, social initiatives, etc."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 0.2
-    - top_k: 3
-    - top_p: 0.3
-
-    IMPORTANT:
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-    To, reorganize the extracted information into the required format for the final answer, Do not use the provided tool again.
-  expected_output: >
-    Volunteer Work Information: \n
-    Organization: \n
-    Role: \n
-    Duration: \n
-    Description: \n
-
-awards_recognitions_extraction_task:
-  description: >
-    Extract details about awards, recognitions, or honors received by the user from the file specified at {user_info_orgainzed_file_path}. 
-
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "Give me information about awards, recognitions, honors, etc."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 1.0
-    - top_k: 60
-    - top_p: 0.95
-
-    Restrictions:
-    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
-
-    IMPORTANT:
-    
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-  expected_output: >
-    If the information is not provided, you may disregard this segment. \n
-    Awards and Recognitions Information: \n
-    Award Title: \n
-    Awarding Organization: \n
-    Date Received: \n
-    Description: \n
-
-references_extraction_task:
-  description: >
-    Extract references or testimonials provided by the user from the file specified at {user_info_orgainzed_file_path}. 
-
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "Give me information about references, testimonials, recommendations, etc."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 1.0
-    - top_k: 60
-    - top_p: 0.95
-
-    Restrictions:
-    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
-
-    IMPORTANT:
-    
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-  expected_output: >
-    If the information is not provided, you may disregard this segment. \n
-    References Information: \n
-    Reference Name: \n
-    Reference Contact: \n
-    Relationship: \n
-    Testimonial: \n
-
-personal_traits_interests_extraction_task:
-  description: >
-    Extract personal traits, interests, hobbies, and other relevant details from the file specified at {user_info_orgainzed_file_path}. 
-
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "Give me information about personal traits, interests, hobbies, etc."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 1.0
-    - top_k: 60
-    - top_p: 0.95
-
-    Restrictions:
-    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
-
-    IMPORTANT:
-    
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-  expected_output: >
-    Personal Traits and Interests Information: \n
-    Traits: \n
-    Interests: \n
-    Hobbies: \n
-    Other Relevant Details: \n
-
-miscellaneous_extraction_task:
-  description: >
-    Extract any additional miscellaneous information that could be relevant to the user's profile from the file specified at {user_info_orgainzed_file_path}. 
-
-    Use the `DataExtractorTool` with the following parameters:
-    - "action" argument: "Give me any additional information that could be relevant to the user's profile."
-    - "file_path" argument: "{user_info_orgainzed_file_path}"
-    - temperature: 1.0
-    - top_k: 60
-    - top_p: 0.95
-
-    Restrictions:
-    To reorganize the extracted information into the required format for the final answer, do not use the provided tool again.
-
-    IMPORTANT:
-    
-    The tool will segment the content and perform targeted queries within each segment to extract the requested information. It is possible that some queries might return "Not provided" for certain fields, indicating the absence of data in that segment. You must carefully review the entire output to confirm the presence of all requested information. In cases where no information is provided, you may disregard that specific segment.
-
-  expected_output: >
-    Miscellaneous Information: \n
-    Additional Details: \n
-
-profile_building_task:
-  description: >
-    Compile all extracted information into a comprehensive user profile that includes personal details, education, volunteer work, awards, references, personal traits, interests, and any additional relevant information. Ensure the profile is well-organized, structured, and coherent.
-
-  expected_output: >
-    Everything you know about the user should be compiled into a comprehensive user profile. The profile should include all extracted information organized into relevant sections such as personal details, education, volunteer work, awards, references, personal traits, interests, and any additional relevant information. The profile should be well-structured, coherent, and easy to read, providing a detailed overview of the user's background and experiences.
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
