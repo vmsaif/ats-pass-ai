@@ -77,8 +77,8 @@ def run():
                 Outcome: A comprehensive list of relevant keywords and actionable tips to optimize your resume for both ATS algorithms and human reviewers, increasing your chances of landing an interview.
                 """)
 
-    # job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
-    # job_description_extractor.run()
+    job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
+    job_description_extractor.run()
 
     # this will not run if the file is already indexed
     RagSearchTool.process_and_index(user_info_orgainzed_file_path)

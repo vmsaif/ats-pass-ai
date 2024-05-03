@@ -1,15 +1,15 @@
 User's Profile:
 
-Name: Saif Mahmud
+Full Name: Saif Mahmud
 Phone Number: 204 955 5064
 Email: msaifofficial@gmail.com
 LinkedIn Profile: linkedin.com/in/vmsaif
-Other social media profiles links: N/A
+Other social media profiles links: Not provided
 Personal website link: saifmahmud.dev
-Portfolio Link: N/A
-GitHub Profile: N/A
+Portfolio Link: Not provided
+GitHub Profile: Not provided
 Address: Winnipeg, MB
 City: Winnipeg
-State: N/A
-Zip Code: N/A
+State: None
+Zip Code: None
 Country: Canada

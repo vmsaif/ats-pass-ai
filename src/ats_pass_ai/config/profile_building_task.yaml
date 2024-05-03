@@ -6,7 +6,7 @@ personal_information_extraction_task:
 
     How you should use the tool:
     argument:
-    "question" : "Give me name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+    "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
 
     USE THE TOOL ONLY 1 TIME.
 
@@ -15,7 +15,7 @@ personal_information_extraction_task:
 
   expected_output: >
     User's Profile: 
-    Name:
+    Full Name:
     Phone Number:
     Email:
     LinkedIn Profile:
