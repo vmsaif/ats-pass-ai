@@ -7,7 +7,7 @@ class LLMTask:
 		self.generation_config = {
 				"temperature": 1,
 				"top_p": 0.95,
-				"top_k": 50,
+				# "top_k": 50,
 				"max_output_tokens": 8192,
 		}
 
@@ -43,13 +43,13 @@ class LLMTask:
 			print(f"{self.task_name} output file already found and will not re-run this task. Please delete the file or it's content if you want to re-run.")
 			return False
 		except FileNotFoundError as e:
-			print("Starting {self.task_name} task...")
+			print(f"Starting {self.task_name} task...")
 			return True
 
 			
 	def read_file(self, file_path):
 		try:
-			print('Started reading {file_path}')
+			print(f'Started reading {file_path}')
 			with open(file_path, 'r', encoding='utf-8') as file:
 				return file.read()
 		except FileNotFoundError:

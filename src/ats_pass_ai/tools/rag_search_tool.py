@@ -6,6 +6,7 @@ from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 import hashlib
+import shutil
 
 # Set up the embedding function
 embedding_function = OllamaEmbeddings(model='nomic-embed-text')
@@ -13,18 +14,18 @@ embedding_function = OllamaEmbeddings(model='nomic-embed-text')
 # Tool to search in Chroma DB
 class SearchInChromaDB:
     @tool("Search for the chunk of relevant content")
-    def search(question: str) -> str:
-        """Search for relevant content based on a question.
+    def search(input: str) -> str:
+        """Search for relevant content based on an input.
             argument:
-            question (str): The question as a string to search for.
+            input (str): The input as a string to search for.
             
             return:
-            results (str): a chunk of relavent content based on the question. 
+            results (str): a chunk of relavent content based on the input. 
             
             You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
-        results = vectorstore.similarity_search(question)
+        results = vectorstore.similarity_search(input)
         return results
 
 class RagSearchTool:
@@ -84,6 +85,10 @@ class RagSearchTool:
 
         if(run_flag):  
             # Load the content from the file
+
+            # delete the existing Chroma DB if it exists
+            RagSearchTool.delete_persist_directory()
+
             loader = TextLoader(file_path)
             doc = loader.load()
             
@@ -94,15 +99,21 @@ class RagSearchTool:
             # Now index the content in Chroma DB
             if splits:
                 # Create a VectorStore with document embedding
-                print("Indexing content in Chroma DB...")
+                print("Indexing content in DB...")
                 Chroma.from_documents(splits, embedding=embedding_function, persist_directory=RagSearchTool.persist_directory)
                 print("Content indexed in Chroma DB")
 
                 RagSearchTool.updateHashFile(file_path, hash_file_path)
 
-                return "Content indexed in Chroma DB"
+                return "Content indexed in DB"
             else:
                 return "No content available for processing."  
+
+    def delete_persist_directory():
+        """Delete the persist directory."""
+        if os.path.exists(RagSearchTool.persist_directory):
+            shutil.rmtree(RagSearchTool.persist_directory)
+            print("Persist directory deleted.")
 
     def updateHashFile(file_path: str, hash_file_path: str):
         """Update the hash store file with the hash of the processed file."""
