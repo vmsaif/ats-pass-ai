@@ -33,7 +33,6 @@ class ResumeCrew:
 
 	# Dictionary to store file paths
 	file_paths = {
-		"job_description_keyword_and_phrases_extraction_task": jd_keyword_and_phrases_extraction_task_file_path,
 		"personal_information_extraction_task": personal_information_extraction_task_file_path,
 		"education_extraction_task": education_extraction_task_file_path,
 	}
