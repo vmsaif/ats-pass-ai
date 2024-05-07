@@ -4,7 +4,7 @@
 	Date: 04-23-2024
 	Description: This file contains the crew class for the user info organizer crew.
 """
-
+import agentops
 from langchain_groq import ChatGroq
 from langchain_google_genai import GoogleGenerativeAI
 from langchain_google_vertexai import ChatVertexAI
@@ -62,7 +62,7 @@ class ResumeCrew:
     # 		# },
 	# 		verbose=True
 	# )
-	
+	agentops.init()
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
