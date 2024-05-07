@@ -13,7 +13,7 @@ from ats_pass_ai.tools.llm_task import LLMTask
 user_info_file_path = 'info_files/user_info.txt'
 user_info_orgainzed_file_path = 'info_files/user_info_organized.txt'
 jd_file_path = 'info_files/job_description.txt'
-jd_extracted_keywords_file_path = ResumeCrew.jd_keyword_and_phrases_extraction_task_file_path
+jd_extracted_keywords_file_path = ResumeCrew.jd_keyword_extraction_file_path
 
 
 def run():
@@ -77,8 +77,8 @@ def run():
                 Outcome: A comprehensive list of relevant keywords and actionable tips to optimize your resume for both ATS algorithms and human reviewers, increasing your chances of landing an interview.
                 """)
 
-    job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
-    job_description_extractor.run()
+    # job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
+    # job_description_extractor.run()
 
     # this will not run if the file is already indexed
     RagSearchTool.process_and_index(user_info_orgainzed_file_path)

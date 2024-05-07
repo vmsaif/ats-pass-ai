@@ -1,0 +1,34 @@
+## Similarity Report between Keyword and Phrase Extraction from Job Description and Applicant's Context
+
+**Exact Match:**
+
+- **Education:** BSc in Computer Science
+- **Major:** Computer Science
+- **University:** University of Manitoba
+- **Graduation Date:** October 2023
+- **GPA:** 3.07
+
+**Partial Match:**
+
+- **Skills:** No direct match with the mentioned hard and soft skills, but the applicant's strong technical skills and passion for software development are relevant to the job requirements.
+- **Industry/Field Specific Terms:** No direct match, but the applicant's experience in using AI development frameworks and understanding of AI ethics is related to the job requirements.
+- **Company Values & Culture:** No direct match mentioned in the provided context.
+
+**No Match:**
+
+- **Work Experience:** Applicant's work experience is not specified.
+- **Additional Information:** Applicant's other relevant details and contributions to the field are not provided.
+
+**Relevance Score:**
+
+Based on the information provided, the applicant's qualifications partially match the job requirements. The applicant possesses a relevant educational background and technical skills. However, there is limited information available to assess their work experience and alignment with Radical AI's values and culture.
+
+**Recommendations:**
+
+To increase the relevance and chances of success, the applicant should consider the following:
+
+- Elaborate on their work experience, highlighting any relevant projects or accomplishments.
+- Showcase their understanding of ethical AI and its social implications.
+- Demonstrate their commitment to using AI for positive impact by referencing past projects or experiences.
+- Research Radical AI and its mission to show genuine interest in the company's values and culture.
+- Tailor their resume to each application, emphasizing the most relevant skills and experiences for the specific role.

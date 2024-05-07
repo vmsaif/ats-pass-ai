@@ -1,4 +1,14 @@
-# --------------tasks of Multi-Domain Information Handler----------------
+# --------------tasks of Profile Building----------------
+
+# list of tasks:
+# - personal_information_extraction_task
+# - education_extraction_task
+# - volunteer_work_extraction_task
+# - awards_recognitions_extraction_task
+# - references_extraction_task
+# - personal_traits_interests_extraction_task
+# - miscellaneous_extraction_task
+# - resume_build_task
 
 personal_information_extraction_task:
   description: >
@@ -7,8 +17,6 @@ personal_information_extraction_task:
     How you should use the tool:
     argument:
     "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
-
-    USE THE TOOL ONLY 1 TIME.
 
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
     for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
@@ -28,6 +36,117 @@ personal_information_extraction_task:
     State:
     Zip Code:
     Country:
+
+education_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive education details.
+    How you should use the tool:
+    argument:
+    "question" : "Give me the list of all educational qualifications, including degrees, majors, universities, graduation dates, and any honors or distinctions."
+    USE THE TOOL ONLY 1 TIME.
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+  expected_output: >
+    Education:
+      Degree:
+      Major:
+      University:
+      University Location:
+      Graduation Date:
+      Honors/Distinctions:
+
+volunteer_work_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive volunteer work details.
+    How you should use the tool:
+    argument:
+    "question" : "Give me a list of all volunteer experiences, including organization names, roles, responsibilities, and dates."
+    
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+  expected_output: >
+    Volunteer Work:
+      Organization Name:
+      Role:
+      Responsibilities:
+      Dates:
+
+awards_recognitions_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive awards and recognitions details.
+    How you should use the tool:
+    argument:
+    "question" : "Give me a list of all awards and recognitions, including award names, awarding organizations, dates, and reasons for recognition."
+    
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+  expected_output: >
+    Awards and Recognitions:
+      Award Name:
+      Awarding Organization:
+      Date:
+      Reason for Recognition:
+
+references_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive references details.
+    How you should use the tool:
+    argument:
+    "question" : "Give me a list of all references, including names, positions, companies, contact information, and relationships to you."
+    
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+  expected_output: >
+    References:
+      Name:
+      Position:
+      Company:
+      Contact Information:
+      Relationship:
+
+personal_traits_interests_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal traits and interests details.
+    How you should use the tool:
+    argument:
+    "question" : "Give me a list of all personal traits and interests, including strengths, weaknesses, hobbies, and passions."
+    
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+  expected_output: >
+    Personal Traits and Interests:
+      Strengths:
+      Weaknesses:
+      Hobbies:
+      Passions:
+
+miscellaneous_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive miscellaneous details.
+    How you should use the tool:
+    argument:
+    "question" : "Give me any additional information that you would like to include in your profile, such as languages spoken, certifications, professional affiliations, or other relevant details."
+    
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+  expected_output: >
+    Additional Information:
+      Languages Spoken:
+      Certifications:
+      Professional Affiliations:
+      Other Relevant Details:
+
+resume_build_task:
+  description: >
+    You are given the context of all previous tasks of collecting necessary information to make a resume. Use all the knowledges to build a resume which closely aligns with the job description provided.
+
+    If some information is missing, dont mention it in the resume. 
+  expected_output: >
+    A well-structured resume that includes all the necessary information gathered from the previous tasks. The resume should be tailored to the job description provided, highlighting the user's skills, experiences, and qualifications relevant to the position.
+    
+job_description_cross_check_task:
+  description: >
+    The task involves finding out the similarity between the Keyword and Phrase Extraction of a Job Post and the context received. You will get the "Keyword and Phrase Extraction" by using the tool. Use the context received from the previous tasks to find out the similarity between the Job's keywords and phrases and the context received.
+  expected_output: >
+    The expected output is a structured report that categorizes matches as 'Exact Match', 'Partial Match', or 'No Match'. Each category will include:
+    - 'Exact Match': Direct correspondences between job description requirements and applicant's stated qualifications.
+    - 'Partial Match': Related skills or experiences that do not directly match but are relevant to the job requirements.
+    - 'No Match': Key areas where the applicant does not meet the job specifications.
+    The report should also include a relevance score or percentage that quantifies the overall fit of the applicant to the job description, helping recruiters prioritize candidates efficiently.
 
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
@@ -130,8 +249,6 @@ personal_information_extraction_task:
 #   expected_output: >
 #     An exhaustive description of projects with detailed accounts of titles, technologies, durations, roles played, contributions, and outcomes.
 
-
-
 # career_aspirations_task:
 #   description: >
 #     Define long-term career goals and the types of roles and responsibilities the user is seeking in future positions.
@@ -144,76 +261,4 @@ personal_information_extraction_task:
 #   expected_output: >
 #     A list of job-specific requirements tailored to the user's preferences and potential job descriptions.
 
-
-# -----------------------------------------------------------
-
-
-# research_task:
-#   description: >
-#     Conduct a thorough research about {topic}
-#     Make sure you find any interesting and relevant information given
-#     the current year is 2024.
-#   expected_output: >
-#     A list with 10 bullet points of the most relevant information about {topic}
-
-# reporting_task:
-#   description: >
-#     Review the context you got and expand each topic into a full section for a report.
-#     Make sure the report is detailed and contains any and all relevant information.
-#   expected_output: >
-#     A fully fledge reports with the mains topics, each with a full section of information.
-#     Formated as markdown with out '```'
-
-
-# personal_information_task:
-#   description: >
-#     Use a provided tool which will return the contents of specified local file path {user_info_file_path}. Use the "action" command: "organize the document, you will simple organize, do not remove information or make it concise. Do not remove any links." to instruct the tool to execute this task. You are responsible for ensuring that the output of the tool is a complete and well-structured profile. This profile should clearly present the information in an organized, structured, and categorized format, integrating all segments cohesively. You must ensure the inclusion of all essential sections and details:
-#     * A detailed introduction of the user.
-#     * Complete and detailed descriptions and dates for all projects, including GitHub links and technologies used. 
-#     * Detailed information on the user's experiences, with descriptions for each listed experience.
-    
-#     You should review the tool's output to identify and correct any formatting issues, and to improve the content's clarity and flow as necessary.
-#     Do not remove any information or links from the document. keep it detailed and organized.
-
-#     It is recommended to use the tool only once. If you need to use the tool again, please provide a valid reason for doing so.
-#   expected_output: >
-#     A comprehensive profile that includes all necessary details about the user. The output, produced by the automated tool should be a complete and accurate compilation of all data from the document. The profile must integrate the segments cohesively and fill any gaps in information. It should include:
-#     * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
-#     * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
-#     * Comprehensive details on experiences, including descriptions of roles and achievements.
-#     * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
-#     * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
-#     * A focused career goal section, with clear steps and skills to be acquired.
-#     * Figures and statistics where applicable to substantiate claims made in the profile.
-#     * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
-#     The document must follow these formatting guidelines:
-#     * Use of headings and subheadings for improved readability and organization.
-#     * Consistent formatting throughout, including indenting and spacing.
-#     * Text that is well-formatted and easy to read.
-#     You should consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
-
-
-# personal_information_task:
-#   description: >
-#     Utilize an automated tool to segment and organize a document from the specified local file path {user_info_file_path}. Employ the "action" command: "organize the document" to execute this task. Focus on creating a complete and well-structured profile that not only presents the information in a clear, organized, structured, and categorized format but also ensures that the output is detailed and comprehensive, integrating all segments cohesively. Ensure the inclusion of all essential sections and details:
-#     * A detailed introduction or summary at the top of the resume.
-#     * Complete descriptions and dates for all projects, including GitHub links and technologies used.
-#     * Detailed information on the user's experiences, with descriptions for each listed experience.
-#     Review the output to identify and correct any formatting issues and to improve the content's clarity and flow as necessary.
-
-#   expected_output: >
-#     A comprehensive profile that includes all necessary details about the user, a software developer. The output should provide a complete and accurate compilation of all data from the document, integrating the segments cohesively and filling any gaps in information. The profile must include:
-#     * A clear and concise summary at the beginning that outlines the user's background, skills, and interests.
-#     * Detailed and well-explained project entries, including problems solved, technologies used, results achieved, project dates, and GitHub links.
-#     * Comprehensive details on experiences, including descriptions of roles and achievements.
-#     * Expanded details on education, including specific courses, academic achievements, and notable projects or research.
-#     * Demonstrations of how the user applies their skills in work scenarios, with examples and current industry trends.
-#     * A focused career goal section, with clear steps and skills to be acquired.
-#     * Figures and statistics where applicable to substantiate claims made in the profile.
-#     * Expanded details on mentorship experiences, specifying skills imparted and impacts made.
-#     Furthermore, ensure the document follows these formatting guidelines:
-#     * Use of headings and subheadings for improved readability and organization.
-#     * Consistent formatting throughout, including indenting and spacing.
-#     * Text that is well-formatted and easy to read.
-#     Consider reorganizing sections for better clarity and flow, and provide specific feedback for areas needing condensing or enhancements to optimize the presentation of the profile.
 
