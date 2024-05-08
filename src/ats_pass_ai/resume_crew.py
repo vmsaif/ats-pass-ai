@@ -7,6 +7,7 @@
 import agentops
 from langchain_groq import ChatGroq
 from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_vertexai import ChatVertexAI
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
@@ -35,6 +36,12 @@ class ResumeCrew:
 	miscellaneous_extraction_task_file_path = 'info_extraction/miscellaneous_extraction_task.txt'
 	resume_building_task_file_path = 'info_extraction/resume_building_task.txt'
 	job_description_cross_check_task_file_path = 'info_extraction/job_description_relevance_task.txt'
+	work_experience_extraction_task_file_path = 'info_extraction/work_experience_extraction_task.txt'
+	project_experience_extraction_task_file_path = 'info_extraction/project_experience_extraction_task.txt'
+	
+
+	# Cross Checked with JD keywords
+	skills_extraction_task_file_path = 'info_extraction/relevent_to_jd/skills_extraction_task.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
@@ -47,14 +54,18 @@ class ResumeCrew:
 		"personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
 		"miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 		"job_description_cross_check_task": job_description_cross_check_task_file_path,
+		"skills_extraction_task": skills_extraction_task_file_path,
+		"work_experience_extraction_task": work_experience_extraction_task_file_path,
+		"project_experience_extraction_task": project_experience_extraction_task_file_path,
 	}
 
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
-	jd_reader = CrewAIFileReadTool.create(jd_keyword_extraction_file_path)
+	jd_extr_keywords_reader = CrewAIFileReadTool.create(jd_keyword_extraction_file_path)
+	user_info_organized_reader = CrewAIFileReadTool.create('info_files/user_info_organized.txt')
 
 
-	# llm = ChatGroq(
+	# llama = ChatGroq(
 	# 		temperature=0.5,
 	# 		model_name="llama3-8b-8192",
 	# 		# model_kwargs={
@@ -62,7 +73,16 @@ class ResumeCrew:
     # 		# },
 	# 		verbose=True
 	# )
-	agentops.init()
+	# agentops.init()
+ 
+	itirative_AI = ChatGoogleGenerativeAI(
+		model="gemini-pro",
+		verbose=True,
+		temperature=1.0,
+		cache=True
+	)
+
+ 
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
@@ -73,11 +93,12 @@ class ResumeCrew:
 	genAILarge = ChatVertexAI(
 		model="gemini-1.5-pro-preview-0409",
 		verbose=True,
-		temperature=0.9,
+		temperature=1.5,
 	)
 
 
 	# Define the agents
+ 
 	@agent
 	def generalist_agent(self) -> Agent:
 		return Agent(
@@ -88,17 +109,19 @@ class ResumeCrew:
 			allow_delegation=False,
 			cache=True,
 			llm=self.genAI,
+
+
 		)
 
 	# Define the tasks
-	@task
-	def education_extraction_task(self):
-		return Task(
-			config=self.tasks_config["education_extraction_task"],
-			agent=self.generalist_agent(),
-			output_file=self.education_extraction_task_file_path,
-			tools=[self.queryTool],
-		)
+	# @task
+	# def education_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["education_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.education_extraction_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
 	
 	# @task
 	# def personal_information_extraction_task(self):
@@ -166,28 +189,28 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 		# )
 
-	@agent
-	def job_description_relevance_agent (self) -> Agent:
-		return Agent(
-			config=self.agents_config["job_description_cross_check_agent"],
-			verbose=True,
-			# max_iter=3,
-			max_rpm=2,
-			allow_delegation=False,
-			cache=True,
-			tools=[self.jd_reader],
-			llm=self.genAI,
-		)
+	# @agent
+	# def job_description_relevance_agent (self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["job_description_cross_check_agent"],
+	# 		verbose=True,
+	# 		# max_iter=3,
+	# 		max_rpm=2,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		tools=[self.jd_extr_keywords_reader],
+	# 		llm=self.genAI,
+	# 	)
 	
-	@task
-	def job_description_cross_check_task(self):
-		return Task(
-			config=self.tasks_config["job_description_cross_check_task"],
-			agent=self.job_description_relevance_agent(),
-			context=[self.education_extraction_task()],
-			output_file=self.job_description_cross_check_task_file_path,
+	# @task
+	# def job_description_cross_check_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["job_description_cross_check_task"],
+	# 		agent=self.job_description_relevance_agent(),
+	# 		context=[self.education_extraction_task()],
+	# 		output_file=self.job_description_cross_check_task_file_path,
 
-		)
+	# 	)
 
 	# @task
 	# def resume_build_task(self):
@@ -206,7 +229,49 @@ class ResumeCrew:
 	# 		],
 	# 		tools=[self.queryTool],
 	# 	)	
+ 
+	# @agent
+	# def technical_details_agent (self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["technical_details_agent"],
+	# 		verbose=True,
+	# 		# max_iter=3,
+	# 		max_rpm=2,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		llm=self.genAI,
+	# 		tools=[self.queryTool, self.jd_extr_keywords_reader],
+	# 	)
+	
+	# @task
+	# def skills_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["skills_extraction_task"],
+	# 		# agent=self.technical_details_agent(),
+   	# 		agent=self.generalist_agent(),
+	# 		output_file=self.skills_extraction_task_file_path,
+	# 		tools=[self.queryTool],
+	# 		# tools=[self.queryTool, self.jd_extr_keywords_reader],
+	# 	)
 
+	# @task
+	# def work_experience_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["work_experience_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.work_experience_extraction_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
+ 
+	@task
+	def project_experience_extraction_task(self):
+		return Task(
+			config=self.tasks_config["project_experience_extraction_task"],
+			agent=self.generalist_agent(),
+			tools=[self.user_info_organized_reader],
+			output_file=self.project_experience_extraction_task_file_path,
+		)
+ 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the user info organizer crew"""

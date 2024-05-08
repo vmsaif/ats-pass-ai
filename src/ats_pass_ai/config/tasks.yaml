@@ -10,6 +10,8 @@
 # - miscellaneous_extraction_task
 # - resume_build_task
 
+
+
 personal_information_extraction_task:
   description: >
     You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
@@ -43,8 +45,7 @@ education_extraction_task:
     How you should use the tool:
     argument:
     "question" : "Give me the list of all educational qualifications, including degrees, majors, universities, graduation dates, and any honors or distinctions."
-    USE THE TOOL ONLY 1 TIME.
-    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, Rerun the tool again with the missing field. 
   expected_output: >
     Education:
       Degree:
@@ -141,6 +142,7 @@ resume_build_task:
 job_description_cross_check_task:
   description: >
     The task involves finding out the similarity between the Keyword and Phrase Extraction of a Job Post and the context received. You will get the "Keyword and Phrase Extraction" by using the tool. Use the context received from the previous tasks to find out the similarity between the Job's keywords and phrases and the context received.
+
   expected_output: >
     The expected output is a structured report that categorizes matches as 'Exact Match', 'Partial Match', or 'No Match'. Each category will include:
     - 'Exact Match': Direct correspondences between job description requirements and applicant's stated qualifications.
@@ -149,15 +151,94 @@ job_description_cross_check_task:
     The report should also include a relevance score or percentage that quantifies the overall fit of the applicant to the job description, helping recruiters prioritize candidates efficiently.
 
 
+# ------------------------ work_project_experience_agent ----------------
+
+work_experience_extraction_task:
+  description: >
+    The task involves extracting detailed information about the user's work experience, including job titles, companies, durations, roles, responsibilities, and achievements. Use the tool to extract this information from the user's input.
+
+    The tool will return a large chunk of information. Look into the chunk to find your data. You may need to ask the tool multiple times to extract all the expeiernces.
+
+  expected_output: >
+    Work Experience:
+      Job Title:
+      Company:
+      Duration:
+      Role:
+      Responsibilities: (At least 3-4 responsibilities or more if possible)
+        1.
+        2.
+        3.
+        4.
+        5.
+        
+      Achievements:
+
+
+
+project_experience_extraction_task:
+  description: >
+    The task involves extracting detailed information about the user's project experiences, including project titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
+
+    The tool will return a large chunk of information. Look into the chunk to find your data. 
+    
+  expected_output: >
+    Project Experience:
+    Project name:
+    Role:
+    Description: 
+    Key Highlights: 
+      1.
+      2.
+      3.
+      4.
+      
+    Technologies Used:
+    Timeline:
+    Team size:
+    Outcomes:
+
+
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
-# skills_task:
+# skills_extraction_task:
 #   description: >
-#     Identify and categorize all professional skills including technical, soft skills, and
-#     proficiency levels. Include certifications and licenses.
+#     Your task is to comprehensively extract a list of skills and technologies from the user's projects and work experiences across various industries. You should utilize the tool to perform multiple queries, each tailored to specific categories such as technical skills, professional software, operational tools, and work methodologies.
+    
+#     Break down your queries to cover all areas thoroughly:
+#     - Start by asking for technical skills used in projects and work experiences, which could include programming languages in tech, surgical techniques in healthcare, or teaching methods in education and so on.
+#     - Next, inquire about professional software and tools that have been utilized, which could range from industry-specific tools like CAD software for engineers to CRM systems for sales professionals.
+#     - Follow with questions on any operational tools or equipment used, which could include everything from heavy machinery in construction to laboratory equipment in science fields.
+#     - Finally, ask about methodologies or strategic frameworks adopted in their professional practices, applicable across different sectors.
+
+#     Compile the responses to these queries to form a complete inventory of skills and technologies. If any category appears incomplete or missing, rephrase your questions to fill these gaps. Ensure not to fabricate any information and rely solely on the data provided.
+
 #   expected_output: >
-#     A detailed breakdown of skills organized by category such as programming, database management,
-#     and soft skills with an indication of proficiency levels.
+#     The expected output should list all skills and technologies, categorized by type, derived directly from the user's input about their projects and work experiences across diverse industries:
+#     - Technical Skills:
+#       - Examples: Python, Java, Phlebotomy, Classroom Management
+#     - Professional Software and Tools:
+#       - Examples: AutoCAD, Salesforce, Adobe Suite, Microsoft Office
+#     - Operational Tools:
+#       - Examples: CNC machines, Stethoscopes, Paintbrushes
+#     - Methodologies and Frameworks:
+#       - Examples: Agile, Six Sigma, Montessori Method, Narrative Therapy
+
+#     This comprehensive listing will assist in accurately assessing the candidate’s versatility and suitability for various roles across multiple sectors.
+
+
+
+# skills_extraction_task:
+#   description: >
+#     You will begin by using the "Search for the chunk of relevant content" tool to extract a comprehensive list of skills and technologies from the candidate's submissions. Following this extraction, you will use the fileReaderTool to retrieve a list of keywords that are critical to the job description. Your task is to cross-check and identify which of the extracted skills exactly match or partially match the keywords from the job description. If a skill is not listed in the job description but you deem it somewhat relevant, include it in your final list. Your final output should very brief. 
+#   expected_output: >
+#     The expected output is a detailed list of skills categorized into three types:
+#     - Exact Match: Skills that directly correspond with those listed in the job description.
+#     - Partial Match: Skills that, while not explicitly listed, are closely related to or valuable for the job role.
+#     - Relevant Skills: Skills not listed but considered valuable for the role, each accompanied by a justification for its inclusion.
+#     This categorized list of skills will later be utilized to craft tailored resumes that highlight the candidate’s most relevant qualifications.
+
+
 
 # professional_affiliations_task:
 #   description: >
@@ -173,19 +254,7 @@ job_description_cross_check_task:
 #   expected_output: >
 #     A detailed list of publications and presentations, including co-authors, titles, publication dates, and event names.
 
-# ------------------------ work_project_experience_agent ----------------
 
-# work_experience_task:
-#   description: >
-#     Organize and document comprehensive work histories including job titles, durations, employers, responsibilities, and achievements. Highlight skills utilized and developed in each role to showcase professional growth and capabilities.
-#   expected_output: >
-#     A detailed and structured overview of work experience, presenting each role with clarity and emphasizing key contributions and skills.
-
-# project_experience_task:
-#   description: >
-#     Compile and format detailed descriptions of projects including titles, technologies used, durations, roles, contributions, and outcomes. Ensure that each project is represented in a manner that highlights its significance and the user's role in achieving results.
-#   expected_output: >
-#     A comprehensive and organized presentation of project experiences, each described thoroughly with information on technologies, durations, roles, and achievements, along with links to repositories or live projects if applicable.
 
 # ------------------------ career_planning_analyst_agent ----------------
 

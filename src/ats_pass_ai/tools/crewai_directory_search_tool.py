@@ -1,6 +1,7 @@
 
 from crewai_tools import FileReadTool
 # from crewai_tools import DirectoryReadTool
+# from crewai_tools import TXTSearchTool
 # Create a new instance of the TXTSearchTool
 
 class CrewAIFileReadTool:
