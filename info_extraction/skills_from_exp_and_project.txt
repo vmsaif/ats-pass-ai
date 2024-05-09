@@ -1,0 +1,126 @@
+Technologies:
+- Python
+- Java
+- RAG Search
+- JavaScript
+- Gemini
+- LangChain
+- CrewAI
+- Blockchain
+- Docker
+- Vue.js
+- A* algorithm
+- Git
+- CI/CD
+- OpenGL
+- C++
+- Geometry
+- Math
+- File I/O
+- Object-Oriented Programming
+- Polymorphism
+- Markdown
+- Jekyll
+- GitHub Pages
+- C Programming
+- Debugging
+- Linux OS
+- Lighting Techniques
+- 3D modeling
+- Rendering
+- Android Studio
+- HSQLDB
+- UI/UX Design
+- AI Decision-Making
+- TCP/IP
+- Multithreading
+- Network
+- R
+- Data Analysis
+- Data Visualization
+- React
+- Styled-Components
+- GitHub Actions
+- JavaScript
+- CSS
+- HTML
+- Bash
+Skills:
+- Good Interpersonal Skills
+- Communication
+- Teamwork
+- Problem Solving
+- Adaptability
+- Time Management
+- Critical Thinking
+- Complexity Analysis
+- Project management
+- AI
+- Machine learning
+- Natural language processing
+- Resume writing
+- Blockchain development
+- Decentralized applications
+- Data security
+- Smart contracts
+- Game development
+- AI
+- Pathfinding
+- Algorithms
+- Software testing
+- 3D graphics
+- Ray tracing
+- Computer graphics
+- Rendering techniques
+- Object-Oriented Programming
+- Polymorphism
+- Java
+- Data Structures
+- Algorithms
+- Technical writing
+- Documentation
+- Markdown
+- Jekyll
+- Git
+- Version control
+- C programming
+- Debugging
+- System analysis
+- Documentation
+- OpenGL
+- Computer graphics
+- Lighting techniques
+- 3D modeling
+- Rendering
+- Android development
+- Java
+- Database Management
+- UI/UX Design
+- Teamwork
+- Project management
+- AI
+- Game development
+- User interface design
+- Software testing
+- CI/CD
+- Java
+- TCP/IP
+- Multithreading
+- Network programming
+- Client-Server communication
+- R
+- Data analysis
+- Data visualization
+- Statistical analysis
+- Data interpretation
+- Web development
+- React
+- UI/UX design
+- Front-end development
+- Portfolio development
+- C programming
+- Multithreading
+- System programming
+- Linux
+- Bash scripting
+- Git

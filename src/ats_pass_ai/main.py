@@ -13,7 +13,7 @@ from ats_pass_ai.tools.llm_task import LLMTask
 user_info_file_path = 'info_files/user_info.txt'
 user_info_orgainzed_file_path = 'info_files/user_info_organized.txt'
 jd_file_path = 'info_files/job_description.txt'
-jd_extracted_keywords_file_path = ResumeCrew.jd_keyword_extraction_file_path
+jd_extracted_keywords_file_path = ResumeCrew().jd_keyword_extraction_file_path
 
 
 def run():

@@ -93,32 +93,3 @@ class LLMTask:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# convo = model.start_chat(history=[
-#   {
-#     "role": "user",
-#     "parts": ["A unique self-made philosophy has always guided my journey in software development: to\ncreate a \"magic button\" for users. That is, One button should do everything the user wants at this moment."]
-#   },
-#   {
-#     "role": "model",
-#     "parts": ["## Personal Narrative\n\nSaif Mahmud is a recent Computer Science graduate from the University of Manitoba, driven by a unique philosophy of creating \"magic button\" solutions for users. His passion lies in simplifying complex processes and crafting intuitive user experiences. \n\n## Skills \n\n### Programming Languages\n\n*   Python\n*   JavaScript\n*   C++\n*   Java\n\n### Databases\n\n*"]
-#   },
-# ])
-
-# convo.send_message("YOUR_USER_INPUT")
-# print(convo.last.text)
-

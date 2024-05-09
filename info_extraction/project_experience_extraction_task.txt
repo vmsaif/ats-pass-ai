@@ -1,151 +1,126 @@
+Project Experience:
+1.
 Project name: ATS Pass AI
-Role: N/A
-Description: Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
-Key Highlights:
-- Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.
-- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
-- Developed scalable architecture to anticipate future needs and adaptations.
+Role: Development Lead
 Timeline: January 2024 - Present
-Team size: N/A
-Outcomes: N/A
+Description: Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. 
+Technologies Used: Python, RAG Search, JavaScript, Gemini, LangChain, CrewAI
+Skills: Project management, AI, machine learning, natural language processing, resume writing
+Key Highlights: Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations.
+
+2.
 Project name: Blockchain Car Mileage Tracker
-Role: N/A
-Description: Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
-Key Highlights:
-- Developed using blockchain technology, emphasizing adaptability and enthusiasm for learning new technologies.
-- Enhanced data integrity and transparency.
-- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording.
+Role: Project Co-Developer
 Timeline: January 2023 - Mar 2023
-Team size: N/A
-Outcomes: N/A
+Description: Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
+Technologies Used: Blockchain, Docker, Vue.js
+Skills: Blockchain development, decentralized applications, data security, smart contracts
+Key Highlights: Developed using blockchain technology, emphasizing adaptability and enthusiasm for learning new technologies. Enhanced data integrity and transparency. Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording. Collaborated closely as a team to design, develop, and test the application.
+
+3.
 Project name: AI Path Finding
-Role: N/A
+Role: Game Developer
+Timeline: Jul 2023 - Sep 2023
 Description: A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
-Key Highlights:
-- Utilized Git for version control, ensuring efficient team collaboration and code management.
-- Utilized CI/CD practices, resulting in a 50% reduction in deployment time.
-- Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
-- Applied fundamental software development and testing processes to ensure robust application performance.
-Timeline: Game Development - Jul 2023 - Sep 2023
-Team size: N/A
-Outcomes: N/A
+Technologies Used: Java, A* algorithm, Git, CI/CD
+Skills: Game development, AI, pathfinding, algorithms, software testing
+Key Highlights: Utilized Git for version control, ensuring efficient team collaboration and code management. Utilized CI/CD practices, resulting in a 50% reduction in deployment time. Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm. Applied fundamental software development and testing processes to ensure robust application performance. 
+
+4.
 Project name: Recursive Ray Tracing
-Role: N/A
-Description: Implemented a complex 3D graphics rendering technique using OpenGL.
-Key Highlights:
-- Implemented a complex 3D graphics rendering technique using OpenGL.
-- Applied geometry and generic math skills to calculate light paths and surface interactions.
-Timeline: Graphics Programming - May 2023 - July 2023
-Team size: N/A
-Outcomes: N/A
+Role: Graphics Programmer
+Timeline: May 2023 - July 2023
+Description: Implemented a complex 3D graphics rendering technique using OpenGL. 
+Technologies Used: OpenGL, C++, Geometry, Math
+Skills: 3D graphics, ray tracing, computer graphics, rendering techniques
+Key Highlights: Implemented a complex 3D graphics rendering technique using OpenGL. Applied geometry and generic math skills to calculate light paths and surface interactions. 
+
+5.
 Project name: Bank Account System
-Role: N/A
-Description: Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
-Key Highlights:
-- Developed scalable Java applications, showcasing a deep understanding of object-oriented programming, optimizing process efficiency by 30%.
-- Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling.
-- Facilitated open-source collaboration with documentation.
+Role: Developer
 Timeline: Object-Oriented Design - Polymorphism
-Team size: N/A
-Outcomes: N/A
+Description: Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism. 
+Technologies Used: Java, File I/O, Object-Oriented Programming, Polymorphism
+Skills: Java, object-oriented programming, polymorphism, data structures, algorithms
+Key Highlights: Developed scalable Java applications, showcasing a deep understanding of object-oriented programming, optimizing process efficiency by 30%.  Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling. Facilitated open-source collaboration with documentation. 
+
+6.
 Project name: Hosting a Resume on GitHub Pages
-Role: N/A
-Description: A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.
-Key Highlights:
-- Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.
-- Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.
-- Emphasized beginner-friendly methods for web hosting and documentation.
+Role: Technical Writer
 Timeline: Technical Documentation - Apr 2023 - Apr 2023
-Team size: N/A
-Outcomes: N/A
+Description: A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git. 
+Technologies Used: Markdown, Jekyll, Git, GitHub Pages
+Skills: Technical writing, documentation, Markdown, Jekyll, Git, version control
+Key Highlights: Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation. Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages. Emphasized beginner-friendly methods for web hosting and documentation. Showcased ability to create clear, structured technical documentation accessible online. 
+
+7.
 Project name: ELF Binary Analysis
-Role: N/A
-Description: Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills.
-Key Highlights:
-- Demonstrated expertise in C for ELF binary parsing and system operations.
-- Enhanced debugging efficiency by 20%, showcasing problem-solving abilities.
-- Actively contributed to technical documentation for product and knowledge base improvement.
+Role: Developer
 Timeline: Nov 2022 - Dec 2022
-Team size: N/A
-Outcomes: N/A
+Description: Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills. 
+Technologies Used: C Programming, Debugging, Linux OS
+Skills: C programming, debugging, system analysis, documentation
+Key Highlights: Demonstrated expertise in C for ELF binary parsing and system operations. Enhanced debugging efficiency by 20%, showcasing problem-solving abilities. Actively contributed to technical documentation for product and knowledge base improvement.
+
+8.
 Project name: OpenGL Sphere Lighting
-Role: N/A
-Description: Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
-Key Highlights:
-- Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.
-- Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.
-- Utilized glutSolidSphere for accurate sphere rendering, showcasing the effects of different lighting conditions.
+Role: Graphics Programmer
 Timeline: Graphics Programming - April 2023 - June 2023
-Team size: N/A
-Outcomes: N/A
+Description: Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources. 
+Technologies Used: OpenGL, C++, Lighting Techniques
+Skills: OpenGL, computer graphics, lighting techniques, 3D modeling, rendering
+Key Highlights: Developed an application with three distinct light sources, offering comprehensive insights into lighting effects. Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material. Utilized glutSolidSphere for accurate sphere rendering, showcasing the effects of different lighting conditions. 
+
+9.
 Project name: Reversible Learning APP
-Role: N/A
+Role: Team Member
+Timeline: Project Management | Team Player - January 2021 - April 2021 
 Description: Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.
-Key Highlights:
-- Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
-- Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives.
-- Developed an intuitive user interface (UI) for note organization and question archiving.
-Timeline: Project Management | Team Player - January 2021 - April 2021
-Team size: N/A
-Outcomes: N/A
+Technologies Used: Android Studio, Java, HSQLDB, UI/UX Design
+Skills: Android development, Java, database management, UI/UX design, teamwork, project management
+Key Highlights: Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs. Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives. Developed an intuitive user interface (UI) for note organization and question archiving.
+
+10.
 Project name: Connect 4 Game
-Role: N/A
-Description: Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
-Key Highlights:
-- Implemented strategic AI decision-making, enhancing game complexity and player engagement.
-- Implemented efficient CI/CD workflows to streamline development and deployment processes.
-- Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+Role: Developer
 Timeline: CI/CD | Cross-Platform Deployment - February 2023 - April 2023
-Team size: N/A
-Outcomes: N/A
+Description: Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
+Technologies Used: Java, AI Decision-Making, CI/CD
+Skills: Java, AI, game development, user interface design, software testing, CI/CD
+Key Highlights: Implemented strategic AI decision-making, enhancing game complexity and player engagement. Implemented efficient CI/CD workflows to streamline development and deployment processes. Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+
+11.
 Project name: TCP Chat Application
-Role: N/A
-Description: Developed a Java chat application for real-time client-server communication using TCP.
-Key Highlights:
-- Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling.
-- Implemented socket programming for robust client-server communication.
-- Enabled features like room creation, joining/leaving rooms, and viewing room details.
-- Achieved a 99.9% uptime and stability rate.
-- Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management.
+Role: Network Programmer
 Timeline: Client-Server Communication - October 2022 - December 2022
-Team size: N/A
-Outcomes: N/A
+Description: Developed a Java chat application for real-time client-server communication using TCP. 
+Technologies Used: TCP/IP, Multithreading, Network
+Skills: Java, TCP/IP, multithreading, network programming, client-server communication
+Key Highlights: Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling. Implemented socket programming for robust client-server communication. Enabled features like room creation, joining/leaving rooms, and viewing room details. Achieved a 99.9% uptime and stability rate. Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management. 
+
+12.
 Project name: Data Visualization with R
-Role: N/A
-Description: Utilized R for statistical analysis and data visualization, demonstrating the ability to translate complex data into actionable insights.
-Key Highlights:
-- Utilized R for statistical analysis and data visualization, akin to Power BI tasks.
-- Demonstrated ability to translate complex data into actionable insights.
-- Learned to create interactive visualizations, enhancing data-driven decision-making.
+Role: Data Analyst
 Timeline: Course Project
-Team size: N/A
-Outcomes: N/A
+Description: Utilized R for statistical analysis and data visualization, demonstrating the ability to translate complex data into actionable insights. 
+Technologies Used: R, Data Analysis, Data Visualization
+Skills: R, data analysis, data visualization, statistical analysis, data interpretation
+Key Highlights: Utilized R for statistical analysis and data visualization, akin to Power BI tasks. Demonstrated ability to translate complex data into actionable insights. Learned to create interactive visualizations, enhancing data-driven decision-making. 
+
+13.
 Project name: Portfolio Website
-Role: N/A
+Role: Web Developer
+Timeline: Self-Initiated Project - 2021 
 Description: Developed a comprehensive portfolio website to showcase projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages.
-Key Highlights:
-- Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility.
-- Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization.
-- The site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating full-stack development capabilities.
-Timeline: Self-Initiated Project - 2021
-Team size: N/A
-Outcomes: N/A
+Technologies Used: React, Styled-Components, GitHub Actions, JavaScript, CSS, HTML
+Skills: Web development, React, UI/UX design, front-end development, portfolio development
+Key Highlights: Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility. Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization. The site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating full-stack development capabilities.
+
+14.
 Project name: CPU Scheduling
-Role: N/A
-Description: Developed a multi-threaded scheduling simulator in C, showcasing knowledge in parallel processing methodologies relevant to robotics and geometrical planning.
-Key Highlights:
-- Developed a multi-threaded scheduling simulator in C, showcasing knowledge in parallel processing methodologies relevant to robotics and geometrical planning.
-- Practiced Linux OS administration and Bash scripting for system programming.
-- Employed Git for source control, aligning with industry-standard version control practices.
+Role: System Programmer
 Timeline: System Programming - June 2023 - August 2023
-Team size: N/A
-Outcomes: N/A
-Project name: Go-Back-N Protocol Simulation
-Role: N/A
-Description: Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects.
-Key Highlights:
-- Simulated packet loss and generated visualizations with matplotlib to illustrate protocol performance. Increased understanding of networking protocols and data transmission by 65%.
-- Analyzed adaptive window sizing benefits for flow control in networking.
-Timeline: Data Visualization - Nov 2022 - Dec 2022
-Team size: N/A
-Outcomes: N/A
+Description: Developed a multi-threaded scheduling simulator in C, showcasing knowledge in parallel processing methodologies relevant to robotics and geometrical planning. 
+Technologies Used: C, Multithreading, Linux, Bash, Git
+Skills: C programming, multithreading, system programming, Linux, Bash scripting, Git
+Key Highlights: Practiced Linux OS administration

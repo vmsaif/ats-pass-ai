@@ -10,8 +10,6 @@
 # - miscellaneous_extraction_task
 # - resume_build_task
 
-
-
 personal_information_extraction_task:
   description: >
     You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
@@ -131,112 +129,131 @@ miscellaneous_extraction_task:
       Professional Affiliations:
       Other Relevant Details:
 
-resume_build_task:
-  description: >
-    You are given the context of all previous tasks of collecting necessary information to make a resume. Use all the knowledges to build a resume which closely aligns with the job description provided.
+# resume_build_task:
+#   description: >
+#     You are given the context of all previous tasks of collecting necessary information to make a resume. Use all the knowledges to build a resume which closely aligns with the job description provided.
 
-    If some information is missing, dont mention it in the resume. 
-  expected_output: >
-    A well-structured resume that includes all the necessary information gathered from the previous tasks. The resume should be tailored to the job description provided, highlighting the user's skills, experiences, and qualifications relevant to the position.
+#     If some information is missing, dont mention it in the resume. 
+#   expected_output: >
+#     A well-structured resume that includes all the necessary information gathered from the previous tasks. The resume should be tailored to the job description provided, highlighting the user's skills, experiences, and qualifications relevant to the position.
     
-job_description_cross_check_task:
-  description: >
-    The task involves finding out the similarity between the Keyword and Phrase Extraction of a Job Post and the context received. You will get the "Keyword and Phrase Extraction" by using the tool. Use the context received from the previous tasks to find out the similarity between the Job's keywords and phrases and the context received.
-
-  expected_output: >
-    The expected output is a structured report that categorizes matches as 'Exact Match', 'Partial Match', or 'No Match'. Each category will include:
-    - 'Exact Match': Direct correspondences between job description requirements and applicant's stated qualifications.
-    - 'Partial Match': Related skills or experiences that do not directly match but are relevant to the job requirements.
-    - 'No Match': Key areas where the applicant does not meet the job specifications.
-    The report should also include a relevance score or percentage that quantifies the overall fit of the applicant to the job description, helping recruiters prioritize candidates efficiently.
-
 
 # ------------------------ work_project_experience_agent ----------------
 
 work_experience_extraction_task:
   description: >
-    The task involves extracting detailed information about the user's work experience, including job titles, companies, durations, roles, responsibilities, and achievements. Use the tool to extract this information from the user's input.
+    The task involves extracting detailed information about the user's work experiences, including work titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
 
-    The tool will return a large chunk of information. Look into the chunk to find your data. You may need to ask the tool multiple times to extract all the expeiernces.
-
+    The tool will return a large chunk of information. Look into the chunk to find your data. Look at each work closely to understand the tools and technologies, framworks used during the work. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the work experiences, you should include them in the output.
+    
   expected_output: >
     Work Experience:
-      Job Title:
-      Company:
-      Duration:
-      Role:
-      Responsibilities: (At least 3-4 responsibilities or more if possible)
-        1.
-        2.
-        3.
-        4.
-        5.
-        
-      Achievements:
+    Company name:
+    Role:
+    Description: 
+    Timeline:
+    Technologies Used:
+    Skills: 
+    Key Highlights: 
+      1.
+      2.
+      3.
+      4.
 
+    
+    Team size: (if available)
+    Outcomes:
+    Link: (if available)
+    
 
 
 project_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the user's project experiences, including project titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
 
-    The tool will return a large chunk of information. Look into the chunk to find your data. 
+    The tool will return a large chunk of information. Look into the chunk to find your data. Look at each project closely to understand the tools and technologies, framworks used to create it. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the project experiences, you should include them in the output.
     
   expected_output: >
     Project Experience:
     Project name:
     Role:
+    Timeline:
     Description: 
+    Technologies Used:
+    Skills: 
     Key Highlights: 
       1.
       2.
       3.
       4.
-      
-    Technologies Used:
-    Timeline:
-    Team size:
+
+    Team size: (if available)
     Outcomes:
+    Link to the project: (if available)
+    
+
 
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
-# skills_extraction_task:
-#   description: >
-#     Your task is to comprehensively extract a list of skills and technologies from the user's projects and work experiences across various industries. You should utilize the tool to perform multiple queries, each tailored to specific categories such as technical skills, professional software, operational tools, and work methodologies.
+job_description_cross_check_task:
+  description: >
+    Analyze and compare the extracted keywords and phrases from a job post with the context from previous tasks by other agents. The context will contain key skills of the job's applicant. Run the provided file reader tool to get the keywords of the job. Then identify the degree of similarity between the job's requirements and the context received.
+  
+  expected_output: >
+    Produce a structured report that categorizes the findings into 'Exact Match', 'Partial Match', or 'No Match'. Each category should clearly indicate the relationship between the job description keywords and the applicant’s qualifications:
     
-#     Break down your queries to cover all areas thoroughly:
-#     - Start by asking for technical skills used in projects and work experiences, which could include programming languages in tech, surgical techniques in healthcare, or teaching methods in education and so on.
-#     - Next, inquire about professional software and tools that have been utilized, which could range from industry-specific tools like CAD software for engineers to CRM systems for sales professionals.
-#     - Follow with questions on any operational tools or equipment used, which could include everything from heavy machinery in construction to laboratory equipment in science fields.
-#     - Finally, ask about methodologies or strategic frameworks adopted in their professional practices, applicable across different sectors.
+    - 'Exact Match': Direct matches between job description requirements and applicant’s qualifications.
+      Example:
+      Exact Match:
+        Technical Skills:
+          - Python
+          - SQL
+        Soft Skills:
+          - Leadership
+          - Team Collaboration
 
-#     Compile the responses to these queries to form a complete inventory of skills and technologies. If any category appears incomplete or missing, rephrase your questions to fill these gaps. Ensure not to fabricate any information and rely solely on the data provided.
+    - 'Partial Match': Skills or experiences that are related but not identical to the job requirements.
+      Example:
+      Partial Match:
+        Technical Skills:
+          - C++ (Similar to Java required by job)
+          - MongoDB (Related to SQL databases required by job)
+        Soft Skills:
+          - Negotiation (Related to requested persuasion skills)
 
-#   expected_output: >
-#     The expected output should list all skills and technologies, categorized by type, derived directly from the user's input about their projects and work experiences across diverse industries:
-#     - Technical Skills:
-#       - Examples: Python, Java, Phlebotomy, Classroom Management
-#     - Professional Software and Tools:
-#       - Examples: AutoCAD, Salesforce, Adobe Suite, Microsoft Office
-#     - Operational Tools:
-#       - Examples: CNC machines, Stethoscopes, Paintbrushes
-#     - Methodologies and Frameworks:
-#       - Examples: Agile, Six Sigma, Montessori Method, Narrative Therapy
+    - 'No Match': Qualifications mentioned in the job description that the applicant lacks.
+      Example:
+      No Match:
+        Missing from Applicant's Profile:
+          - Project Management Certification
+          - Advanced Data Analysis
 
-#     This comprehensive listing will assist in accurately assessing the candidate’s versatility and suitability for various roles across multiple sectors.
+skills_from_exp_and_project_task:
+  description: >
+    Extract a list of skills, technologies, framework etc used from the user's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.
+    
+  expected_output: >
+    Technologies:
+      - item 1
+      - item 2
+      - item 3
+    Skills:
+      - item 1
+      - item 2
+      - item 3
 
-
-
-# skills_extraction_task:
-#   description: >
-#     You will begin by using the "Search for the chunk of relevant content" tool to extract a comprehensive list of skills and technologies from the candidate's submissions. Following this extraction, you will use the fileReaderTool to retrieve a list of keywords that are critical to the job description. Your task is to cross-check and identify which of the extracted skills exactly match or partially match the keywords from the job description. If a skill is not listed in the job description but you deem it somewhat relevant, include it in your final list. Your final output should very brief. 
-#   expected_output: >
-#     The expected output is a detailed list of skills categorized into three types:
-#     - Exact Match: Skills that directly correspond with those listed in the job description.
-#     - Partial Match: Skills that, while not explicitly listed, are closely related to or valuable for the job role.
-#     - Relevant Skills: Skills not listed but considered valuable for the role, each accompanied by a justification for its inclusion.
-#     This categorized list of skills will later be utilized to craft tailored resumes that highlight the candidate’s most relevant qualifications.
+skills_extraction_task:
+  description: >
+    Extract a list of skills to be used in the resume. You have been given a tool that retrieves info simply by asking question as a list of strings. 
+    
+    Also you have been provided user's experiences and project experiences as context. Use the context to extract the skills.
+  expected_output: >
+    Skills:
+      - Skill 1
+      - Skill 2
+      - Skill 3
+      - so on...
 
 
 

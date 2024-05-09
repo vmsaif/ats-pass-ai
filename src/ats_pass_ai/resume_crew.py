@@ -35,28 +35,30 @@ class ResumeCrew:
 	personal_traits_interests_extraction_task_file_path = 'info_extraction/personal_traits_interests_extraction_task.txt'
 	miscellaneous_extraction_task_file_path = 'info_extraction/miscellaneous_extraction_task.txt'
 	resume_building_task_file_path = 'info_extraction/resume_building_task.txt'
-	job_description_cross_check_task_file_path = 'info_extraction/job_description_relevance_task.txt'
+	job_description_cross_check_task_file_path = 'info_extraction/job_description_cross_check_task.txt'
 	work_experience_extraction_task_file_path = 'info_extraction/work_experience_extraction_task.txt'
 	project_experience_extraction_task_file_path = 'info_extraction/project_experience_extraction_task.txt'
+	skills_from_exp_and_project_file_path = 'info_extraction/skills_from_exp_and_project.txt'
 	
 
 	# Cross Checked with JD keywords
-	skills_extraction_task_file_path = 'info_extraction/relevent_to_jd/skills_extraction_task.txt'
+	all_togather_skills_extraction_task_file_path = 'info_extraction/relevent_to_jd/all_togather_skills_extraction_task.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
-		"personal_information_extraction_task": personal_information_extraction_task_file_path,
-		"education_extraction_task": education_extraction_task_file_path,
-		"volunteer_work_extraction_task": volunteer_work_extraction_task_file_path,
-  		"resume_building_task": resume_building_task_file_path,
-		"awards_recognitions_extraction_task": awards_recognitions_extraction_task_file_path,
-		"references_extraction_task": references_extraction_task_file_path,
-		"personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
-		"miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
+		# "personal_information_extraction_task": personal_information_extraction_task_file_path,
+		# "education_extraction_task": education_extraction_task_file_path,
+		# "volunteer_work_extraction_task": volunteer_work_extraction_task_file_path,
+  		# "resume_building_task": resume_building_task_file_path,
+		# "awards_recognitions_extraction_task": awards_recognitions_extraction_task_file_path,
+		# "references_extraction_task": references_extraction_task_file_path,
+		# "personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
+		# "miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 		"job_description_cross_check_task": job_description_cross_check_task_file_path,
-		"skills_extraction_task": skills_extraction_task_file_path,
+		"all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
 		"work_experience_extraction_task": work_experience_extraction_task_file_path,
 		"project_experience_extraction_task": project_experience_extraction_task_file_path,
+		"skills_from_exp_and_project": skills_from_exp_and_project_file_path,
 	}
 
 	# Define the tools
@@ -82,7 +84,6 @@ class ResumeCrew:
 		cache=True
 	)
 
- 
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
@@ -109,8 +110,6 @@ class ResumeCrew:
 			allow_delegation=False,
 			cache=True,
 			llm=self.genAI,
-
-
 		)
 
 	# Define the tasks
@@ -132,17 +131,7 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)
  
-	# @agent
-	# def resume_builder_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["resume_builder_agent"],
-	# 		verbose=True,
-	# 		# max_iter=3,
-	# 		max_rpm=2,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.genAI,
-	# 	)
+
 
 	# @task
 	# def volunteer_work_extraction_task(self):
@@ -189,27 +178,17 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 		# )
 
+	
 	# @agent
-	# def job_description_relevance_agent (self) -> Agent:
+	# def resume_builder_agent(self) -> Agent:
 	# 	return Agent(
-	# 		config=self.agents_config["job_description_cross_check_agent"],
+	# 		config=self.agents_config["resume_builder_agent"],
 	# 		verbose=True,
 	# 		# max_iter=3,
 	# 		max_rpm=2,
 	# 		allow_delegation=False,
 	# 		cache=True,
-	# 		tools=[self.jd_extr_keywords_reader],
 	# 		llm=self.genAI,
-	# 	)
-	
-	# @task
-	# def job_description_cross_check_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["job_description_cross_check_task"],
-	# 		agent=self.job_description_relevance_agent(),
-	# 		context=[self.education_extraction_task()],
-	# 		output_file=self.job_description_cross_check_task_file_path,
-
 	# 	)
 
 	# @task
@@ -230,38 +209,16 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)	
  
-	# @agent
-	# def technical_details_agent (self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["technical_details_agent"],
-	# 		verbose=True,
-	# 		# max_iter=3,
-	# 		max_rpm=2,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.genAI,
-	# 		tools=[self.queryTool, self.jd_extr_keywords_reader],
-	# 	)
-	
-	# @task
-	# def skills_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["skills_extraction_task"],
-	# 		# agent=self.technical_details_agent(),
-   	# 		agent=self.generalist_agent(),
-	# 		output_file=self.skills_extraction_task_file_path,
-	# 		tools=[self.queryTool],
-	# 		# tools=[self.queryTool, self.jd_extr_keywords_reader],
-	# 	)
 
-	# @task
-	# def work_experience_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["work_experience_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=self.work_experience_extraction_task_file_path,
-	# 		tools=[self.queryTool],
-	# 	)
+
+	@task
+	def work_experience_extraction_task(self):
+		return Task(
+			config=self.tasks_config["work_experience_extraction_task"],
+			agent=self.generalist_agent(),
+			output_file=self.work_experience_extraction_task_file_path,
+			tools=[self.user_info_organized_reader],
+		)
  
 	@task
 	def project_experience_extraction_task(self):
@@ -271,7 +228,61 @@ class ResumeCrew:
 			tools=[self.user_info_organized_reader],
 			output_file=self.project_experience_extraction_task_file_path,
 		)
- 
+	
+	@agent
+	def technical_details_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["technical_details_agent"],
+			verbose=True,
+			# max_iter=3,
+			max_rpm=2,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAI,
+		)
+	
+	@task
+	def skills_from_exp_and_project_task(self):
+		return Task(
+			config=self.tasks_config["skills_from_exp_and_project_task"],
+			agent=self.technical_details_agent(),
+			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+			output_file=self.skills_from_exp_and_project_file_path,
+		)
+	
+	# @task
+	# def skills_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["skills_extraction_task"],
+   	# 		agent=self.technical_details_agent(),
+	# 		output_file=self.all_togather_skills_extraction_task_file_path,
+	# 		context=[self.skills_from_exp_and_project_task()],
+	# 		tools=[self.queryTool],
+	# 	)
+	
+	
+	# @agent
+	# def job_description_cross_check_agent (self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["job_description_cross_check_agent"],
+	# 		verbose=True,
+	# 		# max_iter=3,
+	# 		max_rpm=2,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		tools=[self.jd_extr_keywords_reader],
+	# 		llm=self.genAI,
+	# 	)
+	# @task
+	# def job_description_cross_check_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["job_description_cross_check_task"],
+	# 		agent=self.job_description_cross_check_agent(),
+	# 		context=[self.skills_extraction_task()],
+	# 		tools=[self.jd_extr_keywords_reader],
+	# 		output_file=self.job_description_cross_check_task_file_path,
+	# 	)
+	
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the user info organizer crew"""
@@ -308,4 +319,5 @@ class ResumeCrew:
 				open(file_path, 'w').close()
 			except Exception as e:
 				print(f"Error while creating the file: {e}")
+
 
