@@ -1,29 +1,32 @@
 ## Skills Matched With Job Description:
 
-**Exact Match:**
+- **'Exact Match'**: 
+    - Technical Skills, frameworks, tools:
+      - Python
+      - LangChain
+      - Gemini 
+    - Soft Skills:
+      - Communication
+      - Teamwork
+      - Problem Solving
+      - Critical Thinking
 
-  - **Technical Skills:**
-    - Python
-    - LangChain
-    - SQL
-  - **Soft Skills:**
-    - Problem-Solving
-    - Communication
-    - Teamwork 
+- **'Partial Match'**: 
+    - Technical Skills, frameworks, tools:
+      - Java (Similar to Python required by job)
+      - SQL (Related to Data Analysis & Preprocessing required by job)
+      - AWS (Related to AI Model Development)
+      - Docker (Related to AI Model Development) 
+      - Git (Related to AI Model Development)
+      - Debugging (Related to AI Model Development) 
+    - Soft Skills:
+      - Adaptability (Related to requested creativity)
+      - Time Management (Related to requested Collaboration)
+      - Strong work ethic (Related to requested Collaboration)
 
-**Partial Match:**
-
-  - **Technical Skills:**
-    - Java (similar to Python) 
-    - Gemini Pro (related to Google Gemini)
-    - RAG search (related to NLP and AI Model Development) 
-    - Docker (relevant to AI development environments)
-    - Git (version control, commonly used in AI development)
-    - CI/CD (relevant to AI model deployment pipelines)
-    - AI Decision-Making (broader category, specific experience in Generative AI or NLP needed)
-    - TCP/IP (relevant to networking, but specific knowledge of AI communication protocols might be needed)
-    - Multithreading (relevant for performance optimization, but specific application in AI context is unclear)
-  - **Soft Skills:**
-    - Adaptability (related to Creativity)
-    - Learning new technologies (aligned with a fast-paced AI field)
-    -
+- **'No Match'** (from job description):
+    - Missing from Applicant's Profile:
+      - Machine Learning
+      - Deep Learning
+      - Generative AI
+      - Natural Language

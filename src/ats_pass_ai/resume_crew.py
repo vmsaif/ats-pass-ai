@@ -58,10 +58,10 @@ class ResumeCrew:
 		# "personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
 		# "miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 
-		# "all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
-		# "work_experience_extraction_task": work_experience_extraction_task_file_path,
-		# "project_experience_extraction_task": project_experience_extraction_task_file_path,
-		# "skills_from_exp_and_project": skills_from_exp_and_project_file_path,
+		"all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
+		"work_experience_extraction_task": work_experience_extraction_task_file_path,
+		"project_experience_extraction_task": project_experience_extraction_task_file_path,
+		"skills_from_exp_and_project": skills_from_exp_and_project_file_path,
 		"job_description_cross_check_task": skills_cross_check_task_file_path,
 	}
 
@@ -70,17 +70,10 @@ class ResumeCrew:
 	jd_extr_keywords_reader = CrewAIFileReadTool.create(jd_keyword_extraction_file_path)
 	user_info_organized_reader = CrewAIFileReadTool.create('info_files/user_info_organized.txt')
 
-	tempTool = CrewAIFileReadTool.create(all_togather_skills_extraction_task_file_path)
+	
 
 
-	# llama = ChatGroq(
-	# 		temperature=0.5,
-	# 		model_name="llama3-8b-8192",
-	# 		# model_kwargs={
-	# 		# 	'top_p': 0.95  # Nucleus sampling: cumulatively retains the top p% probability mass
-    # 		# },
-	# 		verbose=True
-	# )
+	
 	# agentops.init()
  
 	# itirative_AI = ChatGoogleGenerativeAI(
@@ -90,11 +83,17 @@ class ResumeCrew:
 	# 	cache=True
 	# )
 
+	genAILarge = ChatVertexAI(
+		model="gemini-1.5-pro-preview-0409",
+		verbose=True,
+		temperature=1.0,
+	)
+
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
 		max_output_tokens=4096,
-		temperature=0.9,
+		temperature=1.0,
 		# cache=True
 	)
 
@@ -122,8 +121,6 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)
  
-
-
 	# @task
 	# def volunteer_work_extraction_task(self):
 	# 	return Task(
@@ -167,119 +164,108 @@ class ResumeCrew:
 	# 		agent=self.generalist_agent(),
 	# 		output_file=self.miscellaneous_extraction_task_file_path,
 	# 		tools=[self.queryTool],
-		# )
-
-	
-	# @agent
-	# def resume_builder_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["resume_builder_agent"],
-	# 		verbose=True,
-	# 		# max_iter=3,
-	# 		max_rpm=2,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.genAI,
 	# 	)
 
-	# @task
-	# def resume_build_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["resume_build_task"],
-	# 		agent=self.resume_builder_agent(),
-	# 		output_file=self.resume_building_task_file_path,
-	# 		context=[
-	# 			self.personal_information_extraction_task(),
-	# 			self.education_extraction_task(),
-	# 			self.volunteer_work_extraction_task(),
-	# 			self.awards_recognitions_extraction_task(),
-	# 			self.references_extraction_task(),
-	# 			self.personal_traits_interests_extraction_task(),
-	# 			self.miscellaneous_extraction_task(),
-	# 		],
-	# 		tools=[self.queryTool],
-	# 	)	
- 
+	@agent
+	def generalist_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["generalist_agent"],
+			verbose=True,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAI,
+		)
+	
+	@task
+	def work_experience_extraction_task(self):
+		return Task(
+			config=self.tasks_config["work_experience_extraction_task"],
+			agent=self.generalist_agent(),
+			output_file=self.work_experience_extraction_task_file_path,
+			tools=[self.user_info_organized_reader],
+		)
 
- 
-	# @agent
-	# def generalist_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["generalist_agent"],
-	# 		verbose=True,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.genAI,
-	# 	)
+	@task
+	def project_experience_extraction_task(self):
+		return Task(
+			config=self.tasks_config["project_experience_extraction_task"],
+			agent=self.generalist_agent(),
+			tools=[self.user_info_organized_reader],
+			output_file=self.project_experience_extraction_task_file_path,
+		)
 	
-	# @task
-	# def work_experience_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["work_experience_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=self.work_experience_extraction_task_file_path,
-	# 		tools=[self.user_info_organized_reader],
-	# 	)
- 
-	# @task
-	# def project_experience_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["project_experience_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		tools=[self.user_info_organized_reader],
-	# 		output_file=self.project_experience_extraction_task_file_path,
-	# 	)
+	@agent
+	def technical_details_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["technical_details_agent"],
+			verbose=True,
+			# max_iter=3,
+			# max_rpm=2,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAI,
+		)
 	
-	# @agent
-	# def technical_details_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["technical_details_agent"],
-	# 		verbose=True,
-	# 		# max_iter=3,
-	# 		max_rpm=2,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.genAI,
-	# 	)
+	@task
+	def skills_from_exp_and_project_task(self):
+		return Task(
+			config=self.tasks_config["skills_from_exp_and_project_task"],
+			agent=self.technical_details_agent(),
+			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+			output_file=self.skills_from_exp_and_project_file_path,
+		)
 	
-	# @task
-	# def skills_from_exp_and_project_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["skills_from_exp_and_project_task"],
-	# 		agent=self.technical_details_agent(),
-	# 		context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-	# 		output_file=self.skills_from_exp_and_project_file_path,
-	# 	)
-	
-	# @task
-	# def skills_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["skills_extraction_task"],
-   	# 		agent=self.technical_details_agent(),
-	# 		context=[self.skills_from_exp_and_project_task()],
-	# 		output_file=self.all_togather_skills_extraction_task_file_path,
-	# 		tools=[self.queryTool],
-	# 	)
-	
-	
+	@task
+	def skills_extraction_task(self):
+		return Task(
+			config=self.tasks_config["skills_extraction_task"],
+   			agent=self.technical_details_agent(),
+			context=[self.skills_from_exp_and_project_task()],
+			output_file=self.all_togather_skills_extraction_task_file_path,
+			tools=[self.queryTool],
+		)	
 
 	# ----------------- Skills Match Identification -----------------
 
+	# llama = ChatGroq(
+	# 	temperature=1.8,
+	# 	model_name="llama3-70b-8192",
+	# 	verbose=True
+	# )
 
 	genAILarge = ChatVertexAI(
 		model="gemini-1.5-pro-preview-0409",
 		verbose=True,
 		temperature=1.0,
 	)
+
 	@agent
-	def technical_details_agent (self) -> Agent:
+	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
 		return Agent(
-			config=self.agents_config["technical_details_agent"],
+			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
+			max_rpm=2,
 			verbose=True,
 			allow_delegation=False,
 			# cache=True,
+
 			llm=self.genAILarge,
+
+			# llm=self.llama,
+			# system_template="""
+			# <|begin_of_text|>
+			# <|start_header_id|>system<|end_header_id|>
+
+			# {{ .System }}<|eot_id|>""",
+			# 	prompt_template="""<|start_header_id|>user<|end_header_id|>
+
+			# {{ .Prompt }}<|eot_id|>""",
+			# 	response_template="""<|start_header_id|>assistant<|end_header_id|>
+
+			# {{ .Response }}<|eot_id|>
+			# """,
 		)
+
+
 	
 	@task
 	def skills_cross_check_task(self):
@@ -289,14 +275,15 @@ class ResumeCrew:
 			description = yaml_data['skills_cross_check_task']['description']
 			expected_output = yaml_data['skills_cross_check_task']['expected_output']
 
-		src_2 = self.load_txt_files(self.all_togather_skills_extraction_task_file_path)
 		src_1 = self.load_txt_files(self.jd_keyword_extraction_file_path)
 
-		description = description.format(src_1=src_1, src_2=src_2)
+		description = description.format(src_1 = src_1)
+		print("Description: ", description)
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.technical_details_agent(),
+			agent=self.cross_match_evaluator_with_job_description_agent(),
+			context=[self.skills_extraction_task()],
 			output_file=self.skills_cross_check_task_file_path,
 		)
 

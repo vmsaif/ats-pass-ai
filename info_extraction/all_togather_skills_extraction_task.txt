@@ -1,87 +1,60 @@
 User's all skills, technologies, and frameworks list:
-Technologies:
-  - Python
-  - Java
-  - LangChain
-  - Gemini Pro
-  - RAG Search
-  - Docker
-  - Vue.js
-  - Git
-  - CI/CD
-  - OpenGL
-  - C++
-  - Markdown
-  - Jekyll
-  - C Programming
-  - SQL
-  - Android Studio
-  - HSQLDB
-  - AI Decision-Making
-  - TCP/IP
-  - Multithreading
-Frameworks:
-  - CI/CD
-  - Unit Testing
-Skills:
-  - System Analysis
-  - Web and Mobile Technologies
-  - Data Structures
-  - SDLC
-  - Debugging and Troubleshooting
-  - Test driven deployment
-  - Blockchain
-  - Adaptability
-  - learning new technologies
-  - Data Integrity
-  - Transparency
-  - Java
-  - Problem-Solving
-  - Analytical Skills
-  - Software Development
-  - Testing
-  - 3D Graphics
-  - OpenGL
-  - Geometry
-  - Generic Math
-  - Object-oriented Programming
-  - Polymorphism
-  - Process Efficiency
-  - Markdown
-  - Jekyll
-  - Version Control
-  - Technical Documentation
-  - C Programming
-  - ELF Binary Parsing
-  - System Operations
-  - Debugging Efficiency
-  - Lighting Techniques
-  - User Interactivity
-  - Android Studio
-  - HSQLDB
-  - UI/UX Design
-  - Team Collaboration
-  - AI Decision-Making
-  - Performance Tuning
-  - TCP
-  - Multithreading
-  - Client-Server Communication
-  - Socket Programming
-Soft Skills:
-  - Good Interpersonal Skills
-  - Communication
-  - Teamwork
-  - Problem-Solving
-  - Adaptability
-  - Time Management
-  - Critical Thinking
-  - Complexity Analysis
-  - Willingness to learn
-  - Excellent time management skills
-  - Ability to prioritize and multitask
-  - Ability to work under pressure
-  - Detail-oriented
-  - Highly analytical
-  - Excellent problem-solving skills
-  - Strong communication skills
-  - Ability to work independently and as part of a team
+  Technologies:
+    - Python
+    - Javascript
+    - C++
+    - Java
+    - MySQL
+    - JSON
+    - noSQL
+    - Schema
+    - CI/CD
+    - GitHub Action
+    - AWS
+    - CrewAI
+    - LangChain
+    - Gemini
+    - RAG Search
+    - Blockchain
+    - Vue.js
+    - Docker
+    - Git
+    - A* Algorithm
+    - OpenGL
+    - C++
+    - File I/O
+    - Markdown
+    - Jekyll
+    - Git
+    - C Programming
+    - Debugging
+    - Linux OS
+    - SQL
+    - Android Studio
+    - HSQLDB
+    - TCP/IP
+    - Multithreading
+    - Network
+  Frameworks:
+  Skills:
+    - System Analysis
+    - Web and Mobile Technologies
+    - OOP
+    - Data Structures
+    - SDLC
+    - Debugging and Troubleshooting
+    - Test driven deployment
+  Soft Skills:
+    - Good Interpersonal Skills
+    - Communication
+    - Teamwork
+    - Problem Solving
+    - Adaptability
+    - Time Management
+    - Critical Thinking
+    - Complexity Analysis
+    - Strong work ethic
+    - Excellent time management skills
+    - Ability to prioritize and multitask
+    - Ability to work under pressure
+    - Willingness to learn new things

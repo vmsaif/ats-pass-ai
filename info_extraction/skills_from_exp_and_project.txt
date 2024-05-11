@@ -1,72 +1,83 @@
-**
-
-**Technologies:**
-
+Technologies:
 - Python
 - Java
-- Gemini Pro
+- CrewAI
+- LangChain
+- Gemini
 - RAG Search
-- Docker
+- Blockchain
 - Vue.js
+- Docker
+- Java
 - Git
 - CI/CD
+- A* Algorithm
 - OpenGL
 - C++
+- File I/O
 - Markdown
 - Jekyll
+- Git
 - C Programming
+- Debugging
+- Linux OS
 - SQL
 - Android Studio
 - HSQLDB
-- AI Decision-Making
 - TCP/IP
 - Multithreading
+- Network
 
-**Skills:**
-
-- System Analysis
-- Web and Mobile Technologies
-- Data Structures
-- SDLC
-- Debugging and Troubleshooting
-- Test driven deployment
-- Blockchain
+Skills:
+- Good Interpersonal Skills
+- Communication
+- Teamwork
+- Problem Solving
 - Adaptability
-- learning new technologies
-- Data Integrity
-- Transparency
-- Java
-- Git
-- CI/CD
-- Problem-Solving
-- Analytical Skills
+- Time Management
+- Critical Thinking
+- Complexity Analysis
+- Strong work ethic
+- Excellent time management skills
+- Ability to prioritize and multitask
+- Ability to work under pressure
+- Willingness to learn new things
+- Multi-Agent System
+- Machine Learning
+- AI
+- Blockchain
 - Software Development
-- Testing
+- Data Security
+- Java
+- Game Development
+- AI
 - 3D Graphics
 - OpenGL
-- Geometry
-- Generic Math
-- Object-oriented Programming
+- C++
+- Java
+- Object-Oriented Programming
 - Polymorphism
-- Process Efficiency
+- Technical Writing
 - Markdown
 - Jekyll
+- Git
 - Version Control
-- Technical Documentation
 - C Programming
-- ELF Binary Parsing
-- System Operations
-- Debugging Efficiency
-- Lighting Techniques
-- User Interactivity
+- Debugging
+- System Analysis
+- Linux OS
+- OpenGL
+- C++
+- Graphics Programming
 - Android Studio
-- HSQLDB
+- Java
 - UI/UX Design
-- Unit Testing
-- Team Collaboration
+- Database Management
+- Java
 - AI Decision-Making
-- Performance Tuning
-- TCP
+- CI/CD
+- Java
+- TCP/IP
 - Multithreading
-- Client-Server Communication
-- Socket Programming
+- Network Programming
+- Data Analyst

@@ -8,7 +8,6 @@
 # - references_extraction_task
 # - personal_traits_interests_extraction_task
 # - miscellaneous_extraction_task
-# - resume_build_task
 
 personal_information_extraction_task:
   description: >
@@ -129,17 +128,6 @@ miscellaneous_extraction_task:
       Professional Affiliations:
       Other Relevant Details:
 
-# resume_build_task:
-#   description: >
-#     You are given the context of all previous tasks of collecting necessary information to make a resume. Use all the knowledges to build a resume which closely aligns with the job description provided.
-
-#     If some information is missing, dont mention it in the resume. 
-#   expected_output: >
-#     A well-structured resume that includes all the necessary information gathered from the previous tasks. The resume should be tailored to the job description provided, highlighting the user's skills, experiences, and qualifications relevant to the position.
-    
-
-# ------------------------ work_project_experience_agent ----------------
-
 work_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the user's work experiences, including work titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
@@ -159,14 +147,10 @@ work_experience_extraction_task:
       2.
       3.
       4.
-
-    
     Team size: (if available)
     Outcomes:
-    Link: (if available)
+    Link: (must include if available)
     
-
-
 project_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the user's project experiences, including project titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
@@ -186,42 +170,15 @@ project_experience_extraction_task:
       2.
       3.
       4.
-
     Team size: (if available)
     Outcomes:
-    Link to the project: (if available)
+    Link: (must include if available)
     
 
 
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
-exact_match_identification_task:
-  description: >
-    Identify exact matches word by word between skills, technologies, terms, verbs, soft skills listed in Source 1 (Provided Context) and Source 2 (job description keywords using the tool).
-
-    Source 1: 
-    
-    {src_1}
-
-
-    Source 2:
-
-    {src_2}
-    
-  expected_output: >
-      Exact Matches:
-        A list of strings representing the skills, technologies, terms, verbs, soft skills found identically in both Source 1 and Source 2.
-
-        Exact Matched technologies, tools, frameworks, terms between Source 1 and Source 2: 
-          - item 1
-          - item 2
-          - item 3
-        Exact Matched soft skills:
-          - item 1
-          - item 2
-          - item 3 
-        Exact Matched verbs:
 
 skills_cross_check_task:
   description: >
@@ -229,13 +186,13 @@ skills_cross_check_task:
     
     Evaluate the degree of similarity between these keywords.
 
-    Specifically, pay close attention to how technologies and methodologies are described and relate them accurately to the job's requirements. For instance, if a technology can be known by multiple names or is part of a broader technology category, identify them as partial matches.
+    Source 1 (Job Description Keywords): 
+    """{src_1}"""
 
-    Source 1(User's Skills and Technologies, Frameworks, Tools, Soft Skills, etc.): {src_1}
-    Source 2(Job Description Keywords): {src_2}
+    Source 2 (User's Skills and Technologies, Frameworks, Tools, Soft Skills, etc.) from the context provided. 
 
   expected_output: >
-    Produce a structured report that categorizes the findings into 'Exact Match', 'Partial Match', or 'No Match'. Each category should clearly indicate the relationship between the job description keywords and the user's skills and technologies.
+    Produce a structured report that categorizes the findings into 'Exact Match', 'Partial Match', or 'No Match'. 
 
     **Skills Matched With Job Description:**
 
@@ -244,42 +201,34 @@ skills_cross_check_task:
       Example:
 
       Exact Match:
-        - Technical Skills:
-          - Python
-          - SQL
+        - Technical Skills, frameworks, tools:
+          - item 1
+          - item 2
         - Soft Skills:
-          - Leadership
-          - Team Collaboration
+          - item 1
+          - item 2
 
     - **'Partial Match'**: Skills or experiences that are somehow related but not identical to the job requirements.
 
       Example:
 
       Partial Match:
-        - Technical Skills:
-          - C++ (Similar to Java required by job)
-          - MongoDB (Related to SQL databases required by job)
+        - Technical Skills, frameworks, tools:
+          - item 1 (Similar to Java required by job)
+          - item 2 (Related to SQL databases required by job)
         - Soft Skills:
           - Negotiation (Related to requested persuasion skills)
 
-    - **'No Match'**: Qualifications mentioned in the job description that the applicant lacks.
-
-      Example:
-
-      No Match:
-        - Missing from Applicant's Profile:
-          - Project Management Certification
-          - Advanced Data Analysis
-
-    **No Match (from job description)**: Skills mentioned in the job description that are not present in the applicant's profile.
+    **No Match**: Skills mentioned in the job description but are not present in the applicant's profile.
 
       Example:
 
       No Match (from job description):
         - Missing from Applicant's Profile:
-          - Deep Learning
-          - Generative AI
-          - Natural Language Processing (NLP)
+          - item 1
+          - item 2
+
+
 
 skills_from_exp_and_project_task:
   description: >
@@ -297,12 +246,7 @@ skills_from_exp_and_project_task:
 
 skills_extraction_task:
   description: >
-    Make a list of skills, technologies, and framework. You have been given two sources, 
-    
-    Source 1. A context from other agent's task which has user's skills and technologies from work experiences.
-    Source 2. A tool where you can ask questions to get the skills of the users. Ask "skills, technologies, framework" to get the skills of the user.
-    
-    In your output, combine and merge all skills, technologies, framework etc from both sources.
+    Your task is to merge two sources skills and tools, technologies, frameworks, and soft skills without removing anything. You have been given the the output of a previous task as context, use it as one source. The other source the provided tool. Ask it "Skills" to get a chunk of skills. At the end, merge the two sources to get a final list of skills, technologies, frameworks, and soft skills.
   expected_output: >
     User's all skills, technologies, and frameworks list:
       Technologies:

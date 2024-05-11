@@ -2,132 +2,127 @@ Project Experience: Project name: ATS Pass AI
 Role: Lead Developer
 Timeline: January 2024 - Present
 Description: Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. 
-Technologies, frameworks, and tools Used: Python, Gemini Pro, RAG Search 
-Skills: System Analysis, Web and Mobile Technologies, Data Structures, SDLC, Debugging and Troubleshooting, Test driven deployment
-Key Highlights: 
-    *   Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.
-    *   Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
-    *   Developed scalable architecture to anticipate future needs and adaptations.
-    *   Project repository: https://github.com/vmsaif/ats-pass-ai 
-
+Technologies, frameworks, and tools Used: Python, Javascript, C++, Java, CrewAI, LangChain, Gemini, RAG Search
+Skills: Multi-Agent System, Machine Learning, AI
+Key Highlights:
+   * Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.
+   * Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
+   * Developed scalable architecture to anticipate future needs and adaptations.
+   * Project repository: https://github.com/vmsaif/ats-pass-ai
 Project name: Blockchain Car Mileage Tracker
 Role: Developer
 Timeline: January 2023 - Mar 2023
 Description: Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
-Technologies, frameworks, and tools Used: Docker, Vue.js
-Skills: Blockchain, Adaptability, learning new technologies, Data Integrity, Transparency.
-Key Highlights: 
-    *   Developed using blockchain technology, emphasizing adaptability and enthusiasm for learning new technologies.
-    *   Enhanced data integrity and transparency.
-    *   Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording. 
-    *   Collaborated closely as a team to design, develop, and test the application.
-    *   Project details: https://github.com/vmsaif/blockChainCarMilageTracker
-
+Technologies, frameworks, and tools Used: Blockchain, Vue.js , Docker
+Skills: Blockchain, Software Development, Data Security
+Key Highlights:
+   * Developed using blockchain technology, emphasizing adaptability and enthusiasm for learning new technologies.
+   * Enhanced data integrity and transparency.
+   * Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording. 
+   * Collaborated closely as a team to design, develop, and test the application.
+   * Project details: https://github.com/vmsaif/blockChainCarMilageTracker
 Project name: AI Path Finding
-Role: Java Developer
+Role: Developer
 Timeline: Game Development - Jul 2023 - Sep 2023
 Description: A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
-Technologies, frameworks, and tools Used: Java, Git, CI/CD
-Skills: Java, Git, CI/CD, Problem-Solving, Analytical Skills, Software Development, Testing 
+Technologies, frameworks, and tools Used: Java, Git, CI/CD, A* Algorithm
+Skills: Java, Game Development, AI
 Key Highlights:
-    *   Utilized Git for version control, ensuring efficient team collaboration and code management.
-    *   Utilized CI/CD practices, resulting in a 50% reduction in deployment time. 
-    *   Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
-    *   Applied fundamental software development and testing processes to ensure robust application performance. 
-    *   Project repository: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
-
+   * Utilized Git for version control, ensuring efficient team collaboration and code management.
+   * Utilized CI/CD practices, resulting in a 50% reduction in deployment time. 
+   * Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+   * Applied fundamental software development and testing processes to ensure robust application performance. 
+   * Project repository: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
 Project name: Recursive Ray Tracing
-Role: Graphics Developer
+Role: Developer
 Timeline: Graphics Programming - May 2023 - July 2023 
 Description: Implemented a complex 3D graphics rendering technique using OpenGL. 
 Technologies, frameworks, and tools Used: OpenGL, C++
-Skills: 3D Graphics, OpenGL, Geometry, Generic Math
+Skills: 3D Graphics, OpenGL, C++
 Key Highlights: 
-    *   Implemented a complex 3D graphics rendering technique using OpenGL. 
-    *   Applied geometry and generic math skills to calculate light paths and surface interactions.
-    *   Project repository and implementation details: https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL
-
+   * Implemented a complex 3D graphics rendering technique using OpenGL. 
+   * Applied geometry and generic math skills to calculate light paths and surface interactions.
+   * Project repository and implementation details: https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL
 Project name: Bank Account System
-Role: Java Developer
+Role: Developer
 Timeline: Object-Oriented Design - Polymorphism
 Description: Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism. 
-Technologies, frameworks, and tools Used: Java, File I/O 
-Skills: Java, Object-oriented Programming, Polymorphism, Process Efficiency 
+Technologies, frameworks, and tools Used: Java, File I/O
+Skills: Java, Object-Oriented Programming, Polymorphism
 Key Highlights: 
-    *   Developed scalable Java applications, showcasing a deep understanding of object-oriented programming, optimizing process efficiency by 30%.
-    *   Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling.
-    *   Facilitated open-source collaboration with documentation. 
-    *   Project repository: https://github.com/vmsaif/bankAccountSystem 
-
-Project name: Hosting a Resume on GitHub Pages 
-Role: Documentation Author
+   * Developed scalable Java applications, showcasing a deep understanding of object-oriented programming, optimizing process efficiency by 30%.
+   * Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling.
+   * Facilitated open-source collaboration with documentation. 
+   * Project repository: https://github.com/vmsaif/bankAccountSystem
+Project name: Hosting a Resume on GitHub Pages
+Role: Technical Writer
 Timeline: Technical Documentation - Apr 2023 - Apr 2023 
 Description: A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git. 
-Technologies, frameworks, and tools Used: Markdown, Jekyll, Git
-Skills: Markdown, Jekyll, Version Control, Technical Documentation 
+Technologies, frameworks, and tools Used:
+Skills: Technical Writing, Markdown, Jekyll, Git, Version Control
 Key Highlights: 
-    *   Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation. 
-    *   Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages. 
-    *   Emphasized beginner-friendly methods for web hosting and documentation. 
-    *   Showcased ability to create clear, structured technical documentation accessible online. 
-    *   Project repository: https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/ 
-
-Project name: ELF Binary Analysis 
-Role: C Programming Developer
+   * Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation. 
+   * Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages. 
+   * Emphasized beginner-friendly methods for web hosting and documentation. 
+   * Showcased ability to create clear, structured technical documentation accessible online. 
+   * Project repository: https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/
+Project name: ELF Binary Analysis
+Role: Developer
 Timeline: Nov 2022 - Dec 2022 
 Description: Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills. 
 Technologies, frameworks, and tools Used: C Programming, Debugging, Linux OS
-Skills: C Programming, ELF Binary Parsing, System Operations, Debugging Efficiency
+Skills: C Programming, Debugging, System Analysis, Linux OS
 Key Highlights: 
-    *   Demonstrated expertise in C for ELF binary parsing and system operations. 
-    *   Enhanced debugging efficiency by 20%, showcasing problem-solving abilities. 
-    *   Actively contributed to technical documentation for product and knowledge base improvement.
-    *   Project repository: https://github.com/vmsaif/readingAndInterpretingBinary 
-
-Project name: OpenGL Sphere Lighting 
-Role: Graphics Developer
+   * Demonstrated expertise in C for ELF binary parsing and system operations. 
+   * Enhanced debugging efficiency by 20%, showcasing problem-solving abilities. 
+   * Actively contributed to technical documentation for product and knowledge base improvement.
+   * Project repository: https://github.com/vmsaif/readingAndInterpretingBinary
+Project name: OpenGL Sphere Lighting
+Role: Developer
 Timeline: Graphics Programming - April 2023 - June 2023 
 Description: Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources. 
 Technologies, frameworks, and tools Used: OpenGL, C++
-Skills: OpenGL, C++, Lighting Techniques, User Interactivity
+Skills: OpenGL, C++, Graphics Programming
 Key Highlights: 
-    *   Developed an application with three distinct light sources, offering comprehensive insights into lighting effects. 
-    *   Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.
-    *   Utilized glutSolidSphere for accurate sphere rendering, showcasing the effects of different lighting conditions. 
-    *   Project repository and implementation details: https://github.com/vmsaif/openGL-sphere-lighting-program 
-
+   * Developed an application with three distinct light sources, offering comprehensive insights into lighting effects. 
+   * Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.
+   * Utilized glutSolidSphere for accurate sphere rendering, showcasing the effects of different lighting conditions. 
+   * Project repository and implementation details: https://github.com/vmsaif/openGL-sphere-lighting-program 
 Project name: Reversible Learning APP
 Role: Team Player
-Timeline: Project Management - Team Player - January 2021 - April 2021 
+Timeline: Project Management - January 2021 - April 2021 
 Description: Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.
 Technologies, frameworks, and tools Used: SQL, Android Studio, Java
-Skills: Android Studio, HSQLDB, UI/UX Design, Unit Testing, Team Collaboration
+Skills: Android Studio, Java, UI/UX Design, Database Management
 Key Highlights:
-    *   Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
-    *   Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives. 
-    *   Developed an intuitive user interface (UI) for note organization and question archiving.
-    *   Project repository: https://github.com/vmsaif/reversibleLearning 
-
-Project name: Connect 4 Game 
-Role: AI Developer
-Timeline: CI/CD | Cross-Platform Deployment - February 2023 - April 2023
+   * Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
+   * Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives. 
+   * Developed an intuitive user interface (UI) for note organization and question archiving.
+   * Project repository: https://github.com/vmsaif/reversibleLearning
+Project name: Connect 4 Game
+Role: Developer
+Timeline: CI/CD - Cross-Platform Deployment - February 2023 - April 2023
 Description: Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
-Technologies, frameworks, and tools Used: AI Decision-Making, Java 
-Skills: AI Decision-Making, Java, CI/CD, Performance Tuning 
+Technologies, frameworks, and tools Used: Java
+Skills: Java, AI Decision-Making, CI/CD
 Key Highlights:
-    *   Implemented strategic AI decision-making, enhancing game complexity and player engagement.
-    *   Implemented efficient CI/CD workflows to streamline development and deployment processes.
-    *   Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
-    *   Access to project details and code: https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java
-
-Project name: TCP Chat Application 
-Role: Java Developer
+   * Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+   * Implemented efficient CI/CD workflows to streamline development and deployment processes.
+   * Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+   * Access to project details and code: https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java
+Project name: TCP Chat Application
+Role: Developer
 Timeline: Client-Server Communication - October 2022 - December 2022 
 Description: Developed a Java chat application for real-time client-server communication using TCP. 
 Technologies, frameworks, and tools Used: TCP/IP, Multithreading, Network
-Skills: Java, TCP, Multithreading, Client-Server Communication, Socket Programming 
+Skills: Java, TCP/IP, Multithreading, Network Programming
 Key Highlights: 
-    *   Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling. 
-    *   Implemented socket programming for robust client-server communication. 
-    *   Enabled features like room creation, joining/leaving rooms, and viewing room details.
-    *   Achieved a 99
+   * Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling. 
+   * Implemented socket programming for robust client-server communication. 
+   * Enabled features like room creation, joining/leaving rooms, and viewing room details.
+   * Achieved a 99.9% uptime and stability rate.
+   * Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management. 
+   * Source code and documentation: https://github.com/vmsaif/tcpChatJava
+Project name: Data Visualization with R
+Role: Data Analyst
+Timeline:
