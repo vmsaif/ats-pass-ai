@@ -78,7 +78,7 @@ class LLMTask:
 			},
 			{
 				"category": "HARM_CATEGORY_HATE_SPEECH",
-				"threshold": "BLOCK_MEDIUM_AND_ABOVE"
+				"threshold": "BLOCK_LOW_AND_ABOVE"
 			},
 			{
 				"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",

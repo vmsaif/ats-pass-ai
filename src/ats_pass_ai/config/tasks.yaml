@@ -152,7 +152,7 @@ work_experience_extraction_task:
     Role:
     Description: 
     Timeline:
-    Technologies Used:
+    Technologies, frameworks, and tools Used:
     Skills: 
     Key Highlights: 
       1.
@@ -179,7 +179,7 @@ project_experience_extraction_task:
     Role:
     Timeline:
     Description: 
-    Technologies Used:
+    Technologies, frameworks, and tools Used:
     Skills: 
     Key Highlights: 
       1.
@@ -196,38 +196,90 @@ project_experience_extraction_task:
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
-job_description_cross_check_task:
+exact_match_identification_task:
   description: >
-    Analyze and compare the extracted keywords and phrases from a job post with the context from previous tasks by other agents. The context will contain key skills of the job's applicant. Run the provided file reader tool to get the keywords of the job. Then identify the degree of similarity between the job's requirements and the context received.
-  
-  expected_output: >
-    Produce a structured report that categorizes the findings into 'Exact Match', 'Partial Match', or 'No Match'. Each category should clearly indicate the relationship between the job description keywords and the applicant’s qualifications:
+    Identify exact matches word by word between skills, technologies, terms, verbs, soft skills listed in Source 1 (Provided Context) and Source 2 (job description keywords using the tool).
+
+    Source 1: 
     
-    - 'Exact Match': Direct matches between job description requirements and applicant’s qualifications.
+    {src_1}
+
+
+    Source 2:
+
+    {src_2}
+    
+  expected_output: >
+      Exact Matches:
+        A list of strings representing the skills, technologies, terms, verbs, soft skills found identically in both Source 1 and Source 2.
+
+        Exact Matched technologies, tools, frameworks, terms between Source 1 and Source 2: 
+          - item 1
+          - item 2
+          - item 3
+        Exact Matched soft skills:
+          - item 1
+          - item 2
+          - item 3 
+        Exact Matched verbs:
+
+skills_cross_check_task:
+  description: >
+    Your task is to analyze and compare the keywords and phrases from a job post, which have already been extracted, against the context provided to you. 
+    
+    Evaluate the degree of similarity between these keywords.
+
+    Specifically, pay close attention to how technologies and methodologies are described and relate them accurately to the job's requirements. For instance, if a technology can be known by multiple names or is part of a broader technology category, identify them as partial matches.
+
+    Source 1(User's Skills and Technologies, Frameworks, Tools, Soft Skills, etc.): {src_1}
+    Source 2(Job Description Keywords): {src_2}
+
+  expected_output: >
+    Produce a structured report that categorizes the findings into 'Exact Match', 'Partial Match', or 'No Match'. Each category should clearly indicate the relationship between the job description keywords and the user's skills and technologies.
+
+    **Skills Matched With Job Description:**
+
+    - **'Exact Match'**: Direct matches between job description requirements and applicant’s qualifications. An exact match is a skill or experience that is mentioned in both the job description and the applicant's profile using the same or very similar terms.
+
       Example:
+
       Exact Match:
-        Technical Skills:
+        - Technical Skills:
           - Python
           - SQL
-        Soft Skills:
+        - Soft Skills:
           - Leadership
           - Team Collaboration
 
-    - 'Partial Match': Skills or experiences that are related but not identical to the job requirements.
+    - **'Partial Match'**: Skills or experiences that are somehow related but not identical to the job requirements.
+
       Example:
+
       Partial Match:
-        Technical Skills:
+        - Technical Skills:
           - C++ (Similar to Java required by job)
           - MongoDB (Related to SQL databases required by job)
-        Soft Skills:
+        - Soft Skills:
           - Negotiation (Related to requested persuasion skills)
 
-    - 'No Match': Qualifications mentioned in the job description that the applicant lacks.
+    - **'No Match'**: Qualifications mentioned in the job description that the applicant lacks.
+
       Example:
+
       No Match:
-        Missing from Applicant's Profile:
+        - Missing from Applicant's Profile:
           - Project Management Certification
           - Advanced Data Analysis
+
+    **No Match (from job description)**: Skills mentioned in the job description that are not present in the applicant's profile.
+
+      Example:
+
+      No Match (from job description):
+        - Missing from Applicant's Profile:
+          - Deep Learning
+          - Generative AI
+          - Natural Language Processing (NLP)
 
 skills_from_exp_and_project_task:
   description: >
@@ -245,15 +297,30 @@ skills_from_exp_and_project_task:
 
 skills_extraction_task:
   description: >
-    Extract a list of skills to be used in the resume. You have been given a tool that retrieves info simply by asking question as a list of strings. 
+    Make a list of skills, technologies, and framework. You have been given two sources, 
     
-    Also you have been provided user's experiences and project experiences as context. Use the context to extract the skills.
+    Source 1. A context from other agent's task which has user's skills and technologies from work experiences.
+    Source 2. A tool where you can ask questions to get the skills of the users. Ask "skills, technologies, framework" to get the skills of the user.
+    
+    In your output, combine and merge all skills, technologies, framework etc from both sources.
   expected_output: >
-    Skills:
-      - Skill 1
-      - Skill 2
-      - Skill 3
-      - so on...
+    User's all skills, technologies, and frameworks list:
+      Technologies:
+        - item 1
+        - item 2
+        - item 3
+      Frameworks:
+        - item 1
+        - item 2
+        - item 3
+      Skills:
+        - item 1
+        - item 2
+        - item 3
+      Soft Skills:
+        - item 1
+        - item 2
+        - item 3
 
 
 

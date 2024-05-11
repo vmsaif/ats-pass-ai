@@ -1,0 +1,29 @@
+## Skills Matched With Job Description:
+
+**Exact Match:**
+
+  - **Technical Skills:**
+    - Python
+    - LangChain
+    - SQL
+  - **Soft Skills:**
+    - Problem-Solving
+    - Communication
+    - Teamwork 
+
+**Partial Match:**
+
+  - **Technical Skills:**
+    - Java (similar to Python) 
+    - Gemini Pro (related to Google Gemini)
+    - RAG search (related to NLP and AI Model Development) 
+    - Docker (relevant to AI development environments)
+    - Git (version control, commonly used in AI development)
+    - CI/CD (relevant to AI model deployment pipelines)
+    - AI Decision-Making (broader category, specific experience in Generative AI or NLP needed)
+    - TCP/IP (relevant to networking, but specific knowledge of AI communication protocols might be needed)
+    - Multithreading (relevant for performance optimization, but specific application in AI context is unclear)
+  - **Soft Skills:**
+    - Adaptability (related to Creativity)
+    - Learning new technologies (aligned with a fast-paced AI field)
+    -

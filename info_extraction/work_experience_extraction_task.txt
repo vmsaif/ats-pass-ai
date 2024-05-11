@@ -1,11 +1,9 @@
-Work Experience:
+Work Experience: 
 1.
 Company name: Private Tutoring
 Role: Programming Mentor
-Description: Tutored a student in computer systems and programming, focusing on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role.
+Description:  Tutored a student in computer systems and programming, focusing on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role.
 Timeline: February 2023 - December 2023
-Technologies Used: Python, Java
-Skills: Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis
-Key Highlights: Delivered one-on-one lessons focusing on computer system principles and learning introductory programming. 
-Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. 
-Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.
+Technologies, frameworks, and tools Used: Python, Java
+Skills:  Good interpersonal skills, communication, teamwork, problem-solving, adaptability, time management, critical thinking, complexity analysis
+Key Highlights:  Delivered one-on-one lessons focusing on computer system principles and learning introductory programming. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.

@@ -1,126 +1,72 @@
-Technologies:
+**
+
+**Technologies:**
+
 - Python
 - Java
+- Gemini Pro
 - RAG Search
-- JavaScript
-- Gemini
-- LangChain
-- CrewAI
-- Blockchain
 - Docker
 - Vue.js
-- A* algorithm
 - Git
 - CI/CD
 - OpenGL
 - C++
-- Geometry
-- Math
-- File I/O
-- Object-Oriented Programming
-- Polymorphism
 - Markdown
 - Jekyll
-- GitHub Pages
 - C Programming
-- Debugging
-- Linux OS
-- Lighting Techniques
-- 3D modeling
-- Rendering
+- SQL
 - Android Studio
 - HSQLDB
-- UI/UX Design
 - AI Decision-Making
 - TCP/IP
 - Multithreading
-- Network
-- R
-- Data Analysis
-- Data Visualization
-- React
-- Styled-Components
-- GitHub Actions
-- JavaScript
-- CSS
-- HTML
-- Bash
-Skills:
-- Good Interpersonal Skills
-- Communication
-- Teamwork
-- Problem Solving
-- Adaptability
-- Time Management
-- Critical Thinking
-- Complexity Analysis
-- Project management
-- AI
-- Machine learning
-- Natural language processing
-- Resume writing
-- Blockchain development
-- Decentralized applications
-- Data security
-- Smart contracts
-- Game development
-- AI
-- Pathfinding
-- Algorithms
-- Software testing
-- 3D graphics
-- Ray tracing
-- Computer graphics
-- Rendering techniques
-- Object-Oriented Programming
-- Polymorphism
-- Java
+
+**Skills:**
+
+- System Analysis
+- Web and Mobile Technologies
 - Data Structures
-- Algorithms
-- Technical writing
-- Documentation
+- SDLC
+- Debugging and Troubleshooting
+- Test driven deployment
+- Blockchain
+- Adaptability
+- learning new technologies
+- Data Integrity
+- Transparency
+- Java
+- Git
+- CI/CD
+- Problem-Solving
+- Analytical Skills
+- Software Development
+- Testing
+- 3D Graphics
+- OpenGL
+- Geometry
+- Generic Math
+- Object-oriented Programming
+- Polymorphism
+- Process Efficiency
 - Markdown
 - Jekyll
-- Git
-- Version control
-- C programming
-- Debugging
-- System analysis
-- Documentation
-- OpenGL
-- Computer graphics
-- Lighting techniques
-- 3D modeling
-- Rendering
-- Android development
-- Java
-- Database Management
+- Version Control
+- Technical Documentation
+- C Programming
+- ELF Binary Parsing
+- System Operations
+- Debugging Efficiency
+- Lighting Techniques
+- User Interactivity
+- Android Studio
+- HSQLDB
 - UI/UX Design
-- Teamwork
-- Project management
-- AI
-- Game development
-- User interface design
-- Software testing
-- CI/CD
-- Java
-- TCP/IP
+- Unit Testing
+- Team Collaboration
+- AI Decision-Making
+- Performance Tuning
+- TCP
 - Multithreading
-- Network programming
-- Client-Server communication
-- R
-- Data analysis
-- Data visualization
-- Statistical analysis
-- Data interpretation
-- Web development
-- React
-- UI/UX design
-- Front-end development
-- Portfolio development
-- C programming
-- Multithreading
-- System programming
-- Linux
-- Bash scripting
-- Git
+- Client-Server Communication
+- Socket Programming
