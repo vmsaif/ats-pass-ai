@@ -1,7 +1,34 @@
-Work Experience:
-1. Company name: None | Role: Programming Mentor | Description: Provided private tutoring in computer systems and programming, with a focus on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.
-Timeline: Winnipeg, Manitoba | February 2023 - December 2023 | Team size: (not available) | Technologies, frameworks, and tools Used: Python, Java | Skills: Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis, Strong work ethic, Excellent time management skills, Ability to prioritize and multitask, Ability to work under pressure, Willingness to learn new things | Key Highlights: Delivered one-on-one lessons focusing on computer system principles and learning introductory programming. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding. 
-  2.
-  3.
-  4.
-Link: (must include if available)
+Work Experience: Company name: Private Tutoring
+Role: Programming Mentor
+Description: Delivered one-on-one lessons focusing on computer system principles and learning introductory programming.
+Timeline: February 2023 - December 2023
+Technologies, frameworks, and tools Used: Python, Java
+Skills: Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis
+Key Highlights: 
+     Tailored teaching methods to accommodate the student's learning style, resulting in noticeable improvement in their understanding and application of computer systems and programming concepts.
+     Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.
+Team size:
+Outcomes:
+Link: 
+
+ Work Experience: Company name: 
+Role: Software Developer
+Description: 
+Timeline: 
+Technologies, frameworks, and tools Used: 
+Skills: 
+Key Highlights: 
+Team size:
+Outcomes:
+Link: 
+
+ Work Experience: Company name: 
+Role: 
+Description: 
+Timeline: 
+Technologies, frameworks, and tools Used: 
+Skills: 
+Key Highlights: 
+Team size:
+Outcomes:
+Link:

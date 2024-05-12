@@ -1,38 +1,90 @@
-## Keyword and Phrase Extraction for "Artificial Intelligence Engineer" at Radical AI
+##  Job Description Keyword and Phrase Extraction for "Artificial Intelligence Engineer" at Radical AI 
 
-Based on the provided job description, here's a breakdown of relevant keywords and phrases to optimize your resume:
+Here's a breakdown of keywords and phrases categorized for resume optimization:
 
-**Essential Skills:**
+**I. Essential Skills:**
 
-* **Hard Skills:** Machine Learning, Deep Learning, Generative AI, Natural Language Processing (NLP), AI Model Development, Data Analysis & Preprocessing, Python, TensorFlow/PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio 
-* **Soft Skills:**  Problem-solving, Analytical Thinking, Creativity, Communication, Teamwork, Collaboration, Critical Thinking
+* **Hard Skills:**
+    * Artificial Intelligence (AI)
+    * Machine Learning (ML)
+    * Deep Learning
+    * Generative AI
+    * Natural Language Processing (NLP)
+    * Data Analysis
+    * Data Preprocessing
+    * Algorithm Development
+    * Model Development
+    * AI Model Design
+    * Python
+    * TensorFlow 
+    * PyTorch
+    * OpenAI API
+    * Meta Llama 2
+    * Google Gemini
+    * LangChain
+    * Google Gen AI Studio 
 
-**Industry/Field Specific Terms:**  
+* **Soft Skills:**
+    * Analytical Skills
+    * Problem-Solving
+    * Creative Thinking
+    * Communication Skills
+    * Teamwork
+    * Collaboration
+    * Research Presentation
+    * Critical Thinking
 
-* Artificial Intelligence (AI),  AI Virtual Agents, AI Ethics, Social Good, Equity, Collective Liberation, Interlocking Systems of Oppression, Racism, Coloniality, Casteism, Heteropatriarchy, Capitalism, Ableism 
+**II. Industry/Field Specific Terms:**
 
-**Company Values & Culture:**
+* Virtual Internship
+* AI Virtual Agents 
+* AI Development Frameworks
+* AI for Social Good
+* Democratization of AI 
+* Equitable Progress
+* AI Ethics 
+* Responsible AI
 
-* Democratization of AI, Social Mobility, Equitable Progress, Responsibility, Power Dynamics, Anti-Oppression, Community-Centered, Critical of AI Harm, Reflexivity
+**III. Company Values & Culture:**
 
-**Action Verbs:**
+* Radical 
+* Social Justice 
+* Equity 
+* Diversity 
+* Inclusion
+* Collective Liberation
+* Resisting Oppression
+* Power Dynamics
+* Ethical Technology 
+* Community Impact
 
-* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Engage, Contribute 
+**IV. Action Verbs:**
 
-**Prioritization and Relevance:**
+* Design
+* Develop
+* Analyze
+* Preprocess
+* Collaborate
+* Enhance
+* Present
+* Engage
+* Contribute 
+* Program
 
-* The job description heavily emphasizes **generative AI and NLP**, so highlighting experience in these areas is crucial.
-* **Python proficiency and familiarity with AI development frameworks** are essential requirements.
-*  **Alignment with Radical AI's values and mission** is important, showcasing your understanding of ethical AI and commitment to social good.
+**V.  Prioritization and Relevance:**
 
-**ATS Optimization Tips:**
+* **High Priority (Frequent and Emphasized):** AI, Machine Learning, Deep Learning, Generative AI, NLP, Python, TensorFlow/PyTorch, Analytical Skills, Problem-Solving
+* **Required Qualifications:** Bachelor's/Master's in Computer Science, AI, or related fields.
+* **Preferred Qualifications (Not Explicitly Stated, but Implied):** Experience with specific AI projects, familiarity with ethical AI principles, passion for social good initiatives.
 
-* Integrate the keywords naturally throughout your resume, especially in the skills section, experience descriptions, and summary. 
-* Use synonyms and variations of keywords to broaden your reach.
-* Tailor your resume to each application, emphasizing the most relevant skills and experiences.
+**VI. ATS Optimization Tips:**
 
-**Additional Tips:**
+* **Strategic Placement:** Integrate keywords naturally in your Resume Summary, Skills section, and within Experience descriptions. For example, "Developed a deep learning model for [project] using Python and TensorFlow to achieve [results]."
+* **Avoid Keyword Stuffing:**  Use keywords thoughtfully and don't overuse them to the point where it sounds unnatural.
+* **Tailoring:**  Carefully customize your resume for each application, highlighting the most relevant keywords based on the specific job description. 
 
-* Consider including a section on your understanding of AI ethics and its social implications.
-* Showcase projects or experiences that demonstrate your commitment to using AI for a positive impact. 
-* Research Radical AI and its work to show genuine interest in the company's mission. 
+**VII. Additional Notes:**
+
+* This company has a strong social justice mission. Aligning your values or experience with their principles will be beneficial.  
+* Highlight projects or research that demonstrate your understanding of ethical AI considerations.
+* Since it's a virtual internship, emphasize your ability to work independently and remotely. 

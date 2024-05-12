@@ -37,51 +37,39 @@ class ResumeCrew:
 	references_extraction_task_file_path = 'info_extraction/references_extraction_task.txt'
 	personal_traits_interests_extraction_task_file_path = 'info_extraction/personal_traits_interests_extraction_task.txt'
 	miscellaneous_extraction_task_file_path = 'info_extraction/miscellaneous_extraction_task.txt'
-	resume_building_task_file_path = 'info_extraction/resume_building_task.txt'
-	
+
 	work_experience_extraction_task_file_path = 'info_extraction/work_experience_extraction_task.txt'
 	project_experience_extraction_task_file_path = 'info_extraction/project_experience_extraction_task.txt'
 	skills_from_exp_and_project_file_path = 'info_extraction/skills_from_exp_and_project.txt'
 	all_togather_skills_extraction_task_file_path = 'info_extraction/all_togather_skills_extraction_task.txt'
 
+
 	# Cross Checked with JD keywords
 	skills_cross_check_task_file_path = 'info_extraction/relevent_to_jd/skills_cross_check_task.txt'
+	experience_choosing_task_file_path = 'info_extraction/relevent_to_jd/experience_choosing_task.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
 		# "personal_information_extraction_task": personal_information_extraction_task_file_path,
 		# "education_extraction_task": education_extraction_task_file_path,
 		# "volunteer_work_extraction_task": volunteer_work_extraction_task_file_path,
-  		# "resume_building_task": resume_building_task_file_path,
 		# "awards_recognitions_extraction_task": awards_recognitions_extraction_task_file_path,
 		# "references_extraction_task": references_extraction_task_file_path,
 		# "personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
 		# "miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 
-		"all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
+		# "all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
 		"work_experience_extraction_task": work_experience_extraction_task_file_path,
 		"project_experience_extraction_task": project_experience_extraction_task_file_path,
-		"skills_from_exp_and_project": skills_from_exp_and_project_file_path,
-		"job_description_cross_check_task": skills_cross_check_task_file_path,
+		# "skills_from_exp_and_project": skills_from_exp_and_project_file_path,
+		"skills_cross_check_task": skills_cross_check_task_file_path,
+		"experience_choosing_task": experience_choosing_task_file_path,
 	}
 
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
 	jd_extr_keywords_reader = CrewAIFileReadTool.create(jd_keyword_extraction_file_path)
 	user_info_organized_reader = CrewAIFileReadTool.create('info_files/user_info_organized.txt')
-
-	
-
-
-	
-	# agentops.init()
- 
-	# itirative_AI = ChatGoogleGenerativeAI(
-	# 	model="gemini-pro",
-	# 	verbose=True,
-	# 	temperature=0.9,
-	# 	cache=True
-	# )
 
 	genAILarge = ChatVertexAI(
 		model="gemini-1.5-pro-preview-0409",
@@ -92,17 +80,11 @@ class ResumeCrew:
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
-		max_output_tokens=4096,
+		max_output_tokens=6000,
 		temperature=1.0,
 		# cache=True
 	)
 
-
-
-	# Define the agents
-
-
-	# Define the tasks
 	# @task
 	# def education_extraction_task(self):
 	# 	return Task(
@@ -194,44 +176,38 @@ class ResumeCrew:
 			output_file=self.project_experience_extraction_task_file_path,
 		)
 	
-	@agent
-	def technical_details_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["technical_details_agent"],
-			verbose=True,
-			# max_iter=3,
-			# max_rpm=2,
-			allow_delegation=False,
-			cache=True,
-			llm=self.genAI,
-		)
+	# @agent
+	# def technical_details_agent(self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["technical_details_agent"],
+	# 		verbose=True,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		llm=self.genAI,
+	# 	)
 	
-	@task
-	def skills_from_exp_and_project_task(self):
-		return Task(
-			config=self.tasks_config["skills_from_exp_and_project_task"],
-			agent=self.technical_details_agent(),
-			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-			output_file=self.skills_from_exp_and_project_file_path,
-		)
-	
-	@task
-	def skills_extraction_task(self):
-		return Task(
-			config=self.tasks_config["skills_extraction_task"],
-   			agent=self.technical_details_agent(),
-			context=[self.skills_from_exp_and_project_task()],
-			output_file=self.all_togather_skills_extraction_task_file_path,
-			tools=[self.queryTool],
-		)	
+	# @task
+	# def skills_from_exp_and_project_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["skills_from_exp_and_project_task"],
+	# 		agent=self.technical_details_agent(),
+	# 		context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+	# 		output_file=self.skills_from_exp_and_project_file_path,
+	# 	)
+
+	# @task
+	# def skills_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["skills_extraction_task"],
+   	# 		agent=self.technical_details_agent(),
+	# 		context=[self.skills_from_exp_and_project_task()],
+	# 		output_file=self.all_togather_skills_extraction_task_file_path,
+	# 		tools=[self.queryTool],
+	# 	)
 
 	# ----------------- Skills Match Identification -----------------
 
-	# llama = ChatGroq(
-	# 	temperature=1.8,
-	# 	model_name="llama3-70b-8192",
-	# 	verbose=True
-	# )
+
 
 	genAILarge = ChatVertexAI(
 		model="gemini-1.5-pro-preview-0409",
@@ -247,47 +223,51 @@ class ResumeCrew:
 			verbose=True,
 			allow_delegation=False,
 			# cache=True,
-
 			llm=self.genAILarge,
-
-			# llm=self.llama,
-			# system_template="""
-			# <|begin_of_text|>
-			# <|start_header_id|>system<|end_header_id|>
-
-			# {{ .System }}<|eot_id|>""",
-			# 	prompt_template="""<|start_header_id|>user<|end_header_id|>
-
-			# {{ .Prompt }}<|eot_id|>""",
-			# 	response_template="""<|start_header_id|>assistant<|end_header_id|>
-
-			# {{ .Response }}<|eot_id|>
-			# """,
 		)
-
-
 	
+	# @task
+	# def skills_cross_check_task(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['skills_cross_check_task']['description']
+	# 		expected_output = yaml_data['skills_cross_check_task']['expected_output']
+
+	# 	src_1 = self.load_txt_files(self.jd_keyword_extraction_file_path)
+	# 	task_description = description_value.format(src_1 = src_1)
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
+	# 		context=[self.skills_extraction_task()],
+	# 		output_file=self.skills_cross_check_task_file_path,
+	# 	)
+
+	# ----------------- End of Skills Match Identification -----------------
+
+	# ----------------- Choose Work/Project Experience -----------------
 	@task
-	def skills_cross_check_task(self):
+	def experience_choosing_task(self):
 		# Load YAML file
 		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
 			yaml_data = yaml.safe_load(file)
-			description = yaml_data['skills_cross_check_task']['description']
-			expected_output = yaml_data['skills_cross_check_task']['expected_output']
+			description_value = yaml_data['experience_choosing_task']['description']
+			expected_output = yaml_data['experience_choosing_task']['expected_output']
 
-		src_1 = self.load_txt_files(self.jd_keyword_extraction_file_path)
-
-		description = description.format(src_1 = src_1)
-		print("Description: ", description)
+		jd_keyword = self.load_txt_files(self.jd_keyword_extraction_file_path)
+		work_experience = self.load_txt_files(self.work_experience_extraction_task_file_path)
+		project_experience = self.load_txt_files(self.project_experience_extraction_task_file_path)
+		task_description = description_value.format(jd_keyword = jd_keyword, work_experience = work_experience, project_experience = project_experience)
+		print("task_description: \n", task_description)
 		return Task(
-			description=description,
+			description=task_description,
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
-			context=[self.skills_extraction_task()],
-			output_file=self.skills_cross_check_task_file_path,
+			# context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+			output_file=self.experience_choosing_task_file_path,
 		)
-
-	# ----------------- End of Skills Match Identification -----------------
 
 	@crew
 	def crew(self) -> Crew:

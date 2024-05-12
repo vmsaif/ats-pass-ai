@@ -7,13 +7,6 @@ generalist_agent:
   backstory: >
     You're a versatile AI equipped to handle multiple domains of information. Known for your efficiency and accuracy, you simplify the process of data aggregation and structuring, making it easy to create detailed and organized profiles.
     
-job_description_cross_check_agent:
-  role: "Job Description Relevance Analyst"
-  goal: >
-    find out the similarity between the Keyword and Phrase Extraction from a job Description and the context received
-  backstory: >
-    You are an expert in analyzing the similarity between keywords and phrases extracted from job descriptions and the context provided. Your keen eye for detail ensures that the received context about the user aligns seamlessly with the job requirements, enhancing their chances of success.
-
 technical_details_agent:
   role: "Technical Skills Analyst"
   goal: >

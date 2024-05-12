@@ -1,51 +1,70 @@
-User's all skills, technologies, and frameworks list:
+Combined Skills List:
   Technologies:
     - Python
-    - Javascript
-    - C++
     - Java
-    - MySQL
-    - JSON
-    - noSQL
-    - Schema
-    - CI/CD
-    - GitHub Action
-    - AWS
-    - CrewAI
-    - LangChain
-    - Gemini
-    - RAG Search
+    - C++
+    - Cloud Technologies
     - Blockchain
     - Vue.js
     - Docker
-    - Git
     - A* Algorithm
-    - OpenGL
-    - C++
-    - File I/O
-    - Markdown
-    - Jekyll
     - Git
-    - C Programming
-    - Debugging
-    - Linux OS
-    - SQL
+    - CI/CD
+    - OpenGL
     - Android Studio
     - HSQLDB
+    - R
+    - React
+    - Jest
+    - Styled-Components
+    - GitHub Actions
+    - Apollo
+    - Chart.js
+    - C
     - TCP/IP
-    - Multithreading
-    - Network
   Frameworks:
+    - React
+    - Angular
+    - Spring Boot
   Skills:
-    - System Analysis
-    - Web and Mobile Technologies
-    - OOP
+    - Data Analysis
+    - Machine Learning
+    - Project Management
+    - NLP
+    - Blockchain
+    - Data Security
+    - Game Development
+    - AI
+    - Software Development
+    - Graphics Development
+    - Object-Oriented Programming
     - Data Structures
-    - SDLC
-    - Debugging and Troubleshooting
-    - Test driven deployment
+    - Documentation
+    - Technical Writing
+    - Markdown
+    - C Programming
+    - Debugging
+    - System Analysis
+    - Graphics Development
+    - OpenGL
+    - Lighting Techniques
+    - Android Development
+    - UI/UX Design
+    - Database Management
+    - AI Development
+    - Game Development
+    - Game Theory
+    - Network Programming
+    - Multithreading
+    - Client-Server Communication
+    - Data Visualization
+    - R Programming
+    - Full-Stack Development
+    - Styled-Components
+    - UI/UX Design
+    - System Programmer
+    - Multithreading
   Soft Skills:
-    - Good Interpersonal Skills
     - Communication
     - Teamwork
     - Problem Solving
@@ -53,8 +72,4 @@ User's all skills, technologies, and frameworks list:
     - Time Management
     - Critical Thinking
     - Complexity Analysis
-    - Strong work ethic
-    - Excellent time management skills
-    - Ability to prioritize and multitask
-    - Ability to work under pressure
-    - Willingness to learn new things
+    - Analytical Skills

@@ -142,6 +142,7 @@ work_experience_extraction_task:
     Timeline:
     Technologies, frameworks, and tools Used:
     Skills: 
+    Link: (must include link if available)
     Key Highlights: 
       1.
       2.
@@ -149,7 +150,7 @@ work_experience_extraction_task:
       4.
     Team size: (if available)
     Outcomes:
-    Link: (must include if available)
+    
     
 project_experience_extraction_task:
   description: >
@@ -165,6 +166,7 @@ project_experience_extraction_task:
     Description: 
     Technologies, frameworks, and tools Used:
     Skills: 
+    Link: (must include link if available)
     Key Highlights: 
       1.
       2.
@@ -172,10 +174,6 @@ project_experience_extraction_task:
       4.
     Team size: (if available)
     Outcomes:
-    Link: (must include if available)
-    
-
-
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
@@ -228,8 +226,6 @@ skills_cross_check_task:
           - item 1
           - item 2
 
-
-
 skills_from_exp_and_project_task:
   description: >
     Extract a list of skills, technologies, framework etc used from the user's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.
@@ -246,27 +242,68 @@ skills_from_exp_and_project_task:
 
 skills_extraction_task:
   description: >
-    Your task is to merge two sources skills and tools, technologies, frameworks, and soft skills without removing anything. You have been given the the output of a previous task as context, use it as one source. The other source the provided tool. Ask it "Skills" to get a chunk of skills. At the end, merge the two sources to get a final list of skills, technologies, frameworks, and soft skills.
+    Your task is to combine skills, tools, technologies, frameworks, and soft skills from two different sources into one comprehensive list. 
+
+    First Source: You already have this from a previous task. It contains various skills and technologies.
+    
+    Second Source: Use the provided tool to gather more skills. Simply ask the tool for "Skills" to retrieve a list of additional skills.
+
+    Your job is to merge the skills from both sources into a single list, ensuring no items are omitted and both sources are represented equally.
+
   expected_output: >
-    User's all skills, technologies, and frameworks list:
+    Here's how the combined list should look:
+
+    Combined Skills List:
       Technologies:
-        - item 1
-        - item 2
-        - item 3
+        - item 1 (e.g., Python)
+        - item 2 (e.g., Java)
+        - item 3 (e.g., Docker)
       Frameworks:
-        - item 1
-        - item 2
-        - item 3
+        - item 1 (e.g., React)
+        - item 2 (e.g., Angular)
+        - item 3 (e.g., Spring Boot)
       Skills:
-        - item 1
-        - item 2
-        - item 3
+        - item 1 (e.g., Data Analysis)
+        - item 2 (e.g., Machine Learning)
+        - item 3 (e.g., Project Management)
       Soft Skills:
-        - item 1
-        - item 2
-        - item 3
+        - item 1 (e.g., Communication)
+        - item 2 (e.g., Leadership)
+        - item 3 (e.g., Teamwork)
+
+experience_choosing_task:
+  description: >
+    Analyze the user's work experiences and project experiences to identify the 3 most relevant experiences that align with the job description provided. To do this, you need to evaluate the user's experiences based on the skills, technologies, frameworks, tools, and soft skills required by the job description. 
+
+    You will always choose the most recent experience weather it is relevant or not. The rest of the 2 will be prioritized based on the tools and technologies, and frameworks used in the work experiences or project experiences. 
+
+    The Key Factors of the Job Description are:
+    {jd_keyword}
+
+    The User's Work Experiences:
+    {work_experience}
+
+    The User's Project Experiences:
+    {project_experience}
+
+    At the end, explain why you did not choose the other experiences.
+
+  expected_output: >
+    Based on the analysis, provide a list of the 4 most relevant experiences that align with the job description. Rank them in order of relevance, with a brief explanation for each choice.
+
+    Top 3 Relevant Experiences:
+    1. Experience 1: [Explanation] \n
+
+    2. Experience 2: [Explanation] \n
+    
+    3. Experience 3: [Explanation] \n
+
+    4. Experience 4: [Explanation] \n
+
+    Explanation for Not Choosing Other Experiences one by one:
 
 
+    
 
 # professional_affiliations_task:
 #   description: >

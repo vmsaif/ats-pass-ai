@@ -1,32 +1,27 @@
 Technologies:
 - Python
 - Java
-- CrewAI
-- LangChain
-- Gemini
-- RAG Search
+- Cloud Technologies
 - Blockchain
 - Vue.js
 - Docker
-- Java
+- A* Algorithm
 - Git
 - CI/CD
-- A* Algorithm
-- OpenGL
 - C++
-- File I/O
-- Markdown
-- Jekyll
-- Git
-- C Programming
-- Debugging
-- Linux OS
-- SQL
+- OpenGL
 - Android Studio
 - HSQLDB
-- TCP/IP
-- Multithreading
-- Network
+- Java
+- R
+- React
+- Jest
+-Styled-Components
+- GitHub Actions
+- Apollo
+- Chart.js
+- C
+-  TCP/IP
 
 Skills:
 - Good Interpersonal Skills
@@ -37,47 +32,51 @@ Skills:
 - Time Management
 - Critical Thinking
 - Complexity Analysis
-- Strong work ethic
-- Excellent time management skills
-- Ability to prioritize and multitask
-- Ability to work under pressure
-- Willingness to learn new things
-- Multi-Agent System
+- Analytical Skills
 - Machine Learning
-- AI
-- Blockchain
-- Software Development
-- Data Security
+- NLP
 - Java
+- Blockchain
+- Data Security
 - Game Development
 - AI
-- 3D Graphics
-- OpenGL
+- Java
+- Software Development
+- Graphics Development
 - C++
+- 3D Rendering
 - Java
 - Object-Oriented Programming
-- Polymorphism
+- Data Structures
+- Documentation
 - Technical Writing
 - Markdown
-- Jekyll
 - Git
-- Version Control
 - C Programming
 - Debugging
 - System Analysis
-- Linux OS
+- Graphics Development
 - OpenGL
-- C++
-- Graphics Programming
-- Android Studio
+- Lighting Techniques
+- Android Development
 - Java
 - UI/UX Design
 - Database Management
+- AI Development
 - Java
-- AI Decision-Making
-- CI/CD
+- Game Development
+- Game Theory
 - Java
-- TCP/IP
-- Multithreading
 - Network Programming
-- Data Analyst
+- Multithreading
+- Client-Server Communication
+- Data Analysis
+- Data Visualization
+- R Programming
+- Full-Stack Development
+- React
+- Styled-Components
+- UI/UX Design
+- System Programmer
+- C
+- Multithreading
