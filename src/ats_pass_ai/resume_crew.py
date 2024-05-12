@@ -4,8 +4,9 @@
 	Date: 04-23-2024
 	Description: This file contains the crew class for the user info organizer crew.
 """
+import datetime
 import os
-import agentops
+
 import yaml
 from langchain_groq import ChatGroq
 from langchain_google_genai import GoogleGenerativeAI
@@ -47,6 +48,7 @@ class ResumeCrew:
 	# Cross Checked with JD keywords
 	skills_cross_check_task_file_path = 'info_extraction/relevent_to_jd/skills_cross_check_task.txt'
 	experience_choosing_task_file_path = 'info_extraction/relevent_to_jd/experience_choosing_task.txt'
+	gather_info_of_choosen_experiences_file_path = 'info_extraction/relevent_to_jd/gather_info_of_choosen_experiences.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
@@ -59,11 +61,13 @@ class ResumeCrew:
 		# "miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 
 		# "all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
-		"work_experience_extraction_task": work_experience_extraction_task_file_path,
-		"project_experience_extraction_task": project_experience_extraction_task_file_path,
+
 		# "skills_from_exp_and_project": skills_from_exp_and_project_file_path,
-		"skills_cross_check_task": skills_cross_check_task_file_path,
-		"experience_choosing_task": experience_choosing_task_file_path,
+		# "skills_cross_check_task": skills_cross_check_task_file_path,
+		# "work_experience_extraction_task": work_experience_extraction_task_file_path,
+		# "project_experience_extraction_task": project_experience_extraction_task_file_path,
+		# "experience_choosing_task": experience_choosing_task_file_path,
+		"gather_info_of_choosen_experiences": gather_info_of_choosen_experiences_file_path,
 	}
 
 	# Define the tools
@@ -158,23 +162,23 @@ class ResumeCrew:
 			llm=self.genAI,
 		)
 	
-	@task
-	def work_experience_extraction_task(self):
-		return Task(
-			config=self.tasks_config["work_experience_extraction_task"],
-			agent=self.generalist_agent(),
-			output_file=self.work_experience_extraction_task_file_path,
-			tools=[self.user_info_organized_reader],
-		)
+	# @task
+	# def work_experience_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["work_experience_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.work_experience_extraction_task_file_path,
+	# 		tools=[self.user_info_organized_reader],
+	# 	)
 
-	@task
-	def project_experience_extraction_task(self):
-		return Task(
-			config=self.tasks_config["project_experience_extraction_task"],
-			agent=self.generalist_agent(),
-			tools=[self.user_info_organized_reader],
-			output_file=self.project_experience_extraction_task_file_path,
-		)
+	# @task
+	# def project_experience_extraction_task(self):
+	# 	return Task(
+	# 		config=self.tasks_config["project_experience_extraction_task"],
+	# 		agent=self.generalist_agent(),
+	# 		tools=[self.user_info_organized_reader],
+	# 		output_file=self.project_experience_extraction_task_file_path,
+	# 	)
 	
 	# @agent
 	# def technical_details_agent(self) -> Agent:
@@ -248,25 +252,47 @@ class ResumeCrew:
 	# ----------------- End of Skills Match Identification -----------------
 
 	# ----------------- Choose Work/Project Experience -----------------
+	# @task
+	# def experience_choosing_task(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['experience_choosing_task']['description']
+	# 		expected_output = yaml_data['experience_choosing_task']['expected_output']
+
+	# 	jd_keyword = self.load_txt_files(self.jd_keyword_extraction_file_path)
+	# 	work_experience = self.load_txt_files(self.work_experience_extraction_task_file_path)
+	# 	project_experience = self.load_txt_files(self.project_experience_extraction_task_file_path)
+	# 	# get date
+	# 	today_date = datetime.date.today().strftime("%B %d, %Y")
+	# 	task_description = description_value.format(jd_keyword = jd_keyword, work_experience = work_experience, project_experience = project_experience, today_date = today_date)
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
+	# 		# context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+	# 		output_file=self.experience_choosing_task_file_path,
+	# 	)
+	
 	@task
-	def experience_choosing_task(self):
+	def gather_info_of_choosen_experiences(self):
 		# Load YAML file
 		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
 			yaml_data = yaml.safe_load(file)
-			description_value = yaml_data['experience_choosing_task']['description']
-			expected_output = yaml_data['experience_choosing_task']['expected_output']
+			description_value = yaml_data['gather_info_of_choosen_experiences']['description']
+			expected_output = yaml_data['gather_info_of_choosen_experiences']['expected_output']
 
-		jd_keyword = self.load_txt_files(self.jd_keyword_extraction_file_path)
-		work_experience = self.load_txt_files(self.work_experience_extraction_task_file_path)
-		project_experience = self.load_txt_files(self.project_experience_extraction_task_file_path)
-		task_description = description_value.format(jd_keyword = jd_keyword, work_experience = work_experience, project_experience = project_experience)
-		print("task_description: \n", task_description)
+		experience_choosen = self.load_txt_files(self.experience_choosing_task_file_path)
+		user_info_organized_data = self.load_txt_files('info_files/user_info_organized.txt')
+		task_description = description_value.format(experience_choosen = experience_choosen, user_info_organized_data = user_info_organized_data)
+
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
-			agent=self.cross_match_evaluator_with_job_description_agent(),
-			# context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-			output_file=self.experience_choosing_task_file_path,
+			agent=self.generalist_agent(),
+			# context=[self.experience_choosing_task()],
+			output_file=self.gather_info_of_choosen_experiences_file_path,
 		)
 
 	@crew
@@ -308,7 +334,7 @@ class ResumeCrew:
 	
 	def load_txt_files(self, file_path):
 		"""Load text file"""
-		with open(file_path, 'r', encoding='utf-8') as file:
+		with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
 			return file.read()
 
 

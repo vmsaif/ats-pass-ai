@@ -46,7 +46,7 @@ def run():
     organizer = LLMTask("User Info Organize", user_info_file_path, user_info_orgainzed_file_path, organize_system_instruction, override=False)
     organizer.run()
     end_time = time.perf_counter()
-    info_organizing_time = end_time - start_time
+    info_organizing_time = (end_time - start_time) / 60
 
     # Now, lets extract the keywords from the job description
     jd_extraction_system_instruction = dedent("""
@@ -88,7 +88,7 @@ def run():
     # job_description_extractor.run()
     
     end_time = time.perf_counter()
-    jd_extraction_time = end_time - start_time
+    jd_extraction_time = (end_time - start_time) / 60
 
     # Index into DB: this will not run if the file is already indexed
     start_time = time.perf_counter()
@@ -110,8 +110,8 @@ def run():
     
     # Print the time taken for each task
     print("---- Time Statistics -----")
-    print(f"-- Time taken for User Info Organizing: {info_organizing_time:.2f} seconds")
-    print(f"-- Time taken for JD Extraction: {jd_extraction_time:.2f} seconds")
+    print(f"-- Time taken for User Info Organizing: {info_organizing_time:.2f} minutes")
+    print(f"-- Time taken for JD Extraction: {jd_extraction_time:.2f} minutes")
     print(f"-- Time taken for Indexing: {indexing_time:.2f} minutes")
     print(f"-- Time taken for Crew Run: {crew_run_time:.2f} minutes")
     print(f"-- Total Time taken: {program_run_time:.2f} minutes")

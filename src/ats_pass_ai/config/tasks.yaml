@@ -142,7 +142,7 @@ work_experience_extraction_task:
     Timeline:
     Technologies, frameworks, and tools Used:
     Skills: 
-    Link: (must include link if available)
+    Link: 
     Key Highlights: 
       1.
       2.
@@ -166,7 +166,7 @@ project_experience_extraction_task:
     Description: 
     Technologies, frameworks, and tools Used:
     Skills: 
-    Link: (must include link if available)
+    Link: 
     Key Highlights: 
       1.
       2.
@@ -273,36 +273,85 @@ skills_extraction_task:
 
 experience_choosing_task:
   description: >
-    Analyze the user's work experiences and project experiences to identify the 3 most relevant experiences that align with the job description provided. To do this, you need to evaluate the user's experiences based on the skills, technologies, frameworks, tools, and soft skills required by the job description. 
+    Analyze the user's work experiences and project experiences to identify the 4 most relevant experiences that align with the job description provided. 
 
-    You will always choose the most recent experience weather it is relevant or not. The rest of the 2 will be prioritized based on the tools and technologies, and frameworks used in the work experiences or project experiences. 
+    **Evaluation Criteria:**
+      * **Relevance to Job Description:** Prioritize experiences based on the skills, technologies, frameworks, tools, and soft skills mentioned in the job description. 
+      * **Recency:** Always include the most recent experience, regardless of its relevance. However, you can exclude it if it's not relevant at all or very outdated compared to today's date {today_date}. 
+      * **Keywords and Phrases:**  Favor experiences that heavily utilize keywords and phrases from the job description. 
+      * **Tools and Technologies:**  For the remaining 3 slots, prioritize experiences that showcase the specific tools, technologies, and frameworks listed in the job description. 
 
-    The Key Factors of the Job Description are:
-    {jd_keyword}
-
-    The User's Work Experiences:
-    {work_experience}
-
-    The User's Project Experiences:
-    {project_experience}
-
-    At the end, explain why you did not choose the other experiences.
+    **Input:**
+      * **Job Description Keywords:** {jd_keyword} 
+      * **User's Work Experiences:** {work_experience}
+      * **User's Project Experiences:** {project_experience}
 
   expected_output: >
-    Based on the analysis, provide a list of the 4 most relevant experiences that align with the job description. Rank them in order of relevance, with a brief explanation for each choice.
+    Write down only the titles of those 4 work or project experiences in each line. All project experiences together and all work experiences together.
+    1. Title 1
+    2. Title 2
+    3. Title 3
+    4. Title 4
 
-    Top 3 Relevant Experiences:
-    1. Experience 1: [Explanation] \n
+gather_info_of_choosen_experiences:
+  description: >
+    Provide a detailed information for each of these experiences or projects.
 
-    2. Experience 2: [Explanation] \n
+    {experience_choosen}
+
+    From this content below.
+
+    {user_info_organized_data}
+
+  expected_output: >
+    [Use empty lines to separate the experiences. Maintain the order of experiences or projects]
     
-    3. Experience 3: [Explanation] \n
+    Title: / Role:
+    Company Name: 
+    Timeline:
+    Technologies, frameworks, and tools Used:
+    Skills:
+    Link:
+    Key Highlights:
+      1.
+      2.
+      3.
+      4.
+    Team size: (if available)
+    Outcomes:
 
-    4. Experience 4: [Explanation] \n
 
-    Explanation for Not Choosing Other Experiences one by one:
+# ------------- If need explanation of each decision, use this expected_output ------------
 
+  # expected_output: >
+  #   [Use empty lines to separate the experiences. Group each experience as "Work Experience" or "Project Experience" togather and provide the title and explanation for each.]
+  #   * **Top 4 Relevant Experiences:**
+  #       1. [Title]: 
+  #           [Explanation]
+        
+  #       2. [Title]: 
+  #           [Explanation]
+        
+  #       3. [Title]: 
+  #           [Explanation]
+        
+  #       4. [Title]: 
+  #           [Explanation]
 
+  #   [Use empty lines to separate the experiences.]
+  #   * **Explanation for Not Choosing Other Experiences (One by one):**
+    
+  #       1. [Title]: 
+  #           [Explanation]
+        
+  #       2. [Title]: 
+  #           [Explanation]
+        
+  #       3. [Title]: 
+  #           [Explanation] 
+  #       ... and so on
+
+# --------------------------------------------------------
     
 
 # professional_affiliations_task:
