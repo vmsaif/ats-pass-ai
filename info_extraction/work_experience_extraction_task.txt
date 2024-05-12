@@ -8,13 +8,3 @@ Link:
 Key Highlights:
 Team size: (if available)
 Outcomes: 
-2. Company Name: SGA Tech Solutions
-Role: Software Developer
-Description:
-Timeline: 
-Technologies, frameworks, and tools Used:
-Skills:
-Link: 
-Key Highlights:
-Team size: (if available)
-Outcomes:

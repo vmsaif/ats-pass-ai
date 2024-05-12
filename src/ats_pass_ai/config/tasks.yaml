@@ -287,11 +287,33 @@ experience_choosing_task:
       * **User's Project Experiences:** {project_experience}
 
   expected_output: >
-    Write down only the titles of those 4 work or project experiences in each line. All project experiences together and all work experiences together.
-    1. Title 1
-    2. Title 2
-    3. Title 3
-    4. Title 4
+    "From the following list of your work and project experiences, select upto 4 most recent or relevent experiences in total.
+    If the most recent experience is a project, list all Project Experiences first, followed by Work Experiences. Otherwise, list Work Experiences first. You can also decide to include only Work Experiences or only Project Experiences based on relevance.
+
+    Label each title as either "Work Experience" or "Project Experience". 
+    
+
+    Example: (all 4 experiences)
+      Work Experience
+        Software Engineer at Google
+        Data Analyst at Amazon
+      
+      Project Experience
+        Development of a Machine Learning Algorithm for Image Recognition
+        Building a Mobile App for Event Management
+
+    [Use empty lines to separate the experiences.]
+    * **Explanation for Not Choosing Other Experiences (One by one):**
+    
+        1. [Title]: 
+            [Explanation]
+        
+        2. [Title]: 
+            [Explanation]
+        
+        3. [Title]: 
+            [Explanation] 
+        ... and so on
 
 gather_info_of_choosen_experiences:
   description: >
@@ -304,11 +326,11 @@ gather_info_of_choosen_experiences:
     {user_info_organized_data}
 
   expected_output: >
-    [Use empty lines to separate the experiences. Maintain the order of experiences or projects]
+    [Use empty lines to separate the experiences. Maintain the order of experiences or projects. Group them as "Work Experience" or "Project Experience" accordingly. You can safely ignore "Explanation for Not Choosing Other Experiences" section.]
     
-    Title: / Role:
-    Company Name: 
-    Timeline:
+    Title: / Role: (if available)
+    Company Name: (if available)
+    Timeline: (if available)
     Technologies, frameworks, and tools Used:
     Skills:
     Link:
@@ -318,7 +340,9 @@ gather_info_of_choosen_experiences:
       3.
       4.
     Team size: (if available)
-    Outcomes:
+    Outcomes: (if available)
+
+
 
 
 # ------------- If need explanation of each decision, use this expected_output ------------
@@ -353,7 +377,147 @@ gather_info_of_choosen_experiences:
 
 # --------------------------------------------------------
     
+# ats_friendly_experience_enhancement_task:
+#   description: >
+#     This task focuses on integrating relevant keywords from the job description into the user's chosen experiences to create highly effective resume bullet points. Your aim is to create ATS-friendly descriptions that highlight the user's qualifications in a concise, impactful, and natural manner. 
 
+#     **Guidelines:**
+
+#      * **Relevance is Key:** Only integrate keywords that are genuinely relevant to the experience being described. 
+#      * **Natural Integration:**  The keywords should flow naturally within the sentences. Avoid simply listing keywords or forcing them into inappropriate contexts. 
+#      * **Extreme Conciseness and Clarity:**  Use strong action verbs and eliminate unnecessary words. Prioritize a high-impact description over word count. Each experience should be summarized in 1-2 concise sentences, similar to a resume bullet point.  
+#      * **Contextual Awareness:** Consider the overall context of each experience. Choose keywords that accurately reflect the skills and responsibilities involved.
+#      * **Avoid Keyword Stuffing:**  Overusing keywords can have a negative impact. Aim for a balanced and impactful description while avoiding unnecessary repetition.  
+
+#     **Input:**
+#       * **Job Description Keywords:** {jd_keywords}
+#       * **Chosen Experiences:** {chosen_experiences}
+
+#   expected_output: >
+#     A list of the user's chosen experiences, revised to include relevant keywords from the job description in a natural, impactful, and extremely concise way.  Each experience should be presented as 1-2 impactful sentences, formatted as a resume bullet point. 
+
+#     **Example:**
+
+#     **Input:**
+
+#     * **Job Description Keywords:**  `Python, Machine Learning, Data Analysis, Data Visualization, Teamwork, Communication`
+#     * **Chosen Experiences (Highlights):**
+#         * `- Developed a machine learning algorithm for image recognition using Python and TensorFlow.`
+#         * `- Collaborated with a team of engineers to build a data visualization dashboard for a client.` 
+
+#     **Output:**
+
+#     * `• Developed a Python-based machine learning algorithm for image recognition, utilizing data analysis and visualization techniques to optimize performance.`
+#     * `• Collaborated effectively with a team of engineers to design and build a data visualization dashboard, showcasing strong communication and teamwork skills.` 
+
+#     Final Output:
+#     Title: / Role: (if available)
+#     Company Name: (if available)
+#     Timeline: (if available)
+#     Technologies, frameworks, and tools Used:
+#     Skills:
+#     Link:
+#     Key Highlights [ATS-friendly bullet points]:
+#       1. 
+#       2.
+#       3.
+#       4.
+#     Team size: (if available)
+#     Outcomes: (if available)
+
+#     At the end, write a Report on the changes you made to the experiences:
+#     1. Mention which keywords did you change with what keyword from the job description. They must match exactly. Write the original sentence and the revised sentence.
+#     2. Why did you choose to change them? Explain what you saw in the job description that made you change the keywords.
+
+ats_friendly_experience_enhancement_task:
+  description: >
+    This task helps you create compelling resume bullet points by adding important
+    keywords from a job description to descriptions of your work experiences.
+    The goal is to make these descriptions stand out to Applicant Tracking
+    Systems (ATS), while also being easy to read and understand.
+
+    guidelines:
+      - **Relevance:** Only use keywords that truly fit with the experience you're
+        describing.
+      - **Natural Language:** Keywords should fit smoothly into the sentences. Don't
+        just list keywords or force them in where they don't belong.
+      - **Conciseness and Clarity:** Use strong action verbs and remove unnecessary
+        words. Focus on making a big impact with few words. Summarize each
+        experience in 1-2 short, powerful sentences, just like you would on a resume.
+      - **Context Matters:** Think about the overall story of each experience. Pick
+        keywords that accurately show the skills you used and what you were
+        responsible for.
+      - **Avoid Keyword Overload:** Using too many keywords can actually hurt your
+        chances. Aim for a balanced and impactful description without repeating
+        keywords too much.
+
+    input:
+      - **Job Description Keywords:** {jd_keywords}
+      - **Chosen Experiences:** {chosen_experiences}
+
+  expected_output: >
+    - **Title / Role:** (If you have this information)
+    - **Company Name:** (If you have this information)
+    - **Timeline:** (If you have this information)
+    - **Technologies, Frameworks, and Tools Used:**
+    - **Skills:**
+    - **Link:** (If relevant)
+    - **Key Highlights (ATS-friendly bullet points):**
+        - 1.
+        - 2.
+        - 3.
+        - 4.
+    - **Team Size:** (If you have this information)
+    - **Outcomes:** (If you have this information)
+
+    report_on_changes:
+      - **Keyword Changes:** For each experience:
+          - Original Sentence: Write the original sentence without any changes.
+          - Revised Sentence: Write the revised sentence, highlighting the **exact keywords** you added from the job description. 
+          - Keywords Added: List the keywords you added, ensuring they **exactly match** the words from the job description. 
+          - Rationale: Explain why you chose to use those specific keywords. What did you see in the job description that made you add them? Be specific and refer to details from the job description. 
+
+    example:
+      input:
+        - Job Description Keywords: Python, Machine Learning, Data Analysis, Data
+          Visualization, Teamwork, Communication
+        - Chosen Experiences (Highlights):
+          - Developed a machine learning algorithm for image recognition using Python
+            and TensorFlow.
+          - Collaborated with a team of engineers to build a data visualization
+            dashboard for a client.
+      output:
+        - Key Highlights (ATS-friendly bullet points):
+          - • Developed a Python-based machine learning algorithm for image
+            recognition, utilizing **data analysis** and **data visualization**
+            techniques to optimize performance.
+          - • **Collaborated** effectively with a team of engineers to design and
+            build a data visualization dashboard, showcasing strong **communication**
+            and **teamwork** skills.
+        report_on_changes:
+          - Keyword Changes:
+            - Original Sentence: "Developed a machine learning algorithm for image
+              recognition using Python and TensorFlow."
+            - Revised Sentence:  "Developed a Python-based machine learning algorithm
+              for image recognition, utilizing **data analysis** and **data
+              visualization** techniques to optimize performance."
+            - Keywords Added: "Data Analysis", "Data Visualization"
+            - Rationale: The job description emphasized the importance of both data
+              analysis and data visualization skills for this role.  I added these
+              keywords to demonstrate the direct relevance of this experience to the
+              job requirements. 
+          - Keyword Changes:
+            - Original Sentence: "Collaborated with a team of engineers to build a
+              data visualization dashboard for a client."
+            - Revised Sentence: "**Collaborated** effectively with a team of engineers
+              to design and build a data visualization dashboard, showcasing strong
+              **communication** and **teamwork** skills."
+            - Keywords Added: "Collaborated", "Communication", "Teamwork"
+            - Rationale: The job description specifically mentioned that "Collaboration",
+              "Communication", and "Teamwork" are essential skills for successful
+              candidates.  By highlighting these keywords, I am showing that the
+              applicant possesses these valuable skills and is a good fit for the
+              company's collaborative work environment.
 # professional_affiliations_task:
 #   description: >
 #     List all memberships in professional organizations including roles and responsibilities within these groups.

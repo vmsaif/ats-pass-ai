@@ -1,4 +1,29 @@
-1. ATS Pass AI
-2. Programming Mentor
-3. Blockchain Car Mileage Tracker 
-4. AI Path Finding
+Project Experience
+    ATS Pass AI
+    Blockchain Car Mileage Tracker
+    AI Path Finding 
+    Recursive Ray Tracing 
+
+[Use empty lines to separate the experiences.] * **Explanation for Not Choosing Other Experiences (One by one):**
+
+    1. Bank Account System:  While this project demonstrates object-oriented programming skills, it lacks direct relevance to the AI-focused requirements of the job description.
+
+    2. Hosting a Resume on GitHub Pages:  This project showcases technical documentation and web hosting skills, which are not primary requirements for the AI Engineer role. 
+
+    3. ELF Binary Analysis: While this project highlights debugging and system analysis skills, it does not directly align with the AI, machine learning, or deep learning aspects emphasized in the job description.
+
+    4. ELF Binary Analysis: While this project showcases debugging and system analysis skills, it is less relevant compared to other projects that demonstrate AI-related skills.
+
+    5. OpenGL Sphere Lighting: This project showcases OpenGL and C++ skills, but it lacks direct relevance to the AI-focused requirements outlined in the job description. 
+
+    6. Reversible Learning APP:  This project involved Android development and UI/UX design, which are not directly aligned with the core AI skills required for the role.
+
+    7. Connect 4 Game:  While this project involved AI decision-making, it is a simpler game AI compared to other projects showcasing more advanced AI techniques.
+
+    8. TCP Chat Application: This project focuses on network programming and multithreading in Java, which are not primary skills sought for the AI Engineer position.
+
+    9. Data Visualization with R:  This project involves data analysis and visualization using R, but it lacks the emphasis on machine learning and AI model development that is central to the job description.
+
+    10. Portfolio Website: This project showcases web development skills using React, which are not directly relevant to the AI-focused requirements of the role.
+
+    11. Programming Mentor: While this role demonstrates teaching and communication skills, it does not showcase the required technical skills for the AI Engineer position.

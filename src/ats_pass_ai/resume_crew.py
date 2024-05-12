@@ -49,6 +49,7 @@ class ResumeCrew:
 	skills_cross_check_task_file_path = 'info_extraction/relevent_to_jd/skills_cross_check_task.txt'
 	experience_choosing_task_file_path = 'info_extraction/relevent_to_jd/experience_choosing_task.txt'
 	gather_info_of_choosen_experiences_file_path = 'info_extraction/relevent_to_jd/gather_info_of_choosen_experiences.txt'
+	include_ats_keywords_into_experiences_file_path = 'info_extraction/relevent_to_jd/include_ats_keywords_into_experiences.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
@@ -67,7 +68,8 @@ class ResumeCrew:
 		# "work_experience_extraction_task": work_experience_extraction_task_file_path,
 		# "project_experience_extraction_task": project_experience_extraction_task_file_path,
 		# "experience_choosing_task": experience_choosing_task_file_path,
-		"gather_info_of_choosen_experiences": gather_info_of_choosen_experiences_file_path,
+		# "gather_info_of_choosen_experiences": gather_info_of_choosen_experiences_file_path,
+		"include_ats_keywords_into_experiences": include_ats_keywords_into_experiences_file_path,
 	}
 
 	# Define the tools
@@ -152,15 +154,15 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)
 
-	@agent
-	def generalist_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["generalist_agent"],
-			verbose=True,
-			allow_delegation=False,
-			cache=True,
-			llm=self.genAI,
-		)
+	# @agent
+	# def generalist_agent(self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["generalist_agent"],
+	# 		verbose=True,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		llm=self.genAI,
+	# 	)
 	
 	# @task
 	# def work_experience_extraction_task(self):
@@ -213,22 +215,22 @@ class ResumeCrew:
 
 
 
-	genAILarge = ChatVertexAI(
-		model="gemini-1.5-pro-preview-0409",
-		verbose=True,
-		temperature=1.0,
-	)
+	# genAILarge = ChatVertexAI(
+	# 	model="gemini-1.5-pro-preview-0409",
+	# 	verbose=True,
+	# 	temperature=1.0,
+	# )
 
-	@agent
-	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
-		return Agent(
-			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-			max_rpm=2,
-			verbose=True,
-			allow_delegation=False,
-			# cache=True,
-			llm=self.genAILarge,
-		)
+	# @agent
+	# def cross_match_evaluator_with_job_description_agent (self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
+	# 		max_rpm=2,
+	# 		verbose=True,
+	# 		allow_delegation=False,
+	# 		# cache=True,
+	# 		llm=self.genAILarge,
+	# 	)
 	
 	# @task
 	# def skills_cross_check_task(self):
@@ -275,24 +277,80 @@ class ResumeCrew:
 	# 		output_file=self.experience_choosing_task_file_path,
 	# 	)
 	
+	# @task
+	# def gather_info_of_choosen_experiences(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['gather_info_of_choosen_experiences']['description']
+	# 		expected_output = yaml_data['gather_info_of_choosen_experiences']['expected_output']
+
+	# 	experience_choosen = self.load_txt_files(self.experience_choosing_task_file_path)
+	# 	user_info_organized_data = self.load_txt_files('info_files/user_info_organized.txt')
+	# 	task_description = description_value.format(experience_choosen = experience_choosen, user_info_organized_data = user_info_organized_data)
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.generalist_agent(),
+	# 		# context=[self.experience_choosing_task()],
+	# 		output_file=self.gather_info_of_choosen_experiences_file_path,
+	# 	)
+	
+
+	# ----------------- End of Choose Work/Project Experience -----------------
+
+	# ----------------- Include ATS Keywords into Experiences -----------------
+
+	llama3_70b = ChatGroq(
+		model_name="llama3-70b-8192",
+		# verbose=True,
+		temperature=1.5,
+	)
+
+	@agent
+	def ats_keyword_integration_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["ats_keyword_integration_agent"],
+			# verbose=True,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAILarge
+			# llm=self.llama3_70b,
+			# system_template="""
+			# <|begin_of_text|>
+			# <|start_header_id|>system<|end_header_id|>
+
+			# {{ .System }}<|eot_id|>""",
+			# prompt_template="""<|start_header_id|>user<|end_header_id|>
+
+			# {{ .Prompt }}<|eot_id|>""",
+			# response_template="""<|start_header_id|>assistant<|end_header_id|>
+
+			# {{ .Response }}<|eot_id|>
+			# """,
+		)
+		
+
+
 	@task
-	def gather_info_of_choosen_experiences(self):
+	def include_ats_keywords_into_experiences(self):
 		# Load YAML file
 		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
 			yaml_data = yaml.safe_load(file)
-			description_value = yaml_data['gather_info_of_choosen_experiences']['description']
-			expected_output = yaml_data['gather_info_of_choosen_experiences']['expected_output']
+			description_value = yaml_data['ats_friendly_experience_enhancement_task']['description']
+			expected_output = yaml_data['ats_friendly_experience_enhancement_task']['expected_output']
 
-		experience_choosen = self.load_txt_files(self.experience_choosing_task_file_path)
-		user_info_organized_data = self.load_txt_files('info_files/user_info_organized.txt')
-		task_description = description_value.format(experience_choosen = experience_choosen, user_info_organized_data = user_info_organized_data)
+		chosen_experiences = self.load_txt_files(self.gather_info_of_choosen_experiences_file_path)
+		jd_keywords = self.load_txt_files(self.jd_keyword_extraction_file_path)
+		task_description = description_value.format(chosen_experiences = chosen_experiences, jd_keywords = jd_keywords)
 
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
-			agent=self.generalist_agent(),
+			agent=self.ats_keyword_integration_agent(),
 			# context=[self.experience_choosing_task()],
-			output_file=self.gather_info_of_choosen_experiences_file_path,
+			output_file=self.include_ats_keywords_into_experiences_file_path,
 		)
 
 	@crew
@@ -312,7 +370,7 @@ class ResumeCrew:
 			process=Process.sequential,
 			# process=Process.hierarchical,
 			# manager_llm=self.composerLLM,
-			verbose=2,
+			verbose=1,
 			memory=True,
 			embedder={
 				"provider": "google",
@@ -328,7 +386,7 @@ class ResumeCrew:
 		"""Creates the necessary files for the crew"""
 		for file_path in self.file_paths.values():
 			try:
-				open(file_path, 'w').close()
+				open(file_path, 'w', encoding='utf-8').close()
 			except Exception as e:
 				print(f"Error while creating the file: {e}")
 	
