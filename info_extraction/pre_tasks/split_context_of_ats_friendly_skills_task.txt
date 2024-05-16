@@ -1,0 +1,43 @@
+{
+  "user_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "Frameworks": [
+        "LangChain"
+      ],
+      "Tools": [],
+      "Soft Skills": [
+        "Communication",
+        "Teamwork",
+        "Problem Solving"
+      ]
+    },
+    "partial_match_with_job_description": {
+      "Programming Languages": [
+        "Java"
+      ],
+      "Frameworks": [],
+      "Tools": [
+        "SQL",
+        "Docker",
+        "Git",
+        "CI/CD",
+        "JavaScript",
+        "JSON",
+        "AWS (Basic)"
+      ],
+      "Soft Skills": [
+        "Adaptability",
+        "Time Management",
+        "Critical Thinking",
+        "Strong work ethic",
+        "Excellent time management skills",
+        "Ability to prioritize and multitask",
+        "Ability to work under pressure",
+        "Willingness to learn new things"
+      ]
+    }
+  }
+}

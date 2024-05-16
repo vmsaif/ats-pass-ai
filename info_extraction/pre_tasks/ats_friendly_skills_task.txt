@@ -1,0 +1,29 @@
+```json
+{
+  "user_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "Frameworks": [
+        "Langchain"
+      ],
+      "Tools": [],
+      "Soft Skills": [
+        "Teamwork"
+      ]
+    },
+    "partial_match_with_job_description": {
+      "Programming Languages": {},
+      "Frameworks": {},
+      "Tools": {
+        "name": "CrewAI",
+        "pertially_matched_with_job_description": "Generative AI, Machine Learning"
+      },
+      "Soft Skills": {
+        "name": "Communication",
+        "pertially_matched_with_job_description": "Communication Skills"
+      }
+    }
+  },
+  "missing

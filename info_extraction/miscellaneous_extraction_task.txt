@@ -1,5 +1,8 @@
-Additional Information:
-  Languages Spoken: Not mentioned
-  Certifications: Not mentioned
-  Professional Affiliations: Not mentioned
-  Other Relevant Details: Not mentioned
+{
+  "Miscellaneous": {
+    "Languages Spoken": null,
+    "Certifications": null,
+    "Professional Affiliations": null,
+    "Other Relevant Details": null
+  }
+}

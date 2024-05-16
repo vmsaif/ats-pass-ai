@@ -11,7 +11,7 @@ import time
 
 # First, Lets Organize the User Information provided by the user.
 user_info_file_path = 'info_files/user_info.txt'
-user_info_orgainzed_file_path = 'info_files/user_info_organized.txt'
+user_info_orgainzed_file_path = ResumeCrew().user_info_organized_file_path
 jd_file_path = 'info_files/job_description.txt'
 jd_extracted_keywords_file_path = ResumeCrew().jd_keyword_extraction_file_path
 

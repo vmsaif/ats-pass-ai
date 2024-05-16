@@ -1,48 +1,89 @@
-### Project Experience
-### ATS Pass AI
-Title: Resume Automation Tool
-Timeline: January 2024 - Present
-Technologies, frameworks, and tools used: Python, RAG Search, CrewAI, LangChain, Gemini
-Skills: AI, Multiagent system, Natural Language Processing
-Link: https://github.com/vmsaif/ats-pass-ai
-Key highlights: 
-- Led the development of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency.
-- Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, demonstrating **creative thinking** and **problem-solving skills**.
-- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, contributing to the **democratization of AI** through accessible tools. 
-- Developed scalable **AI development frameworks** to anticipate future needs and adaptations, ensuring long-term project sustainability.
-
-### Blockchain Car Mileage Tracker
-Title: Innovative Project
-Timeline: January 2023 - March 2023
-Technologies, frameworks, and tools used: Blockchain, Docker, Vue.js
-Skills: Blockchain development, Data integrity, Transparency
-Link: https://github.com/vmsaif/blockChainCarMilageTracker
-Key highlights: 
-- Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting **analytical skills** and a commitment to **data integrity**.
-- Developed using blockchain technology to ensure **transparency** and security in data management, aligning with values of **ethical technology**. 
-- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **problem-solving** expertise.
-- Collaborated closely as a team to design, develop, and test the application, emphasizing strong **teamwork** and **collaboration** skills.
-
-### AI Path Finding
-Title: Game Development
-Timeline: July 2023 - September 2023
-Technologies, frameworks, and tools used: Java, Git, CI/CD, A* Algorithm
-Skills: Game development, AI, Pathfinding
-Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
-Key highlights: 
-- A Java-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game, showcasing experience with **AI development frameworks**.
-- Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency. 
-- Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.
-- Applied fundamental software development and testing processes to ensure robust application performance.
-
-### Work Experience
-### Programming Mentor 
-Title: Private Tutor
-Institution: -
-Timeline: Winnipeg, Manitoba | February 2023 - December 2023
-Skills: Teaching, Mentoring, Communication, Problem-solving
-Key highlights: 
-- Tutored a student in computer systems and programming, focusing on **Python** and Java, directly aligning with required programming language skills.
-- Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **communication skills**.
-- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical **problem-solving** abilities.
-- Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts.
+```json
+{
+  "Work Experience": [
+    {
+      "Title": "Programming Mentor",
+      "Company Name": "Private Tutoring",
+      "Timeline": "February 2023 - December 2023",
+      "Duration": "10 months",
+      "Technologies, frameworks, and tools Used": "Python, Java",
+      "Skills": "Mentoring, Programming, Communication, Collaboration, Analytical Thinking, Problem-Solving",
+      "Link": null,
+      "Key Highlights": [
+        "Tutored a student in computer systems and programming, focusing on **Python** and Java to enhance their understanding of **AI development frameworks**.",
+        "Tailored teaching methods to accommodate the student's learning style, fostering **collaboration** and effective **communication**.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, encouraging **analytical** and **problem-solving skills**.",
+        "Delivered one-on-one lessons focusing on computer system principles and introductory programming, promoting **critical thinking** and a foundational understanding of **AI** concepts."
+      ],
+      "Team size": "1",
+      "Outcomes": "Improved the student's understanding of computer science fundamentals and programming knowledge."
+    }
+  ],
+  "Project Experience": [
+    {
+      "Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "Ongoing",
+      "Technologies, frameworks, and tools Used": "Python, JavaScript, C++, Java, CrewAI, LangChain, Gemini, RAG Search",
+      "Skills": "Programming, AI, Natural Language Processing, Machine Learning, Analytical Thinking, Data Analysis",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key Highlights": [
+        "Led the **development** of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, demonstrating expertise in **AI**, **NLP**, and **Machine Learning**.",
+        "Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes for improved **ATS** compatibility.",
+        "Engineered a system that extracts user data and **analyzes** job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, showcasing strong **data analysis** skills.",
+        "Developed scalable **architecture** to anticipate future needs and adaptations for continued **AI development** and innovation in the field of **equitable progress** through accessible technology."
+      ],
+      "Team size": "Not specified",
+      "Outcomes": "Improved job search efficiency and resume personalization through AI-driven technology."
+    },
+    {
+      "Title": "Blockchain Car Mileage Tracker",
+      "Timeline": "January 2023 - March 2023",
+      "Duration": "3 months",
+      "Technologies, frameworks, and tools Used": "Docker, Vue.js",
+      "Skills": "Blockchain Development, Data Security, Data Analysis, Software Engineering",
+      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+      "Key Highlights": [
+        "Initiated and **developed** a blockchain application to securely track and verify vehicle mileage for insurance purposes, demonstrating expertise in **data preprocessing** and security.",
+        "Developed using blockchain technology, ensuring **data analysis** and secure record management.",
+        "Enhanced data integrity and transparency, contributing to **ethical technology** and responsible data handling practices.",
+        "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, showcasing **creative thinking** and **problem-solving** abilities."
+      ],
+      "Team size": "Not specified",
+      "Outcomes": "Increased data security and transparency in vehicle mileage tracking for insurance purposes."
+    },
+    {
+      "Title": "AI Path Finding",
+      "Timeline": "July 2023 - September 2023",
+      "Duration": "3 months",
+      "Technologies, frameworks, and tools Used": "Java, Git, CI/CD",
+      "Skills": "Game Development, Artificial Intelligence, Programming, Analytical Thinking, Problem-Solving",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key Highlights": [
+        "**Developed** a Java-based game development project that leveraged the A* algorithm to create an **AI**-driven game, demonstrating **programming** skills and an understanding of **algorithm development**.",
+        "Utilized Git for version control, ensuring efficient **collaboration** and project management.",
+        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing a commitment to optimized **AI development** processes.",
+        "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm, directly applicable to complex **AI model design** and implementation."
+      ],
+      "Team size": "Not specified",
+      "Outcomes": "Improved game development capabilities through the integration of AI and efficient software development practices."
+    },
+    {
+      "Title": "Reversible Learning App",
+      "Timeline": "January 2021 - April 2021",
+      "Duration": "4 months",
+      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java",
+      "Skills": "Android Development, Database Management, Software Engineering, UI/UX Design, Teamwork, Communication, Analytical Thinking",
+      "Link": "https://github.com/vmsaif/reversibleLearning",
+      "Key Highlights": [
+        "**Collaborated** with a team to **develop** \"Reversible Learning\", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX **design** and robust database management, demonstrating strong **teamwork** and **communication skills**.",
+        "Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs, showcasing a dedication to quality assurance and **analytical** thinking.",
+        "Demonstrated adaptability and effective **communication** by working in a team environment to meet project deadlines and objectives, highlighting valuable **collaboration** and interpersonal skills.",
+        "Developed an intuitive user interface (UI) for note organization and question archiving, emphasizing user-centered **design** principles and a commitment to accessibility."
+      ],
+      "Team size": "Not specified",
+      "Outcomes": "Enhanced study habits through the development of a user-friendly and efficient Android application."
+    }
+  ]
+}
+```

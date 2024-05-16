@@ -6,7 +6,7 @@
     "LinkedIn": "linkedin.com/in/vmsaif",
     "Other Social Media Profiles": null,
     "Personal Website": "saifmahmud.dev",
-    "Portfolio": "https://saifmahmud.dev/",
+    "Portfolio": null,
     "GitHub": null,
     "Address": null,
     "City": "Winnipeg",

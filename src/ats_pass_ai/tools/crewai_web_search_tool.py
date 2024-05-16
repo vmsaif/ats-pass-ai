@@ -1,13 +1,13 @@
 
-from crewai_tools import FileReadTool
+from crewai_tools import WebsiteSearchTool
 # from crewai_tools import DirectoryReadTool
 # from crewai_tools import TXTSearchTool
 # Create a new instance of the TXTSearchTool
 
-class CrewAIFileReadTool:
+class CrewAIWebsiteSearchTool:
     @classmethod
-    def create(cls, file_path: str):
-        return FileReadTool(
+    def create(cls):
+        return WebsiteSearchTool(
             config=dict(
                 llm=dict(
                     provider="google", 
@@ -20,10 +20,8 @@ class CrewAIFileReadTool:
                     config=dict(
                         model="models/embedding-001",
                         task_type="retrieval_document",
-                        # title=""
                     ),
                 ),
             ),
-            file_path=file_path
         )
             

@@ -1,78 +1,174 @@
-Technologies:
- - Python
- - Java
- - Android Studio
- - HSQLDB
- - JUnit
- - RAG Search
- - CrewAi
- - LangChain
- - Gemini
- - Blockchain
- - Docker
- - Vue.js
- - A* Algorithm
- - Git
- - CI/CD
- - OpenGL
- - C++
- - File I/O
- - Markdown
- - Jekyll
- - Git Pages
- - C Programming
- - glutSolidSphere
- - SQL 
- - Android
- - TCP/IP
- - Multithreading
- - Network
- - R
- - React
- - Styled-Components
- - GitHub Actions
- - Apollo
- - Bash
- - matplotlib
- - CPU Scheduling
- - Go-Back-N Protocol
+{
+    "Combined Skills List": {
+      "Technologies": [
+        {
+          "Name": "CrewAI",
+          "field": "Generative AI, Machine Learning, Data Science"
+        },
+        {
+          "Name": "Java",
+          "field": "Programming Language"
+        },
+        {
+          "Name": "Python",
+          "field": "Programming Language"
+        },
+        {
+          "Name": "Angular",
+          "field": "JavaScript Framework"
+        },
+        {
+          "Name": "Spring Boot",
+          "field": "Java Framework"
+        },
+        {
+          "Name": "Langchain",
+          "field": "AI, LLM"
+        },
+        {
+          "Name": "Docker",
+          "field": "Containerization"
+        },
+        {
+          "Name": "Vue.js",
+          "field": "JavaScript Framework"
+        },
+        {
+          "Name": "Git",
+          "field": "Version Control"
+        },
+        {
+          "Name": "OpenGL",
+          "field": "Graphics Programming"
+        },
+        {
+          "Name": "File I/O",
+          "field": "Data Handling"
+        },
+        {
+          "Name": "C Programming",
+          "field": "Programming Language"
+        },
+        {
+          "Name": "Android Studio",
+          "field": "Android Development"
+        },
+        {
+          "Name": "SQL",
+          "field": "Database Management"
+        },
+        {
+          "Name": "HSQLDB",
+          "field": "Database Management"
+        },
+        {
+          "Name": "RAG Search",
+          "field": "NLP, Information Retrieval"
+        },
+        {
+          "Name": "Gemini",
+          "field": "AI, Language Models"
+        }
+      ],
+      "Frameworks": [
+        {
+          "Name": "Langchain",
+          "field": "AI, LLM"
+        },
+        {
+          "Name": "Angular",
+          "field": "JavaScript Framework"
+        },
+        {
+          "Name": "Spring Boot",
+          "field": "Java Framework"
+        }
+      ],
 
-Skills:
- - Mentoring
- - Communication
- - Adaptability
- - Problem Solving
- - Team Player
- - SQL
- - Android Development
- - AI
- - Software Development
- - Data Analysis
- - NLP
- - Blockchain Development
- - Data Security
- - Game Development
- - Agile Development
- - 3D Graphics
- - Computer Graphics
- - Object-Oriented Programming
- - Data Structures
- - Technical Documentation
- - Web Development
- - Open Source
- - Debugging
- - System Analysis
- - Documentation
- - Lighting
- - UI/UX Design
- - Java
- - Network Programming
- - Data Visualization
- - Statistical Analysis
- - R Programming
- - Front-End Development
- - System Programming
- - Python
- - Networking
- - Data Visualization
- - Protocol Analysis
+      "Skills": [
+        {
+          "Name": "Data Analysis",
+          "field": "Analytical Skills"
+        },
+        {
+          "Name": "Machine Learning",
+          "field": "AI, ML"
+        },
+        {
+          "Name": "Project Management",
+          "field": "Management Skills"
+        },
+        {
+          "Name": "AI",
+          "field": "Artificial Intelligence"
+        },
+        {
+          "Name": "Multiagent",
+          "field": "AI, Cooperative Systems"
+        },
+        {
+          "Name": "Blockchain",
+          "field": "Distributed Ledger Technology"
+        },
+        {
+          "Name": "Game Development",
+          "field": "Software Development"
+        },
+        {
+          "Name": "A* Algorithm",
+          "field": "AI, Pathfinding"
+        },
+        {
+          "Name": "3D Graphics",
+          "field": "Computer Graphics"
+        },
+        {
+          "Name": "Object-Oriented Design",
+          "field": "Software Engineering"
+        },
+        {
+          "Name": "Polymorphism",
+          "field": "Software Engineering"
+        },
+        {
+          "Name": "Documentation",
+          "field": "Technical Writing"
+        },
+        {
+          "Name": "Debugging",
+          "field": "Software Engineering"
+        },
+        {
+          "Name": "System Analysis",
+          "field": "Systems Engineering"
+        },
+        {
+          "Name": "Graphics Programming",
+          "field": "Computer Graphics"
+        },
+        {
+          "Name": "Team Player",
+          "field": "Collaboration Skills"
+        },
+        {
+          "Name": "AI Decision-Making",
+          "field": "AI"
+        }
+      ],
+
+      "Soft Skills": [
+        {
+          "Name": "Communication",
+          "field": "Interpersonal Skills"
+        },
+        {
+          "Name": "Leadership",
+          "field": "Management Skills"
+        },
+        {
+          "Name": "Teamwork",
+          "field": "Collaboration Skills"
+        }
+      ]
+    }
+  }

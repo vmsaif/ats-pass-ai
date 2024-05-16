@@ -1,3 +1,5 @@
+# ------------- resume_compilation_agent -> Resume Compilation -------------
+
 resume_compilation_task:
   description: >
     You will receive a structured JSON object containing organized resume data. Your task is to format this data into a professional resume in plain text format. **Strictly follow the format provided below, ensuring consistent spacing and use of new lines.** 
@@ -61,21 +63,7 @@ resume_compilation_task:
 
     ## References\n
 
-career_objective_task: 
-  description: >
-    Based on the user's information and the provided job description, craft a compelling career objective statement that highlights the user's skills, experience, and unique approach to software development, aligning with the company's mission and the desired skills outlined in the job description. 
-
-    - Skills of the user: 
-      {skills}
-
-    - job_description: {job_description}
-
-    You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Then ask the provided tool. Also consider the user's personal philosophy and approach to software development when crafting the career objective statement if available.
-
-  expected_output: >
-    A compelling and impactful career objective statement tailored to the user's information and the job description. No need to ask the user for confirmation. Use your statistical analysis to generate the most suitable career objective statement for the user to impact the recruiter.
-
-    There should be nothing else in the output except the career objective statement.
+# ------------- resume_in_json_agent -> Resume Data Structuring -------------
 
 resume_in_json_task:
   description: >
@@ -168,18 +156,7 @@ resume_in_json_task:
     }
     ``` 
 
-    # --------------tasks of Profile Building----------------
-
-# list of tasks:
-# - personal_information_extraction_task
-# - education_extraction_task
-# - volunteer_work_extraction_task
-# - awards_recognitions_extraction_task
-# - references_extraction_task
-# - personal_traits_interests_extraction_task
-# - miscellaneous_extraction_task
-# - ats_friendly_skills_task
-# - ats_friendly_experiences_task
+# ------------- generalist_agent -> User Basic Profile Creation -------------
 
 personal_information_extraction_task:
   description: >
@@ -346,7 +323,9 @@ work_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the user's work experiences, including work titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
 
-    The tool will return a large chunk of information. Look into the chunk to find your data. Look at each work closely to understand the tools and technologies, framworks used during the work. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the work experiences, you should include them in the output.
+    Look into the chunk below to find your data. Look at each work closely to understand the tools and technologies, framworks used during the work. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the work experiences, you should include them in the output.
+
+    {user_info_organized_data}
     
   expected_output: >
     in JSON format:
@@ -371,12 +350,13 @@ work_experience_extraction_task:
         ]
       }
     
-    
 project_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the user's project experiences, including project titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
 
-    The tool will return a large chunk of information. Look into the chunk to find your data. Look at each project closely to understand the tools and technologies, framworks used to create it. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the project experiences, you should include them in the output.
+    Look into the chunk to find your data. Look at each project closely to understand the tools and technologies, framworks used to create it. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the project experiences, you should include them in the output.
+
+    {user_info_organized_data}
     
   expected_output: >
     in JSON format:
@@ -400,8 +380,99 @@ project_experience_extraction_task:
         ]
       }
 
-# -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
+# ------------- generalist_agent -> Process information from the user's experiences -------------
 
+split_context_of_experience_choosing_task:
+  description: >
+    Split the context provided to you at break point "Explanation for Not Choosing Other Experiences". In your output, you will provide everything before the "Explanation for Not Choosing Other Experiences" as the final output of the task.
+
+    The context you need to split is provided to you from the previous task.
+
+  expected_output: >
+    Everything before the "Explanation for Not Choosing Other Experiences" will be the final output of the task.
+
+gather_info_of_choosen_experiences:
+  description: >
+    Provide a detailed information for each of the provided context's experiences or projects from this content below.
+
+    {user_info_organized_data}
+
+  expected_output: >
+    [Use empty lines to separate the experiences. Maintain the order of work experiences or projects experiences. Group them as "Work Experience" or "Project Experience" accordingly. Provide the following details for each experience or project.]
+    
+    In JSON format:
+      {
+        "Work Experience": [
+          {
+            "Title": "",
+            "Company Name": "",
+            "Timeline": "",
+            "Duration": " years, months", (or " months" if less than a year)
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "Link": "",
+            "Key Highlights": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ],
+        "Project Experience": [
+          {
+            "Title": "",
+            "Timeline": "",
+            "Duration": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "Link": "",
+            "Key Highlights": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+      }
+
+split_context_of_ats_friendly_keywords_into_experiences:
+  description: >
+    Split the context provided to you at break point "REPORT ON CHANGES:". In your output, you will provide everything before the "REPORT ON CHANGES:" as the final output of the task.
+
+    The context you need to split is provided to you from the previous task.
+
+  expected_output: >
+    Everything before the "REPORT ON CHANGES:" will be the final output of the task in JSON format.
+
+# ------------- career_objective_agent -> Career Objective Crafting -------------
+
+career_objective_task: 
+  description: >
+    Based on the user's information and the provided job description, craft a compelling career objective statement that highlights the user's skills, experience, and unique approach to software development, aligning with the company's mission and the desired skills outlined in the job description. 
+
+    Provided to you:
+    - Skills of the user: 
+      Check the context provided to you from other task.
+
+    - Job Description: {job_description}
+
+    - Tool: This tool directly connected to the user's information. You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Also consider the user's personal philosophy and approach to software development when crafting the career objective statement if available.
+
+  expected_output: >
+    A compelling and impactful career objective statement tailored to the user's information and the job description. No need to ask the user for confirmation. Use your statistical analysis to generate the most suitable career objective statement for the user to impact the recruiter.
+
+    There should be nothing else in the output except the career objective statement in JSON format:
+      {
+        "Career Objective": "..."
+      }
+
+# ------------- cross_match_evaluator_with_job_description_agent -> -------------
 
 ats_friendly_skills_task:
   description: >
@@ -414,6 +485,10 @@ ats_friendly_skills_task:
 
     Source 2 (User's Skills and Technologies, Frameworks, Tools, Soft Skills, etc.) from the context provided. 
 
+    You are also provided with the tool to search web for the skills and technologies that are not familiar to you. 
+    
+    Before Writing the "No Match" section, Use the provided web search tool to search for the skills and technologies that you are not familiar with of both job description and user's list and check if they are relevant to the job description or not.
+
   expected_output: >
     Produce a structured report that categorizes the findings into 'Exact Match', 'Partial Match', or 'No Match'. 
 
@@ -421,145 +496,152 @@ ats_friendly_skills_task:
 
     - **'Exact Match'**: Direct matches between job description requirements and applicant’s qualifications. An exact match is a skill or experience that is mentioned in both the job description and the applicant's profile using the same or very similar terms.
 
-      Example:
+    In JSON Format. Example:
 
-      Exact Match:
-        - Technical Skills, frameworks, tools:
-          - item 1
-          - item 2
-        - Soft Skills:
-          - item 1
-          - item 2
+      {
+        "user_skills": {
+          "exact_match_with_job_description": {
+            "Programming Languages": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Frameworks": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Tools": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Soft Skills": [
+              "item 1",
+              "item 2",
+              ...
+            ]
+          }
+        }
+      }
+
+
 
     - **'Partial Match'**: Skills or experiences that are somehow related but not identical to the job requirements.
 
-      Example:
+      In Json Format:
 
-      Partial Match:
-        - Technical Skills, frameworks, tools:
-          - item 1 (Similar to Java required by job)
-          - item 2 (Related to SQL databases required by job)
-        - Soft Skills:
-          - Negotiation (Related to requested persuasion skills)
-
-    **No Match**: Skills mentioned in the job description but are not present in the applicant's profile.
-
-      Example:
-
-      No Match (from job description):
-        - Missing from Applicant's Profile:
-          - item 1
-          - item 2
-
-  split_context_of_ats_friendly_skills_task:
-    description: >
-      Split the context provided to you at break point "No Match (from job description):". In your output, you will provide everything before the "No Match (from job description):" as the final output of the task.
-
-      Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, or Soft Skills or any other category you find suitable.
-
-      Here is the context you need to split:
-
-      {ats_friendly_skills}
-
-    expected_output: >
-      In JSON:
-        {
-          "user_skills": {
-            "exact_match_with_job_description": {
-              "Programming Languages": [
-                "item 1",
-                "item 2",
-                ...
-              ],
-              "Frameworks": [
-                "item 1",
-                "item 2",
-                ...
-              ],
-              "Tools": [
-                "item 1",
-                "item 2",
-                ...
-              ],
-              "Soft Skills": [
-                "item 1",
-                "item 2",
-                ...
-              ]
+      {
+        "user_skills": {
+          "partial_match_with_job_description": {
+            "Programming Languages": {
+              "name": "item 1",
+              "pertially_matched_with_job_description": "item 1"
             },
-
-            "partial_match_with_job_description": {
-              "Programming Languages": [
-                "item 1",
-                "item 2",
-                ...
-              ],
-              "Frameworks": [
-                "item 1",
-                "item 2",
-                ...
-              ],
-              "Tools": [
-                "item 1",
-                "item 2",
-                ...
-              ],
-              "Soft Skills": [
-                "item 1",
-                "item 2",
-                ...
-              ]
+            "Frameworks": {
+              "name": "item 1",
+              "pertially_matched_with_job_description": "item 1"
+            },
+            "Tools": {
+              "name": "item 1",
+              "pertially_matched_with_job_description": "item 1"
+            },
+            "Soft Skills": {
+              "name": "item 1",
+              "pertially_matched_with_job_description": "item 1"
             }
           }
         }
+      }
 
-        
-        
+    **No Match**: Skills mentioned in the job description but are not present in the applicant's profile.
 
-skills_from_exp_and_project_task:
+      Example in JSON
+
+      {
+        "missing_from_the_applicant_skills": {
+          "Programming Languages": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Frameworks": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Tools": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Soft Skills": [
+            "item 1",
+            "item 2",
+            ...
+          ]
+        }
+      }
+
+split_context_of_ats_friendly_skills_task:
   description: >
-    Extract a list of skills, technologies, framework etc used from the user's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.
-    
-  expected_output: >
-    Technologies:
-      - item 1
-      - item 2
-      - item 3
-    Skills:
-      - item 1
-      - item 2
-      - item 3
+    Split the context provided to you at break point "No Match (from job description):". In your output, you will provide everything before the "No Match (from job description):" as the final output of the task.
 
-skills_extraction_task:
-  description: >
-    Your task is to combine skills, tools, technologies, frameworks, and soft skills from two different sources into one comprehensive list. 
+    Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, or Soft Skills or any other category you find suitable.
 
-    First Source: You already have this from a previous task. It contains various skills and technologies.
-    
-    Second Source: Use the provided tool to gather more skills. Simply ask the tool for "Skills" to retrieve a list of additional skills.
-
-    Your job is to merge the skills from both sources into a single list, ensuring no items are omitted and both sources are represented equally.
+    Check the context provided to from other task.
 
   expected_output: >
-    Here's how the combined list should look:
+    In JSON:
+      {
+        "user_skills": {
+          "exact_match_with_job_description": {
+            "Programming Languages": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Frameworks": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Tools": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Soft Skills": [
+              "item 1",
+              "item 2",
+              ...
+            ]
+          },
 
-    Combined Skills List:
-      Technologies:
-        - item 1 (e.g., Python)
-        - item 2 (e.g., Java)
-        - item 3 (e.g., Docker)
-      Frameworks:
-        - item 1 (e.g., React)
-        - item 2 (e.g., Angular)
-        - item 3 (e.g., Spring Boot)
-      Skills:
-        - item 1 (e.g., Data Analysis)
-        - item 2 (e.g., Machine Learning)
-        - item 3 (e.g., Project Management)
-      Soft Skills:
-        - item 1 (e.g., Communication)
-        - item 2 (e.g., Leadership)
-        - item 3 (e.g., Teamwork)
+          "partial_match_with_job_description": {
+            "Programming Languages": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Frameworks": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Tools": [
+              "item 1",
+              "item 2",
+              ...
+            ],
+            "Soft Skills": [
+              "item 1",
+              "item 2",
+              ...
+            ]
+          }
+        }
+      }
 
 experience_choosing_task:
   description: >
@@ -573,8 +655,8 @@ experience_choosing_task:
 
     **Input:**
       * **Job Description Keywords:** {jd_keyword} 
-      * **User's Work Experiences:** {work_experience}
-      * **User's Project Experiences:** {project_experience}
+      
+      * **User's Work Experiences, Project Experiences:** It it provided as context to you from previous task.
 
   expected_output: >
     "From the following list of your work and project experiences, select upto 4 most recent or relevent experiences in total.
@@ -605,43 +687,147 @@ experience_choosing_task:
             [Explanation] 
         ... and so on
 
-split_context_of_experience_choosing_task:
+# -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
+
+skills_from_exp_and_project_task:
   description: >
-    Split the context provided to you at break point "Explanation for Not Choosing Other Experiences". In your output, you will provide everything before the "Explanation for Not Choosing Other Experiences" as the final output of the task.
+    Extract a list of skills, technologies, framework etc used from the user's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.
+    
+  expected_output: >
+    In JSON format:
+      {
+        "Combined Skills List": {
+          "Technologies": {
+            {
+              "Name": "CrewAI",
+              "field": "Generative AI, Machine Learning, Data Science"
+            },
+            {
+              "Name": "Python",
+              "field": "Programming Language"
+            },
+            {
+              "Name": "Java",
+              "field": "Programming Language"
+            }
+          },
+          "Frameworks": {
+            {
+              "Name": "Langchain",
+              "field": "AI, LLM"
+            },
+            {
+              "Name": "Angular",
+              "field": "JavaScript Framework"
+            },
+            {
+              "Name": "Spring Boot",
+              "field": "Java Framework"
+            }
+          },
 
-    Here is the context you need to split:
+          "Skills": {
+            {
+              "Name": "Data Analysis",
+              "field": "Analytical Skills"
+            },
+            {
+              "Name": "Machine Learning",
+              "field": "AI, ML"
+            },
+            {
+              "Name": "Project Management",
+              "field": "Management Skills"
+            }
+          },
 
-    {experience_choosen}
+          "Soft Skills": {
+            {
+              "Name": "Communication",
+              "field": "Interpersonal Skills"
+            },
+            {
+              "Name": "Leadership",
+              "field": "Management Skills"
+            },
+            {
+              "Name": "Teamwork",
+              "field": "Collaboration Skills"
+            }
+          }
 
-gather_info_of_choosen_experiences:
+skills_extraction_task:
   description: >
-    Provide a detailed information for each of these experiences or projects.
+    Your task is to combine skills, tools, technologies, frameworks, and soft skills from two different sources into one comprehensive list. 
 
-    {split_context_experience_choosen}
+    First Source: You are 
+    
+    Second Source: Use the provided tool to gather more skills. Simply ask the tool for "Skills" to retrieve a list of additional skills.
 
-    From this content below.
-
-    {user_info_organized_data}
+    Your job is to merge the skills from both sources into a single list, ensuring no items are omitted and both sources are represented equally.
 
   expected_output: >
-    [Use empty lines to separate the experiences. Maintain the order of experiences or projects. Group them as "Work Experience" or "Project Experience" accordingly. Provide the following details for each experience or project.]
-    
-    Title: / Role: (if available)
-    Company Name: (if available)
-    Timeline: (if available)
-    Technologies, frameworks, and tools Used:
-    Skills:
-    Link:
-    Key Highlights:
-      1.
-      2.
-      3.
-      4.
-    Team size: (if available)
-    Outcomes: (if available)
+    In JSON format:
+      {
+        "Combined Skills List": {
+          "Technologies": {
+            {
+              "Name": "CrewAI",
+              "field": "Generative AI, Machine Learning, Data Science"
+            },
+            {
+              "Name": "Python",
+              "field": "Programming Language"
+            },
+            {
+              "Name": "Java",
+              "field": "Programming Language"
+            }
+          },
+          "Frameworks": {
+            {
+              "Name": "Langchain",
+              "field": "AI, LLM"
+            },
+            {
+              "Name": "Angular",
+              "field": "JavaScript Framework"
+            },
+            {
+              "Name": "Spring Boot",
+              "field": "Java Framework"
+            }
+          },
 
+          "Skills": {
+            {
+              "Name": "Data Analysis",
+              "field": "Analytical Skills"
+            },
+            {
+              "Name": "Machine Learning",
+              "field": "AI, ML"
+            },
+            {
+              "Name": "Project Management",
+              "field": "Management Skills"
+            }
+          },
 
-
+          "Soft Skills": {
+            {
+              "Name": "Communication",
+              "field": "Interpersonal Skills"
+            },
+            {
+              "Name": "Leadership",
+              "field": "Management Skills"
+            },
+            {
+              "Name": "Teamwork",
+              "field": "Collaboration Skills"
+            }
+          }
 
 # ------------- If need explanation of each decision, use this expected_output ------------
 
@@ -674,8 +860,8 @@ gather_info_of_choosen_experiences:
   #       ... and so on
 
 # --------------------------------------------------------
-    
 
+# ---------------ats_keyword_integration_agent (ATS Keyword Integration Specialist) tasks---------------
 
 ats_friendly_keywords_into_experiences:
   description: >
@@ -701,12 +887,13 @@ ats_friendly_keywords_into_experiences:
 
     input:
       - **Job Description Keywords:** {jd_keywords}
-      - **Chosen Experiences:** {chosen_experiences}
+      - **Chosen Experiences:** It is provided as context to you from previous task.
 
   expected_output: >
     - **Title / Role:** (If you have this information)
     - **Company Name:** (If you have this information)
     - **Timeline:** (If you have this information)
+    - **Duration:** 
     - **Technologies, Frameworks, and Tools Used:**
     - **Skills:**
     - **Link:** (If relevant)
@@ -767,19 +954,6 @@ ats_friendly_keywords_into_experiences:
               applicant possesses these valuable skills and is a good fit for the
               company's collaborative work environment.
 
-  expected_output: >
-    Everything before the "REPORT ON CHANGES:" will be the final output of the task.
-
-split_context_of_ats_friendly_keywords_into_experiences:
-  description: >
-    Split the context provided to you at break point "REPORT ON CHANGES:". In your output, you will provide everything before the "REPORT ON CHANGES:" as the final output of the task.
-
-    Here is the context you need to split:
-
-    {ats_friendly_experiences}
-
-  expected_output: >
-    Everything before the "REPORT ON CHANGES:" will be the final output of the task.
 
 # professional_affiliations_task:
 #   description: >
