@@ -9,7 +9,7 @@ import os
 
 import yaml
 from langchain_groq import ChatGroq
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmCategory
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_vertexai import ChatVertexAI
 from crewai import Agent, Crew, Process, Task
@@ -45,7 +45,8 @@ class ResumeCrew:
 	all_togather_skills_extraction_task_file_path = 'info_extraction/pre_tasks/all_togather_skills_extraction_task.txt'
 	
 	# Cross Checked with JD keywords
-	ats_friendly_skills_task_file_path = 'info_extraction/ats_friendly_skills_task.txt'
+	ats_friendly_skills_pre_task_file_path = 'info_extraction/pre_tasks/ats_friendly_skills_task.txt'
+	split_context_of_ats_friendly_skills_task_file_path = 'info_extraction/pre_tasks/split_context_of_ats_friendly_skills_task.txt' 
 	experience_choosing_task_file_path = 'info_extraction/pre_tasks/experience_choosing_task.txt'
 	split_context_of_experience_choosing_task_file_path = 'info_extraction/pre_tasks/split_context_of_experience_choosing_task.txt'
 	gather_info_of_choosen_experiences_file_path = 'info_extraction/pre_tasks/gather_info_of_choosen_experiences.txt'
@@ -84,9 +85,9 @@ class ResumeCrew:
 		# "gather_info_of_choosen_experiences": gather_info_of_choosen_experiences_file_path,
 		# "include_ats_keywords_into_experiences": ats_friendly_keywords_into_experiences_file_path,
 		# "split_context_of_ats_friendly_keywords_into_experiences": split_context_of_ats_friendly_keywords_into_experiences_file_path,
-		"career_objective_task": career_objective_task_file_path,
-		# "resume_compilation_task": resume_json_file_path,
-		# "resume_compilation_task": resume_compilation_task_file_path,
+		# "career_objective_task": career_objective_task_file_path,
+		# "resume_json_task": resume_json_file_path,
+		"resume_compilation_task": resume_compilation_task_file_path,
 	}
 
 	# Define the tools
@@ -94,11 +95,20 @@ class ResumeCrew:
 	jd_extr_keywords_reader = CrewAIFileReadTool.create(jd_keyword_extraction_file_path)
 	user_info_organized_reader = CrewAIFileReadTool.create('info_files/user_info_organized.txt')
 
+
+	safety_settings = {
+		HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+		HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+		HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+		HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+	}
+	
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
 		max_output_tokens=6000,
 		temperature=1.0,
+		safety_settings=safety_settings,
 		# cache=True
 	)
 
@@ -114,6 +124,16 @@ class ResumeCrew:
 		temperature=1.5,
 	)
 
+	@agent
+	def generalist_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["generalist_agent"],
+			verbose=True,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAI,
+		)
+
 	# @task
 	# def education_extraction_task(self):
 	# 	return Task(
@@ -123,14 +143,15 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)
 	
-	# @task
-	# def personal_information_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["personal_information_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=self.personal_information_extraction_task_file_path,
-	# 		tools=[self.queryTool],
-	# 	)
+	@task
+	def personal_information_extraction_task(self):
+		return Task(
+			config=self.tasks_config["personal_information_extraction_task"],
+			agent=self.generalist_agent(),
+			output_file=self.personal_information_extraction_task_file_path,
+			tools=[self.queryTool],
+
+		)
  
 	# @task
 	# def volunteer_work_extraction_task(self):
@@ -177,15 +198,7 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)
 
-	@agent
-	def generalist_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["generalist_agent"],
-			verbose=True,
-			allow_delegation=False,
-			cache=True,
-			llm=self.genAI,
-		)
+
 	
 	# @task
 	# def work_experience_extraction_task(self):
@@ -240,35 +253,54 @@ class ResumeCrew:
 
 
 
-	@agent
-	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
-		return Agent(
-			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-			max_rpm=2,
-			verbose=True,
-			allow_delegation=False,
-			# cache=True,
-			llm=self.genAILarge,
+	# @agent
+	# def cross_match_evaluator_with_job_description_agent (self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
+	# 		max_rpm=2,
+	# 		verbose=True,
+	# 		allow_delegation=False,
+	# 		# cache=True,
+	# 		llm=self.genAILarge,
+	# 	)
+	
+	@task
+	def ats_friendly_skills_task(self):
+		# Load YAML file
+		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+			yaml_data = yaml.safe_load(file)
+			description_value = yaml_data['ats_friendly_skills_task']['description']
+			expected_output = yaml_data['ats_friendly_skills_task']['expected_output']
+
+		src_1 = self.load_txt_files(self.jd_keyword_extraction_file_path)
+		task_description = description_value.format(src_1 = src_1)
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.cross_match_evaluator_with_job_description_agent(),
+			# context=[self.skills_extraction_task()],
+			output_file=self.ats_friendly_skills_pre_task_file_path,
 		)
 	
-	# @task
-	# def ats_friendly_skills_task(self):
-	# 	# Load YAML file
-	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['ats_friendly_skills_task']['description']
-	# 		expected_output = yaml_data['ats_friendly_skills_task']['expected_output']
+	@task
+	def split_context_of_ats_friendly_skills_task(self):
+		# Load YAML file
+		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+			yaml_data = yaml.safe_load(file)
+			description_value = yaml_data['split_context_of_ats_friendly_skills_task']['description']
+			expected_output = yaml_data['split_context_of_ats_friendly_skills_task']['expected_output']
 
-	# 	src_1 = self.load_txt_files(self.jd_keyword_extraction_file_path)
-	# 	task_description = description_value.format(src_1 = src_1)
+		ats_friendly_skills = self.load_txt_files(self.ats_friendly_skills_pre_task_file_path)
+		task_description = description_value.format(ats_friendly_skills = ats_friendly_skills)
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
-	# 		# context=[self.skills_extraction_task()],
-	# 		output_file=self.ats_friendly_skills_task_file_path,
-	# 	)
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.generalist_agent(),
+			output_file=self.split_context_of_ats_friendly_skills_task_file_path,
+		)
+
 
 	# ----------------- End of Skills Match Identification -----------------
 
@@ -343,28 +375,28 @@ class ResumeCrew:
 
 
 
-	@agent
-	def ats_keyword_integration_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["ats_keyword_integration_agent"],
-			# verbose=True,
-			allow_delegation=False,
-			cache=True,
-			llm=self.genAILarge
-			# llm=self.llama3_70b,
-			# system_template="""
-			# <|begin_of_text|>
-			# <|start_header_id|>system<|end_header_id|>
+	# @agent
+	# def ats_keyword_integration_agent(self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["ats_keyword_integration_agent"],
+	# 		# verbose=True,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		llm=self.genAILarge
+	# 		# llm=self.llama3_70b,
+	# 		# system_template="""
+	# 		# <|begin_of_text|>
+	# 		# <|start_header_id|>system<|end_header_id|>
 
-			# {{ .System }}<|eot_id|>""",
-			# prompt_template="""<|start_header_id|>user<|end_header_id|>
+	# 		# {{ .System }}<|eot_id|>""",
+	# 		# prompt_template="""<|start_header_id|>user<|end_header_id|>
 
-			# {{ .Prompt }}<|eot_id|>""",
-			# response_template="""<|start_header_id|>assistant<|end_header_id|>
+	# 		# {{ .Prompt }}<|eot_id|>""",
+	# 		# response_template="""<|start_header_id|>assistant<|end_header_id|>
 
-			# {{ .Response }}<|eot_id|>
-			# """,
-		)
+	# 		# {{ .Response }}<|eot_id|>
+	# 		# """,
+	# 	)
 		
 
 
@@ -412,50 +444,45 @@ class ResumeCrew:
 	
 	
 
-	@agent
-	def resume_structuring_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["resume_structuring_agent"],
-			verbose=True,
-			allow_delegation=False,
-			cache=True,
-			# llm=self.genAILarge,
-			llm=self.llama3_70b,
-			system_template="""
-			<|begin_of_text|>
-			<|start_header_id|>system<|end_header_id|>
+	# @agent
+	# def resume_in_json_agent(self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["resume_in_json_agent"],
+	# 		verbose=True,
+	# 		allow_delegation=False,
+	# 		cache=True,
+	# 		# llm=self.genAILarge,
+	# 		llm=self.llama3_70b,
+	# 		system_template="""
+	# 		<|begin_of_text|>
+	# 		<|start_header_id|>system<|end_header_id|>
 
-			{{ .System }}<|eot_id|>""",
-			prompt_template="""<|start_header_id|>user<|end_header_id|>
+	# 		{{ .System }}<|eot_id|>""",
+	# 		prompt_template="""<|start_header_id|>user<|end_header_id|>
 
-			{{ .Prompt }}<|eot_id|>""",
-			response_template="""<|start_header_id|>assistant<|end_header_id|>
+	# 		{{ .Prompt }}<|eot_id|>""",
+	# 		response_template="""<|start_header_id|>assistant<|end_header_id|>
 
-			{{ .Response }}<|eot_id|>
-			""",
-		)
+	# 		{{ .Response }}<|eot_id|>
+	# 		""",
+	# 	)
 
 
 	# @task
-	# def resume_structuring_task(self):
+	# def resume_in_json_task(self):
 	# 	# Load YAML file
 	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
 	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['resume_structuring_task']['description']
-	# 		expected_output = yaml_data['resume_structuring_task']['expected_output']
+	# 		description_value = yaml_data['resume_in_json_task']['description']
+	# 		expected_output = yaml_data['resume_in_json_task']['expected_output']
 
 	# 	resume_data = self.load_all_txt_files('info_extraction')
 	# 	task_description = description_value.format(resume_data = resume_data)
-		
-	# 	print("---------------------------------")
-	# 	print(task_description)
-	# 	print("---------------------------------")
-
 
 	# 	return Task(
 	# 		description=task_description,
 	# 		expected_output=expected_output,
-	# 		agent=self.resume_structuring_agent(),
+	# 		agent=self.resume_in_json_agent(),
 	# 		output_file=self.resume_json_file_path,
 	# 	)
 
@@ -496,27 +523,28 @@ class ResumeCrew:
 			allow_delegation=False,
 			cache=True,
 			llm=self.genAILarge,
+			tools=[self.queryTool],
 		)
 	
-	@task
-	def career_objective_task(self):
-		# Load YAML file
-		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-			yaml_data = yaml.safe_load(file)
-			description_value = yaml_data['career_objective_task']['description']
-			expected_output = yaml_data['career_objective_task']['expected_output']
+	# @task
+	# def career_objective_task(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['career_objective_task']['description']
+	# 		expected_output = yaml_data['career_objective_task']['expected_output']
 
-		skills = self.load_txt_files(self.ats_friendly_skills_task_file_path)
-		job_description = self.load_txt_files(self.jd_keyword_extraction_file_path)
+	# 	skills = self.load_txt_files(self.split_context_of_ats_friendly_skills_task_file_path)
+	# 	job_description = self.load_txt_files(self.jd_keyword_extraction_file_path)
 
-		task_description = description_value.format(skills = skills, job_description = job_description)
-		
-		return Task(
-			description=task_description,
-			expected_output=expected_output,
-			agent=self.career_objective_agent(),
-			output_file=self.career_objective_task_file_path,
-		)
+	# 	task_description = description_value.format(skills = skills, job_description = job_description)
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.career_objective_agent(),
+	# 		output_file=self.career_objective_task_file_path,
+	# 	)
 
 	@crew
 	def crew(self) -> Crew:
@@ -530,7 +558,7 @@ class ResumeCrew:
 			max_rpm=11,
 			agents=self.agents,
 			tasks=self.tasks,
-			cache=True,
+			# cache=True,
 			full_output=True,
 			process=Process.sequential,
 			# process=Process.hierarchical,

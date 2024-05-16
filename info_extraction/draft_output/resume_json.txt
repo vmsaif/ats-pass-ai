@@ -1,6 +1,4 @@
-Here is the organized JSON object representing the user's professional resume:
-
-```
+```json
 {
   "Contact Info": {
     "Full Name": "Saif Mahmud",
@@ -10,49 +8,51 @@ Here is the organized JSON object representing the user's professional resume:
     "Personal Website URL": "saifmahmud.dev",
     "Address": "Winnipeg, MB"
   },
-  "Summary": "Highly skilled recent graduate in Computer Science with a strong passion for software development, proficient in technical skills and soft skills.",
+  "Summary": "To contribute my strong problem-solving, communication, and teamwork skills to an immersive internship at Radical AI, where I can rapidly acquire AI/ML expertise and contribute to ethical AI development aligned with the company's mission of Collective Liberation.",
   "Skills": {
     "Technical": [
       "Python",
       "Problem-Solving",
-      "Communication",
-      "Teamwork",
+      "AI",
+      "Machine Learning",
       "Multiagent system",
       "Natural Language Processing",
       "Blockchain",
-      "Game development",
+      "Docker",
+      "Vue.js",
       "Java",
+      "Git",
+      "CI/CD",
       "A* Algorithm"
     ],
     "Soft": [
-      "Communication Skills",
+      "Communication",
+      "Teamwork",
+      "Critical Thinking",
       "Adaptability",
       "Strong work ethic",
+      "Time Management",
       "Ability to prioritize and multitask",
       "Ability to work under pressure",
-      "Willingness to learn new things",
-      "Critical Thinking",
-      "Analytical skills",
-      "Collaboration",
-      "Teaching"
+      "Willingness to learn new things"
     ]
   },
   "Projects": [
     {
       "Project Title": "Resume Automation Tool",
-      "Timeline": "January 2024 - Present (present)",
+      "Timeline": "January 2024 - Present",
       "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Key achievements": [
-        "Led the development of a multi-agent system to create tailored resumes using AI, Natural Language Processing, and Machine Learning.",
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
         "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating creative thinking and problem-solving skills.",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for Applicant Tracking Systems (ATS).",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, contributing to the democratization of AI through accessible tools.",
         "Developed scalable AI development frameworks to anticipate future needs and adaptations, ensuring long-term project sustainability."
       ]
     },
     {
       "Project Title": "Innovative Project",
-      "Timeline": "January 2023 - March 2023 (2 months)",
+      "Timeline": "January 2023 - March 2023",
       "Technologies": "Blockchain, Docker, Vue.js",
       "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
       "Key achievements": [
@@ -63,14 +63,15 @@ Here is the organized JSON object representing the user's professional resume:
       ]
     },
     {
-      "Project Title": "Game Development",
-      "Timeline": "July 2023 - September 2023 (2 months)",
+      "Project Title": "AI Path Finding",
+      "Timeline": "July 2023 - September 2023",
       "Technologies": "Java, Git, CI/CD, A* Algorithm",
       "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
       "Key achievements": [
         "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing experience with AI development frameworks.",
         "Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency.",
-        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
       ]
     }
   ],
@@ -78,7 +79,7 @@ Here is the organized JSON object representing the user's professional resume:
     {
       "Job Title": "Programming Mentor",
       "Company Name": "",
-      "Location": "Winnipeg, Manitoba",
+      "Location": "Winnipeg, MB",
       "Timeline": "February 2023 - December 2023 (10 months)",
       "Technologies": "Python, Java",
       "Link": "",
@@ -101,6 +102,5 @@ Here is the organized JSON object representing the user's professional resume:
   "Additional": {
     "References": ""
   }
-} 
+}
 ```
-I made sure to include all the provided information in the JSON object, avoiding any fabrications or inferences.

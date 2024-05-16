@@ -77,15 +77,15 @@ career_objective_task:
 
     There should be nothing else in the output except the career objective statement.
 
-    resume_structuring_task:
+resume_in_json_task:
   description: >
     You are an AI assistant skilled in structuring resume data. Your ONLY task is to organize the following input data into a JSON object representing a professional resume, EXACTLY as instructed below.  Do NOT deviate from these guidelines:
 
     {resume_data}
 
     1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "LinkedIn Profile URL", "Personal Website URL", "Address".
-    2.  **Summary:** Create a 3-4 sentence summary of the user's skills and professional goals based on the input data.
-    3.  **Skills:** Categorize the skills into two lists: "Technical" and "Soft". 
+    2.  **Summary:** Write down the summary provided in the input data.
+    3.  **Skills:** Categorize the skills then list them.
         - Ensure no skill is repeated. Combine variations of the same skill (e.g., "Problem-Solving" and "Problem-solving skills").
         - Carefully determine if a skill is technical (related to tools, technologies) or soft (related to personality, work style). 
     4.  **Projects:** For each project, extract the following fields: "Project Title", "Timeline" (include Start Month Year - End Month Year, "Technologies", "Link", "Key achievements". 
@@ -103,6 +103,7 @@ career_objective_task:
        - Do NOT fabricate, invent, or add ANY information that is not explicitly stated in the input data.
        - Do not infer, assume, or create any details not directly present in the input. 
        - Focus solely on accurately organizing the given information into a structured JSON format. 
+
   expected_output: >
     ```json
     {
@@ -189,23 +190,28 @@ personal_information_extraction_task:
     "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
 
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
-    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link.
 
   expected_output: >
-    User's Profile: 
-    Full Name:
-    Phone Number:
-    Email:
-    LinkedIn Profile:
-    Other social media profiles links:
-    Personal website link:
-    Portfolio Link:
-    GitHub Profile:
-    Address:
-    City:
-    State:
-    Zip Code:
-    Country:
+    In JSON format, Do not keep the keys that has null values:
+      {
+        "Personal Information": {
+          "Full Name": "",
+          "Phone Number": "",
+          "Email": "",
+          "LinkedIn": "",
+          "Other Social Media Profiles": "",
+          "Personal Website": "",
+          "Portfolio": "",
+          "GitHub": "",
+          "Address": "",
+          "City": "",
+          "State": "",
+          "Zip Code": "",
+          "Country": "",
+          ...
+        }
+      }
 
 education_extraction_task:
   description: >
@@ -215,14 +221,19 @@ education_extraction_task:
     "question" : "Give me the list of all educational qualifications, including degrees, majors, universities, graduation dates, and any honors or distinctions."
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, Rerun the tool again with the missing field. 
   expected_output: >
-    Education:
-      Degree:
-      Major:
-      University:
-      University Location:
-      Graduation Date: 
-      GPA: (if available)
-      Honors/Distinctions: (if available)
+    In JSON format:
+      {
+        "Education": {
+          "Degree": "",
+          "Major": "",
+          "University": "",
+          "University Location": "",
+          "Graduation Date": "",
+          "GPA": "",
+          "Honors/Distinctions": ""
+          ... 
+        }
+      }
 
 volunteer_work_extraction_task:
   description: >
@@ -233,11 +244,18 @@ volunteer_work_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
-    Volunteer Work:
-      Organization Name:
-      Role:
-      Responsibilities:
-      Dates:
+    In JSON format: 
+      {
+        "Volunteer Work": [
+          {
+            "Organization Name": "",
+            "Role": "",
+            "Responsibilities": "",
+            "Timeline": "",
+            ...
+          }
+        ]
+      }
 
 awards_recognitions_extraction_task:
   description: >
@@ -248,11 +266,18 @@ awards_recognitions_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
-    Awards and Recognitions:
-      Award Name:
-      Awarding Organization:
-      Date:
-      Reason for Recognition:
+    In JSON format: 
+      {
+        "Awards and Recognitions": [
+          {
+            "Award Name": "",
+            "Awarding Organization": "",
+            "Date": "",
+            "Reason": "",
+            ...
+          }
+        ]
+      }
 
 references_extraction_task:
   description: >
@@ -263,12 +288,19 @@ references_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
-    References:
-      Name:
-      Position:
-      Company:
-      Contact Information:
-      Relationship:
+    In JSON format: 
+      {
+        "References": [
+          {
+            "Name": "",
+            "Position": "",
+            "Company": "",
+            "Contact Information": "",
+            "Relationship": "",
+            ...
+          }
+        ]
+      }
 
 personal_traits_interests_extraction_task:
   description: >
@@ -279,11 +311,16 @@ personal_traits_interests_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
-    Personal Traits and Interests:
-      Strengths:
-      Weaknesses:
-      Hobbies:
-      Passions:
+    In JSON format: 
+      {
+        "Personal Traits and Interests": {
+          "Strengths": "",
+          "Weaknesses": "",
+          "Hobbies": "",
+          "Passions": "",
+          ...
+        }
+      }
 
 miscellaneous_extraction_task:
   description: >
@@ -294,11 +331,16 @@ miscellaneous_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
-    Additional Information:
-      Languages Spoken:
-      Certifications:
-      Professional Affiliations:
-      Other Relevant Details:
+    In JSON format: 
+      {
+        "Miscellaneous": {
+          "Languages Spoken": "",
+          "Certifications": "",
+          "Professional Affiliations": "",
+          "Other Relevant Details": "",
+          ...
+        }
+      }
 
 work_experience_extraction_task:
   description: >
@@ -307,21 +349,27 @@ work_experience_extraction_task:
     The tool will return a large chunk of information. Look into the chunk to find your data. Look at each work closely to understand the tools and technologies, framworks used during the work. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the work experiences, you should include them in the output.
     
   expected_output: >
-    Work Experience:
-    Company name:
-    Role:
-    Description: 
-    Timeline:
-    Technologies, frameworks, and tools Used:
-    Skills: 
-    Link: 
-    Key Highlights: 
-      1.
-      2.
-      3.
-      4.
-    Team size: (if available)
-    Outcomes:
+    in JSON format:
+      {
+        "Work Experience": [
+          {
+            "Job Title": "",
+            "Company Name": "",
+            "Timeline": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "Link": "",
+            "Key Highlights": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+      }
     
     
 project_experience_extraction_task:
@@ -331,21 +379,26 @@ project_experience_extraction_task:
     The tool will return a large chunk of information. Look into the chunk to find your data. Look at each project closely to understand the tools and technologies, framworks used to create it. Also look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the project experiences, you should include them in the output.
     
   expected_output: >
-    Project Experience:
-    Project name:
-    Role:
-    Timeline:
-    Description: 
-    Technologies, frameworks, and tools Used:
-    Skills: 
-    Link: 
-    Key Highlights: 
-      1.
-      2.
-      3.
-      4.
-    Team size: (if available)
-    Outcomes:
+    in JSON format:
+      {
+        "Project Experience": [
+          {
+            "Project Title": "",
+            "Timeline": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "Link": "",
+            "Key Highlights": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+      }
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
@@ -397,6 +450,71 @@ ats_friendly_skills_task:
         - Missing from Applicant's Profile:
           - item 1
           - item 2
+
+  split_context_of_ats_friendly_skills_task:
+    description: >
+      Split the context provided to you at break point "No Match (from job description):". In your output, you will provide everything before the "No Match (from job description):" as the final output of the task.
+
+      Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, or Soft Skills or any other category you find suitable.
+
+      Here is the context you need to split:
+
+      {ats_friendly_skills}
+
+    expected_output: >
+      In JSON:
+        {
+          "user_skills": {
+            "exact_match_with_job_description": {
+              "Programming Languages": [
+                "item 1",
+                "item 2",
+                ...
+              ],
+              "Frameworks": [
+                "item 1",
+                "item 2",
+                ...
+              ],
+              "Tools": [
+                "item 1",
+                "item 2",
+                ...
+              ],
+              "Soft Skills": [
+                "item 1",
+                "item 2",
+                ...
+              ]
+            },
+
+            "partial_match_with_job_description": {
+              "Programming Languages": [
+                "item 1",
+                "item 2",
+                ...
+              ],
+              "Frameworks": [
+                "item 1",
+                "item 2",
+                ...
+              ],
+              "Tools": [
+                "item 1",
+                "item 2",
+                ...
+              ],
+              "Soft Skills": [
+                "item 1",
+                "item 2",
+                ...
+              ]
+            }
+          }
+        }
+
+        
+        
 
 skills_from_exp_and_project_task:
   description: >
@@ -676,22 +794,6 @@ split_context_of_ats_friendly_keywords_into_experiences:
 #     Compile a list of all publications and presentations, detailing authors, titles, dates, and events where presented.
 #   expected_output: >
 #     A detailed list of publications and presentations, including co-authors, titles, publication dates, and event names.
-
-
-
-# ------------------------ career_planning_analyst_agent ----------------
-
-# objective_summary_task:
-#   description: >
-#     Create a professional summary that highlights key qualifications, objectives, and aligns with the user's career goals.
-#   expected_output: >
-#     A concise professional summary that effectively communicates the user's strengths and career objectives.
-
-# career_aspirations_task:
-#   description: >
-#     Analyze long-term career goals and suggest potential job titles based on detailed user attributes. Evaluate and align these aspirations with current job market opportunities.
-#   expected_output: >
-#     A strategic analysis of career aspirations, including suggested job titles and paths tailored to the user’s skills and goals.
 
 # activities_leadership_task:
 #   description: >

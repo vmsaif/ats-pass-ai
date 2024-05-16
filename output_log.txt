@@ -20332,3 +20332,951 @@ Here's a breakdown of keywords and phrases categorized for resume optimization:
 You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Then ask the provided tool. Also consider the user's personal philosophy and approach to software development when crafting the career objective statement if available.
 2024-05-15 20:45:55: status=started
 agent=Career Objective Architect2024-05-15 20:45:59: task=To contribute my strong problem-solving, communication, and teamwork skills to an immersive internship at Radical AI, where I can rapidly acquire AI/ML expertise and contribute to ethical AI development aligned with the company's mission of Collective Liberation.2024-05-15 20:45:59: status=completed
+agent=Resume Data Extractor2024-05-15 21:10:47: task=You are an AI assistant skilled in structuring resume data. Your ONLY task is to organize the following input data into a JSON object representing a professional resume, EXACTLY as instructed below.  Do NOT deviate from these guidelines:
+## Skills Matched With Job Description:
+
+- **Exact Match**: 
+    - Technical Skills, frameworks, tools:
+        - Python
+        - Problem-Solving
+        - Communication 
+        - Teamwork
+    - Soft Skills:
+        - Communication Skills
+        - Teamwork
+        - Problem-Solving
+        - Critical Thinking
+
+- **Partial Match**: 
+    - Technical Skills, frameworks, tools:
+        - Time Management (Related to the job requirement of working independently and remotely) 
+    - Soft Skills:
+        - Adaptability (Related to the company value of "Resisting Oppression")
+        - Strong work ethic (Related to the company value of "Collective Liberation")
+        -  Ability to prioritize and multitask (Related to the job requirement of working independently and remotely)
+        - Ability to work under pressure (Related to the fast-paced nature of AI development) 
+        - Willingness to learn new things (Related to the constantly evolving field of AI)
+
+- **No Match** (from job description):
+    - Missing from Applicant's Profile:
+        - Artificial Intelligence (AI)
+        - Machine Learning (ML)
+        - Deep Learning
+        - Generative AI
+        - Natural Language Processing (NLP)
+        - Data Analysis
+        - Data Preprocessing
+        - Algorithm Development
+        - Model Development
+        - AI Model Design
+        - TensorFlow 
+        - PyTorch
+        - Open
+You did not provide any awards or recognitions.
+To contribute my strong problem-solving, communication, and teamwork skills to an immersive internship at Radical AI, where I can rapidly acquire AI/ML expertise and contribute to ethical AI development aligned with the company's mission of Collective Liberation.
+Education:
+  Degree: BSc
+  Major: Computer Science
+  University: University of Manitoba
+  University Location: Winnipeg, Manitoba
+  Graduation Date: October 2023
+  GPA: 3.07
+Additional Information:
+  Languages Spoken: Not mentioned
+  Certifications: Not mentioned
+  Professional Affiliations: Not mentioned
+  Other Relevant Details: Not mentioned
+User's Profile:
+ Full Name: Saif Mahmud
+ Phone Number: 204 955 5064
+ Email: msaifofficial@gmail.com
+ LinkedIn Profile: linkedin.com/in/vmsaif
+ Other social media profiles links: None
+ Personal website link: saifmahmud.dev
+ Portfolio Link: None
+ GitHub Profile: None
+ Address: Winnipeg, MB
+ City: Winnipeg
+ State: MB
+ Zip Code: None
+ Country: None
+Personal Traits and Interests:
+  Strengths:
+  Weaknesses:
+  Hobbies:
+  Passions:
+References:
+### Project Experience
+### ATS Pass AI
+Title: Resume Automation Tool
+Timeline: January 2024 - Present
+Technologies, frameworks, and tools used: Python, RAG Search, CrewAI, LangChain, Gemini
+Skills: AI, Multiagent system, Natural Language Processing
+Link: https://github.com/vmsaif/ats-pass-ai
+Key highlights: 
+- Led the development of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency.
+- Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, demonstrating **creative thinking** and **problem-solving skills**.
+- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, contributing to the **democratization of AI** through accessible tools. 
+- Developed scalable **AI development frameworks** to anticipate future needs and adaptations, ensuring long-term project sustainability.
+
+### Blockchain Car Mileage Tracker
+Title: Innovative Project
+Timeline: January 2023 - March 2023
+Technologies, frameworks, and tools used: Blockchain, Docker, Vue.js
+Skills: Blockchain development, Data integrity, Transparency
+Link: https://github.com/vmsaif/blockChainCarMilageTracker
+Key highlights: 
+- Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting **analytical skills** and a commitment to **data integrity**.
+- Developed using blockchain technology to ensure **transparency** and security in data management, aligning with values of **ethical technology**. 
+- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **problem-solving** expertise.
+- Collaborated closely as a team to design, develop, and test the application, emphasizing strong **teamwork** and **collaboration** skills.
+
+### AI Path Finding
+Title: Game Development
+Timeline: July 2023 - September 2023
+Technologies, frameworks, and tools used: Java, Git, CI/CD, A* Algorithm
+Skills: Game development, AI, Pathfinding
+Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+Key highlights: 
+- A Java-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game, showcasing experience with **AI development frameworks**.
+- Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency. 
+- Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.
+- Applied fundamental software development and testing processes to ensure robust application performance.
+
+### Work Experience
+### Programming Mentor 
+Title: Private Tutor
+Institution: -
+Timeline: Winnipeg, Manitoba | February 2023 - December 2023
+Skills: Teaching, Mentoring, Communication, Problem-solving
+Key highlights: 
+- Tutored a student in computer systems and programming, focusing on **Python** and Java, directly aligning with required programming language skills.
+- Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **communication skills**.
+- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical **problem-solving** abilities.
+- Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts.
+This user has no volunteer experiences.
+
+1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "LinkedIn Profile URL", "Personal Website URL", "Address". 2.  **Summary:** Create a 3-4 sentence summary of the user's skills and professional goals based on the input data. 3.  **Skills:** Categorize the skills into two lists: "Technical" and "Soft". 
+    - Ensure no skill is repeated. Combine variations of the same skill (e.g., "Problem-Solving" and "Problem-solving skills").
+    - Carefully determine if a skill is technical (related to tools, technologies) or soft (related to personality, work style). 
+4.  **Projects:** For each project, extract the following fields: "Project Title", "Timeline" (include Start Month Year - End Month Year, "Technologies", "Link", "Key achievements". 
+    - Ensure to include ALL "Key achievements" listed for each project. 
+    - Keep the action verbs at the beginning of each bullet point in "Key achievements".
+5.  **Work:** For each work experience entry, extract these fields: "Job Title", "Company Name", "Location" (City, State), "Timeline" (include Start Month Year - End Month Year AND calculate the Duration in parentheses), "Technologies", "Link", "Key achievements". 
+    - Ensure to include ALL "Key achievements" listed for each work experience. 
+    - Keep the action verbs at the beginning of each bullet point in "Key achievements".
+    - If "Company Name" or "Link" are not available, omit them.  
+6.  **Education:** Extract these fields: "Degree", "Major", "University", "Location" (City, State), "Graduation Date", "GPA".  7.  **Additional:** Include any other relevant sections, like "References," based on the input data.
+**Important:** 
+   - You MUST include ALL data from the input. Do NOT leave out any information. If a field is missing, represent it as an empty string ("").
+   - Do NOT fabricate, invent, or add ANY information that is not explicitly stated in the input data.
+   - Do not infer, assume, or create any details not directly present in the input. 
+   - Focus solely on accurately organizing the given information into a structured JSON format. 
+2024-05-15 21:10:47: status=started
+agent=Resume Data Extractor2024-05-15 21:11:02: task={
+  "Contact Info": {
+    "Full Name": "Saif Mahmud",
+    "Phone": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn Profile URL": "linkedin.com/in/vmsaif",
+    "Personal Website URL": "saifmahmud.dev",
+    "Address": "Winnipeg, MB" 
+  },
+  "Summary": "Contribute my strong problem-solving, communication, and teamwork skills to an immersive internship at Radical AI, where I can rapidly acquire AI/ML expertise and contribute to ethical AI development aligned with the company's mission of Collective Liberation.",
+  "Skills": {
+    "Technical": [
+      "Python", 
+      "RAG Search",
+      "CrewAI",
+      "LangChain",
+      "Gemini",
+      "Java",
+      "Blockchain",
+      "Docker",
+      "Vue.js",
+      "A* Algorithm",
+      "Git",
+      "CI/CD" 
+    ],
+    "Soft": [
+      "Communication Skills",
+      "Teamwork",
+      "Problem-Solving",
+      "Critical Thinking",
+      "Adaptability",
+      "Strong work ethic",
+      "Ability to prioritize and multitask",
+      "Ability to work under pressure",
+      "Willingness to learn new things"
+    ]
+  },
+  "Projects": [
+    {
+      "Project Title": "Resume Automation Tool (ATS Pass AI)",
+      "Timeline": "January 2024 - Present (Ongoing)",
+      "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key achievements": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating creative thinking and problem-solving skills.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, contributing to the democratization of AI through accessible tools.",
+        "Developed scalable AI development frameworks to anticipate future needs and adaptations, ensuring long-term project sustainability."
+      ]
+    },
+    {
+      "Project Title": "Innovative Project (Blockchain Car Mileage Tracker)",
+      "Timeline": "January 2023 - March 2023",
+      "Technologies": "Blockchain, Docker, Vue.js",
+      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+      "Key achievements": [
+        "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting analytical skills and a commitment to data integrity.",
+        "Developed using blockchain technology to ensure transparency and security in data management, aligning with values of ethical technology.",
+        "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating problem-solving expertise.",
+        "Collaborated closely as a team to design, develop, and test the application, emphasizing strong teamwork and collaboration skills."
+      ]
+    },
+    {
+      "Project Title": "Game Development (AI Path Finding)",
+      "Timeline": "July 2023 - September 2023",
+      "Technologies": "Java, Git, CI/CD, A* Algorithm",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key achievements": [
+        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing experience with AI development frameworks.",
+        " Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
+      ]
+    }
+  ],
+  "Work": [
+    {
+      "Job Title": "Private Tutor (Programming Mentor)",
+      "Company Name": "",
+      "Location": "Winnipeg, Manitoba",
+      "Timeline": "February 2023 - December 2023 (10 months)",
+      "Technologies": "Python",
+      "Link": "",
+      "Key achievements": [
+        "Tutored a student in computer systems and programming, focusing on Python and Java, directly aligning with required programming language skills.",
+        "Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective communication skills.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical problem-solving abilities.",
+        "Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts."
+      ]
+    }
+  ],
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "Location": "Winnipeg, Manitoba",
+    "Graduation Date": "October 2023",
+    "GPA": "3.07"
+  },
+  "Additional": {
+    "References": ""
+  }
+}2024-05-15 21:11:02: status=completed
+agent=Resume Data Extractor2024-05-15 21:12:38: task=You are an AI assistant skilled in structuring resume data. Your ONLY task is to organize the following input data into a JSON object representing a professional resume, EXACTLY as instructed below.  Do NOT deviate from these guidelines:
+## Skills Matched With Job Description:
+
+- **Exact Match**: 
+    - Technical Skills, frameworks, tools:
+        - Python
+        - Problem-Solving
+        - Communication 
+        - Teamwork
+    - Soft Skills:
+        - Communication Skills
+        - Teamwork
+        - Problem-Solving
+        - Critical Thinking
+
+- **Partial Match**: 
+    - Technical Skills, frameworks, tools:
+        - Time Management (Related to the job requirement of working independently and remotely) 
+    - Soft Skills:
+        - Adaptability (Related to the company value of "Resisting Oppression")
+        - Strong work ethic (Related to the company value of "Collective Liberation")
+        -  Ability to prioritize and multitask (Related to the job requirement of working independently and remotely)
+        - Ability to work under pressure (Related to the fast-paced nature of AI development) 
+        - Willingness to learn new things (Related to the constantly evolving field of AI)
+
+- **No Match** (from job description):
+    - Missing from Applicant's Profile:
+        - Artificial Intelligence (AI)
+        - Machine Learning (ML)
+        - Deep Learning
+        - Generative AI
+        - Natural Language Processing (NLP)
+        - Data Analysis
+        - Data Preprocessing
+        - Algorithm Development
+        - Model Development
+        - AI Model Design
+        - TensorFlow 
+        - PyTorch
+        - Open
+You did not provide any awards or recognitions.
+To contribute my strong problem-solving, communication, and teamwork skills to an immersive internship at Radical AI, where I can rapidly acquire AI/ML expertise and contribute to ethical AI development aligned with the company's mission of Collective Liberation.
+Education:
+  Degree: BSc
+  Major: Computer Science
+  University: University of Manitoba
+  University Location: Winnipeg, Manitoba
+  Graduation Date: October 2023
+  GPA: 3.07
+Additional Information:
+  Languages Spoken: Not mentioned
+  Certifications: Not mentioned
+  Professional Affiliations: Not mentioned
+  Other Relevant Details: Not mentioned
+User's Profile:
+ Full Name: Saif Mahmud
+ Phone Number: 204 955 5064
+ Email: msaifofficial@gmail.com
+ LinkedIn Profile: linkedin.com/in/vmsaif
+ Other social media profiles links: None
+ Personal website link: saifmahmud.dev
+ Portfolio Link: None
+ GitHub Profile: None
+ Address: Winnipeg, MB
+ City: Winnipeg
+ State: MB
+ Zip Code: None
+ Country: None
+Personal Traits and Interests:
+  Strengths:
+  Weaknesses:
+  Hobbies:
+  Passions:
+References:
+### Project Experience
+### ATS Pass AI
+Title: Resume Automation Tool
+Timeline: January 2024 - Present
+Technologies, frameworks, and tools used: Python, RAG Search, CrewAI, LangChain, Gemini
+Skills: AI, Multiagent system, Natural Language Processing
+Link: https://github.com/vmsaif/ats-pass-ai
+Key highlights: 
+- Led the development of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency.
+- Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, demonstrating **creative thinking** and **problem-solving skills**.
+- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, contributing to the **democratization of AI** through accessible tools. 
+- Developed scalable **AI development frameworks** to anticipate future needs and adaptations, ensuring long-term project sustainability.
+
+### Blockchain Car Mileage Tracker
+Title: Innovative Project
+Timeline: January 2023 - March 2023
+Technologies, frameworks, and tools used: Blockchain, Docker, Vue.js
+Skills: Blockchain development, Data integrity, Transparency
+Link: https://github.com/vmsaif/blockChainCarMilageTracker
+Key highlights: 
+- Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting **analytical skills** and a commitment to **data integrity**.
+- Developed using blockchain technology to ensure **transparency** and security in data management, aligning with values of **ethical technology**. 
+- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **problem-solving** expertise.
+- Collaborated closely as a team to design, develop, and test the application, emphasizing strong **teamwork** and **collaboration** skills.
+
+### AI Path Finding
+Title: Game Development
+Timeline: July 2023 - September 2023
+Technologies, frameworks, and tools used: Java, Git, CI/CD, A* Algorithm
+Skills: Game development, AI, Pathfinding
+Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+Key highlights: 
+- A Java-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game, showcasing experience with **AI development frameworks**.
+- Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency. 
+- Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.
+- Applied fundamental software development and testing processes to ensure robust application performance.
+
+### Work Experience
+### Programming Mentor 
+Title: Private Tutor
+Institution: -
+Timeline: Winnipeg, Manitoba | February 2023 - December 2023
+Skills: Teaching, Mentoring, Communication, Problem-solving
+Key highlights: 
+- Tutored a student in computer systems and programming, focusing on **Python** and Java, directly aligning with required programming language skills.
+- Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **communication skills**.
+- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical **problem-solving** abilities.
+- Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts.
+This user has no volunteer experiences.
+
+1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "LinkedIn Profile URL", "Personal Website URL", "Address". 2.  **Summary:** Write down the summary provided in the input data. 3.  **Skills:** Categorize the skills into two lists: "Technical" and "Soft". 
+    - Ensure no skill is repeated. Combine variations of the same skill (e.g., "Problem-Solving" and "Problem-solving skills").
+    - Carefully determine if a skill is technical (related to tools, technologies) or soft (related to personality, work style). 
+4.  **Projects:** For each project, extract the following fields: "Project Title", "Timeline" (include Start Month Year - End Month Year, "Technologies", "Link", "Key achievements". 
+    - Ensure to include ALL "Key achievements" listed for each project. 
+    - Keep the action verbs at the beginning of each bullet point in "Key achievements".
+5.  **Work:** For each work experience entry, extract these fields: "Job Title", "Company Name", "Location" (City, State), "Timeline" (include Start Month Year - End Month Year AND calculate the Duration in parentheses), "Technologies", "Link", "Key achievements". 
+    - Ensure to include ALL "Key achievements" listed for each work experience. 
+    - Keep the action verbs at the beginning of each bullet point in "Key achievements".
+    - If "Company Name" or "Link" are not available, omit them.  
+6.  **Education:** Extract these fields: "Degree", "Major", "University", "Location" (City, State), "Graduation Date", "GPA".  7.  **Additional:** Include any other relevant sections, like "References," based on the input data.
+**Important:** 
+   - You MUST include ALL data from the input. Do NOT leave out any information. If a field is missing, represent it as an empty string ("").
+   - Do NOT fabricate, invent, or add ANY information that is not explicitly stated in the input data.
+   - Do not infer, assume, or create any details not directly present in the input. 
+   - Focus solely on accurately organizing the given information into a structured JSON format. 
+2024-05-15 21:12:38: status=started
+agent=Resume Data Extractor2024-05-15 21:12:50: task=```json
+{
+  "Contact Info": {
+    "Full Name": "Saif Mahmud",
+    "Phone": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn Profile URL": "linkedin.com/in/vmsaif",
+    "Personal Website URL": "saifmahmud.dev",
+    "Address": "Winnipeg, MB"
+  },
+  "Summary": "To contribute my strong problem-solving, communication, and teamwork skills to an immersive internship at Radical AI, where I can rapidly acquire AI/ML expertise and contribute to ethical AI development aligned with the company's mission of Collective Liberation.",
+  "Skills": {
+    "Technical": [
+      "Python",
+      "Problem-Solving",
+      "AI",
+      "Machine Learning",
+      "Multiagent system",
+      "Natural Language Processing",
+      "Blockchain",
+      "Docker",
+      "Vue.js",
+      "Java",
+      "Git",
+      "CI/CD",
+      "A* Algorithm"
+    ],
+    "Soft": [
+      "Communication",
+      "Teamwork",
+      "Critical Thinking",
+      "Adaptability",
+      "Strong work ethic",
+      "Time Management",
+      "Ability to prioritize and multitask",
+      "Ability to work under pressure",
+      "Willingness to learn new things"
+    ]
+  },
+  "Projects": [
+    {
+      "Project Title": "Resume Automation Tool",
+      "Timeline": "January 2024 - Present",
+      "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key achievements": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating creative thinking and problem-solving skills.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, contributing to the democratization of AI through accessible tools.",
+        "Developed scalable AI development frameworks to anticipate future needs and adaptations, ensuring long-term project sustainability."
+      ]
+    },
+    {
+      "Project Title": "Innovative Project",
+      "Timeline": "January 2023 - March 2023",
+      "Technologies": "Blockchain, Docker, Vue.js",
+      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+      "Key achievements": [
+        "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting analytical skills and a commitment to data integrity.",
+        "Developed using blockchain technology to ensure transparency and security in data management, aligning with values of ethical technology.",
+        "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating problem-solving expertise.",
+        "Collaborated closely as a team to design, develop, and test the application, emphasizing strong teamwork and collaboration skills."
+      ]
+    },
+    {
+      "Project Title": "AI Path Finding",
+      "Timeline": "July 2023 - September 2023",
+      "Technologies": "Java, Git, CI/CD, A* Algorithm",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key achievements": [
+        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing experience with AI development frameworks.",
+        "Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
+      ]
+    }
+  ],
+  "Work": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": "",
+      "Location": "Winnipeg, MB",
+      "Timeline": "February 2023 - December 2023 (10 months)",
+      "Technologies": "Python, Java",
+      "Link": "",
+      "Key achievements": [
+        "Tutored a student in computer systems and programming, focusing on Python and Java, directly aligning with required programming language skills.",
+        "Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective communication skills.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical problem-solving abilities.",
+        "Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts."
+      ]
+    }
+  ],
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "Location": "Winnipeg, Manitoba",
+    "Graduation Date": "October 2023",
+    "GPA": "3.07"
+  },
+  "Additional": {
+    "References": ""
+  }
+}
+```2024-05-15 21:12:50: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 21:59:51: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 21:59:51: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:00:04: task={
+  "Full Name": "Saif Mahmud",
+  "Phone Number": "204 955 5064",
+  "Email": "msarifofficial@gmail.com",
+  "LinkedIn Profile": "linkedin.com/in/vmsaif",
+  "Social media profiles links": null,
+  "Personal website link": "saifmahmud.dev",
+  "Portfolio Link": "https://saifmahmud.dev/",
+  "GitHub Profile": null,
+  "Address": null,
+  "City": "Winnipeg",
+  "State": "MB",
+  "Zip Code": null,
+  "Country": null
+}2024-05-15 22:00:04: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:03:50: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:03:50: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:04:00: task={
+  "Full Name": "Saif Mahmud",
+  "Phone Number": "204 955 5064",
+  "Email": "msaifofficial@gmail.com ",
+  "LinkedIn Profile": "linkedin.com/in/vmsaif",
+  "Social media profiles links": null,
+  "Personal website link": "saifmahmud.dev",
+  "Portfolio Link": "https://saifmahmud.dev/",
+  "GitHub Profile": null,
+  "Address": null,
+  "City": "Winnipeg",
+  "State": "MB",
+  "Zip Code": null,
+  "Country": null
+}2024-05-15 22:04:00: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:05:28: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:05:28: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:05:39: task={
+"full name": "Saif Mahmud",
+"phone number": "204 955 5064",
+"email": "msaifofficial@gmail.com",
+"LinkedIn": "linkedin.com/in/vmsaif",
+"other social media profiles links": null,
+"personal website link": "saifmahmud.dev",
+"portfolio link": null,
+"GitHub profile": null,
+"address": null,
+"city": "Winnipeg",
+"state": "MB",
+"zip code": null,
+"country": null
+}2024-05-15 22:05:39: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:06:25: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:06:25: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:06:40: task={
+ "full_name": "Saif Mahmud",
+ "phone_number": "204 955 5064",
+ "email": "msaifofficial@gmail.com",
+ "linkedin": "linkedin.com/in/vmsaif",
+ "other_social_media_profiles": [],
+ "personal_website": "saifmahmud.dev",
+ "portfolio": null,
+ "github": "https://github.com/vmsaif",
+ "address": null,
+ "city": "Winnipeg",
+ "state": "MB",
+ "zip_code": null,
+ "country": null
+}2024-05-15 22:06:40: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:10:07: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:10:07: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:13:52: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:13:52: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:15:02: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:15:02: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:16:34: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:16:34: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:19:25: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:19:25: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:20:14: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:20:14: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:25:56: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:25:56: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:26:08: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": None,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": None,
+    "GitHub": None,
+    "Address": None,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": None,
+    "Country": None
+  }
+}2024-05-15 22:26:08: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:29:44: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:29:44: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:29:55: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaikofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": null,
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:29:55: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:31:05: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:31:05: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:31:16: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": "",
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": "",
+    "Address": "",
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": "",
+    "Country": ""
+  }
+}2024-05-15 22:31:16: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:31:52: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:31:52: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:32:09: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": null,
+    "GitHub": "https://github.com/vmsaif/cpu_scheduling",
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:32:09: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:33:16: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:33:16: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:33:27: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Email": "msaifofficial@gmail.com",
+    "Phone Number": "204 955 5064",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": null,
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:33:27: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:34:01: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:34:01: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:34:11: task={
+  "Personal Information": {
+    "full name": "Saif Mahmud",
+    "email": "msaifofficial@gmail.com",
+    "phone number": "204 955 5064",
+    "address": null,
+    "city": "Winnipeg",
+    "state": "MB",
+    "zip code": null,
+    "country": null,
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "other social media profiles links": null,
+    "personal website link": "saifmahmud.dev",
+    "portfolio link": "https://saifmahmud.dev/",
+    "GitHub profile": null
+  }
+}2024-05-15 22:34:11: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:35:45: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:35:45: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:35:55: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Email": "msaifofficial@gmail.com",
+    "Phone Number": "204 955 5064",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio Link": "https://saifmahmud.dev/",
+    "GitHub Profile": null,
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:35:55: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:36:23: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+In JSON format, If the value is null, remove the key totally. Do not mention them at all in the output.
+2024-05-15 22:36:23: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:36:38: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msarifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website Link": "saifmahmud.dev",
+    "Portfolio Link": null,
+    "GitHub Profile": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:36:38: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:37:58: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link.
+2024-05-15 22:37:58: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:38:09: task={
+  "Personal Information": {
+    "Name": "Saif Mahmud",
+    "Email": "msaifofficial@gmail.com",
+    "Phone Number": "204 955 5064",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website": "saifmahmud.dev",
+    "GitHub": null,
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:38:09: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:38:46: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name" etc
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure wether the link is a repository link or a profile link.
+2024-05-15 22:38:46: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:39:11: task={
+  "Personal Information": {
+    "name": "Saif Mahmud",
+    "email": "msaifofficial@gmail.com",
+    "phone_number": "204 955 5064",
+    "location": "Winnipeg, MB",
+    "website": "saifmahmud.dev",
+    "LinkedIn": "linkedin.com/in/vmsaif"
+  }
+}2024-05-15 22:39:11: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:39:46: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name" etc
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure wether the link is a repository link or a profile link.
+2024-05-15 22:39:46: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:40:01: task={
+  "Personal Information": {
+    "Name": "Saif Mahmud",
+    "Location": "Winnipeg, MB"
+  }
+}2024-05-15 22:40:01: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:40:28: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure wether the link is a repository link or a profile link.
+2024-05-15 22:40:28: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:41:11: task={
+  "Personal Information": {
+    "Name": "Saif Mahmud",
+    "Email": "msaifofficial@gmail.com",
+    "Phone Number": "204 955 5064",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website": "saifmahmud.dev"
+  }
+}2024-05-15 22:41:11: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:41:43: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure wether the link is a repository link or a profile link.
+2024-05-15 22:41:43: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:42:11: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure wether the link is a repository link or a profile link.
+2024-05-15 22:42:11: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:42:25: task={
+  "Personal Information": {
+    "Name": "Saif Mahmud",
+    "Email": "msarifofficial@gmail.com",
+    "Phone Number": "204 955 5064",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website": "saifmahmud.dev",
+    "GitHub": "github.com/vmsaif/hosting-a-resume-on-gitHub-pages",
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:42:25: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:43:52: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link.
+2024-05-15 22:43:52: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:44:03: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio Link": "https://saifmahmud.dev/",
+    "GitHub": null,
+    "Address": "Winnipeg, MB",
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  },
+  "Other Relevant Details": {
+    "Characteristic": "Good interpersonal skills, communication, teamwork, problem-solving, adaptability, time management, critical thinking, complexity analysis, strong work ethic, and willingness to learn"
+  }
+}2024-05-15 22:44:03: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:44:50: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link.
+2024-05-15 22:44:50: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:45:00: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": null,
+    "GitHub": null,
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:45:00: status=completed
+agent=Multi-Domain Information Organizer
+2024-05-15 22:46:44: task=You are given a tool that retrieves info simply by asking question as a list of strings. Use the tool to extract comprehensive personal details.
+How you should use the tool: argument: "question" : "Give me full name, phone number, email, LinkedIn, other social media profiles links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, country."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link.
+2024-05-15 22:46:44: status=started
+agent=Multi-Domain Information Organizer
+2024-05-15 22:46:53: task={
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": null,
+    "Address": null,
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-05-15 22:46:53: status=completed
