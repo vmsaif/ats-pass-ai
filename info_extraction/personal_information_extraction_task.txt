@@ -1,1 +1,14 @@
-User's Profile:  Full Name: Not mentioned in provided context. Phone Number: Not mentioned in provided context. Email: Not mentioned in provided context. LinkedIn Profile: Not mentioned in provided context. Other social media profiles links: Not mentioned in provided context. Personal website link: https://saifmahmud.dev/ Portfolio Link: https://saifmahmud.dev/ GitHub Profile: https://github.com/vmsaif Address: Not mentioned in provided context. City: Not mentioned in provided context. State: Not mentioned in provided context. Zip Code: Not mentioned in provided context. Country: Not mentioned in provided context.
+User's Profile:
+ Full Name: Saif Mahmud
+ Phone Number: 204 955 5064
+ Email: msaifofficial@gmail.com
+ LinkedIn Profile: linkedin.com/in/vmsaif
+ Other social media profiles links: None
+ Personal website link: saifmahmud.dev
+ Portfolio Link: None
+ GitHub Profile: None
+ Address: Winnipeg, MB
+ City: Winnipeg
+ State: MB
+ Zip Code: None
+ Country: None

@@ -1,0 +1,33 @@
+Project Experience
+    ATS Pass AI
+    Blockchain Car Mileage Tracker
+    AI Path Finding
+
+  Work Experience
+    Programming Mentor 
+
+## Explanation for Not Choosing Other Experiences (One by one):
+
+    1. Recursive Ray Tracing: Although relevant to software development, it lacks direct alignment with AI, machine learning, or the specific technologies highlighted in the job description for Radical AI.
+    
+    2. Bank Account System: This project showcases object-oriented programming skills but doesn't demonstrate the AI-specific skills or technologies sought by Radical AI.
+    
+    3. Hosting a Resume on GitHub Pages: While this project highlights technical documentation and web development skills, it lacks relevance to AI, machine learning, or the core technologies emphasized in the job description.
+    
+    4. ELF Binary Analysis: This experience demonstrates system analysis and debugging skills, but it's not directly relevant to AI, machine learning, or the specific tools and technologies required for the AI Engineer role.
+    
+    5. OpenGL Sphere Lighting:  While showcasing 3D graphics and software development skills, it doesn't align with the AI, machine learning, or specific technology requirements of the job description.
+    
+    6. Reversible Learning App: This project is a duplicate entry. The details are already captured in the chosen "Work Experience: Reversible Learning" entry. 
+    
+    7. Connect 4 Game: This project demonstrates game development and AI decision-making, but it lacks the depth of AI, machine learning, and specific technologies desired by Radical AI.
+    
+    8. TCP Chat Application: This project showcases network programming and software development skills but doesn't directly align with the AI, machine learning, or specific technology requirements for the role.
+    
+    9. Data Visualization with R: While relevant to data analysis, this project lacks the focus on AI, machine learning, and the specific tools and frameworks outlined in the job description.
+    
+    10. Portfolio Website:  This project highlights web development and front-end skills, but it's not directly relevant to AI, machine learning, or the specific technologies sought by Radical AI.
+    
+    11. CPU Scheduling: This project showcases system programming and C skills, but it lacks direct relevance to AI, machine learning, or the core technologies emphasized in the job description. 
+    
+    12. Go-Back-N Protocol Simulation: This project demonstrates networking and data visualization skills, but it doesn't align with the AI, machine learning, or specific technology requirements outlined in the job description.

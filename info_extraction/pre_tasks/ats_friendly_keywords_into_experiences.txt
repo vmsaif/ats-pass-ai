@@ -1,0 +1,112 @@
+```
+### Project Experience
+### ATS Pass AI
+Title: Resume Automation Tool
+Timeline: January 2024 - Present
+Technologies, frameworks, and tools used: Python, RAG Search, CrewAI, LangChain, Gemini
+Skills: AI, Multiagent system, Natural Language Processing
+Link: https://github.com/vmsaif/ats-pass-ai
+Key highlights: 
+- Led the development of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency.
+- Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, demonstrating **creative thinking** and **problem-solving skills**.
+- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, contributing to the **democratization of AI** through accessible tools. 
+- Developed scalable **AI development frameworks** to anticipate future needs and adaptations, ensuring long-term project sustainability.
+
+### Blockchain Car Mileage Tracker
+Title: Innovative Project
+Timeline: January 2023 - March 2023
+Technologies, frameworks, and tools used: Blockchain, Docker, Vue.js
+Skills: Blockchain development, Data integrity, Transparency
+Link: https://github.com/vmsaif/blockChainCarMilageTracker
+Key highlights: 
+- Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting **analytical skills** and a commitment to **data integrity**.
+- Developed using blockchain technology to ensure **transparency** and security in data management, aligning with values of **ethical technology**. 
+- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **problem-solving** expertise.
+- Collaborated closely as a team to design, develop, and test the application, emphasizing strong **teamwork** and **collaboration** skills.
+
+### AI Path Finding
+Title: Game Development
+Timeline: July 2023 - September 2023
+Technologies, frameworks, and tools used: Java, Git, CI/CD, A* Algorithm
+Skills: Game development, AI, Pathfinding
+Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+Key highlights: 
+- A Java-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game, showcasing experience with **AI development frameworks**.
+- Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency. 
+- Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.
+- Applied fundamental software development and testing processes to ensure robust application performance.
+
+### Work Experience
+### Programming Mentor 
+Title: Private Tutor
+Institution: -
+Timeline: Winnipeg, Manitoba | February 2023 - December 2023
+Skills: Teaching, Mentoring, Communication, Problem-solving
+Key highlights: 
+- Tutored a student in computer systems and programming, focusing on **Python** and Java, directly aligning with required programming language skills.
+- Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **communication skills**.
+- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical **problem-solving** abilities.
+- Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts.
+
+report_on_changes:
+- **Keyword Changes:** 
+    - Original Sentence: "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency."
+    - Revised Sentence:  "Led the development of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency."
+    - Keywords Added: "Gemini"
+    - Rationale: The job description emphasizes Gemini as one of the essential AI tools. By highlighting this specific keyword, I aim to showcase the direct relevance of the applicant's experience with this technology.
+- **Keyword Changes:** 
+    - Original Sentence: "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes."
+    - Revised Sentence:  "Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, demonstrating **creative thinking** and **problem-solving skills**."
+    - Keywords Added: "AI models", "creative thinking", "problem-solving skills"
+    - Rationale: The job description strongly emphasizes AI models as a core skill.  Adding "creative thinking" and "problem-solving skills" strengthens the connection to the company's values and the internship's focus on innovation and problem-solving within the AI domain.
+- **Keyword Changes:** 
+    - Original Sentence: "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS."
+    - Revised Sentence:  "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, contributing to the **democratization of AI** through accessible tools."
+    - Keywords Added: "ATS", "democratization of AI"
+    - Rationale:  The job description highlights the importance of understanding and working with ATS. Adding "democratization of AI" aligns with the company's mission and values by emphasizing accessibility and broader social impact within the field of AI. 
+- **Keyword Changes:** 
+    - Original Sentence: "Developed scalable architecture to anticipate future needs and adaptations, ensuring long-term project sustainability."
+    - Revised Sentence:  "Developed scalable **AI development frameworks** to anticipate future needs and adaptations, ensuring long-term project sustainability."
+    - Keywords Added: "AI development frameworks" 
+    - Rationale: The job description specifically mentions "AI development frameworks." Integrating this keyword demonstrates the applicant's experience in designing and implementing scalable AI solutions.
+- **Keyword Changes:** 
+    - Original Sentence: "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes."
+    - Revised Sentence:  "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting **analytical skills** and a commitment to **data integrity**."
+    - Keywords Added: "analytical skills", "data integrity"
+    - Rationale: "Analytical skills" are highly emphasized in the job description. Including "data integrity" reflects the project's focus on secure and reliable data management, which aligns with the company's emphasis on ethical technology.
+- **Keyword Changes:** 
+    - Original Sentence: "Developed using blockchain technology to ensure transparency and security in data management."
+    - Revised Sentence:  "Developed using blockchain technology to ensure **transparency** and security in data management, aligning with values of **ethical technology**."
+    - Keywords Added: "transparency", "ethical technology"
+    - Rationale: "Transparency" is implied in the job description's focus on ethical AI. Adding "ethical technology" further connects the project with the company's core values and mission. 
+- **Keyword Changes:** 
+    - Original Sentence: "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating problem-solving expertise."
+    - Revised Sentence:  "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **problem-solving** expertise."
+    - Keywords Added: "problem-solving"
+    - Rationale:  This addition aligns with the job description's emphasis on problem-solving skills. 
+- **Keyword Changes:** 
+    - Original Sentence: "Collaborated closely as a team to design, develop, and test the application, emphasizing strong teamwork and collaboration skills."
+    - Revised Sentence:  "Collaborated closely as a team to design, develop, and test the application, emphasizing strong **teamwork** and **collaboration** skills."
+    - Keywords Added: "teamwork", "collaboration"
+    - Rationale: The job description explicitly values "teamwork" and "collaboration." These keywords highlight the applicant's ability to work effectively in a team environment, which is important for a virtual internship. 
+- **Keyword Changes:** 
+    - Original Sentence: "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing experience with AI development frameworks."
+    - Revised Sentence:  "A Java-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game, showcasing experience with **AI development frameworks**."
+    - Keywords Added: "algorithm", "AI", "AI development frameworks"
+    - Rationale: The keywords "algorithm" and "AI" are directly relevant to the technical skills emphasized in the job description. Adding "AI development frameworks" strengthens the connection to the applicant's ability to apply AI principles in practical applications.
+- **Keyword Changes:** 
+    - Original Sentence: "Tutored a student in computer systems and programming, focusing on Python and Java."
+    - Revised Sentence:  "Tutored a student in computer systems and programming, focusing on **Python** and Java, directly aligning with required programming language skills."
+    - Keywords Added: "Python"
+    - Rationale:  "Python" is listed as a required skill in the job description. Highlighting this keyword demonstrates the applicant's proficiency in this essential programming language. 
+- **Keyword Changes:** 
+    - Original Sentence: "Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective communication skills."
+    - Revised Sentence:  "Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **communication skills**."
+    - Keywords Added: "communication skills"
+    - Rationale: The job description mentions "communication skills" as a key requirement. This addition emphasizes the applicant's ability to communicate effectively, which is essential for a virtual internship. 
+- **Keyword Changes:** 
+    - Original Sentence: "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical problem-solving abilities."
+    - Revised Sentence:  "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical **problem-solving** abilities."
+    - Keywords Added: "problem-solving"
+    - Rationale:  The job description values problem-solving skills. By including this keyword, I aim to highlight the applicant's ability to apply technical knowledge to solve real-world problems. 
+```

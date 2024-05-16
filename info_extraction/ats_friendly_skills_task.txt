@@ -1,0 +1,39 @@
+## Skills Matched With Job Description:
+
+- **Exact Match**: 
+    - Technical Skills, frameworks, tools:
+        - Python
+        - Problem-Solving
+        - Communication 
+        - Teamwork
+    - Soft Skills:
+        - Communication Skills
+        - Teamwork
+        - Problem-Solving
+        - Critical Thinking
+
+- **Partial Match**: 
+    - Technical Skills, frameworks, tools:
+        - Time Management (Related to the job requirement of working independently and remotely) 
+    - Soft Skills:
+        - Adaptability (Related to the company value of "Resisting Oppression")
+        - Strong work ethic (Related to the company value of "Collective Liberation")
+        -  Ability to prioritize and multitask (Related to the job requirement of working independently and remotely)
+        - Ability to work under pressure (Related to the fast-paced nature of AI development) 
+        - Willingness to learn new things (Related to the constantly evolving field of AI)
+
+- **No Match** (from job description):
+    - Missing from Applicant's Profile:
+        - Artificial Intelligence (AI)
+        - Machine Learning (ML)
+        - Deep Learning
+        - Generative AI
+        - Natural Language Processing (NLP)
+        - Data Analysis
+        - Data Preprocessing
+        - Algorithm Development
+        - Model Development
+        - AI Model Design
+        - TensorFlow 
+        - PyTorch
+        - Open

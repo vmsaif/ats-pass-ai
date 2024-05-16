@@ -1,0 +1,86 @@
+Combined Skills List:
+  Technologies:
+    - Python
+    - Java
+    - Android Studio
+    - HSQLDB
+    - JUnit
+    - RAG Search
+    - CrewAi
+    - LangChain
+    - Gemini
+    - Blockchain
+    - Docker
+    - Vue.js
+    - A* Algorithm
+    - Git
+    - CI/CD
+    - OpenGL
+    - C++
+    - File I/O
+    - Markdown
+    - Jekyll
+    - Git Pages
+    - C Programming
+    - glutSolidSphere
+    - SQL 
+    - Android
+    - TCP/IP
+    - Multithreading
+    - Network
+    - R
+    - React
+    - Styled-Components
+    - GitHub Actions
+    - Apollo
+    - Bash
+    - matplotlib
+    - CPU Scheduling
+    - Go-Back-N Protocol
+  Frameworks:
+    - React
+    - Angular
+    - Spring Boot
+  Skills:
+    - Mentoring
+    - Communication
+    - Adaptability
+    - Problem Solving
+    - Team Player
+    - SQL
+    - Android Development
+    - AI
+    - Software Development
+    - Data Analysis
+    - NLP
+    - Blockchain Development
+    - Data Security
+    - Game Development
+    - Agile Development
+    - 3D Graphics
+    - Computer Graphics
+    - Object-Oriented Programming
+    - Data Structures
+    - Technical Documentation
+    - Web Development
+    - Open Source
+    - Debugging
+    - System Analysis
+    - Documentation
+    - Lighting
+    - UI/UX Design
+    - Java
+    - Network Programming
+    - Data Visualization
+    - Statistical Analysis
+    - R Programming
+    - Front-End Development
+    - System Programming
+    - Python
+    - Networking
+    - Data Visualization
+    - Protocol Analysis
+  Soft Skills:
+    - Communication
+    - Leadership
+    - Teamwork

@@ -4,4 +4,4 @@ Education:
   University: University of Manitoba
   University Location: Winnipeg, Manitoba
   Graduation Date: October 2023
-  Honors/Distinctions: GPA: 3.07
+  GPA: 3.07

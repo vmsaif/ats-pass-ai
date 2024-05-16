@@ -1,0 +1,19 @@
+Work Experience:
+1.
+Company name: N/A
+Role: Programming Mentor
+Description: Involved in private tutoring services, specializing in Python and Java. Developed personalized teaching methods to align with the student's learning style. Facilitated hands-on sessions for software installation, debugging techniques, and general computer operations. Aided in the development of a strong understanding of computer systems and introductory programming.
+Timeline: February 2023 - December 2023
+Technologies, frameworks, and tools Used: Python, Java
+Skills: Mentoring, Communication, Adaptability, Problem Solving
+Link: N/A
+Key Highlights: Tailored teaching to accommodate the student's learning style. 
+2.
+Company name: N/A
+Role: N/A
+Description: Contributed to the development of "Reversible Learning", an Android application designed to enhance study habits. Utilized Android Studio and HSQLDB, with a focus on UI/UX design and robust database management. Implemented JUnit for comprehensive unit and integration testing, leading to a 25% decrease in post-release bugs. Demonstrated adaptability and effective communication by working within a team environment to meet project deadlines and objectives.
+Timeline: January 2021 - April 2021
+Technologies, frameworks, and tools Used: Android Studio, HSQLDB, JUnit, Java
+Skills: Team Player, Adaptability, Communication, SQL, Android Development
+Link: https://github.com/vmsaif/reversibleLearning
+Key Highlights: Collaborated effectively within a team to achieve project goals.

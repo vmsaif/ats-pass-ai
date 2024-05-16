@@ -28,7 +28,7 @@ class ResumeCrew:
 	tasks_config = tasks_config_path # because tasks_config somehow getting recognized as a dictionary, not a simple string path.
 	
 	# Job Keywords extraction task file path
-	jd_keyword_extraction_file_path = 'info_extraction/job_description_extracted_keywords.txt' # do not use it inside file_path dictionary below.
+	jd_keyword_extraction_file_path = 'info_extraction/jd_keyword_extraction/job_description_extracted_keywords.txt' # do not use it inside file_path dictionary below.
 
 	# Info extraction task file paths
 	personal_information_extraction_task_file_path = 'info_extraction/personal_information_extraction_task.txt'
@@ -39,37 +39,54 @@ class ResumeCrew:
 	personal_traits_interests_extraction_task_file_path = 'info_extraction/personal_traits_interests_extraction_task.txt'
 	miscellaneous_extraction_task_file_path = 'info_extraction/miscellaneous_extraction_task.txt'
 
-	work_experience_extraction_task_file_path = 'info_extraction/work_experience_extraction_task.txt'
-	project_experience_extraction_task_file_path = 'info_extraction/project_experience_extraction_task.txt'
-	skills_from_exp_and_project_file_path = 'info_extraction/skills_from_exp_and_project.txt'
-	all_togather_skills_extraction_task_file_path = 'info_extraction/all_togather_skills_extraction_task.txt'
-
-
+	work_experience_extraction_task_file_path = 'info_extraction/pre_tasks/work_experience_extraction_task.txt'
+	project_experience_extraction_task_file_path = 'info_extraction/pre_tasks/project_experience_extraction_task.txt'
+	skills_from_exp_and_project_file_path = 'info_extraction/pre_tasks/skills_from_exp_and_project.txt'
+	all_togather_skills_extraction_task_file_path = 'info_extraction/pre_tasks/all_togather_skills_extraction_task.txt'
+	
 	# Cross Checked with JD keywords
-	skills_cross_check_task_file_path = 'info_extraction/relevent_to_jd/skills_cross_check_task.txt'
-	experience_choosing_task_file_path = 'info_extraction/relevent_to_jd/experience_choosing_task.txt'
-	gather_info_of_choosen_experiences_file_path = 'info_extraction/relevent_to_jd/gather_info_of_choosen_experiences.txt'
-	include_ats_keywords_into_experiences_file_path = 'info_extraction/relevent_to_jd/include_ats_keywords_into_experiences.txt'
+	ats_friendly_skills_task_file_path = 'info_extraction/ats_friendly_skills_task.txt'
+	experience_choosing_task_file_path = 'info_extraction/pre_tasks/experience_choosing_task.txt'
+	split_context_of_experience_choosing_task_file_path = 'info_extraction/pre_tasks/split_context_of_experience_choosing_task.txt'
+	gather_info_of_choosen_experiences_file_path = 'info_extraction/pre_tasks/gather_info_of_choosen_experiences.txt'
+	ats_friendly_keywords_into_experiences_file_path = 'info_extraction/pre_tasks/ats_friendly_keywords_into_experiences.txt'
+	split_context_of_ats_friendly_keywords_into_experiences_file_path = 'info_extraction/split_context_of_ats_friendly_keywords_into_experiences.txt'
+	career_objective_task_file_path = 'info_extraction/career_objective_task.txt'
+
+
+	# finalized_resume
+	resume_json_file_path = 'info_extraction/draft_output/resume_json.txt'
+	resume_compilation_task_file_path = 'info_extraction/draft_output/resume_compilation.txt'
 
 	# Dictionary to store file paths
 	file_paths = {
-		# "personal_information_extraction_task": personal_information_extraction_task_file_path,
-		# "education_extraction_task": education_extraction_task_file_path,
+
 		# "volunteer_work_extraction_task": volunteer_work_extraction_task_file_path,
 		# "awards_recognitions_extraction_task": awards_recognitions_extraction_task_file_path,
 		# "references_extraction_task": references_extraction_task_file_path,
 		# "personal_traits_interests_extraction_task": personal_traits_interests_extraction_task_file_path,
 		# "miscellaneous_extraction_task": miscellaneous_extraction_task_file_path,
 
-		# "all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
-
-		# "skills_from_exp_and_project": skills_from_exp_and_project_file_path,
-		# "skills_cross_check_task": skills_cross_check_task_file_path,
+		# "personal_information_extraction_task": personal_information_extraction_task_file_path,
+		# "education_extraction_task": education_extraction_task_file_path,
+		
+		
 		# "work_experience_extraction_task": work_experience_extraction_task_file_path,
 		# "project_experience_extraction_task": project_experience_extraction_task_file_path,
+		# "skills_from_exp_and_project": skills_from_exp_and_project_file_path,
+		# "all_togather_skills_extraction_task": all_togather_skills_extraction_task_file_path,
+		
+		# "ats_friendly_skills_task": ats_friendly_skills_task_file_path,
 		# "experience_choosing_task": experience_choosing_task_file_path,
+
+		# "split_context_of_experience_choosing_task": split_context_of_experience_choosing_task_file_path,
+
 		# "gather_info_of_choosen_experiences": gather_info_of_choosen_experiences_file_path,
-		"include_ats_keywords_into_experiences": include_ats_keywords_into_experiences_file_path,
+		# "include_ats_keywords_into_experiences": ats_friendly_keywords_into_experiences_file_path,
+		# "split_context_of_ats_friendly_keywords_into_experiences": split_context_of_ats_friendly_keywords_into_experiences_file_path,
+		"career_objective_task": career_objective_task_file_path,
+		# "resume_compilation_task": resume_json_file_path,
+		# "resume_compilation_task": resume_compilation_task_file_path,
 	}
 
 	# Define the tools
@@ -77,18 +94,24 @@ class ResumeCrew:
 	jd_extr_keywords_reader = CrewAIFileReadTool.create(jd_keyword_extraction_file_path)
 	user_info_organized_reader = CrewAIFileReadTool.create('info_files/user_info_organized.txt')
 
-	genAILarge = ChatVertexAI(
-		model="gemini-1.5-pro-preview-0409",
-		verbose=True,
-		temperature=1.0,
-	)
-
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		verbose=True,
 		max_output_tokens=6000,
 		temperature=1.0,
 		# cache=True
+	)
+
+	genAILarge = ChatVertexAI(
+		model="gemini-1.5-pro-preview-0409",
+		verbose=True,
+		temperature=1.0,
+	)
+
+	llama3_70b = ChatGroq(
+		model_name="llama3-70b-8192",
+		# verbose=True,
+		temperature=1.5,
 	)
 
 	# @task
@@ -154,15 +177,15 @@ class ResumeCrew:
 	# 		tools=[self.queryTool],
 	# 	)
 
-	# @agent
-	# def generalist_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["generalist_agent"],
-	# 		verbose=True,
-	# 		allow_delegation=False,
-	# 		cache=True,
-	# 		llm=self.genAI,
-	# 	)
+	@agent
+	def generalist_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["generalist_agent"],
+			verbose=True,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAI,
+		)
 	
 	# @task
 	# def work_experience_extraction_task(self):
@@ -215,30 +238,26 @@ class ResumeCrew:
 
 
 
-	# genAILarge = ChatVertexAI(
-	# 	model="gemini-1.5-pro-preview-0409",
-	# 	verbose=True,
-	# 	temperature=1.0,
-	# )
 
-	# @agent
-	# def cross_match_evaluator_with_job_description_agent (self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-	# 		max_rpm=2,
-	# 		verbose=True,
-	# 		allow_delegation=False,
-	# 		# cache=True,
-	# 		llm=self.genAILarge,
-	# 	)
+
+	@agent
+	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
+		return Agent(
+			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
+			max_rpm=2,
+			verbose=True,
+			allow_delegation=False,
+			# cache=True,
+			llm=self.genAILarge,
+		)
 	
 	# @task
-	# def skills_cross_check_task(self):
+	# def ats_friendly_skills_task(self):
 	# 	# Load YAML file
 	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
 	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['skills_cross_check_task']['description']
-	# 		expected_output = yaml_data['skills_cross_check_task']['expected_output']
+	# 		description_value = yaml_data['ats_friendly_skills_task']['description']
+	# 		expected_output = yaml_data['ats_friendly_skills_task']['expected_output']
 
 	# 	src_1 = self.load_txt_files(self.jd_keyword_extraction_file_path)
 	# 	task_description = description_value.format(src_1 = src_1)
@@ -247,13 +266,13 @@ class ResumeCrew:
 	# 		description=task_description,
 	# 		expected_output=expected_output,
 	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
-	# 		context=[self.skills_extraction_task()],
-	# 		output_file=self.skills_cross_check_task_file_path,
+	# 		# context=[self.skills_extraction_task()],
+	# 		output_file=self.ats_friendly_skills_task_file_path,
 	# 	)
 
 	# ----------------- End of Skills Match Identification -----------------
 
-	# ----------------- Choose Work/Project Experience -----------------
+	# # ----------------- Choose Work/Project Experience -----------------
 	# @task
 	# def experience_choosing_task(self):
 	# 	# Load YAML file
@@ -278,6 +297,28 @@ class ResumeCrew:
 	# 	)
 	
 	# @task
+	# def split_context_of_experience_choosing_task (self):
+
+	# TODO: Instead making agent doing this split, use a tool to split the context.
+
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['split_context_of_experience_choosing_task']['description']
+	# 		expected_output = yaml_data['split_context_of_experience_choosing_task']['expected_output']
+
+	# 	experience_choosen = self.load_txt_files(self.experience_choosing_task_file_path)
+	# 	task_description = description_value.format(experience_choosen = experience_choosen)
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.split_context_of_experience_choosing_task_file_path,
+	# 	)
+
+	
+	# @task
 	# def gather_info_of_choosen_experiences(self):
 	# 	# Load YAML file
 	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
@@ -285,9 +326,9 @@ class ResumeCrew:
 	# 		description_value = yaml_data['gather_info_of_choosen_experiences']['description']
 	# 		expected_output = yaml_data['gather_info_of_choosen_experiences']['expected_output']
 
-	# 	experience_choosen = self.load_txt_files(self.experience_choosing_task_file_path)
+	# 	split_context_experience_choosen = self.load_txt_files(self.split_context_of_experience_choosing_task_file_path)
 	# 	user_info_organized_data = self.load_txt_files('info_files/user_info_organized.txt')
-	# 	task_description = description_value.format(experience_choosen = experience_choosen, user_info_organized_data = user_info_organized_data)
+	# 	task_description = description_value.format(split_context_experience_choosen = split_context_experience_choosen, user_info_organized_data = user_info_organized_data)
 
 	# 	return Task(
 	# 		description=task_description,
@@ -296,17 +337,11 @@ class ResumeCrew:
 	# 		# context=[self.experience_choosing_task()],
 	# 		output_file=self.gather_info_of_choosen_experiences_file_path,
 	# 	)
-	
-
-	# ----------------- End of Choose Work/Project Experience -----------------
+	# # ----------------- End of Choose Work/Project Experience -----------------
 
 	# ----------------- Include ATS Keywords into Experiences -----------------
 
-	llama3_70b = ChatGroq(
-		model_name="llama3-70b-8192",
-		# verbose=True,
-		temperature=1.5,
-	)
+
 
 	@agent
 	def ats_keyword_integration_agent(self) -> Agent:
@@ -333,24 +368,154 @@ class ResumeCrew:
 		
 
 
+	# @task
+	# def ats_friendly_keywords_into_experiences_task(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['ats_friendly_keywords_into_experiences']['description']
+	# 		expected_output = yaml_data['ats_friendly_keywords_into_experiences']['expected_output']
+
+	# 	chosen_experiences = self.load_txt_files(self.gather_info_of_choosen_experiences_file_path)
+	# 	jd_keywords = self.load_txt_files(self.jd_keyword_extraction_file_path)
+	# 	task_description = description_value.format(chosen_experiences = chosen_experiences, jd_keywords = jd_keywords)
+		
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.ats_keyword_integration_agent(),
+	# 		# context=[self.experience_choosing_task()],
+	# 		output_file=self.ats_friendly_keywords_into_experiences_file_path,
+	# 	)
+
+	# @task
+	# def split_context_of_ats_friendly_keywords_into_experiences(self):
+	# 	# Load YAML file
+
+	# 	# TODO: Instead making agent doing this split, use a tool to split the context.
+
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['split_context_of_ats_friendly_keywords_into_experiences']['description']
+	# 		expected_output = yaml_data['split_context_of_ats_friendly_keywords_into_experiences']['expected_output']
+
+	# 	ats_friendly_experiences = self.load_txt_files(self.ats_friendly_keywords_into_experiences_file_path)
+	# 	task_description = description_value.format(ats_friendly_experiences = ats_friendly_experiences)
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.generalist_agent(),
+	# 		output_file=self.split_context_of_ats_friendly_keywords_into_experiences_file_path,
+	# 	)
+	
+	
+
+	@agent
+	def resume_structuring_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["resume_structuring_agent"],
+			verbose=True,
+			allow_delegation=False,
+			cache=True,
+			# llm=self.genAILarge,
+			llm=self.llama3_70b,
+			system_template="""
+			<|begin_of_text|>
+			<|start_header_id|>system<|end_header_id|>
+
+			{{ .System }}<|eot_id|>""",
+			prompt_template="""<|start_header_id|>user<|end_header_id|>
+
+			{{ .Prompt }}<|eot_id|>""",
+			response_template="""<|start_header_id|>assistant<|end_header_id|>
+
+			{{ .Response }}<|eot_id|>
+			""",
+		)
+
+
+	# @task
+	# def resume_structuring_task(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['resume_structuring_task']['description']
+	# 		expected_output = yaml_data['resume_structuring_task']['expected_output']
+
+	# 	resume_data = self.load_all_txt_files('info_extraction')
+	# 	task_description = description_value.format(resume_data = resume_data)
+		
+	# 	print("---------------------------------")
+	# 	print(task_description)
+	# 	print("---------------------------------")
+
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.resume_structuring_agent(),
+	# 		output_file=self.resume_json_file_path,
+	# 	)
+
+		
+	@agent
+	def resume_compilation_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["resume_compilation_agent"],
+			verbose=True,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAILarge,
+		)
+	
+	# @task
+	# def resume_compilation_task(self):
+	# 	# Load YAML file
+	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+	# 		yaml_data = yaml.safe_load(file)
+	# 		description_value = yaml_data['resume_compilation_task']['description']
+	# 		expected_output = yaml_data['resume_compilation_task']['expected_output']
+
+	# 	resume_data_in_json = self.load_txt_files(self.resume_json_file_path)
+	# 	task_description = description_value.format(resume_data_in_json = resume_data_in_json)
+		
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.resume_compilation_agent(),
+	# 		output_file=self.resume_compilation_task_file_path,
+	# 	)
+
+	@agent
+	def career_objective_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["career_objective_agent"],
+			verbose=True,
+			allow_delegation=False,
+			cache=True,
+			llm=self.genAILarge,
+		)
+	
 	@task
-	def include_ats_keywords_into_experiences(self):
+	def career_objective_task(self):
 		# Load YAML file
 		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
 			yaml_data = yaml.safe_load(file)
-			description_value = yaml_data['ats_friendly_experience_enhancement_task']['description']
-			expected_output = yaml_data['ats_friendly_experience_enhancement_task']['expected_output']
+			description_value = yaml_data['career_objective_task']['description']
+			expected_output = yaml_data['career_objective_task']['expected_output']
 
-		chosen_experiences = self.load_txt_files(self.gather_info_of_choosen_experiences_file_path)
-		jd_keywords = self.load_txt_files(self.jd_keyword_extraction_file_path)
-		task_description = description_value.format(chosen_experiences = chosen_experiences, jd_keywords = jd_keywords)
+		skills = self.load_txt_files(self.ats_friendly_skills_task_file_path)
+		job_description = self.load_txt_files(self.jd_keyword_extraction_file_path)
 
+		task_description = description_value.format(skills = skills, job_description = job_description)
+		
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
-			agent=self.ats_keyword_integration_agent(),
-			# context=[self.experience_choosing_task()],
-			output_file=self.include_ats_keywords_into_experiences_file_path,
+			agent=self.career_objective_agent(),
+			output_file=self.career_objective_task_file_path,
 		)
 
 	@crew
@@ -379,7 +544,8 @@ class ResumeCrew:
 					"task_type": "retrieval_document",
 					"title": "Embeddings for Embedchain"
 				}
-			}
+			},
+			output_log_file='output_log.txt',
 		)
 	
 	def create_files(self):
@@ -395,4 +561,18 @@ class ResumeCrew:
 		with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
 			return file.read()
 
+	def load_all_txt_files(self, folder_path) -> str:
+
+		# Initialize the text
+		all_text = ""
+
+		for filename in os.listdir(folder_path):
+			if filename.endswith('.txt'):
+				# Construct full file path
+				file_path = os.path.join(folder_path, filename)
+				# Open the file and read its contents
+				with open(file_path, 'r', encoding='utf-8') as file:
+					all_text += file.read() + "\n"  # Append text with a newline to separate files
+
+		return all_text
 

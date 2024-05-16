@@ -1,0 +1,120 @@
+Project Experience:
+ 1.
+Project name: ATS Pass AI
+Role: Lead Developer
+Timeline: January 2024 - Present
+Description: Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations.
+Technologies, frameworks, and tools Used: Python, RAG Search, CrewAi, LangChain, Gemini
+Skills: AI, Software Development, Data Analysis, NLP
+
+ 2.
+Project name: Blockchain Car Mileage Tracker
+Role: Co-Developer
+Timeline: January 2023 - March 2023
+Description: Co-developed a blockchain application to securely track and verify vehicle mileage for insurance purposes. Developed using blockchain technology. Enhanced data integrity and transparency. Solved a real-world problem by crafting a smart contract for tamper-proof mileage recording. Collaborated closely as a team to design, develop, and test the application.
+Technologies, frameworks, and tools Used: Blockchain, Docker, Vue.js
+Skills: Blockchain Development, Software Development, Data Security
+
+ 3.
+Project name: AI Path Finding
+Role: Developer
+Timeline: July 2023 - September 2023
+Description: Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game. Utilized Git for version control. Utilized CI/CD practices, resulting in a 50% reduction in deployment time. Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm. Applied fundamental software development and testing processes to ensure robust application performance.
+Technologies, frameworks, and tools Used: Java, A* Algorithm, Git, CI/CD
+Skills: Game Development, AI, Software Development, Agile Development
+
+ 4.
+Project name: Recursive Ray Tracing
+Role: Developer
+Timeline: May 2023 - July 2023
+Description: Implemented a complex 3D graphics rendering technique using OpenGL. Applied geometry and generic math skills to calculate light paths and surface interactions.
+Technologies, frameworks, and tools Used: OpenGL, C++
+Skills: 3D Graphics, Software Development, Computer Graphics
+
+ 5.
+Project name: Bank Account System
+Role: Developer
+Timeline:
+Description: Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism. Developed scalable Java applications, optimizing process efficiency by 30%. Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling. Facilitated open-source collaboration with documentation.
+Technologies, frameworks, and tools Used: Java, File I/O
+Skills: Java, Software Development, Object-Oriented Programming, Data Structures
+
+ 6.
+Project name: Hosting a Resume on GitHub Pages
+Role: Developer
+Timeline: April 2023 - April 2023
+Description: Authored a comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git. Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages. Emphasized beginner-friendly methods for web hosting and documentation. Showcased the ability to create clear, structured technical documentation accessible online.
+Technologies, frameworks, and tools Used: Markdown, Jekyll, Git, GitHub Pages
+Skills: Technical Documentation, Web Development, Open Source, Git
+
+ 7.
+Project name: ELF Binary Analysis
+Role: Developer
+Timeline: November 2022 - December 2022
+Description: Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering. Demonstrated expertise in C for ELF binary parsing and system operations. Enhanced debugging efficiency by 20%. Actively contributed to technical documentation for product and knowledge base improvement.
+Technologies, frameworks, and tools Used: C Programming, Debugging, Linux OS
+Skills: C Programming, Debugging, System Analysis, Documentation
+
+ 8.
+Project name: OpenGL Sphere Lighting
+Role: Developer
+Timeline: April 2023 - June 2023
+Description: Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources. Developed an application with three distinct light sources. Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material. Utilized glutSolidSphere for accurate sphere rendering, showcasing the effects of different lighting conditions.
+Technologies, frameworks, and tools Used: OpenGL, C++
+Skills: 3D Graphics, Software Development, Computer Graphics, Lighting
+
+ 9.
+Project name: Reversible Learning App
+Role: Co-Developer
+Timeline: January 2021 - April 2021
+Description: Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management. Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs. Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives. Developed an intuitive user interface (UI) for note organization and question archiving.
+Technologies, frameworks, and tools Used: SQL, Android Studio, Java
+Skills: Android Development, Software Development, Agile Development, UI/UX Design
+
+10.
+Project name: Connect 4 Game
+Role: Developer
+Timeline: February 2023 - April 2023
+Description: Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. Implemented strategic AI decision-making, enhancing game complexity and player engagement. Implemented efficient CI/CD workflows to streamline development and deployment processes. Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+Technologies, frameworks, and tools Used: Java, AI Decision-Making
+Skills: Game Development, Software Development, AI, Agile Development
+
+11.
+Project name: TCP Chat Application
+Role: Developer
+Timeline: October 2022 - December 2022
+Description: Developed a Java chat application for real-time client-server communication using TCP. Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling. Implemented socket programming for robust client-server communication. Enabled features like room creation, joining/leaving rooms, and viewing room details. Achieved a 99.9% uptime and stability rate. Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management.
+Technologies, frameworks, and tools Used: Java, TCP/IP, Multithreading, Network
+Skills: Java, Network Programming, Software Development, Agile Development
+
+12.
+Project name: Data Visualization with R
+Role: Developer
+Timeline:
+Description: Utilized R for statistical analysis and data visualization. Demonstrated the ability to translate complex data into actionable insights. Learned to create interactive visualizations, enhancing data-driven decision-making.
+Technologies, frameworks, and tools Used: R
+Skills: Data Analysis, Data Visualization, Statistical Analysis, R Programming
+
+13.
+Project name: Portfolio Website
+Role: Developer
+Timeline: 2021
+Description: Developed a comprehensive portfolio website to showcase projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages. Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility. Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization. The site features a blog section, project showcases, and dynamic content fetched from GitHub.
+Technologies, frameworks, and tools Used: React, Styled-Components, GitHub Actions, Apollo
+Skills: Web Development, Software Development, Front-End Development, UI/UX Design
+
+14.
+Project name: CPU Scheduling
+Role: Developer
+Timeline: June 2023 - August 2023
+Description: Developed a multi-threaded scheduling simulator in C. Practiced Linux OS administration and Bash scripting for system programming. Employed Git for source control.
+Technologies, frameworks, and tools Used: C, Multithreading, Linux, Bash, Git
+Skills: C Programming, System Programming, Linux, Git
+
+15.
+Project name: Go-Back-N Protocol Simulation
+Role: Developer
+Timeline: November 2022 - December 2022
+Description: Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects. Simulated packet loss and generated visualizations with matplotlib to illustrate protocol performance. Increased understanding of networking protocols and data transmission by 65%. Analyzed adaptive window sizing benefits for flow control in networking.
+Technologies, frameworks, and tools Used: Python, Networking
+Skills: Python, Networking, Data Visualization, Protocol Analysis

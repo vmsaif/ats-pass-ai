@@ -1,0 +1,76 @@
+# **Saif Mahmud**
+ 204 955 5064 | msaifofficial@gmail.com | linkedin.com/in/vmsaif | saifmahmud.dev
+ Winnipeg, MB
+
+## Summary
+ Recent Computer Science graduate with a demonstrated ability in software development and a passion for creating innovative solutions using AI. Proven skills in Python, Java, Blockchain, and Natural Language Processing, seeking to leverage technical expertise and collaboration skills in a challenging and rewarding role. 
+
+## Skills
+ **Technical Skills:**
+  - Python
+ - Problem-Solving
+ - Communication
+ - Teamwork
+ - Multiagent system
+ - Natural Language Processing
+ - Blockchain
+ - Game development
+ - Java
+ - A* Algorithm
+
+**Soft Skills:**
+  - Communication Skills
+ - Adaptability
+ - Strong work ethic
+ - Ability to prioritize and multitask
+ - Ability to work under pressure
+ - Willingness to learn new things
+ - Critical Thinking
+ - Analytical skills
+ - Collaboration
+ - Teaching
+
+## Project Experience
+ ### Resume Automation Tool
+ January 2024 - Present (present) | Winnipeg, MB
+ Technologies, frameworks, and tools used:  Python, RAG Search, CrewAI, LangChain, Gemini
+ Link: https://github.com/vmsaif/ats-pass-ai
+ - Led the development of a multi-agent system to create tailored resumes using AI, Natural Language Processing, and Machine Learning.
+ - Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating creative thinking and problem-solving skills.
+ - Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for Applicant Tracking Systems (ATS).
+ - Developed scalable AI development frameworks to anticipate future needs and adaptations, ensuring long-term project sustainability.
+
+### Innovative Project
+ January 2023 - March 2023 (2 months) | Winnipeg, MB
+ Technologies, frameworks, and tools used:  Blockchain, Docker, Vue.js
+ Link: https://github.com/vmsaif/blockChainCarMilageTracker
+ - Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, highlighting analytical skills and a commitment to data integrity.
+ - Developed using blockchain technology to ensure transparency and security in data management, aligning with values of ethical technology.
+ - Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating problem-solving expertise.
+ - Collaborated closely as a team to design, develop, and test the application, emphasizing strong teamwork and collaboration skills.
+
+### Game Development
+ July 2023 - September 2023 (2 months) | Winnipeg, MB
+ Technologies, frameworks, and tools used:  Java, Git, CI/CD, A* Algorithm
+ Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+ - A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing experience with AI development frameworks.
+ - Utilized Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting technical proficiency and efficiency.
+ - Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+
+## Work Experience
+ ### Programming Mentor
+ February 2023 - December 2023 (10 months) |  | Winnipeg, MB
+ Technologies, frameworks, and tools used:  Python, Java
+ Link: 
+ - Tutored a student in computer systems and programming, focusing on Python and Java, directly aligning with required programming language skills.
+ - Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective communication skills.
+ - Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, cultivating practical problem-solving abilities.
+ - Delivered one-on-one lessons focusing on computer system principles and introductory programming, showcasing expertise in fundamental programming concepts.
+
+## Education
+ **University of Manitoba**, Winnipeg, MB
+ - BSc, Computer Science | Graduated: October 2023
+ - GPA: 3.07
+
+## References
+ Available upon request.

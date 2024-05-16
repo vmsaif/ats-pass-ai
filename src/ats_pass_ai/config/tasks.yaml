@@ -1,4 +1,173 @@
-# --------------tasks of Profile Building----------------
+resume_compilation_task:
+  description: >
+    You will receive a structured JSON object containing organized resume data. Your task is to format this data into a professional resume in plain text format. **Strictly follow the format provided below, ensuring consistent spacing and use of new lines.** 
+
+    Here is the structured JSON data you need to format:
+    {resume_data_in_json} 
+
+  expected_output: >
+    Replace the entire placeholder, including the square brackets (`[]`), with the data from the JSON. If data for a placeholder is not available, leave it blank.
+  
+    # **Saif Mahmud**\n
+    204 955 5064 | msaifofficial@gmail.com | linkedin.com/in/vmsaif | saifmahmud.dev\n
+    [Address], Winnipeg, MB\n
+    
+    ## Summary\n
+    [Concise and impactful summary statement highlighting skills and career goals]\n
+
+    ## Skills\n
+    **Technical Skills:**\n 
+    - [Skill 1]\n
+    - [Skill 2]\n
+    - [Skill 3]\n
+    - ...\n
+
+    **Soft Skills:**\n 
+    - [Skill 1]\n
+    - [Skill 2]\n
+    - [Skill 3]\n
+    - ...\n
+
+    ## Project Experience\n
+    ### [Project Title 1]\n
+    [Start Month Year] - [End Month Year] ([Duration]) | [City], [State(in 2-letter abbreviation)]\n
+    Technologies, frameworks, and tools used:  [List of technologies, separated by commas]\n
+    Link: [Link to the project]\n
+    - [Key achievement 1]\n
+    - [Key achievement 2]\n
+    - ...\n
+
+    ### [Project Title 2]\n
+    [Start Month Year] - [End Month Year] ([Duration]) | [City], [State(in 2-letter abbreviation)]\n
+    Technologies, frameworks, and tools used:  [List of technologies, separated by commas]\n
+    Link: [Link to the project]\n
+    - [Key achievement 1]\n
+    - [Key achievement 2]\n
+    - ...\n
+
+    ## Work Experience\n
+    ### [Job Title 1]\n
+    [Start Month Year] - [End Month Year] ([Duration]) | [Company Name] | [City], [State(in 2-letter abbreviation)]\n
+    Technologies, frameworks, and tools used:  [List of technologies, separated by commas]\n
+    Link: [Link to the relevant work experience (e.g., company website)]\n
+    - [Key achievement 1]\n
+    - [Key achievement 2]\n
+    - ...\n
+
+    ## Education\n
+    **[University Name]**, [City], [State(in 2-letter abbreviation)]\n
+    - [Degree], [Major] | Graduated: [Month Year]\n
+    - GPA: [GPA]\n
+
+    ## References\n
+
+career_objective_task: 
+  description: >
+    Based on the user's information and the provided job description, craft a compelling career objective statement that highlights the user's skills, experience, and unique approach to software development, aligning with the company's mission and the desired skills outlined in the job description. 
+
+    - Skills of the user: 
+      {skills}
+
+    - job_description: {job_description}
+
+    You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Then ask the provided tool. Also consider the user's personal philosophy and approach to software development when crafting the career objective statement if available.
+
+  expected_output: >
+    A compelling and impactful career objective statement tailored to the user's information and the job description. No need to ask the user for confirmation. Use your statistical analysis to generate the most suitable career objective statement for the user to impact the recruiter.
+
+    There should be nothing else in the output except the career objective statement.
+
+    resume_structuring_task:
+  description: >
+    You are an AI assistant skilled in structuring resume data. Your ONLY task is to organize the following input data into a JSON object representing a professional resume, EXACTLY as instructed below.  Do NOT deviate from these guidelines:
+
+    {resume_data}
+
+    1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "LinkedIn Profile URL", "Personal Website URL", "Address".
+    2.  **Summary:** Create a 3-4 sentence summary of the user's skills and professional goals based on the input data.
+    3.  **Skills:** Categorize the skills into two lists: "Technical" and "Soft". 
+        - Ensure no skill is repeated. Combine variations of the same skill (e.g., "Problem-Solving" and "Problem-solving skills").
+        - Carefully determine if a skill is technical (related to tools, technologies) or soft (related to personality, work style). 
+    4.  **Projects:** For each project, extract the following fields: "Project Title", "Timeline" (include Start Month Year - End Month Year, "Technologies", "Link", "Key achievements". 
+        - Ensure to include ALL "Key achievements" listed for each project. 
+        - Keep the action verbs at the beginning of each bullet point in "Key achievements".
+    5.  **Work:** For each work experience entry, extract these fields: "Job Title", "Company Name", "Location" (City, State), "Timeline" (include Start Month Year - End Month Year AND calculate the Duration in parentheses), "Technologies", "Link", "Key achievements". 
+        - Ensure to include ALL "Key achievements" listed for each work experience. 
+        - Keep the action verbs at the beginning of each bullet point in "Key achievements".
+        - If "Company Name" or "Link" are not available, omit them.  
+    6.  **Education:** Extract these fields: "Degree", "Major", "University", "Location" (City, State), "Graduation Date", "GPA". 
+    7.  **Additional:** Include any other relevant sections, like "References," based on the input data.
+
+    **Important:** 
+       - You MUST include ALL data from the input. Do NOT leave out any information. If a field is missing, represent it as an empty string ("").
+       - Do NOT fabricate, invent, or add ANY information that is not explicitly stated in the input data.
+       - Do not infer, assume, or create any details not directly present in the input. 
+       - Focus solely on accurately organizing the given information into a structured JSON format. 
+  expected_output: >
+    ```json
+    {
+      "Contact Info": {
+        "Full Name": "...",
+        "Phone": "...",
+        "Email": "...",
+        "LinkedIn Profile URL": "...", 
+        "Personal Website URL": "...",
+        "Address": "..." 
+      },
+      "Summary": "...",
+      "Skills": {
+        "Technical": [
+          "...", 
+          "..."
+        ],
+        "Soft": [
+          "...",
+          "..." 
+        ]
+      },
+      "Projects": [
+        {
+          "Project Title": "...",
+          "Timeline": "... (duration)",
+          "Technologies": "...",
+          "Link": "...",
+          "Key achievements": [
+            "...", 
+            "..."
+          ]
+        },
+        ... 
+      ],
+      "Work": [
+        {
+          "Job Title": "...",
+          "Company": "...",
+          "Location": "...",
+          "Timeline": "... (duration)",
+          "Technologies": "...",
+          "Link": "...",
+          "Key achievements": [
+            "...",
+            "..." 
+          ]
+        },
+        ...
+      ],
+      "Education": {
+        "Degree": "...",
+        "Major": "...",
+        "University": "...",
+        "Location": "...",
+        "Graduation Date": "...",
+        "GPA": "..."
+      },
+      "Additional": {
+        "References": "..."
+      }
+    }
+    ``` 
+
+    # --------------tasks of Profile Building----------------
 
 # list of tasks:
 # - personal_information_extraction_task
@@ -8,6 +177,8 @@
 # - references_extraction_task
 # - personal_traits_interests_extraction_task
 # - miscellaneous_extraction_task
+# - ats_friendly_skills_task
+# - ats_friendly_experiences_task
 
 personal_information_extraction_task:
   description: >
@@ -49,8 +220,9 @@ education_extraction_task:
       Major:
       University:
       University Location:
-      Graduation Date:
-      Honors/Distinctions:
+      Graduation Date: 
+      GPA: (if available)
+      Honors/Distinctions: (if available)
 
 volunteer_work_extraction_task:
   description: >
@@ -178,7 +350,7 @@ project_experience_extraction_task:
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 
 
-skills_cross_check_task:
+ats_friendly_skills_task:
   description: >
     Your task is to analyze and compare the keywords and phrases from a job post, which have already been extracted, against the context provided to you. 
     
@@ -315,18 +487,26 @@ experience_choosing_task:
             [Explanation] 
         ... and so on
 
+split_context_of_experience_choosing_task:
+  description: >
+    Split the context provided to you at break point "Explanation for Not Choosing Other Experiences". In your output, you will provide everything before the "Explanation for Not Choosing Other Experiences" as the final output of the task.
+
+    Here is the context you need to split:
+
+    {experience_choosen}
+
 gather_info_of_choosen_experiences:
   description: >
     Provide a detailed information for each of these experiences or projects.
 
-    {experience_choosen}
+    {split_context_experience_choosen}
 
     From this content below.
 
     {user_info_organized_data}
 
   expected_output: >
-    [Use empty lines to separate the experiences. Maintain the order of experiences or projects. Group them as "Work Experience" or "Project Experience" accordingly. You can safely ignore "Explanation for Not Choosing Other Experiences" section.]
+    [Use empty lines to separate the experiences. Maintain the order of experiences or projects. Group them as "Work Experience" or "Project Experience" accordingly. Provide the following details for each experience or project.]
     
     Title: / Role: (if available)
     Company Name: (if available)
@@ -377,59 +557,9 @@ gather_info_of_choosen_experiences:
 
 # --------------------------------------------------------
     
-# ats_friendly_experience_enhancement_task:
-#   description: >
-#     This task focuses on integrating relevant keywords from the job description into the user's chosen experiences to create highly effective resume bullet points. Your aim is to create ATS-friendly descriptions that highlight the user's qualifications in a concise, impactful, and natural manner. 
 
-#     **Guidelines:**
 
-#      * **Relevance is Key:** Only integrate keywords that are genuinely relevant to the experience being described. 
-#      * **Natural Integration:**  The keywords should flow naturally within the sentences. Avoid simply listing keywords or forcing them into inappropriate contexts. 
-#      * **Extreme Conciseness and Clarity:**  Use strong action verbs and eliminate unnecessary words. Prioritize a high-impact description over word count. Each experience should be summarized in 1-2 concise sentences, similar to a resume bullet point.  
-#      * **Contextual Awareness:** Consider the overall context of each experience. Choose keywords that accurately reflect the skills and responsibilities involved.
-#      * **Avoid Keyword Stuffing:**  Overusing keywords can have a negative impact. Aim for a balanced and impactful description while avoiding unnecessary repetition.  
-
-#     **Input:**
-#       * **Job Description Keywords:** {jd_keywords}
-#       * **Chosen Experiences:** {chosen_experiences}
-
-#   expected_output: >
-#     A list of the user's chosen experiences, revised to include relevant keywords from the job description in a natural, impactful, and extremely concise way.  Each experience should be presented as 1-2 impactful sentences, formatted as a resume bullet point. 
-
-#     **Example:**
-
-#     **Input:**
-
-#     * **Job Description Keywords:**  `Python, Machine Learning, Data Analysis, Data Visualization, Teamwork, Communication`
-#     * **Chosen Experiences (Highlights):**
-#         * `- Developed a machine learning algorithm for image recognition using Python and TensorFlow.`
-#         * `- Collaborated with a team of engineers to build a data visualization dashboard for a client.` 
-
-#     **Output:**
-
-#     * `• Developed a Python-based machine learning algorithm for image recognition, utilizing data analysis and visualization techniques to optimize performance.`
-#     * `• Collaborated effectively with a team of engineers to design and build a data visualization dashboard, showcasing strong communication and teamwork skills.` 
-
-#     Final Output:
-#     Title: / Role: (if available)
-#     Company Name: (if available)
-#     Timeline: (if available)
-#     Technologies, frameworks, and tools Used:
-#     Skills:
-#     Link:
-#     Key Highlights [ATS-friendly bullet points]:
-#       1. 
-#       2.
-#       3.
-#       4.
-#     Team size: (if available)
-#     Outcomes: (if available)
-
-#     At the end, write a Report on the changes you made to the experiences:
-#     1. Mention which keywords did you change with what keyword from the job description. They must match exactly. Write the original sentence and the revised sentence.
-#     2. Why did you choose to change them? Explain what you saw in the job description that made you change the keywords.
-
-ats_friendly_experience_enhancement_task:
+ats_friendly_keywords_into_experiences:
   description: >
     This task helps you create compelling resume bullet points by adding important
     keywords from a job description to descriptions of your work experiences.
@@ -470,7 +600,7 @@ ats_friendly_experience_enhancement_task:
     - **Team Size:** (If you have this information)
     - **Outcomes:** (If you have this information)
 
-    report_on_changes:
+    REPORT ON CHANGES:
       - **Keyword Changes:** For each experience:
           - Original Sentence: Write the original sentence without any changes.
           - Revised Sentence: Write the revised sentence, highlighting the **exact keywords** you added from the job description. 
@@ -488,10 +618,10 @@ ats_friendly_experience_enhancement_task:
             dashboard for a client.
       output:
         - Key Highlights (ATS-friendly bullet points):
-          - • Developed a Python-based machine learning algorithm for image
+          - Developed a Python-based machine learning algorithm for image
             recognition, utilizing **data analysis** and **data visualization**
             techniques to optimize performance.
-          - • **Collaborated** effectively with a team of engineers to design and
+          - **Collaborated** effectively with a team of engineers to design and
             build a data visualization dashboard, showcasing strong **communication**
             and **teamwork** skills.
         report_on_changes:
@@ -518,6 +648,21 @@ ats_friendly_experience_enhancement_task:
               candidates.  By highlighting these keywords, I am showing that the
               applicant possesses these valuable skills and is a good fit for the
               company's collaborative work environment.
+
+  expected_output: >
+    Everything before the "REPORT ON CHANGES:" will be the final output of the task.
+
+split_context_of_ats_friendly_keywords_into_experiences:
+  description: >
+    Split the context provided to you at break point "REPORT ON CHANGES:". In your output, you will provide everything before the "REPORT ON CHANGES:" as the final output of the task.
+
+    Here is the context you need to split:
+
+    {ats_friendly_experiences}
+
+  expected_output: >
+    Everything before the "REPORT ON CHANGES:" will be the final output of the task.
+
 # professional_affiliations_task:
 #   description: >
 #     List all memberships in professional organizations including roles and responsibilities within these groups.
@@ -548,13 +693,6 @@ ats_friendly_experience_enhancement_task:
 #   expected_output: >
 #     A strategic analysis of career aspirations, including suggested job titles and paths tailored to the user’s skills and goals.
 
-# job_specific_requirements_task:
-#   description: >
-#     Assess and document specific job requirements such as availability, willingness to relocate, and salary expectations.
-#   expected_output: >
-#     A detailed list of job-specific requirements addressing the user's availability, relocation willingness, and expected salary, tailored to potential job applications.
-
-
 # activities_leadership_task:
 #   description: >
 #     Document all leadership roles and activities, including specific achievements and impacts within these roles.
@@ -579,7 +717,7 @@ ats_friendly_experience_enhancement_task:
 #   expected_output: >
 #     A detailed description of interests that complements the professional and personal traits, adding depth to the user's profile.
 
-# developmental_activities_task:
+# developmental_activities_task_such as courses, training, workshops:
 #   description: >
 #     Gather information on all developmental activities such as courses, training, workshops, conferences, seminars, webinars, bootcamps, hackathons, competitions, and scholarships.
 #   expected_output: >
@@ -588,24 +726,6 @@ ats_friendly_experience_enhancement_task:
 
 
 
-# _______________________________________________________________________________________________________________________
 
-# projects_task:
-#   description: >
-#     Document comprehensive details about significant projects including titles, technologies used, durations, roles, contributions, and outcomes.
-#   expected_output: >
-#     An exhaustive description of projects with detailed accounts of titles, technologies, durations, roles played, contributions, and outcomes.
-
-# career_aspirations_task:
-#   description: >
-#     Define long-term career goals and the types of roles and responsibilities the user is seeking in future positions.
-#   expected_output: >
-#     A detailed explanation of career aspirations, including specific roles and responsibilities the user aims to pursue.
-
-# job_specific_requirements_task:
-#   description: >
-#     Identify any job-specific requirements such as availability, willingness to relocate, and salary expectations.
-#   expected_output: >
-#     A list of job-specific requirements tailored to the user's preferences and potential job descriptions.
 
 
