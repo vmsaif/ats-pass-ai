@@ -1,6 +1,7 @@
-**Project Experience**
-  ATS Pass AI
-  Blockchain Car Mileage Tracker
-  AI Path Finding
+Project Experience
+    ATS Pass AI
+    AI Path Finding
+    Blockchain Car Mileage Tracker
 
-**Reversible Learning App**
+Work Experience
+    Software Engineer at Google

@@ -4,40 +4,33 @@
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [
+      "Frameworks": [],
+      "Tools": [
+        "Gemini",
         "LangChain"
       ],
-      "Tools": [],
       "Soft Skills": [
         "Communication",
-        "Teamwork",
-        "Problem Solving"
+        "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
-      "Programming Languages": [
-        "Java"
-      ],
-      "Frameworks": [],
-      "Tools": [
-        "SQL",
-        "Docker",
-        "Git",
-        "CI/CD",
-        "JavaScript",
-        "JSON",
-        "AWS (Basic)"
-      ],
-      "Soft Skills": [
-        "Adaptability",
-        "Time Management",
-        "Critical Thinking",
-        "Strong work ethic",
-        "Excellent time management skills",
-        "Ability to prioritize and multitask",
-        "Ability to work under pressure",
-        "Willingness to learn new things"
-      ]
+      "Programming Languages": {
+        "name": "Java",
+        "pertially_matched_with_job_description": "Algorithm Development"
+      },
+      "Frameworks": {
+        "name": "CI/CD",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
+      },
+      "Tools": {
+        "name": "Docker",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
+      },
+      "Soft Skills": {
+        "name": "Leadership",
+        "pertially_matched_with_job_description": "Collaboration"
+      }
     }
   }
 }

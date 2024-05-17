@@ -62,7 +62,6 @@ class ResumeCrew:
 
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
-
 	webSearchTool = SerperDevTool()
 	
 
@@ -259,6 +258,7 @@ class ResumeCrew:
 			description = task_description,
 			expected_output = expected_output,
 			agent=self.generalist_agent(),
+			
 			output_file=self.work_experience_extraction_task_file_path,
 		)
 
@@ -285,7 +285,7 @@ class ResumeCrew:
 			config=self.tasks_config["skills_from_exp_and_project_task"],
 			agent=self.technical_details_agent(),
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-			
+			tools=[self.webSearchTool],
 			output_file=self.skills_from_exp_and_project_file_path,
 		)
 
@@ -315,150 +315,117 @@ class ResumeCrew:
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
 			context=[self.skills_extraction_task()],
+			tools=[self.webSearchTool],
 			output_file=self.ats_friendly_skills_pre_task_file_path,
 		)
 	
-	# @task
-	# def split_context_of_ats_friendly_skills_task(self):
-	# 	# # Load YAML file
-	# 	# with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 	# 	yaml_data = yaml.safe_load(file)
-	# 	# 	description_value = yaml_data['split_context_of_ats_friendly_skills_task']['description']
-	# 	# 	expected_output = yaml_data['split_context_of_ats_friendly_skills_task']['expected_output']
+	@task
+	def split_context_of_ats_friendly_skills_task(self):
+		return Task(
+			config=self.tasks_config["split_context_of_ats_friendly_skills_task"],
+			agent=self.generalist_agent(),
+			context=[self.ats_friendly_skills_task()],
+			output_file=self.split_context_of_ats_friendly_skills_task_file_path,
+		)
+	# ----------------- End of Skills Match Identification -----------------
 
-	# 	# ats_friendly_skills = self.load_txt_files(self.ats_friendly_skills_pre_task_file_path)
-	# 	# task_description = description_value.format(ats_friendly_skills = ats_friendly_skills)
-
-	# 	return Task(
-	# 		# description=task_description,
-	# 		# expected_output=expected_output,
-	# 		config=self.tasks_config["split_context_of_ats_friendly_skills_task"],
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.ats_friendly_skills_task()],
-	# 		output_file=self.split_context_of_ats_friendly_skills_task_file_path,
-	# 	)
-
-
-	# # ----------------- End of Skills Match Identification -----------------
-
-	# # ----------------- Choose Work/Project Experience -----------------
-	# @task
-	# def experience_choosing_task(self):
-	# 	# Load YAML file
-	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['experience_choosing_task']['description']
-	# 		expected_output = yaml_data['experience_choosing_task']['expected_output']
-
-	# 	jd_keyword = self.load_txt_files(self.jd_keyword_extraction_file_path)
-	# 	# get date
-	# 	today_date = datetime.date.today().strftime("%B %d, %Y")
-	# 	task_description = description_value.format(jd_keyword = jd_keyword, today_date = today_date)
-
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
-	# 		context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-	# 		output_file=self.experience_choosing_task_file_path,
-	# 	)
-	
-	# @task
-	# def split_context_of_experience_choosing_task(self):
-
-	# 	# TODO: Instead making agent doing this split, use a tool to split the context.
+	# ----------------- Choose Work/Project Experience -----------------
+	@task
+	def experience_choosing_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('experience_choosing_task')
 		
-	# 	return Task(
-	# 		config=self.tasks_config["split_context_of_experience_choosing_task"],
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.experience_choosing_task()],
-	# 		output_file=self.split_context_of_experience_choosing_task_file_path,
-	# 	)
+		jd_keyword = self.load_txt_files(self.jd_keyword_extraction_file_path)
+		today_date = datetime.date.today().strftime("%B %d, %Y")
+		
+		task_description = yaml[0].format(jd_keyword = jd_keyword, today_date = today_date)
+		expected_output = yaml[1]
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.cross_match_evaluator_with_job_description_agent(),
+			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+			output_file=self.experience_choosing_task_file_path,
+		)
+	
+	@task
+	def split_context_of_experience_choosing_task(self):
+
+		# TODO: Instead making agent doing this split, use a tool to split the context.
+		
+		return Task(
+			config=self.tasks_config["split_context_of_experience_choosing_task"],
+			agent=self.generalist_agent(),
+			context=[self.experience_choosing_task()],
+			output_file=self.split_context_of_experience_choosing_task_file_path,
+		)
 
 	
-	# @task
-	# def gather_info_of_choosen_experiences(self):
-	# 	# Load YAML file
-	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['gather_info_of_choosen_experiences']['description']
-	# 		expected_output = yaml_data['gather_info_of_choosen_experiences']['expected_output']
+	@task
+	def gather_info_of_choosen_experiences(self):
+		# Load YAML file
+		yaml = self.yaml_loader('gather_info_of_choosen_experiences')
 
-	# 	user_info_organized_data = self.load_txt_files('info_files/user_info_organized.txt')
-	# 	task_description = description_value.format(user_info_organized_data = user_info_organized_data)
+		# Load the user info organized data
+		user_info_organized_data = self.load_txt_files(self.user_info_organized_file_path)
+		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		expected_output = yaml[1]
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.split_context_of_experience_choosing_task()],
-	# 		output_file=self.gather_info_of_choosen_experiences_file_path,
-	# 	)
-	# # ----------------- End of Choose Work/Project Experience -----------------
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.generalist_agent(),
+			context=[self.split_context_of_experience_choosing_task()],
+			output_file=self.gather_info_of_choosen_experiences_file_path,
+		)
+	# ----------------- End of Choose Work/Project Experience -----------------
 
-	# # ----------------- Include ATS Keywords into Experiences -----------------
+	# ----------------- Include ATS Keywords into Experiences -----------------
 
-	# @task
-	# def ats_friendly_keywords_into_experiences_task(self):
-	# 	# Load YAML file
-	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['ats_friendly_keywords_into_experiences']['description']
-	# 		expected_output = yaml_data['ats_friendly_keywords_into_experiences']['expected_output']
+	@task
+	def ats_friendly_keywords_into_experiences_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
+		jd_keywords = self.load_txt_files(self.jd_keyword_extraction_file_path)		
+		task_description = yaml[0].format(jd_keywords = jd_keywords)
+		expected_output = yaml[1]
 
-	# 	jd_keywords = self.load_txt_files(self.jd_keyword_extraction_file_path)
-	# 	task_description = description_value.format(jd_keywords = jd_keywords)
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.ats_keyword_integration_agent(),
+			context=[self.gather_info_of_choosen_experiences()],
+			output_file=self.ats_friendly_keywords_into_experiences_file_path,
+		)
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.ats_keyword_integration_agent(),
-	# 		context=[self.gather_info_of_choosen_experiences()],
-	# 		output_file=self.ats_friendly_keywords_into_experiences_file_path,
-	# 	)
+	@task
+	def split_context_of_ats_friendly_keywords_into_experiences(self):
+		# TODO: Instead making agent doing this split, use a tool to split the context.
 
-	# @task
-	# def split_context_of_ats_friendly_keywords_into_experiences(self):
-	# 	# Load YAML file
-
-	# 	# TODO: Instead making agent doing this split, use a tool to split the context.
-
-	# 	# with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 	# 	yaml_data = yaml.safe_load(file)
-	# 	# 	description_value = yaml_data['split_context_of_ats_friendly_keywords_into_experiences']['description']
-	# 	# 	expected_output = yaml_data['split_context_of_ats_friendly_keywords_into_experiences']['expected_output']
-
-	# 	# ats_friendly_experiences = self.load_txt_files(self.ats_friendly_keywords_into_experiences_file_path)
-	# 	# task_description = description_value.format(ats_friendly_experiences = ats_friendly_experiences)
-
-	# 	return Task(
-	# 		# description=task_description,
-	# 		# expected_output=expected_output,
-	# 		config=self.tasks_config["split_context_of_ats_friendly_keywords_into_experiences"],
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.ats_friendly_keywords_into_experiences_task()],
-	# 		output_file=self.split_context_of_ats_friendly_keywords_into_experiences_file_path,
-	# 	)
+		return Task(
+			config=self.tasks_config["split_context_of_ats_friendly_keywords_into_experiences"],
+			agent=self.generalist_agent(),
+			context=[self.ats_friendly_keywords_into_experiences_task()],
+			output_file=self.split_context_of_ats_friendly_keywords_into_experiences_file_path,
+		)
 	
-	# @task
-	# def career_objective_task(self):
-	# 	# Load YAML file
-	# 	with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
-	# 		yaml_data = yaml.safe_load(file)
-	# 		description_value = yaml_data['career_objective_task']['description']
-	# 		expected_output = yaml_data['career_objective_task']['expected_output']
+	@task
+	def career_objective_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('career_objective_task')
 
-	# 	job_description = self.load_txt_files(self.jd_keyword_extraction_file_path)
+		job_description = self.load_txt_files(self.jd_keyword_extraction_file_path)
+		task_description = yaml[0].format(job_description = job_description)
+		expected_output = yaml[1]
 
-	# 	task_description = description_value.format(job_description = job_description)
-
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.career_objective_agent(),
-	# 		context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
-	# 		output_file=self.career_objective_task_file_path,
-	# 	)
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.career_objective_agent(),
+			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
+			output_file=self.career_objective_task_file_path,
+		)
 
 
 	# @task

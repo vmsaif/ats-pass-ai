@@ -1,29 +1,43 @@
-```json
 {
   "user_skills": {
     "exact_match_with_job_description": {
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [
-        "Langchain"
+      "Frameworks": [],
+      "Tools": [
+        "Gemini",
+        "LangChain"
       ],
-      "Tools": [],
       "Soft Skills": [
+        "Communication",
         "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
-      "Programming Languages": {},
-      "Frameworks": {},
+      "Programming Languages": {
+        "name": "Java",
+        "pertially_matched_with_job_description": "Algorithm Development"
+      },
+      "Frameworks": {
+        "name": "CI/CD",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
+      },
       "Tools": {
-        "name": "CrewAI",
-        "pertially_matched_with_job_description": "Generative AI, Machine Learning"
+        "name": "Docker",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
       },
       "Soft Skills": {
-        "name": "Communication",
-        "pertially_matched_with_job_description": "Communication Skills"
+        "name": "Leadership",
+        "pertially_matched_with_job_description": "Collaboration"
       }
     }
   },
-  "missing
+  "missing_from_the_applicant_skills": {
+    "Programming Languages": [
+      "AI",
+      "ML",
+      "Deep Learning",
+      "Generative AI",
+      "NLP",
+      "Data

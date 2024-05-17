@@ -1,171 +1,175 @@
 ```json
 {
-  "Work Experience": [
+ "Work Experience": [
+  {
+   "Title": "Programming Mentor",
+   "Company Name": "Private Tutoring",
+   "Timeline": "February 2023 - December 2023",
+   "Duration": "10 months",
+   "Technologies, frameworks, and tools Used": "Python, Java",
+   "Skills": "Computer systems, programming, teaching",
+   "Link": null,
+   "Key Highlights": [
+    "Tutored students in computer systems and programming, focusing on **Python** and Java, adapting teaching methods to various learning styles.",
+    "Facilitated hands-on sessions covering software installation, **debugging**, and computer operations, improving students' **problem-solving skills**.",
+    "Delivered one-on-one lessons on computer system principles and introductory programming, enhancing students' understanding of **algorithm development**."
+   ],
+   "Team size": null,
+   "Outcomes": []
+  }
+ ],
+ "Project Experience": [
+  {
+   "Title": "ATS Pass AI",
+   "Timeline": "January 2024 - Present",
+   "Duration": "10 months",
+   "Technologies, frameworks, and tools Used": "Python, RAG Search",
+   "Skills": "AI, Machine Learning, NLP",
+   "Link": "https://github.com/vmsaif/ats-pass-ai/",
+   "Key Highlights": [
+    "Utilized CrewAI, LangChain, **Google Gemini**, and RAG Search to develop a **Generative AI** system for creating customized resumes, improving job search results.",
+    "Applied **AI models** and multi-agent technologies for personalized resume generation, demonstrating expertise in **Natural Language Processing (NLP)**.",
+    "Developed a system to extract user data and **analyze** job descriptions with AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment, showcasing strong **data analysis** skills.",
+    "Engineered a scalable architecture for future adaptability and growth, ensuring the project's long-term sustainability and impact."
+   ],
+   "Team size": null,
+   "Outcomes": []
+  },
+  {
+   "Title": "AI Path Finding",
+   "Timeline": "July 2023 - September 2023",
+   "Duration": "3 months",
+   "Technologies, frameworks, and tools Used": "Java, Git, CI/CD",
+   "Skills": "AI, Game Development",
+   "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+   "Key Highlights": [
+    "Created an AI-driven game using the A* algorithm in Java, demonstrating proficiency in **algorithm development** and **AI** principles.",
+    "Leveraged Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting efficient **development** processes.",
+    "Improved **problem-solving** and **analytical skills** through the application of the A* pathfinding algorithm, directly applicable to **AI** challenges.",
+    "Applied fundamental software development and testing processes to ensure application robustness, showcasing a commitment to quality and reliability."
+   ],
+   "Team size": null,
+   "Outcomes": []
+  },
+  {
+   "Title": "Reversible Learning App",
+   "Timeline": "January 2021 - April 2021",
+   "Duration": "4 months",
+   "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java",
+   "Skills": "Project Management, Teamwork",
+   "Link": "https://github.com/vmsaif/reversibleLearning",
+   "Key Highlights": [
+    "**Collaborated** with a team to develop 'Reversible Learning,' an Android app for enhancing study habits, showcasing strong **teamwork** and **communication skills**.",
+    "Utilizing Android Studio and HSQLDB, implemented UI/UX design and robust database management, demonstrating proficiency in **software development**.",
+    "Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs, reflecting a commitment to quality assurance.",
+    "Demonstrated adaptability and effective **communication** in a team environment to achieve project goals, highlighting interpersonal skills essential for collaborative work."
+   ],
+   "Team size": null,
+   "Outcomes": []
+  }
+ ],
+ "report_on_changes": [
+  {
+   "Keyword Changes": [
     {
-      "Title": "Programming Mentor",
-      "Company Name": "Private Tutoring",
-      "Timeline": "February 2023 - December 2023",
-      "Duration": "10 months",
-      "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Mentoring, Programming",
-      "Link": null,
-      "Key Highlights": [
-        "Tutored a student in computer systems and programming, focusing on **Python** and Java to enhance their understanding of **AI development frameworks**.",
-        "Tailored teaching methods to accommodate the student's learning style, fostering **collaboration** and effective **communication**.",
-        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, encouraging **analytical** and **problem-solving skills**.",
-        "Delivered one-on-one lessons focusing on computer system principles and introductory programming, promoting **critical thinking** and a foundational understanding of **AI** concepts."
-      ],
-      "Team size": "1",
-      "Outcomes": "Improved the student's understanding of computer science fundamentals and programming knowledge."
+     "Original Sentence": "Tutored students in computer systems and programming, with a focus on Python and Java.",
+     "Revised Sentence": "Tutored students in computer systems and programming, focusing on **Python** and Java, adapting teaching methods to various learning styles.",
+     "Keywords Added": [
+      "Python"
+     ],
+     "Rationale": "The job description strongly emphasizes Python as a key skill. Highlighting its use in this tutoring experience makes it more relevant to the AI Engineer role."
+    },
+    {
+     "Original Sentence": "Facilitated hands-on sessions on software installation, debugging, and understanding computer operations.",
+     "Revised Sentence": "Facilitated hands-on sessions covering software installation, **debugging**, and computer operations, improving students' **problem-solving skills**.",
+     "Keywords Added": [
+      "debugging",
+      "problem-solving skills"
+     ],
+     "Rationale": "Incorporating \"debugging\" and \"problem-solving skills\" directly aligns this experience with the technical and analytical aspects of the AI Engineer role."
+    },
+    {
+     "Original Sentence": "Delivered one-on-one lessons focusing on computer system principles and introductory programming.",
+     "Revised Sentence": "Delivered one-on-one lessons on computer system principles and introductory programming, enhancing students' understanding of **algorithm development**.",
+     "Keywords Added": [
+      "algorithm development"
+     ],
+     "Rationale": "Adding \"algorithm development\" emphasizes the relevance of this teaching experience to the core skills required for an AI Engineer."
+    },
+    {
+     "Original Sentence": "Utilized CrewAI, LangChain, Gemini, and RAG Search to create customized resumes for improved job search results.",
+     "Revised Sentence": "Utilized CrewAI, LangChain, **Google Gemini**, and RAG Search to develop a **Generative AI** system for creating customized resumes, improving job search results.",
+     "Keywords Added": [
+      "Google Gemini",
+      "Generative AI"
+     ],
+     "Rationale": "Explicitly mentioning \"Google Gemini\" and \"Generative AI\" directly aligns this project with the specific technologies and focus of the AI Engineer role."
+    },
+    {
+     "Original Sentence": "Applied AI models and multi-agent technologies for personalized resume generation.",
+     "Revised Sentence": "Applied **AI models** and multi-agent technologies for personalized resume generation, demonstrating expertise in **Natural Language Processing (NLP)**.",
+     "Keywords Added": [
+      "AI models",
+      "Natural Language Processing (NLP)"
+     ],
+     "Rationale": "Highlighting \"AI models\" and \"Natural Language Processing (NLP)\" strengthens the connection between this project and the AI Engineer's core responsibilities."
+    },
+    {
+     "Original Sentence": "Developed a system to extract user data and analyze job descriptions with AI tools like Gemini Pro and RAG Search, resulting in over 85% keyword alignment.",
+     "Revised Sentence": "Developed a system to extract user data and **analyze** job descriptions with AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment, showcasing strong **data analysis** skills.",
+     "Keywords Added": [
+      "analyze",
+      "data analysis"
+     ],
+     "Rationale": "Including \"analyze\" and \"data analysis\" emphasizes the analytical skills demonstrated in this project, which are highly relevant to the AI Engineer role."
+    },
+    {
+     "Original Sentence": "Created an AI-driven game using the A* algorithm in Java.",
+     "Revised Sentence": "Created an AI-driven game using the A* algorithm in Java, demonstrating proficiency in **algorithm development** and **AI** principles.",
+     "Keywords Added": [
+      "algorithm development",
+      "AI"
+     ],
+     "Rationale": "Emphasizing \"algorithm development\" and \"AI\" connects this project more directly to the core skills required for an AI Engineer."
+    },
+    {
+     "Original Sentence": "Leveraged Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time.",
+     "Revised Sentence": "Leveraged Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, highlighting efficient **development** processes.",
+     "Keywords Added": [
+      "development"
+     ],
+     "Rationale": "Adding \"development\" emphasizes the practical software development experience gained in this project, which is relevant to the AI Engineer role."
+    },
+    {
+     "Original Sentence": "Improved problem-solving and analytical skills through the application of the A* pathfinding algorithm.",
+     "Revised Sentence": "Improved **problem-solving** and **analytical skills** through the application of the A* pathfinding algorithm, directly applicable to **AI** challenges.",
+     "Keywords Added": [
+      "problem-solving",
+      "analytical skills",
+      "AI"
+     ],
+     "Rationale": "Explicitly mentioning \"problem-solving,\" \"analytical skills,\" and \"AI\" connects these skills to the specific requirements of the AI Engineer role."
+    },
+    {
+     "Original Sentence": "Collaborated with a team to develop 'Reversible Learning,' an Android app for enhancing study habits.",
+     "Revised Sentence": "**Collaborated** with a team to develop 'Reversible Learning,' an Android app for enhancing study habits, showcasing strong **teamwork** and **communication skills**.",
+     "Keywords Added": [
+      "Collaborated",
+      "teamwork",
+      "communication skills"
+     ],
+     "Rationale": "Highlighting \"Collaborated,\" \"teamwork,\" and \"communication skills\" emphasizes the interpersonal skills demonstrated in this project, which are valuable for an AI Engineer working in a collaborative environment."
+    },
+    {
+     "Original Sentence": "Demonstrated adaptability and effective communication in a team environment to achieve project goals.",
+     "Revised Sentence": "Demonstrated adaptability and effective **communication** in a team environment to achieve project goals, highlighting interpersonal skills essential for collaborative work.",
+     "Keywords Added": [
+      "communication"
+     ],
+     "Rationale": "Explicitly mentioning \"communication\" underscores the importance of this skill for effective collaboration in the AI Engineer role."
     }
-  ],
-  "Project Experience": [
-    {
-      "Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present",
-      "Duration": "Ongoing",
-      "Technologies, frameworks, and tools Used": "Python, JavaScript, C++, Java, CrewAI, LangChain, Gemini, RAG Search",
-      "Skills": "Programming, AI, Natural Language Processing, Machine Learning",
-      "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Key Highlights": [
-        "Led the **development** of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, demonstrating expertise in **AI**, **NLP**, and **Machine Learning**.",
-        "Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes for improved **ATS** compatibility.",
-        "Engineered a system that extracts user data and **analyzes** job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, showcasing strong **data analysis** skills.",
-        "Developed scalable **architecture** to anticipate future needs and adaptations for continued **AI development** and innovation in the field of **equitable progress** through accessible technology."
-      ],
-      "Team size": "Not specified",
-      "Outcomes": "Improved job search efficiency and resume personalization through AI-driven technology."
-    },
-    {
-      "Title": "Blockchain Car Mileage Tracker",
-      "Timeline": "January 2023 - March 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "Docker, Vue.js",
-      "Skills": "Blockchain Development, Data Security, Software Engineering",
-      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-      "Key Highlights": [
-        "Initiated and **developed** a blockchain application to securely track and verify vehicle mileage for insurance purposes, demonstrating expertise in **data preprocessing** and security.",
-        "Developed using blockchain technology, ensuring **data analysis** and secure record management.",
-        "Enhanced data integrity and transparency, contributing to **ethical technology** and responsible data handling practices.",
-        "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, showcasing **creative thinking** and **problem-solving** abilities."
-      ],
-      "Team size": "Not specified",
-      "Outcomes": "Increased data security and transparency in vehicle mileage tracking for insurance purposes."
-    },
-    {
-      "Title": "AI Path Finding",
-      "Timeline": "July 2023 - September 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "Java, Git, CI/CD",
-      "Skills": "Game Development, Artificial Intelligence, Programming",
-      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Key Highlights": [
-        "**Developed** a Java-based game development project that leveraged the A* algorithm to create an **AI**-driven game, demonstrating **programming** skills and an understanding of **algorithm development**.",
-        "Utilized Git for version control, ensuring efficient **collaboration** and project management.",
-        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing a commitment to optimized **AI development** processes.",
-        "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm, directly applicable to complex **AI model design** and implementation."
-      ],
-      "Team size": "Not specified",
-      "Outcomes": "Improved game development capabilities through the integration of AI and efficient software development practices."
-    },
-    {
-      "Title": "Reversible Learning App",
-      "Timeline": "January 2021 - April 2021",
-      "Duration": "4 months",
-      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java",
-      "Skills": "Android Development, Database Management, Software Engineering",
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Key Highlights": [
-        "**Collaborated** with a team to **develop** \"Reversible Learning\", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX **design** and robust database management, demonstrating strong **teamwork** and **communication skills**.",
-        "Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs, showcasing a dedication to quality assurance and **analytical** thinking.",
-        "Demonstrated adaptability and effective **communication** by working in a team environment to meet project deadlines and objectives, highlighting valuable **collaboration** and interpersonal skills.",
-        "Developed an intuitive user interface (UI) for note organization and question archiving, emphasizing user-centered **design** principles and a commitment to accessibility."
-      ],
-      "Team size": "Not specified",
-      "Outcomes": "Enhanced study habits through the development of a user-friendly and efficient Android application."
-    }
-  ]
+   ]
+  }
+ ]
 }
 ```
-REPORT ON CHANGES:
-  - **Keyword Changes:** For each experience:
-      - Original Sentence: Tutored a student in computer systems and programming, focusing on Python and Java.
-      - Revised Sentence: Tutored a student in computer systems and programming, focusing on **Python** and Java to enhance their understanding of **AI development frameworks**.
-      - Keywords Added: "Python", "AI development frameworks"
-      - Rationale: The job description emphasizes Python as a core skill, and the company focuses on AI. By including these keywords, I'm highlighting the relevance of the tutoring experience to the desired role.
-      - Original Sentence: Tailored teaching methods to accommodate the student's learning style.
-      - Revised Sentence: Tailored teaching methods to accommodate the student's learning style, fostering **collaboration** and effective **communication**.
-      - Keywords Added: "collaboration", "communication"
-      - Rationale:  The job description lists "Collaboration" and "Communication Skills" as essential soft skills. Adding these keywords showcases these skills within the context of mentoring.
-      - Original Sentence: Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.
-      - Revised Sentence: Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, encouraging **analytical** and **problem-solving skills**.
-      - Keywords Added: "analytical", "problem-solving skills"
-      - Rationale: The job description stresses "Analytical Skills" and "Problem-Solving" as crucial. By adding these keywords, I demonstrate that the mentoring involved developing these skills.
-      - Original Sentence: Delivered one-on-one lessons focusing on computer system principles and introductory programming.
-      - Revised Sentence: Delivered one-on-one lessons focusing on computer system principles and introductory programming, promoting **critical thinking** and a foundational understanding of **AI** concepts.
-      - Keywords Added: "critical thinking", "AI"
-      - Rationale: "Critical Thinking" is highlighted in the job description, and the company's focus is AI. Adding these keywords connects the tutoring experience to these key aspects of the role.
-      - Original Sentence: Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
-      - Revised Sentence: Led the **development** of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, demonstrating expertise in **AI**, **NLP**, and **Machine Learning**.
-      - Keywords Added: "development", "Gemini", "AI", "NLP", "Machine Learning" 
-      - Rationale:  The job description emphasizes "AI", "NLP", and "Machine Learning" as core areas. Highlighting "Gemini" (a Google product) aligns with the company's use of Google AI technologies. The action verb "Develop" aligns with the job description's emphasis on proactive development skills.
-      - Original Sentence: Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes. 
-      - Revised Sentence: Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes for improved **ATS** compatibility.
-      - Keywords Added: "AI models", "ATS"
-      - Rationale: This emphasizes the use of "AI Models" (a key term in the job description) and directly links the project to optimizing resumes for "ATS," the core focus of the job.
-      - Original Sentence: Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, showcasing strong data analysis skills.
-      - Revised Sentence: Engineered a system that extracts user data and **analyzes** job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, showcasing strong **data analysis** skills.
-      - Keywords Added: "analyzes", "ATS", "data analysis"
-      - Rationale: The job description emphasizes "Data Analysis." Including these keywords showcases that this skill was applied in the project, particularly in analyzing job descriptions for "ATS" optimization.
-      - Original Sentence: Developed scalable architecture to anticipate future needs and adaptations. 
-      - Revised Sentence: Developed scalable **architecture** to anticipate future needs and adaptations for continued **AI development** and innovation in the field of **equitable progress** through accessible technology. 
-      - Keywords Added: "architecture", "AI development", "equitable progress"
-      - Rationale:  This ties the technical "architecture" development to "AI development," a key phrase in the job description. "Equitable progress" aligns with the company's social justice mission, highlighting a shared value.
-      - Original Sentence: Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes. 
-      - Revised Sentence: Initiated and **developed** a blockchain application to securely track and verify vehicle mileage for insurance purposes, demonstrating expertise in **data preprocessing** and security.
-      - Keywords Added: "developed", "data preprocessing" 
-      - Rationale: Using the action verb "developed" aligns with the job description's focus on proactive development. "Data preprocessing" is a relevant skill mentioned in the job description, connecting the project to the desired expertise.
-      - Original Sentence: Developed using blockchain technology.
-      - Revised Sentence: Developed using blockchain technology, ensuring **data analysis** and secure record management.
-      - Keywords Added: "data analysis"
-      - Rationale:  The job description highlights "Data Analysis" as a core competency. This addition demonstrates that the project involved data analysis within the context of blockchain technology.
-      - Original Sentence: Enhanced data integrity and transparency.
-      - Revised Sentence: Enhanced data integrity and transparency, contributing to **ethical technology** and responsible data handling practices. 
-      - Keywords Added: "ethical technology"
-      - Rationale: The company values "Ethical Technology," making this addition relevant. It highlights the project's alignment with ethical data practices, a point of emphasis for the company.
-      - Original Sentence: Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording. 
-      - Revised Sentence: Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, showcasing **creative thinking** and **problem-solving** abilities.
-      - Keywords Added: "creative thinking", "problem-solving"
-      - Rationale: "Creative Thinking" and "Problem-Solving" are listed as essential skills in the job description. This addition shows that the project required and developed these abilities. 
-      - Original Sentence: Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game. 
-      - Revised Sentence: **Developed** a Java-based game development project that leveraged the A* algorithm to create an **AI**-driven game, demonstrating **programming** skills and an understanding of **algorithm development**.
-      - Keywords Added: "Developed", "AI", "programming", "algorithm development"
-      - Rationale: Using "Developed" aligns with the job description's action-oriented language. Highlighting "AI," "programming," and "algorithm development" directly relates the project to the core skills outlined in the job description.
-      - Original Sentence: Utilized Git for version control.
-      - Revised Sentence: Utilized Git for version control, ensuring efficient **collaboration** and project management.
-      - Keywords Added: "collaboration"
-      - Rationale: The job description emphasizes the importance of "Collaboration." This addition shows that the project involved collaborative practices through version control using Git.
-      - Original Sentence: Utilized CI/CD practices, resulting in a 50% reduction in deployment time. 
-      - Revised Sentence: Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing a commitment to optimized **AI development** processes. 
-      - Keywords Added: "AI development"
-      - Rationale: This connects the CI/CD practice to "AI development," a key area emphasized in the job description. It demonstrates an understanding of efficient development workflows relevant to AI projects.
-      - Original Sentence: Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
-      - Revised Sentence: Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm, directly applicable to complex **AI model design** and implementation.
-      - Keywords Added: "problem-solving", "analytical skills", "AI model design"
-      - Rationale: "Problem-solving" and "Analytical Skills" are listed as essential. Connecting the A* algorithm to "AI model design" bridges the game development project to AI-specific skills, as desired by the job description. 
-      - Original Sentence: Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management. 
-      - Revised Sentence: **Collaborated** with a team to **develop** \"Reversible Learning\", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX **design** and robust database management, demonstrating strong **teamwork** and **communication skills**.
-      - Keywords Added: "Collaborated", "develop", "design", "teamwork", "communication skills"
-      - Rationale:  "Collaboration", "Communication Skills," and "Teamwork" are emphasized in the job description. Including these keywords directly links the project experience to these valued soft skills. The use of "develop" and "design" aligns with the action-oriented language preferred in the job description.
-      - Original Sentence: Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
-      - Revised Sentence: Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs, showcasing a dedication to quality assurance and **analytical** thinking.
-      - Keywords Added: "analytical"
-      - Rationale: "Analytical Skills" are a core requirement mentioned in the job description. This addition emphasizes the analytical approach used in testing and improving the app's quality, connecting the project to the desired skill set. 
-      - Original Sentence: Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives.
-      - Revised Sentence: Demonstrated adaptability and effective **communication** by working in a team environment to meet project deadlines and objectives, highlighting valuable **collaboration** and interpersonal skills.
-      - Keywords Added: "communication", "collaboration"
-      - Rationale: "Collaboration" and "Communication Skills" are considered essential in the job description. By including these keywords, I highlight the applicant's ability to work effectively within a team, which is directly relevant to the job requirements.
-      - Original Sentence: Developed an intuitive user interface (UI) for note organization and question archiving.
-      - Revised Sentence: Developed an intuitive user interface (UI) for note organization and question archiving, emphasizing user-centered **design** principles and a commitment to accessibility.
-      - Keywords Added: "design"
-      - Rationale: While not explicitly listed in the provided keywords, the job description implied a focus on user-centered design by mentioning "AI for Social Good" and "Democratization of AI." Including "design" highlights the UI/UX aspect of the project and subtly aligns it with the company's values.
