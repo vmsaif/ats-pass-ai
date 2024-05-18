@@ -2,298 +2,166 @@
   "Combined Skills List": {
     "Technologies": [
       {
-        "Name": "3D Graphics",
-        "field": "Graphics Programming"
-      },
-      {
-        "Name": "Android Studio",
-        "field": "Mobile Development"
-      },
-      {
-        "Name": "AWS",
-        "field": "Cloud"
-      },
-      {
-        "Name": "C++",
+        "Name": "Python",
         "field": "Programming Language"
-      },
-      {
-        "Name": "CrewAI",
-        "field": "AI, LLM"
-      },
-      {
-        "Name": "Docker",
-        "field": "Containerization"
-      },
-      {
-        "Name": "File I/O",
-        "field": "Data Storage"
-      },
-      {
-        "Name": "Gemini",
-        "field": "AI, LLM"
-      },
-      {
-        "Name": "GitHub Action",
-        "field": "CI/CD"
-      },
-      {
-        "Name": "Git",
-        "field": "Version Control"
-      },
-      {
-        "Name": "GraphQL",
-        "field": "API Development"
       },
       {
         "Name": "Java",
         "field": "Programming Language"
       },
       {
-        "Name": "JavaScript",
-        "field": "Programming Language"
-      },
-      {
-        "Name": "Langchain",
-        "field": "AI, LLM"
-      },
-      {
-        "Name": "Linux",
-        "field": "Operating System"
-      },
-      {
-        "Name": "Markdown",
-        "field": "Documentation"
-      },
-      {
         "Name": "MySQL",
         "field": "Database Management"
       },
       {
-        "Name": "noSQL",
-        "field": "Database Management"
+        "Name": "JSON",
+        "field": "Database Management, NoSQL"
       },
       {
-        "Name": "OpenGL",
-        "field": "Graphics Programming"
-      },
-      {
-        "Name": "Python",
-        "field": "Programming Language"
-      },
-      {
-        "Name": "RAG Search",
-        "field": "AI, LLM"
+        "Name": "NoSQL",
+        "field": "Database Management, NoSQL"
       },
       {
         "Name": "Schema",
         "field": "Database Management"
       },
       {
-        "Name": "SDLC",
-        "field": "Software Development"
+        "Name": "CI/CD",
+        "field": "DevOps, CI/CD"
       },
       {
-        "Name": "Spring Boot",
-        "field": "Java Framework"
+        "Name": "Github Actions",
+        "field": "DevOps, CI/CD"
       },
       {
-        "Name": "SQL",
+        "Name": "AWS",
+        "field": "DevOps, Cloud Computing"
+      },
+      {
+        "Name": "Android Studio",
+        "field": "Mobile Development"
+      },
+      {
+        "Name": "JUnit",
+        "field": "Software Testing, Unit Testing"
+      },
+      {
+        "Name": "C++",
+        "field": "System Programming"
+      },
+      {
+        "Name": "HSQLDB",
         "field": "Database Management"
       },
       {
-        "Name": "Vue.js",
-        "field": "JavaScript Framework"
+        "Name": "OOP",
+        "field": "Programming Concepts"
+      },
+      {
+        "Name": "SDLC",
+        "field": "Programming Concepts"
+      },
+      {
+        "Name": "Debugging",
+        "field": "Software Testing, Troubleshooting"
+      },
+      {
+        "Name": "Test-driven Deployment",
+        "field": "Software Testing, Deployment"
       }
     ],
     "Frameworks": [
       {
-        "Name": "Angular",
-        "field": "JavaScript Framework"
-      },
-      {
-        "Name": "Bootsrap",
-        "field": "CSS Framework"
-      },
-      {
-        "Name": "CI/CD",
-        "field": "Application Deployment"
-      },
-      {
-        "Name": "Django",
-        "field": "Python Framework"
-      },
-      {
-        "Name": "Docsify",
-        "field": "Documentation"
-      },
-      {
-        "Name": "Express.js",
-        "field": "JavaScript Framework"
-      },
-      {
-        "Name": "Flask",
-        "field": "Python Framework"
-      },
-      {
-        "Name": "Gatsby",
-        "field": "Frontend Framework"
-      },
-      {
-        "Name": "Jest",
-        "field": "Testing Framework"
-      },
-      {
-        "Name": "Jekyll",
-        "field": "Documentation"
-      },
-      {
-        "Name": "Next.js",
-        "field": "JavaScript Framework"
-      },
-      {
-        "Name": "OOP",
-        "field": "Programming Concept"
-      },
-      {
-        "Name": "Redux",
-        "field": "State Management"
-      },
-      {
         "Name": "Spring Boot",
         "field": "Java Framework"
       },
       {
-        "Name": "TailwindCSS",
-        "field": "Styling Framework"
+        "Name": "Angular",
+        "field": "JavaScript Framework"
       }
     ],
     "Skills": [
       {
-        "Name": "3D Modeling",
-        "field": "Graphics Design"
+        "Name": "System Analysis",
+        "field": "Programming Concepts"
       },
       {
-        "Name": "AI",
-        "field": "AI, ML"
+        "Name": "Web and Mobile Technologies",
+        "field": "Programming Concepts"
       },
       {
-        "Name": "Algorithms",
-        "field": "Computer Science"
-      },
-      {
-        "Name": "Blockchain",
-        "field": "Blockchain"
-      },
-      {
-        "Name": "Cloud Computing",
-        "field": "Cloud"
+        "Name": "Data Structures",
+        "field": "Programming Concepts"
       },
       {
         "Name": "Communication",
         "field": "Interpersonal Skills"
       },
       {
-        "Name": "Complexity Analysis",
-        "field": "Computer Science"
-      },
-      {
-        "Name": "Critical Thinking",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Data Analysis",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Debugging",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Design Patterns",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Full Stack Development",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Leadership",
-        "field": "Management Skills"
-      },
-      {
-        "Name": "Machine Learning",
-        "field": "AI, ML"
-      },
-      {
-        "Name": "Product Management",
-        "field": "Management Skills"
-      },
-      {
-        "Name": "Project Management",
-        "field": "Management Skills"
+        "Name": "Teamwork",
+        "field": "Collaboration Skills"
       },
       {
         "Name": "Problem Solving",
         "field": "Analytical Skills"
       },
       {
-        "Name": "Responsive Design",
-        "field": "Frontend Development"
+        "Name": "Adaptability",
+        "field": "Soft Skills"
       },
       {
-        "Name": "System Analysis",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Testing",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills"
+        "Name": "Critical Thinking",
+        "field": "Analytical Skills"
       },
       {
         "Name": "Time Management",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Data Analysis",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Machine Learning",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Project Management",
         "field": "Management Skills"
-      },
-      {
-        "Name": "UI/UX Design",
-        "field": "User Experience"
-      },
-      {
-        "Name": "Version Control",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Web and Mobile Technologies",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Web Accessibility",
-        "field": "Frontend Development"
-      },
-      {
-        "Name": "Willingness to learn",
-        "field": "Professional Development"
       }
     ],
     "Soft Skills": [
       {
-        "Name": "Adaptability",
-        "field": "Professional Development"
+        "Name": "Good Interpersonal Skills",
+        "field": "Interpersonal Skills"
       },
       {
-        "Name": "Communication",
-        "field": "Interpersonal Skills"
+        "Name": "Excellent Time Management Skills",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Ability to Prioritize and Multitask",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Ability to Work Under Pressure",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Willingness to Learn",
+        "field": "Soft Skills"
       },
       {
         "Name": "Leadership",
         "field": "Management Skills"
       },
       {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills"
+        "Name": "Complexity Analysis",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Strong Work Ethic",
+        "field": "Soft Skills"
       }
     ]
   }

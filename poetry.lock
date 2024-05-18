@@ -2,13 +2,13 @@
 
 [[package]]
 name = "agentops"
-version = "0.1.9"
+version = "0.1.11"
 description = "Python SDK for developing AI agent evals and observability"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "agentops-0.1.9-py3-none-any.whl", hash = "sha256:af7983ba4929b04a34714dd97d7e82c11384ebbe9d7d8bc7b673e1263c4c79a1"},
-    {file = "agentops-0.1.9.tar.gz", hash = "sha256:7f428bfda2db57a994029b1c9f72b63ca7660616635c9c671b2b729d112a833e"},
+    {file = "agentops-0.1.11-py3-none-any.whl", hash = "sha256:e9411981a5d0b1190b93e3e1124db3ac6f17015c65a84b92a793f34d79b694c9"},
+    {file = "agentops-0.1.11.tar.gz", hash = "sha256:4a365ee56303b5b80d9de21fc13ccb7a3fe44544a6c165327bbfd9213bfe0191"},
 ]
 
 [package.dependencies]
@@ -18,7 +18,7 @@ requests = "2.31.0"
 
 [package.extras]
 dev = ["pytest (==7.4.0)", "requests-mock (==1.11.0)"]
-langchain = ["langchain (>=0.0.354)"]
+langchain = ["langchain (>=1.19,<2.0)"]
 
 [[package]]
 name = "aiohttp"
@@ -804,13 +804,13 @@ tools = ["crewai-tools (>=0.2.5,<0.3.0)"]
 
 [[package]]
 name = "crewai-tools"
-version = "0.2.5"
+version = "0.2.6"
 description = "Set of tools for the crewAI framework"
 optional = false
 python-versions = "<=3.13,>=3.10"
 files = [
-    {file = "crewai_tools-0.2.5-py3-none-any.whl", hash = "sha256:3e36a3f6dc6be5b53308609f7383c3936d39e307987f59fb504931ef1b8ab5d9"},
-    {file = "crewai_tools-0.2.5.tar.gz", hash = "sha256:662d77d14bc1dfcd4d21adf503d5f38a6a88cebe6fcd75141a678070fb0a7e08"},
+    {file = "crewai_tools-0.2.6-py3-none-any.whl", hash = "sha256:b98ce2d40f545ee3c1bef6ba7ce07bfcecc0ebc8faf9db315016515bd709ab90"},
+    {file = "crewai_tools-0.2.6.tar.gz", hash = "sha256:f46d7c89aae927a4059297efc8f9d32d2200db225b9464c7d2a2134b4fc028d5"},
 ]
 
 [package.dependencies]
@@ -884,13 +884,13 @@ test-randomorder = ["pytest-randomly"]
 
 [[package]]
 name = "dataclasses-json"
-version = "0.6.5"
+version = "0.6.6"
 description = "Easily serialize dataclasses to and from JSON."
 optional = false
 python-versions = "<4.0,>=3.7"
 files = [
-    {file = "dataclasses_json-0.6.5-py3-none-any.whl", hash = "sha256:f49c77aa3a85cac5bf5b7f65f4790ca0d2be8ef4d92c75e91ba0103072788a39"},
-    {file = "dataclasses_json-0.6.5.tar.gz", hash = "sha256:1c287594d9fcea72dc42d6d3836cf14848c2dc5ce88f65ed61b36b57f515fe26"},
+    {file = "dataclasses_json-0.6.6-py3-none-any.whl", hash = "sha256:e54c5c87497741ad454070ba0ed411523d46beb5da102e221efb873801b0ba85"},
+    {file = "dataclasses_json-0.6.6.tar.gz", hash = "sha256:0c09827d26fffda27f1be2fed7a7a01a29c5ddcd2eb6393ad5ebf9d77e9deae8"},
 ]
 
 [package.dependencies]
@@ -970,6 +970,26 @@ python-versions = "*"
 files = [
     {file = "docx2txt-0.8.tar.gz", hash = "sha256:2c06d98d7cfe2d3947e5760a57d924e3ff07745b379c8737723922e7009236e5"},
 ]
+
+[[package]]
+name = "duckduckgo-search"
+version = "6.1.0"
+description = "Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "duckduckgo_search-6.1.0-py3-none-any.whl", hash = "sha256:0f9ea0cb0d23575d98255931c0d437cf67ac958be8e54459704b833fa903e693"},
+    {file = "duckduckgo_search-6.1.0.tar.gz", hash = "sha256:88e008e46b8c6037559f0617dfd9f034e5dd9b384b2795343a9ef25782ca053d"},
+]
+
+[package.dependencies]
+click = ">=8.1.7"
+orjson = ">=3.10.3"
+pyreqwest-impersonate = ">=0.4.5"
+
+[package.extras]
+dev = ["mypy (>=1.10.0)", "pytest (>=8.2.0)", "pytest-asyncio (>=0.23.6)", "ruff (>=0.4.4)"]
+lxml = ["lxml (>=5.2.2)"]
 
 [[package]]
 name = "embedchain"
@@ -1182,13 +1202,13 @@ files = [
 
 [[package]]
 name = "fsspec"
-version = "2024.3.1"
+version = "2024.5.0"
 description = "File-system specification"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "fsspec-2024.3.1-py3-none-any.whl", hash = "sha256:918d18d41bf73f0e2b261824baeb1b124bcf771767e3a26425cd7dec3332f512"},
-    {file = "fsspec-2024.3.1.tar.gz", hash = "sha256:f39780e282d7d117ffb42bb96992f8a90795e4d0fb0f661a70ca39fe9c43ded9"},
+    {file = "fsspec-2024.5.0-py3-none-any.whl", hash = "sha256:e0fdbc446d67e182f49a70b82cf7889028a63588fde6b222521f10937b2b670c"},
+    {file = "fsspec-2024.5.0.tar.gz", hash = "sha256:1d021b0b0f933e3b3029ed808eb400c08ba101ca2de4b3483fbc9ca23fcee94a"},
 ]
 
 [package.extras]
@@ -1196,7 +1216,7 @@ abfs = ["adlfs"]
 adl = ["adlfs"]
 arrow = ["pyarrow (>=1)"]
 dask = ["dask", "distributed"]
-devel = ["pytest", "pytest-cov"]
+dev = ["pre-commit", "ruff"]
 dropbox = ["dropbox", "dropboxdrivefs", "requests"]
 full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "dask", "distributed", "dropbox", "dropboxdrivefs", "fusepy", "gcsfs", "libarchive-c", "ocifs", "panel", "paramiko", "pyarrow (>=1)", "pygit2", "requests", "s3fs", "smbprotocol", "tqdm"]
 fuse = ["fusepy"]
@@ -1213,6 +1233,9 @@ s3 = ["s3fs"]
 sftp = ["paramiko"]
 smb = ["smbprotocol"]
 ssh = ["paramiko"]
+test = ["aiohttp (!=4.0.0a0,!=4.0.0a1)", "numpy", "pytest", "pytest-asyncio (!=0.22.0)", "pytest-benchmark", "pytest-cov", "pytest-mock", "pytest-recording", "pytest-rerunfailures", "requests"]
+test-downstream = ["aiobotocore (>=2.5.4,<3.0.0)", "dask-expr", "dask[dataframe,test]", "moto[server] (>4,<5)", "pytest-timeout", "xarray"]
+test-full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "cloudpickle", "dask", "distributed", "dropbox", "dropboxdrivefs", "fastparquet", "fusepy", "gcsfs", "jinja2", "kerchunk", "libarchive-c", "lz4", "notebook", "numpy", "ocifs", "pandas", "panel", "paramiko", "pyarrow", "pyarrow (>=1)", "pyftpdlib", "pygit2", "pytest", "pytest-asyncio (!=0.22.0)", "pytest-benchmark", "pytest-cov", "pytest-mock", "pytest-recording", "pytest-rerunfailures", "python-snappy", "requests", "smbprotocol", "tqdm", "urllib3", "zarr", "zstandard"]
 tqdm = ["tqdm"]
 
 [[package]]
@@ -1249,13 +1272,13 @@ test = ["coverage[toml]", "ddt (>=1.1.1,!=1.4.3)", "mock", "mypy", "pre-commit",
 
 [[package]]
 name = "google-ai-generativelanguage"
-version = "0.6.2"
+version = "0.6.4"
 description = "Google Ai Generativelanguage API client library"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google-ai-generativelanguage-0.6.2.tar.gz", hash = "sha256:308791ac3b9dad015b359172970739aa3753dd542142a416d07f9fa047e22386"},
-    {file = "google_ai_generativelanguage-0.6.2-py3-none-any.whl", hash = "sha256:bf84c34c641570d7e8a1f2e6901e6771af1438f2ee8307d1801fd43585f9b1c6"},
+    {file = "google-ai-generativelanguage-0.6.4.tar.gz", hash = "sha256:1750848c12af96cb24ae1c3dd05e4bfe24867dc4577009ed03e1042d8421e874"},
+    {file = "google_ai_generativelanguage-0.6.4-py3-none-any.whl", hash = "sha256:730e471aa549797118fb1c88421ba1957741433ada575cf5dd08d3aebf903ab1"},
 ]
 
 [package.dependencies]
@@ -1297,13 +1320,13 @@ grpcio-gcp = ["grpcio-gcp (>=0.2.2,<1.0.dev0)"]
 
 [[package]]
 name = "google-api-python-client"
-version = "2.128.0"
+version = "2.129.0"
 description = "Google API Client Library for Python"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google-api-python-client-2.128.0.tar.gz", hash = "sha256:908af182dfc1cd79412a489b37fe45e4f3cc99c74e80c7c477ca5babaa54eea5"},
-    {file = "google_api_python_client-2.128.0-py2.py3-none-any.whl", hash = "sha256:99da6acb0acc648e309102b0e0262d7fef30f07f6bf56c6eeaa0504ceca113e3"},
+    {file = "google-api-python-client-2.129.0.tar.gz", hash = "sha256:984cc8cc8eb4923468b1926d2b8effc5b459a4dda3c845896eb87c153b28ef84"},
+    {file = "google_api_python_client-2.129.0-py2.py3-none-any.whl", hash = "sha256:d50f7e2dfdbb7fc2732f6a0cba1c54d7bb676390679526c6bb628c901e43ec86"},
 ]
 
 [package.dependencies]
@@ -1353,13 +1376,13 @@ httplib2 = ">=0.19.0"
 
 [[package]]
 name = "google-cloud-aiplatform"
-version = "1.50.0"
+version = "1.51.0"
 description = "Vertex AI API client library"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "google-cloud-aiplatform-1.50.0.tar.gz", hash = "sha256:f9f7cc76dbaad3905408fd07d6322caa6c4cd60a0330e4b15de66033c6598cc6"},
-    {file = "google_cloud_aiplatform-1.50.0-py2.py3-none-any.whl", hash = "sha256:6aa8246086252fe01d3438cd6566561147405a09611cf03f082be197c77b8197"},
+    {file = "google-cloud-aiplatform-1.51.0.tar.gz", hash = "sha256:901993b4d14392452699c14cf23d72c01c5488ee36a7e00b23195e64d7d2f5ec"},
+    {file = "google_cloud_aiplatform-1.51.0-py2.py3-none-any.whl", hash = "sha256:f2d3ff231454fe397f02fce1358680dea76ed7c74fc42e6c7e1aa1acb1648df3"},
 ]
 
 [package.dependencies]
@@ -1381,8 +1404,8 @@ cloud-profiler = ["tensorboard-plugin-profile (>=2.4.0,<3.0.0dev)", "tensorflow 
 datasets = ["pyarrow (>=10.0.1)", "pyarrow (>=14.0.0)", "pyarrow (>=3.0.0,<8.0dev)"]
 endpoint = ["requests (>=2.28.1)"]
 full = ["cloudpickle (<3.0)", "docker (>=5.0.3)", "explainable-ai-sdk (>=1.0.0)", "fastapi (>=0.71.0,<=0.109.1)", "google-cloud-bigquery", "google-cloud-bigquery-storage", "google-cloud-logging (<4.0)", "google-vizier (>=0.1.6)", "httpx (>=0.23.0,<0.25.0)", "immutabledict", "lit-nlp (==0.4.0)", "mlflow (>=1.27.0,<=2.1.1)", "nest-asyncio (>=1.0.0,<1.6.0)", "numpy (>=1.15.0)", "pandas (>=1.0.0)", "pandas (>=1.0.0,<2.2.0)", "pyarrow (>=10.0.1)", "pyarrow (>=14.0.0)", "pyarrow (>=3.0.0,<8.0dev)", "pyarrow (>=6.0.1)", "pydantic (<2)", "pyyaml (>=5.3.1,<7)", "ray[default] (>=2.4,<2.5.dev0 || >2.9.0,!=2.9.1,!=2.9.2,<=2.9.3)", "ray[default] (>=2.5,<=2.9.3)", "requests (>=2.28.1)", "starlette (>=0.17.1)", "tensorflow (>=2.3.0,<3.0.0dev)", "tensorflow (>=2.3.0,<3.0.0dev)", "urllib3 (>=1.21.1,<1.27)", "uvicorn[standard] (>=0.16.0)"]
-langchain = ["langchain (>=0.1.13,<0.2)", "langchain-core (<0.2)", "langchain-google-vertexai (<0.2)"]
-langchain-testing = ["absl-py", "cloudpickle (>=2.2.1,<3.0)", "langchain (>=0.1.13,<0.2)", "langchain-core (<0.2)", "langchain-google-vertexai (<0.2)", "pydantic (>=2.6.3,<3)", "pytest-xdist"]
+langchain = ["langchain (>=0.1.16,<0.2)", "langchain-core (<0.2)", "langchain-google-vertexai (<2)"]
+langchain-testing = ["absl-py", "cloudpickle (>=2.2.1,<3.0)", "langchain (>=0.1.16,<0.2)", "langchain-core (<0.2)", "langchain-google-vertexai (<2)", "pydantic (>=2.6.3,<3)", "pytest-xdist"]
 lit = ["explainable-ai-sdk (>=1.0.0)", "lit-nlp (==0.4.0)", "pandas (>=1.0.0)", "tensorflow (>=2.3.0,<3.0.0dev)"]
 metadata = ["numpy (>=1.15.0)", "pandas (>=1.0.0)"]
 pipelines = ["pyyaml (>=5.3.1,<7)"]
@@ -1400,13 +1423,13 @@ xai = ["tensorflow (>=2.3.0,<3.0.0dev)"]
 
 [[package]]
 name = "google-cloud-bigquery"
-version = "3.22.0"
+version = "3.23.0"
 description = "Google BigQuery API client library"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google-cloud-bigquery-3.22.0.tar.gz", hash = "sha256:957591e6f948d7cb4aa0f7a8e4e47b4617cd7f0269e28a71c37953c39b6e8a4c"},
-    {file = "google_cloud_bigquery-3.22.0-py2.py3-none-any.whl", hash = "sha256:80c8e31a23b68b7d3ae5d138c9a9edff69d100ee812db73a5e63c79a13a5063d"},
+    {file = "google-cloud-bigquery-3.23.0.tar.gz", hash = "sha256:7ecdb207727d513b1bce1f213dbb926ed2e1d4f0122778de00f0e56d19d47a01"},
+    {file = "google_cloud_bigquery-3.23.0-py2.py3-none-any.whl", hash = "sha256:dc0a4a47ab541a34aa1dc1f48539d88c091adc0637da7744d7fab6f3bc8886d5"},
 ]
 
 [package.dependencies]
@@ -1569,16 +1592,16 @@ testing = ["pytest"]
 
 [[package]]
 name = "google-generativeai"
-version = "0.5.2"
+version = "0.5.4"
 description = "Google Generative AI High level API client library and tools."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "google_generativeai-0.5.2-py3-none-any.whl", hash = "sha256:56f39485a0a673c93c21ec31c17809cc6a964193fb77b7ce809ad15d0dd72d7b"},
+    {file = "google_generativeai-0.5.4-py3-none-any.whl", hash = "sha256:036d63ee35e7c8aedceda4f81c390a5102808af09ff3a6e57e27ed0be0708f3c"},
 ]
 
 [package.dependencies]
-google-ai-generativelanguage = "0.6.2"
+google-ai-generativelanguage = "0.6.4"
 google-api-core = "*"
 google-api-python-client = "*"
 google-auth = ">=2.15.0"
@@ -1715,13 +1738,13 @@ test = ["objgraph", "psutil"]
 
 [[package]]
 name = "groq"
-version = "0.5.0"
+version = "0.6.0"
 description = "The official Python library for the groq API"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "groq-0.5.0-py3-none-any.whl", hash = "sha256:a7e6be1118bcdfea3ed071ec00f505a34d4e6ec28c435adb5a5afd33545683a1"},
-    {file = "groq-0.5.0.tar.gz", hash = "sha256:d476cdc3383b45d2a4dc1876142a9542e663ea1029f9e07a05de24f895cae48c"},
+    {file = "groq-0.6.0-py3-none-any.whl", hash = "sha256:99e2e5ea48df074c09bffcc349b049d3573d9cb35da872d4acbbe50a4b266414"},
+    {file = "groq-0.6.0.tar.gz", hash = "sha256:a96f3a49a0d4119a1bec7f6352af0a87733a2865d464da34a4eb27bfe8068c7e"},
 ]
 
 [package.dependencies]
@@ -2150,13 +2173,13 @@ tests = ["aiohttp", "duckdb", "pandas (>=1.4)", "polars (>=0.19)", "pytest", "py
 
 [[package]]
 name = "langchain"
-version = "0.1.19"
+version = "0.1.20"
 description = "Building applications with LLMs through composability"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain-0.1.19-py3-none-any.whl", hash = "sha256:a1270b70139344a09f91c8a1b117c4300d9920d6d88aaaaf5ba729625ac68801"},
-    {file = "langchain-0.1.19.tar.gz", hash = "sha256:7d2ffb66944a84dcac99901c4fd33f6d92aa7f794d17b5ba9a29c55a7306e32c"},
+    {file = "langchain-0.1.20-py3-none-any.whl", hash = "sha256:09991999fbd6c3421a12db3c7d1f52d55601fc41d9b2a3ef51aab2e0e9c38da9"},
+    {file = "langchain-0.1.20.tar.gz", hash = "sha256:f35c95eed8c8375e02dce95a34f2fd4856a4c98269d6dc34547a23dba5beab7e"},
 ]
 
 [package.dependencies]
@@ -2238,57 +2261,55 @@ extended-testing = ["jinja2 (>=3,<4)"]
 
 [[package]]
 name = "langchain-google-genai"
-version = "1.0.3"
+version = "1.0.4"
 description = "An integration package connecting Google's genai package and LangChain"
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "langchain_google_genai-1.0.3-py3-none-any.whl", hash = "sha256:423fde5888ca9800fe6944a2f4ea5ed34cb9b37908092d9228f700ceefa365d8"},
-    {file = "langchain_google_genai-1.0.3.tar.gz", hash = "sha256:c575782e7f5e48b93c061a20e8dc5c9549aeb526180a6bef4e057e80f07b821c"},
+    {file = "langchain_google_genai-1.0.4-py3-none-any.whl", hash = "sha256:e567cc401f8d629fce489ee031d258da7fa4b7da0abb8ed926d6990c650b659e"},
+    {file = "langchain_google_genai-1.0.4.tar.gz", hash = "sha256:b6beccfe7504ce9f8778a8df23dc49239fd91cf076a55d61759a09fc1373ca26"},
 ]
 
 [package.dependencies]
 google-generativeai = ">=0.5.2,<0.6.0"
-langchain-core = ">=0.1.45,<0.2"
+langchain-core = ">=0.1.45,<0.3"
 
 [package.extras]
 images = ["pillow (>=10.1.0,<11.0.0)"]
 
 [[package]]
 name = "langchain-google-vertexai"
-version = "1.0.3"
+version = "1.0.4"
 description = "An integration package connecting Google VertexAI and LangChain"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain_google_vertexai-1.0.3-py3-none-any.whl", hash = "sha256:407caa2b10cd20d4748cebfc6e405d28d8ef4a0e4f21b01739eca4e24c4f04d2"},
-    {file = "langchain_google_vertexai-1.0.3.tar.gz", hash = "sha256:a3929bc07b971072e7cd21ffe28d843640faaf93763f473077d6786745cce247"},
+    {file = "langchain_google_vertexai-1.0.4-py3-none-any.whl", hash = "sha256:f9d217df2d5cfafb2e551ddd5f1c43611222f542ee0df0cc3b5faed82e657ee3"},
+    {file = "langchain_google_vertexai-1.0.4.tar.gz", hash = "sha256:bb2d2e93cc2896b9bdc96789c2df247f6392184dffc0c3dddc06889f2b530465"},
 ]
 
 [package.dependencies]
 google-cloud-aiplatform = ">=1.47.0,<2.0.0"
 google-cloud-storage = ">=2.14.0,<3.0.0"
-langchain-core = ">=0.1.42,<0.2.0"
-types-protobuf = ">=4.24.0.4,<5.0.0.0"
-types-requests = ">=2.31.0,<3.0.0"
+langchain-core = ">=0.1.42,<0.3"
 
 [package.extras]
 anthropic = ["anthropic[vertexai] (>=0.23.0,<1)"]
 
 [[package]]
 name = "langchain-groq"
-version = "0.1.3"
+version = "0.1.4"
 description = "An integration package connecting Groq and LangChain"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain_groq-0.1.3-py3-none-any.whl", hash = "sha256:1420c118507a85fbea560a67e3c881d880541a1e347d8c44da23dfd6bd14dcb9"},
-    {file = "langchain_groq-0.1.3.tar.gz", hash = "sha256:1fefb70b01f413b407709df97cd85a881a7bcce743b0ad9cc8514b27c15e5951"},
+    {file = "langchain_groq-0.1.4-py3-none-any.whl", hash = "sha256:83fa9252eb841dc29e7c0b77c5374fa26383b909c2e87eb54824ff0f9529f173"},
+    {file = "langchain_groq-0.1.4.tar.gz", hash = "sha256:eb7e517cfcb245b0b598f93c1e87cc15100e336eb0c1b930c43e7a19dbe131d6"},
 ]
 
 [package.dependencies]
 groq = ">=0.4.1,<1"
-langchain-core = ">=0.1.45,<0.2.0"
+langchain-core = ">=0.1.45,<0.3"
 
 [[package]]
 name = "langchain-openai"
@@ -2309,30 +2330,30 @@ tiktoken = ">=0.5.2,<0.6.0"
 
 [[package]]
 name = "langchain-text-splitters"
-version = "0.0.1"
+version = "0.0.2"
 description = "LangChain text splitting utilities"
 optional = false
-python-versions = ">=3.8.1,<4.0"
+python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langchain_text_splitters-0.0.1-py3-none-any.whl", hash = "sha256:f5b802f873f5ff6a8b9259ff34d53ed989666ef4e1582e6d1adb3b5520e3839a"},
-    {file = "langchain_text_splitters-0.0.1.tar.gz", hash = "sha256:ac459fa98799f5117ad5425a9330b21961321e30bc19a2a2f9f761ddadd62aa1"},
+    {file = "langchain_text_splitters-0.0.2-py3-none-any.whl", hash = "sha256:13887f32705862c1e1454213cb7834a63aae57c26fcd80346703a1d09c46168d"},
+    {file = "langchain_text_splitters-0.0.2.tar.gz", hash = "sha256:ac8927dc0ba08eba702f6961c9ed7df7cead8de19a9f7101ab2b5ea34201b3c1"},
 ]
 
 [package.dependencies]
-langchain-core = ">=0.1.28,<0.2.0"
+langchain-core = ">=0.1.28,<0.3"
 
 [package.extras]
-extended-testing = ["lxml (>=5.1.0,<6.0.0)"]
+extended-testing = ["beautifulsoup4 (>=4.12.3,<5.0.0)", "lxml (>=4.9.3,<6.0)"]
 
 [[package]]
 name = "langsmith"
-version = "0.1.56"
+version = "0.1.59"
 description = "Client library to connect to the LangSmith LLM Tracing and Evaluation Platform."
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "langsmith-0.1.56-py3-none-any.whl", hash = "sha256:2f930e054ea8eccd8ff99f0f129ae7d2513973b2e706d5483f44ea9951a1dca0"},
-    {file = "langsmith-0.1.56.tar.gz", hash = "sha256:ff645b5bf16e2566740218ed6c048a1f8edbbedb4480a0d305a837ec71303fbf"},
+    {file = "langsmith-0.1.59-py3-none-any.whl", hash = "sha256:445e3bc1d3baa1e5340cd979907a19483b9763a2ed37b863a01113d406f69345"},
+    {file = "langsmith-0.1.59.tar.gz", hash = "sha256:e748a89f4dd6aa441349143e49e546c03b5dfb43376a25bfef6a5ca792fe1437"},
 ]
 
 [package.dependencies]
@@ -2342,13 +2363,13 @@ requests = ">=2,<3"
 
 [[package]]
 name = "mako"
-version = "1.3.3"
+version = "1.3.5"
 description = "A super-fast templating language that borrows the best ideas from the existing templating languages."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "Mako-1.3.3-py3-none-any.whl", hash = "sha256:5324b88089a8978bf76d1629774fcc2f1c07b82acdf00f4c5dd8ceadfffc4b40"},
-    {file = "Mako-1.3.3.tar.gz", hash = "sha256:e16c01d9ab9c11f7290eef1cfefc093fb5a45ee4a3da09e2fec2e4d1bae54e73"},
+    {file = "Mako-1.3.5-py3-none-any.whl", hash = "sha256:260f1dbc3a519453a9c856dedfe4beb4e50bd5a26d96386cb6c80856556bb91a"},
+    {file = "Mako-1.3.5.tar.gz", hash = "sha256:48dbc20568c1d276a2698b36d968fa76161bf127194907ea6fc594fa81f943bc"},
 ]
 
 [package.dependencies]
@@ -2842,13 +2863,13 @@ sympy = "*"
 
 [[package]]
 name = "openai"
-version = "1.28.0"
+version = "1.30.1"
 description = "The official Python library for the openai API"
 optional = false
 python-versions = ">=3.7.1"
 files = [
-    {file = "openai-1.28.0-py3-none-any.whl", hash = "sha256:94b5a99f5121e1747dda1bb8fff31820d5ab4b49056a9cf2e3605f5c90011955"},
-    {file = "openai-1.28.0.tar.gz", hash = "sha256:ac43b8b48aec70de4b76cfc96ae906bf8d5814427475b9dabb662f84f655f0e1"},
+    {file = "openai-1.30.1-py3-none-any.whl", hash = "sha256:c9fb3c3545c118bbce8deb824397b9433a66d0d0ede6a96f7009c95b76de4a46"},
+    {file = "openai-1.30.1.tar.gz", hash = "sha256:4f85190e577cba0b066e1950b8eb9b11d25bc7ebcc43a86b326ce1bfa564ec74"},
 ]
 
 [package.dependencies]
@@ -3299,47 +3320,47 @@ files = [
 
 [[package]]
 name = "pyarrow"
-version = "16.0.0"
+version = "16.1.0"
 description = "Python library for Apache Arrow"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pyarrow-16.0.0-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:22a1fdb1254e5095d629e29cd1ea98ed04b4bbfd8e42cc670a6b639ccc208b60"},
-    {file = "pyarrow-16.0.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:574a00260a4ed9d118a14770edbd440b848fcae5a3024128be9d0274dbcaf858"},
-    {file = "pyarrow-16.0.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c0815d0ddb733b8c1b53a05827a91f1b8bde6240f3b20bf9ba5d650eb9b89cdf"},
-    {file = "pyarrow-16.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:df0080339387b5d30de31e0a149c0c11a827a10c82f0c67d9afae3981d1aabb7"},
-    {file = "pyarrow-16.0.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:edf38cce0bf0dcf726e074159c60516447e4474904c0033f018c1f33d7dac6c5"},
-    {file = "pyarrow-16.0.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:91d28f9a40f1264eab2af7905a4d95320ac2f287891e9c8b0035f264fe3c3a4b"},
-    {file = "pyarrow-16.0.0-cp310-cp310-win_amd64.whl", hash = "sha256:99af421ee451a78884d7faea23816c429e263bd3618b22d38e7992c9ce2a7ad9"},
-    {file = "pyarrow-16.0.0-cp311-cp311-macosx_10_15_x86_64.whl", hash = "sha256:d22d0941e6c7bafddf5f4c0662e46f2075850f1c044bf1a03150dd9e189427ce"},
-    {file = "pyarrow-16.0.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:266ddb7e823f03733c15adc8b5078db2df6980f9aa93d6bb57ece615df4e0ba7"},
-    {file = "pyarrow-16.0.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5cc23090224b6594f5a92d26ad47465af47c1d9c079dd4a0061ae39551889efe"},
-    {file = "pyarrow-16.0.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:56850a0afe9ef37249d5387355449c0f94d12ff7994af88f16803a26d38f2016"},
-    {file = "pyarrow-16.0.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:705db70d3e2293c2f6f8e84874b5b775f690465798f66e94bb2c07bab0a6bb55"},
-    {file = "pyarrow-16.0.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:5448564754c154997bc09e95a44b81b9e31ae918a86c0fcb35c4aa4922756f55"},
-    {file = "pyarrow-16.0.0-cp311-cp311-win_amd64.whl", hash = "sha256:729f7b262aa620c9df8b9967db96c1575e4cfc8c25d078a06968e527b8d6ec05"},
-    {file = "pyarrow-16.0.0-cp312-cp312-macosx_10_15_x86_64.whl", hash = "sha256:fb8065dbc0d051bf2ae2453af0484d99a43135cadabacf0af588a3be81fbbb9b"},
-    {file = "pyarrow-16.0.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:20ce707d9aa390593ea93218b19d0eadab56390311cb87aad32c9a869b0e958c"},
-    {file = "pyarrow-16.0.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5823275c8addbbb50cd4e6a6839952682a33255b447277e37a6f518d6972f4e1"},
-    {file = "pyarrow-16.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1ab8b9050752b16a8b53fcd9853bf07d8daf19093533e990085168f40c64d978"},
-    {file = "pyarrow-16.0.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:42e56557bc7c5c10d3e42c3b32f6cff649a29d637e8f4e8b311d334cc4326730"},
-    {file = "pyarrow-16.0.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:2a7abdee4a4a7cfa239e2e8d721224c4b34ffe69a0ca7981354fe03c1328789b"},
-    {file = "pyarrow-16.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:ef2f309b68396bcc5a354106741d333494d6a0d3e1951271849787109f0229a6"},
-    {file = "pyarrow-16.0.0-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:ed66e5217b4526fa3585b5e39b0b82f501b88a10d36bd0d2a4d8aa7b5a48e2df"},
-    {file = "pyarrow-16.0.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:cc8814310486f2a73c661ba8354540f17eef51e1b6dd090b93e3419d3a097b3a"},
-    {file = "pyarrow-16.0.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3c2f5e239db7ed43e0ad2baf46a6465f89c824cc703f38ef0fde927d8e0955f7"},
-    {file = "pyarrow-16.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f293e92d1db251447cb028ae12f7bc47526e4649c3a9924c8376cab4ad6b98bd"},
-    {file = "pyarrow-16.0.0-cp38-cp38-manylinux_2_28_aarch64.whl", hash = "sha256:dd9334a07b6dc21afe0857aa31842365a62eca664e415a3f9536e3a8bb832c07"},
-    {file = "pyarrow-16.0.0-cp38-cp38-manylinux_2_28_x86_64.whl", hash = "sha256:d91073d1e2fef2c121154680e2ba7e35ecf8d4969cc0af1fa6f14a8675858159"},
-    {file = "pyarrow-16.0.0-cp38-cp38-win_amd64.whl", hash = "sha256:71d52561cd7aefd22cf52538f262850b0cc9e4ec50af2aaa601da3a16ef48877"},
-    {file = "pyarrow-16.0.0-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:b93c9a50b965ee0bf4fef65e53b758a7e8dcc0c2d86cebcc037aaaf1b306ecc0"},
-    {file = "pyarrow-16.0.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:d831690844706e374c455fba2fb8cfcb7b797bfe53ceda4b54334316e1ac4fa4"},
-    {file = "pyarrow-16.0.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:35692ce8ad0b8c666aa60f83950957096d92f2a9d8d7deda93fb835e6053307e"},
-    {file = "pyarrow-16.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9dd3151d098e56f16a8389c1247137f9e4c22720b01c6f3aa6dec29a99b74d80"},
-    {file = "pyarrow-16.0.0-cp39-cp39-manylinux_2_28_aarch64.whl", hash = "sha256:bd40467bdb3cbaf2044ed7a6f7f251c8f941c8b31275aaaf88e746c4f3ca4a7a"},
-    {file = "pyarrow-16.0.0-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:00a1dcb22ad4ceb8af87f7bd30cc3354788776c417f493089e0a0af981bc8d80"},
-    {file = "pyarrow-16.0.0-cp39-cp39-win_amd64.whl", hash = "sha256:fda9a7cebd1b1d46c97b511f60f73a5b766a6de4c5236f144f41a5d5afec1f35"},
-    {file = "pyarrow-16.0.0.tar.gz", hash = "sha256:59bb1f1edbbf4114c72415f039f1359f1a57d166a331c3229788ccbfbb31689a"},
+    {file = "pyarrow-16.1.0-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:17e23b9a65a70cc733d8b738baa6ad3722298fa0c81d88f63ff94bf25eaa77b9"},
+    {file = "pyarrow-16.1.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4740cc41e2ba5d641071d0ab5e9ef9b5e6e8c7611351a5cb7c1d175eaf43674a"},
+    {file = "pyarrow-16.1.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:98100e0268d04e0eec47b73f20b39c45b4006f3c4233719c3848aa27a03c1aef"},
+    {file = "pyarrow-16.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f68f409e7b283c085f2da014f9ef81e885d90dcd733bd648cfba3ef265961848"},
+    {file = "pyarrow-16.1.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:a8914cd176f448e09746037b0c6b3a9d7688cef451ec5735094055116857580c"},
+    {file = "pyarrow-16.1.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:48be160782c0556156d91adbdd5a4a7e719f8d407cb46ae3bb4eaee09b3111bd"},
+    {file = "pyarrow-16.1.0-cp310-cp310-win_amd64.whl", hash = "sha256:9cf389d444b0f41d9fe1444b70650fea31e9d52cfcb5f818b7888b91b586efff"},
+    {file = "pyarrow-16.1.0-cp311-cp311-macosx_10_15_x86_64.whl", hash = "sha256:d0ebea336b535b37eee9eee31761813086d33ed06de9ab6fc6aaa0bace7b250c"},
+    {file = "pyarrow-16.1.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:2e73cfc4a99e796727919c5541c65bb88b973377501e39b9842ea71401ca6c1c"},
+    {file = "pyarrow-16.1.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bf9251264247ecfe93e5f5a0cd43b8ae834f1e61d1abca22da55b20c788417f6"},
+    {file = "pyarrow-16.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ddf5aace92d520d3d2a20031d8b0ec27b4395cab9f74e07cc95edf42a5cc0147"},
+    {file = "pyarrow-16.1.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:25233642583bf658f629eb230b9bb79d9af4d9f9229890b3c878699c82f7d11e"},
+    {file = "pyarrow-16.1.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:a33a64576fddfbec0a44112eaf844c20853647ca833e9a647bfae0582b2ff94b"},
+    {file = "pyarrow-16.1.0-cp311-cp311-win_amd64.whl", hash = "sha256:185d121b50836379fe012753cf15c4ba9638bda9645183ab36246923875f8d1b"},
+    {file = "pyarrow-16.1.0-cp312-cp312-macosx_10_15_x86_64.whl", hash = "sha256:2e51ca1d6ed7f2e9d5c3c83decf27b0d17bb207a7dea986e8dc3e24f80ff7d6f"},
+    {file = "pyarrow-16.1.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:06ebccb6f8cb7357de85f60d5da50e83507954af617d7b05f48af1621d331c9a"},
+    {file = "pyarrow-16.1.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b04707f1979815f5e49824ce52d1dceb46e2f12909a48a6a753fe7cafbc44a0c"},
+    {file = "pyarrow-16.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0d32000693deff8dc5df444b032b5985a48592c0697cb6e3071a5d59888714e2"},
+    {file = "pyarrow-16.1.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:8785bb10d5d6fd5e15d718ee1d1f914fe768bf8b4d1e5e9bf253de8a26cb1628"},
+    {file = "pyarrow-16.1.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:e1369af39587b794873b8a307cc6623a3b1194e69399af0efd05bb202195a5a7"},
+    {file = "pyarrow-16.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:febde33305f1498f6df85e8020bca496d0e9ebf2093bab9e0f65e2b4ae2b3444"},
+    {file = "pyarrow-16.1.0-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:b5f5705ab977947a43ac83b52ade3b881eb6e95fcc02d76f501d549a210ba77f"},
+    {file = "pyarrow-16.1.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:0d27bf89dfc2576f6206e9cd6cf7a107c9c06dc13d53bbc25b0bd4556f19cf5f"},
+    {file = "pyarrow-16.1.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0d07de3ee730647a600037bc1d7b7994067ed64d0eba797ac74b2bc77384f4c2"},
+    {file = "pyarrow-16.1.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fbef391b63f708e103df99fbaa3acf9f671d77a183a07546ba2f2c297b361e83"},
+    {file = "pyarrow-16.1.0-cp38-cp38-manylinux_2_28_aarch64.whl", hash = "sha256:19741c4dbbbc986d38856ee7ddfdd6a00fc3b0fc2d928795b95410d38bb97d15"},
+    {file = "pyarrow-16.1.0-cp38-cp38-manylinux_2_28_x86_64.whl", hash = "sha256:f2c5fb249caa17b94e2b9278b36a05ce03d3180e6da0c4c3b3ce5b2788f30eed"},
+    {file = "pyarrow-16.1.0-cp38-cp38-win_amd64.whl", hash = "sha256:e6b6d3cd35fbb93b70ade1336022cc1147b95ec6af7d36906ca7fe432eb09710"},
+    {file = "pyarrow-16.1.0-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:18da9b76a36a954665ccca8aa6bd9f46c1145f79c0bb8f4f244f5f8e799bca55"},
+    {file = "pyarrow-16.1.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:99f7549779b6e434467d2aa43ab2b7224dd9e41bdde486020bae198978c9e05e"},
+    {file = "pyarrow-16.1.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f07fdffe4fd5b15f5ec15c8b64584868d063bc22b86b46c9695624ca3505b7b4"},
+    {file = "pyarrow-16.1.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ddfe389a08ea374972bd4065d5f25d14e36b43ebc22fc75f7b951f24378bf0b5"},
+    {file = "pyarrow-16.1.0-cp39-cp39-manylinux_2_28_aarch64.whl", hash = "sha256:3b20bd67c94b3a2ea0a749d2a5712fc845a69cb5d52e78e6449bbd295611f3aa"},
+    {file = "pyarrow-16.1.0-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:ba8ac20693c0bb0bf4b238751d4409e62852004a8cf031c73b0e0962b03e45e3"},
+    {file = "pyarrow-16.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:31a1851751433d89a986616015841977e0a188662fcffd1a5677453f1df2de0a"},
+    {file = "pyarrow-16.1.0.tar.gz", hash = "sha256:15fbb22ea96d11f0b5768504a3f961edab25eaf4197c341720c4a387f6c60315"},
 ]
 
 [package.dependencies]
@@ -3698,14 +3719,34 @@ files = [
 ]
 
 [[package]]
+name = "pyreqwest-impersonate"
+version = "0.4.5"
+description = "HTTP client that can impersonate web browsers, mimicking their headers and `TLS/JA3/JA4/HTTP2` fingerprints"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:d1b2f7a44c907699a8c8a40bcc9b25b5a8db6f37f292f106374314ef4d469f0b"},
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:539d9a14f308a778a9a30afeb308207588703d1d2e74cd9b890cf9f5c4f86bce"},
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:9012709b52d84d940f193e77d5e73d4b61c782ad60220b6648a54865a372eece"},
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:f0aedda1b8b3d62c627c8a8921a2fc702977108f83c90d675fa1900e68ea8fe5"},
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:910fb19e209a4a49156410226e010dff674c69e8c570817cc3fec9e8d80b6ea5"},
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:482e6254fcc666234cc3a53cdbfa8642991a7e454e45233f040687f9c96ffa88"},
+    {file = "pyreqwest_impersonate-0.4.5-cp38-abi3-win_amd64.whl", hash = "sha256:9ed0e07181a47af12624e50db388b0eb4e6c985be9a276ac5c7494fef492a100"},
+    {file = "pyreqwest_impersonate-0.4.5.tar.gz", hash = "sha256:27db49d0e244d5ff31cce7f66ba3a4fac4a53c33445970e6c7467672d9c5f56f"},
+]
+
+[package.extras]
+dev = ["pytest (>=8.1.1)"]
+
+[[package]]
 name = "pyright"
-version = "1.1.362"
+version = "1.1.363"
 description = "Command line wrapper for pyright"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.362-py3-none-any.whl", hash = "sha256:969957cff45154d8a45a4ab1dae5bdc8223d8bd3c64654fa608ab3194dfff319"},
-    {file = "pyright-1.1.362.tar.gz", hash = "sha256:6a477e448d4a07a6a0eab58b2a15a1bbed031eb3169fa809edee79cca168d83a"},
+    {file = "pyright-1.1.363-py3-none-any.whl", hash = "sha256:d3b8d73c8d230e26cc3523862f3398032a0c39a00d7bb69dc0f595f8e888fd01"},
+    {file = "pyright-1.1.363.tar.gz", hash = "sha256:00a8f0ae0e339473bb0488f8a2a2dcdf574e94a16cd7b4390d49d144714d8db2"},
 ]
 
 [package.dependencies]
@@ -4073,13 +4114,13 @@ files = [
 
 [[package]]
 name = "selenium"
-version = "4.20.0"
+version = "4.21.0"
 description = ""
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "selenium-4.20.0-py3-none-any.whl", hash = "sha256:b1d0c33b38ca27d0499183e48e1dd09ff26973481f5d3ef2983073813ae6588d"},
-    {file = "selenium-4.20.0.tar.gz", hash = "sha256:0bd564ee166980d419a8aaf4ac00289bc152afcf2eadca5efe8c8e36711853fd"},
+    {file = "selenium-4.21.0-py3-none-any.whl", hash = "sha256:4770ffe5a5264e609de7dc914be6b89987512040d5a8efb2abb181330d097993"},
+    {file = "selenium-4.21.0.tar.gz", hash = "sha256:650dbfa5159895ff00ad16e5ddb6ceecb86b90c7ed2012b3f041f64e6e4904fe"},
 ]
 
 [package.dependencies]
@@ -4563,13 +4604,13 @@ telegram = ["requests"]
 
 [[package]]
 name = "trio"
-version = "0.25.0"
+version = "0.25.1"
 description = "A friendly Python library for async concurrency and I/O"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "trio-0.25.0-py3-none-any.whl", hash = "sha256:e6458efe29cc543e557a91e614e2b51710eba2961669329ce9c862d50c6e8e81"},
-    {file = "trio-0.25.0.tar.gz", hash = "sha256:9b41f5993ad2c0e5f62d0acca320ec657fdb6b2a2c22b8c7aed6caf154475c4e"},
+    {file = "trio-0.25.1-py3-none-any.whl", hash = "sha256:e42617ba091e7b2e50c899052e83a3c403101841de925187f61e7b7eaebdf3fb"},
+    {file = "trio-0.25.1.tar.gz", hash = "sha256:9f5314f014ea3af489e77b001861c535005c3858d38ec46b6b071ebfa339d7fb"},
 ]
 
 [package.dependencies]
@@ -4617,31 +4658,6 @@ all = ["colorama (>=0.4.3,<0.5.0)", "rich (>=10.11.0,<14.0.0)", "shellingham (>=
 dev = ["autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "pre-commit (>=2.17.0,<3.0.0)"]
 doc = ["cairosvg (>=2.5.2,<3.0.0)", "mdx-include (>=1.4.1,<2.0.0)", "mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "pillow (>=9.3.0,<10.0.0)"]
 test = ["black (>=22.3.0,<23.0.0)", "coverage (>=6.2,<7.0)", "isort (>=5.0.6,<6.0.0)", "mypy (==0.971)", "pytest (>=4.4.0,<8.0.0)", "pytest-cov (>=2.10.0,<5.0.0)", "pytest-sugar (>=0.9.4,<0.10.0)", "pytest-xdist (>=1.32.0,<4.0.0)", "rich (>=10.11.0,<14.0.0)", "shellingham (>=1.3.0,<2.0.0)"]
-
-[[package]]
-name = "types-protobuf"
-version = "4.25.0.20240417"
-description = "Typing stubs for protobuf"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "types-protobuf-4.25.0.20240417.tar.gz", hash = "sha256:c34eff17b9b3a0adb6830622f0f302484e4c089f533a46e3f147568313544352"},
-    {file = "types_protobuf-4.25.0.20240417-py3-none-any.whl", hash = "sha256:e9b613227c2127e3d4881d75d93c93b4d6fd97b5f6a099a0b654a05351c8685d"},
-]
-
-[[package]]
-name = "types-requests"
-version = "2.31.0.20240406"
-description = "Typing stubs for requests"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "types-requests-2.31.0.20240406.tar.gz", hash = "sha256:4428df33c5503945c74b3f42e82b181e86ec7b724620419a2966e2de604ce1a1"},
-    {file = "types_requests-2.31.0.20240406-py3-none-any.whl", hash = "sha256:6216cdac377c6b9a040ac1c0404f7284bd13199c0e1bb235f4324627e8898cf5"},
-]
-
-[package.dependencies]
-urllib3 = ">=2"
 
 [[package]]
 name = "typing-extensions"
@@ -5187,20 +5203,20 @@ websockets = ">=12.0"
 
 [[package]]
 name = "zipp"
-version = "3.18.1"
+version = "3.18.2"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "zipp-3.18.1-py3-none-any.whl", hash = "sha256:206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"},
-    {file = "zipp-3.18.1.tar.gz", hash = "sha256:2884ed22e7d8961de1c9a05142eb69a247f120291bc0206a00a7642f09b5b715"},
+    {file = "zipp-3.18.2-py3-none-any.whl", hash = "sha256:dce197b859eb796242b0622af1b8beb0a722d52aa2f57133ead08edd5bf5374e"},
+    {file = "zipp-3.18.2.tar.gz", hash = "sha256:6278d9ddbcfb1f1089a88fde84481528b07b0e10474e09dcfe53dad4069fa059"},
 ]
 
 [package.extras]
 docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
-testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy", "pytest-ruff (>=0.2.1)"]
+testing = ["big-O", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more-itertools", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy", "pytest-ruff (>=0.2.1)"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "42c70588c219b0399571b2e8fc8d3fff382e29a4eca3aa37236b753abe82142b"
+content-hash = "81f914ac951eb8f3e42dd2d542c8ecb6516ffa5d8cf63180e2ed6fd2002a3eb9"

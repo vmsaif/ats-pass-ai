@@ -1,7 +1,11 @@
 Project Experience
-    ATS Pass AI
-    AI Path Finding
-    Blockchain Car Mileage Tracker
+  ATS Pass AI
 
-Work Experience
-    Software Engineer at Google
+Project Experience
+  AI Path Finding
+
+Project Experience
+  Connect 4 Game
+
+Project Experience 
+  Blockchain Car Mileage Tracker

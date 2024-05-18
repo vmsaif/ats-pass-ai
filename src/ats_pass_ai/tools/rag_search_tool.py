@@ -63,6 +63,8 @@ class RagSearchTool:
                     if current_file_hash in hash:
                         result = True
                         print("File has been indexed before.")
+        if(result == False):
+            RagSearchTool.delete_user_profile_files()
         return result
     
     def process_and_index(file_path: str):
@@ -121,3 +123,22 @@ class RagSearchTool:
         with open(hash_file_path, 'a') as f:
             f.write(current_file_hash + '\n')
         print("Hash store file updated.")
+
+    def delete_user_profile_files():
+        """Delete the user profile files but not the folder."""
+        path = "./user_profile_files"
+        entries = os.listdir(path)
+        for entry in entries:
+            full_path = os.path.join(path, entry)
+            if os.path.isfile(full_path):  # Check if it is a file
+                try:
+                    os.remove(full_path)
+                    print(f"Deleted file: {full_path}")
+                except PermissionError as e:
+                    print(f"Could not delete {full_path}. Permission denied: {e}")
+                except Exception as e:
+                    print(f"Error while deleting {full_path}: {e}")
+                else:
+                    print(f"Skipped: {full_path} (not a file)")
+        print("User profile files deletion attempt complete.")
+

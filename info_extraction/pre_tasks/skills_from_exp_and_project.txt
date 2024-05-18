@@ -1,232 +1,140 @@
 {
-    "Combined Skills List": {
-        "Technologies": [
-            {
-                "Name": "3D Graphics",
-                "field": "Graphics Programming"
-            },
-            {
-                "Name": "Android Studio",
-                "field": "Mobile Development"
-            },
-            {
-                "Name": "C++",
-                "field": "Programming Language"
-            },
-            {
-                "Name": "CrewAI",
-                "field": "AI, LLM"
-            },
-            {
-                "Name": "Docker",
-                "field": "Containerization"
-            },
-            {
-                "Name": "File I/O",
-                "field": "Data Storage"
-            },
-            {
-                "Name": "Gemini",
-                "field": "AI, LLM"
-            },
-            {
-                "Name": "Git",
-                "field": "Version Control"
-            },
-            {
-                "Name": "GraphQL",
-                "field": "API Development"
-            },
-            {
-                "Name": "Java",
-                "field": "Programming Language"
-            },
-            {
-                "Name": "LangChain",
-                "field": "AI, LLM"
-            },
-            {
-                "Name": "Linux",
-                "field": "Operating System"
-            },
-            {
-                "Name": "Markdown",
-                "field": "Documentation"
-            },
-            {
-                "Name": "OpenGL",
-                "field": "Graphics Programming"
-            },
-            {
-                "Name": "Python",
-                "field": "Programming Language"
-            },
-            {
-                "Name": "RAG Search",
-                "field": "AI, LLM"
-            },
-            {
-                "Name": "Spring Boot",
-                "field": "Java Framework"
-            },
-            {
-                "Name": "SQL",
-                "field": "Database Management"
-            },
-            {
-                "Name": "Vue.js",
-                "field": "JavaScript Framework"
-            }
-        ],
-        "Frameworks": [
-            {
-                "Name": "Angular",
-                "field": "JavaScript Framework"
-            },
-            {
-                "Name": "CI/CD",
-                "field": "Application Deployment"
-            },
-            {
-                "Name": "Django",
-                "field": "Python Framework"
-            },
-            {
-                "Name": "Docsify",
-                "field": "Documentation"
-            },
-            {
-                "Name": "Express.js",
-                "field": "JavaScript Framework"
-            },
-            {
-                "Name": "Flask",
-                "field": "Python Framework"
-            },
-            {
-                "Name": "Gatsby",
-                "field": "Frontend Framework"
-            },
-            {
-                "Name": "Jest",
-                "field": "Testing Framework"
-            },
-            {
-                "Name": "Jekyll",
-                "field": "Documentation"
-            },
-            {
-                "Name": "Next.js",
-                "field": "JavaScript Framework"
-            },
-            {
-                "Name": "Redux",
-                "field": "State Management"
-            },
-            {
-                "Name": "Spring Boot",
-                "field": "Java Framework"
-            },
-            {
-                "Name": "TailwindCSS",
-                "field": "Styling Framework"
-            }
-        ],
-        "Skills": [
-            {
-                "Name": "3D Modeling",
-                "field": "Graphics Design"
-            },
-            {
-                "Name": "AI",
-                "field": "AI, ML"
-            },
-            {
-                "Name": "Algorithms",
-                "field": "Computer Science"
-            },
-            {
-                "Name": "Blockchain",
-                "field": "Blockchain"
-            },
-            {
-                "Name": "Cloud Computing",
-                "field": "Cloud"
-            },
-            {
-                "Name": "Communication",
-                "field": "Interpersonal Skills"
-            },
-            {
-                "Name": "Data Analysis",
-                "field": "Analytical Skills"
-            },
-            {
-                "Name": "Debugging",
-                "field": "Software Development"
-            },
-            {
-                "Name": "Design Patterns",
-                "field": "Software Development"
-            },
-            {
-                "Name": "Full Stack Development",
-                "field": "Software Development"
-            },
-            {
-                "Name": "Leadership",
-                "field": "Management Skills"
-            },
-            {
-                "Name": "Machine Learning",
-                "field": "AI, ML"
-            },
-            {
-                "Name": "Product Management",
-                "field": "Management Skills"
-            },
-            {
-                "Name": "Project Management",
-                "field": "Management Skills"
-            },
-            {
-                "Name": "Responsive Design",
-                "field": "Frontend Development"
-            },
-            {
-                "Name": "Testing",
-                "field": "Software Development"
-            },
-            {
-                "Name": "Teamwork",
-                "field": "Collaboration Skills"
-            },
-            {
-                "Name": "UI/UX Design",
-                "field": "User Experience"
-            },
-            {
-                "Name": "Version Control",
-                "field": "Software Development"
-            },
-            {
-                "Name": "Web Accessibility",
-                "field": "Frontend Development"
-            }
-        ],
-        "Soft Skills": [
-            {
-                "Name": "Communication",
-                "field": "Interpersonal Skills"
-            },
-            {
-                "Name": "Leadership",
-                "field": "Management Skills"
-            },
-            {
-                "Name": "Teamwork",
-                "field": "Collaboration Skills"
-            }
-        ]
-    }
+  "Combined Skills List": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "Java",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "RAG Search",
+        "field": "AI, NLP"
+      },
+      {
+        "Name": "LangChain",
+        "field": "AI, LLM"
+      },
+      {
+        "Name": "CrewAI",
+        "field": "AI, NLG"
+      },
+      {
+        "Name": "Gemini",
+        "field": "AI, Search"
+      },
+      {
+        "Name": "Docker",
+        "field": "DevOps, Containers"
+      },
+      {
+        "Name": "Vue.js",
+        "field": "JavaScript Framework"
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": "AI, Pathfinding"
+      },
+      {
+        "Name": "3D Graphics",
+        "field": "Graphics, Rendering"
+      },
+      {
+        "Name": "OpenGL",
+        "field": "Graphics, API"
+      },
+      {
+        "Name": "C++",
+        "field": "System Programming"
+      },
+      {
+        "Name": "File I/O",
+        "field": "Data Management, Storage"
+      },
+      {
+        "Name": "Documentation",
+        "field": "Technical Writing, Communication"
+      },
+      {
+        "Name": "C Programming",
+        "field": "System Programming"
+      },
+      {
+        "Name": "Debugging",
+        "field": "Software Testing, Troubleshooting"
+      },
+      {
+        "Name": "Linux OS",
+        "field": "Operating Systems"
+      },
+      {
+        "Name": "SQL",
+        "field": "Database Management"
+      },
+      {
+        "Name": "Android Studio",
+        "field": "Mobile Development"
+      },
+      {
+        "Name": "AI Decision-Making",
+        "field": "AI, Machine Learning"
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "Spring Boot",
+        "field": "Java Framework"
+      },
+      {
+        "Name": "Angular",
+        "field": "JavaScript Framework"
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Communication",
+        "field": "Interpersonal Skills"
+      },
+      {
+        "Name": "Problem Solving",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Teamwork",
+        "field": "Collaboration Skills"
+      },
+      {
+        "Name": "Adaptability",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Critical Thinking",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Time Management",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Data Analysis",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Machine Learning",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Project Management",
+        "field": "Management Skills"
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Leadership",
+        "field": "Management Skills"
+      }
+    ]
+  }
 }

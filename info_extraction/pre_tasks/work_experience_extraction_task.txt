@@ -2,19 +2,18 @@
   "Work Experience": [
     {
       "Job Title": "Programming Mentor",
-      "Company Name": "Private Tutoring",
-      "Timeline": "Winnipeg, Manitoba | February 2023 - December 2023",
+      "Company Name": null,
+      "Timeline": "February 2023 - December 2023",
       "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking\n",
+      "Skills": "Communication, Problem Solving",
       "Link": null,
       "Key Highlights": [
-        "Tutored a student in computer systems and programming, focusing on Python and Java.",
-        "Tailored teaching methods to accommodate the student's learning style.",
+        "Provided one-on-one lessons focusing on computer system principles and introductory programming.",
         "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.",
-        "Delivered one-on-one lessons focusing on computer system principles and introductory programming."
+        "Tailored teaching methods to accommodate the student's learning style."
       ],
       "Team size": null,
-      "Outcomes": null
+      "Outcomes": " Enhanced the understanding of computer systems and programming concepts for the student."
     }
   ]
 }
