@@ -1,0 +1,43 @@
+{
+  "User Profile": {
+    "Personal Information": {
+      "Full Name": "Saif Mahmud",
+      "Phone Number": "204 955 5064",
+      "Email": "msaifofficial@gmail.com",
+      "LinkedIn": "linkedin.com/in/vmsaif",
+      "Other Social Media Profiles": null,
+      "Personal Website": "saifmahmud.dev",
+      "Portfolio": null,
+      "GitHub": null,
+      "Address": null,
+      "City": "Winnipeg",
+      "State": "MB",
+      "Zip Code": null,
+      "Country": null
+    },
+    "Education": {
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "University of Manitoba",
+      "Location": null,
+      "Graduation Date": "October 2023",
+      "GPA": "3.07",
+      "Honors/Distinctions": null
+    },
+    "Volunteer Work": [],
+    "Awards and Recognitions": [],
+    "References": [],
+    "Personal Traits and Interests": {
+      "Strengths": "Detail-oriented, Highly analytical, Excellent problem-solving skills, Strong communication skills, Ability to work independently and as part of a team",
+      "Weaknesses": null,
+      "Hobbies": null,
+      "Passions": null
+    },
+    "Miscellaneous": {
+      "Languages Spoken": null,
+      "Certifications": null,
+      "Professional Affiliations": null,
+      "Other Relevant Details": null
+    }
+  }
+}

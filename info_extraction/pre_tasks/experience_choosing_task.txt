@@ -1,0 +1,54 @@
+From the following list of your work and project experiences, select up to 4 most recent or relevant experiences in total. If the most recent experience is a project, list all Project Experiences first, followed by Work Experiences. Otherwise, list Work Experiences first. You can also decide to include only Work Experiences or only Project Experiences based on relevance.
+Label each title as either "Work Experience" or "Project Experience". 
+
+Example: (all 4 experiences)
+  Work Experience
+    Software Engineer at Google
+    Data Analyst at Amazon
+  
+  Project Experience
+    Development of a Machine Learning Algorithm for Image Recognition
+    Building a Mobile App for Event Management
+
+[Use empty lines to separate the experiences.] * **Explanation for Not Choosing Other Experiences (One by one):**
+
+    1. [Title]: 
+        [Explanation]
+    
+    2. [Title]: 
+        [Explanation]
+    
+    3. [Title]: 
+        [Explanation] 
+    ... and so on
+ 
+ you MUST return the actual complete content as the final answer, not a summary.
+
+Project Experience
+  ATS Pass AI
+
+Project Experience
+  AI Path Finding
+
+Project Experience
+  Connect 4 Game
+
+Project Experience 
+  Blockchain Car Mileage Tracker
+
+
+Explanation for Not Choosing Other Experiences (One by one):
+
+1. Programming Mentor: While this experience demonstrates communication and problem-solving skills, it lacks direct relevance to AI, Machine Learning, or the specific technologies mentioned in the job description for an AI Engineer role at Radical AI.
+
+2. Recursive Ray Tracing: Though this project showcases technical skills in 3D graphics and OpenGL, it doesn't align with the core requirements of the AI Engineer role, which emphasizes AI, ML, and related technologies.
+
+3. Bank Account System:  This project highlights object-oriented programming and polymorphism concepts but doesn't involve AI or Machine Learning, making it less relevant to the targeted position.
+
+4. Hosting a Resume on GitHub Pages:  This experience demonstrates technical writing and web development skills but lacks direct relevance to AI or the specific technologies mentioned in the job description.
+
+5. ELF Binary Analysis: While showcasing skills in C programming, debugging, and system analysis, this project doesn't align with the core focus on AI, ML, or the technologies listed in the job description for an AI Engineer.
+
+6. OpenGL Sphere Lighting: This project, while highlighting advanced lighting techniques in OpenGL, doesn't directly relate to AI, Machine Learning, or the required technologies for the AI Engineer position.
+
+7. Reversible Learning App: This project demonstrates teamwork and communication skills and experience with Android development and SQL databases, but it doesn't involve AI or Machine Learning, making it less relevant.

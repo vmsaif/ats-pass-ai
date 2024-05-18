@@ -1,0 +1,90 @@
+##  Job Description Keyword and Phrase Extraction for "Artificial Intelligence Engineer" at Radical AI 
+
+Here's a breakdown of keywords and phrases categorized for resume optimization:
+
+**I. Essential Skills:**
+
+* **Hard Skills:**
+    * Artificial Intelligence (AI)
+    * Machine Learning (ML)
+    * Deep Learning
+    * Generative AI
+    * Natural Language Processing (NLP)
+    * Data Analysis
+    * Data Preprocessing
+    * Algorithm Development
+    * Model Development
+    * AI Model Design
+    * Python
+    * TensorFlow 
+    * PyTorch
+    * OpenAI API
+    * Meta Llama 2
+    * Google Gemini
+    * LangChain
+    * Google Gen AI Studio 
+
+* **Soft Skills:**
+    * Analytical Skills
+    * Problem-Solving
+    * Creative Thinking
+    * Communication Skills
+    * Teamwork
+    * Collaboration
+    * Research Presentation
+    * Critical Thinking
+
+**II. Industry/Field Specific Terms:**
+
+* Virtual Internship
+* AI Virtual Agents 
+* AI Development Frameworks
+* AI for Social Good
+* Democratization of AI 
+* Equitable Progress
+* AI Ethics 
+* Responsible AI
+
+**III. Company Values & Culture:**
+
+* Radical 
+* Social Justice 
+* Equity 
+* Diversity 
+* Inclusion
+* Collective Liberation
+* Resisting Oppression
+* Power Dynamics
+* Ethical Technology 
+* Community Impact
+
+**IV. Action Verbs:**
+
+* Design
+* Develop
+* Analyze
+* Preprocess
+* Collaborate
+* Enhance
+* Present
+* Engage
+* Contribute 
+* Program
+
+**V.  Prioritization and Relevance:**
+
+* **High Priority (Frequent and Emphasized):** AI, Machine Learning, Deep Learning, Generative AI, NLP, Python, TensorFlow/PyTorch, Analytical Skills, Problem-Solving
+* **Required Qualifications:** Bachelor's/Master's in Computer Science, AI, or related fields.
+* **Preferred Qualifications (Not Explicitly Stated, but Implied):** Experience with specific AI projects, familiarity with ethical AI principles, passion for social good initiatives.
+
+**VI. ATS Optimization Tips:**
+
+* **Strategic Placement:** Integrate keywords naturally in your Resume Summary, Skills section, and within Experience descriptions. For example, "Developed a deep learning model for [project] using Python and TensorFlow to achieve [results]."
+* **Avoid Keyword Stuffing:**  Use keywords thoughtfully and don't overuse them to the point where it sounds unnatural.
+* **Tailoring:**  Carefully customize your resume for each application, highlighting the most relevant keywords based on the specific job description. 
+
+**VII. Additional Notes:**
+
+* This company has a strong social justice mission. Aligning your values or experience with their principles will be beneficial.  
+* Highlight projects or research that demonstrate your understanding of ethical AI considerations.
+* Since it's a virtual internship, emphasize your ability to work independently and remotely. 

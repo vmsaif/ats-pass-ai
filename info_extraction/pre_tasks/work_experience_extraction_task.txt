@@ -1,0 +1,19 @@
+{
+  "Work Experience": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": null,
+      "Timeline": "February 2023 - December 2023",
+      "Technologies, frameworks, and tools Used": "Python, Java",
+      "Skills": "Communication, Problem Solving",
+      "Link": null,
+      "Key Highlights": [
+        "Provided one-on-one lessons focusing on computer system principles and introductory programming.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.",
+        "Tailored teaching methods to accommodate the student's learning style."
+      ],
+      "Team size": null,
+      "Outcomes": " Enhanced the understanding of computer systems and programming concepts for the student."
+    }
+  ]
+}

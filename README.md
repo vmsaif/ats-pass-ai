@@ -28,7 +28,6 @@ The project is currently in the **active development stage**. The following feat
 4. **LaTeX Resume Generation** 🛠️
    - The system can convert finalized resumes into professionally formatted LaTeX documents. *(Scheduled)* 📅
 
-
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 
 

@@ -1,0 +1,140 @@
+{
+  "Combined Skills List": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "Java",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "RAG Search",
+        "field": "AI, NLP"
+      },
+      {
+        "Name": "LangChain",
+        "field": "AI, LLM"
+      },
+      {
+        "Name": "CrewAI",
+        "field": "AI, NLG"
+      },
+      {
+        "Name": "Gemini",
+        "field": "AI, Search"
+      },
+      {
+        "Name": "Docker",
+        "field": "DevOps, Containers"
+      },
+      {
+        "Name": "Vue.js",
+        "field": "JavaScript Framework"
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": "AI, Pathfinding"
+      },
+      {
+        "Name": "3D Graphics",
+        "field": "Graphics, Rendering"
+      },
+      {
+        "Name": "OpenGL",
+        "field": "Graphics, API"
+      },
+      {
+        "Name": "C++",
+        "field": "System Programming"
+      },
+      {
+        "Name": "File I/O",
+        "field": "Data Management, Storage"
+      },
+      {
+        "Name": "Documentation",
+        "field": "Technical Writing, Communication"
+      },
+      {
+        "Name": "C Programming",
+        "field": "System Programming"
+      },
+      {
+        "Name": "Debugging",
+        "field": "Software Testing, Troubleshooting"
+      },
+      {
+        "Name": "Linux OS",
+        "field": "Operating Systems"
+      },
+      {
+        "Name": "SQL",
+        "field": "Database Management"
+      },
+      {
+        "Name": "Android Studio",
+        "field": "Mobile Development"
+      },
+      {
+        "Name": "AI Decision-Making",
+        "field": "AI, Machine Learning"
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "Spring Boot",
+        "field": "Java Framework"
+      },
+      {
+        "Name": "Angular",
+        "field": "JavaScript Framework"
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Communication",
+        "field": "Interpersonal Skills"
+      },
+      {
+        "Name": "Problem Solving",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Teamwork",
+        "field": "Collaboration Skills"
+      },
+      {
+        "Name": "Adaptability",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Critical Thinking",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Time Management",
+        "field": "Soft Skills"
+      },
+      {
+        "Name": "Data Analysis",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Machine Learning",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Project Management",
+        "field": "Management Skills"
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Leadership",
+        "field": "Management Skills"
+      }
+    ]
+  }
+}

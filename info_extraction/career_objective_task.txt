@@ -1,0 +1,4 @@
+{
+    "Career Objective": "A highly motivated and skilled software developer with a passion for leveraging AI for social good, seeking to contribute to Radical AI's mission of democratizing AI. My \"magic button\" approach to development, focused on simplifying complex processes for users, aligns perfectly with Radical AI's commitment to making technology accessible and equitable. Eager to apply my expertise in Python, data analysis, and problem-solving to develop innovative AI solutions that empower individuals and drive positive social impact."
+  } 
+```

@@ -7,16 +7,18 @@ from textwrap import dedent
 from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool
 from ats_pass_ai.tools.llm_task import LLMTask
-
+import time
 
 # First, Lets Organize the User Information provided by the user.
 user_info_file_path = 'info_files/user_info.txt'
-user_info_orgainzed_file_path = 'info_files/user_info_organized.txt'
+user_info_orgainzed_file_path = ResumeCrew().user_info_organized_file_path
 jd_file_path = 'info_files/job_description.txt'
-jd_extracted_keywords_file_path = ResumeCrew.jd_keyword_and_phrases_extraction_task_file_path
+jd_extracted_keywords_file_path = ResumeCrew().jd_keyword_extraction_file_path
 
 
 def run():
+
+    start_main_time = time.perf_counter()
 
     # This will not run if there is already an organized file,
     organize_system_instruction = dedent("""
@@ -40,8 +42,11 @@ def run():
                 Outcome: Deliver a well-organized document that maintains all original details in an accessible format.
                 """)
 
+    start_time = time.perf_counter()
     organizer = LLMTask("User Info Organize", user_info_file_path, user_info_orgainzed_file_path, organize_system_instruction, override=False)
     organizer.run()
+    end_time = time.perf_counter()
+    info_organizing_time = (end_time - start_time) / 60
 
     # Now, lets extract the keywords from the job description
     jd_extraction_system_instruction = dedent("""
@@ -77,19 +82,41 @@ def run():
                 Outcome: A comprehensive list of relevant keywords and actionable tips to optimize your resume for both ATS algorithms and human reviewers, increasing your chances of landing an interview.
                 """)
 
-    # job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
-    # job_description_extractor.run()
-
-    # this will not run if the file is already indexed
-    RagSearchTool.process_and_index(user_info_orgainzed_file_path)
-
-    # Now, lets call the main crew to build the resume
-    ResumeCrew().crew().kickoff()
+    start_time = time.perf_counter()
+    job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
     
-    # inputs = {
-    #     'user_info_orgainzed_file_path': user_info_orgainzed_file_path
-    # }
-    # UserInfoOrganizerCrew().crew().kickoff(inputs=inputs)
+    # job_description_extractor.run()
+    
+    end_time = time.perf_counter()
+    jd_extraction_time = (end_time - start_time) / 60
+
+    # Index into DB: this will not run if the file is already indexed
+    start_time = time.perf_counter()
+
+    RagSearchTool.process_and_index(user_info_orgainzed_file_path)
+    
+    end_time = time.perf_counter()
+    indexing_time = (end_time - start_time) / 60
+
+    # Now, call the main crew to build the resume
+    start_time = time.perf_counter()
+    ResumeCrew().crew().kickoff()
+    end_time = time.perf_counter()
+    crew_run_time = (end_time - start_time) / 60
+    
+    end_main_time = time.perf_counter()
+
+    program_run_time = (end_main_time - start_main_time) / 60
+    
+    # Print the time taken for each task
+    print("---- Time Statistics -----")
+    print(f"-- Time taken for User Info Organizing: {info_organizing_time:.2f} minutes")
+    print(f"-- Time taken for JD Extraction: {jd_extraction_time:.2f} minutes")
+    print(f"-- Time taken for Indexing: {indexing_time:.2f} minutes")
+    print(f"-- Time taken for Crew Run: {crew_run_time:.2f} minutes")
+    print(f"-- Total Time taken: {program_run_time:.2f} minutes")
+
+
 
 
     
