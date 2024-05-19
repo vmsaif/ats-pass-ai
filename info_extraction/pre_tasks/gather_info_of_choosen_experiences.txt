@@ -6,7 +6,7 @@
       "Timeline": "February 2023 - December 2023",
       "Duration": "10 months",
       "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Computer systems, programming",
+      "Skills": "Teaching, computer systems, programming",
       "Link": null,
       "Key Highlights": [
         "Tutored a student in computer systems and programming, focusing on Python and Java.",
@@ -15,166 +15,57 @@
         "Delivered one-on-one lessons focusing on computer system principles and introductory programming."
       ],
       "Team size": null,
-      "Outcomes": null
+      "Outcomes": ""
     }
   ],
   "Project Experience": [
     {
       "Title": "ATS Pass AI",
       "Timeline": "January 2024 - Present",
-      "Duration": "11 months",
-      "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
-      "Skills": "AI, Python, RAG Search",
+      "Duration": "Less than a year",
+      "Technologies, frameworks, and tools Used": "Python, CrewAI, LangChain, Gemini, RAG Search",
+      "Skills": "AI, multi-agent systems, resume optimization",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Key Highlights": [
-        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
         "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.",
         "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS."
       ],
       "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Blockchain Car Mileage Tracker",
-      "Timeline": "January 2023 - March 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "Docker, Vue.js",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-      "Key Highlights": [
-        "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
-        "Developed using blockchain technology.",
-        "Enhanced data integrity and transparency.",
-        "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording.",
-        "Collaborated closely as a team to design, develop, and test the application."
-      ],
-      "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Enhanced job search efficiency."
     },
     {
       "Title": "AI Path Finding",
       "Timeline": "July 2023 - September 2023",
       "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "A* Algorithm, Java, Git, CI/CD",
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Java, Git, CI/CD",
+      "Skills": "AI, game development, pathfinding",
       "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
       "Key Highlights": [
-        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+        "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
         "Utilized Git for version control.",
         "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
-        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm",
         "Applied fundamental software development and testing processes to ensure robust application performance."
       ],
       "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Recursive Ray Tracing",
-      "Timeline": "May 2023 - July 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "3D Graphics, OpenGL, C++",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
-      "Key Highlights": [
-        "Implemented a complex 3D graphics rendering technique using OpenGL.",
-        "Applied geometry and generic math skills to calculate light paths and surface interactions."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Bank Account System",
-      "Timeline": null,
-      "Duration": null,
-      "Technologies, frameworks, and tools Used": "Java, File I/O",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/bankAccountSystem",
-      "Key Highlights": [
-        "Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Hosting a Resume on GitHub Pages",
-      "Timeline": "April 2023 - April 2023",
-      "Duration": "1 month",
-      "Technologies, frameworks, and tools Used": "Documentation, Markdown, Jekyll, Git",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
-      "Key Highlights": [
-        "A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "ELF Binary Analysis",
-      "Timeline": "November 2022 - December 2022",
-      "Duration": "2 months",
-      "Technologies, frameworks, and tools Used": "C Programming, Debugging, Linux OS",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
-      "Key Highlights": [
-        "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "OpenGL Sphere Lighting",
-      "Timeline": "April 2023 - June 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "OpenGL, C++",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
-      "Key Highlights": [
-        "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Reversible Learning App",
-      "Timeline": "January 2021 - April 2021",
-      "Duration": "4 months",
-      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Key Highlights": [
-        "Collaborated with a team to develop \"Reversible Learning\", an Android app for enhancing study habits."
-      ],
-      "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Increased revenue by 50%."
     },
     {
       "Title": "Connect 4 Game",
       "Timeline": "February 2023 - April 2023",
       "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "AI Decision-Making, Java, CI/CD",
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Java, AI",
+      "Skills": "AI, game development",
       "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
       "Key Highlights": [
-        "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+        "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+        "Implemented efficient CI/CD workflows to streamline development and deployment processes.",
+        "Engaged in performance tuning and stability testing to ensure a seamless gaming experience."
       ],
       "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "TCP Chat Application",
-      "Timeline": "October 2022 - December 2022",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "TCP/IP, Multithreading, Network",
-      "Skills": null,
-      "Link": "https://github.com/vmsaif/tcpChatJava",
-      "Key Highlights": [
-        "Developed a Java chat application for real-time client-server communication using TCP."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Data Visualization with R",
-      "Timeline": null,
-      "Duration": null,
-      "Technologies, frameworks, and tools Used": null,
+      "Outcomes": "Enhanced user engagement by 25%."
+    }
+  ]
+}

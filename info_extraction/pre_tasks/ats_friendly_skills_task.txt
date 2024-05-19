@@ -5,44 +5,65 @@
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [],
-      "Tools": [],
+      "Frameworks": [
+        "LangChain"
+      ],
+      "Tools": [
+        "Google Gemini"
+      ],
       "Soft Skills": [
-        "Data Analysis",
-        "Teamwork",
-        "Problem Solving",
-        "Communication Skills",
-        "Critical Thinking"
+        "Communication",
+        "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
-      "Programming Languages": {},
-      "Frameworks": {},
-      "Tools": {},
-      "Soft Skills": {
-        "Time Management": "Excellent Time Management Skills"
+      "Programming Languages": {
+        "name": "Java",
+        "pertially_matched_with_job_description": "Algorithm Development"
+      },
+      "Frameworks": {
+        "name": "CrewAI",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
+      },
+      "Tools": {
+        "name": "RAG Search",
+        "pertially_matched_with_job_description": "Machine Learning"
+      },
+      "Skills": {
+        "name": "Data Analysis",
+        "pertially_matched_with_job_description": "Data Analysis"
+      },
+      "Skills": {
+        "name": "Machine Learning",
+        "pertially_matched_with_job_description": "Machine Learning"
       }
     }
   },
   "missing_from_the_applicant_skills": {
     "Programming Languages": [
+      "AI",
+      "ML",
+      "Deep Learning",
+      "Generative AI",
+      "Natural Language Processing (NLP)",
+      "Data Preprocessing",
+      "Model Development",
+      "AI Model Design",
       "TensorFlow",
       "PyTorch",
       "OpenAI API",
-      "Meta Llama 2",
-      "Google Gemini",
-      "LangChain"
+      "Meta Llama 2"
     ],
     "Frameworks": [
-      "AI Development Frameworks",
       "Google Gen AI Studio"
     ],
-    "Tools": [],
     "Soft Skills": [
       "Analytical Skills",
+      "Problem-Solving",
       "Creative Thinking",
       "Collaboration",
-      "Research Presentation"
+      "Research Presentation",
+      "Critical Thinking"
     ]
   }
 }

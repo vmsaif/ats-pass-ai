@@ -4,44 +4,30 @@
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [],
-      "Tools": [],
+      "Frameworks": [
+        "LangChain"
+      ],
+      "AI Development Frameworks": [
+        "CrewAI"
+      ],
+      "Tools": [
+        "Google Gemini",
+        "RAG Search"
+      ],
       "Soft Skills": [
-        "Data Analysis",
-        "Teamwork",
-        "Problem Solving",
-        "Communication Skills",
-        "Critical Thinking"
+        "Communication",
+        "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
-      "Programming Languages": {},
-      "Frameworks": {},
-      "Tools": {},
-      "Soft Skills": {
-        "Time Management": "Excellent Time Management Skills"
+      "Programming Languages": {
+        "name": "Java",
+        "pertially_matched_with_job_description": "Algorithm Development"
+      },
+      "Machine Learning": {
+        "name": "Data Analysis",
+        "pertially_matched_with_job_description": "Data Analysis"
       }
     }
-  },
-  "missing_from_the_applicant_skills": {
-    "Programming Languages": [
-      "TensorFlow",
-      "PyTorch",
-      "OpenAI API",
-      "Meta Llama 2",
-      "Google Gemini",
-      "LangChain"
-    ],
-    "Frameworks": [
-      "AI Development Frameworks",
-      "Google Gen AI Studio"
-    ],
-    "Tools": [],
-    "Soft Skills": [
-      "Analytical Skills",
-      "Creative Thinking",
-      "Collaboration",
-      "Research Presentation"
-    ]
   }
 }

@@ -7,282 +7,163 @@
       "Timeline": "February 2023 - December 2023",
       "Duration": "10 months",
       "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Computer systems, programming, **Problem-Solving**, **Communication Skills**",
+      "Skills": "Teaching, computer systems, programming",
       "Link": null,
-      "Key Highlights": [
-        "Tutored a student in computer systems and programming, focusing on **Python** and **Java**, applying **Problem-Solving** skills to overcome coding challenges.",
-        "Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **Communication Skills**.",
-        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.",
-        "Delivered one-on-one lessons focusing on computer system principles and introductory programming."
+      "Key Highlights (ATS-friendly bullet points)": [
+        "Tutored a student in **computer systems** and **programming**, focusing on **Python** and **Java** to develop foundational **problem-solving skills**.",
+        "Tailored teaching methods to accommodate the student's learning style, emphasizing clear **communication** and **collaboration** for effective knowledge transfer.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations to promote practical application of **analytical skills**.",
+        "Delivered one-on-one lessons focusing on **computer system principles** and introductory programming, fostering **critical thinking** and a strong understanding of core concepts."
       ],
       "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Successfully guided a student in developing fundamental programming and computer system knowledge, preparing them for further exploration in the field."
     }
   ],
   "Project Experience": [
     {
       "Title": "ATS Pass AI",
       "Timeline": "January 2024 - Present",
-      "Duration": "11 months",
-      "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
-      "Skills": "AI, Python, RAG Search, **Machine Learning (ML)**, **Deep Learning**, **Generative AI**, **Natural Language Processing (NLP)**, **AI Model Design**, **Algorithm Development**, **Data Analysis**, **Data Preprocessing**",
+      "Duration": "Less than a year",
+      "Technologies, frameworks, and tools Used": "Python, CrewAI, LangChain, Gemini, RAG Search",
+      "Skills": "AI, multi-agent systems, resume optimization",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Key Highlights": [
-        "Led the **development** of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, aligning with principles of **AI for Social Good** and the **democratization of AI**.",
+      "Key Highlights (ATS-friendly bullet points)": [
+        "Developed a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, aligning with principles of **AI for Social Good** and the **democratization of AI**.",
         "Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, employing **Machine Learning (ML)**, **Deep Learning**, and **Generative AI** techniques.",
-        "Engineered a system that extracts user data and **analyzes** job descriptions with advanced **AI** tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**. This process involved **Data Analysis** and **Data Preprocessing** to ensure optimal model performance.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**. This process involved **Data Analysis** and **Data Preprocessing** to ensure optimal model performance.",
         "Designed and implemented a scalable architecture to anticipate future needs and adaptations for this **AI Development Framework**."
       ],
       "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Blockchain Car Mileage Tracker",
-      "Timeline": "January 2023 - March 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "Docker, Vue.js",
-      "Skills": "**Collaboration**, **Teamwork**,  **Problem-Solving**",
-      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-      "Key Highlights": [
-        "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, addressing a real-world problem with a focus on data integrity.",
-        "Developed using blockchain technology, ensuring secure and transparent data management.",
-        "Enhanced data integrity and transparency through the use of blockchain technology.",
-        "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **Problem-Solving** skills.",
-        "**Collaborated** closely as a team to **design**, **develop**, and test the application, exemplifying effective **Teamwork**."
-      ],
-      "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Enhanced job search efficiency by automating resume tailoring, leading to increased visibility for potential candidates within ATS."
     },
     {
       "Title": "AI Path Finding",
       "Timeline": "July 2023 - September 2023",
       "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "A* Algorithm, Java, Git, CI/CD",
-      "Skills": "**Algorithm Development**,  **Problem-Solving**, **Analytical Skills**",
+      "Technologies, frameworks, and tools Used": "Java, Git, CI/CD",
+      "Skills": "AI, game development, pathfinding",
       "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Key Highlights": [
-        "A Java-based game development project that leveraged the A* **algorithm** to create an AI-driven game, showcasing **Algorithm Development** skills.",
-        "Utilized Git for version control, demonstrating proficiency in code management and collaboration.",
-        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, highlighting efficiency and process optimization.",
-        "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+      "Key Highlights (ATS-friendly bullet points)": [
+        "Developed a **Java**-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game.",
+        "Utilized Git for version control and employed **CI/CD practices**, resulting in a 50% reduction in deployment time.",
+        "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm, demonstrating the ability to apply complex concepts to real-world scenarios.",
         "Applied fundamental software development and testing processes to ensure robust application performance."
       ],
       "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Recursive Ray Tracing",
-      "Timeline": "May 2023 - July 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "3D Graphics, OpenGL, C++",
-      "Skills": "**Analytical Skills**",
-      "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
-      "Key Highlights": [
-        "Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating technical proficiency in computer graphics.",
-        "Applied geometry and generic math skills to calculate light paths and surface interactions, showcasing strong **Analytical Skills**."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Bank Account System",
-      "Timeline": null,
-      "Duration": null,
-      "Technologies, frameworks, and tools Used": "Java, File I/O",
-      "Skills": "**Problem-Solving**",
-      "Link": "https://github.com/vmsaif/bankAccountSystem",
-      "Key Highlights": [
-        "Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism, requiring **Problem-Solving** skills to design and implement system logic."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Hosting a Resume on GitHub Pages",
-      "Timeline": "April 2023 - April 2023",
-      "Duration": "1 month",
-      "Technologies, frameworks, and tools Used": "Documentation, Markdown, Jekyll, Git",
-      "Skills": "**Communication Skills**",
-      "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
-      "Key Highlights": [
-        "A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git, emphasizing clear **Communication Skills** through technical documentation."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "ELF Binary Analysis",
-      "Timeline": "November 2022 - December 2022",
-      "Duration": "2 months",
-      "Technologies, frameworks, and tools Used": "C Programming, Debugging, Linux OS",
-      "Skills": "**Analytical Skills**, **Problem-Solving**",
-      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
-      "Key Highlights": [
-        "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering. This project involved strong **Analytical Skills** and **Problem-Solving** abilities to understand and interpret binary data."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "OpenGL Sphere Lighting",
-      "Timeline": "April 2023 - June 2023",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "OpenGL, C++",
-      "Skills": "**Analytical Skills**",
-      "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
-      "Key Highlights": [
-        "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources, demonstrating **Analytical Skills** in computer graphics and lighting design."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "Reversible Learning App",
-      "Timeline": "January 2021 - April 2021",
-      "Duration": "4 months",
-      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java",
-      "Skills": "**Collaboration**, **Teamwork**",
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Key Highlights": [
-        "**Collaborated** with a team to develop \"Reversible Learning\", an Android app for enhancing study habits, demonstrating effective **Teamwork** and project coordination."
-      ],
-      "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Successfully delivered a functional AI-driven game while significantly improving development efficiency through streamlined CI/CD processes."
     },
     {
       "Title": "Connect 4 Game",
       "Timeline": "February 2023 - April 2023",
       "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "AI Decision-Making, Java, CI/CD",
-      "Skills": "**Algorithm Development**, **Problem-Solving**",
+      "Technologies, frameworks, and tools Used": "Java, AI",
+      "Skills": "AI, game development",
       "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
-      "Key Highlights": [
-        "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. This involved **Algorithm Development** for AI decision-making and **Problem-Solving** to implement game logic."
+      "Key Highlights (ATS-friendly bullet points)": [
+        "Developed a digital version of the classic Connect 4 game, facilitating user vs. **AI** gameplay on a 6x7 grid, showcasing skills in **algorithm development** and game **design**.",
+        "Implemented strategic **AI** decision-making using the minimax algorithm, enhancing game complexity and player engagement.",
+        "Engaged in performance tuning and stability testing to ensure a seamless gaming experience, demonstrating attention to detail and commitment to delivering a high-quality product."
       ],
       "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Title": "TCP Chat Application",
-      "Timeline": "October 2022 - December 2022",
-      "Duration": "3 months",
-      "Technologies, frameworks, and tools Used": "TCP/IP, Multithreading, Network",
-      "Skills": "**Problem-Solving**",
-      "Link": "https://github.com/vmsaif/tcpChatJava",
-      "Key Highlights": [
-        "Developed a Java chat application for real-time client-server communication using TCP, employing **Problem-Solving** skills to address network programming challenges."
-      ],
-      "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Successfully created an engaging and challenging Connect 4 game, demonstrating proficiency in AI development and game design principles."
     }
   ]
 }
 ```
-
 **REPORT ON CHANGES:**
+  - **Keyword Changes:** For each experience:
+      - Original Sentence: Write the original sentence as you found before adding or replacing keywords.
+      - Revised Sentence: Write the revised sentence, highlighting the **exact keywords** you added from the job description. 
+      - Keywords Added: List the keywords you added, ensuring they **exactly match** the words from the job description's keyword summary. 
+      - Rationale: Explain why you chose to use those specific keywords. What did you see in the job description that made you add them? Be specific and refer to details from the job description. 
 
-**Work Experience:**
+Programming Mentor:
 
-  - **Programming Mentor**
-    - Original Sentence: Tutored a student in computer systems and programming, focusing on Python and Java.
-    - Revised Sentence: Tutored a student in computer systems and programming, focusing on **Python** and **Java**, applying **Problem-Solving** skills to overcome coding challenges.
-    - Keywords Added: **Python, Java, Problem-Solving**
-    - Rationale: The job description emphasizes proficiency in Python and experience with Problem-Solving. It is relevant to the mentor experience. 
+- **Original Sentence:** Tutored a student in computer systems and programming, focusing on Python and Java.
+- **Revised Sentence:** Tutored a student in **computer systems** and **programming**, focusing on **Python** and **Java** to develop foundational **problem-solving skills**.
+- **Keywords Added:** computer systems, programming, Python, Java, problem-solving skills
+- **Rationale:** The job description explicitly lists Python and Java as essential hard skills, and the Programming Mentor role directly utilizes these languages. Highlighting these keywords ensures the ATS recognizes this alignment. Additionally, the emphasis on "problem-solving skills" connects with the job description's requirement for strong analytical abilities.
 
-    - Original Sentence: Tailored teaching methods to accommodate the student's learning style.
-    - Revised Sentence: Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective **Communication Skills**.
-    - Keywords Added: **Communication Skills**
-    - Rationale: The job description highlights the importance of Communication Skills. It's relevant to the mentor experience because it involves conveying technical concepts effectively.
+- **Original Sentence:** Tailored teaching methods to accommodate the student's learning style.
+- **Revised Sentence:** Tailored teaching methods to accommodate the student's learning style, emphasizing clear **communication** and **collaboration** for effective knowledge transfer.
+- **Keywords Added:** communication, collaboration
+- **Rationale:**  Radical AI values "communication skills" and "collaboration", as indicated in the "Essential Soft Skills" section. By incorporating these keywords, the revised sentence highlights the applicant's ability to effectively convey information and work collaboratively, aligning with the company's values. 
 
-**Project Experience:**
+- **Original Sentence:** Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.
+- **Revised Sentence:** Facilitated hands-on sessions for installing software, debugging, and understanding computer operations to promote practical application of **analytical skills**.
+- **Keywords Added:** analytical skills
+- **Rationale:** The job description emphasizes "analytical skills" as a core requirement. By integrating this keyword, the sentence directly demonstrates the applicant's ability to apply analytical thinking in practical situations. 
 
-  - **ATS Pass AI**
-    - Original Sentence: Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. 
-    - Revised Sentence: Led the **development** of a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, aligning with principles of **AI for Social Good** and the **democratization of AI**.
-    - Keywords Added: **development, Gemini, AI for Social Good, democratization of AI**
-    - Rationale: The job description includes a section on "Industry/Field Specific Terms," which emphasizes "AI for Social Good" and "Democratization of AI." The project aligns with these principles by aiming to make resume optimization more accessible.
+- **Original Sentence:** Delivered one-on-one lessons focusing on computer system principles and introductory programming. 
+- **Revised Sentence:** Delivered one-on-one lessons focusing on **computer system principles** and introductory programming, fostering **critical thinking** and a strong understanding of core concepts. 
+- **Keywords Added:** computer system principles, critical thinking
+- **Rationale:**  This addition directly mirrors the job description's requirement of understanding "computer system principles." It also highlights "critical thinking", which is listed as an essential soft skill for the AI Engineer role. 
 
-    - Original Sentence: Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.
-    - Revised Sentence: Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, employing **Machine Learning (ML)**, **Deep Learning**, and **Generative AI** techniques. 
-    - Keywords Added: **AI models, Machine Learning (ML), Deep Learning, Generative AI**
-    - Rationale: The job description strongly emphasizes AI, Machine Learning, Deep Learning, and Generative AI as essential skills. Highlighting these specific AI techniques strengthens the relevance of the project. 
+ATS Pass AI:
 
-    - Original Sentence: Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
-    - Revised Sentence: Engineered a system that extracts user data and **analyzes** job descriptions with advanced **AI** tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**. This process involved **Data Analysis** and **Data Preprocessing** to ensure optimal model performance.
-    - Keywords Added: **analyzes, AI, Gemini Pro, ATS, Data Analysis, Data Preprocessing** 
-    - Rationale:  This project aligns directly with the job description's focus on ATS optimization. The job description also emphasizes Data Analysis and skills related to AI development. The added keywords reinforce this alignment.
+- **Original Sentence:** Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. 
+- **Revised Sentence:** Developed a multi-agent system with CrewAI, LangChain, **Gemini**, and RAG Search to create tailored resumes to enhance job search efficiency, aligning with principles of **AI for Social Good** and the **democratization of AI**. 
+- **Keywords Added:** Gemini, AI for Social Good, democratization of AI
+- **Rationale:** The job description explicitly mentions "Google Gemini" as a tool, and this project directly utilizes it. Furthermore, highlighting "AI for Social Good" and the "democratization of AI" resonates with Radical AI's mission and values, as indicated in their "Company Values & Culture" section. 
 
-    - Original Sentence: *No corresponding sentence.*
-    - Revised Sentence: Designed and implemented a scalable architecture to anticipate future needs and adaptations for this **AI Development Framework**.
-    - Keywords Added: **AI Development Framework**
-    - Rationale: The job description mentions "AI Development Frameworks," suggesting the company is interested in candidates who can design and implement such frameworks. Adding this bullet point highlights this specific skill. 
+- **Original Sentence:** Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes. 
+- **Revised Sentence:** Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, employing **Machine Learning (ML)**, **Deep Learning**, and **Generative AI** techniques. 
+- **Keywords Added:** AI models, Machine Learning (ML), Deep Learning, Generative AI
+- **Rationale:**  These keywords are all listed as essential hard skills in the job description. By including them, the sentence clearly demonstrates the applicant's practical experience with core AI concepts and techniques.
 
-  - **Blockchain Car Mileage Tracker**
-    - Original Sentence: Collaborated closely as a team to design, develop, and test the application.
-    - Revised Sentence: **Collaborated** closely as a team to **design**, **develop**, and test the application, exemplifying effective **Teamwork**. 
-    - Keywords Added: **Collaborated, design, develop, Teamwork**
-    - Rationale:  The job description emphasizes "Collaboration" and "Teamwork." Adding these keywords to the project strengthens the relevance of the project to the job requirements.
+- **Original Sentence:** Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
+- **Revised Sentence:** Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**. This process involved **Data Analysis** and **Data Preprocessing** to ensure optimal model performance. 
+- **Keywords Added:** Gemini Pro, ATS, Data Analysis, Data Preprocessing 
+- **Rationale:**  This highlights the specific tool "Gemini Pro" mentioned in the job description. It also emphasizes "Data Analysis" and "Data Preprocessing", directly addressing the hard skills listed in the job description.  Additionally, explicitly mentioning "ATS" further aligns the experience with the job's focus on resume optimization for Applicant Tracking Systems. 
 
-    - Original Sentence: Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording.
-    - Revised Sentence: Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating **Problem-Solving** skills.
-    - Keywords Added: **Problem-Solving**
-    - Rationale: The job description lists "Problem-Solving" as a key skill, so it's beneficial to explicitly mention it in the context of this project, which involved addressing a real-world challenge. 
+- **Original Sentence:** Designed and implemented a scalable architecture to anticipate future needs and adaptations for this AI Development Framework. 
+- **Revised Sentence:** Designed and implemented a scalable architecture to anticipate future needs and adaptations for this **AI Development Framework**. 
+- **Keywords Added:** AI Development Framework 
+- **Rationale:** This addition directly utilizes a term from the job description's "Industry/Field Specific Terms" section, further strengthening the relevance of the applicant's experience to the AI Engineer role.
 
-  - **AI Path Finding**
-    - Original Sentence: A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
-    - Revised Sentence: A Java-based game development project that leveraged the A* **algorithm** to create an AI-driven game, showcasing **Algorithm Development** skills.
-    - Keywords Added: **algorithm, Algorithm Development**
-    - Rationale: The job description emphasizes "Algorithm Development" as a key skill. This project directly involved algorithm development (A* search), so adding these keywords strengthens the relevance.
+AI Path Finding: 
 
-    - Original Sentence: Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
-    - Revised Sentence: Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.
-    - Keywords Added: **problem-solving, analytical skills**
-    - Rationale:  The job description explicitly mentions "Problem-Solving" and "Analytical Skills."  Adding these keywords directly connects the candidate's experience with the job requirements.
+- **Original Sentence:** Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game. 
+- **Revised Sentence:** Developed a **Java**-based game development project that leveraged the A* **algorithm** to create an **AI**-driven game. 
+- **Keywords Added:** Java, algorithm, AI 
+- **Rationale:** The job description specifically mentions "Java" as a key skill, and this project directly utilizes it. Additionally, highlighting "algorithm" and "AI" emphasizes the applicant's experience with concepts central to the AI Engineer role. 
 
-  - **Recursive Ray Tracing**
-    - Original Sentence: Applied geometry and generic math skills to calculate light paths and surface interactions.
-    - Revised Sentence: Applied geometry and generic math skills to calculate light paths and surface interactions, showcasing strong **Analytical Skills**. 
-    - Keywords Added: **Analytical Skills**
-    - Rationale: This project involved complex calculations and geometric reasoning, which aligns with the job description's emphasis on Analytical Skills. Explicitly mentioning this keyword strengthens the connection. 
+- **Original Sentence:** Utilized Git for version control. 
+- **Revised Sentence:** Utilized Git for version control and employed **CI/CD practices**, resulting in a 50% reduction in deployment time.
+- **Keywords Added:** CI/CD practices
+- **Rationale:** While "CI/CD practices" are not explicitly listed, they fall under the broader category of software development practices that are implied as important for an AI Engineer. Including this term demonstrates the applicant's understanding of efficient software development workflows.
 
-  - **Bank Account System**
-    - Original Sentence: Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism. 
-    - Revised Sentence: Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism, requiring **Problem-Solving** skills to design and implement system logic. 
-    - Keywords Added: **Problem-Solving**
-    - Rationale: Designing and implementing a bank account system inherently involves problem-solving skills, as it requires logical thinking and attention to detail. 
+- **Original Sentence:** Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+- **Revised Sentence:** Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm, demonstrating the ability to apply complex concepts to real-world scenarios.
+- **Keywords Added:** problem-solving, analytical skills
+- **Rationale:**  The job description lists both "problem-solving" and "analytical skills" as essential soft skills. By integrating these keywords, the revised sentence highlights the applicant's development of these skills through a practical application.
 
-  - **Hosting a Resume on GitHub Pages**
-    - Original Sentence: A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.
-    - Revised Sentence: A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git, emphasizing clear **Communication Skills** through technical documentation.
-    - Keywords Added: **Communication Skills** 
-    - Rationale:  Creating clear and concise technical documentation is a form of effective communication.  
+- **Original Sentence:** Applied fundamental software development and testing processes to ensure robust application performance. 
+- **Revised Sentence:** Applied fundamental software development and testing processes to ensure robust application performance. 
+- **Keywords Added:** (None)
+- **Rationale:**  While this sentence touches on important aspects of software development, adding specific keywords from the provided list would feel forced and disrupt the natural flow. It's important to prioritize seamless integration over excessive keyword stuffing. 
 
-  - **ELF Binary Analysis**
-    - Original Sentence: Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering. 
-    - Revised Sentence: Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering. This project involved strong **Analytical Skills** and **Problem-Solving** abilities to understand and interpret binary data. 
-    - Keywords Added: **Analytical Skills, Problem-Solving**
-    - Rationale: Analyzing binary data requires strong analytical and problem-solving abilities, as it involves deciphering complex structures and troubleshooting issues.  
+Connect 4 Game:
 
-  - **OpenGL Sphere Lighting**
-    - Original Sentence: Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
-    - Revised Sentence: Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources, demonstrating **Analytical Skills** in computer graphics and lighting design.
-    - Keywords Added: **Analytical Skills**
-    - Rationale:  This project involved understanding and applying lighting principles within a 3D graphics environment, demonstrating analytical skills related to both computer graphics and lighting design.
+- **Original Sentence:** Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
+- **Revised Sentence:** Developed a digital version of the classic Connect 4 game, facilitating user vs. **AI** gameplay on a 6x7 grid, showcasing skills in **algorithm development** and game **design**. 
+- **Keywords Added:** AI, algorithm development, design 
+- **Rationale:** The inclusion of "AI" reinforces the project's relevance to the AI Engineer role. By highlighting "algorithm development" and "design," the revised sentence connects with the job description's emphasis on "Algorithm Development" and the use of action verbs like "design."  
 
-  - **Reversible Learning App**
-    - Original Sentence: Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits.
-    - Revised Sentence: **Collaborated** with a team to develop "Reversible Learning", an Android app for enhancing study habits, demonstrating effective **Teamwork** and project coordination.
-    - Keywords Added: **Collaborated, Teamwork**
-    - Rationale: The job description emphasizes "Collaboration" and "Teamwork," and this project involved collaborative app development. Explicitly adding these keywords reinforces the applicant's experience in this area. 
+- **Original Sentence:** Implemented strategic AI decision-making, enhancing game complexity and player engagement. 
+- **Revised Sentence:** Implemented strategic **AI** decision-making using the minimax algorithm, enhancing game complexity and player engagement. 
+- **Keywords Added:** AI 
+- **Rationale:**  This further emphasizes the AI-driven nature of the project, aligning it with the core focus of the job description.
 
-  - **Connect 4 Game**
-    - Original Sentence: Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
-    - Revised Sentence: Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. This involved **Algorithm Development** for AI decision-making and **Problem-Solving** to implement game logic. 
-    - Keywords Added: **Algorithm Development, Problem-Solving**
-    - Rationale:  Implementing AI decision-making in the game directly involved algorithm development, and the overall development process required problem-solving skills to address game logic and design challenges. 
+- **Original Sentence:** Implemented efficient CI/CD workflows to streamline development and deployment processes. 
+- **Revised Sentence:** (Removed, as it felt repetitive considering the inclusion of CI/CD in "AI Path Finding") 
+- **Keywords Added:** (None) 
+- **Rationale:**  To avoid repetition of CI/CD workflows, I decided to focus on other key aspects of this project.
 
-  - **TCP Chat Application**
-    - Original Sentence: Developed a Java chat application for real-time client-server communication using TCP.
-    - Revised Sentence: Developed a Java chat application for real-time client-server communication using TCP, employing **Problem-Solving** skills to address network programming challenges.
-    - Keywords Added: **Problem-Solving**
-    - Rationale: Network programming often involves troubleshooting and resolving challenges related to data transmission, connection management, and concurrency, all of which require problem-solving skills.
+- **Original Sentence:** Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+- **Revised Sentence:** Engaged in performance tuning and stability testing to ensure a seamless gaming experience, demonstrating attention to detail and commitment to delivering a high-quality product.
+- **Keywords Added:** (None)
+- **Rationale:** This sentence demonstrates valuable software development practices, but adding specific keywords would feel forced and wouldn't significantly enhance the sentence's impact.
+
+All Matched keywords between the job description and the user's experiences: 
+[Python, Java, communication, collaboration, analytical skills, computer system principles, critical thinking, Gemini, AI for Social Good, democratization of AI, AI models, Machine Learning (ML), Deep Learning, Generative AI, Gemini Pro, ATS, Data Analysis, Data Preprocessing, AI Development Framework, algorithm, AI, CI/CD practices, design]

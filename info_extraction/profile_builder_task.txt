@@ -13,16 +13,15 @@
       "City": "Winnipeg",
       "State": "MB",
       "Zip Code": null,
-      "Country": null
+      "Country": "Canada"
     },
     "Education": {
       "Degree": "BSc",
       "Major": "Computer Science",
       "University": "University of Manitoba",
-      "Location": null,
+      "Location": "Winnipeg, Manitoba",
       "Graduation Date": "October 2023",
-      "GPA": "3.07",
-      "Honors/Distinctions": null
+      "GPA": "3.07"
     },
     "Volunteer Work": [],
     "Awards and Recognitions": [],

@@ -1,11 +1,10 @@
-Project Experience
-  ATS Pass AI
-
-Project Experience
-  AI Path Finding
-
-Project Experience
-  Connect 4 Game
-
-Project Experience 
-  Blockchain Car Mileage Tracker
+{
+  "selected_experiences": {
+    "Project Experience": [
+      "ATS Pass AI",
+      "AI Path Finding",
+      "Connect 4 Game",
+      "Programming Mentor"
+    ]
+  }
+}

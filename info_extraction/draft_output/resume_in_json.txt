@@ -1,0 +1,106 @@
+```json
+{
+  "Contact Info": {
+    "Full Name": "Saif Mahmud",
+    "Phone": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn Profile URL": "linkedin.com/in/vmsaif",
+    "Personal Website URL": "saifmahmud.dev",
+    "Address": "Winnipeg, MB, Canada"
+  },
+  "Summary": "A highly motivated AI engineer with a passion for crafting user-centric solutions, seeking to contribute to Radical AI's mission of democratizing AI for social good. My 'magic button' approach to software development, focusing on simplicity and user empowerment, aligns perfectly with Radical AI's vision.  I'm eager to leverage my expertise in AI model development, data analysis, and frameworks like LangChain and CrewAI to create impactful AI Virtual Agents that drive positive social change.  My recent project, 'ATS Pass AI,' demonstrates my ability to leverage advanced AI models and multi-agent systems to solve real-world challenges, achieving over 85% keyword alignment in resumes and streamlining the job search process. I am confident that my skills and dedication will make me a valuable asset to the Radical AI team.",
+  "Skills": {
+    "Technical": [
+      "Python",
+      "Java",
+      "LangChain",
+      "CrewAI",
+      "Google Gemini",
+      "RAG Search",
+      "Git",
+      "CI/CD",
+      "Data Analysis",
+      "Algorithm Development",
+      "AI",
+      "Machine Learning (ML)",
+      "Deep Learning",
+      "Generative AI",
+      "Data Preprocessing",
+      "AI Development Framework"
+    ],
+    "Soft": [
+      "Communication",
+      "Teamwork",
+      "Teaching",
+      "Problem-Solving",
+      "Analytical Skills",
+      "Collaboration",
+      "Critical Thinking"
+    ]
+  },
+  "Projects": [
+    {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present (Less than a year)",
+      "Technologies": "Python, CrewAI, LangChain, Gemini, RAG Search",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key achievements": [
+        "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency, aligning with principles of AI for Social Good and the democratization of AI.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, employing Machine Learning (ML), Deep Learning, and Generative AI techniques.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. This process involved Data Analysis and Data Preprocessing to ensure optimal model performance.",
+        "Designed and implemented a scalable architecture to anticipate future needs and adaptations for this AI Development Framework."
+      ]
+    },
+    {
+      "Project Title": "AI Path Finding",
+      "Timeline": "July 2023 - September 2023 (3 months)",
+      "Technologies": "Java, Git, CI/CD",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key achievements": [
+        "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+        "Utilized Git for version control and employed CI/CD practices, resulting in a 50% reduction in deployment time.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm, demonstrating the ability to apply complex concepts to real-world scenarios.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
+      ]
+    },
+    {
+      "Project Title": "Connect 4 Game",
+      "Timeline": "February 2023 - April 2023 (3 months)",
+      "Technologies": "Java, AI",
+      "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+      "Key achievements": [
+        "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in algorithm development and game design.",
+        "Implemented strategic AI decision-making using the minimax algorithm, enhancing game complexity and player engagement.",
+        "Engaged in performance tuning and stability testing to ensure a seamless gaming experience, demonstrating attention to detail and commitment to delivering a high-quality product."
+      ]
+    }
+  ],
+  "Work": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company": "",
+      "Location": "",
+      "Timeline": "February 2023 - December 2023 (10 months)",
+      "Technologies": "Python, Java",
+      "Link": "",
+      "Key achievements": [
+        "Tutored a student in computer systems and programming, focusing on Python and Java to develop foundational problem-solving skills.",
+        "Tailored teaching methods to accommodate the student's learning style, emphasizing clear communication and collaboration for effective knowledge transfer.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations to promote practical application of analytical skills.",
+        "Delivered one-on-one lessons focusing on computer system principles and introductory programming, fostering critical thinking and a strong understanding of core concepts."
+      ]
+    }
+  ],
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "Location": "Winnipeg, Manitoba",
+    "Graduation Date": "October 2023",
+    "GPA": "3.07"
+  },
+  "Additional": {
+    "References": ""
+  }
+}
+```

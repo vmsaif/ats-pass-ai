@@ -9,12 +9,8 @@ resume_compilation_task:
 
   expected_output: >
     Replace the entire placeholder, including the square brackets (`[]`), with the data from the JSON. If data for a placeholder is not available, leave it blank. Then format the resume data into a professional resume following the format provided below. Make sure to maintain the structure, spacing, and new lines as per the format.
-
-    ```plaintext
-
-    
-  
-    # **[User's First and Last Name**
+ 
+    # **[User's First and Last Name]**
     [Phone] | [Email] | [Linkedin or other link] | [Personal Website or Portfolio link]
     [Address], [City], [State]
 
@@ -100,7 +96,7 @@ resume_in_json_task:
        - Focus solely on accurately organizing the given information into a structured JSON format. 
 
     **Input Data**:
-    Check the context provided to you from the previous tasks.
+    Check the context provided to you.
 
   expected_output: >
     ```json
@@ -478,16 +474,16 @@ project_experience_extraction_task:
 
 split_context_of_experience_choosing_task:
   description: >
-    Split the context provided to you at the breaking point "Explanation for Not Choosing Other Experiences". In your output, you will provide everything before the "Explanation for Not Choosing Other Experiences" as the final output of the task.
+    Split the context provided to you at the breaking point "rejected_experiences". In your output, you will provide everything before the "rejected_experiences" as the final output of the task.
 
     The context you need to split is provided to you from the previous task.
 
   expected_output: >
-    Everything before the "Explanation for Not Choosing Other Experiences" will be the final output of the task.
+    Everything before the "rejected_experiences" will be the final output of the task.
 
 gather_info_of_choosen_experiences:
   description: >
-    Provide detailed information for each of the provided contexts from this content below.
+    Provide detailed information for each of the "selected_experiences" from this content below.
 
     {user_info_organized_data}
 
@@ -542,7 +538,7 @@ split_context_of_ats_friendly_keywords_into_experiences:
     The context you need to split is provided to you from the previous task.
 
   expected_output: >
-    Everything before the "REPORT ON CHANGES:" will be the final output of the task in JSON format.
+    Every Single line before the "REPORT ON CHANGES:" will be the final output of the task in JSON format. 
 
 # ------------- career_objective_agent -> Career Objective Crafting -------------
 
@@ -747,47 +743,60 @@ split_context_of_ats_friendly_skills_task:
 
 experience_choosing_task:
   description: >
-    Analyze the user's work experiences and project experiences to identify the 4 most relevant experiences that align with the job description provided. 
+    Your task is to analyze the user's work experiences and project experiences and select the 4 most relevant experiences for the provided job description. 
 
-    **Evaluation Criteria:**
-      * **Relevance to Job Description:** Prioritize experiences based on the skills, technologies, frameworks, tools, and soft skills mentioned in the job description. 
-      * **Recency:** Always include the most recent experience, regardless of its relevance. However, you can exclude it if it's not relevant at all or very outdated compared to today's date {today_date}. 
-      * **Keywords and Phrases:**  Favor experiences that heavily utilize keywords and phrases from the job description. 
-      * **Tools and Technologies:**  For the remaining 3 slots, prioritize experiences that showcase the specific tools, technologies, and frameworks listed in the job description. 
+    **Here's how to choose the experiences:**
+
+    1. **Recent Experience:** Always include the user's most recent experience, even if it's a project. However, if the most recent experience is very outdated compared to today's date ({today_date}) or entirely irrelevant, you can exclude it. 
+    2. **Relevance to Job Description:** Prioritize experiences that closely align with the job description. Consider:
+        * **Keywords and Phrases:**  Favor experiences that heavily utilize keywords and phrases from the job description. 
+        * **Tools and Technologies:**  Prioritize experiences that showcase the specific tools, technologies, and frameworks mentioned in the job description. 
+        * **Skills:**  Choose experiences that demonstrate the skills required for the job.
+    3. **Filling the Remaining Slots out of 4:** After including the most recent experience, select three more experiences based on their relevance, prioritizing those that highlight the most important keywords, technologies, and skills from the job description.
 
     **Input:**
       * **Job Description Keywords:** {jd_keyword} 
       
-      * **User's Work Experiences, Project Experiences:** It is provided as context to you from the previous task.
+      * **User's Work Experiences, Project Experiences:** This information is provided to you as context from the previous task.
+
+      Remember, in total, you need to select 4 experiences either from work experiences, project experiences or a combination of both.
 
   expected_output: >
-    "From the following list of your work and project experiences, select up to 4 most recent or relevant experiences in total.
-    If the most recent experience is a project, list all Project Experiences first, followed by Work Experiences. Otherwise, list Work Experiences first. You can also decide to include only Work Experiences or only Project Experiences based on relevance.
+    Any combination of 4 experiences that are most relevant to the job description. Determine the priority order as mentioned in the task description.
 
-    Label each title as either "Work Experience" or "Project Experience". 
-    
+    ```json
+    {
+      "selected_experiences": {
+        "Work Experience (or Project Experience)": [
+            experience_1,
+            experience_2
+        ],
+        "Project Experience (or Work Experience)": [
+            experience_1,
+            experience_2,
+        ]
+      }
+    }
 
-    Example: (all 4 experiences)
-      Work Experience
-        Software Engineer at Google
-        Data Analyst at Amazon
-      
-      Project Experience
-        Development of a Machine Learning Algorithm for Image Recognition
-        Building a Mobile App for Event Management
 
-    [Use empty lines to separate the experiences.]
     * **Explanation for Not Choosing Other Experiences (One by one):**
-    
-        1. [Title]: 
-            [Explanation]
-        
-        2. [Title]: 
-            [Explanation]
-        
-        3. [Title]: 
-            [Explanation] 
-        ... and so on
+    {
+      "rejected_experiences": [
+        {
+          "title": "...",
+          "reason": "..."
+        },
+        {
+          "title": "...",
+          "reason": "..."
+        },
+        ...
+      ]
+    }
+
+
+
+    * **Explanation for Not Choosing Other Experiences (One by one):**
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 

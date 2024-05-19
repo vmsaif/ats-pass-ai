@@ -3,6 +3,7 @@
 	Date: 04-23-2024
 	Description: This file contains the main function to run the ATS-PASS-AI
 """
+import os
 from textwrap import dedent
 from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool
@@ -100,6 +101,8 @@ def run():
 
     # Now, call the main crew to build the resume
     start_time = time.perf_counter()
+    # Delete the user profile files but not the folder To start fresh
+    delete_user_profile_files()
     ResumeCrew().crew().kickoff()
     end_time = time.perf_counter()
     crew_run_time = (end_time - start_time) / 60
@@ -115,8 +118,24 @@ def run():
     print(f"-- Time taken for Indexing: {indexing_time:.2f} minutes")
     print(f"-- Time taken for Crew Run: {crew_run_time:.2f} minutes")
     print(f"-- Total Time taken: {program_run_time:.2f} minutes")
-
-
+	
+def delete_user_profile_files():
+		"""Delete the user profile files but not the folder."""
+		path = 'info_extraction/'  # Get the path of the folder
+		entries = os.listdir(path)
+		for entry in entries:
+			full_path = os.path.join(path, entry)
+			if os.path.isfile(full_path):  # Check if it is a file
+				try:
+					os.remove(full_path)
+					print(f"Deleted file: {full_path}")
+				except PermissionError as e:
+					print(f"Could not delete {full_path}. Permission denied: {e}")
+				except Exception as e:
+					print(f"Error while deleting {full_path}: {e}")
+			else:
+				print(f"Skipped: {full_path} (not a file)")
+		print("User profile files deletion attempt complete.")
 
 
     

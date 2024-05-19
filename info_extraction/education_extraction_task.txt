@@ -3,9 +3,10 @@
     "Degree": "BSc",
     "Major": "Computer Science",
     "University": "University of Manitoba",
-    "University Location": null,
+    "University Location": "Winnipeg, Manitoba",
     "Graduation Date": "October 2023",
     "GPA": "3.07",
-    "Honors/Distinctions": null
+    "Honors/Distinctions": null,
+    "Relevant Courses": "* Distributed Computing (Python | JavaScript)\n* Data Structures and Algorithms (Java)\n* Object Orientation (Java | C++)\n* Software Engineering (Java | Unit Testing)\n* Database Implementation (SQL | Python)\n* AI and Game Development (Java | Python)\n* Technical Communication in CS"
   }
 }

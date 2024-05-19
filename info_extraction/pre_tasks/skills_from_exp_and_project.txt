@@ -10,24 +10,24 @@
         "field": "Programming Language"
       },
       {
-        "Name": "RAG Search",
-        "field": "AI, NLP"
+        "Name": "CrewAI",
+        "field": "AI, LLM"
       },
       {
         "Name": "LangChain",
         "field": "AI, LLM"
       },
       {
-        "Name": "CrewAI",
-        "field": "AI, NLG"
+        "Name": "Gemini",
+        "field": "AI, Natural Language Processing"
       },
       {
-        "Name": "Gemini",
-        "field": "AI, Search"
+        "Name": "RAG Search",
+        "field": "AI, Machine Learning"
       },
       {
         "Name": "Docker",
-        "field": "DevOps, Containers"
+        "field": "Containerization"
       },
       {
         "Name": "Vue.js",
@@ -35,39 +35,27 @@
       },
       {
         "Name": "A* Algorithm",
-        "field": "AI, Pathfinding"
+        "field": "Pathfinding, AI"
       },
       {
-        "Name": "3D Graphics",
-        "field": "Graphics, Rendering"
+        "Name": "Git",
+        "field": "Version Control"
+      },
+      {
+        "Name": "CI/CD",
+        "field": "Continuous Integration and Continuous Delivery"
       },
       {
         "Name": "OpenGL",
-        "field": "Graphics, API"
+        "field": "Graphics, 3D Programming"
       },
       {
         "Name": "C++",
-        "field": "System Programming"
-      },
-      {
-        "Name": "File I/O",
-        "field": "Data Management, Storage"
-      },
-      {
-        "Name": "Documentation",
-        "field": "Technical Writing, Communication"
+        "field": "Programming Language, Game Development"
       },
       {
         "Name": "C Programming",
-        "field": "System Programming"
-      },
-      {
-        "Name": "Debugging",
-        "field": "Software Testing, Troubleshooting"
-      },
-      {
-        "Name": "Linux OS",
-        "field": "Operating Systems"
+        "field": "Programming Language, System Programming"
       },
       {
         "Name": "SQL",
@@ -75,11 +63,19 @@
       },
       {
         "Name": "Android Studio",
-        "field": "Mobile Development"
+        "field": "Mobile Development, Android"
       },
       {
-        "Name": "AI Decision-Making",
-        "field": "AI, Machine Learning"
+        "Name": "TCP",
+        "field": "Networking"
+      },
+      {
+        "Name": "TCP/IP",
+        "field": "Networking, Internet"
+      },
+      {
+        "Name": "Multithreading",
+        "field": "Concurrency, Parallel Programming"
       }
     ],
     "Frameworks": [
@@ -88,52 +84,52 @@
         "field": "Java Framework"
       },
       {
-        "Name": "Angular",
-        "field": "JavaScript Framework"
+        "Name": "Documentation",
+        "field": "Technical Writing"
       }
     ],
     "Skills": [
       {
-        "Name": "Communication",
-        "field": "Interpersonal Skills"
-      },
-      {
-        "Name": "Problem Solving",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills"
-      },
-      {
-        "Name": "Adaptability",
-        "field": "Soft Skills"
-      },
-      {
-        "Name": "Critical Thinking",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Time Management",
-        "field": "Soft Skills"
+        "Name": "Programming",
+        "field": "Software Development"
       },
       {
         "Name": "Data Analysis",
-        "field": "Analytical Skills"
+        "field": "Data Science, Analytics"
       },
       {
         "Name": "Machine Learning",
-        "field": "AI, ML"
+        "field": "Artificial Intelligence, Machine Learning"
       },
       {
         "Name": "Project Management",
-        "field": "Management Skills"
+        "field": "Project Management, Scrum, Kanban"
+      },
+      {
+        "Name": "Debugging",
+        "field": "Software Development, Problem Solving"
+      },
+      {
+        "Name": "System Analysis",
+        "field": "Systems Engineering, Problem Solving"
+      },
+      {
+        "Name": "Polymorphism",
+        "field": "Object-Oriented Programming"
       }
     ],
     "Soft Skills": [
       {
+        "Name": "Communication",
+        "field": "Interpersonal Skills, Verbal Communication"
+      },
+      {
         "Name": "Leadership",
-        "field": "Management Skills"
+        "field": "Management Skills, Team Leadership"
+      },
+      {
+        "Name": "Teamwork",
+        "field": "Collaboration Skills, Team Projects"
       }
     ]
   }

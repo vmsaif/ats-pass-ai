@@ -10,64 +10,64 @@
         "field": "Programming Language"
       },
       {
+        "Name": "CrewAI",
+        "field": "AI, LLM"
+      },
+      {
+        "Name": "LangChain",
+        "field": "AI, LLM"
+      },
+      {
+        "Name": "Gemini",
+        "field": "AI, Natural Language Processing"
+      },
+      {
+        "Name": "RAG Search",
+        "field": "AI, Machine Learning"
+      },
+      {
         "Name": "MySQL",
         "field": "Database Management"
       },
       {
-        "Name": "JSON",
-        "field": "Database Management, NoSQL"
+        "Name": "Docker",
+        "field": "Containerization"
       },
       {
-        "Name": "NoSQL",
-        "field": "Database Management, NoSQL"
+        "Name": "Vue.js",
+        "field": "JavaScript Framework"
       },
       {
-        "Name": "Schema",
-        "field": "Database Management"
-      },
-      {
-        "Name": "CI/CD",
-        "field": "DevOps, CI/CD"
-      },
-      {
-        "Name": "Github Actions",
-        "field": "DevOps, CI/CD"
+        "Name": "GitHub Action",
+        "field": "CI/CD"
       },
       {
         "Name": "AWS",
-        "field": "DevOps, Cloud Computing"
-      },
-      {
-        "Name": "Android Studio",
-        "field": "Mobile Development"
-      },
-      {
-        "Name": "JUnit",
-        "field": "Software Testing, Unit Testing"
+        "field": "Cloud Computing"
       },
       {
         "Name": "C++",
-        "field": "System Programming"
+        "field": "Programming Language, Game Development"
       },
       {
-        "Name": "HSQLDB",
+        "Name": "JSON",
         "field": "Database Management"
       },
       {
-        "Name": "OOP",
-        "field": "Programming Concepts"
+        "Name": "SQL",
+        "field": "Database Management"
       },
       {
-        "Name": "SDLC",
-        "field": "Programming Concepts"
+        "Name": "noSQL",
+        "field": "Database Management"
       },
       {
-        "Name": "Debugging",
-        "field": "Software Testing, Troubleshooting"
+        "Name": "Android Studio",
+        "field": "Mobile Development, Android"
       },
       {
-        "Name": "Test-driven Deployment",
-        "field": "Software Testing, Deployment"
+        "Name": "Multithreading",
+        "field": "Concurrency, Parallel Programming"
       }
     ],
     "Frameworks": [
@@ -78,90 +78,54 @@
       {
         "Name": "Angular",
         "field": "JavaScript Framework"
+      },
+      {
+        "Name": "Documentation",
+        "field": "Technical Writing"
       }
     ],
     "Skills": [
       {
-        "Name": "System Analysis",
-        "field": "Programming Concepts"
+        "Name": "Programming",
+        "field": "Software Development"
       },
       {
-        "Name": "Web and Mobile Technologies",
-        "field": "Programming Concepts"
-      },
-      {
-        "Name": "Data Structures",
-        "field": "Programming Concepts"
-      },
-      {
-        "Name": "Communication",
-        "field": "Interpersonal Skills"
-      },
-      {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills"
-      },
-      {
-        "Name": "Problem Solving",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Adaptability",
-        "field": "Soft Skills"
-      },
-      {
-        "Name": "Critical Thinking",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Time Management",
-        "field": "Soft Skills"
+        "Name": "Debugging",
+        "field": "Software Development, Problem Solving"
       },
       {
         "Name": "Data Analysis",
-        "field": "Analytical Skills"
+        "field": "Data Science, Analytics"
       },
       {
         "Name": "Machine Learning",
-        "field": "AI, ML"
+        "field": "Artificial Intelligence, Machine Learning"
       },
       {
         "Name": "Project Management",
-        "field": "Management Skills"
+        "field": "Project Management, Scrum, Kanban"
+      },
+      {
+        "Name": "System Analysis",
+        "field": "Systems Engineering, Problem Solving"
+      },
+      {
+        "Name": "Polymorphism",
+        "field": "Object-Oriented Programming"
       }
     ],
     "Soft Skills": [
       {
-        "Name": "Good Interpersonal Skills",
-        "field": "Interpersonal Skills"
-      },
-      {
-        "Name": "Excellent Time Management Skills",
-        "field": "Soft Skills"
-      },
-      {
-        "Name": "Ability to Prioritize and Multitask",
-        "field": "Soft Skills"
-      },
-      {
-        "Name": "Ability to Work Under Pressure",
-        "field": "Soft Skills"
-      },
-      {
-        "Name": "Willingness to Learn",
-        "field": "Soft Skills"
+        "Name": "Communication",
+        "field": "Interpersonal Skills, Verbal Communication"
       },
       {
         "Name": "Leadership",
-        "field": "Management Skills"
+        "field": "Management Skills, Team Leadership"
       },
       {
-        "Name": "Complexity Analysis",
-        "field": "Soft Skills"
-      },
-      {
-        "Name": "Strong Work Ethic",
-        "field": "Soft Skills"
+        "Name": "Teamwork",
+        "field": "Collaboration Skills, Team Projects"
       }
     ]
   }

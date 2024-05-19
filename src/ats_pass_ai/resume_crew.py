@@ -62,7 +62,7 @@ class ResumeCrew:
 	career_objective_task_file_path = f'{info_extraction_folder_path}/career_objective_task.txt'
 
 	# finalized_resume
-	resume_in_json_file_path = f'{info_extraction_folder_path}/draft_output/resume_json.txt'
+	resume_in_json_file_path = f'{info_extraction_folder_path}/draft_output/resume_in_json.txt'
 	resume_compilation_task_file_path = f'{info_extraction_folder_path}/draft_output/resume_compilation.txt'
 
 	# Define the tools
@@ -100,15 +100,27 @@ class ResumeCrew:
 			config=self.agents_config["generalist_agent"],
 			allow_delegation=False,
 			# cache=True,
+			verbose=True,
 			llm=self.genAI,
 		)
 	
 	@agent
+	def technical_details_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["technical_details_agent"],
+			allow_delegation=False,
+			verbose=True,
+			# cache=True,
+			llm=self.genAI,
+		)
+
+	@agent
 	def career_objective_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["career_objective_agent"],
-			max_rpm=2,
+			max_rpm=1,
 			allow_delegation=False,
+			verbose=True,
 			# cache=True,
 			llm=self.genAILarge,
 			tools=[self.queryTool],
@@ -118,28 +130,22 @@ class ResumeCrew:
 	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
 		return Agent(
 			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-			max_rpm=2,
+			max_rpm=1,
 			allow_delegation=False,
+			verbose=True,
 			# cache=True,
 			tools=[self.webSearchTool],
 			llm=self.genAILarge,
 		)
 	
-	@agent
-	def technical_details_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["technical_details_agent"],
-			allow_delegation=False,
-			# cache=True,
-			llm=self.genAI,
-		)
+
 	
 	@agent
 	def ats_keyword_integration_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["ats_keyword_integration_agent"],
-			# verbose=True,
-			max_rpm=2,
+			verbose=True,
+			max_rpm=1,
 			allow_delegation=False,
 			# cache=True,
 			llm=self.genAILarge
@@ -150,8 +156,9 @@ class ResumeCrew:
 		return Agent(
 			config=self.agents_config["resume_in_json_agent"],
 			allow_delegation=False,
-			max_rpm=2,
+			max_rpm=1,
 			llm=self.genAILarge,
+			verbose=True,
 			# cache=True,
 			# llm=self.llama3_70b,
 			# system_template="""
@@ -174,6 +181,7 @@ class ResumeCrew:
 			config=self.agents_config["resume_compilation_agent"],
 			max_rpm=1,
 			allow_delegation=False,
+			verbose=True,
 			# cache=True,
 			llm=self.genAILarge,
 		)
@@ -455,8 +463,7 @@ class ResumeCrew:
 
 		# Load YAML file
 		yaml = self.yaml_loader('resume_in_json_task')
-		data = self.load_all_txt_files(self.info_extraction_folder_path)
-
+		
 		# append data to the yaml[0] in new paragraph
 		description = yaml[0]
 		expected_output = yaml[1]
@@ -465,8 +472,10 @@ class ResumeCrew:
 
 			print("Profile already found. Simply loading the output txt files in the context.")
 			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
-			
+			data = self.load_all_txt_files(self.info_extraction_folder_path)
 			description = description + "\n" + data
+			print("---------------Profile loaded successfully. Input IS:--------------")
+			print(description)
 		else :	
 			# need to build profile from scratch
 			# insert the profile_builder_task at the beginning of the context
@@ -493,9 +502,6 @@ class ResumeCrew:
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the user info organizer crew"""
-
-		# Delete the user profile files but not the folder To start fresh
-		self.delete_user_profile_files()
 
 		tasks = []
 	
@@ -565,7 +571,7 @@ class ResumeCrew:
 				# Construct full file path
 				file_path = os.path.join(folder_path, filename)
 				# Open the file and read its contents
-				with open(file_path, 'r', encoding='utf-8') as file:
+				with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
 					all_text += file.read() + "\n"  # Append text with a newline to separate files
 
 		return all_text
@@ -600,23 +606,7 @@ class ResumeCrew:
 				return True
 		return False
 	
-	def delete_user_profile_files(self):
-		"""Delete the user profile files but not the folder."""
-		path = self.info_extraction_folder_path  # Get the path of the folder
-		entries = os.listdir(path)
-		for entry in entries:
-			full_path = os.path.join(path, entry)
-			if os.path.isfile(full_path):  # Check if it is a file
-				try:
-					os.remove(full_path)
-					print(f"Deleted file: {full_path}")
-				except PermissionError as e:
-					print(f"Could not delete {full_path}. Permission denied: {e}")
-				except Exception as e:
-					print(f"Error while deleting {full_path}: {e}")
-			else:
-				print(f"Skipped: {full_path} (not a file)")
-		print("User profile files deletion attempt complete.")
+
 # To reset all the files
 
 	# def clear_file_content(self):
