@@ -94,15 +94,6 @@ class ResumeCrew:
 
 	small_llm_limiter = RequestLimiter(llm_size='small').run
 	large_llm_limiter = RequestLimiter(llm_size='large').run
-	# genAILarge = ChatVertexAI(
-	# 	model="gemini-1.5-pro-preview-0409",
-	# 	temperature=1.0,
-	# )
-
-	# llama3_70b = ChatGroq(
-	# 	model_name="llama3-70b-8192",
-	# 	temperature=1.5,
-	# )
 
 	@agent
 	def generalist_agent(self) -> Agent:
@@ -537,31 +528,31 @@ class ResumeCrew:
 
 		tasks = []
 	
-		# # if needs to change here, remember to change in the resume_in_json_task as well.
-		# if(not self.profile_already_created()):
-		# 	tasks.append(self.personal_information_extraction_task())
-		# 	tasks.append(self.education_extraction_task())
-		# 	tasks.append(self.volunteer_work_extraction_task())
-		# 	tasks.append(self.awards_recognitions_extraction_task())
-		# 	tasks.append(self.references_extraction_task())
-		# 	tasks.append(self.personal_traits_interests_extraction_task())
-		# 	tasks.append(self.miscellaneous_extraction_task())
-		# 	tasks.append(self.profile_builder_task())
-		# 	tasks.append(self.work_experience_extraction_task())
-		# 	tasks.append(self.project_experience_extraction_task())
-		# 	tasks.append(self.skills_from_exp_and_project_task())
-		# 	tasks.append(self.skills_extraction_task())
+		# if needs to change here, remember to change in the resume_in_json_task as well.
+		if(not self.profile_already_created()):
+			tasks.append(self.personal_information_extraction_task())
+			tasks.append(self.education_extraction_task())
+			tasks.append(self.volunteer_work_extraction_task())
+			tasks.append(self.awards_recognitions_extraction_task())
+			tasks.append(self.references_extraction_task())
+			tasks.append(self.personal_traits_interests_extraction_task())
+			tasks.append(self.miscellaneous_extraction_task())
+			tasks.append(self.profile_builder_task())
+			tasks.append(self.work_experience_extraction_task())
+			tasks.append(self.project_experience_extraction_task())
+			tasks.append(self.skills_from_exp_and_project_task())
+			tasks.append(self.skills_extraction_task())
 
-		# # Either way, these tasks will be executed.
-		# tasks.append(self.ats_friendly_skills_task())
-		# tasks.append(self.split_context_of_ats_friendly_skills_task())
-		# tasks.append(self.experience_choosing_task())
-		# tasks.append(self.split_context_of_experience_choosing_task())
-		# tasks.append(self.gather_info_of_choosen_experiences())
-		# tasks.append(self.ats_friendly_keywords_into_experiences_task())
-		# tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
-		# tasks.append(self.career_objective_task())
-		# tasks.append(self.resume_in_json_task())
+		# Either way, these tasks will be executed.
+		tasks.append(self.ats_friendly_skills_task())
+		tasks.append(self.split_context_of_ats_friendly_skills_task())
+		tasks.append(self.experience_choosing_task())
+		tasks.append(self.split_context_of_experience_choosing_task())
+		tasks.append(self.gather_info_of_choosen_experiences())
+		tasks.append(self.ats_friendly_keywords_into_experiences_task())
+		tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		tasks.append(self.career_objective_task())
+		tasks.append(self.resume_in_json_task())
 		tasks.append(self.resume_compilation_task())
 		
 		
