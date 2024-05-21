@@ -23,10 +23,10 @@ The project is currently in the **active development stage**. The following feat
    - The system can analyze job descriptions to identify key keywords and requirements. *(Completed)* ✅
 
 3. **Resume Creation** 🧑‍💼
-   - The system can integrate user information with job description analysis to draft resumes. *(In Progress)* ⏳
+   - The system can integrate user information with job description analysis to draft resumes. *(Completed)* ✅
 
 4. **LaTeX Resume Generation** 🛠️
-   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(Scheduled)* 📅
+   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(In Progress)* ⏳
 
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 
