@@ -3,7 +3,6 @@
 
 # Purpose: This module is used to limit the number of requests made to the LLM API to avoid hitting the free tier limits. At the moment of writing this, I am only using 2 llms in my main program, one with a large limit and one with a small limit. If more llm is needed, then just follow the init(str) method and add more limits. 
 
-import datetime
 import os
 import time
 import sqlite3
@@ -32,9 +31,6 @@ class RequestLimiter:
         self.setLimits(llm_size)
         self.configDB(llm_size)
         self.request_count_today, self.first_request_time = self.get_todays_count()
-        
-        if not self.first_request_time or (time.time() - self.first_request_time) > self.DAY_IN_SECONDS:  # 86400 seconds in 24 hours
-            self.reset_counts()
 
     def setLimits(self, llm_size: str):
         if(llm_size == 'large'):
@@ -72,7 +68,6 @@ class RequestLimiter:
     def setup_database(self):
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS Requests (
-                date TEXT PRIMARY KEY,
                 count INTEGER DEFAULT 0,
                 first_request_time REAL
             )
@@ -81,29 +76,42 @@ class RequestLimiter:
 
     def get_todays_count(self):
         now = time.time()
-        today_str = datetime.date.today().strftime('%Y-%m-%d')
-        self.cursor.execute('SELECT count, first_request_time FROM Requests WHERE date = ?', (today_str,))
+        # Don't use calendar day, get last request time from DB
+        self.cursor.execute('SELECT count, first_request_time FROM Requests')
         row = self.cursor.fetchone()
         if row:
             return row[0], row[1]
         else:
-            self.cursor.execute('INSERT INTO Requests (date, count, first_request_time) VALUES (?, 0, ?)', (today_str, now))
+            # If no record exists, initialize with current time
+            self.cursor.execute('INSERT INTO Requests (count, first_request_time) VALUES (0, ?)', (now,))
             self.conn.commit()
             return 0, now
 
     def update_count(self, new_count):
-        today_str = datetime.date.today().strftime('%Y-%m-%d')
-        self.cursor.execute('UPDATE Requests SET count = ? WHERE date = ?', (new_count, today_str))
+        # No need for calendar day, update existing record 
+        self.cursor.execute('UPDATE Requests SET count = ?', (new_count,))
         self.conn.commit()
 
-    def reset_counts(self):
-        now = time.time()
-        today_str = datetime.date.today().strftime('%Y-%m-%d')
-        self.cursor.execute('UPDATE Requests SET count = 0, first_request_time = ? WHERE date = ?', (now, today_str))
+    def reset_counts(self, now):
+        # Reset count and update first_request_time for the new 24-hour window
+        self.cursor.execute('UPDATE Requests SET count = 0, first_request_time = ?', (now,))
         self.conn.commit()
         self.request_count_today = 0
-        self.first_request_time = now  # Update the start of the new 24-hour period
+        self.first_request_time = now
+        self.prune_old_data(now)
 
+    def prune_old_data(self, now):
+        # Check if there are any entries older than two days
+        two_days_ago = now - (2 * self.DAY_IN_SECONDS)
+        self.cursor.execute('SELECT COUNT(*) FROM Requests WHERE first_request_time < ?', (two_days_ago,))
+        count = self.cursor.fetchone()[0]
+
+        # Only delete if there are entries older than two days
+        if count > 0:
+            self.cursor.execute('DELETE FROM Requests WHERE first_request_time < ?', (two_days_ago,))
+            self.conn.commit()
+            
+            
     def run(self, output):
         now = time.time()
         # First check if the daily limit has been reached
@@ -133,11 +141,9 @@ class RequestLimiter:
 
         # Check if it passed 24 hours since the first request 
         if (now - self.first_request_time) > self.DAY_IN_SECONDS:
-            self.reset_counts()
+            self.reset_counts(now)
             self.first_request_time = now  # Update the start of the new 24-hour period
         if request_count_today >= rpd_limit:
             print("Daily request limit reached.")
             return False
         return True
-    
-
