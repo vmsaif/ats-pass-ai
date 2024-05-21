@@ -13,14 +13,14 @@
       "City": "Winnipeg",
       "State": "MB",
       "Zip Code": null,
-      "Country": "Canada"
+      "Country": null
     },
     "Education": {
       "Degree": "BSc",
       "Major": "Computer Science",
       "University": "University of Manitoba",
-      "Location": "Winnipeg, Manitoba",
-      "Graduation Date": "October 2023",
+      "Location": null,
+      "Graduation Date": "October  2023",
       "GPA": "3.07"
     },
     "Volunteer Work": [],
@@ -30,7 +30,8 @@
       "Strengths": "Detail-oriented, Highly analytical, Excellent problem-solving skills, Strong communication skills, Ability to work independently and as part of a team",
       "Weaknesses": null,
       "Hobbies": null,
-      "Passions": null
+      "Passions": null,
+      "Soft Skills": "Good interpersonal skills, communication, teamwork, problem-solving, adaptability, time management, critical thinking, complexity analysis"
     },
     "Miscellaneous": {
       "Languages Spoken": null,

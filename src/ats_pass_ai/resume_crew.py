@@ -6,18 +6,20 @@
 """
 import datetime
 import os
+import time
 
 import yaml
-from langchain_groq import ChatGroq
+# from langchain_groq import ChatGroq
 from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmCategory
 # from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_google_vertexai import ChatVertexAI
+# from langchain_google_vertexai import ChatVertexAI
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 # from langchain_google_vertexai import VertexAI # to use codey - code-bison model to generate latex
 # from ats_pass_ai.tools.crewai_web_search_tool import CrewAIWebsiteSearchTool
 # from crewai_tools import SerperDevTool
 from langchain_community.tools import DuckDuckGoSearchRun
+from ats_pass_ai.request_limiter import RequestLimiter
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 
 @CrewBase
@@ -26,7 +28,7 @@ class ResumeCrew:
 	agents_config = 'config/agents.yaml'
 	tasks_config_path = 'config/tasks.yaml'
 	tasks_config = tasks_config_path # because tasks_config somehow getting recognized as a dictionary, not a simple string path.
-	
+
 	# user_info_orgainzed_file_path
 	user_info_organized_file_path = 'info_files/user_info_organized.txt'
 
@@ -69,7 +71,6 @@ class ResumeCrew:
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
 	webSearchTool = DuckDuckGoSearchRun()
 	
-
 	safety_settings = {
 		HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
 		HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
@@ -79,29 +80,41 @@ class ResumeCrew:
 	
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
-		max_output_tokens=8192,
+		# max_output_tokens=8192,
 		temperature=1.0,
 		safety_settings=safety_settings,
 	)
 
-	genAILarge = ChatVertexAI(
-		model="gemini-1.5-pro-preview-0409",
+	genAILarge = GoogleGenerativeAI(
+		model="gemini-1.5-pro-latest",
+		# max_output_tokens=8192,
 		temperature=1.0,
+		safety_settings=safety_settings,
 	)
 
-	llama3_70b = ChatGroq(
-		model_name="llama3-70b-8192",
-		temperature=1.5,
-	)
+	small_llm_limiter = RequestLimiter(llm_size='small').run
+	large_llm_limiter = RequestLimiter(llm_size='large').run
+	# genAILarge = ChatVertexAI(
+	# 	model="gemini-1.5-pro-preview-0409",
+	# 	temperature=1.0,
+	# )
+
+	# llama3_70b = ChatGroq(
+	# 	model_name="llama3-70b-8192",
+	# 	temperature=1.5,
+	# )
 
 	@agent
 	def generalist_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["generalist_agent"],
 			allow_delegation=False,
+			# max_rpm=8,
 			# cache=True,
+			
 			verbose=True,
 			llm=self.genAI,
+			step_callback=self.small_llm_limiter
 		)
 	
 	@agent
@@ -112,17 +125,20 @@ class ResumeCrew:
 			verbose=True,
 			# cache=True,
 			llm=self.genAI,
+			step_callback=self.small_llm_limiter
 		)
 
 	@agent
 	def career_objective_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["career_objective_agent"],
-			max_rpm=1,
+			# max_rpm=1,
+			
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
 			llm=self.genAILarge,
+			step_callback=self.large_llm_limiter,
 			tools=[self.queryTool],
 		)
 
@@ -130,7 +146,8 @@ class ResumeCrew:
 	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
 		return Agent(
 			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-			max_rpm=1,
+			# max_rpm=1,
+			step_callback=self.large_llm_limiter,
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
@@ -138,14 +155,13 @@ class ResumeCrew:
 			llm=self.genAILarge,
 		)
 	
-
-	
 	@agent
 	def ats_keyword_integration_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["ats_keyword_integration_agent"],
 			verbose=True,
-			max_rpm=1,
+			# max_rpm=1,
+			step_callback=self.large_llm_limiter,
 			allow_delegation=False,
 			# cache=True,
 			llm=self.genAILarge
@@ -156,7 +172,8 @@ class ResumeCrew:
 		return Agent(
 			config=self.agents_config["resume_in_json_agent"],
 			allow_delegation=False,
-			max_rpm=1,
+			# max_rpm=1,
+			step_callback=self.large_llm_limiter,
 			llm=self.genAILarge,
 			verbose=True,
 			# cache=True,
@@ -179,7 +196,8 @@ class ResumeCrew:
 	def resume_compilation_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["resume_compilation_agent"],
-			max_rpm=1,
+			max_rpm=2,
+			step_callback=self.large_llm_limiter,
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
@@ -188,7 +206,7 @@ class ResumeCrew:
 
 	# ---------------------- Define the tasks ----------------------
 
-	@task
+	# @task
 	def personal_information_extraction_task(self):
 		return Task(
 			config=self.tasks_config["personal_information_extraction_task"],
@@ -197,7 +215,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
 	
-	@task
+	# @task
 	def education_extraction_task(self):
 		return Task(
 			config=self.tasks_config["education_extraction_task"],
@@ -206,7 +224,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
  
-	@task
+	# @task
 	def volunteer_work_extraction_task(self):
 		return Task(
 			config=self.tasks_config["volunteer_work_extraction_task"],
@@ -215,7 +233,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
 
-	@task
+	# @task
 	def awards_recognitions_extraction_task (self):
 		return Task(
 			config=self.tasks_config["awards_recognitions_extraction_task"],
@@ -224,7 +242,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
  
-	@task
+	# @task
 	def references_extraction_task(self):
 		return Task(
 			config=self.tasks_config["references_extraction_task"],
@@ -233,7 +251,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
 	
-	@task
+	# @task
 	def personal_traits_interests_extraction_task(self):
 		return Task(
 			config=self.tasks_config["personal_traits_interests_extraction_task"],
@@ -242,7 +260,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
 	
-	@task
+	# @task
 	def miscellaneous_extraction_task(self):
 		return Task(
 			config=self.tasks_config["miscellaneous_extraction_task"],
@@ -251,7 +269,7 @@ class ResumeCrew:
 			tools=[self.queryTool],
 		)
 
-	@task
+	# @task
 	def profile_builder_task(self):
 		return Task(
 			config=self.tasks_config["profile_builder_task"],
@@ -268,7 +286,7 @@ class ResumeCrew:
 			output_file=self.profile_builder_task_file_path,
 		)
 
-	@task
+	# @task
 	def work_experience_extraction_task(self):
 		
 		yaml = self.yaml_loader('work_experience_extraction_task')
@@ -285,7 +303,7 @@ class ResumeCrew:
 			output_file=self.work_experience_extraction_task_file_path,
 		)
 
-	@task
+	# @task
 	def project_experience_extraction_task(self):
 
 		# Load YAML file
@@ -302,7 +320,7 @@ class ResumeCrew:
 			output_file=self.project_experience_extraction_task_file_path,
 		)
 	
-	@task
+	# @task
 	def skills_from_exp_and_project_task(self):
 		return Task(
 			config=self.tasks_config["skills_from_exp_and_project_task"],
@@ -312,7 +330,7 @@ class ResumeCrew:
 			output_file=self.skills_from_exp_and_project_file_path,
 		)
 
-	@task
+	# @task
 	def skills_extraction_task(self):
 		return Task(
 			config=self.tasks_config["skills_extraction_task"],
@@ -324,7 +342,7 @@ class ResumeCrew:
 
 	# # ----------------- Skills Match Identification -----------------
 	
-	@task
+	# @task
 	def ats_friendly_skills_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_skills_task')
@@ -337,12 +355,13 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
+			# callback=self.rpm_controller,
 			context=[self.skills_extraction_task()],
 			tools=[self.webSearchTool],
 			output_file=self.ats_friendly_skills_pre_task_file_path,
 		)
 	
-	@task
+	# @task
 	def split_context_of_ats_friendly_skills_task(self):
 		return Task(
 			config=self.tasks_config["split_context_of_ats_friendly_skills_task"],
@@ -353,7 +372,7 @@ class ResumeCrew:
 	# ----------------- End of Skills Match Identification -----------------
 
 	# ----------------- Choose Work/Project Experience -----------------
-	@task
+	# @task
 	def experience_choosing_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('experience_choosing_task')
@@ -368,11 +387,12 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
+			# callback=self.rpm_controller,
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
 			output_file=self.experience_choosing_task_file_path,
 		)
 	
-	@task
+	# @task
 	def split_context_of_experience_choosing_task(self):
 
 		# TODO: Instead making agent doing this split, use a tool to split the context.
@@ -385,7 +405,7 @@ class ResumeCrew:
 		)
 
 	
-	@task
+	# @task
 	def gather_info_of_choosen_experiences(self):
 		# Load YAML file
 		yaml = self.yaml_loader('gather_info_of_choosen_experiences')
@@ -406,7 +426,7 @@ class ResumeCrew:
 
 	# ----------------- Include ATS Keywords into Experiences -----------------
 
-	@task
+	# @task
 	def ats_friendly_keywords_into_experiences_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
@@ -418,11 +438,12 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.ats_keyword_integration_agent(),
+			# callback=self.rpm_controller,
 			context=[self.gather_info_of_choosen_experiences()],
 			output_file=self.ats_friendly_keywords_into_experiences_file_path,
 		)
 
-	@task
+	# @task
 	def split_context_of_ats_friendly_keywords_into_experiences(self):
 		# TODO: Instead making agent doing this split, use a tool to split the context.
 
@@ -431,9 +452,10 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			context=[self.ats_friendly_keywords_into_experiences_task()],
 			output_file=self.split_context_of_ats_friendly_keywords_into_experiences_file_path,
+			# callback=self.rpm_controller
 		)
 	
-	@task
+	# @task
 	def career_objective_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('career_objective_task')
@@ -446,11 +468,12 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.career_objective_agent(),
+			# callback=self.rpm_controller,
 			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
 			output_file=self.career_objective_task_file_path,
 		)
 
-	@task
+	# @task
 	def resume_in_json_task(self):
 
 		context = []
@@ -474,8 +497,8 @@ class ResumeCrew:
 			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
 			data = self.load_all_txt_files(self.info_extraction_folder_path)
 			description = description + "\n" + data
-			print("---------------Profile loaded successfully. Input IS:--------------")
-			print(description)
+			# print("---------------Profile loaded successfully. Input IS:--------------")
+			# print(description)
 		else :	
 			# need to build profile from scratch
 			# insert the profile_builder_task at the beginning of the context
@@ -492,11 +515,20 @@ class ResumeCrew:
 	
 	@task
 	def resume_compilation_task(self):
+		# load the yaml file
+		yaml = self.yaml_loader('resume_compilation_task')
+		resume_json_data = self.load_txt_files(self.resume_in_json_file_path)
+		description = yaml[0] + '\n' + resume_json_data
+		# print("Description: ", description)
+		expected_output = yaml[1]
+
 		return Task(
-			config=self.tasks_config["resume_compilation_task"],
+			description=description,
+			expected_output=expected_output,
 			agent=self.resume_compilation_agent(),
-			context=[self.resume_in_json_task()],
+			# context=[self.resume_in_json_task()],
 			output_file=self.resume_compilation_task_file_path,
+			# callback=self.rpm_controller
 		)
 
 	@crew
@@ -505,37 +537,37 @@ class ResumeCrew:
 
 		tasks = []
 	
-		# if needs to change here, remember to change in the resume_in_json_task as well.
-		if(not self.profile_already_created()):
-			tasks.append(self.personal_information_extraction_task())
-			tasks.append(self.education_extraction_task())
-			tasks.append(self.volunteer_work_extraction_task())
-			tasks.append(self.awards_recognitions_extraction_task())
-			tasks.append(self.references_extraction_task())
-			tasks.append(self.personal_traits_interests_extraction_task())
-			tasks.append(self.miscellaneous_extraction_task())
-			tasks.append(self.profile_builder_task())
-			tasks.append(self.work_experience_extraction_task())
-			tasks.append(self.project_experience_extraction_task())
-			tasks.append(self.skills_from_exp_and_project_task())
-			tasks.append(self.skills_extraction_task())
+		# # if needs to change here, remember to change in the resume_in_json_task as well.
+		# if(not self.profile_already_created()):
+		# 	tasks.append(self.personal_information_extraction_task())
+		# 	tasks.append(self.education_extraction_task())
+		# 	tasks.append(self.volunteer_work_extraction_task())
+		# 	tasks.append(self.awards_recognitions_extraction_task())
+		# 	tasks.append(self.references_extraction_task())
+		# 	tasks.append(self.personal_traits_interests_extraction_task())
+		# 	tasks.append(self.miscellaneous_extraction_task())
+		# 	tasks.append(self.profile_builder_task())
+		# 	tasks.append(self.work_experience_extraction_task())
+		# 	tasks.append(self.project_experience_extraction_task())
+		# 	tasks.append(self.skills_from_exp_and_project_task())
+		# 	tasks.append(self.skills_extraction_task())
 
-		# Either way, these tasks will be executed.
-		tasks.append(self.ats_friendly_skills_task())
-		tasks.append(self.split_context_of_ats_friendly_skills_task())
-		tasks.append(self.experience_choosing_task())
-		tasks.append(self.split_context_of_experience_choosing_task())
-		tasks.append(self.gather_info_of_choosen_experiences())
-		tasks.append(self.ats_friendly_keywords_into_experiences_task())
-		tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
-		tasks.append(self.career_objective_task())
-		tasks.append(self.resume_in_json_task())
+		# # Either way, these tasks will be executed.
+		# tasks.append(self.ats_friendly_skills_task())
+		# tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# tasks.append(self.experience_choosing_task())
+		# tasks.append(self.split_context_of_experience_choosing_task())
+		# tasks.append(self.gather_info_of_choosen_experiences())
+		# tasks.append(self.ats_friendly_keywords_into_experiences_task())
+		# tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		# tasks.append(self.career_objective_task())
+		# tasks.append(self.resume_in_json_task())
 		tasks.append(self.resume_compilation_task())
 		
 		
 		# Return the crew
 		return Crew(
-			max_rpm=11,
+			max_rpm=10,
 			agents=self.agents,
 			tasks=tasks,
 			# cache=True,
@@ -543,7 +575,7 @@ class ResumeCrew:
 			process=Process.sequential,
 			# process=Process.hierarchical,
 			# manager_llm=self.composerLLM,
-			verbose=2,
+			# verbose=2,
 			memory=True,
 			embedder={
 				"provider": "google",
@@ -606,6 +638,11 @@ class ResumeCrew:
 				return True
 		return False
 	
+	
+
+		
+
+		
 
 # To reset all the files
 

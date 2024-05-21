@@ -1,136 +1,167 @@
 {
-  "Combined Skills List": {
-    "Technologies": [
-      {
-        "Name": "Python",
-        "field": "Programming Language"
-      },
-      {
-        "Name": "Java",
-        "field": "Programming Language"
-      },
-      {
-        "Name": "CrewAI",
-        "field": "AI, LLM"
-      },
-      {
-        "Name": "LangChain",
-        "field": "AI, LLM"
-      },
-      {
-        "Name": "Gemini",
-        "field": "AI, Natural Language Processing"
-      },
-      {
-        "Name": "RAG Search",
-        "field": "AI, Machine Learning"
-      },
-      {
-        "Name": "Docker",
-        "field": "Containerization"
-      },
-      {
-        "Name": "Vue.js",
-        "field": "JavaScript Framework"
-      },
-      {
-        "Name": "A* Algorithm",
-        "field": "Pathfinding, AI"
-      },
-      {
-        "Name": "Git",
-        "field": "Version Control"
-      },
-      {
-        "Name": "CI/CD",
-        "field": "Continuous Integration and Continuous Delivery"
-      },
-      {
-        "Name": "OpenGL",
-        "field": "Graphics, 3D Programming"
-      },
-      {
-        "Name": "C++",
-        "field": "Programming Language, Game Development"
-      },
-      {
-        "Name": "C Programming",
-        "field": "Programming Language, System Programming"
-      },
-      {
-        "Name": "SQL",
-        "field": "Database Management"
-      },
-      {
-        "Name": "Android Studio",
-        "field": "Mobile Development, Android"
-      },
-      {
-        "Name": "TCP",
-        "field": "Networking"
-      },
-      {
-        "Name": "TCP/IP",
-        "field": "Networking, Internet"
-      },
-      {
-        "Name": "Multithreading",
-        "field": "Concurrency, Parallel Programming"
-      }
-    ],
-    "Frameworks": [
-      {
-        "Name": "Spring Boot",
-        "field": "Java Framework"
-      },
-      {
-        "Name": "Documentation",
-        "field": "Technical Writing"
-      }
-    ],
-    "Skills": [
-      {
-        "Name": "Programming",
-        "field": "Software Development"
-      },
-      {
-        "Name": "Data Analysis",
-        "field": "Data Science, Analytics"
-      },
-      {
-        "Name": "Machine Learning",
-        "field": "Artificial Intelligence, Machine Learning"
-      },
-      {
-        "Name": "Project Management",
-        "field": "Project Management, Scrum, Kanban"
-      },
-      {
-        "Name": "Debugging",
-        "field": "Software Development, Problem Solving"
-      },
-      {
-        "Name": "System Analysis",
-        "field": "Systems Engineering, Problem Solving"
-      },
-      {
-        "Name": "Polymorphism",
-        "field": "Object-Oriented Programming"
-      }
-    ],
-    "Soft Skills": [
-      {
-        "Name": "Communication",
-        "field": "Interpersonal Skills, Verbal Communication"
-      },
-      {
-        "Name": "Leadership",
-        "field": "Management Skills, Team Leadership"
-      },
-      {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills, Team Projects"
-      }
-    ]
-  }
+ "Combined Skills List": {
+  "Technologies": [
+   {
+    "Name": "Python",
+    "field": "Programming Language"
+   },
+   {
+    "Name": "Java",
+    "field": "Programming Language"
+   },
+   {
+    "Name": "RAG Search",
+    "field": "Relevance Assessment, ..."
+   },
+   {
+    "Name": "Blockchain",
+    "field": "System Development, ..."
+   },
+   {
+    "Name": "A* Algorithm",
+    "field": "AI, Game Development"
+   },
+   {
+    "Name": "OpenGL",
+    "field": "Computer Graphics"
+   },
+   {
+    "Name": "File I/O",
+    "field": "System Operations"
+   },
+   {
+    "Name": "Markdown",
+    "field": "Content Development"
+   },
+   {
+    "Name": "Jekyll",
+    "field": "Static Site Generation"
+   },
+   {
+    "Name": "C Programming",
+    "field": "Programming Language"
+   },
+   {
+    "Name": "SQL",
+    "field": "Data Management"
+   },
+   {
+    "Name": "Cross-Platform Deployment",
+    "field": "Web Development, Mobile Development"
+   },
+   {
+    "Name": "Cross-Platform Deployment",
+    "field": "Web Development, Mobile Development"
+   },
+   {
+    "Name": "TCP/IP",
+    "field": "Networking"
+   }
+  ],
+  "Frameworks": [
+   {
+    "Name": "CrewAI",
+    "field": "AI, LLM, ..."
+   },
+   {
+    "Name": "LangChain",
+    "field": "AI, LLM, ..."
+   },
+   {
+    "Name": "Gemini",
+    "field": "Web Development, AI"
+   },
+   {
+    "Name": "Android Studio",
+    "field": "Android Development"
+   },
+   {
+    "Name": "Spring Boot",
+    "field": "Java Framework"
+   }
+  ],
+
+  "Skills": [
+   {
+    "Name": "Tutoring",
+    "field": "Education, Training"
+   },
+   {
+    "Name": "AI",
+    "field": "Artificial Intelligence, ..."
+   },
+   {
+    "Name": "System Analysis",
+    "field": "System Development, ..."
+   },
+   {
+    "Name": "Data Structures",
+    "field": "Data Analysis, ..."
+   },
+   {
+    "Name": "Git",
+    "field": "Software Development, ..."
+
+   },
+   {
+    "Name": "CI/CD",
+    "field": "Software Development, ..."
+   },
+   {
+    "Name": "3D Graphics",
+    "field": "Computer Graphics"
+   },
+   {
+    "Name": "Debugging",
+    "field": "Software Development, ..."
+   },
+   {
+    "Name": "Linux OS",
+    "field": "System Administration, ..."
+   },
+   {
+    "Name": "Documentation",
+    "field": "Content Development"
+   },
+   {
+    "Name": "Data Analysis",
+    "field": "Analytical Skills, ..."
+   },
+   {
+    "Name": "Machine Learning",
+    "field": "AI, ML, ..."
+   },
+   {
+    "Name": "Project Management",
+    "field": "Management Skills, ..."
+   },
+   {
+    "Name": "AI Decision-Making",
+    "field": "AI, ML, ..."
+   },
+   {
+    "Name": "Multithreading",
+    "field": "Software Development, ..."
+   },
+   {
+    "Name": "Networking",
+    "field": "System Administration, ..."
+   }
+  ],
+
+  "Soft Skills": [
+   {
+    "Name": "Communication",
+    "field": "Interpersonal Skills"
+   },
+   {
+    "Name": "Leadership",
+    "field": "Management Skills"
+   },
+   {
+    "Name": "Teamwork",
+    "field": "Collaboration Skills"
+   }
+  ]
+ }
 }

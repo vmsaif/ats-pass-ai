@@ -7,27 +7,20 @@
       "Frameworks": [
         "LangChain"
       ],
-      "AI Development Frameworks": [
-        "CrewAI"
-      ],
-      "Tools": [
-        "Google Gemini",
-        "RAG Search"
-      ],
+      "Tools": [],
       "Soft Skills": [
         "Communication",
         "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
-      "Programming Languages": {
-        "name": "Java",
-        "pertially_matched_with_job_description": "Algorithm Development"
+      "Programming Languages": {},
+      "Frameworks": {
+        "name": "CrewAI",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
       },
-      "Machine Learning": {
-        "name": "Data Analysis",
-        "pertially_matched_with_job_description": "Data Analysis"
-      }
+      "Tools": {},
+      "Soft Skills": {}
     }
   }
 }
