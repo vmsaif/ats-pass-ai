@@ -3,7 +3,11 @@
 	Date: 04-23-2024
 	Description: This file contains the main function to run the ATS-PASS-AI
 """
+import datetime
+import os
+import sqlite3
 from textwrap import dedent
+from ats_pass_ai.request_limiter import RequestLimiter
 from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool
 from ats_pass_ai.tools.llm_task import LLMTask
@@ -84,9 +88,9 @@ def run():
 
     start_time = time.perf_counter()
     job_description_extractor = LLMTask("Job desc keyword extraction", jd_file_path, jd_extracted_keywords_file_path, jd_extraction_system_instruction, override=True)
-    
+
     # job_description_extractor.run()
-    
+
     end_time = time.perf_counter()
     jd_extraction_time = (end_time - start_time) / 60
 
@@ -94,16 +98,21 @@ def run():
     start_time = time.perf_counter()
 
     RagSearchTool.process_and_index(user_info_orgainzed_file_path)
-    
+
     end_time = time.perf_counter()
     indexing_time = (end_time - start_time) / 60
 
     # Now, call the main crew to build the resume
     start_time = time.perf_counter()
+
+    # Delete the user profile files but not the folder To start fresh
+
+    # delete_user_profile_files()
     ResumeCrew().crew().kickoff()
+
     end_time = time.perf_counter()
     crew_run_time = (end_time - start_time) / 60
-    
+
     end_main_time = time.perf_counter()
 
     program_run_time = (end_main_time - start_main_time) / 60
@@ -115,8 +124,56 @@ def run():
     print(f"-- Time taken for Indexing: {indexing_time:.2f} minutes")
     print(f"-- Time taken for Crew Run: {crew_run_time:.2f} minutes")
     print(f"-- Total Time taken: {program_run_time:.2f} minutes")
+    printDailyLimitRemaining()
+	
+def printDailyLimitRemaining():
+	DB_DIR = RequestLimiter.DB_DIR
+	DB_FILE_LARGE_LLM = RequestLimiter.DB_FILE_LARGE_LLM
+	DB_FILE_SMALL_LLM = RequestLimiter.DB_FILE_SMALL_LLM
+	
+	LLM_LARGE_RPM_LIMIT = RequestLimiter.LLM_LARGE_RPM_LIMIT
+	LLM_LARGE_DAILY_REQUEST_LIMIT = RequestLimiter.LLM_LARGE_DAILY_REQUEST_LIMIT
 
+	LLM_SMALL_RPM_LIMIT = RequestLimiter.LLM_SMALL_RPM_LIMIT
+	LLM_SMALL_DAILY_REQUEST_LIMIT = RequestLimiter.LLM_SMALL_DAILY_REQUEST_LIMIT
 
+	try:
+		conn_large = sqlite3.connect(os.path.join(DB_DIR, DB_FILE_LARGE_LLM))
+		cursor_large = conn_large.cursor()
+		conn_small = sqlite3.connect(os.path.join(DB_DIR, DB_FILE_SMALL_LLM))
+		cursor_small = conn_small.cursor()
+	except Exception as e:
+		print("Error: ", e)
+		raise
+	
+	now = time.time()
+	today_str = datetime.date.today().strftime('%Y-%m-%d')
+	cursor_large.execute('SELECT count, first_request_time FROM Requests WHERE date = ?', (today_str,))
+	row_large = cursor_large.fetchone()
+	cursor_small.execute('SELECT count, first_request_time FROM Requests WHERE date = ?', (today_str,))
+	row_small = cursor_small.fetchone()
+	if row_large:
+		print("Large LLM: requests remaining for today: ", LLM_LARGE_DAILY_REQUEST_LIMIT - row_large[0])
+	if row_small:
+		print("Small LLM: requests remaining for today: ", LLM_SMALL_DAILY_REQUEST_LIMIT - row_small[0])
+		
+def delete_user_profile_files():
+		"""Delete the user profile files but not the folder."""
+		path = 'info_extraction/'  # Get the path of the folder
+		entries = os.listdir(path)
+		for entry in entries:
+			full_path = os.path.join(path, entry)
+			if os.path.isfile(full_path):  # Check if it is a file
+				try:
+					os.remove(full_path)
+					print(f"Deleted file: {full_path}")
+				except PermissionError as e:
+					print(f"Could not delete {full_path}. Permission denied: {e}")
+				except Exception as e:
+					print(f"Error while deleting {full_path}: {e}")
+			else:
+				print(f"Skipped: {full_path} (not a file)")
+		print("User profile files deletion attempt complete.")
 
 
     

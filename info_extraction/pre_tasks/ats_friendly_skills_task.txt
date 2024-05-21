@@ -1,49 +1,48 @@
-```json
 {
   "user_skills": {
     "exact_match_with_job_description": {
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [],
+      "Frameworks": [
+        "LangChain"
+      ],
       "Tools": [],
       "Soft Skills": [
-        "Data Analysis",
-        "Teamwork",
-        "Problem Solving",
-        "Communication Skills",
-        "Critical Thinking"
+        "Communication",
+        "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
       "Programming Languages": {},
-      "Frameworks": {},
+      "Frameworks": {
+        "name": "CrewAI",
+        "pertially_matched_with_job_description": "AI Development Frameworks"
+      },
       "Tools": {},
-      "Soft Skills": {
-        "Time Management": "Excellent Time Management Skills"
-      }
+      "Soft Skills": {}
     }
   },
   "missing_from_the_applicant_skills": {
     "Programming Languages": [
+      "Java",
+      "C Programming"
+    ],
+    "Frameworks": [
       "TensorFlow",
       "PyTorch",
       "OpenAI API",
       "Meta Llama 2",
       "Google Gemini",
-      "LangChain"
-    ],
-    "Frameworks": [
-      "AI Development Frameworks",
       "Google Gen AI Studio"
     ],
     "Tools": [],
     "Soft Skills": [
       "Analytical Skills",
+      "Problem-Solving",
       "Creative Thinking",
-      "Collaboration",
-      "Research Presentation"
+      "Research Presentation",
+      "Critical Thinking"
     ]
   }
 }
-```

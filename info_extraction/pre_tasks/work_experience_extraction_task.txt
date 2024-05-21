@@ -5,15 +5,16 @@
       "Company Name": null,
       "Timeline": "February 2023 - December 2023",
       "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Communication, Problem Solving",
+      "Skills": "Tutoring, Python, Java",
       "Link": null,
       "Key Highlights": [
-        "Provided one-on-one lessons focusing on computer system principles and introductory programming.",
+        "Tutored a student in computer systems and programming, focusing on Python and Java.",
+        "Tailored teaching methods to accommodate the student's learning style.",
         "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations.",
-        "Tailored teaching methods to accommodate the student's learning style."
+        "Delivered one-on-one lessons focusing on computer system principles and introductory programming."
       ],
       "Team size": null,
-      "Outcomes": " Enhanced the understanding of computer systems and programming concepts for the student."
+      "Outcomes": null
     }
   ]
 }

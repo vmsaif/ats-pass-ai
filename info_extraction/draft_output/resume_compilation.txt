@@ -1,31 +1,50 @@
-```plaintext
+# **Saif Mahmud** 204 955 5064 | msaifofficial@gmail.com | linkedin.com/in/vmsaif | saifmahmud.dev 
 
-# **Saif Mahmud** 204 955 5064 | msaifofficial@gmail.com | linkedin.com/in/vmsaif | saifmahmud.dev | , , 
-## Summary A highly motivated and skilled software developer with a passion for leveraging AI for social good, seeking to contribute to Radical AI's mission of democratizing AI. My "magic button" approach to development, focused on simplifying complex processes for users, aligns perfectly with Radical AI's commitment to making technology accessible and equitable. Eager to apply my expertise in Python, data analysis, and problem-solving to develop innovative AI solutions that empower individuals and drive positive social impact.
+## Summary
+A highly motivated AI enthusiast seeking to contribute to Radical AI's mission of democratizing AI for social good. My passion lies in creating user-centric solutions, simplifying complex processes through a magic button approach to software development.  My experience developing AI-driven applications, coupled with my proficiency in Python and LangChain, makes me a strong candidate to contribute to innovative projects at Radical AI.
+
 ## Skills
-Technical:  - Python - Java - RAG Search - Machine Learning (ML) - Deep Learning - Generative AI - Natural Language Processing (NLP) - AI Model Design - Algorithm Development - Data Analysis - Data Preprocessing - Docker - Vue.js - A* Algorithm - Git - CI/CD - 3D Graphics - OpenGL - C++ - File I/O - Documentation - Markdown - Jekyll - C Programming - Debugging - Linux OS - SQL - Android Studio - Computer systems - Lighting
-Soft:  - Communication Skills - Teamwork - Collaboration - Problem-Solving - Analytical Skills 
-## Project Experience ### ATS Pass AI January 2024 - Present (11 months) | ,  Technologies, frameworks, and tools used:  Python, RAG Search, CrewAI, LangChain, Gemini Link: https://github.com/vmsaif/ats-pass-ai - Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency, aligning with principles of AI for Social Good and the democratization of AI. - Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, employing Machine Learning (ML), Deep Learning, and Generative AI techniques. - Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. This process involved Data Analysis and Data Preprocessing to ensure optimal model performance. - Designed and implemented a scalable architecture to anticipate future needs and adaptations for this AI Development Framework.
 
-### Blockchain Car Mileage Tracker January 2023 - March 2023 (3 months) | ,  Technologies, frameworks, and tools used:  Docker, Vue.js Link: https://github.com/vmsaif/blockChainCarMilageTracker - Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes, addressing a real-world problem with a focus on data integrity. - Developed using blockchain technology, ensuring secure and transparent data management. - Enhanced data integrity and transparency through the use of blockchain technology. - Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, demonstrating Problem-Solving skills. - Collaborated closely as a team to design, develop, and test the application, exemplifying effective Teamwork.
+**Technical:**  - Python, Java, LangChain, CrewAI, Gemini, RAG Search, SQL, Android Studio, Git, CI/CD, A* Algorithm, AI Decision-Making, Cross-Platform Deployment, JUnit, HSQLDB, Machine Learning (ML), Deep Learning, Generative AI, Data Analysis, Data Preprocessing
+ 
+**Soft Skills:**  - Detail-oriented, Highly analytical, Problem-solving, Communication, Teamwork, Ability to work independently, Good interpersonal skills, Adaptability, Time management, Critical thinking, Complexity analysis
 
-### AI Path Finding July 2023 - September 2023 (3 months) | ,  Technologies, frameworks, and tools used:  A* Algorithm, Java, Git, CI/CD Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm - A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing Algorithm Development skills. - Utilized Git for version control, demonstrating proficiency in code management and collaboration. - Utilized CI/CD practices, resulting in a 50% reduction in deployment time, highlighting efficiency and process optimization. - Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm. - Applied fundamental software development and testing processes to ensure robust application performance.
+## Project Experience
+### ATS Pass AI January 2024 - Present (Ongoing) | 
+Technologies, frameworks, and tools used:  Python, RAG Search, CrewAI, LangChain, Gemini
+Link: https://github.com/vmsaif/ats-pass-ai
+- Led the development of a multi-agent system to generate personalized resumes for AI for Social Good, aiming to democratize AI and improve job search efficiency.
+- Leveraged advanced AI models, including Machine Learning (ML), Deep Learning, and Generative AI, to dynamically tailor resumes, ensuring equitable progress for all users.
+- Engineered a system employing Data Analysis and Data Preprocessing techniques to extract user information and analyze job descriptions, achieving over 85% keyword alignment and optimizing resumes for ATS.
 
-### Recursive Ray Tracing May 2023 - July 2023 (3 months) | ,  Technologies, frameworks, and tools used:  3D Graphics, OpenGL, C++ Link: https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL - Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating technical proficiency in computer graphics. - Applied geometry and generic math skills to calculate light paths and surface interactions, showcasing strong Analytical Skills.
+### AI Path Finding July 2023 - September 2023 (3 months) | 
+Technologies, frameworks, and tools used:  A* Algorithm, Java, Git, CI/CD
+Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+- Developed a Java-based game project, incorporating the A* algorithm to simulate AI-driven gameplay and enhance user engagement.
+- Employed Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, showcasing efficiency in AI development frameworks.
 
-### Bank Account System  | ,  Technologies, frameworks, and tools used:  Java, File I/O Link: https://github.com/vmsaif/bankAccountSystem - Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism, requiring Problem-Solving skills to design and implement system logic.
+### Connect 4 Game February 2023 - April 2023 (3 months) | 
+Technologies, frameworks, and tools used:  Java, AI Decision-Making, CI/CD, Cross-Platform Deployment
+Link: https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java
+- Developed a digital version of the classic Connect 4 game, enabling user vs. AI gameplay, incorporating AI decision-making to enhance game complexity and user experience.
+- Implemented CI/CD workflows, demonstrating proficiency in AI development frameworks and optimizing development and deployment processes, ensuring a seamless gaming experience.
 
-### Hosting a Resume on GitHub Pages April 2023 - April 2023 (1 month) | ,  Technologies, frameworks, and tools used:  Documentation, Markdown, Jekyll, Git Link: https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/ - A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git, emphasizing clear Communication Skills through technical documentation.
+### Reversible Learning App January 2021 - April 2021 (4 months) | 
+Technologies, frameworks, and tools used:  SQL, Android Studio, Java
+Link: https://github.com/vmsaif/reversibleLearning
+- Collaborated with a team to develop "Reversible Learning," an Android app designed to enhance study habits and promote equitable access to educational resources.
+- Utilized Android Studio and HSQLDB, focusing on intuitive UI/UX design and robust database management, contributing to the democratization of AI in education.
+- Employed JUnit for comprehensive unit and integration testing, demonstrating analytical skills and resulting in a 25% decrease in post-release bugs, ensuring app stability and reliability.
+- Demonstrated strong communication skills and adaptability by effectively working in a team environment to meet project deadlines and objectives.
 
-### ELF Binary Analysis November 2022 - December 2022 (2 months) | ,  Technologies, frameworks, and tools used:  C Programming, Debugging, Linux OS Link: https://github.com/vmsaif/readingAndInterpretingBinary - Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering. This project involved strong Analytical Skills and Problem-Solving abilities to understand and interpret binary data.
+## Work Experience
+### Programming Mentor February 2023 - December 2023 (10 months) | Private Tutoring | 
+Technologies, frameworks, and tools used:  Python, Java
+- Collaborated with a student, providing AI-focused tutoring in Python and Java, enhancing their understanding of computer systems and programming.
+- Analyzed the student's learning style and developed tailored teaching methods to optimize their understanding of AI concepts.
+- Facilitated hands-on problem-solving sessions, guiding the student in installing software, debugging code, and comprehending fundamental computer operations.
+- Delivered one-on-one lessons, emphasizing computer system principles and introductory programming concepts, strengthening the student's foundation in AI.
 
-### OpenGL Sphere Lighting April 2023 - June 2023 (3 months) | ,  Technologies, frameworks, and tools used:  OpenGL, C++ Link: https://github.com/vmsaif/openGL-sphere-lighting-program - Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources, demonstrating Analytical Skills in computer graphics and lighting design.
-
-### Reversible Learning App January 2021 - April 2021 (4 months) | ,  Technologies, frameworks, and tools used:  SQL, Android Studio, Java Link: https://github.com/vmsaif/reversibleLearning - Successfully collaborated with a team to develop a mobile learning application, highlighting expertise in Android development using Java and data management with SQL. - Utilized Android Studio for the development environment, demonstrating practical experience with this integrated development environment (IDE). - Emphasizes strong Teamwork and Collaboration skills through participation in a team-based project.
-
-## Work Experience ### Programming Mentor February 2023 - December 2023 (10 months) |  | Winnipeg, MB Technologies, frameworks, and tools used:  Python, Java Link:  - Tutored a student in computer systems and programming, focusing on Python and Java, applying Problem-Solving skills to overcome coding challenges. - Tailored teaching methods to accommodate the student's learning style, demonstrating adaptability and effective Communication Skills. - Facilitated hands-on sessions for installing software, debugging, and understanding computer operations. - Delivered one-on-one lessons focusing on computer system principles and introductory programming.
-## Education **University of Manitoba**, ,  - BSc, Computer Science | Graduated: October 2023 - GPA: 3.07
-## References
-## Additional
-  
-```
+## Education
+**University of Manitoba**,  - BSc, Computer Science | Graduated: October  2023
+- GPA: 3.07
