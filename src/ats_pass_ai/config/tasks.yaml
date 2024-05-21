@@ -501,7 +501,7 @@ split_context_of_experience_choosing_task:
   expected_output: >
     Everything before the "rejected_experiences" will be the final output of the task.
 
-gather_info_of_choosen_experiences:
+gather_info_of_chosen_experiences:
   description: >
     Provide detailed information for each of the "selected_experiences" from this content below.
 

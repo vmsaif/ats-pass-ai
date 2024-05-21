@@ -58,7 +58,7 @@ class ResumeCrew:
 	split_context_of_ats_friendly_skills_task_file_path = f'{info_extraction_folder_path}/split_context_of_ats_friendly_skills_task.txt' 
 	experience_choosing_task_file_path = f'{info_extraction_folder_path}/pre_tasks/experience_choosing_task.txt'
 	split_context_of_experience_choosing_task_file_path = f'{info_extraction_folder_path}/pre_tasks/split_context_of_experience_choosing_task.txt'
-	gather_info_of_choosen_experiences_file_path = f'{info_extraction_folder_path}/pre_tasks/gather_info_of_choosen_experiences.txt'
+	gather_info_of_chosen_experiences_file_path = f'{info_extraction_folder_path}/pre_tasks/gather_info_of_chosen_experiences.txt'
 	ats_friendly_keywords_into_experiences_file_path = f'{info_extraction_folder_path}/pre_tasks/ats_friendly_keywords_into_experiences.txt'
 	split_context_of_ats_friendly_keywords_into_experiences_file_path = f'{info_extraction_folder_path}/split_context_of_ats_friendly_keywords_into_experiences.txt'
 	career_objective_task_file_path = f'{info_extraction_folder_path}/career_objective_task.txt'
@@ -397,9 +397,9 @@ class ResumeCrew:
 
 	
 	# @task
-	def gather_info_of_choosen_experiences(self):
+	def gather_info_of_chosen_experiences(self):
 		# Load YAML file
-		yaml = self.yaml_loader('gather_info_of_choosen_experiences')
+		yaml = self.yaml_loader('gather_info_of_chosen_experiences')
 
 		# Load the user info organized data
 		user_info_organized_data = self.load_txt_files(self.user_info_organized_file_path)
@@ -411,7 +411,7 @@ class ResumeCrew:
 			expected_output=expected_output,
 			agent=self.generalist_agent(),
 			context=[self.split_context_of_experience_choosing_task()],
-			output_file=self.gather_info_of_choosen_experiences_file_path,
+			output_file=self.gather_info_of_chosen_experiences_file_path,
 		)
 	# ----------------- End of Choose Work/Project Experience -----------------
 
@@ -430,7 +430,7 @@ class ResumeCrew:
 			expected_output=expected_output,
 			agent=self.ats_keyword_integration_agent(),
 			# callback=self.rpm_controller,
-			context=[self.gather_info_of_choosen_experiences()],
+			context=[self.gather_info_of_chosen_experiences()],
 			output_file=self.ats_friendly_keywords_into_experiences_file_path,
 		)
 
@@ -548,7 +548,7 @@ class ResumeCrew:
 		tasks.append(self.split_context_of_ats_friendly_skills_task())
 		tasks.append(self.experience_choosing_task())
 		tasks.append(self.split_context_of_experience_choosing_task())
-		tasks.append(self.gather_info_of_choosen_experiences())
+		tasks.append(self.gather_info_of_chosen_experiences())
 		tasks.append(self.ats_friendly_keywords_into_experiences_task())
 		tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 		tasks.append(self.career_objective_task())
@@ -669,7 +669,7 @@ class ResumeCrew:
 
 	# 	"split_context_of_experience_choosing_task": split_context_of_experience_choosing_task_file_path,
 
-	# 	"gather_info_of_choosen_experiences": gather_info_of_choosen_experiences_file_path,
+	# 	"gather_info_of_chosen_experiences": gather_info_of_chosen_experiences_file_path,
 	# 	"include_ats_keywords_into_experiences": ats_friendly_keywords_into_experiences_file_path,
 	# 	"split_context_of_ats_friendly_keywords_into_experiences": split_context_of_ats_friendly_keywords_into_experiences_file_path,
 	# 	"career_objective_task": career_objective_task_file_path,
