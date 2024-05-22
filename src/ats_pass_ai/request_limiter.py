@@ -1,25 +1,18 @@
-# Author: Saif Mahmud
-# Date: 2024-05-20
-
-# Purpose: This module is used to limit the number of requests made to the LLM API to avoid hitting the free tier limits. At the moment of writing this, I am only using 2 llms in my main program, one with a large limit and one with a small limit. If more llm is needed, then just follow the init(str) method and add more limits. 
 
 import os
 import time
 import sqlite3
 
 class RequestLimiter:
-
-    # gemini 1.5 pro free tier limits
+    # Constants for limits
     LLM_LARGE_RPM_LIMIT = 2
     LLM_LARGE_DAILY_REQUEST_LIMIT = 50
-    
-    # gemini 1.0 free tier limits
     LLM_SMALL_RPM_LIMIT = 15
     LLM_SMALL_DAILY_REQUEST_LIMIT = 1500
-    
     SECONDS = 60
     DAY_IN_SECONDS = 86400
-    
+
+    # Database configuration
     DB_DIR = 'custom_db'
     DB_FILE_LARGE_LLM = 'request_limiter_large_llm.db'
     DB_FILE_SMALL_LLM = 'request_limiter_small_llm.db'
@@ -27,45 +20,47 @@ class RequestLimiter:
     def __init__(self, llm_size: str):
         self.last_request_time = time.time()
         self.request_count = 0
+        self._set_limits(llm_size)
+        self._config_db(llm_size)
+        self.request_count_today, self.first_request_time = self._get_todays_count()
 
-        self.setLimits(llm_size)
-        self.configDB(llm_size)
-        self.request_count_today, self.first_request_time = self.get_todays_count()
+    def run(self, output):
+        now = time.time()
+        self._check_and_reset()  # Ensures that counts are reset if the time has exceeded 24 hours
 
-    def setLimits(self, llm_size: str):
-        if(llm_size == 'large'):
+        if self.request_count >= self.llm_rpm_limit and (now - self.last_request_time < self.SECONDS):
+            time_to_sleep = self.SECONDS - (now - self.last_request_time)
+            time.sleep(time_to_sleep)
+            self.request_count = 0
+
+        self.request_count += 1
+        self.request_count_today += 1
+        self._update_count(self.request_count_today)
+        self.last_request_time = now
+        return True
+
+    def _set_limits(self, llm_size: str):
+        if llm_size == 'large':
             self.llm_rpm_limit = self.LLM_LARGE_RPM_LIMIT
             self.llm_daily_request_limit = self.LLM_LARGE_DAILY_REQUEST_LIMIT
-        elif (llm_size == 'small'):
+        elif llm_size == 'small':
             self.llm_rpm_limit = self.LLM_SMALL_RPM_LIMIT
             self.llm_daily_request_limit = self.LLM_SMALL_DAILY_REQUEST_LIMIT
         else:
             raise ValueError("Invalid LLM size. Must be either 'large' or 'small'")
 
-    def configDB(self, llm_size: str):
-        # create_db_dir if not os.path.exists(self.DB_DIR)
+    def _config_db(self, llm_size: str):
         if not os.path.exists(self.DB_DIR):
             os.makedirs(self.DB_DIR)
+        db_path = os.path.join(self.DB_DIR, getattr(self, f"DB_FILE_{llm_size.upper()}_LLM"))
+        self.conn = sqlite3.connect(db_path)
+        self.cursor = self.conn.cursor()
+        self._setup_database()
 
-        if(llm_size == 'large'):
-            self.conn = sqlite3.connect(os.path.join(self.DB_DIR, self.DB_FILE_LARGE_LLM))
-        elif (llm_size == 'small'):
-            self.conn = sqlite3.connect(os.path.join(self.DB_DIR, self.DB_FILE_SMALL_LLM))
-        else:
-            raise ValueError("Invalid LLM size. Must be either 'large' or 'small'")
-        
-        try:
-            self.cursor = self.conn.cursor()
-            self.setup_database()
-        except Exception as e:
-            print("Error: ", e)
-            raise
-        return False
-    # Destructor
     def __del__(self):
         self.conn.close()
 
-    def setup_database(self):
+    def _setup_database(self):
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS Requests (
                 count INTEGER DEFAULT 0,
@@ -74,76 +69,44 @@ class RequestLimiter:
         ''')
         self.conn.commit()
 
-    def get_todays_count(self):
-        now = time.time()
-        # Don't use calendar day, get last request time from DB
+    def _get_todays_count(self):
         self.cursor.execute('SELECT count, first_request_time FROM Requests')
         row = self.cursor.fetchone()
         if row:
-            return row[0], row[1]
+            return row
         else:
-            # If no record exists, initialize with current time
+            now = time.time()
             self.cursor.execute('INSERT INTO Requests (count, first_request_time) VALUES (0, ?)', (now,))
             self.conn.commit()
             return 0, now
 
-    def update_count(self, new_count):
-        # No need for calendar day, update existing record 
+    def _update_count(self, new_count):
         self.cursor.execute('UPDATE Requests SET count = ?', (new_count,))
         self.conn.commit()
 
-    def reset_counts(self, now):
-        # Reset count and update first_request_time for the new 24-hour window
-        self.cursor.execute('UPDATE Requests SET count = 0, first_request_time = ?', (now,))
-        self.conn.commit()
-        self.request_count_today = 0
-        self.first_request_time = now
-        self.prune_old_data(now)
-
-    def prune_old_data(self, now):
-        # Check if there are any entries older than two days
-        two_days_ago = now - (2 * self.DAY_IN_SECONDS)
-        self.cursor.execute('SELECT COUNT(*) FROM Requests WHERE first_request_time < ?', (two_days_ago,))
-        count = self.cursor.fetchone()[0]
-
-        # Only delete if there are entries older than two days
-        if count > 0:
-            self.cursor.execute('DELETE FROM Requests WHERE first_request_time < ?', (two_days_ago,))
-            self.conn.commit()
-            
-            
-    def run(self, output):
+    def _check_and_reset(self):
         now = time.time()
-        # First check if the daily limit has been reached
-        if not self.check_rpd(self.llm_daily_request_limit, self.request_count_today, now):
-            # Means the daily limit has been reached
-            # ask the user if they want to proceed or stop the execution
-            read = input("Do you want to proceed anyway? (yes/no): ")
-            if read.lower() != 'yes':
-                print("Stopping execution.")
-                return False
+        self.cursor.execute('SELECT count, first_request_time FROM Requests')
+        row = self.cursor.fetchone()
+        if row:
+            first_request_time = row[1]
+            time_since_first_request = now - first_request_time
+            if time_since_first_request > self.DAY_IN_SECONDS:
+                self._reset_counts(now)
 
-        # Check for per-minute limit
-        if self.request_count >= self.llm_rpm_limit and (now - self.last_request_time < self.SECONDS):
-            # If the per-minute limit has been reached, sleep for the remaining time then reset the count
-            time_to_sleep = self.SECONDS - (now - self.last_request_time)
-            print(f"Sleeping for {time_to_sleep:.2f} seconds")
-            time.sleep(time_to_sleep)
-            self.request_count = 0
 
-        self.request_count += 1
-        self.request_count_today += 1
-        self.update_count(self.request_count_today)
-        self.last_request_time = now
-        return True
+    def _reset_counts(self, now):
+        # Reset count and update first_request_time for the new 24-hour window
+        try:
+            # Start a transaction explicitly
+            self.conn.execute('BEGIN TRANSACTION')
+            self.cursor.execute('UPDATE Requests SET count = 0, first_request_time = ?', (now,))
+            self.conn.commit()
+            self.request_count_today = 0
+            self.first_request_time = now
+        except sqlite3.OperationalError as e:
+            print(f"Error in reset_counts: {e}")
+            self.conn.rollback()  # Rollback the transaction if an error occurs
+  
 
-    def check_rpd(self, rpd_limit, request_count_today, now) -> bool:
 
-        # Check if it passed 24 hours since the first request 
-        if (now - self.first_request_time) > self.DAY_IN_SECONDS:
-            self.reset_counts(now)
-            self.first_request_time = now  # Update the start of the new 24-hour period
-        if request_count_today >= rpd_limit:
-            print("Daily request limit reached.")
-            return False
-        return True

@@ -1,8 +1,0 @@
-{
-  "Miscellaneous": {
-    "Languages Spoken": null,
-    "Certifications": null,
-    "Professional Affiliations": null,
-    "Other Relevant Details": null
-  }
-}

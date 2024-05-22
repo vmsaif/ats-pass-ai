@@ -7,7 +7,7 @@
     "Other Social Media Profiles": null,
     "Personal Website": "saifmahmud.dev",
     "Portfolio": null,
-    "GitHub": null,
+    "GitHub": "https://github.com/vmsaif/readingAndInterpretingBinary",
     "Address": null,
     "City": "Winnipeg",
     "State": "MB",

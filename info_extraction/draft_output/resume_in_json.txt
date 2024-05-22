@@ -1,145 +1,28 @@
 ```json
 {
   "Contact Info": {
-    "Full Name": "Saif Mahmud",
-    "Phone": "204 955 5064",
-    "Email": "msaifofficial@gmail.com",
-    "LinkedIn Profile URL": "linkedin.com/in/vmsaif",
-    "Personal Website URL": "saifmahmud.dev",
+    "Full Name": "",
+    "Phone": "",
+    "Email": "",
+    "LinkedIn Profile URL": "",
+    "Personal Website URL": "",
     "Address": ""
   },
-  "Summary": "A highly motivated AI enthusiast seeking to contribute to Radical AI's mission of democratizing AI for social good. My passion lies in creating user-centric solutions, simplifying complex processes through a �magic button� approach to software development.  My experience developing AI-driven applications, coupled with my proficiency in Python and LangChain, makes me a strong candidate to contribute to innovative projects at Radical AI.",
+  "Summary": "",
   "Skills": {
-    "Technical": [
-      "Python",
-      "Java",
-      "LangChain",
-      "CrewAI",
-      "Gemini",
-      "RAG Search",
-      "SQL",
-      "Android Studio",
-      "Git",
-      "CI/CD",
-      "A* Algorithm",
-      "AI Decision-Making",
-      "Cross-Platform Deployment",
-      "JUnit",
-      "HSQLDB",
-      "Machine Learning (ML)",
-      "Deep Learning",
-      "Generative AI",
-      "Data Analysis",
-      "Data Preprocessing"
-    ],
-    "Soft": [
-      "Detail-oriented",
-      "Highly analytical",
-      "Problem-solving",
-      "Communication",
-      "Teamwork",
-      "Ability to work independently",
-      "Good interpersonal skills",
-      "Adaptability",
-      "Time management",
-      "Critical thinking",
-      "Complexity analysis"
-    ]
+    "Technical": [],
+    "Soft": []
   },
-  "Projects": [
-    {
-      "Project Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present (Ongoing)",
-      "Technologies": [
-        "Python",
-        "RAG Search",
-        "CrewAI",
-        "LangChain",
-        "Gemini"
-      ],
-      "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Key achievements": [
-        "Led the development of a multi-agent system to generate personalized resumes for AI for Social Good, aiming to democratize AI and improve job search efficiency.",
-        "Leveraged advanced AI models, including Machine Learning (ML), Deep Learning, and Generative AI, to dynamically tailor resumes, ensuring equitable progress for all users.",
-        "Engineered a system employing Data Analysis and Data Preprocessing techniques to extract user information and analyze job descriptions, achieving over 85% keyword alignment and optimizing resumes for ATS."
-      ]
-    },
-    {
-      "Project Title": "AI Path Finding",
-      "Timeline": "July 2023 - September 2023 (3 months)",
-      "Technologies": [
-        "A* Algorithm",
-        "Java",
-        "Git",
-        "CI/CD"
-      ],
-      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Key achievements": [
-        "Developed a Java-based game project, incorporating the A* algorithm to simulate AI-driven gameplay and enhance user engagement.",
-        "Employed Git for version control and implemented CI/CD practices, resulting in a 50% reduction in deployment time, showcasing efficiency in AI development frameworks."
-      ]
-    },
-    {
-      "Project Title": "Connect 4 Game",
-      "Timeline": "February 2023 - April 2023 (3 months)",
-      "Technologies": [
-        "Java",
-        "AI Decision-Making",
-        "CI/CD",
-        "Cross-Platform Deployment"
-      ],
-      "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
-      "Key achievements": [
-        "Developed a digital version of the classic Connect 4 game, enabling user vs. AI gameplay, incorporating AI decision-making to enhance game complexity and user experience.",
-        "Implemented CI/CD workflows, demonstrating proficiency in AI development frameworks and optimizing development and deployment processes, ensuring a seamless gaming experience."
-      ]
-    },
-    {
-      "Project Title": "Reversible Learning App",
-      "Timeline": "January 2021 - April 2021 (4 months)",
-      "Technologies": [
-        "SQL",
-        "Android Studio",
-        "Java"
-      ],
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Key achievements": [
-        "Collaborated with a team to develop \"Reversible Learning,\" an Android app designed to enhance study habits and promote equitable access to educational resources.",
-        "Utilized Android Studio and HSQLDB, focusing on intuitive UI/UX design and robust database management, contributing to the democratization of AI in education.",
-        "Employed JUnit for comprehensive unit and integration testing, demonstrating analytical skills and resulting in a 25% decrease in post-release bugs, ensuring app stability and reliability.",
-        "Demonstrated strong communication skills and adaptability by effectively working in a team environment to meet project deadlines and objectives."
-      ]
-    }
-  ],
-  "Work": [
-    {
-      "Job Title": "Programming Mentor",
-      "Company": "Private Tutoring",
-      "Location": "",
-      "Timeline": "February 2023 - December 2023 (10 months)",
-      "Technologies": [
-        "Python",
-        "Java"
-      ],
-      "Link": "",
-      "Key achievements": [
-        "Collaborated with a student, providing AI-focused tutoring in Python and Java, enhancing their understanding of computer systems and programming.",
-        "Analyzed the student's learning style and developed tailored teaching methods to optimize their understanding of AI concepts.",
-        "Facilitated hands-on problem-solving sessions, guiding the student in installing software, debugging code, and comprehending fundamental computer operations.",
-        "Delivered one-on-one lessons, emphasizing computer system principles and introductory programming concepts, strengthening the student's foundation in AI."
-      ]
-    }
-  ],
+  "Projects": [],
+  "Work": [],
   "Education": {
-    "Degree": "BSc",
-    "Major": "Computer Science",
-    "University": "University of Manitoba",
+    "Degree": "",
+    "Major": "",
+    "University": "",
     "Location": "",
-    "Graduation Date": "October  2023",
-    "GPA": "3.07"
+    "Graduation Date": "",
+    "GPA": ""
   },
-  "Additional": {
-    "References": []
-  }
+  "Additional": {}
 }
 ```

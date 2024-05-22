@@ -190,10 +190,10 @@ personal_information_extraction_task:
 
     How you should use the tool:
     argument:
-    "question": "Give me the full name, phone number, email, LinkedIn, other social media profile links, personal website link, portfolio link, GitHub profile, address, city, state, zip code, and country."
+    "question": "Personal Details"
 
-    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
-    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link.
+    The tool will return a large chunk of information. look "deeply" into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
+    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link. 
 
   expected_output: >
     In JSON format, Do not keep the keys that have null values:
@@ -236,6 +236,32 @@ education_extraction_task:
           "Honors/Distinctions": "
           ... 
         }
+      }
+
+coursework_extraction_task:
+  description: >
+    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive coursework details.
+    How you should use the tool:
+    argument:
+    "question": "Relevant Courses, coursework"
+    
+    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+
+    After extracting the coursework, prioritize the courses that are relevant to the job description. Ignore the courses that are not relevant.
+
+    Here are the Job Description Keywords:
+    {job_description_keywords}
+  expected_output: >
+    Ignore any key if not available. Relevant courses should be prioritized.
+    
+    In JSON format: 
+      {
+        "Coursework Relevant to the Job Description": [
+          "Course 1",
+          "Course 2",
+          "Course 3",
+          ...
+        ]
       }
 
 volunteer_work_extraction_task:
@@ -349,13 +375,13 @@ profile_builder_task:
   description: >
     Based on the information extracted from the user's information, you will create a comprehensive user profile by combining all the extracted details.
 
-    You will use the extracted data from the previous tasks to create a detailed user profile. Ensure that the profile is well-organized, and accurate, and includes all the relevant information extracted from the user's input.
+    You will use the extracted data from the previous tasks as your context input to create a detailed user profile. Ensure that the profile is well-organized, and accurate, and includes all the relevant information extracted from the user's input.
 
   expected_output: >
-    In JSON format
+    Ignore anything you didn't find, Do not make up information. In JSON format
       {
         "User Profile": {
-          "Personal Information": {
+          "Personal Details": {
             "Full Name": "",
             "Phone Number": "",
             "Email": "",
@@ -567,7 +593,7 @@ career_objective_task:
     Craft a **captivating** and **actionable** career objective statement for the user's resume, designed to immediately capture the attention of recruiters and hiring managers. 
 
     This objective should:
-    - **Highlight the user's unique value proposition:**  Emphasize the user's skills, experience, and "magic button" approach to software development.
+    - **Highlight the user's unique value proposition:**  Emphasize the user's skills, experiences, and achievements that set them apart from other candidates.
     - **Align with the company's mission and the job description:**  Demonstrate the user's understanding of the company's goals and how their skills can contribute to them.
     - **Be concise and impactful:**  Use strong verbs and compelling language to create a memorable statement that leaves a lasting impression.
 
@@ -577,9 +603,9 @@ career_objective_task:
     - **Job Description:** 
     {job_description}
 
-    - **Tool:** This tool is directly connected to the user's information. You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Also, consider the user's philosophy and approach to software development when crafting the career objective statement if available.
+    - **Tool:** This tool is directly connected to the user's information. You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Also, consider(not mandatory) the user's philosophy and approach to software development when crafting the career objective statement if available.
 
-    Make the career objective statement concise and impactful, focusing on the user's unique value proposition and how it aligns with the job description and the company's mission. Do not make more than 3-4 sentences.
+    Make the career objective statement concise and impactful, focusing on the user's unique value proposition and how it aligns with the job description and the company's mission. Do not make more than 3-4 sentences. It must include the Job Title and the Company Name.
 
   expected_output: >
     A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the user's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
@@ -598,7 +624,7 @@ ats_friendly_skills_task:
     Evaluate the degree of similarity between these keywords.
 
     Source 1 (Job Description Keywords): 
-    """{src_1}"""
+    {src_1}
 
     Source 2 (User's Skills and Technologies, Frameworks, Tools, Soft Skills, etc.) from the context provided. 
 
@@ -903,7 +929,7 @@ skills_extraction_task:
   expected_output: >
     In JSON format:
       {
-        "Combined Skills List": {
+        "combined_skills_list_of_user": {
           "Technologies": {
             {
               "Name": "Python",

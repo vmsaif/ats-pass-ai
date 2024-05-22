@@ -1,20 +1,23 @@
 ### Personal Details
 **Name:** Saif Mahmud
-**Email:** msaifofficial@gmail.com 
-**Phone:** 204 955 5064
 **Location:** Winnipeg, MB
-**Website:** saifmahmud.dev 
+**Phone Number:** 204 955 5064
+**Email Address:** msaifofficial@gmail.com
+**Website:** saifmahmud.dev
 **LinkedIn:** linkedin.com/in/vmsaif
 
-Saif Mahmud's approach to software development is driven by a unique self-made philosophy centered around creating a "magic button" for users—a single, seamless action that accomplishes everything the user desires. This philosophy emphasizes understanding user needs and crafting intuitive, empowering, and magical solutions. While acknowledging current technological limitations, Saif strives to write every line of code with this "magic button" philosophy in mind, simplifying complex processes and making technology more accessible.
+### Summary
+
+Saif Mahmud is a proactive and innovative software developer with a BSc in Computer Science from the University of Manitoba. He is deeply passionate about simplifying user experiences, striving to create software solutions that are intuitive and empowering.  His goal is to contribute innovative solutions in collaborative environments and is committed to continuous professional growth.  Saif’s technical expertise spans various programming languages, including Python, JavaScript, C++, and Java, along with skills in database management and cloud technologies. He has a proven track record of successful project implementations, evident in his portfolio and GitHub repositories. 
+
 
 # Education
 ## University of Manitoba
-* BSc Major in Computer Science
+**BSc Major in Computer Science**
 * Graduated: October 2023
 * GPA: 3.07
 
-# Relevant Courses
+### Relevant Courses
 * Distributed Computing (Python | JavaScript)
 * Data Structures and Algorithms (Java)
 * Object Orientation (Java | C++)
@@ -24,211 +27,193 @@ Saif Mahmud's approach to software development is driven by a unique self-made p
 * Technical Communication in CS
 
 # Skills
-## Programming 
-* Python
-* JavaScript
-* C++
-* Java
-
-## Database
-* MySQL
-* JSON
-* noSQL
-* Schema
-
-## Cloud & DevOps
-* CI/CD
-* GitHub Action
-* AWS (Basic)
-
-## Soft Skills
-* Good Interpersonal Skills
-* Communication
-* Teamwork
-* Problem Solving
-* Adaptability
-* Time Management
-* Critical Thinking
-* Complexity Analysis
-
-## Programming Concepts
-* System Analysis
-* Web and Mobile Technologies
-* OOP
-* Data Structures
-* SDLC
-* Debugging and Troubleshooting
-* Test driven deployment
+* **Programming:** Python, Javascript, C++, Java
+* **Database:** MySQL, JSON, noSQL, Schema
+* **Cloud & DevOps:** CI/CD, GitHub Action, AWS(Basic)
+* **Soft Skills:** Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis
+* **Programming Concepts:** System Analysis, Web and Mobile Technologies, OOP, Data Structures, SDLC, Debugging and Troubleshooting, Test driven deployment
 
 # Volunteer Experience
 ## .dev Programming Club
-* Active Member | University of Manitoba Students Union (UMSU) | 2019-2023
-    * Engaged with the latest software development technologies and tools.
-    * Collaborated on team projects focused on Java and Cloud Technologies.
+* **Active Member:** University of Manitoba Students Union (UMSU) | 2019-2023
+   - Engaged with the latest software development technologies and tools.
+   - Collaborated on team projects focused on Java and Cloud Technologies.
 
 # Activities
 * Captain: Football Club Vikings, Dhaka, Bangladesh (2012 - 2014)
 * Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)
 
 # Career Goal
-As a Proactive, innovative-thinking Software Developer with a BSc in Computer Science, I am passionate about giving it all at SGA Tech Solutions. I aim to contribute innovative solutions in a collaborative environment and am committed to professional growth.
+As a proactive, innovative-thinking Software Developer with a BSc in Computer Science, seeking to contribute innovative solutions in a collaborative environment at SGA Tech Solutions. Committed to professional growth.
 
 # Project Experience
-## ATS Pass AI
+
+## ATS Pass AI 
 * **Description:** Multiagent | AI | Python | RAG Search
-* **Timeline:** Resume Automation Tool - January 2024 - Present
-* **Details:**
-    * Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
-    * Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.
+* **Timeline:**  January 2024 - Present
+* **Description:** Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+    * Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.
     * Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
-    * Developed scalable architecture to anticipate future needs and adaptations.
-    * Project repository: https://github.com/vmsaif/ats-pass-ai
+    * Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.
+    * Project repository available on GitHub: [https://github.com/vmsaif/ats-pass-ai](https://github.com/vmsaif/ats-pass-ai).
 
-## Blockchain Car Mileage Tracker
-* **Description:** Docker | Vue.js
-* **Timeline:** Innovative Project - January 2023 - March 2023
-* **Details:**
-    * Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
-    * Developed using blockchain technology.
-    * Enhanced data integrity and transparency.
-    * Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording.
-    * Collaborated closely as a team to design, develop, and test the application.
-    * Project details: https://github.com/vmsaif/blockChainCarMilageTracker
+## Blockchain Car Mileage Tracker 
+* **Description:** Docker | Vue.js 
+* **Timeline:**  January 2023 - Mar 2023
+* **Description:** Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
+    * Developed using blockchain technology, emphasizing adaptability and enthusiasm for learning new technologies.
+    * Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.
+    * Solved a real-world problem by crafting a smart contract for tamper-proof mileage recording, enhancing trust in vehicle history.
+    * Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills.
+    * Project details available on GitHub: [https://github.com/vmsaif/blockChainCarMilageTracker](https://github.com/vmsaif/blockChainCarMilageTracker).
 
-## AI Path Finding
-* **Description:** A* Algorithm | Java | Git | CI/CD 
-* **Timeline:** Game Development - July 2023 - September 2023
-* **Details:**
-    * A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
-    * Utilized Git for version control.
+
+## AI Path Finding 
+* **Description:** A* Algorithm | Java | Git | CI/CD
+* **Timeline:** Jul 2023 - Sep 2023
+* **Description:** A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+    * Utilized Git for version control, ensuring efficient team collaboration and code management.
     * Utilized CI/CD practices, resulting in a 50% reduction in deployment time.
     * Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
     * Applied fundamental software development and testing processes to ensure robust application performance.
-    * Project repository: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm 
+    * Project repository available on GitHub: [https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm](https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm).
+
 
 ## Recursive Ray Tracing 
 * **Description:** 3D Graphics | OpenGL | C++
-* **Timeline:** Graphics Programming - May 2023 - July 2023
-* **Details:** 
-    * Implemented a complex 3D graphics rendering technique using OpenGL.
+* **Timeline:** May 2023 - July 2023
+* **Description:** 
+    * Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating a deep understanding of C++ and 3D graphics principles.
     * Applied geometry and generic math skills to calculate light paths and surface interactions.
-    * Project repository:  https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL
+    * Project repository and implementation details available on GitHub: [https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL](https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL).
+
 
 ## Bank Account System 
 * **Description:** Java | File I/O
-* **Timeline:**  Object-Oriented Design - Polymorphism
-* **Details:** 
-    * Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
-    * Developed scalable Java applications, optimizing process efficiency by 30%.
+* **Timeline:**  N/A
+* **Description:** Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
+    * Developed scalable Java applications, showcasing a deep understanding of object-oriented programming, optimizing process efficiency by 30%.
     * Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling.
-    * Facilitated open-source collaboration with documentation.
-    * Project repository: https://github.com/vmsaif/bankAccountSystem
+    * Facilitated open-source collaboration with documentation, accessible here: [https://github.com/vmsaif/bankAccountSystem](https://github.com/vmsaif/bankAccountSystem).
 
-## Hosting a Resume on GitHub Pages 
+
+## Hosting a Resume on GitHub Pages
 * **Description:** Documentation
-* **Timeline:** Technical Documentation - April 2023 - April 2023
-* **Details:**
-    * A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.
+* **Timeline:** April 2023 - April 2023
+* **Description:** A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.
     * Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.
     * Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.
     * Emphasized beginner-friendly methods for web hosting and documentation.
     * Showcased the ability to create clear, structured technical documentation accessible online.
-    * Project repository: https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/
+    * Find the project here: [https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/](https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/).
 
-## ELF Binary Analysis
-* **Description:**  C Programming | Debugging | Linux OS
-* **Timeline:**  November 2022 - December 2022
-* **Details:** 
-    * Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.
-    * Demonstrated expertise in C for ELF binary parsing and system operations.
-    * Enhanced debugging efficiency by 20%.
+
+## ELF Binary Analysis 
+* **Description:** C Programming | Debugging | Linux OS
+* **Timeline:** Nov 2022 - Dec 2022
+* **Description:** Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.
+    * Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.
+    * Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.
     * Actively contributed to technical documentation for product and knowledge base improvement.
-    * Project repository: https://github.com/vmsaif/readingAndInterpretingBinary
+    * Project repository: [https://github.com/vmsaif/readingAndInterpretingBinary](https://github.com/vmsaif/readingAndInterpretingBinary).
 
-## OpenGL Sphere Lighting
-* **Description:** OpenGL | C++
-* **Timeline:**  Graphics Programming - April 2023 - June 2023
-* **Details:** 
-    * Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
-    * Developed an application with three distinct light sources.
+
+## ELF Binary Analysis 
+* **Description:** C | Storage System | OS
+* **Timeline:** November 2022 - December 2022
+* **Description:** Developed a C program to extract key information from ELF headers of binary files.
+    * Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.
+    * Utilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.
+    * Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.
+    * Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties.
+    * Project repository with source code and implementation details is available at: [https://github.com/vmsaif/readingAndInterpretingBinary](https://github.com/vmsaif/readingAndInterpretingBinary), exemplifying a commitment to open-source collaboration and knowledge sharing with peers and customers.
+
+
+## OpenGL Sphere Lighting 
+* **Description:**  OpenGL | C++
+* **Timeline:** April 2023 - June 2023
+* **Description:** Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
+    * Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.
     * Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.
-    * Utilized glutSolidSphere for accurate sphere rendering, showcasing the effects of different lighting conditions.
-    * Project repository:  https://github.com/vmsaif/openGL-sphere-lighting-program
+    * Utilized `glutSolidSphere` for accurate sphere rendering, showcasing the effects of different lighting conditions.
+    * Project repository and implementation details available on: [https://github.com/vmsaif/openGL-sphere-lighting-program](https://github.com/vmsaif/openGL-sphere-lighting-program).
 
-## Reversible Learning App
+
+## Reversible Learning APP
 * **Description:** SQL | Android Studio | Java
-* **Timeline:** Project Management | Team Player - January 2021 - April 2021
-* **Details:** 
-    * Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.
+* **Timeline:** January 2021 - April 2021
+* **Description:** Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.
     * Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
     * Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives.
     * Developed an intuitive user interface (UI) for note organization and question archiving.
-    * Project accessible on GitHub:  https://github.com/vmsaif/reversibleLearning
+    * Project accessible on GitHub: [https://github.com/vmsaif/reversibleLearning](https://github.com/vmsaif/reversibleLearning).
 
 ## Connect 4 Game
-* **Description:**  AI Decision-Making | Java 
-* **Timeline:**  CI/CD | Cross-Platform Deployment - February 2023 - April 2023
-* **Details:** 
-    * Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
-    * Implemented strategic AI decision-making, enhancing game complexity and player engagement.
-    * Implemented efficient CI/CD workflows to streamline development and deployment processes.
-    * Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
-    * Access to project details and code: https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java 
+* **Description:** AI Decision-Making | Java
+* **Timeline:**  February 2023 - April 2023
+* **Description:** Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
+   * Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+   * Implemented efficient CI/CD workflows to streamline development and deployment processes.
+   * Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+   * Access to project details and code here on GitHub: [https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java](https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java).
+
 
 ## TCP Chat Application
-* **Description:**  TCP/IP | Multithreading | Network 
-* **Timeline:** Client-Server Communication - October 2022 - December 2022
-* **Details:**
-    * Developed a Java chat application for real-time client-server communication using TCP.
+* **Description:** TCP/IP | Multithreading | Network
+* **Timeline:** October 2022 - December 2022
+* **Description:** Developed a Java chat application for real-time client-server communication using TCP.
     * Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling.
     * Implemented socket programming for robust client-server communication.
     * Enabled features like room creation, joining/leaving rooms, and viewing room details.
-    * Achieved a 99.9% uptime and stability rate.
+    * Achieved a 99.9% uptime and stability rate, enhancing user experience and application stability.
     * Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management.
-    * Source code and documentation available on GitHub: https://github.com/vmsaif/tcpChatJava
+    * Source code and documentation available on GitHub: [https://github.com/vmsaif/tcpChatJava](https://github.com/vmsaif/tcpChatJava)
+
 
 ## Data Visualization with R
-* **Description:** Akin to Python | Data Analysis 
-* **Timeline:** Course Project
-* **Details:**
-    * Utilized R for statistical analysis and data visualization.
-    * Demonstrated the ability to translate complex data into actionable insights.
+* **Description:** Akin to Python | Data Analysis
+* **Timeline:** N/A
+* **Description:** 
+    * Utilized R for statistical analysis and data visualization, akin to Power BI tasks.
+    * Demonstrated ability to translate complex data into actionable insights.
     * Learned to create interactive visualizations, enhancing data-driven decision-making.
 
-## Portfolio Website
+
+## Portfolio Website 
 * **Description:** React | Styled-Components
-* **Timeline:** Self-Initiated Project - 2021
-* **Details:** 
-    * Developed a comprehensive portfolio website to showcase projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages.
+* **Timeline:** 2021
+* **Description:** Developed a comprehensive portfolio website to showcase projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages.
     * Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility.
     * Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization.
-    * The site features a blog section, project showcases, and dynamic content fetched from GitHub.
-    * Website: https://saifmahmud.dev/
+    * The site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating full-stack development capabilities.
+    * Visit the portfolio website at: [https://saifmahmud.dev/](https://saifmahmud.dev/).
 
-## CPU Scheduling
-* **Description:**  C | Multithreading | Linux | Bash | Git
-* **Timeline:** System Programming - June 2023 - August 2023
-* **Details:**
-    * Developed a multi-threaded scheduling simulator in C.
-    * Practiced Linux OS administration and Bash scripting for system programming. 
-    * Employed Git for source control. 
-    * Project repository: https://github.com/vmsaif/cpu_scheduling
+
+## CPU Scheduling 
+* **Description:** C | Multithreading | Linux | Bash | Git
+* **Timeline:** June 2023 - August 2023
+* **Description:** 
+    * Developed a multi-threaded scheduling simulator in C, showcasing knowledge in parallel processing methodologies relevant to robotics and geometrical planning.
+    * Practiced Linux OS administration and Bash scripting for system programming, reflecting skills in managing unix-based environment systems.
+    * Employed Git for source control, aligning with industry-standard version control practices.
+    * Project repository available on GitHub: [https://github.com/vmsaif/cpu_scheduling](https://github.com/vmsaif/cpu_scheduling) 
+
 
 ## Go-Back-N Protocol Simulation
-* **Description:** Python | Networking 
-* **Timeline:** Data Visualization - November 2022 - December 2022
-* **Details:** 
-    * Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects.
+* **Description:** Python | Networking
+* **Timeline:** Nov 2022 - Dec 2022
+* **Description:** Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects.
     * Simulated packet loss and generated visualizations with matplotlib to illustrate protocol performance. Increased understanding of networking protocols and data transmission by 65%.
     * Analyzed adaptive window sizing benefits for flow control in networking.
-    * Project repository: https://github.com/vmsaif/gbnProtocolSimulation
+    * Project repository: [https://github.com/vmsaif/gbnProtocolSimulation](https://github.com/vmsaif/gbnProtocolSimulation).
 
-# Experience 
+# Experience
+
 ## Programming Mentor - Online and In-Person
 * **Description:** Private Tutoring | Python, Java
-* **Timeline:** Winnipeg, Manitoba | February 2023 - December 2023
-* **Details:**
-    * Tutored a student in computer systems and programming, focusing on Python and Java.
-    * Tailored teaching methods to accommodate the student's learning style.
-    * Facilitated hands-on sessions for installing software, debugging, and understanding computer operations. 
-    * Delivered one-on-one lessons focusing on computer system principles and introductory programming. 
+* **Location:** Winnipeg, Manitoba 
+* **Timeline:**  February 2023 - December 2023
+* **Description:** Tutored a student in computer systems and programming, focusing on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role.
+    * Delivered one-on-one lessons focusing on computer system principles and learning introductory programming.
+    * Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.
+    * Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding. 
