@@ -1,3 +1,0 @@
-{
-    "Career Objective": "A highly motivated AI enthusiast seeking to contribute to Radical AI's mission of democratizing AI for social good. My passion lies in creating user-centric solutions, simplifying complex processes through a “magic button” approach to software development.  My experience developing AI-driven applications, coupled with my proficiency in Python and LangChain, makes me a strong candidate to contribute to innovative projects at Radical AI."
-  }

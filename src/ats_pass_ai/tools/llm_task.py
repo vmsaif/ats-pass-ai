@@ -1,11 +1,23 @@
 import os
 import google.generativeai as genai
-from textwrap import dedent
+
+from ats_pass_ai.request_limiter import RequestLimiter
 
 class LLMTask:
-	def set_model(self):
+
+	def run(self):
+
+		# if user_info_orgainzed_file_path does not exist then proceed
+		if(self._shouldRun()):
+			self._set_model()
+			content = self._read_file(self.user_info_file_path)
+			response = self.model.generate_content(content, request_options={"timeout": 600})
+			self.large_llm_limiter.run(output=None)
+			self._write_to_file(response.text)
+	
+	def _set_model(self):
 		self.generation_config = {
-				"temperature": 1,
+				"temperature": 1.0,
 				# "top_p": 0.95,
 				# "top_k": 50,
 				"max_output_tokens": 8192,
@@ -20,16 +32,7 @@ class LLMTask:
 				safety_settings=self.safety_settings
 		)
 
-	def run(self):
-
-		# if user_info_orgainzed_file_path does not exist then proceed
-		if(self.shouldRun()):
-			self.set_model()
-			content = self.read_file(self.user_info_file_path)
-			response = self.model.generate_content(content, request_options={"timeout": 600})
-			self.write_to_file(response.text)
-
-	def shouldRun(self):
+	def _shouldRun(self):
 		if self.override:
 			print(f"Starting {self.task_name} task...")
 			return True
@@ -47,7 +50,7 @@ class LLMTask:
 			return True
 
 			
-	def read_file(self, file_path):
+	def _read_file(self, file_path):
 		try:
 			print(f'Started reading {file_path}')
 			with open(file_path, 'r', encoding='utf-8') as file:
@@ -55,7 +58,7 @@ class LLMTask:
 		except FileNotFoundError:
 			print(f"File not found at the specified path: {file_path}")
 
-	def write_to_file(self, content):
+	def _write_to_file(self, content):
 		try:
 			with open(self.user_info_orgainzed_file_path, 'w', encoding='utf-8') as file:
 				file.write(content)
@@ -65,6 +68,7 @@ class LLMTask:
 
 
 	def __init__(self, task_name: str, user_info_file_path: str, user_info_orgainzed_file_path: str, system_instruction: str, override: bool):
+		self.large_llm_limiter = RequestLimiter(llm_size='large')
 		self.task_name = task_name
 		self.user_info_file_path = user_info_file_path
 		self.user_info_orgainzed_file_path = user_info_orgainzed_file_path

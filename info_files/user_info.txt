@@ -77,6 +77,17 @@ Developed a Java application to simulate a bank account system, showcasing objec
 - Facilitated open-source collaboration with documentation, accessible here: https://github.com/vmsaif/bankAccountSystem
 
 
+References:
+1. Abu Kabir
+Director IT Service Management, Microsoft
+Winnipeg, MB
+204-298-3693
+
+2. Safiur Mahdi
+Java Developer, Skip the Dishes
+Winnipeg, MB
+204-583-3432
+
 
 \vspace{5pt}
 \runsubsection{ATS Pass AI}
