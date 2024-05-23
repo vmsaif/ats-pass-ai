@@ -26,7 +26,7 @@ class SearchInChromaDB:
             You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
-        results = vectorstore.similarity_search_with_score(question)
+        results = vectorstore.similarity_search(question)
         return results
 
 class RagSearchTool:
@@ -96,8 +96,16 @@ class RagSearchTool:
             doc = loader.load()
             
             # Split the content into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=200)
+            text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=200)
             splits = text_splitter.split_documents(doc)  # Split large document content
+            
+            for split in splits:
+                print(dedent(f"""
+                    ------------------ Content chunk ------------------
+                    {split}
+                    -----------------------------------------------------
+                """))
+            
             
             # Now index the content in Chroma DB
             if splits:

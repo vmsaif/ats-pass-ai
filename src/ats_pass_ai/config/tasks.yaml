@@ -313,7 +313,7 @@ references_extraction_task:
     You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive reference details.
     How you should use the tool:
     argument:
-    "question": "Give me a list of all references, including names, positions, companies, contact information, and relationships to you."
+    "question": "who are the professional references and what are their contact details?" 
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
@@ -377,8 +377,13 @@ profile_builder_task:
 
     You will use the extracted data from the previous tasks as your context input to create a detailed user profile. Ensure that the profile is well-organized, and accurate, and includes all the relevant information extracted from the user's input.
 
+    In your input context, some tasks will not have any data or say provided context does not have any data, you should ignore those tasks and not include them in the final output. Only look at the data you have found in the context.
+
+    The final output **must not contain** any pair which has "key" = null values. You should only include pairs that have values. Remove any pair that has a null value.
+
   expected_output: >
-    Ignore anything you didn't find, Do not make up information. In JSON format
+    
+    In JSON format
       {
         "User Profile": {
           "Personal Details": {
@@ -398,58 +403,58 @@ profile_builder_task:
             ...
           },
           
-          "Education": {
-            "Degree": "...",
-            "Major": "...",
-            "University": "...",
-            "Location": "...",
-            "Graduation Date": "...",
-            "GPA": "..."
-          },
-          "Volunteer Work": [
-            {
-              "Organization Name": "",
-              "Role": "",
-              "Responsibilities": "",
-              "Timeline": "",
-              ...
-            }
-          ],
-          "Awards and Recognitions": [
-            {
-              "Award Name": "",
-              "Awarding Organization": "",
-              "Date": "",
-              "Reason": "",
-              ...
-            }
-          ],
-          "References": [
-            {
-              "Name": "",
-              "Position": "",
-              "Company": "",
-              "Contact Information": "",
-              "Relationship": "",
-              ...
-            }
-          ],
-          "Personal Traits and Interests": {
-            "Strengths": "",
-            "Weaknesses": "",
-            "Hobbies": "",
-            "Passions": "",
-            ...
-          },
-          "Miscellaneous": {
-            "Languages Spoken": "",
-            "Certifications": "",
-            "Professional Affiliations": "",
-            "Other Relevant Details": "",
+        "Education": {
+          "Degree": "...",
+          "Major": "...",
+          "University": "...",
+          "Location": "...",
+          "Graduation Date": "...",
+          "GPA": "..."
+        },
+        "Volunteer Work": [
+          {
+            "Organization Name": "",
+            "Role": "",
+            "Responsibilities": "",
+            "Timeline": "",
             ...
           }
+        ],
+        "Awards and Recognitions": [
+          {
+            "Award Name": "",
+            "Awarding Organization": "",
+            "Date": "",
+            "Reason": "",
+            ...
+          }
+        ],
+        "References": [
+          {
+            "Name": "",
+            "Position": "",
+            "Company": "",
+            "Contact Information": "",
+            "Relationship": "",
+            ...
+          }
+        ],
+        "Personal Traits and Interests": {
+          "Strengths": "",
+          "Weaknesses": "",
+          "Hobbies": "",
+          "Passions": "",
+          ...
+        },
+        "Miscellaneous": {
+          "Languages Spoken": "",
+          "Certifications": "",
+          "Professional Affiliations": "",
+          "Other Relevant Details": "",
+          ...
         }
       }
+    }
 
 # ------------- generalist_agent -> User Experiences Extraction -------------
 

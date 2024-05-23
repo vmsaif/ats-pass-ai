@@ -7,9 +7,9 @@ from datetime import timedelta
 import os
 import sqlite3
 from textwrap import dedent
-from ats_pass_ai.request_limiter import RequestLimiter
+from ats_pass_ai.request_limiter import printDailyLimitRemaining, convert_seconds
 from ats_pass_ai.resume_crew import ResumeCrew
-from ats_pass_ai.tools.rag_search_tool import RagSearchTool
+from ats_pass_ai.tools.rag_search_tool import RagSearchTool, SearchInChromaDB
 from ats_pass_ai.tools.llm_task import LLMTask
 import time
 from ats_pass_ai.output_file_paths import PATHS
@@ -30,19 +30,21 @@ def run():
                     Objective: Reorganize provided unstructured content into a clear, structured format without missing any details. Every detail in the content is important and should be included in the final output.
                     
                     Instructions:
-                    1. Comprehension: Read the content to understand the themes and details.
+                    1. Comprehension: Read the content to understand the themes and details. Each section should have a description of more than 2 lines on what it contains as it will help doing symanctic search on this document later.
+                                             
                     2. Identification:
                         - Begin with identifying and documenting key personal identification details such as the user's name, contact information, location, phone number, and email address etc.
                         - Use the heading '### Personal Details' for this section.
-                    3. Structure Development:
-                        - Main Categories: Identify and label key themes with '#'. 
+                    3. Structure Development: 
+                        - Write a description of each Category of more than 2 lines of what it contains.
+                        - Main Categories: Identify and label key themes with '#'.
                         - Subcategories: Create necessary subcategories under each main category with '##'.
                     4. Content Handling:
                         - Preservation: Ensure all original information (links, dates, names) is included.
                         - Clarity and Readability: Use clear headings, subheadings, and bullet points to enhance readability.
                     5. Personal Content Handling:
                         - Summarize personal narratives or self-descriptions in third-person, without categorization.
-                    6. Final Review: Check the structured content for completeness, accuracy, and coherence. Make any necessary adjustments, ensuring that related information is grouped together.
+                    6. Final Review: Check the structured content for completeness, accuracy, and coherence. Make any necessary adjustments, ensuring that related information is grouped together. Also ensure that each section has a description of more than 2 lines on what it contains.
                                             
                     Outcome: Deliver a well-organized document that maintains all original details in an accessible format.
                     """)
@@ -94,7 +96,7 @@ def run():
                             user_info_file_path, 
                             user_info_orgainzed_file_path, 
                             organize_system_instruction, 
-                            override=True
+                            override=False
                         ).run()
         info_organizing_time = t.interval
 
@@ -105,7 +107,7 @@ def run():
                                                 jd_file_path, 
                                                 jd_extracted_keywords_file_path, 
                                                 jd_extraction_system_instruction, 
-                                                override=True
+                                                override=False
                                         ).run()
 
         jd_extraction_time = t.interval
@@ -118,7 +120,7 @@ def run():
 
         with Timer() as t:
             # Delete the user profile files but not the folder To start fresh
-            RagSearchTool.delete_user_profile_files(delete_pretasks = True)
+            RagSearchTool.delete_user_profile_files(delete_pretasks = False)
 
             # Run the main crew program
             ResumeCrew().crew().kickoff()
@@ -136,49 +138,22 @@ def run():
     print_task_time("Total", program_run_time)
     printDailyLimitRemaining()
 	
+
+def check_keyword(answer):
+    for document in answer:
+                print(document.page_content)
+                for word in document.page_content.split():
+                    if(word == "microsoft"):
+                        
+                        print("\n\n\n-----------Found the keyword 'microsoft' in the document-----------\n\n\n--")
+                        exit()
+                        
+                print("\n")  # Adding a new line for better separation between contents
+
 def print_task_time(task_name, total_seconds):
         days, hours, minutes, seconds = convert_seconds(total_seconds)
         print(f"-- Time taken for {task_name}: {minutes} minutes, {seconds} seconds")
 
-def printDailyLimitRemaining():
-    now = time.time()
-
-    for llm_size, daily_limit in [
-        ('large', RequestLimiter.LLM_LARGE_DAILY_REQUEST_LIMIT),
-        ('small', RequestLimiter.LLM_SMALL_DAILY_REQUEST_LIMIT)
-    ]:
-        db_file = getattr(RequestLimiter, f"DB_FILE_{llm_size.upper()}_LLM")
-        db_path = os.path.join(RequestLimiter.DB_DIR, db_file)
-        try:
-            with sqlite3.connect(db_path) as conn:
-                cursor = conn.cursor()
-                cursor.execute('SELECT count, first_request_time FROM Requests')
-                row = cursor.fetchone()
-
-                if row:
-                    first_request_time = row[1]
-                    time_since_first_request = now - first_request_time
-                    remaining_requests = daily_limit - row[0]
-                    time_remaining_until_reset = RequestLimiter.DAY_IN_SECONDS - time_since_first_request
-                else:
-                    # If no data found, assume no requests have been made yet
-                    remaining_requests = daily_limit
-                    time_remaining_until_reset = RequestLimiter.DAY_IN_SECONDS
-
-                days, hours, minutes, seconds = convert_seconds(time_remaining_until_reset)
-                print(f"{llm_size.capitalize()} LLM: requests remaining: {remaining_requests} with time until reset: {days} days, {hours} hours, {minutes} minutes, {seconds} seconds")
-
-        except Exception as e:
-            print(f"Error connecting to {llm_size.capitalize()} LLM database: {e}")
 
 
-def convert_seconds(seconds):
-    # Create a timedelta object from the number of seconds
-    td = timedelta(seconds=seconds)
-    
-    # Extract days, hours, minutes, and seconds from the timedelta object
-    days = td.days
-    hours, remainder = divmod(td.seconds, 3600)
-    minutes, seconds = divmod(remainder, 60)
-    
-    return days, hours, minutes, seconds    
+ 

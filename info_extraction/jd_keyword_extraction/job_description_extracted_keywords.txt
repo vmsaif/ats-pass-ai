@@ -1,15 +1,15 @@
-##  Job Description Keyword and Phrase Extraction for Resume Optimization:  Artificial Intelligence Engineer at Radical AI 
+##  Job Description Keyword and Phrase Extraction: Artificial Intelligence Engineer at Radical AI
 
 **1. Introduction:**
 
-* **Role:**  Artificial Intelligence Engineer (Virtual Internship)
+* **Role:** Artificial Intelligence Engineer (Virtual Internship)
 * **Company:** Radical AI for Social Good Lab
-* **Location:** Remote 
-* **Industry:** Artificial Intelligence, Social Good, Technology, Non-profit (inferred)
+* **Location:** Remote
+* **Industry:** Artificial Intelligence, Social Impact, Technology, Non-profit 
 
-**2.  Thorough Analysis:**
+**2. Thorough Analysis:** 
 
-This job description emphasizes a strong ethical foundation, particularly regarding the societal impacts of AI. Technical skills in AI, ML, and NLP are essential, along with experience with specific frameworks and tools.  The company values collaboration, innovative thinking, and a commitment to social good.
+This job description emphasizes a strong ethical foundation in AI development, particularly focusing on social good and equitable progress. Technical proficiency in AI, ML, NLP, and generative AI is crucial. The company values collaboration, critical thinking, and a commitment to their social justice-oriented mission.
 
 **3. Keyword Categorization:**
 
@@ -20,77 +20,80 @@ This job description emphasizes a strong ethical foundation, particularly regard
     * Machine Learning (ML)
     * Deep Learning
     * Natural Language Processing (NLP)
-    * Generative AI 
-    * Data Analysis
-    * Data Preprocessing
-    * Algorithm Development
-    * Model Development
-    * Python
-    * TensorFlow (or similar frameworks like PyTorch)
+    * Generative AI
+    * AI Model Design & Development
+    * Data Analysis & Preprocessing
+    * Algorithm Enhancement
+    * Python Programming
+    * TensorFlow/PyTorch (or similar frameworks)
     * OpenAI API
     * Meta Llama 2
-    * Google Gemini 
+    * Google Gemini
     * LangChain
-    * Google Gen AI Studio 
+    * Google Gen AI Studio
 
 * **Soft Skills:**
     * Analytical Skills
     * Problem-Solving
     * Creative Thinking
-    * Communication 
-    * Teamwork
-    * Research Presentation 
+    * Communication Skills (written & verbal)
+    * Teamwork & Collaboration
+    * Research & Presentation
 
 **B. Industry/Field Specific Terms:**
 
 * AI Virtual Agents
 * AI for Social Good
-* Democratization of AI
 * Ethical AI
+* Democratization of AI
+* Social Impact Technology
+* AI Ethics Washing
 * Responsible AI
 
 **C. Company Values & Culture:**
 
-* Social Impact
-* Equity
-* Education 
-* Social Mobility 
-* Global Communities
+* Social Justice
+* Equity & Inclusion
 * Diversity
-* Inclusion
-* Collaboration
-* Innovation
+* Community Impact
+* Collective Liberation
+* Challenging Oppression
+* Critical Thinking
+*  Power Redistribution 
+* Transparency & Reflexivity
 
 **D. Action Verbs:**
 
 * Design
 * Develop
-* Analyze 
+* Analyze
 * Preprocess
 * Collaborate
 * Enhance
 * Present
 * Engage
-* Contribute
+* Contribute 
 
-**4.  Prioritization and Relevance:**
+**4. Prioritization and Relevance:**
 
-* **High Priority:**  The keywords listed under "Essential Skills" are frequently used and highly emphasized, making them crucial for your resume.
-* **Company Values:**  Integrate keywords related to social impact, ethical AI, and the company's mission to demonstrate alignment with their values. 
-* **Tailor:** Highlight your experience with the specific technologies listed (e.g., OpenAI API, LangChain) if applicable. 
+* **High Priority:**  AI, ML, NLP, Generative AI, Python, Ethical AI, Social Impact, OpenAI API, Meta Llama 2, Google Gemini,  Communication, Teamwork, Problem-Solving
+* **Medium Priority:** Deep Learning, TensorFlow/PyTorch, Data Analysis, Algorithm Enhancement, Research, Presentation, AI for Social Good 
+* **Required vs. Preferred:**  A Bachelor's or Master's degree in a relevant field is required. 
 
-**5. Keyword List Creation:** (Organized for brevity, expand as needed)
+**5. Keyword List:** (Organized for clarity - adapt for resume format)
 
-| Category | Keywords |
-|---|---|
-| Core Skills | AI, ML, Deep Learning, NLP, Generative AI, Python, TensorFlow, Data Analysis, Algorithm Development |
-| Tools & Technologies | OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio  |
-|  Social Impact & Ethics |  AI for Social Good, Ethical AI, Social Mobility, Diversity, Inclusion |
-|  Key Skills |  Problem-Solving, Analytical, Communication, Teamwork, Creative Thinking |
-
+| Category             | Keywords                                                                              |
+|----------------------|-------------------------------------------------------------------------------------|
+| **Technical Skills** | AI, ML, Deep Learning, NLP, Generative AI, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Data Analysis, Algorithm Enhancement |
+| **Industry Terms**   | AI for Social Good, Ethical AI, Democratization of AI, Social Impact Technology    |
+| **Soft Skills**      | Communication, Teamwork, Problem-Solving, Analytical Skills, Creative Thinking      |
+| **Company Values**   | Social Justice, Equity, Inclusion, Diversity, Community Impact                          |
+| **Action Verbs**     | Design, Develop, Analyze, Collaborate, Enhance, Present, Contribute                    |
 
 **6. ATS Optimization Tips:**
 
-* **Natural Integration:** Incorporate keywords into your resume's skills section, work experience descriptions (using action verbs), and even your summary/objective statement. 
-* **Avoid Keyword Stuffing:**  Use keywords strategically and avoid unnatural repetition. Focus on clear and concise language.
-* **Customize:** Tailor your resume for this specific role by highlighting the most relevant skills and experiences.  Mention your passion for social good and ethical AI. 
+* **Natural Integration:** Weave keywords naturally into your resume sections (skills, experience, summary).
+* **Avoid Keyword Stuffing:**  Use synonyms and variations to avoid excessive repetition.
+* **Tailor to the Job:**  Prioritize keywords directly mentioned in the job description.
+* **Quantify Achievements:** Use numbers and metrics to demonstrate the impact of your skills (e.g., "Improved model accuracy by 15%").
+* **Showcase Alignment:**  Highlight your passion for social good and ethical AI in your cover letter and interview. 

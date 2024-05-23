@@ -1,4 +1,5 @@
 
+from datetime import timedelta
 import os
 import time
 import sqlite3
@@ -108,5 +109,45 @@ class RequestLimiter:
             print(f"Error in reset_counts: {e}")
             self.conn.rollback()  # Rollback the transaction if an error occurs
   
+#   Not making a class method
+def printDailyLimitRemaining():
+    now = time.time()
 
+    for llm_size, daily_limit in [
+        ('large', RequestLimiter.LLM_LARGE_DAILY_REQUEST_LIMIT),
+        ('small', RequestLimiter.LLM_SMALL_DAILY_REQUEST_LIMIT)
+    ]:
+        db_file = getattr(RequestLimiter, f"DB_FILE_{llm_size.upper()}_LLM")
+        db_path = os.path.join(RequestLimiter.DB_DIR, db_file)
+        try:
+            with sqlite3.connect(db_path) as conn:
+                cursor = conn.cursor()
+                cursor.execute('SELECT count, first_request_time FROM Requests')
+                row = cursor.fetchone()
 
+                if row:
+                    first_request_time = row[1]
+                    time_since_first_request = now - first_request_time
+                    remaining_requests = daily_limit - row[0]
+                    time_remaining_until_reset = RequestLimiter.DAY_IN_SECONDS - time_since_first_request
+                else:
+                    # If no data found, assume no requests have been made yet
+                    remaining_requests = daily_limit
+                    time_remaining_until_reset = RequestLimiter.DAY_IN_SECONDS
+
+                days, hours, minutes, seconds = convert_seconds(time_remaining_until_reset)
+                print(f"{llm_size.capitalize()} LLM: requests remaining: {remaining_requests} with time until reset: {hours} hours, {minutes} minutes, {seconds} seconds")
+
+        except Exception as e:
+            print(f"Error connecting to {llm_size.capitalize()} LLM database: {e}")
+
+def convert_seconds(seconds):
+# Create a timedelta object from the number of seconds
+    td = timedelta(seconds=seconds)
+    
+    # Extract days, hours, minutes, and seconds from the timedelta object
+    days = td.days
+    hours, remainder = divmod(td.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    
+    return days, hours, minutes, seconds 

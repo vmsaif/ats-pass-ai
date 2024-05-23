@@ -1,0 +1,28 @@
+```json
+{
+  "Contact Info": {
+    "Full Name": "",
+    "Phone": "",
+    "Email": "",
+    "LinkedIn Profile URL": "",
+    "Personal Website URL": "",
+    "Address": ""
+  },
+  "Summary": "",
+  "Skills": {
+    "Technical": [],
+    "Soft": []
+  },
+  "Projects": [],
+  "Work": [],
+  "Education": {
+    "Degree": "",
+    "Major": "",
+    "University": "",
+    "Location": "",
+    "Graduation Date": "",
+    "GPA": ""
+  },
+  "Additional": {}
+}
+```

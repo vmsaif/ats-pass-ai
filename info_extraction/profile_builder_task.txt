@@ -1,0 +1,59 @@
+{
+  "User Profile": {
+    "Personal Details": {
+      "Full Name": "Saif Mahmud",
+      "Phone Number": "204 955 5064",
+      "Email": "msaifofficial@gmail.com",
+      "LinkedIn": "https://www.linkedin.com/in/vmsaif",
+      "Other Social Media Profiles": null,
+      "Personal Website": "https://saifmahmud.dev/",
+      "Portfolio": "https://saifmahmud.dev/",
+      "GitHub": "https://github.com/vmsaif/",
+      "Address": null,
+      "City": "Winnipeg",
+      "State": "MB",
+      "Zip Code": null,
+      "Country": null
+    },
+    "Education": {
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "University of Manitoba",
+      "Location": "Winnipeg, Manitoba",
+      "Graduation Date": "October 2023",
+      "GPA": "3.07"
+    },
+    "Volunteer Work": [
+      {
+        "Organization Name": ".dev Programming Club",
+        "Role": "Active Member",
+        "Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
+        "Timeline": "2019-2023"
+      }
+    ],
+    "Awards and Recognitions": [],
+    "References": [
+      {
+        "Name": "Abu Kabir",
+        "Position": "Director IT Service Management",
+        "Company": "Microsoft",
+        "Contact Information": "204-298-3693",
+        "Relationship": null
+      },
+      {
+        "Name": "Safiur Mahdi",
+        "Position": "Java Developer",
+        "Company": "Skip the Dishes",
+        "Contact Information": "204-583-3432",
+        "Relationship": null
+      }
+    ],
+    "Personal Traits and Interests": {
+      "Strengths": "Detail-oriented, Highly analytical, Excellent problem-solving skills, Strong communication skills, Ability to work independently and as part of a team",
+      "Weaknesses": null,
+      "Hobbies": null,
+      "Passions": null
+    },
+    "Miscellaneous": {}
+  }
+}
