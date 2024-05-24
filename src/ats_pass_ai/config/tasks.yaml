@@ -935,40 +935,68 @@ skills_extraction_task:
           "Technologies": {
             {
               "Name": "Python",
-              "field": "Programming Language"
+              "field": [
+                "Programming Language",
+                "AI, ML",
+                "..."
+                ]
             },
             {
               "Name": "Java",
-              "field": "Programming Language"
+              "field": [
+                "Programming Language",
+                "..."
+              ]
             }
           },
           "Frameworks": {
             {
               "Name": "Langchain",
-              "field": "AI, LLM"
+              "field": [
+                "AI, 
+                ML, 
+                LLM (Large Language Model),",
+                "..."
+              ]
             },
             {
               "Name": "Angular",
-              "field": "JavaScript Framework"
+              "field": [
+                "JavaScript Framework",
+                "Web Development",
+                "Frontend Development",
+                "..."
+              ]
             },
             {
               "Name": "Spring Boot",
-              "field": "Java Framework"
+              "field": [
+                "Java Framework",
+                "..."
             }
           },
 
           "Skills": {
             {
               "Name": "Data Analysis",
-              "field": "Analytical Skills"
+              "field": [
+                "Analytical Skills",
+                "..."
+              ]
             },
             {
               "Name": "Machine Learning",
-              "field": "AI, ML"
+              "field": [
+                "AI, ML",
+                "..."
+              ]
             },
             {
               "Name": "Project Management",
-              "field": "Management Skills"
+              "field": [
+                "Management Skills",
+                "..."
+              ]
             }
           },
 
@@ -987,154 +1015,50 @@ skills_extraction_task:
             }
           }
 
-# ------------- If need an explanation of each decision, use this expected_output ------------
-
-  # expected_output: >
-  #   [Use empty lines to separate the experiences. Group each experience as "Work Experience" or "Project Experience" together and provide the title and explanation for each.]
-  #   * **Top 4 Relevant Experiences:**
-  #       1. [Title]: 
-  #           [Explanation]
-        
-  #       2. [Title]: 
-  #           [Explanation]
-        
-  #       3. [Title]: 
-  #           [Explanation]
-        
-  #       4. [Title]: 
-  #           [Explanation]
-
-  #   [Use empty lines to separate the experiences.]
-  #   * **Explanation for Not Choosing Other Experiences (One by one):**
-    
-  #       1. [Title]: 
-  #           [Explanation]
-        
-  #       2. [Title]: 
-  #           [Explanation]
-        
-  #       3. [Title]: 
-  #           [Explanation] 
-  #       ... and so on
-
 # --------------------------------------------------------
 
 # ---------------ats_keyword_integration_agent (ATS Keyword Integration Specialist) tasks---------------
 
 ats_friendly_keywords_into_experiences:
   description: >
-    This task helps you create compelling resume bullet points by adding important
-    keywords from a job description keywords summary file into descriptions of the applicant's experiences.
-    The goal is to make these descriptions stand out to Applicant Tracking
-    Systems (ATS), while also being easy to read and understand.
+    Enhance the descriptions of the applicant's experiences by integrating key job description keywords to make them more appealing to Applicant Tracking Systems (ATS) while ensuring they remain readable and relevant.
 
     **Guidelines:**
-      - **Relevance:** Only use keywords that truly fit with the experience you're
-        describing.
-      - **Natural Language:** Keywords should fit smoothly into the sentences. Don't
-        just list keywords or force them in where they don't belong.
-      - **Conciseness and Clarity:** Use strong action verbs and remove unnecessary
-        words. Focus on making a big impact with a few words. Summarize each
-        experience in 1-2 short, powerful sentences, just like you would on a resume.
-      - **Context Matters:** Think about the overall story of each experience. Pick
-        keywords that accurately show the skills you used and what you were
-        responsible for.
-      - **Avoid Keyword Overload:** Using too many keywords can hurt your
-        chances. Aim for a balanced and impactful description without repeating
-        keywords too much.
+      - **Relevance:** Only integrate keywords that are directly relevant to the described experience.
+      - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
+      - **Conciseness and Clarity:** Employ powerful action verbs and succinct phrases to convey significant achievements in 1-2 compelling sentences.
+      - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
+      - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
 
     **Job Description Keywords:** 
-    
     {jd_keywords}
 
-    At the end of the task, you will need to provide a report on the changes you made.
+    After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
 
   expected_output: >
-    - **Title / Role:** (If you have this information)
-    - **Company Name:** (If you have this information)
-    - **Timeline:** (If you have this information)
-    - **Duration:** (Calculate from the timeline)
-    - **Technologies, Frameworks, and Tools Used:**
-    - **Skills:**
-    - **Link:** (If relevant)
-    - **Key Highlights (ATS-friendly bullet points):**
-        - 1.
-        - 2.
-        - 3.
-        - 4.
-    - **Team Size:** (If you have this information)
-    - **Outcomes:** (If you have this information)
+    Produce a detailed listing for each experience, categorized under 'Most Recent Experience', 'Work Experience' and 'Project Experience', with ATS-optimized descriptions. 
 
-    **REPORT ON CHANGES:**
-      - **Keyword Changes:** For each experience:
-          - Original Sentence: Write the original sentence as you found before adding or replacing keywords.
-          - Revised Sentence: Write the revised sentence, highlighting the **exact keywords** you added from the job description. 
-          - Keywords Added: List the keywords you added, ensuring they **exactly match** the words from the job description's keyword summary. 
-          - Rationale: Explain why you chose to use those specific keywords. What did you see in the job description that made you add them? Be specific and refer to details from the job description. 
+    Additionally, include a **report on changes** that covers:
+      - **Original Sentence**: Present the sentence before any updates.
+      - **Revised Sentence**: Display the sentence after keywords have been integrated.
+      - **Keywords Added**: List each keyword that was newly added, ensuring they were not present before.
+      - **Rationale**: Provide a detailed explanation for each keyword addition, linking the choice to specific requirements or phrases in the job description.
 
-    example:
-
-      Example 1:
-        Keywords found from the Job Description: [Python, Data Analysis, Data Visualization, Collaboration, Communication, Teamwork]
-      
-        Before Changes:
-          - Chosen Experiences (Highlights):
-            - Developed a machine learning algorithm for image recognition using Python
-              and TensorFlow.
-            - Collaborated with a team of engineers to build a data visualization
-              dashboard for a client.
-
-        After Adding Keywords:
-          - Key Highlights (ATS-friendly bullet points):
-            - Developed a **Python**-based machine learning algorithm for image
-              recognition, utilizing **data analysis** and **data visualization**
-              techniques to optimize performance.
-            - **Collaborated** effectively with a team of engineers to design and
-              build a data visualization dashboard, showcasing strong **communication**
-              and **teamwork** skills.
-
-      Example 2:
-        Keywords found from the Job Description: [Java, Spring Boot, RESTful APIs, Agile, Scrum, Problem-Solving]
-
-        Before Changes:
-          - Chosen Experiences (Highlights):
-            - Led the development of a web application using Java and Spring Boot.
-            - Implemented RESTful APIs for a client project.
-
-        After Adding Keywords:
-          - Key Highlights (ATS-friendly bullet points):
-            - Spearheaded the development of a web application leveraging **Java** and
-              **Spring Boot**, following **Agile** and **Scrum** methodologies to
-              ensure efficient delivery.
-            - Successfully implemented **RESTful APIs** for a client project, showcasing
-              strong **problem-solving** skills and technical expertise.
-
-      report_on_changes:
-        Before Changes:
-          - Chosen Experiences (Highlights):
-            - Developed a machine learning algorithm for image recognition using Python
-              and TensorFlow.
-            - Collaborated with a team of engineers to build a data visualization
-              dashboard for a client.
-
-        After Adding Keywords:
-          - Key Highlights (ATS-friendly bullet points):
-            - Developed a **Python**-based machine learning algorithm for image
-              recognition, utilizing **data analysis** and **data visualization**
-              techniques to optimize performance.
-            - **Collaborated** effectively with a team of engineers to design and
-              build a data visualization dashboard, showcasing strong **communication**
-              and **teamwork** skills.
-
-          New keywords added = [data analysis, communication, teamwork]
-          Rationale: The job description emphasizes the importance of communication and teamwork skills, which are evident in the applicant's experience. Adding these keywords helps align the experience with the job requirements.
-
-          All Matched keywords between the job description and the user's experiences:
-          [Python, Data Analysis, Data Visualization, Collaboration, Communication, Teamwork]
-          
-
-        
-    
+      **Example**:
+      Keywords from the Job Description: [Python, Data Analysis, Data Visualization, Collaboration, Communication, Teamwork]
+      Before Changes:
+        - Key Highlights:
+          - Developed a machine learning algorithm for image recognition using Python and TensorFlow.
+          - Collaborated with a team of engineers to build a data visualization dashboard for a client.
+      After Adding Keywords:
+        - Key Highlights:
+          - Developed a **Python**-based machine learning algorithm for image recognition, utilizing **data analysis** and **data visualization** techniques.
+          - **Collaborated** with a team to build a dashboard, demonstrating strong **communication** and **teamwork**.
+      Report on Changes:
+        - Original Sentence: Developed a machine learning algorithm for image recognition using Python and TensorFlow.
+        - Revised Sentence: Developed a **Python**-based machine learning algorithm for image recognition, utilizing **data analysis** and **data visualization** techniques.
+        - Keywords Added: Data Analysis, Data Visualization
+        - Rationale: The job description emphasized these technical skills as critical for the role, making their inclusion essential for aligning the applicant’s experiences with the job requirements.
 
 # professional_affiliations_task:
 #   description: >

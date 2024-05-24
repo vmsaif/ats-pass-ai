@@ -82,9 +82,9 @@ class ResumeCrew:
 		# my_tasks.append(self.experience_choosing_task())
 
 		# my_tasks.append(self.split_context_of_experience_choosing_task())
-		my_tasks.append(self.gather_info_of_chosen_experiences())
+		# my_tasks.append(self.gather_info_of_chosen_experiences())
 		
-		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
+		my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
 		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 		# my_tasks.append(self.career_objective_task())
 		# my_tasks.append(self.resume_in_json_task())
@@ -444,13 +444,16 @@ class ResumeCrew:
 		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
 		jd_keywords = self.load_txt_file(PATHS["jd_keyword_extraction"])
 		task_description = yaml[0].format(jd_keywords = jd_keywords)
+		# add gathered info of chosen experiences
+		task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["gather_info_of_chosen_experiences"])
+
 		expected_output = yaml[1]
 
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.ats_keyword_integration_agent(),
-			context=[self.gather_info_of_chosen_experiences()],
+			# context=[self.gather_info_of_chosen_experiences()],
 			output_file=PATHS["ats_friendly_keywords_into_experiences"],
 		)
 
