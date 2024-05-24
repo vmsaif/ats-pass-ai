@@ -535,53 +535,53 @@ split_context_of_experience_choosing_task:
 
 gather_info_of_chosen_experiences:
   description: >
-    Provide detailed information for each of the "selected_experiences" from this content below.
+    Extract and provide detailed information for each of the "selected_experiences" using the content below. Maintain the order of experiences as they are given, and group them correctly as "Work Experience" or "Project Experience".
 
     {user_info_organized_data}
 
   expected_output: >
-    [Maintain the order of work experiences or project experiences. Group them as "Work Experience" or "Project Experience" accordingly. Provide the following details for each experience or project.]
+    [Preserve the order and priority of experiences. Group them as "Work Experience" or "Project Experience" accordingly. Provide the following details for each experience.]
     
     In JSON format:
-      {
-        "Work Experience": [
-          {
-            "Title": "",
-            "Company Name": "",
-            "Timeline": "",
-            "Duration": " years, months", (or " months" if less than a year)
-            "Technologies, frameworks, and tools Used": "",
-            "Skills": "",
-            "Link": "",
-            "Key Highlights": [
-              "",
-              "",
-              "",
-              ""
-            ],
-            "Team size": "",
-            "Outcomes": ""
-          }
-        ],
-        "Project Experience": [
-          {
-            "Title": "",
-            "Timeline": "",
-            "Duration": "",
-            "Technologies, frameworks, and tools Used": "",
-            "Skills": "",
-            "Link": "",
-            "Key Highlights": [
-              "",
-              "",
-              "",
-              ""
-            ],
-            "Team size": "",
-            "Outcomes": ""
-          }
-        ]
-      }
+    {
+      "Work Experience": [
+        {
+          "Title": "",
+          "Company Name": "",
+          "Timeline": "",
+          "Duration": " years, months", (or " months" if less than a year)
+          "Technologies, frameworks, and tools Used": "",
+          "Skills": "",
+          "Link": "",
+          "Key Highlights": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "Team size": "",
+          "Outcomes": ""
+        }
+      ],
+      "Project Experience": [
+        {
+          "Title": "",
+          "Timeline": "",
+          "Duration": "",
+          "Technologies, frameworks, and tools Used": "",
+          "Skills": "",
+          "Link": "",
+          "Key Highlights": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "Team size": "",
+          "Outcomes": ""
+        }
+      ]
+    }
 
 split_context_of_ats_friendly_keywords_into_experiences:
   description: >

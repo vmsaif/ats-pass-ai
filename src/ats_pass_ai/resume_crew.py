@@ -75,13 +75,15 @@ class ResumeCrew:
 
 			my_tasks.append(self.profile_builder_task())
 
-		# # Either way, these tasks will be executed.
-		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.ats_friendly_skills_task())
-		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
-		my_tasks.append(self.experience_choosing_task())
+		# Either way, these tasks will be executed.
+		# my_tasks.append(self.coursework_extraction_task())
+		# my_tasks.append(self.ats_friendly_skills_task())
+		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# my_tasks.append(self.experience_choosing_task())
+
 		# my_tasks.append(self.split_context_of_experience_choosing_task())
-		# my_tasks.append(self.gather_info_of_chosen_experiences())
+		my_tasks.append(self.gather_info_of_chosen_experiences())
+		
 		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
 		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 		# my_tasks.append(self.career_objective_task())
@@ -400,11 +402,17 @@ class ResumeCrew:
 	def split_context_of_experience_choosing_task(self):
 
 		# TODO: Instead making agent doing this split, use a tool to split the context.
+		yaml = self.yaml_loader('split_context_of_experience_choosing_task')
+		task_description = yaml[0]
+		expected_output = yaml[1]
+
+		task_description = task_description + "\n" + self.load_txt_file(PATHS["experience_choosing_task"])
 		
 		return Task(
-			config=self.tasks_config["split_context_of_experience_choosing_task"],
+			description=task_description,
+			expected_output=expected_output,
 			agent=self.generalist_agent(),
-			context=[self.experience_choosing_task()],
+			# context=[self.experience_choosing_task()],
 			output_file=PATHS["split_context_of_experience_choosing_task"],
 		)
 
@@ -416,13 +424,15 @@ class ResumeCrew:
 		# Load the user info organized data
 		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
 		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+
+		task_description = task_description + "\n" + self.load_txt_file(PATHS["split_context_of_experience_choosing_task"])
 		expected_output = yaml[1]
 
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.generalist_agent(),
-			context=[self.split_context_of_experience_choosing_task()],
+			# context=[self.split_context_of_experience_choosing_task()],
 			output_file=PATHS["gather_info_of_chosen_experiences"],
 		)
 	# ----------------- End of Choose Work/Project Experience -----------------
