@@ -5,6 +5,7 @@
 	Description: This file contains the crew class for the user info organizer crew.
 """
 
+import datetime
 import os
 import yaml
 from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmCategory
@@ -67,18 +68,18 @@ class ResumeCrew:
 			my_tasks.append(self.awards_recognitions_extraction_task())
 			my_tasks.append(self.references_extraction_task())
 			my_tasks.append(self.personal_traits_interests_extraction_task())
+			my_tasks.append(self.work_experience_extraction_task())
+			my_tasks.append(self.project_experience_extraction_task())
+			my_tasks.append(self.skills_from_exp_and_project_task())
+			my_tasks.append(self.skills_extraction_task())
 
 			my_tasks.append(self.profile_builder_task())
-		# 	my_tasks.append(self.work_experience_extraction_task())
-		# 	my_tasks.append(self.project_experience_extraction_task())
-		# 	my_tasks.append(self.skills_from_exp_and_project_task())
-		# 	my_tasks.append(self.skills_extraction_task())
 
 		# # Either way, these tasks will be executed.
-		# my_tasks.append(self.coursework_extraction_task())
-		# my_tasks.append(self.ats_friendly_skills_task())
-		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
-		# my_tasks.append(self.experience_choosing_task())
+		my_tasks.append(self.coursework_extraction_task())
+		my_tasks.append(self.ats_friendly_skills_task())
+		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		my_tasks.append(self.experience_choosing_task())
 		# my_tasks.append(self.split_context_of_experience_choosing_task())
 		# my_tasks.append(self.gather_info_of_chosen_experiences())
 		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
@@ -150,12 +151,11 @@ class ResumeCrew:
 	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
 		return Agent(
 			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-			# max_rpm=1,
 			step_callback=self.large_llm_limiter,
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
-			tools=[self.webSearchTool],
+			# tools=[self.webSearchTool],
 			llm=self.genAILarge,
 		)
 	
@@ -269,257 +269,269 @@ class ResumeCrew:
 			output_file=PATHS["profile_builder_task"],
 		)
 
-	# # @task
-	# def coursework_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["coursework_extraction_task"],
-	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
-	# 		output_file=PATHS["coursework_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 	)
+	@task
+	def coursework_extraction_task(self):
+		return Task(
+			config=self.tasks_config["coursework_extraction_task"],
+			agent=self.generalist_agent(),
+			output_file=PATHS["coursework_extraction_task"],
+			tools=[self.queryTool],
+		)
 
-	# # @task
-	# def work_experience_extraction_task(self):
+	@task
+	def work_experience_extraction_task(self):
 		
-	# 	yaml = self.yaml_loader('work_experience_extraction_task')
-	# 	user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
+		yaml = self.yaml_loader('work_experience_extraction_task')
+		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
 
-	# 	task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
-	# 	expected_output = yaml[1]
+		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		expected_output = yaml[1]
 
-	# 	return Task(
-	# 		description = task_description,
-	# 		expected_output = expected_output,
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["work_experience_extraction_task"],
-	# 	)
+		return Task(
+			description = task_description,
+			expected_output = expected_output,
+			agent=self.generalist_agent(),
+			output_file=PATHS["work_experience_extraction_task"],
+		)
 
-	# # @task
-	# def project_experience_extraction_task(self):
+	@task
+	def project_experience_extraction_task(self):
 
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('project_experience_extraction_task')
-	# 	user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
+		# Load YAML file
+		yaml = self.yaml_loader('project_experience_extraction_task')
+		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
 
-	# 	task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
-	# 	expected_output = yaml[1]
+		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		expected_output = yaml[1]
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["project_experience_extraction_task"],
-	# 	)
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.generalist_agent(),
+			output_file=PATHS["project_experience_extraction_task"],
+		)
 	
-	# # @task
-	# def skills_from_exp_and_project_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["skills_from_exp_and_project_task"],
-	# 		agent=self.technical_details_agent(),
-	# 		context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-	# 		tools=[self.webSearchTool],
-	# 		output_file=PATHS["skills_from_exp_and_project"],
-	# 	)
+	@task
+	def skills_from_exp_and_project_task(self):
+		return Task(
+			config=self.tasks_config["skills_from_exp_and_project_task"],
+			agent=self.technical_details_agent(),
+			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+			tools=[self.webSearchTool],
+			output_file=PATHS["skills_from_exp_and_project"],
+		)
 
-	# # @task
-	# def skills_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["skills_extraction_task"],
-   	# 		agent=self.technical_details_agent(),
-	# 		context=[self.skills_from_exp_and_project_task()],
-	# 		output_file=PATHS["skills_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 	)
+	@task
+	def skills_extraction_task(self):
+		return Task(
+			config=self.tasks_config["skills_extraction_task"],
+   			agent=self.technical_details_agent(),
+			context=[self.skills_from_exp_and_project_task()],
+			output_file=PATHS["skills_extraction_task"],
+			tools=[self.queryTool],
+		)
 
-	# # # ----------------- Skills Match Identification -----------------
+	# # ----------------- Skills Match Identification -----------------
 	
-	# # @task
-	# def ats_friendly_skills_task(self):
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('ats_friendly_skills_task')
+	@task
+	def ats_friendly_skills_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('ats_friendly_skills_task')
 		
-	# 	src_1 = self.load_txt_file(PATHS["jd_keyword_extraction"])
-	# 	task_description = yaml[0].format(src_1 = src_1)
-	# 	expected_output = yaml[1]
+		src_1 = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		task_description = yaml[0].format(src_1 = src_1)
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
-	# 		context=[self.skills_extraction_task()],
-	# 		tools=[self.webSearchTool],
-	# 		output_file=PATHS["ats_friendly_skills_pre_task"],
-	# 	)
-	
-	# # @task
-	# def split_context_of_ats_friendly_skills_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["split_context_of_ats_friendly_skills_task"],
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.ats_friendly_skills_task()],
-	# 		output_file=PATHS["split_context_of_ats_friendly_skills_task"],
-	# 	)
-	
-	# # ----------------- End of Skills Match Identification -----------------
+		# skills = self.load_txt_file(PATHS["skills_extraction_task"])
+		# task_description = task_description + "\n" + skills
 
-	# # ----------------- Choose Work/Project Experience -----------------
-	# # @task
-	# def experience_choosing_task(self):
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('experience_choosing_task')
+		# add skills from the skills_extraction_task
+
+		expected_output = yaml[1]
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.cross_match_evaluator_with_job_description_agent(),
+			context=[self.skills_extraction_task()],
+			tools=[self.webSearchTool],
+			output_file=PATHS["ats_friendly_skills_pre_task"],
+		)
+	
+	@task
+	def split_context_of_ats_friendly_skills_task(self):
+
+		return Task(
+			config=self.tasks_config["split_context_of_ats_friendly_skills_task"],
+			agent=self.generalist_agent(),
+			context=[self.ats_friendly_skills_task()],
+			output_file=PATHS["split_context_of_ats_friendly_skills_task"],
+		)
+	
+	# ----------------- End of Skills Match Identification -----------------
+
+	# ----------------- Choose Work/Project Experience -----------------
+	@task
+	def experience_choosing_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('experience_choosing_task')
 		
-	# 	jd_keyword = self.load_txt_file(PATHS["jd_keyword_extraction"])
-	# 	today_date = datetime.date.today().strftime("%B %d, %Y")
+		jd_keyword = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		today_date = datetime.date.today().strftime("%B %d, %Y")
 		
-	# 	task_description = yaml[0].format(jd_keyword = jd_keyword, today_date = today_date)
-	# 	expected_output = yaml[1]
+		task_description = yaml[0].format(jd_keyword = jd_keyword, today_date = today_date)
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.cross_match_evaluator_with_job_description_agent(),
-	# 		context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-	# 		output_file=PATHS["experience_choosing_task"],
-	# 	)
+		# # add the project and work experience data
+		# work_experience_extraction_data = self.load_txt_file(PATHS["work_experience_extraction_task"])
+		# project_experience_extraction_data = self.load_txt_file(PATHS["project_experience_extraction_task"])
+
+		# task_description = task_description + "\n" + work_experience_extraction_data + "\n" + project_experience_extraction_data
+
+		expected_output = yaml[1]
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.cross_match_evaluator_with_job_description_agent(),
+			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
+			output_file=PATHS["experience_choosing_task"],
+		)
 	
-	# # @task
-	# def split_context_of_experience_choosing_task(self):
+	@task
+	def split_context_of_experience_choosing_task(self):
 
-	# 	# TODO: Instead making agent doing this split, use a tool to split the context.
+		# TODO: Instead making agent doing this split, use a tool to split the context.
 		
-	# 	return Task(
-	# 		config=self.tasks_config["split_context_of_experience_choosing_task"],
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.experience_choosing_task()],
-	# 		output_file=PATHS["split_context_of_experience_choosing_task"],
-	# 	)
+		return Task(
+			config=self.tasks_config["split_context_of_experience_choosing_task"],
+			agent=self.generalist_agent(),
+			context=[self.experience_choosing_task()],
+			output_file=PATHS["split_context_of_experience_choosing_task"],
+		)
 
+	@task
+	def gather_info_of_chosen_experiences(self):
+		# Load YAML file
+		yaml = self.yaml_loader('gather_info_of_chosen_experiences')
+
+		# Load the user info organized data
+		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
+		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		expected_output = yaml[1]
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.generalist_agent(),
+			context=[self.split_context_of_experience_choosing_task()],
+			output_file=PATHS["gather_info_of_chosen_experiences"],
+		)
+	# ----------------- End of Choose Work/Project Experience -----------------
+
+	# ----------------- Include ATS Keywords into Experiences -----------------
+	@task
+	def ats_friendly_keywords_into_experiences_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
+		jd_keywords = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		task_description = yaml[0].format(jd_keywords = jd_keywords)
+		expected_output = yaml[1]
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.ats_keyword_integration_agent(),
+			context=[self.gather_info_of_chosen_experiences()],
+			output_file=PATHS["ats_friendly_keywords_into_experiences"],
+		)
+
+	@task
+	def split_context_of_ats_friendly_keywords_into_experiences(self):
+		# TODO: Instead making agent doing this split, use a tool to split the context.
+
+		return Task(
+			config=self.tasks_config["split_context_of_ats_friendly_keywords_into_experiences"],
+			agent=self.generalist_agent(),
+			context=[self.ats_friendly_keywords_into_experiences_task()],
+			output_file=PATHS["split_context_of_ats_friendly_keywords_into_experiences"],
+		)
 	
-	# # @task
-	# def gather_info_of_chosen_experiences(self):
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('gather_info_of_chosen_experiences')
+	@task
+	def career_objective_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('career_objective_task')
 
-	# 	# Load the user info organized data
-	# 	user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
-	# 	task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
-	# 	expected_output = yaml[1]
+		job_description = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		task_description = yaml[0].format(job_description = job_description)
+		expected_output = yaml[1]
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.split_context_of_experience_choosing_task()],
-	# 		output_file=PATHS["gather_info_of_chosen_experiences"],
-	# 	)
-	# # ----------------- End of Choose Work/Project Experience -----------------
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.career_objective_agent(),
+			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
+			output_file=PATHS["career_objective_task"],
+		)
 
-	# # ----------------- Include ATS Keywords into Experiences -----------------
+	@task
+	def resume_in_json_task(self):
 
-	# # @task
-	# def ats_friendly_keywords_into_experiences_task(self):
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
-	# 	jd_keywords = self.load_txt_file(PATHS["jd_keyword_extraction"])
-	# 	task_description = yaml[0].format(jd_keywords = jd_keywords)
-	# 	expected_output = yaml[1]
+		context = []
 
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.ats_keyword_integration_agent(),
-	# 		context=[self.gather_info_of_chosen_experiences()],
-	# 		output_file=PATHS["ats_friendly_keywords_into_experiences"],
-	# 	)
+		# Either way these context is needed to complete the task.
 
-	# # @task
-	# def split_context_of_ats_friendly_keywords_into_experiences(self):
-	# 	# TODO: Instead making agent doing this split, use a tool to split the context.
+		context.append(self.split_context_of_ats_friendly_skills_task())
+		context.append(self.coursework_extraction_task())
+		context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		context.append(self.career_objective_task())
 
-	# 	return Task(
-	# 		config=self.tasks_config["split_context_of_ats_friendly_keywords_into_experiences"],
-	# 		agent=self.generalist_agent(),
-	# 		context=[self.ats_friendly_keywords_into_experiences_task()],
-	# 		output_file=PATHS["split_context_of_ats_friendly_keywords_into_experiences"],
-	# 	)
-	
-	# # @task
-	# def career_objective_task(self):
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('career_objective_task')
-
-	# 	job_description = self.load_txt_file(PATHS["jd_keyword_extraction"])
-	# 	task_description = yaml[0].format(job_description = job_description)
-	# 	expected_output = yaml[1]
-
-	# 	return Task(
-	# 		description=task_description,
-	# 		expected_output=expected_output,
-	# 		agent=self.career_objective_agent(),
-	# 		context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
-	# 		output_file=PATHS["career_objective_task"],
-	# 	)
-
-	# # @task
-	# def resume_in_json_task(self):
-
-	# 	context = []
-
-	# 	# Either way these context is needed to complete the task.
-
-	# 	context.append(self.split_context_of_ats_friendly_skills_task())
-	# 	context.append(self.coursework_extraction_task())
-	# 	context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
-	# 	context.append(self.career_objective_task())
-
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('resume_in_json_task')
+		# Load YAML file
+		yaml = self.yaml_loader('resume_in_json_task')
 		
-	# 	# append data to the yaml[0] in new paragraph
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
+		# append data to the yaml[0] in new paragraph
+		description = yaml[0]
+		expected_output = yaml[1]
 
-	# 	if(self.profile_already_created()):
+		if(self.profile_already_created()):
 
-	# 		print("Profile already found. Simply loading the output txt files in the context.")
-	# 		# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
-	# 		data = self.load_all_txt_files(PATHS["info_extraction_folder_path"])
-	# 		description = description + "\n" + data
-	# 		# print("---------------Profile loaded successfully. Input IS:--------------")
-	# 		# print(description)
-	# 	else :	
-	# 		# need to build profile from scratch
-	# 		# insert the profile_builder_task at the beginning of the context
-	# 		print("Profile not found. Will wait for the profile to be built.")
-	# 		context.insert(0, self.profile_builder_task()) 
+			print("Profile already found. Simply loading the output txt files in the context.")
+			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
+			data = self.load_all_txt_files(PATHS["info_extraction_folder_path"])
+			description = description + "\n" + data
+			# print("---------------Profile loaded successfully. Input IS:--------------")
+			# print(description)
+		else :	
+			# need to build profile from scratch
+			# insert the profile_builder_task at the beginning of the context
+			print("Profile not found. Will wait for the profile to be built.")
+			context.insert(0, self.profile_builder_task()) 
 
-	# 	return Task(
-	# 			description = description,
-	# 			expected_output = expected_output,
-	# 			agent = self.resume_in_json_agent(),
-	# 			context = context,
-	# 			output_file = PATHS["resume_in_json_task"],
-	# 		)
+		return Task(
+				description = description,
+				expected_output = expected_output,
+				agent = self.resume_in_json_agent(),
+				context = context,
+				output_file = PATHS["resume_in_json_task"],
+			)
 	
-	# # @task
-	# def resume_compilation_task(self):
-	# 	# load the yaml file
-	# 	yaml = self.yaml_loader('resume_compilation_task')
+	@task
+	def resume_compilation_task(self):
+		# load the yaml file
+		yaml = self.yaml_loader('resume_compilation_task')
 
-	# 	# resume_json_data = self.load_txt_files(self.resume_in_json_file_path)
-	# 	# description = yaml[0] + '\n' + resume_json_data
-	# 	# print("Description: ", description)
+		# resume_json_data = self.load_txt_files(self.resume_in_json_file_path)
+		# description = yaml[0] + '\n' + resume_json_data
+		# print("Description: ", description)
 
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
+		description = yaml[0]
+		expected_output = yaml[1]
 
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.resume_compilation_agent(),
-	# 		context=[self.resume_in_json_task()],
-	# 		output_file=PATHS["resume_compilation_task"],
-	# 	)
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.resume_compilation_agent(),
+			context=[self.resume_in_json_task()],
+			output_file=PATHS["resume_compilation_task"],
+		)
 	
 	def load_txt_file(self, file_path):
 		"""Load text file"""

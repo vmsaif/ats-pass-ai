@@ -7,7 +7,7 @@ from datetime import timedelta
 import os
 import sqlite3
 from textwrap import dedent
-from ats_pass_ai.request_limiter import printDailyLimitRemaining, convert_seconds
+from ats_pass_ai.request_limiter import printRemainingRequestsPerDay
 from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool, SearchInChromaDB
 from ats_pass_ai.tools.llm_task import LLMTask
@@ -120,7 +120,7 @@ def run():
 
         with Timer() as t:
             # Delete the user profile files but not the folder To start fresh
-            RagSearchTool.delete_user_profile_files(delete_pretasks = False)
+            # RagSearchTool.delete_user_profile_files(delete_pretasks = False)
 
             # Run the main crew program
             ResumeCrew().crew().kickoff()
@@ -136,24 +136,39 @@ def run():
     print_task_time("Indexing", indexing_time)
     print_task_time("Crew Run", crew_run_time)
     print_task_time("Total", program_run_time)
-    printDailyLimitRemaining()
-	
+    printRemainingRequestsPerDay()
 
-def check_keyword(answer):
-    for document in answer:
-                print(document.page_content)
-                for word in document.page_content.split():
-                    if(word == "microsoft"):
-                        
-                        print("\n\n\n-----------Found the keyword 'microsoft' in the document-----------\n\n\n--")
-                        exit()
-                        
-                print("\n")  # Adding a new line for better separation between contents
 
+# 
 def print_task_time(task_name, total_seconds):
         days, hours, minutes, seconds = convert_seconds(total_seconds)
         print(f"-- Time taken for {task_name}: {minutes} minutes, {seconds} seconds")
 
+def convert_seconds(total_seconds):
+    # Extract days, seconds from timedelta
+    td = timedelta(seconds=total_seconds)
+    total_seconds = int(td.total_seconds())
+    days, remainder = divmod(total_seconds, 86400)
+    hours, remainder = divmod(remainder, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    
+    # Format each component to two decimal places
+    formatted_days = f"{days:.2f}"
+    formatted_hours = f"{hours:.2f}"
+    formatted_minutes = f"{minutes:.2f}"
+    formatted_seconds = f"{seconds:.2f}"
+    
+    return formatted_days, formatted_hours, formatted_minutes, formatted_seconds
 
 
  
+# def check_keyword(answer):
+#     for document in answer:
+#                 print(document.page_content)
+#                 for word in document.page_content.split():
+#                     if(word == "microsoft"):
+                        
+#                         print("\n\n\n-----------Found the keyword 'microsoft' in the document-----------\n\n\n--")
+#                         exit()
+                        
+#                 print("\n")  # Adding a new line for better separation between contents

@@ -1,0 +1,236 @@
+{
+  "Combined Skills List": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "Java",
+        "field": "Programming Language, Technology"
+      },
+      {
+        "Name": "C++",
+        "field": "Programming Language, Technology"
+      },
+      {
+        "Name": "Kotlin",
+        "field": "Programming Language, Technology"
+      },
+      {
+        "Name": "Docker",
+        "field": "Technology"
+      },
+      {
+        "Name": "Blockchain Technology",
+        "field": "Technology"
+      },
+      {
+        "Name": "SQL",
+        "field": "Technology, Database"
+      },
+      {
+        "Name": "Git",
+        "field": "Technology"
+      },
+      {
+        "Name": "GitHub Actions",
+        "field": "Technology"
+      },
+      {
+        "Name": "OpenGL",
+        "field": "Technology"
+      },
+      {
+        "Name": "Android Studio",
+        "field": "Technology"
+      },
+      {
+        "Name": "JUnit",
+        "field": "Technology"
+      },
+      {
+        "Name": "TCP/IP",
+        "field": "Technology, Network"
+      },
+      {
+        "Name": "React",
+        "field": "Technology, JavaScript Framework"
+      },
+      {
+        "Name": "Styled-Components",
+        "field": "Technology"
+      },
+      {
+        "Name": "Markdown",
+        "field": "Technology"
+      },
+      {
+        "Name": "Jekyll",
+        "field": "Technology"
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "Spring Boot",
+        "field": "Java Framework"
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": "AI, Algorithm"
+      },
+      {
+        "Name": "CI/CD",
+        "field": "Development Practice"
+      },
+      {
+        "Name": "RAG Search",
+        "field": "AI"
+      },
+      {
+        "Name": "Multithreading",
+        "field": "Thread Management"
+      },
+      {
+        "Name": "Linux OS",
+        "field": "Operating System"
+      },
+      {
+        "Name": "Angular",
+        "field": "JavaScript Framework, Technology"
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Teaching",
+        "field": "Pedagogy"
+      },
+      {
+        "Name": "Debugging",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Software Development",
+        "field": "Software Engineering"
+      },
+      {
+        "Name": "Problem Solving",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "AI Implementation",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Concurrent Programming",
+        "field": "Programming"
+      },
+      {
+        "Name": "Blockchain Development",
+        "field": "Technology, Blockchain"
+      },
+      {
+        "Name": "Smart Contract Development",
+        "field": "Technology, Blockchain"
+      },
+      {
+        "Name": "Team Collaboration",
+        "field": "Collaboration Skills"
+      },
+      {
+        "Name": "Android Development",
+        "field": "Mobile Development"
+      },
+      {
+        "Name": "Database Management",
+        "field": "Technology, Database"
+      },
+      {
+        "Name": "UI/UX Design",
+        "field": "Design"
+      },
+      {
+        "Name": "Software Engineering",
+        "field": "Software Engineering"
+      },
+      {
+        "Name": "Object-Oriented Design",
+        "field": "Programming"
+      },
+      {
+        "Name": "Polymorphism",
+        "field": "Programming"
+      },
+      {
+        "Name": "AI Development",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Machine Learning",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Natural Language Processing",
+        "field": "AI, NLP"
+      },
+      {
+        "Name": "Computer Graphics",
+        "field": "Graphics"
+      },
+      {
+        "Name": "3D Rendering",
+        "field": "Graphics"
+      },
+      {
+        "Name": "Documentation",
+        "field": "Writing"
+      },
+      {
+        "Name": "System Analysis",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "C Programming",
+        "field": "Programming"
+      },
+      {
+        "Name": "Graphics Programming",
+        "field": "Graphics"
+      },
+      {
+        "Name": "Game Development",
+        "field": "Software Engineering"
+      },
+      {
+        "Name": "Computer Networking",
+        "field": "Technology, Network"
+      },
+      {
+        "Name": "Data Visualization",
+        "field": "Data Analysis"
+      },
+      {
+        "Name": "Data Analysis",
+        "field": "Data Analysis"
+      },
+      {
+        "Name": "Web Development",
+        "field": "Software Engineering"
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Communication",
+        "field": "Communication Skills"
+      },
+      {
+        "Name": "Leadership",
+        "field": "Management Skills"
+      },
+      {
+        "Name": "Teamwork",
+        "field": "Collaboration Skills"
+      }
+    ]
+  }
+}

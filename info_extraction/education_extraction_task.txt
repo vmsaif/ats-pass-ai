@@ -3,7 +3,7 @@
     "Degree": "BSc",
     "Major": "Computer Science",
     "University": "University of Manitoba",
-    "University Location": "Winnipeg, Manitoba",
+    "University Location": null,
     "Graduation Date": "October 2023",
     "GPA": "3.07",
     "Honors/Distinctions": null

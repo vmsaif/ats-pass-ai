@@ -1,0 +1,10 @@
+{
+  "Coursework Relevant to the Job Description": [
+    "Distributed Computing (Python | JavaScript)",
+    "Data Structures and Algorithms (Java)",
+    "Object Orientation (Java | C++)",
+    "Software Engineering (Java | Unit Testing)",
+    "Database Implementation (SQL | Python)",
+    "AI and Game Development (Java | Python)"
+  ]
+}

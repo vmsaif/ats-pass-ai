@@ -1,0 +1,166 @@
+```json
+{
+  "Project Experience": [
+    {
+      "Project Title": "AI Path Finding |  CI/CD | A* Algorithm | Java | Git",
+      "Timeline": "Sep 2023 - Dec 2023",
+      "Technologies, frameworks, and tools Used": "Java, A*Algorithm, Git, GitHub Action, CI/CD",
+      "Skills": "Software Development, Problem Solving, AI Implementation, Concurrent Programming",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key Highlights": [
+        "- Developed a Java-based game that utilizes the A* search algorithm to implement AI-controlled game elements.",
+        "- Implemented Continuous Integration and Continuous Deployment (CI/CD) practices, resulting in a significant reduction in deployment time.",
+        "- Used Git for version control and implemented CI/CD practices for efficient development and deployment."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Blockchain Car Mileage Tracker | Docker | Vue.js",
+      "Timeline": "January 2023 - Mar 2023",
+      "Technologies, frameworks, and tools Used": "Blockchain Technology, Smart Contracts, Docker, Vue.js",
+      "Skills": "Blockchain Development, Smart Contract Development, Team Collaboration",
+      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+      "Key Highlights": [
+        "- Utilized blockchain technology to ensure data integrity and transparency in mileage recording.",
+        "- Designed and implemented a smart contract to facilitate tamper-proof mileage recording, addressing a real-world problem.",
+        "- Collaborated effectively within a team to design, develop, and test the application."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Reversible Learning APP | SQL | UI | Android | Java",
+      "Timeline": "January 2021 - April 2021",
+      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java, JUnit",
+      "Skills": "Android Development, Database Management, UI/UX Design, Software Engineering",
+      "Link": "https://github.com/vmsaif/reversibleLearning",
+      "Key Highlights": [
+        "- Developed an Android application, \"Reversible Learning,\" designed to enhance study habits.",
+        "- Implemented data storage and retrieval functionalities using SQL and HSQLDB.",
+        "- Designed and developed a user-friendly interface for note organization and question archiving."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Bank Account System | Java | File I/O",
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Java,  File I/O",
+      "Skills": "Object-Oriented Design, Polymorphism",
+      "Link": "https://github.com/vmsaif/bankAccountSystem",
+      "Key Highlights": [
+        "- Created a Java application that simulates a bank account system, emphasizing object-oriented programming (OOP) principles and polymorphism."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "ATS Pass AI | Multiagent | AI | Python | RAG Search",
+      "Timeline": "January 2024 - Present",
+      "Technologies, frameworks, and tools Used": "AI, Multiagent,  Python, RAG Search",
+      "Skills": "AI Development, Machine Learning, Natural Language Processing",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key Highlights": [
+        "- Developed a multi-agent system using advanced AI models and technologies like CrewAI, LangChain, Gemini, and RAG Search."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Recursive Ray Tracing | 3D Graphics | OpenGL | C++",
+      "Timeline": "May 2023 - July 2023",
+      "Technologies, frameworks, and tools Used": "3D Graphics, OpenGL, C++",
+      "Skills": "Computer Graphics, 3D Rendering",
+      "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
+      "Key Highlights": [
+        "- Implemented a 3D graphics rendering technique using OpenGL, demonstrating proficiency in C++ and 3D graphics principles.",
+        "- Applied geometry and mathematical skills to calculate light paths and surface interactions."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Hosting a Resume on GitHub Pages | Documentation",
+      "Timeline": "Apr 2023 - Apr 2023",
+      "Technologies, frameworks, and tools Used": "Markdown, Jekyll, GitHub Pages",
+      "Skills": "Documentation",
+      "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
+      "Key Highlights": [
+        "- Created a comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and Git."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "ELF Binary Analysis | C Programming | Debugging | Linux OS",
+      "Timeline": "Nov 2022 - Dec 2022",
+      "Technologies, frameworks, and tools Used": "C Programming, Debugging , Linux OS",
+      "Skills": "C Programming, System Analysis, Debugging",
+      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+      "Key Highlights": [
+        "- Implemented an ELF header analysis tool in C, showcasing debugging, system analysis, and documentation skills."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "OpenGL Sphere Lighting | OpenGL | C++",
+      "Timeline": "April 2023 - June 2023",
+      "Technologies, frameworks, and tools Used": "OpenGL, C++",
+      "Skills": "Graphics Programming",
+      "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
+      "Key Highlights": [
+        "- Developed an interactive application to illuminate a sphere with dynamic light sources, showcasing advanced lighting techniques in OpenGL."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Connect 4 Game |  AI Decision-Making | Java",
+      "Timeline": "February 2023 - April 2023",
+      "Technologies, frameworks, and tools Used": "Java",
+      "Skills": "Software Development, AI, Game Development",
+      "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+      "Key Highlights": [
+        "- Developed a digital version of the Connect 4 game, featuring user vs. AI gameplay on a 6x7 grid."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "TCP Chat Application | TCP/IP | Multithreading | Network",
+      "Timeline": "October 2022 - December 2022",
+      "Technologies, frameworks, and tools Used": "TCP/IP, Multithreading",
+      "Skills": "Computer Networking, Software Development, Multithreading",
+      "Link": "https://github.com/vmsaif/tcpChatJava",
+      "Key Highlights": [
+        "- Developed a Java chat application for real-time client-server communication using TCP."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Data Visualization with R | Akin to Python | Data Analysis",
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "R",
+      "Skills": "Data Visualization, Data Analysis",
+      "Link": null,
+      "Key Highlights": [],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Portfolio Website | React | Styled-Components",
+      "Timeline": "2021",
+      "Technologies, frameworks, and tools Used": "React, Styled-Components, GitHub Actions",
+      "Skills": "Web Development",
+      "Link": "https://saifmahmud.dev/",
+      "Key Highlights": [
+        "- Developed a comprehensive portfolio website showcasing projects, skills, and experiences."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "CPU Scheduling | C | Multithreading | Linux | Bash | Git",

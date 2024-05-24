@@ -247,7 +247,7 @@ coursework_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
 
-    After extracting the coursework, prioritize the courses that are relevant to the job description. Ignore the courses that are not relevant.
+    After extracting the coursework, prioritize the courses from top to bottom that are relevant to the job description as the first 3-5 courses in the list, ignoring others. 
 
     Here are the Job Description Keywords:
     {job_description_keywords}
@@ -313,7 +313,7 @@ references_extraction_task:
     You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive reference details.
     How you should use the tool:
     argument:
-    "question": "who are the professional references and what are their contact details?" 
+    "question": "Who are the professional references and what are their contact details?" 
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
   expected_output: >
@@ -494,8 +494,9 @@ project_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the user's project experiences, including project titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the user's input.
 
-    Look into the chunk to find your data. Look at each project closely to understand the tools and technologies, frameworks used to create it. Also, look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the project experiences, you should include them in the output.
-
+    Look into the chunk to find your data. Look at each project closely including the highlights to understand the tools and technologies, frameworks used to create it. Also, look for any soft skills the applicant has. There might be new tools or technologies that you have not seen before in the project experiences, you should include them in the output. 
+    
+    Here is the structured data you need to extract the project experiences from:
     {user_info_organized_data}
 
   expected_output: >
@@ -796,63 +797,59 @@ split_context_of_ats_friendly_skills_task:
 
 experience_choosing_task:
   description: >
-    Your task is to analyze the user's work experiences and project experiences and select the 4 most relevant experiences for the provided job description. 
+    Your task is to analyze the user's work and project experiences and select the 4 most relevant experiences for the provided job description, without giving undue preference to work over project experiences. Both types of experiences should be weighed equally based on their relevance.
 
-    **Here's how to choose the experiences:**
+    **Selection Criteria:**
 
-    1. **Recent Experience:** Always include the user's most recent experience, even if it's a project. However, if the most recent experience is very outdated compared to today's date ({today_date}) or entirely irrelevant, you can exclude it. 
-    2. **Relevance to Job Description:** Prioritize experiences that closely align with the job description. Consider:
-        * **Keywords and Phrases:**  Favor experiences that heavily utilize keywords and phrases from the job description. 
-        * **Tools and Technologies:**  Prioritize experiences that showcase the specific tools, technologies, and frameworks mentioned in the job description. 
-        * **Skills:**  Choose experiences that demonstrate the skills required for the job.
-    3. **Filling the Remaining Slots out of 4:** After including the most recent experience, select three more experiences based on their relevance, prioritizing those that highlight the most important keywords, technologies, and skills from the job description.
+    1. **Most Recent Experience:** Always include the most recent relevant experience unless it's significantly outdated or irrelevant as of today ({today_date}).
+
+    2. **Relevance to Job Description:** Evaluate experiences based on:
+        * **Keywords and Phrases:** Use keywords from the job description to identify relevant experiences.
+        * **Tools and Technologies:** Look for experiences that involve specific tools, technologies, or frameworks mentioned in the job description.
+        * **Skills:** Select experiences that demonstrate the skills required for the job.
+
+    3. **Completing the Four Slots:** After including the most recent experience, choose three additional experiences based on their relevance. Ensure a balanced consideration of both work and project experiences. The final selection can comprise entirely of one category or a mix, depending solely on relevance.
 
     **Input:**
-      * **Job Description Keywords:** {jd_keyword} 
-      
-      * **User's Work Experiences, Project Experiences:** This information is provided to you as context from the previous task.
-
-      Remember, in total, you need to select 4 experiences either from work experiences, project experiences or a combination of both.
+      * **Job Description Keywords:** {jd_keyword}
+      * **User's Experiences:** Information is provided from an earlier context.
 
   expected_output: >
-    Any combination of 4 experiences that are most relevant to the job description. Determine the priority order as mentioned in the task description.
+    Output should present any combination of 4 total experiences, either all work, all projects, or a mix, selected based on their relevance to the job description and balanced consideration. You must prioritize based on importance and the most recent.
 
     ```json
     {
       "selected_experiences": {
-        "Work Experience (or Project Experience)": [
-            experience_1,
-            experience_2
+        "Most Recent Experience": [
+          "Work/Project": "experience_1",
+          ],
+          
+        "Work/Project Experience": [
+          "experience_2",  // if relevant
+          "experience_3"   // if relevant
+          
         ],
-        "Project Experience (or Work Experience)": [
-            experience_1,
-            experience_2,
+        "[The other type between work or project experience]": [ // if relevant
+          "experience_4"   // if relevant
         ]
       }
     }
+    ```
 
-
-    * **Explanation for Not Choosing Other Experiences (One by one):**
+    * **Explanation for Not Choosing Other Experiences:**
+    ```json
     {
       "rejected_experiences": [
         {
           "title": "...",
-          "reason": "..."
-        },
-        {
-          "title": "...",
-          "reason": "..."
+          "reason": "Not aligned with the key requirements of the job description or less relevant compared to selected experiences."
         },
         ...
       ]
     }
-
-
-
-    * **Explanation for Not Choosing Other Experiences (One by one):**
+    ```
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
-
 skills_from_exp_and_project_task:
   description: >
     Extract a list of skills, technologies, frameworks etc used from the user's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.

@@ -1,0 +1,27 @@
+```json
+{
+  "user_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "Frameworks": [],
+      "Tools": [],
+      "Soft Skills": [
+        "Communication",
+        "Teamwork",
+        "Problem Solving"
+      ]
+    },
+    "partial_match_with_job_description": {
+      "Programming Languages": {},
+      "Frameworks": {
+        "name": "A* Algorithm",
+        "pertially_matched_with_job_description": "AI, ML"
+      },
+      "Tools": {},
+      "Soft Skills": {}
+    }
+  }
+}
+```

@@ -1,0 +1,21 @@
+```json
+{
+  "Work Experience": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": "Private Tutoring",
+      "Timeline": "February 2023 - December 2023",
+      "Technologies, frameworks, and tools Used": "Python, Java, computer systems",
+      "Skills": "Teaching, debugging, understanding computer operations",
+      "Link": null,
+      "Key Highlights": [
+        "- Tutored a student in computer systems and programming, focusing on Python and Java.",
+        "- Adapted teaching methods to the student's learning style, leading to improved understanding and application of concepts.",
+        "- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    }
+  ]
+}
+```
