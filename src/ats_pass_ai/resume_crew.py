@@ -477,12 +477,12 @@ class ResumeCrew:
 		expected_output = yaml[1]
 
 		# add gathered info of chosen experiences
-		task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["gather_info_of_chosen_experiences"])
+		# task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["gather_info_of_chosen_experiences"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.ats_keyword_integration_agent(),
-			# context=[self.gather_info_of_chosen_experiences()],
+			context=[self.gather_info_of_chosen_experiences()],
 			output_file=PATHS["ats_friendly_keywords_into_experiences"],
 		)
 
@@ -494,12 +494,12 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
-		task_description = task_description + "\n" + self.load_txt_file(PATHS["ats_friendly_keywords_into_experiences"])
+		# task_description = task_description + "\n" + self.load_txt_file(PATHS["ats_friendly_keywords_into_experiences"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.generalist_agent(),
-			# context=[self.ats_friendly_keywords_into_experiences_task()],
+			context=[self.ats_friendly_keywords_into_experiences_task()],
 			output_file=PATHS["split_context_of_ats_friendly_keywords_into_experiences"],
 		)
 	
