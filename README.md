@@ -50,26 +50,17 @@ The system will then compare the user data with the job description to generate 
 git clone https://github.com/vmsaif/ats-pass-ai
 ```
 
-### 2: Create a Python virtual environment and install the required libraries:
-
-```bash
-# create a python virtual environment
-
-# for windows
-python -m venv venv
-.\venv\Scripts\activate 
-```
-    
-```bash
-# for linux
-python3 -m venv venv
-source venv/bin/activate 
-```
-
-### 3: Install poetry
+### 2: Install poetry
 
 ```bash
 pip install poetry
+```
+
+### 3: Set the virtual environment to be in the project directory (This is optional but recommended):
+This will make it easier to set IDE's Python interpreter to the virtual environment. Run the following command in the project directory:
+
+```bash
+poetry config virtualenvs.in-project true
 ```
 
 Also, install the required libraries:

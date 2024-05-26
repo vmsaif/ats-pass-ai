@@ -1,0 +1,92 @@
+```
+{
+  "User's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Project Title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Technologies": "Python, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio",
+        "Skills": [
+          "AI",
+          "Multi-agent systems",
+          "Natural language processing (NLP)",
+          "Data Analysis",
+          "Algorithm Development",
+          "Model Development",
+          "AI Virtual Agent Development"
+        ],
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Key Highlights": [
+          "Development of a sophisticated resume automation tool leveraging **AI** and **Machine Learning** technologies, directly aligning with the company's focus on **AI for Social Good**.",
+          "Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical, **analytical**, and **problem-solving skills**.",
+          "System engineered to extract user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, highlighting expertise in **Natural Language Processing** and **Data Preprocessing**.",
+          "Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight, **innovation**, and a commitment to **Ethical AI** principles."
+        ]
+      }
+    ],
+    "Work/Project Experience": {
+      "Project Experience": [
+        {
+          "Project Title": "Blockchain Car Mileage Tracker",
+          "Timeline": "January 2023 - Mar 2023",
+          "Technologies": "Blockchain, Smart Contracts",
+          "skills": [
+            "Blockchain",
+            "Smart contracts",
+            "Data integrity",
+            "Data Analysis"
+          ],
+          "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+          "Key Highlights": [
+            "**Developed** a Blockchain application for secure tracking and verification of vehicle mileage for insurance purposes, demonstrating skills in **algorithm development** and **data analysis**.",
+            "Enhancement of data integrity and transparency, showcasing strong analytical skills and attention to detail, aligning with the company's values of **Equitable Progress** and **Responsible AI**.",
+            "Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and showcasing expertise in **Data Preprocessing** and secure data management.",
+            "Effective team **collaboration** for design, development, and testing of the application, demonstrating strong **teamwork** and **problem-solving skills**."
+          ]
+        },
+        {
+          "Project Title": "AI Path Finding",
+          "Timeline": "Jul 2023 - Sep 2023",
+          "Technologies": "Java, Git, CI/CD",
+          "skills": [
+            "A* algorithm",
+            "Java",
+            "Git",
+            "CI/CD",
+            "Algorithm Development"
+          ],
+          "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+          "Key Highlights": [
+            "**Developed** a Java-based game utilizing the A* algorithm for AI-driven gameplay, demonstrating expertise in **Algorithm Development** and **AI** principles.",
+            "Utilized Git for efficient version control and **collaboration**, highlighting experience with collaborative software development practices.",
+            "Implemented CI/CD practices, resulting in a 50% reduction in deployment time and showcasing a commitment to efficient and **innovative** development processes.",
+            "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+            "Applied fundamental software development and testing processes to ensure robust application performance, aligning with the company's value of delivering high-quality solutions."
+          ]
+        }
+      ],
+      "Work Experience": [
+        {
+          "Job Title": "Programming Mentor",
+          "Company": "Private Tutoring",
+          "Location": "N/A",
+          "Timeline": "February 2023 - December 2023",
+          "Technologies": "Python, Java",
+          "skills": [
+            "Teaching",
+            "Computer systems",
+            "Programming",
+            "Communication Skills"
+          ],
+          "Link": "N/A",
+          "Key Highlights": [
+            "Provided personalized computer systems and programming tutoring, focusing on Python and Java, tailored to the student's learning style, emphasizing strong **communication** and **teaching skills**.",
+            "Delivered one-on-one lessons focusing on computer system principles and introductory programming, highlighting experience in breaking down complex concepts into understandable components.",
+            "Facilitated hands-on sessions for software installation, debugging, and understanding computer operations, emphasizing practical **problem-solving** skills relevant to a **systems engineering** role."
+          ]
+        }
+      ]
+    }
+  }
+}
+```

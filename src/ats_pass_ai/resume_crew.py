@@ -28,6 +28,7 @@ class ResumeCrew:
 
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
+
 	webSearchTool = DuckDuckGoSearchRun()
 	
 	safety_settings = {
@@ -51,8 +52,8 @@ class ResumeCrew:
 		safety_settings=safety_settings,
 	)
 
-	small_llm_limiter = RequestLimiter(llm_size='small').run
-	large_llm_limiter = RequestLimiter(llm_size='large').run
+	small_llm_limiter = RequestLimiter(llm_size='SMALL').run
+	large_llm_limiter = RequestLimiter(llm_size='LARGE').run
 
 	@crew
 	def crew(self) -> Crew:
@@ -75,21 +76,24 @@ class ResumeCrew:
 
 			my_tasks.append(self.profile_builder_task())
 
-		# Either way, these tasks will be executed.
-		# my_tasks.append(self.coursework_extraction_task())
-		# my_tasks.append(self.ats_friendly_skills_task())
-		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
-		# my_tasks.append(self.experience_choosing_task())
-
-		# my_tasks.append(self.split_context_of_experience_choosing_task())
-		# my_tasks.append(self.gather_info_of_chosen_experiences())
+		# # Either way, these tasks will be executed.
 		
+		my_tasks.append(self.ats_friendly_skills_task())
+		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+
+		my_tasks.append(self.experience_choosing_task())
+		my_tasks.append(self.split_context_of_experience_choosing_task())
+		my_tasks.append(self.gather_info_of_chosen_experiences())
 		my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
-		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
-		# my_tasks.append(self.career_objective_task())
+		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+
+		my_tasks.append(self.coursework_extraction_task())
+		my_tasks.append(self.career_objective_task())
+
 		# my_tasks.append(self.resume_in_json_task())
 		# my_tasks.append(self.resume_compilation_task())
 		
+
 		
 		# Return the crew
 		return Crew(
@@ -102,16 +106,29 @@ class ResumeCrew:
 			# process=Process.hierarchical,
 			# manager_llm=self.composerLLM,
 			verbose=2,
-			memory=True,
-			embedder={
-				"provider": "google",
-				"config":{
-					"model": 'models/embedding-001',
-					"task_type": "retrieval_document",
-					"title": "Embeddings for Embedchain"
-				}
-			},
+			# memory=True,
+			# embedder={
+			# 	"provider": "google",
+			# 	"config":{
+			# 		"model": 'models/embedding-001',
+			# 		"task_type": "retrieval_document",
+			# 		"title": "Embeddings for Embedchain"
+			# 	}
+			# },
 			output_log_file='output_log.txt',
+		)
+
+	@agent
+	def skills_compatibility_analyst_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["skills_compatibility_analyst_agent"],
+			allow_delegation=False,
+			verbose=True,
+			# cache=True,
+			llm=self.genAI,
+			# function_calling_llm = self.genAI,
+			# step_callback=self.large_llm_limiter
+			step_callback=self.small_llm_limiter
 		)
 
 	@agent
@@ -145,6 +162,7 @@ class ResumeCrew:
 			verbose=True,
 			# cache=True,
 			llm=self.genAILarge,
+			function_calling_llm=self.genAI,
 			step_callback=self.large_llm_limiter,
 			tools=[self.queryTool],
 		)
@@ -156,8 +174,8 @@ class ResumeCrew:
 			step_callback=self.large_llm_limiter,
 			allow_delegation=False,
 			verbose=True,
+			function_calling_llm=self.genAI,
 			# cache=True,
-			# tools=[self.webSearchTool],
 			llm=self.genAILarge,
 		)
 	
@@ -168,6 +186,7 @@ class ResumeCrew:
 			verbose=True,
 			# max_rpm=1,
 			step_callback=self.large_llm_limiter,
+			function_calling_llm=self.genAI,
 			allow_delegation=False,
 			# cache=True,
 			llm=self.genAILarge
@@ -180,6 +199,7 @@ class ResumeCrew:
 			allow_delegation=False,
 			# max_rpm=1,
 			step_callback=self.large_llm_limiter,
+			function_calling_llm=self.genAI,
 			llm=self.genAILarge,
 			verbose=True,
 		)
@@ -194,6 +214,7 @@ class ResumeCrew:
 			verbose=True,
 			# cache=True,
 			llm=self.genAILarge,
+			function_calling_llm=self.genAI,
 		)
 
 	# ---------------------- Define the tasks ----------------------
@@ -319,18 +340,26 @@ class ResumeCrew:
 			config=self.tasks_config["skills_from_exp_and_project_task"],
 			agent=self.technical_details_agent(),
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-			tools=[self.webSearchTool],
+			
 			output_file=PATHS["skills_from_exp_and_project"],
 		)
 
 	@task
 	def skills_extraction_task(self):
+
+		yaml = self.yaml_loader('skills_extraction_task')
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		# description = description + "\n" + self.load_txt_file(PATHS["skills_from_exp_and_project"])
+
 		return Task(
-			config=self.tasks_config["skills_extraction_task"],
+			description=description,
+			expected_output=expected_output,
    			agent=self.technical_details_agent(),
 			context=[self.skills_from_exp_and_project_task()],
 			output_file=PATHS["skills_extraction_task"],
-			tools=[self.queryTool],
+			tools=[self.queryTool, self.webSearchTool],
 		)
 
 	# # ----------------- Skills Match Identification -----------------
@@ -342,28 +371,30 @@ class ResumeCrew:
 		
 		src_1 = self.load_txt_file(PATHS["jd_keyword_extraction"])
 		task_description = yaml[0].format(src_1 = src_1)
-
-		# skills = self.load_txt_file(PATHS["skills_extraction_task"])
-		# task_description = task_description + "\n" + skills
-
-		# add skills from the skills_extraction_task
-
 		expected_output = yaml[1]
-
+		
+		# task_description = task_description + "\n" + self.load_txt_file(PATHS["skills_extraction_task"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
 			context=[self.skills_extraction_task()],
 			tools=[self.webSearchTool],
-			output_file=PATHS["ats_friendly_skills_pre_task"],
+			output_file=PATHS["ats_friendly_skills_task"],
 		)
 	
 	@task
 	def split_context_of_ats_friendly_skills_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('split_context_of_ats_friendly_skills_task')
+		task_description = yaml[0]
+		expected_output = yaml[1]
+
+		# task_description = task_description + "\n" + self.load_txt_file(PATHS["reduce_missing_skills_task"])
 
 		return Task(
-			config=self.tasks_config["split_context_of_ats_friendly_skills_task"],
+			description=task_description,
+			expected_output=expected_output,
 			agent=self.generalist_agent(),
 			context=[self.ats_friendly_skills_task()],
 			output_file=PATHS["split_context_of_ats_friendly_skills_task"],
@@ -383,10 +414,7 @@ class ResumeCrew:
 		task_description = yaml[0].format(jd_keyword = jd_keyword, today_date = today_date)
 
 		# # add the project and work experience data
-		# work_experience_extraction_data = self.load_txt_file(PATHS["work_experience_extraction_task"])
-		# project_experience_extraction_data = self.load_txt_file(PATHS["project_experience_extraction_task"])
-
-		# task_description = task_description + "\n" + work_experience_extraction_data + "\n" + project_experience_extraction_data
+		# task_description = task_description + "\n" + self.load_txt_file(PATHS["work_experience_extraction_task"]) + "\n" + self.load_txt_file(PATHS["project_experience_extraction_task"])
 
 		expected_output = yaml[1]
 
@@ -406,17 +434,21 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
-		task_description = task_description + "\n" + self.load_txt_file(PATHS["experience_choosing_task"])
+		# task_description = task_description + "\n" + self.load_txt_file(PATHS["experience_choosing_task"])
 		
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.generalist_agent(),
-			# context=[self.experience_choosing_task()],
+			context=[self.experience_choosing_task()],
 			output_file=PATHS["split_context_of_experience_choosing_task"],
 		)
 
-	@task
+	# ----------------- End of Choose Work/Project Experience -----------------
+
+	# ----------------- Include ATS Keywords into Experiences -----------------
+
+	# @task
 	def gather_info_of_chosen_experiences(self):
 		# Load YAML file
 		yaml = self.yaml_loader('gather_info_of_chosen_experiences')
@@ -424,9 +456,9 @@ class ResumeCrew:
 		# Load the user info organized data
 		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
 		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
-
-		task_description = task_description + "\n" + self.load_txt_file(PATHS["split_context_of_experience_choosing_task"])
 		expected_output = yaml[1]
+
+		task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["split_context_of_experience_choosing_task"])
 
 		return Task(
 			description=task_description,
@@ -435,20 +467,17 @@ class ResumeCrew:
 			# context=[self.split_context_of_experience_choosing_task()],
 			output_file=PATHS["gather_info_of_chosen_experiences"],
 		)
-	# ----------------- End of Choose Work/Project Experience -----------------
 
-	# ----------------- Include ATS Keywords into Experiences -----------------
 	@task
 	def ats_friendly_keywords_into_experiences_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
 		jd_keywords = self.load_txt_file(PATHS["jd_keyword_extraction"])
 		task_description = yaml[0].format(jd_keywords = jd_keywords)
-		# add gathered info of chosen experiences
-		task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["gather_info_of_chosen_experiences"])
-
 		expected_output = yaml[1]
 
+		# add gathered info of chosen experiences
+		task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["gather_info_of_chosen_experiences"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -461,10 +490,16 @@ class ResumeCrew:
 	def split_context_of_ats_friendly_keywords_into_experiences(self):
 		# TODO: Instead making agent doing this split, use a tool to split the context.
 
+		yaml = self.yaml_loader('split_context_of_ats_friendly_keywords_into_experiences')
+		task_description = yaml[0]
+		expected_output = yaml[1]
+
+		task_description = task_description + "\n" + self.load_txt_file(PATHS["ats_friendly_keywords_into_experiences"])
 		return Task(
-			config=self.tasks_config["split_context_of_ats_friendly_keywords_into_experiences"],
+			description=task_description,
+			expected_output=expected_output,
 			agent=self.generalist_agent(),
-			context=[self.ats_friendly_keywords_into_experiences_task()],
+			# context=[self.ats_friendly_keywords_into_experiences_task()],
 			output_file=PATHS["split_context_of_ats_friendly_keywords_into_experiences"],
 		)
 	
@@ -502,6 +537,7 @@ class ResumeCrew:
 		
 		# append data to the yaml[0] in new paragraph
 		description = yaml[0]
+		description = description.format(today_date = datetime.date.today().strftime("%B %d, %Y"))
 		expected_output = yaml[1]
 
 		if(self.profile_already_created()):
@@ -510,7 +546,7 @@ class ResumeCrew:
 			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
 			data = self.load_all_txt_files(PATHS["info_extraction_folder_path"])
 			description = description + "\n" + data
-			# print("---------------Profile loaded successfully. Input IS:--------------")
+			print("---------------Profile loaded successfully. Input Provided:--------------")
 			# print(description)
 		else :	
 			# need to build profile from scratch
@@ -519,12 +555,12 @@ class ResumeCrew:
 			context.insert(0, self.profile_builder_task()) 
 
 		return Task(
-				description = description,
-				expected_output = expected_output,
-				agent = self.resume_in_json_agent(),
-				context = context,
-				output_file = PATHS["resume_in_json_task"],
-			)
+			description = description,
+			expected_output = expected_output,
+			agent = self.resume_in_json_agent(),
+			context = context,
+			output_file = PATHS["resume_in_json_task"],
+		)
 	
 	@task
 	def resume_compilation_task(self):
@@ -552,10 +588,8 @@ class ResumeCrew:
 			return file.read()
 
 	def load_all_txt_files(self, folder_path) -> str:
-
 		# Initialize the text
 		all_text = ""
-
 		for filename in os.listdir(folder_path):
 			if filename.endswith('.txt'):
 				# Construct full file path
@@ -563,7 +597,6 @@ class ResumeCrew:
 				# Open the file and read its contents
 				with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
 					all_text += file.read() + "\n"  # Append text with a newline to separate files
-
 		return all_text
 
 	def yaml_loader(self, task_name):
@@ -573,7 +606,6 @@ class ResumeCrew:
 			yaml_data = yaml.safe_load(file)
 			output.append(yaml_data[task_name]['description'])
 			output.append(yaml_data[task_name]['expected_output'])
-
 		return output
 	
 	def profile_already_created(self) -> bool:

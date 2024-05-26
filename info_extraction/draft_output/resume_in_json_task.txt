@@ -1,28 +1,112 @@
 ```json
 {
   "Contact Info": {
-    "Full Name": "",
-    "Phone": "",
-    "Email": "",
-    "LinkedIn Profile URL": "",
-    "Personal Website URL": "",
-    "Address": ""
+    "Full Name": "Saif Mahmud",
+    "Phone": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn Profile URL": "linkedin.com/in/vmsaif",
+    "Personal Website URL": "saifmahmud.dev",
+    "Address": "Winnipeg, MB"
   },
-  "Summary": "",
+  "Summary": "A skilled AI enthusiast with experience in Python, LangChain, and Gemini seeking to leverage my passion for ethical AI development at Radical AI for Social Good Lab. My goal is to contribute to impactful projects that utilize AI for social good and contribute to a more equitable future by developing innovative and effective AI solutions.",
   "Skills": {
-    "Technical": [],
-    "Soft": []
+    "Technical": [
+      "Python",
+      "LangChain",
+      "Gemini",
+      "Multiagent",
+      "RAG Search",
+      "AI Models",
+      "ATS",
+      "A* Algorithm",
+      "Java",
+      "Git",
+      "CI/CD",
+      "C Programming",
+      "Debugging",
+      "Linux",
+      "Cloud Technologies"
+    ],
+    "Soft": [
+      "Communication",
+      "Teamwork",
+      "Problem-Solving",
+      "Analytical Skills",
+      "Teaching",
+      "Leadership",
+      "Project Management"
+    ]
   },
-  "Projects": [],
-  "Work": [],
+  "Projects": [
+    {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present (5 months)",
+      "Technologies": "Multiagent, AI, Python, RAG Search",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key achievements": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes, enhancing job search efficiency and demonstrating problem-solving skills.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical and analytical skills.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ]
+    },
+    {
+      "Project Title": "AI Path Finding",
+      "Timeline": "Jul 2023 - Sep 2023 (3 months)",
+      "Technologies": "A* Algorithm, Java, Git, CI/CD",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key achievements": [
+        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, enhancing problem-solving and analytical skills.",
+        "Utilized Git for version control, ensuring efficient teamwork and collaboration in code management.",
+        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing efficiency and technical proficiency.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
+      ]
+    },
+    {
+      "Project Title": "ELF Binary Analysis",
+      "Timeline": "Nov 2022 - Dec 2022 (2 months)",
+      "Technologies": "C Programming, Debugging, Linux OS",
+      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+      "Key achievements": [
+        "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and communication skills relevant to application engineering.",
+        "Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.",
+        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
+        "Actively contributed to technical documentation for product and knowledge base improvement, demonstrating communication skills."
+      ]
+    },
+    {
+      "Project Title": "TCP Chat Application",
+      "Timeline": "",
+      "Technologies": "",
+      "Link": "",
+      "Key achievements": []
+    }
+  ],
+  "Work": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company": "Private Tutoring",
+      "Location": "",
+      "Timeline": "February 2023 - December 2023 (10 months)",
+      "Technologies": "Python, Java",
+      "Link": null,
+      "Key achievements": [
+        "Tutored a student in computer systems and programming, focusing on Python and Java, employing effective communication and teaching methods.",
+        "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role."
+      ]
+    }
+  ],
   "Education": {
-    "Degree": "",
-    "Major": "",
-    "University": "",
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
     "Location": "",
-    "Graduation Date": "",
-    "GPA": ""
+    "Graduation Date": "October 2023",
+    "GPA": "3.07"
   },
-  "Additional": {}
+  "Additional": {
+    "References": []
+  }
 }
 ```

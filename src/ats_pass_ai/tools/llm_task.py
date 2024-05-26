@@ -68,7 +68,7 @@ class LLMTask:
 
 
 	def __init__(self, task_name: str, user_info_file_path: str, user_info_orgainzed_file_path: str, system_instruction: str, override: bool):
-		self.large_llm_limiter = RequestLimiter(llm_size='large')
+		self.large_llm_limiter = RequestLimiter(llm_size='LARGE')
 		self.task_name = task_name
 		self.user_info_file_path = user_info_file_path
 		self.user_info_orgainzed_file_path = user_info_orgainzed_file_path

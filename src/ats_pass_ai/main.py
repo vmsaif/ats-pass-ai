@@ -33,10 +33,10 @@ def run():
                     1. Comprehension: Read the content to understand the themes and details. Each section should have a description of more than 2 lines on what it contains as it will help doing symanctic search on this document later.
                                              
                     2. Identification:
-                        - Begin with identifying and documenting key personal identification details such as the user's name, contact information, location, phone number, and email address etc.
+                        - Begin with identifying and documenting key personal identification details such as the applicant's name, contact information, location, phone number, and email address etc.
                         - Use the heading '### Personal Details' for this section.
                     3. Structure Development: 
-                        - Write a description of each Category of more than 2 lines of what it contains.
+                        - Write a description of each Category of more than 2 lines of what it contains. For example, if you have a section called "References", write, "This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant."
                         - Main Categories: Identify and label key themes with '#'.
                         - Subcategories: Create necessary subcategories under each main category with '##'.
                     4. Content Handling:
@@ -79,15 +79,28 @@ def run():
                         * **Alignment with Your Background:** Focus on extracting keywords that align with your skills and experience, ensuring you can genuinely demonstrate those qualities.
 
                     5. Keyword List Creation: Create a structured list or table with the extracted keywords organized by category for easy reference.
-
-                    6. ATS Optimization Tips: 
+                                                  
+                    6. Make a list of "partial match" skills. For example, if the job description mentions "Microsoft Office Suite," you can include "Microsoft Word," "Excel," "PowerPoint," etc. as partial matching skills. Later on this will be used to find comparable items from the applicant's skills. You should represent this as a json object with the following format:
+                    {
+                        "list of skills": {
+                        "Essential Skills": [
+                            {
+                                Name: "Skill 1", 
+                                Partial_Match: ["Partial Match 1", "Partial Match 2"]
+                            },
+                            {
+                                Name: "Skill 2", 
+                                Partial_Match: ["Partial Match 1", "Partial Match 2"]
+                            }
+                        ]
+                    } 
+                                                  
+                    7. ATS Optimization Tips: 
 
                         * **Strategic Keyword Placement:**  Integrate keywords naturally throughout your resume, particularly in the skills section, experience descriptions, and summary/objective statement.
                         * **Keyword Density:** Use keywords thoughtfully and avoid excessive repetition or "keyword stuffing," which can be penalized by ATS algorithms.
                         * **Tailoring and Customization:** Adapt the extracted keywords and your resume content to each specific job application, highlighting the most relevant qualifications for each role.
 
-                                                
-                    
                     Outcome: A comprehensive list of relevant keywords and actionable tips to optimize your resume for both ATS algorithms and human reviewers, increasing your chances of landing an interview.
                     """)
 
@@ -123,7 +136,9 @@ def run():
             # RagSearchTool.delete_user_profile_files(delete_pretasks = False)
 
             # Run the main crew program
-            ResumeCrew().crew().kickoff()
+            crew = ResumeCrew().crew()
+            crew.kickoff()
+            print(crew.usage_metrics)
         crew_run_time = t.interval
 
     program_run_time = total_time.interval

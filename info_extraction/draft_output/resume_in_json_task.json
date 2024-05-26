@@ -1,0 +1,146 @@
+{
+  "Contact Info": {
+    "Full Name": "Saif Mahmud",
+    "Phone": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn Profile URL": "https://linkedin.com/in/vmsaif",
+    "Personal Website URL": "https://saifmahmud.dev/",
+    "Address": "Winnipeg, MB"
+  },
+  "Summary": "Highly motivated and recent Computer Science graduate seeking an Artificial Intelligence Engineer position at Radical AI for Social Good Lab. Eager to leverage my skills in Python, AI model development, and NLP, particularly with experience using LangChain and Gemini, to contribute to the development of ethical and impactful AI solutions that promote social justice and positive change.",
+  "Skills": {
+    "Technical": [
+      "Python",
+      "JavaScript",
+      "Java",
+      "C++",
+      "SQL",
+      "Unit Testing",
+      "CrewAI",
+      "LangChain",
+      "Gemini",
+      "RAG Search",
+      "CI/CD",
+      "GitHub Actions",
+      "Git"
+    ],
+    "Soft": [
+      "Communication",
+      "Teamwork",
+      "Problem Solving",
+      "Teaching",
+      "Debugging",
+      "Understanding Computer Operations"
+    ]
+  },
+  "Projects": [
+    {
+      "Project Title": "ATS Pass AI | Multiagent | AI | Python | RAG Search",
+      "Timeline": "January 2024 - Present (0 years 10 months)",
+      "Technologies": [
+        "AI",
+        "Python",
+        "RAG Search",
+        "Multiagent",
+        "CrewAI",
+        "LangChain",
+        "Gemini"
+      ],
+      "Link": "",
+      "Key achievements": [
+        "Collaborated with other developers and applied principles of ethical AI",
+        "Developed a multi-agent system using advanced AI models and technologies like CrewAI, LangChain, Gemini, and RAG Search to enhance information retrieval and processing"
+      ]
+    },
+    {
+      "Project Title": "AI Path Finding | CI/CD | A* Algorithm | Java | Git",
+      "Timeline": "September 2023 - December 2023 (4 months)",
+      "Technologies": [
+        "Java",
+        "A* Algorithm",
+        "CI/CD",
+        "GitHub Actions",
+        "Git"
+      ],
+      "Link": "",
+      "Key achievements": [
+        "Developed a Java-based game that utilizes the A* search algorithm to implement AI-controlled game elements, demonstrating proficiency in AI and problem-solving",
+        "Implemented Continuous Integration and Continuous Deployment (CI/CD) practices using GitHub Actions, resulting in a significant reduction in deployment time and showcasing a commitment to efficient software development practices",
+        "Used Git for version control, further enhancing development workflow and demonstrating experience with collaborative coding practices"
+      ]
+    },
+    {
+      "Project Title": "Connect 4 Game | AI Decision-Making | Java",
+      "Timeline": "February 2023 - April 2023 (3 months)",
+      "Technologies": [
+        "Java",
+        "AI"
+      ],
+      "Link": "",
+      "Key achievements": [
+        "Developed a digital version of the Connect 4 game, featuring user vs. AI gameplay on a 6x7 grid. This project involved implementing AI decision-making algorithms, showcasing proficiency in AI principles and problem-solving techniques"
+      ]
+    }
+  ],
+  "Work": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company": "Private Tutoring",
+      "Location": "",
+      "Timeline": "February 2023 - December 2023 (11 months)",
+      "Technologies": [
+        "Python",
+        "Java"
+      ],
+      "Link": "",
+      "Key achievements": [
+        "Tutored a student in computer systems and programming, focusing on Python and Java, demonstrating strong communication skills and the ability to explain complex concepts clearly",
+        "Adapted teaching methods to the student's learning style, leading to improved understanding and application of concepts",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, further emphasizing technical proficiency and problem-solving abilities"
+      ]
+    }
+  ],
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "Location": "",
+    "Graduation Date": "October 2023",
+    "GPA": "3.07"
+  },
+  "Additional": {
+    "References": [
+      {
+        "Name": "Abu Kabir",
+        "Position": "Director IT Service Management",
+        "Company": "Microsoft",
+        "Contact Information": "204-298-3693",
+        "Relationship": null
+      },
+      {
+        "Name": "Safiur Mahdi",
+        "Position": "Java Developer",
+        "Company": "Skip the Dishes",
+        "Contact Information": "204-583-3432",
+        "Relationship": null
+      }
+    ],
+    "Volunteer Work": [
+      {
+        "Organization Name": ".dev Programming Club",
+        "Role": "Active Member",
+        "Responsibilities": "Engaged with the latest software development technologies and tools.",
+        "Timeline": "2019-2023"
+      }
+    ],
+    "Awards and Recognitions": [],
+    "Coursework Relevant to the Job Description": [
+      "Distributed Computing (Python | JavaScript)",
+      "Data Structures and Algorithms (Java)",
+      "Object Orientation (Java | C++)",
+      "Software Engineering (Java | Unit Testing)",
+      "Database Implementation (SQL | Python)",
+      "AI and Game Development (Java | Python)"
+    ]
+  }
+}

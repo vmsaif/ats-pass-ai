@@ -5,22 +5,30 @@
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [],
+      "Frameworks": [
+        "Langchain"
+      ],
       "Tools": [],
       "Soft Skills": [
-        "Communication",
-        "Teamwork",
-        "Problem Solving"
+        "Communication Skills",
+        "Teamwork"
       ]
     },
     "partial_match_with_job_description": {
-      "Programming Languages": {},
-      "Frameworks": {
-        "name": "A* Algorithm",
-        "pertially_matched_with_job_description": "AI, ML"
-      },
-      "Tools": {},
-      "Soft Skills": {}
+      "Programming Languages": [
+        {
+          "name": "Java",
+          "pertially_matched_with_job_description": "Algorithm Development"
+        }
+      ],
+      "Frameworks": [],
+      "Tools": [],
+      "Soft Skills": [
+        {
+          "name": "Leadership",
+          "pertially_matched_with_job_description": "Collaboration"
+        }
+      ]
     }
   }
 }

@@ -2,71 +2,73 @@
   "selected_experiences": {
     "Most Recent Experience": [
       {
-        "Work/Project": "Project",
-        "Experience": {
-          "Project Title": "ATS Pass AI | Multiagent | AI | Python | RAG Search",
-          "Timeline": "January 2024 - Present",
-          "Technologies, frameworks, and tools Used": "AI, Multiagent,  Python, RAG Search",
-          "Skills": "AI Development, Machine Learning, Natural Language Processing",
-          "Link": "https://github.com/vmsaif/ats-pass-ai",
-          "Key Highlights": [
-            "- Developed a multi-agent system using advanced AI models and technologies like CrewAI, LangChain, Gemini, and RAG Search."
-          ],
-          "Team size": null,
-          "Outcomes": null
-        }
+        "Project Title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Skills": [
+          "AI",
+          "Multi-agent systems",
+          "Natural language processing (NLP)"
+        ],
+        "Key Highlights": [
+          "Development of a sophisticated resume automation tool using cutting-edge AI technologies.",
+          "Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+          "System engineered to extract user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+          "Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+        ],
+        "Link": "https://github.com/vmsaif/ats-pass-ai"
       }
-
     ],
-    "Project Experience": [
+    "Work/Project Experience": [
       {
-        "Experience": {
-          "Project Title": "AI Path Finding |  CI/CD | A* Algorithm | Java | Git",
-          "Timeline": "Sep 2023 - Dec 2023",
-          "Technologies, frameworks, and tools Used": "Java, A*Algorithm, Git, GitHub Action, CI/CD",
-          "Skills": "Software Development, Problem Solving, AI Implementation, Concurrent Programming",
-          "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-          "Key Highlights": [
-            "- Developed a Java-based game that utilizes the A* search algorithm to implement AI-controlled game elements.",
-            "- Implemented Continuous Integration and Continuous Deployment (CI/CD) practices, resulting in a significant reduction in deployment time.",
-            "- Used Git for version control and implemented CI/CD practices for efficient development and deployment."
-          ],
-          "Team size": null,
-          "Outcomes": null
-        }
+        "Project Title": "Blockchain Car Mileage Tracker",
+        "Timeline": "January 2023 - Mar 2023",
+        "Skills": [
+          "Blockchain",
+          "Smart contracts",
+          "Data integrity"
+        ],
+        "Key Highlights": [
+          "Blockchain application development for secure tracking and verification of vehicle mileage for insurance purposes.",
+          "Enhancement of data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+          "Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history.",
+          "Effective team collaboration for design, development, and testing of the application, demonstrating strong team collaboration and problem-solving skills."
+        ],
+        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker"
       },
       {
-        "Experience": {
-          "Project Title": "Connect 4 Game |  AI Decision-Making | Java",
-          "Timeline": "February 2023 - April 2023",
-          "Technologies, frameworks, and tools Used": "Java",
-          "Skills": "Software Development, AI, Game Development",
-          "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
-          "Key Highlights": [
-            "- Developed a digital version of the Connect 4 game, featuring user vs. AI gameplay on a 6x7 grid."
-          ],
-          "Team size": null,
-          "Outcomes": null
-        }
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Skills": [
+          "A* algorithm",
+          "Java",
+          "Git",
+          "CI/CD"
+        ],
+        "Key Highlights": [
+          "Java-based game development project utilizing the A* algorithm to create an AI-driven game.",
+          "Version control with Git for efficient team collaboration and code management.",
+          "Implementation of CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Problem-solving and analytical skills enhanced through the implementation of the A* pathfinding algorithm.",
+          "Application of fundamental software development and testing processes to ensure robust application performance."
+        ],
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
       }
     ],
     "Work Experience": [
       {
-        "Experience": {
-          "Job Title": "Programming Mentor",
-          "Company Name": "Private Tutoring",
-          "Timeline": "February 2023 - December 2023",
-          "Technologies, frameworks, and tools Used": "Python, Java, computer systems",
-          "Skills": "Teaching, debugging, understanding computer operations",
-          "Link": null,
-          "Key Highlights": [
-            "- Tutored a student in computer systems and programming, focusing on Python and Java.",
-            "- Adapted teaching methods to the student's learning style, leading to improved understanding and application of concepts.",
-            "- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations."
-          ],
-          "Team size": null,
-          "Outcomes": null
-        }
+        "Job Title": "Programming Mentor",
+        "Company Name": "Private Tutoring",
+        "Timeline": "February 2023 - December 2023",
+        "Skills": [
+          "Teaching",
+          "Computer systems",
+          "Programming"
+        ],
+        "Key Highlights": [
+          "Personalized computer systems and programming tutoring, focusing on Python and Java, tailored to the student's learning style.",
+          "Delivery of one-on-one lessons focusing on computer system principles and learning introductory programming.",
+          "Hands-on sessions facilitated for software installation, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role."
+        ]
       }
     ]
   }

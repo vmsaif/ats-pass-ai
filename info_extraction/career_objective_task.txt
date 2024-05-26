@@ -1,0 +1,3 @@
+{
+    "Career Objective": "Highly motivated software developer with a passion for leveraging technology for social good seeks the Artificial Intelligence Engineer position at Radical AI for Social Good Lab. Bringing strong Java-based algorithm development experience and a collaborative spirit, I aim to contribute to the democratization of AI and drive positive change through innovative solutions."
+  }

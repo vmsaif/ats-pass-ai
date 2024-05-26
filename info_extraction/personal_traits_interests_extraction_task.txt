@@ -1,8 +1,3 @@
 {
-  "Personal Traits and Interests": {
-    "Strengths": "Detail-oriented, Highly analytical, Excellent problem-solving skills, Strong communication skills, Ability to work independently and as part of a team",
-    "Weaknesses": null,
-    "Hobbies": null,
-    "Passions": null
-  }
+  "Personal Traits and Interests": {}
 }

@@ -1,323 +1,355 @@
 {
-  "combined_skills_list_of_user": {
+  "combined skills list of user": {
     "Technologies": [
       {
         "Name": "Python",
-        "field": "Programming Language"
+        "field": [
+          "Programming Language",
+          "AI, ML"
+        ]
       },
       {
         "Name": "Java",
-        "field": "Programming Language, Technology"
+        "field": [
+          "Programming Language"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "JavaScript Framework",
+          "Front-End Development"
+        ]
       },
       {
         "Name": "C++",
-        "field": "Programming Language, Technology"
-      },
-      {
-        "Name": "Kotlin",
-        "field": "Programming Language, Technology"
-      },
-      {
-        "Name": "Docker",
-        "field": "Technology"
-      },
-      {
-        "Name": "Blockchain Technology",
-        "field": "Technology"
-      },
-      {
-        "Name": "SQL",
-        "field": "Technology, Database"
-      },
-      {
-        "Name": "Git",
-        "field": "Technology"
-      },
-      {
-        "Name": "GitHub Actions",
-        "field": "Technology"
+        "field": [
+          "Programming Language"
+        ]
       },
       {
         "Name": "OpenGL",
-        "field": "Technology"
+        "field": [
+          "Graphics Programming",
+          "3D Rendering"
+        ]
       },
       {
-        "Name": "Android Studio",
-        "field": "Technology"
+        "Name": "Docker",
+        "field": [
+          "Containerization"
+        ]
       },
       {
-        "Name": "JUnit",
-        "field": "Technology"
+        "Name": "Langchain",
+        "field": [
+          "AI, LLM, Generative AI"
+        ]
       },
       {
-        "Name": "TCP/IP",
-        "field": "Technology, Network"
+        "Name": "Angular",
+        "field": [
+          "JavaScript Framework"
+        ]
       },
       {
-        "Name": "React",
-        "field": "Technology, JavaScript Framework"
+        "Name": "Spring Boot",
+        "field": [
+          "Java Framework",
+          "Back-end Development"
+        ]
       },
       {
-        "Name": "Styled-Components",
-        "field": "Technology"
+        "Name": "A* Algorithm",
+        "field": [
+          "Pathfinding Algorithm",
+          "AI"
+        ]
       },
       {
         "Name": "Markdown",
-        "field": "Technology"
+        "field": [
+          "Document Markup Language"
+        ]
       },
       {
         "Name": "Jekyll",
-        "field": "Technology"
+        "field": [
+          "Static Site Generator"
+        ]
       },
       {
-        "Name": "JavaScript",
-        "field": "Programming Language"
+        "Name": "C Programming",
+        "field": [
+          "Programming Language"
+        ]
       },
       {
-        "Name": "MySQL",
-        "field": "Technology, Database"
+        "Name": "HSQLDB",
+        "field": [
+          "Database"
+        ]
       },
       {
-        "Name": "JSON",
-        "field": "Technology, Database"
+        "Name": "JUnit",
+        "field": [
+          "Unit Testing"
+        ]
       },
       {
-        "Name": "noSQL",
-        "field": "Technology, Database"
+        "Name": "AI Decision-Making",
+        "field": [
+          "AI, Machine Learning"
+        ]
       },
       {
-        "Name": "Schema",
-        "field": "Technology, Database"
+        "Name": "Git",
+        "field": [
+          "Version Control"
+        ]
       },
       {
-        "Name": "AWS",
-        "field": "Cloud"
+        "Name": "Android Studio",
+        "field": [
+          "Mobile Development",
+          "Android"
+        ]
       },
       {
-        "Name": "CI/CD",
-        "field": "Cloud & DevOps"
+        "Name": "RAG Search",
+        "field": [
+          "Search",
+          "Information Retrieval"
+        ]
+      },
+      {
+        "Name": "File I/O",
+        "field": [
+          "File Handling"
+        ]
       }
     ],
     "Frameworks": [
       {
         "Name": "Spring Boot",
-        "field": "Java Framework"
-      },
-      {
-        "Name": "A* Algorithm",
-        "field": "AI, Algorithm"
-      },
-      {
-        "Name": "CI/CD",
-        "field": "Development Practice"
-      },
-      {
-        "Name": "RAG Search",
-        "field": "AI"
-      },
-      {
-        "Name": "Multithreading",
-        "field": "Thread Management"
-      },
-      {
-        "Name": "Linux OS",
-        "field": "Operating System"
+        "field": [
+          "Java Framework"
+        ]
       },
       {
         "Name": "Angular",
-        "field": "JavaScript Framework, Technology"
+        "field": [
+          "JavaScript Framework"
+        ]
+      },
+      {
+        "Name": "Jekyll",
+        "field": [
+          "Static Site Generator"
+        ]
       }
     ],
     "Skills": [
       {
-        "Name": "Teaching",
-        "field": "Pedagogy"
-      },
-      {
-        "Name": "Debugging",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "Software Development",
-        "field": "Software Engineering"
-      },
-      {
-        "Name": "Problem Solving",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "AI Implementation",
-        "field": "AI, ML"
-      },
-      {
-        "Name": "Concurrent Programming",
-        "field": "Programming"
-      },
-      {
-        "Name": "Blockchain Development",
-        "field": "Technology, Blockchain"
-      },
-      {
-        "Name": "Smart Contract Development",
-        "field": "Technology, Blockchain"
-      },
-      {
-        "Name": "Team Collaboration",
-        "field": "Collaboration Skills"
-      },
-      {
-        "Name": "Android Development",
-        "field": "Mobile Development"
-      },
-      {
-        "Name": "Database Management",
-        "field": "Technology, Database"
-      },
-      {
-        "Name": "UI/UX Design",
-        "field": "Design"
-      },
-      {
-        "Name": "Software Engineering",
-        "field": "Software Engineering"
-      },
-      {
-        "Name": "Object-Oriented Design",
-        "field": "Programming"
-      },
-      {
-        "Name": "Polymorphism",
-        "field": "Programming"
-      },
-      {
-        "Name": "AI Development",
-        "field": "AI, ML"
+        "Name": "Data Analysis",
+        "field": [
+          "Analytical Skills",
+          "Data Analytics"
+        ]
       },
       {
         "Name": "Machine Learning",
-        "field": "AI, ML"
+        "field": [
+          "AI, ML",
+          "Data Science"
+        ]
       },
       {
-        "Name": "Natural Language Processing",
-        "field": "AI, NLP"
-      },
-      {
-        "Name": "Computer Graphics",
-        "field": "Graphics"
-      },
-      {
-        "Name": "3D Rendering",
-        "field": "Graphics"
-      },
-      {
-        "Name": "Documentation",
-        "field": "Writing"
-      },
-      {
-        "Name": "System Analysis",
-        "field": "Analytical Skills"
-      },
-      {
-        "Name": "C Programming",
-        "field": "Programming"
-      },
-      {
-        "Name": "Graphics Programming",
-        "field": "Graphics"
-      },
-      {
-        "Name": "Game Development",
-        "field": "Software Engineering"
-      },
-      {
-        "Name": "Computer Networking",
-        "field": "Technology, Network"
-      },
-      {
-        "Name": "Data Visualization",
-        "field": "Data Analysis"
-      },
-      {
-        "Name": "Data Analysis",
-        "field": "Data Analysis"
-      },
-      {
-        "Name": "Web Development",
-        "field": "Software Engineering"
-      },
-      {
-        "Name": "Good Interpersonal Skills",
-        "field": "Communication Skills"
+        "Name": "Project Management",
+        "field": [
+          "Management Skills",
+          "Project Planning"
+        ]
       },
       {
         "Name": "Communication",
-        "field": "Communication Skills"
+        "field": [
+          "Interpersonal Skills"
+        ]
+      },
+      {
+        "Name": "Leadership",
+        "field": [
+          "Management Skills"
+        ]
       },
       {
         "Name": "Teamwork",
-        "field": "Collaboration Skills"
+        "field": [
+          "Collaboration Skills"
+        ]
       },
       {
-        "Name": "Problem Solving",
-        "field": "Analytical Skills"
+        "Name": "Technical expertise in AI, multi-agent systems, and natural language processing (NLP)",
+        "field": [
+          "AI",
+          "NLP"
+        ]
       },
       {
-        "Name": "Adaptability",
-        "field": "Soft Skills"
+        "Name": "Ability to identify user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search",
+        "field": [
+          "Data Analysis",
+          "AI"
+        ]
       },
       {
-        "Name": "Time Management",
-        "field": "Soft Skills"
+        "Name": "Ability to develop scalable architecture to anticipate future needs and adaptations",
+        "field": [
+          "Software Design",
+          "Scalable Architectures"
+        ]
       },
       {
-        "Name": "Critical Thinking",
-        "field": "Soft Skills"
+        "Name": "Understanding of smart contracts, data integrity, and collaborative development",
+        "field": [
+          "Blockchain",
+          "Data Security"
+        ]
       },
       {
-        "Name": "Complexity Analysis",
-        "field": "Soft Skills"
+        "Name": "Ability to solve a real-world problem with innovative technology",
+        "field": [
+          "Problem Solving",
+          "Innovation"
+        ]
       },
       {
-        "Name": "System Analysis",
-        "field": "Programming Concepts"
+        "Name": "Proficiency in Docker and Vue.js",
+        "field": [
+          "Containerization",
+          "Front-End Development"
+        ]
       },
       {
-        "Name": "Web and Mobile Technologies",
-        "field": "Programming Concepts"
+        "Name": "Proficiency in Java, Git, and CI/CD",
+        "field": [
+          "Java",
+          "Version Control"
+        ]
       },
       {
-        "Name": "OOP",
-        "field": "Programming Concepts"
+        "Name": "Ability to apply algorithms (A* algorithm) for AI-driven game functionalities",
+        "field": [
+          "AI",
+          "Algorithm Implementation"
+        ]
       },
       {
-        "Name": "Data Structures",
-        "field": "Programming Concepts"
+        "Name": "Understanding of software development best practices",
+        "field": [
+          "Software Development",
+          "Best Practices"
+        ]
       },
       {
-        "Name": "SDLC",
-        "field": "Programming Concepts"
+        "Name": "Expertise in Markdown, Jekyll, and Git",
+        "field": [
+          "Document Writing",
+          "Web Development"
+        ]
       },
       {
-        "Name": "Debugging and Troubleshooting",
-        "field": "Programming Concepts"
+        "Name": "Ability to develop clear and structured technical documentation",
+        "field": [
+          "Technical Writing",
+          "Documentation"
+        ]
       },
       {
-        "Name": "Test driven deployment",
-        "field": "Programming Concepts"
+        "Name": "Understanding of version control and open-source collaboration",
+        "field": [
+          "Software Development",
+          "Open Source"
+        ]
+      },
+      {
+        "Name": "Proficiency in C programming",
+        "field": [
+          "Programming Language"
+        ]
+      },
+      {
+        "Name": "Expertise in debugging and system analysis",
+        "field": [
+          "Debugging",
+          "System Analysis"
+        ]
+      },
+      {
+        "Name": "Understanding of ELF binary format",
+        "field": [
+          "Binary Analysis",
+          "Data Structures"
+        ]
+      },
+      {
+        "Name": "Strong foundation in graphics programming",
+        "field": [
+          "Graphics Programming",
+          "3D Rendering"
+        ]
+      },
+      {
+        "Name": "Understanding of lighting techniques and user interface design",
+        "field": [
+          "Graphics Programming",
+          "User Interface Design"
+        ]
+      },
+      {
+        "Name": "Strong foundation in Android development",
+        "field": [
+          "Mobile Development",
+          "Android"
+        ]
+      },
+      {
+        "Name": "Experience with UI/UX design",
+        "field": [
+          "User Interface Design",
+          "UX Design"
+        ]
+      },
+      {
+        "Name": "Knowledge of AI algorithms",
+        "field": [
+          "AI",
+          "Machine Learning"
+        ]
+      },
+      {
+        "Name": "Understanding of CI/CD practices",
+        "field": [
+          "Software Development",
+          "CI/CD"
+        ]
       }
     ],
     "Soft Skills": [
       {
-        "Name": "Communication",
-        "field": "Communication Skills"
+        "Name": "Mentoring",
+        "field": [
+          "Teaching",
+          "Mentoring"
+        ]
       },
       {
-        "Name": "Leadership",
-        "field": "Management Skills"
-      },
-      {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills"
+        "Name": "Teaching",
+        "field": [
+          "Teaching",
+          "Mentoring"
+        ]
       }
     ]
   }
