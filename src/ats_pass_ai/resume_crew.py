@@ -8,10 +8,11 @@
 import datetime
 import os
 import yaml
+import agentops
 from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmCategory
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-import agentops
+
 from langchain_community.tools import DuckDuckGoSearchRun
 from ats_pass_ai.request_limiter import RequestLimiter
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
@@ -24,7 +25,9 @@ class ResumeCrew:
 	tasks_config_path = 'config/tasks.yaml'
 	tasks_config = tasks_config_path # because tasks_config somehow getting recognized as a dictionary, not a simple string path.
 
-	agentops.init(tags=["resume-crew"])
+	# agentops.init(tags=["resume-crew"])
+
+	debugFlag = False
 
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
@@ -55,6 +58,9 @@ class ResumeCrew:
 	small_llm_limiter = RequestLimiter(llm_size='SMALL').run
 	large_llm_limiter = RequestLimiter(llm_size='LARGE').run
 
+
+	debugFlag = True
+
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the user info organizer crew"""
@@ -78,27 +84,27 @@ class ResumeCrew:
 
 		# # Either way, these tasks will be executed.
 		
-		my_tasks.append(self.ats_friendly_skills_task())
-		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		
+		# my_tasks.append(self.ats_friendly_skills_task())
+		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
-		my_tasks.append(self.experience_choosing_task())
-		my_tasks.append(self.split_context_of_experience_choosing_task())
-		my_tasks.append(self.gather_info_of_chosen_experiences())
-		my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
-		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		# my_tasks.append(self.experience_choosing_task())
+		# my_tasks.append(self.split_context_of_experience_choosing_task())
+		# my_tasks.append(self.gather_info_of_chosen_experiences())
+		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
+		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
-		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task())
+		# my_tasks.append(self.coursework_extraction_task())
+		# my_tasks.append(self.career_objective_task())
 
 		# my_tasks.append(self.resume_in_json_task())
 		# my_tasks.append(self.resume_compilation_task())
-		
-
-		
+		my_tasks.append(self.latex_resume_generation_task())
+				
 		# Return the crew
 		return Crew(
 			# max_rpm=10,
-			agents=[self.generalist_agent()],
+			agents=self.agents,
 			tasks=my_tasks,
 			# cache=True,
 			full_output=True,
@@ -198,9 +204,10 @@ class ResumeCrew:
 			config=self.agents_config["resume_in_json_agent"],
 			allow_delegation=False,
 			# max_rpm=1,
-			step_callback=self.large_llm_limiter,
-			function_calling_llm=self.genAI,
+			# step_callback=self.large_llm_limiter,
 			llm=self.genAILarge,
+			step_callback = self.small_llm_limiter,
+			function_calling_llm=self.genAI,
 			verbose=True,
 		)
 	
@@ -208,16 +215,46 @@ class ResumeCrew:
 	def resume_compilation_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["resume_compilation_agent"],
-			# max_rpm=2,
-			step_callback=self.large_llm_limiter,
+			llm=self.genAI,
+			# step_callback=self.large_llm_limiter,
+			step_callback=self.small_llm_limiter,
+			function_calling_llm=self.genAI,
+			allow_delegation=False,
+			verbose=True,
+			# cache=True,
+		)
+	
+	@agent
+	def latex_resume_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["latex_resume_agent"],
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
 			llm=self.genAILarge,
-			function_calling_llm=self.genAI,
+			step_callback=self.large_llm_limiter
 		)
 
 	# ---------------------- Define the tasks ----------------------
+
+	@task
+	def latex_resume_generation_task(self):
+
+		# Note the the output of this task gets sanitized by latex_generator.py file.
+		# Load YAML file
+		yaml = self.yaml_loader('latex_resume_generation_task')
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n" + self.load_file(PATHS["resume_in_json_task"])
+			
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.latex_resume_agent(),
+			output_file=PATHS["latex_resume_generation_task"],
+		)
 
 	@task
 	def personal_information_extraction_task(self):
@@ -305,7 +342,7 @@ class ResumeCrew:
 	def work_experience_extraction_task(self):
 		
 		yaml = self.yaml_loader('work_experience_extraction_task')
-		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
+		user_info_organized_data = self.load_file(PATHS["user_info_organized"])
 
 		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
 		expected_output = yaml[1]
@@ -322,7 +359,7 @@ class ResumeCrew:
 
 		# Load YAML file
 		yaml = self.yaml_loader('project_experience_extraction_task')
-		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
+		user_info_organized_data = self.load_file(PATHS["user_info_organized"])
 
 		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
 		expected_output = yaml[1]
@@ -351,8 +388,9 @@ class ResumeCrew:
 		description = yaml[0]
 		expected_output = yaml[1]
 
-		# description = description + "\n" + self.load_txt_file(PATHS["skills_from_exp_and_project"])
-
+		if(self.debugFlag):
+			description = description + "\n" + self.load_file(PATHS["skills_from_exp_and_project"])
+			
 		return Task(
 			description=description,
 			expected_output=expected_output,
@@ -369,11 +407,12 @@ class ResumeCrew:
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_skills_task')
 		
-		src_1 = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		src_1 = self.load_file(PATHS["jd_keyword_extraction"])
 		task_description = yaml[0].format(src_1 = src_1)
 		expected_output = yaml[1]
 		
-		# task_description = task_description + "\n" + self.load_txt_file(PATHS["skills_extraction_task"])
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["skills_extraction_task"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -390,7 +429,8 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
-		# task_description = task_description + "\n" + self.load_txt_file(PATHS["reduce_missing_skills_task"])
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["ats_friendly_skills_task"])
 
 		return Task(
 			description=task_description,
@@ -408,13 +448,14 @@ class ResumeCrew:
 		# Load YAML file
 		yaml = self.yaml_loader('experience_choosing_task')
 		
-		jd_keyword = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		jd_keyword = self.load_file(PATHS["jd_keyword_extraction"])
 		today_date = datetime.date.today().strftime("%B %d, %Y")
 		
 		task_description = yaml[0].format(jd_keyword = jd_keyword, today_date = today_date)
 
 		# # add the project and work experience data
-		# task_description = task_description + "\n" + self.load_txt_file(PATHS["work_experience_extraction_task"]) + "\n" + self.load_txt_file(PATHS["project_experience_extraction_task"])
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["work_experience_extraction_task"]) + "\n" + self.load_file(PATHS["project_experience_extraction_task"])
 
 		expected_output = yaml[1]
 
@@ -434,7 +475,8 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
-		# task_description = task_description + "\n" + self.load_txt_file(PATHS["experience_choosing_task"])
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["experience_choosing_task"])
 		
 		return Task(
 			description=task_description,
@@ -454,11 +496,13 @@ class ResumeCrew:
 		yaml = self.yaml_loader('gather_info_of_chosen_experiences')
 
 		# Load the user info organized data
-		user_info_organized_data = self.load_txt_file(PATHS["user_info_organized"])
+		user_info_organized_data = self.load_file(PATHS["user_info_organized"])
+		
 		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
 		expected_output = yaml[1]
 
-		task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["split_context_of_experience_choosing_task"])
+		if(self.debugFlag):
+			task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_file(PATHS["split_context_of_experience_choosing_task"])
 
 		return Task(
 			description=task_description,
@@ -472,12 +516,16 @@ class ResumeCrew:
 	def ats_friendly_keywords_into_experiences_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
-		jd_keywords = self.load_txt_file(PATHS["jd_keyword_extraction"])
-		task_description = yaml[0].format(jd_keywords = jd_keywords)
+		jd_keywords = self.load_file(PATHS["jd_keyword_extraction"])
+
+		today_date = datetime.date.today().strftime("%B %d, %Y")
+		task_description = yaml[0].format(jd_keywords = jd_keywords, today_date = today_date)
 		expected_output = yaml[1]
 
 		# add gathered info of chosen experiences
-		# task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_txt_file(PATHS["gather_info_of_chosen_experiences"])
+		if(self.debugFlag):
+			task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_file(PATHS["gather_info_of_chosen_experiences"])
+
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -494,7 +542,7 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
-		# task_description = task_description + "\n" + self.load_txt_file(PATHS["ats_friendly_keywords_into_experiences"])
+		# task_description = task_description + "\n" + self.load_file(PATHS["ats_friendly_keywords_into_experiences"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -508,7 +556,7 @@ class ResumeCrew:
 		# Load YAML file
 		yaml = self.yaml_loader('career_objective_task')
 
-		job_description = self.load_txt_file(PATHS["jd_keyword_extraction"])
+		job_description = self.load_file(PATHS["jd_keyword_extraction"])
 		task_description = yaml[0].format(job_description = job_description)
 		expected_output = yaml[1]
 
@@ -544,7 +592,7 @@ class ResumeCrew:
 
 			print("Profile already found. Simply loading the output txt files in the context.")
 			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
-			data = self.load_all_txt_files(PATHS["info_extraction_folder_path"])
+			data = self.load_all_files(PATHS["info_extraction_folder_path"])
 			description = description + "\n" + data
 			print("---------------Profile loaded successfully. Input Provided:--------------")
 			# print(description)
@@ -566,43 +614,46 @@ class ResumeCrew:
 	def resume_compilation_task(self):
 		# load the yaml file
 		yaml = self.yaml_loader('resume_compilation_task')
-
-		# resume_json_data = self.load_txt_files(self.resume_in_json_file_path)
-		# description = yaml[0] + '\n' + resume_json_data
-		# print("Description: ", description)
-
 		description = yaml[0]
 		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = yaml[0] + '\n' + self.load_file(PATHS["resume_in_json_task"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.resume_compilation_agent(),
+			# agent=self.generalist_agent(),
 			context=[self.resume_in_json_task()],
 			output_file=PATHS["resume_compilation_task"],
 		)
 	
-	def load_txt_file(self, file_path):
+	def load_file(self, file_path):
 		"""Load text file"""
 		with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
 			return file.read()
 
-	def load_all_txt_files(self, folder_path) -> str:
+	def load_all_files(self, directory_path) -> str:
 		# Initialize the text
 		all_text = ""
-		for filename in os.listdir(folder_path):
-			if filename.endswith('.txt'):
-				# Construct full file path
-				file_path = os.path.join(folder_path, filename)
-				# Open the file and read its contents
-				with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
-					all_text += file.read() + "\n"  # Append text with a newline to separate files
+		entries = os.listdir(directory_path)
+		for entry in entries:
+			# Construct full file path
+			full_path = os.path.join(directory_path, entry)
+			# Open the file and read its contents
+			if(os.path.isfile(full_path)):
+				try:
+					with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
+						all_text += file.read() + "\n"  # Append text with a newline to separate files
+				except IOError as e:
+					print(f"Error opening or reading the file {full_path}: {e}")
 		return all_text
 
 	def yaml_loader(self, task_name):
 		# load the yaml file
 		output = []
-		with open(f'src/ats_pass_ai/{self.tasks_config_path}', 'r') as file:
+		with open(f'{PATHS["src_root"]}/{self.tasks_config_path}', 'r') as file:
 			yaml_data = yaml.safe_load(file)
 			output.append(yaml_data[task_name]['description'])
 			output.append(yaml_data[task_name]['expected_output'])

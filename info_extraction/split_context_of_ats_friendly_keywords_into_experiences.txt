@@ -64,27 +64,6 @@
             "Applied fundamental software development and testing processes to ensure robust application performance, aligning with the company's value of delivering high-quality solutions."
           ]
         }
-      ],
-      "Work Experience": [
-        {
-          "Job Title": "Programming Mentor",
-          "Company": "Private Tutoring",
-          "Location": "N/A",
-          "Timeline": "February 2023 - December 2023",
-          "Technologies": "Python, Java",
-          "skills": [
-            "Teaching",
-            "Computer systems",
-            "Programming",
-            "Communication Skills"
-          ],
-          "Link": "N/A",
-          "Key Highlights": [
-            "Provided personalized computer systems and programming tutoring, focusing on Python and Java, tailored to the student's learning style, emphasizing strong **communication** and **teaching skills**.",
-            "Delivered one-on-one lessons focusing on computer system principles and introductory programming, highlighting experience in breaking down complex concepts into understandable components.",
-            "Facilitated hands-on sessions for software installation, debugging, and understanding computer operations, emphasizing practical **problem-solving** skills relevant to a **systems engineering** role."
-          ]
-        }
       ]
     }
   }

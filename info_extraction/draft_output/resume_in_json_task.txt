@@ -5,95 +5,70 @@
     "Phone": "204 955 5064",
     "Email": "msaifofficial@gmail.com",
     "LinkedIn Profile URL": "linkedin.com/in/vmsaif",
-    "Personal Website URL": "saifmahmud.dev",
+    "Personal Website URL": "",
     "Address": "Winnipeg, MB"
   },
-  "Summary": "A skilled AI enthusiast with experience in Python, LangChain, and Gemini seeking to leverage my passion for ethical AI development at Radical AI for Social Good Lab. My goal is to contribute to impactful projects that utilize AI for social good and contribute to a more equitable future by developing innovative and effective AI solutions.",
+  "Summary": "Highly motivated software developer with a passion for leveraging technology for social good seeks the Artificial Intelligence Engineer position at Radical AI for Social Good Lab. Bringing strong Java-based algorithm development experience and a collaborative spirit, I aim to contribute to the democratization of AI and drive positive change through innovative solutions.",
   "Skills": {
-    "Technical": [
+    "Programming Languages": [
       "Python",
-      "LangChain",
-      "Gemini",
-      "Multiagent",
-      "RAG Search",
-      "AI Models",
-      "ATS",
-      "A* Algorithm",
-      "Java",
+      "Java"
+    ],
+    "Frameworks": [
+      "LangChain"
+    ],
+    "Tools": [
       "Git",
       "CI/CD",
-      "C Programming",
-      "Debugging",
-      "Linux",
-      "Cloud Technologies"
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Google Gen AI Studio"
     ],
-    "Soft": [
-      "Communication",
+    "Soft Skills": [
+      "Communication Skills",
       "Teamwork",
       "Problem-Solving",
-      "Analytical Skills",
       "Teaching",
-      "Leadership",
-      "Project Management"
+      "Leadership"
     ]
   },
   "Projects": [
     {
       "Project Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present (5 months)",
-      "Technologies": "Multiagent, AI, Python, RAG Search",
+      "Timeline": "January 2024 - Present",
+      "Technologies": "Python, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Key achievements": [
-        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes, enhancing job search efficiency and demonstrating problem-solving skills.",
-        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical and analytical skills.",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-        "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+        "Development of a sophisticated resume automation tool leveraging AI and Machine Learning technologies, directly aligning with the company's focus on AI for Social Good.",
+        "Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical, analytical, and problem-solving skills.",
+        "System engineered to extract user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, highlighting expertise in Natural Language Processing and Data Preprocessing.",
+        "Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight, innovation, and a commitment to Ethical AI principles."
+      ]
+    },
+    {
+      "Project Title": "Blockchain Car Mileage Tracker",
+      "Timeline": "January 2023 - Mar 2023",
+      "Technologies": "Blockchain, Smart Contracts",
+      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+      "Key achievements": [
+        "Developed a Blockchain application for secure tracking and verification of vehicle mileage for insurance purposes, demonstrating skills in algorithm development and data analysis.",
+        "Enhancement of data integrity and transparency, showcasing strong analytical skills and attention to detail, aligning with the company's values of Equitable Progress and Responsible AI.",
+        "Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and showcasing expertise in Data Preprocessing and secure data management.",
+        "Effective team collaboration for design, development, and testing of the application, demonstrating strong teamwork and problem-solving skills."
       ]
     },
     {
       "Project Title": "AI Path Finding",
-      "Timeline": "Jul 2023 - Sep 2023 (3 months)",
-      "Technologies": "A* Algorithm, Java, Git, CI/CD",
+      "Timeline": "Jul 2023 - Sep 2023",
+      "Technologies": "Java, Git, CI/CD",
       "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
       "Key achievements": [
-        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game, enhancing problem-solving and analytical skills.",
-        "Utilized Git for version control, ensuring efficient teamwork and collaboration in code management.",
-        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing efficiency and technical proficiency.",
-        "Applied fundamental software development and testing processes to ensure robust application performance."
-      ]
-    },
-    {
-      "Project Title": "ELF Binary Analysis",
-      "Timeline": "Nov 2022 - Dec 2022 (2 months)",
-      "Technologies": "C Programming, Debugging, Linux OS",
-      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
-      "Key achievements": [
-        "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and communication skills relevant to application engineering.",
-        "Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.",
-        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
-        "Actively contributed to technical documentation for product and knowledge base improvement, demonstrating communication skills."
-      ]
-    },
-    {
-      "Project Title": "TCP Chat Application",
-      "Timeline": "",
-      "Technologies": "",
-      "Link": "",
-      "Key achievements": []
-    }
-  ],
-  "Work": [
-    {
-      "Job Title": "Programming Mentor",
-      "Company": "Private Tutoring",
-      "Location": "",
-      "Timeline": "February 2023 - December 2023 (10 months)",
-      "Technologies": "Python, Java",
-      "Link": null,
-      "Key achievements": [
-        "Tutored a student in computer systems and programming, focusing on Python and Java, employing effective communication and teaching methods.",
-        "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.",
-        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role."
+        "Developed a Java-based game utilizing the A* algorithm for AI-driven gameplay, demonstrating expertise in Algorithm Development and AI principles.",
+        "Utilized Git for efficient version control and collaboration, highlighting experience with collaborative software development practices.",
+        "Implemented CI/CD practices, resulting in a 50% reduction in deployment time and showcasing a commitment to efficient and innovative development processes.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance, aligning with the company's value of delivering high-quality solutions."
       ]
     }
   ],
@@ -106,7 +81,30 @@
     "GPA": "3.07"
   },
   "Additional": {
-    "References": []
+    "References": [
+      {
+        "Name": "Abu Kabir",
+        "Position": "Director IT Service Management",
+        "Company": "Microsoft",
+        "Contact Information": "204-298-3693",
+        "Relationship": "Reference"
+      },
+      {
+        "Name": "Safiur Mahdi",
+        "Position": "Java Developer",
+        "Company": "Skip the Dishes",
+        "Contact Information": "204-583-3432",
+        "Relationship": "Reference"
+      }
+    ],
+    "Volunteer Work": [
+      {
+        "Organization Name": ".dev Programming Club",
+        "Role": "Active Member",
+        "Responsibilities": "- Engaged with the latest software development technologies and tools.\n- Collaborated on team projects focused on Java and Cloud Technologies.",
+        "Timeline": "2019-2023"
+      }
+    ]
   }
 }
 ```

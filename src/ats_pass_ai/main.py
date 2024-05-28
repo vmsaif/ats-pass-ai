@@ -4,16 +4,14 @@
 	Description: This file contains the main function to run the ATS-PASS-AI
 """
 from datetime import timedelta
-import os
-import sqlite3
 from textwrap import dedent
 from ats_pass_ai.request_limiter import printRemainingRequestsPerDay
 from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool, SearchInChromaDB
 from ats_pass_ai.tools.llm_task import LLMTask
-import time
 from ats_pass_ai.output_file_paths import PATHS
 from ats_pass_ai.timer import Timer
+from ats_pass_ai.latex_generator import compile_latex
 # First, Lets Organize the User Information provided by the user.
 user_info_file_path = 'info_files/user_info.txt'
 jd_file_path = 'info_files/job_description.txt'
@@ -34,9 +32,12 @@ def run():
                                              
                     2. Identification:
                         - Begin with identifying and documenting key personal identification details such as the applicant's name, contact information, location, phone number, and email address etc.
-                        - Use the heading '### Personal Details' for this section.
+                        - Use the heading '# Personal Details' for this section.
                     3. Structure Development: 
                         - Write a description of each Category of more than 2 lines of what it contains. For example, if you have a section called "References", write, "This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant."
+                                             
+                        For Coursework, you can write, "This section contains the courses taken by the Applicant during their academic career."
+                                             
                         - Main Categories: Identify and label key themes with '#'.
                         - Subcategories: Create necessary subcategories under each main category with '##'.
                     4. Content Handling:
@@ -110,7 +111,8 @@ def run():
                             user_info_orgainzed_file_path, 
                             organize_system_instruction, 
                             override=False
-                        ).run()
+                        )
+            organizer.run()
         info_organizing_time = t.interval
 
         
@@ -121,7 +123,8 @@ def run():
                                                 jd_extracted_keywords_file_path, 
                                                 jd_extraction_system_instruction, 
                                                 override=False
-                                        ).run()
+                                        )
+            job_description_extractor.run()
 
         jd_extraction_time = t.interval
 
@@ -130,7 +133,6 @@ def run():
             RagSearchTool.process_and_index(user_info_orgainzed_file_path)
         indexing_time = t.interval
 
-
         with Timer() as t:
             # Delete the user profile files but not the folder To start fresh
             # RagSearchTool.delete_user_profile_files(delete_pretasks = False)
@@ -138,8 +140,12 @@ def run():
             # Run the main crew program
             crew = ResumeCrew().crew()
             crew.kickoff()
-            print(crew.usage_metrics)
+            # print(crew.usage_metrics)
         crew_run_time = t.interval
+    
+        with Timer() as t:
+            compile_latex(PATHS["latex_resume_generation_task"], PATHS["final_output_dir"])
+        latex_generation_time = t.interval
 
     program_run_time = total_time.interval
     
@@ -150,11 +156,10 @@ def run():
     print_task_time("JD Extraction", jd_extraction_time)
     print_task_time("Indexing", indexing_time)
     print_task_time("Crew Run", crew_run_time)
+    print_task_time("Latex Generation", latex_generation_time)
     print_task_time("Total", program_run_time)
     printRemainingRequestsPerDay()
 
-
-# 
 def print_task_time(task_name, total_seconds):
         days, hours, minutes, seconds = convert_seconds(total_seconds)
         print(f"-- Time taken for {task_name}: {minutes} minutes, {seconds} seconds")
@@ -174,16 +179,3 @@ def convert_seconds(total_seconds):
     formatted_seconds = f"{seconds:.2f}"
     
     return formatted_days, formatted_hours, formatted_minutes, formatted_seconds
-
-
- 
-# def check_keyword(answer):
-#     for document in answer:
-#                 print(document.page_content)
-#                 for word in document.page_content.split():
-#                     if(word == "microsoft"):
-                        
-#                         print("\n\n\n-----------Found the keyword 'microsoft' in the document-----------\n\n\n--")
-#                         exit()
-                        
-#                 print("\n")  # Adding a new line for better separation between contents

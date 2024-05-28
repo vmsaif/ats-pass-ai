@@ -1,0 +1,59 @@
+# **Saif Mahmud** 204 955 5064 | msaifofficial@gmail.com | linkedin.com/in/vmsaif | Winnipeg, MB
+[empty line]
+## Summary
+Highly motivated software developer with a passion for leveraging technology for social good seeks the Artificial Intelligence Engineer position at Radical AI for Social Good Lab. Bringing strong Java-based algorithm development experience and a collaborative spirit, I aim to contribute to the democratization of AI and drive positive change through innovative solutions.
+[empty line]
+## Skills
+**Programming Languages:** Python, Java
+**Frameworks:** LangChain
+**Tools:** Git, CI/CD, OpenAI API, Meta Llama 2, Google Gemini, Google Gen AI Studio
+**Soft Skills:** Communication Skills, Teamwork, Problem-Solving, Teaching, Leadership
+[empty line]
+## Project Experience
+### ATS Pass AI January 2024 - Present ([Duration]) | City, State
+Technologies, frameworks, and tools used:  Python, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio
+Link: https://github.com/vmsaif/ats-pass-ai
+- Development of a sophisticated resume automation tool leveraging AI and Machine Learning technologies, directly aligning with the company's focus on AI for Social Good.
+- Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical, analytical, and problem-solving skills.
+- System engineered to extract user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, highlighting expertise in Natural Language Processing and Data Preprocessing.
+- Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight, innovation, and a commitment to Ethical AI principles.
+[empty line]
+### Blockchain Car Mileage Tracker January 2023 - Mar 2023 ([Duration]) | City, State
+Technologies, frameworks, and tools used:  Blockchain, Smart Contracts
+Link: https://github.com/vmsaif/blockChainCarMilageTracker
+- Developed a Blockchain application for secure tracking and verification of vehicle mileage for insurance purposes, demonstrating skills in algorithm development and data analysis.
+- Enhancement of data integrity and transparency, showcasing strong analytical skills and attention to detail, aligning with the company's values of Equitable Progress and Responsible AI.
+- Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and showcasing expertise in Data Preprocessing and secure data management.
+- Effective team collaboration for design, development, and testing of the application, demonstrating strong teamwork and problem-solving skills.
+[empty line]
+### AI Path Finding Jul 2023 - Sep 2023 ([Duration]) | City, State
+Technologies, frameworks, and tools used:  Java, Git, CI/CD
+Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
+- Developed a Java-based game utilizing the A* algorithm for AI-driven gameplay, demonstrating expertise in Algorithm Development and AI principles.
+- Utilized Git for efficient version control and collaboration, highlighting experience with collaborative software development practices.
+- Implemented CI/CD practices, resulting in a 50% reduction in deployment time and showcasing a commitment to efficient and innovative development processes.
+- Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+- Applied fundamental software development and testing processes to ensure robust application performance, aligning with the company's value of delivering high-quality solutions.
+[empty line]
+## Work Experience
+### Programming Mentor February 2023 - December 2023 ([Duration]) | Private Tutoring | N/A
+Technologies, frameworks, and tools used: Python, Java
+Link: N/A
+- Provided personalized computer systems and programming tutoring, focusing on Python and Java, tailored to the student's learning style, emphasizing strong communication and teaching skills.
+- Delivered one-on-one lessons focusing on computer system principles and introductory programming, highlighting experience in breaking down complex concepts into understandable components.
+- Facilitated hands-on sessions for software installation, debugging, and understanding computer operations, emphasizing practical problem-solving skills relevant to a systems engineering role.
+[empty line]
+## Education
+**University of Manitoba**, City, State - BSc, Computer Science | Graduated: October 2023 - GPA:3.07
+[empty line]
+## References
+**Abu Kabir**, Director IT Service Management, Microsoft, 204-298-3693 (Reference)
+**Safiur Mahdi**, Java Developer, Skip the Dishes, 204-583-3432 (Reference)
+[empty line]
+## Volunteer Work
+**Organization Name:** .dev Programming Club
+**Role:** Active Member
+**Responsibilities:** 
+- Engaged with the latest software development technologies and tools.
+- Collaborated on team projects focused on Java and Cloud Technologies.
+**Timeline:** 2019-2023
