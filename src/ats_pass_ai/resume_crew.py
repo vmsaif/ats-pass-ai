@@ -2,7 +2,7 @@
 """
 	Author: Saif Mahmud
 	Date: 04-23-2024
-	Description: This file contains the crew class for the user info organizer crew.
+	Description: This file contains the crew class for the applicant info organizer crew.
 """
 
 import datetime
@@ -63,7 +63,7 @@ class ResumeCrew:
 
 	@crew
 	def crew(self) -> Crew:
-		"""Creates the user info organizer crew"""
+		"""Creates the applicant info organizer crew"""
 
 		my_tasks = []
 	
@@ -83,8 +83,7 @@ class ResumeCrew:
 			my_tasks.append(self.profile_builder_task())
 
 		# # Either way, these tasks will be executed.
-		
-		
+				
 		# my_tasks.append(self.ats_friendly_skills_task())
 		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
@@ -99,7 +98,8 @@ class ResumeCrew:
 
 		# my_tasks.append(self.resume_in_json_task())
 		# my_tasks.append(self.resume_compilation_task())
-		my_tasks.append(self.latex_resume_generation_task())
+		# my_tasks.append(self.latex_resume_generation_task())
+		my_tasks.append(self.cover_letter_generation_task())
 				
 		# Return the crew
 		return Crew(
@@ -234,8 +234,72 @@ class ResumeCrew:
 			llm=self.genAILarge,
 			step_callback=self.large_llm_limiter
 		)
+	
+	@agent
+	def cover_letter_generation_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["cover_letter_generation_agent"],
+			allow_delegation=False,
+			verbose=True,
+			function_calling_llm=self.genAI,
+			# cache=True,
+			llm=self.genAILarge,
+			step_callback=self.large_llm_limiter
+		)
 
 	# ---------------------- Define the tasks ----------------------
+
+	@task
+	def cover_letter_generation_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('cover_letter_generation_task')
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		today_date = datetime.date.today().strftime("%B %d, %Y")
+
+		
+		# add the job description extracted keywords
+		description = description + f'\n Today\'s Date:{today_date}\n' + self.load_file(PATHS["job_description"]) 
+
+		context = []
+
+		# Either way these context is needed to complete the task.
+
+		context.append(self.split_context_of_ats_friendly_skills_task())
+		context.append(self.coursework_extraction_task())
+		context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		context.append(self.career_objective_task())
+
+		if(self.profile_already_created()):
+
+			print("Profile already found. Simply loading the output txt files in the context for the cover letter generation.")
+			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
+			description = description + "\n" + self.load_file(PATHS["profile_builder_task"])
+			
+		else :	
+			# insert the profile_builder_task at the beginning of the context
+			print("Profile not found. Will wait for the profile to be built.")
+			context.insert(0, self.profile_builder_task()) 
+
+		if(self.debugFlag):
+			paths = [
+				"split_context_of_ats_friendly_skills_task",
+				"coursework_extraction_task",
+				"split_context_of_ats_friendly_keywords_into_experiences",
+				"career_objective_task",
+				"profile_builder_task"
+			]
+			description = description + "\n" + self.load_paths(paths)
+
+		print
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			context=context,
+			agent=self.cover_letter_generation_agent(),
+			output_file=PATHS["cover_letter_generation_task"],
+		)
 
 	@task
 	def latex_resume_generation_task(self):
@@ -342,9 +406,9 @@ class ResumeCrew:
 	def work_experience_extraction_task(self):
 		
 		yaml = self.yaml_loader('work_experience_extraction_task')
-		user_info_organized_data = self.load_file(PATHS["user_info_organized"])
+		applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"])
 
-		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		task_description = yaml[0].format(applicant_info_organized_data = applicant_info_organized_data)
 		expected_output = yaml[1]
 
 		return Task(
@@ -359,9 +423,9 @@ class ResumeCrew:
 
 		# Load YAML file
 		yaml = self.yaml_loader('project_experience_extraction_task')
-		user_info_organized_data = self.load_file(PATHS["user_info_organized"])
+		applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"])
 
-		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		task_description = yaml[0].format(applicant_info_organized_data = applicant_info_organized_data)
 		expected_output = yaml[1]
 
 		return Task(
@@ -377,7 +441,6 @@ class ResumeCrew:
 			config=self.tasks_config["skills_from_exp_and_project_task"],
 			agent=self.technical_details_agent(),
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-			
 			output_file=PATHS["skills_from_exp_and_project"],
 		)
 
@@ -397,7 +460,7 @@ class ResumeCrew:
    			agent=self.technical_details_agent(),
 			context=[self.skills_from_exp_and_project_task()],
 			output_file=PATHS["skills_extraction_task"],
-			tools=[self.queryTool, self.webSearchTool],
+			tools=[self.queryTool],
 		)
 
 	# # ----------------- Skills Match Identification -----------------
@@ -490,15 +553,15 @@ class ResumeCrew:
 
 	# ----------------- Include ATS Keywords into Experiences -----------------
 
-	# @task
+	@task
 	def gather_info_of_chosen_experiences(self):
 		# Load YAML file
 		yaml = self.yaml_loader('gather_info_of_chosen_experiences')
 
-		# Load the user info organized data
-		user_info_organized_data = self.load_file(PATHS["user_info_organized"])
+		# Load the applicant info organized data
+		applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"])
 		
-		task_description = yaml[0].format(user_info_organized_data = user_info_organized_data)
+		task_description = yaml[0].format(applicant_info_organized_data = applicant_info_organized_data)
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
@@ -508,7 +571,7 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.generalist_agent(),
-			# context=[self.split_context_of_experience_choosing_task()],
+			context=[self.split_context_of_experience_choosing_task()],
 			output_file=PATHS["gather_info_of_chosen_experiences"],
 		)
 
@@ -592,10 +655,7 @@ class ResumeCrew:
 
 			print("Profile already found. Simply loading the output txt files in the context.")
 			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
-			data = self.load_all_files(PATHS["info_extraction_folder_path"])
-			description = description + "\n" + data
-			print("---------------Profile loaded successfully. Input Provided:--------------")
-			# print(description)
+			description = description + "\n" + self.load_file(PATHS["profile_builder_task"])
 		else :	
 			# need to build profile from scratch
 			# insert the profile_builder_task at the beginning of the context
@@ -631,8 +691,13 @@ class ResumeCrew:
 	
 	def load_file(self, file_path):
 		"""Load text file"""
-		with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
-			return file.read()
+		try:
+			with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
+				return file.read()
+		except IOError as e:
+			print(f"Error opening or reading the file {file_path}: {e}")
+			return False
+
 
 	def load_all_files(self, directory_path) -> str:
 		# Initialize the text
@@ -661,7 +726,7 @@ class ResumeCrew:
 	
 	def profile_already_created(self) -> bool:
 		"""
-		Inside the rag_search_tool.py file, there is a function called file_indexed_before. It checks if the user info has been changed or not by looking at hash value. If changed, then all the files inside the info_extraction folder will be deleted.
+		Inside the rag_search_tool.py file, there is a function called file_indexed_before. It checks if the applicant info has been changed or not by looking at hash value. If changed, then all the files inside the info_extraction folder will be deleted.
 
 		So we can check if profile has been already created by looking for files inside the info_extraction folder. 
 
@@ -679,3 +744,13 @@ class ResumeCrew:
 				return True
 		return False
 	
+	def load_paths(self, paths) -> str:
+		"""Load text from multiple files"""
+		all_text = ""
+		for path in paths:
+			file_content = self.load_file(PATHS[path])
+			if isinstance(file_content, str):  # Ensure the content is a string	
+				all_text += file_content + "\n"
+			else:
+				print(f"Expected a string from {path}, but got a {type(file_content)}")
+		return all_text

@@ -1,17 +1,17 @@
 ```json
 {
-  "user_skills": {
+  "applicant_skills": {
     "exact_match_with_job_description": {
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [
-        "Langchain"
-      ],
+      "Frameworks": [],
       "Tools": [],
       "Soft Skills": [
         "Communication Skills",
-        "Teamwork"
+        "Teamwork",
+        "Problem-Solving",
+        "Critical Thinking"
       ]
     },
     "partial_match_with_job_description": {
@@ -22,26 +22,25 @@
       "Frameworks": {},
       "Tools": {},
       "Soft Skills": {
-        "name": "Leadership",
-        "pertially_matched_with_job_description": "Collaboration"
+        "name": "Data Analysis",
+        "pertially_matched_with_job_description": "Data Analysis"
       }
     }
   },
   "missing_from_the_applicant_skills": {
     "Programming Languages": [
-      "TensorFlow",
-      "PyTorch"
+      "TensorFlow (or similar frameworks like PyTorch)"
     ],
     "Frameworks": [
       "OpenAI API",
       "Meta Llama 2",
       "Google Gemini",
+      "LangChain",
       "Google Gen AI Studio"
     ],
     "Tools": [],
     "Soft Skills": [
       "Analytical Skills",
-      "Problem-Solving",
       "Creative Thinking",
       "Research Presentation"
     ]

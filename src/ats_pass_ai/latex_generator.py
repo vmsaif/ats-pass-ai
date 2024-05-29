@@ -3,15 +3,8 @@ import os
 def compile_latex(tex_path, output_dir):
     
     sanitized_file(tex_path)
-    # get the filename from the tex_path
     filename = os.path.basename(tex_path)
-    # print(f"Compiling LaTeX file: {filename}")
-    # print(f"Output directory: {output_dir}")
     class_path = os.path.dirname(tex_path)
-    # print(f"Class path: {class_path}")
-    # get the current working directory from tex_path
-    # cwd = os.getcwd()
-    # list all in the current working directory 
 
     try:
         command = [

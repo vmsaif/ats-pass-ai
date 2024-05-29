@@ -2,6 +2,7 @@
 info_files = 'info_files'
 info_extraction = 'info_extraction'
 pre_tasks = f'{info_extraction}/pre_tasks'
+job_description = f'{info_files}/job_description.txt'
 jd_keyword_extraction = f'{info_extraction}/jd_keyword_extraction'
 draft_output = f'{info_extraction}/draft_output'
 src_root = 'src/ats_pass_ai'
@@ -9,9 +10,10 @@ src_root = 'src/ats_pass_ai'
 # Config dictionary with all paths
 PATHS = {
     "src_root": src_root,
-    "user_info_organized": f"{info_files}/user_info_organized.txt",
+    "applicant_info_organized": f"{info_files}/applicant_info_organized.txt",
     "info_extraction_folder_path": info_extraction,
     "pre_tasks_folder_path": pre_tasks,
+    "job_description": job_description,
     "jd_keyword_extraction": f"{jd_keyword_extraction}/job_description_extracted_keywords.txt",
     "personal_information_extraction_task": f"{pre_tasks}/personal_information_extraction_task.txt",
     "education_extraction_task": f"{info_extraction}/education_extraction_task.txt",
@@ -39,4 +41,5 @@ PATHS = {
     "resume_compilation_task": f"{draft_output}/resume_compilation_task.txt",
     "latex_resume_generation_task": f"{src_root}/latex_class/resume_generation_task.tex", 
     "final_output_dir": f"{draft_output}/",
+    "cover_letter_generation_task": f"{draft_output}/cover_letter_generation_task.txt",
 }

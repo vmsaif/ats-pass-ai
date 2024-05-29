@@ -2,67 +2,25 @@
 {
   "selected_experiences": {
     "Most Recent Experience": [
-      "Project: ATS Pass AI"
+      "Work/Project": "Unavailable with the given context"
     ],
     "Work/Project Experience": [
-      "Project: Blockchain Car Mileage Tracker",
-      "Project: AI Path Finding"
-     
+      "Unavailable"
     ],
-    "Work Experience": [
-      "Work: Programming Mentor"
+    "[The other type between work or project experience]": [
+      "Unavailable"
     ]
-  }
-}
-```
-```json
-{
+  },
   "reason for choosing, How it is relevant to the job": [
     {
-      "title": "Project: ATS Pass AI",
-      "reason": "This project directly aligns with the AI Engineer role by showcasing expertise in AI, multi-agent systems, NLP, Python, and advanced AI tools like Gemini Pro and RAG Search. The project's focus on resume optimization using AI demonstrates a strong understanding of data analysis, algorithm development, and natural language processing, all crucial for the role. The use of cutting-edge technologies highlights  adaptability and a passion for pushing the boundaries of AI."
-    },
-    {
-      "title": "Project: Blockchain Car Mileage Tracker",
-      "reason": "This project highlights problem-solving skills by addressing a real-world challenge with blockchain technology. Developing a smart contract for secure mileage recording showcases analytical skills, attention to detail, and an understanding of data integrity, aligning with the ethical and responsible AI focus of the role."
-    },
-    {
-      "title": "Project: AI Path Finding",
-      "reason": "This project demonstrates proficiency in applying AI algorithms (A* algorithm) for game development, highlighting problem-solving and analytical skills relevant to AI engineering. The use of Java, Git, and CI/CD practices showcases familiarity with industry-standard tools and collaborative development."
-    },
-    {
-      "title": "Work: Programming Mentor",
-      "reason": "While not directly AI-focused, this experience demonstrates strong communication, mentoring, and teaching skills, essential for collaborating effectively within a team. The focus on Python and hands-on learning aligns with the technical skills required for the role."
+      "title": "Unavailable",
+      "reason": "Unavailable"
     }
   ],
   "rejected_experiences": [
     {
-      "title": "Project: Recursive Ray Tracing",
-      "reason": "While showcasing 3D graphics expertise, this project's relevance to AI engineering and the job description's focus is limited."
-    },
-    {
-      "title": "Project: Bank Account System",
-      "reason": "Although demonstrating OOP and Java skills, this project lacks a clear connection to AI and the specific requirements of the role."
-    },
-    {
-      "title": "Project: Hosting a Resume on GitHub Pages",
-      "reason": "This project focuses on web development and documentation, which are not directly relevant to the core responsibilities of an AI Engineer."
-    },
-    {
-      "title": "Project: ELF Binary Analysis",
-      "reason": "While showcasing debugging and system analysis skills, this project's focus on binary analysis is less relevant to the AI and machine learning aspects of the role."
-    },
-    {
-      "title": "Project: OpenGL Sphere Lighting",
-      "reason": "Similar to Recursive Ray Tracing, this project's focus on graphics programming is not directly aligned with the AI Engineer role."
-    },
-    {
-      "title": "Project: Reversible Learning APP",
-      "reason": "This project demonstrates Android development skills, but lacks a strong connection to AI or the specific technologies mentioned in the job description."
-    },
-    {
-      "title": "Project: Connect 4 Game",
-      "reason": "While showcasing AI algorithm implementation, this project's focus on game development might be considered less relevant compared to experiences directly related to AI engineering or the job's specific requirements."
+      "title": "Unavailable",
+      "reason": "Not aligned with the key requirements of the job description or less relevant compared to selected experiences."
     }
   ]
 }

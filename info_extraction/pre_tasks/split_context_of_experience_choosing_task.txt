@@ -1,15 +1,21 @@
+```json
 {
   "selected_experiences": {
     "Most Recent Experience": [
-      "Project: ATS Pass AI"
+      "Work/Project": "Unavailable with the given context"
     ],
     "Work/Project Experience": [
-      "Project: Blockchain Car Mileage Tracker",
-      "Project: AI Path Finding"
-     
+      "Unavailable"
     ],
-    "Work Experience": [
-      "Work: Programming Mentor"
+    "[The other type between work or project experience]": [
+      "Unavailable"
     ]
-  }
+  },
+  "reason for choosing, How it is relevant to the job": [
+    {
+      "title": "Unavailable",
+      "reason": "Unavailable"
+    }
+  ]
 }
+```

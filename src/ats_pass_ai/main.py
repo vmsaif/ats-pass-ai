@@ -12,11 +12,11 @@ from ats_pass_ai.tools.llm_task import LLMTask
 from ats_pass_ai.output_file_paths import PATHS
 from ats_pass_ai.timer import Timer
 from ats_pass_ai.latex_generator import compile_latex
-# First, Lets Organize the User Information provided by the user.
-user_info_file_path = 'info_files/user_info.txt'
+# First, Lets Organize the applicant Information provided by the applicant.
+applicant_info_file_path = 'info_files/applicant_info.txt'
 jd_file_path = 'info_files/job_description.txt'
 
-user_info_orgainzed_file_path = PATHS["user_info_organized"]
+applicant_info_orgainzed_file_path = PATHS["applicant_info_organized"]
 jd_extracted_keywords_file_path = PATHS["jd_keyword_extraction"]
 
 def run():
@@ -106,9 +106,9 @@ def run():
                     """)
 
         with Timer() as t:
-            organizer = LLMTask("User Info Organize", 
-                            user_info_file_path, 
-                            user_info_orgainzed_file_path, 
+            organizer = LLMTask("Applicant Info Organize", 
+                            applicant_info_file_path, 
+                            applicant_info_orgainzed_file_path, 
                             organize_system_instruction, 
                             override=False
                         )
@@ -130,12 +130,12 @@ def run():
 
         with Timer() as t:
             # Index into DB: this will not run if the file is already indexed
-            RagSearchTool.process_and_index(user_info_orgainzed_file_path)
+            RagSearchTool.process_and_index(applicant_info_orgainzed_file_path)
         indexing_time = t.interval
 
         with Timer() as t:
-            # Delete the user profile files but not the folder To start fresh
-            # RagSearchTool.delete_user_profile_files(delete_pretasks = False)
+            # Delete the applicant profile files but not the folder To start fresh
+            # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
 
             # Run the main crew program
             crew = ResumeCrew().crew()
@@ -152,7 +152,7 @@ def run():
     # Print the time taken for each task
     print("---- Time Statistics -----")
 
-    print_task_time("User Info Organizing", info_organizing_time)
+    print_task_time("applicant Info Organizing", info_organizing_time)
     print_task_time("JD Extraction", jd_extraction_time)
     print_task_time("Indexing", indexing_time)
     print_task_time("Crew Run", crew_run_time)

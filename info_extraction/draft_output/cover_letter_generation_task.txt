@@ -1,0 +1,22 @@
+Saif Mahmud
+Winnipeg, MB 
+msaiofficial@gmail.com 
+May 29, 2024
+
+Hiring Manager
+Radical AI for Social Good Lab
+
+Dear Hiring Manager, 
+
+I am writing to express my strong interest in the Artificial Intelligence Engineer Virtual Internship at Radical AI for Social Good Lab. As a recent graduate with a BSc in Computer Science from the University of Manitoba and a passion for leveraging AI for positive social impact, I am particularly drawn to Radical AI's commitment to democratizing AI technology and addressing systemic inequities. 
+
+My technical skills align well with the requirements outlined in the job description. I am proficient in Python and possess a strong theoretical and practical understanding of AI, machine learning, and NLP concepts. My experience developing "ATS Pass AI," a multi-agent resume optimization tool that utilizes Gemini Pro and RAG Search to enhance job search efficiency, demonstrates my ability to develop innovative solutions using cutting-edge AI technologies. This project also highlights my analytical and problem-solving skills in a practical setting. 
+
+Beyond "ATS Pass AI," my portfolio showcases a range of projects that further demonstrate my technical versatility. For instance, I developed a blockchain-based car mileage tracker to enhance transparency and data integrity in the automotive industry. Additionally, my experience creating an AI-powered pathfinding system for a Java-based game underscores my ability to implement and adapt AI algorithms for diverse applications. I am eager to bring this experience to Radical AI and contribute to projects that align with my commitment to social good. 
+
+Radical AI's mission to use AI as a tool for education, social mobility, and equitable progress strongly resonates with my personal values. I believe that technology should be accessible and empowering for all, and I am particularly interested in contributing to projects that address the ethical implications of AI and promote its responsible development. I am confident that my skills and passion for social good align with Radical AI's vision.  
+
+Furthermore, my collaborative nature and experience working on team-based projects, both during my studies and personal endeavors, have equipped me with strong communication and teamwork skills. I am eager to learn from the experienced professionals at Radical AI and contribute to a positive and impactful internship experience. My resume provides further detail on my qualifications and projects. I am eager to discuss how my skills and experience can benefit Radical AI's mission. Thank you for your time and consideration. 
+
+Sincerely, 
+Saif Mahmud

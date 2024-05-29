@@ -1,67 +1,133 @@
 ```json
 {
-  "User's Experiences with ATS Keywords": {
+  "applicant's Experiences with ATS Keywords": {
     "Most Recent Experience": [
       {
         "Project Title": "ATS Pass AI",
         "Timeline": "January 2024 - Present",
-        "Duration": "5 months",
-        "Technologies": "Python, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio",
-        "skills": "AI, Multi-agent systems, Natural language processing (NLP), Algorithm Development, Model Development, AI Virtual Agent Development",
+        "Duration": "Ongoing",
+        "Technologies": "Python, RAG Search, Multiagent, AI, CrewAI, LangChain, Gemini, Gemini Pro",
+        "skills": "Problem-solving, analytical, AI/ML expertise, advanced programming techniques in Python, Data Analysis, Natural Language Processing (NLP), Algorithm Development, Model Development, AI Virtual Agent Development",
         "Link": "https://github.com/vmsaif/ats-pass-ai",
         "Key Highlights": [
-          "Development of a sophisticated resume automation tool using cutting-edge AI technologies, showcasing **innovation** and **problem-solving skills**.",
-          "Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities aligned with the **AI Engineer** role.",
-          "System engineered to extract user data and analyze job descriptions with advanced **AI** tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, directly contributing to the **democratization of AI**.",
-          "Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight and a commitment to **innovation** relevant to the **Radical AI for Social Good Lab**'s mission."
+          "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance **job search efficiency**, demonstrating **creative thinking** and **problem-solving skills**.",
+          "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing **cutting-edge** technical and **analytical** capabilities in **Artificial Intelligence (AI)**.",
+          "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, contributing to the **democratization of AI** tools for **equitable progress** in the job market.",
+          "Showcased **proactive initiative** and **innovation** by identifying a real-world problem and developing a **radical solution** using cutting-edge AI technologies, reflecting **critical thinking** and a passion for **social impact**."
         ]
       }
     ],
     "Work/Project Experience": [
       {
-        "Project Title": "Blockchain Car Mileage Tracker",
-        "Timeline": "January 2023 - Mar 2023",
+        "Job Title": "Blockchain Car Mileage Tracker",
+        "Company": "N/A (Personal Project)", 
+        "Location": "N/A (Remote)",
+        "Timeline": "January 2023 - March 2023",
         "Duration": "3 months",
-        "Technologies": "Blockchain, Smart Contracts",
-        "skills": "Blockchain, Smart contracts, Data integrity",
+        "Technologies": "Blockchain technology, Docker, Vue.js, Smart Contracts",
+        "skills": "Blockchain development, smart contract implementation, data integrity, team collaboration",
         "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
         "Key Highlights": [
-          "Blockchain application development for secure tracking and verification of vehicle mileage for insurance purposes, demonstrating experience with **data preprocessing** and **security**.",
-          "Enhancement of **data integrity** and transparency, showcasing strong **analytical skills** and attention to detail crucial for **AI development**.",
-          "Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and aligning with principles of **ethical AI**.",
-          "Effective **team collaboration** for design, development, and testing of the application, demonstrating strong **teamwork** and **problem-solving skills** valued in a **remote work** environment."
+          "Designed and developed a blockchain solution to securely track and verify vehicle mileage for insurance purposes, showcasing a deep understanding of **blockchain technology** and its applications.",
+          "Created **smart contracts** to ensure tamper-proof mileage recording, enhancing trust and transparency in vehicle history.",
+          "Collaborated effectively within a team to **design**, **develop**, and test the application, demonstrating strong **teamworking** and **problem-solving** skills.",
+          "Showcased initiative and problem-solving abilities by identifying a real-world problem and leveraging blockchain technology to provide a solution."
         ]
       },
       {
-        "Project Title": "AI Path Finding",
-        "Timeline": "Jul 2023 - Sep 2023",
+        "Job Title": "AI Path Finding",
+        "Company": "N/A (Personal Project)",
+        "Location": "N/A (Remote)",
+        "Timeline": "July 2023 - September 2023",
         "Duration": "3 months",
-        "Technologies": "Java, Git, CI/CD",
-        "skills": "A* algorithm, Java, Git, CI/CD",
+        "Technologies": "Java, Git, CI/CD, A* algorithm",
+        "skills": "Game development, AI pathfinding algorithms, software development best practices, version control, CI/CD",
         "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
         "Key Highlights": [
-          "**Java**-based game development project utilizing the A* algorithm to create an AI-driven game, showcasing skills in **algorithm development**.",
-          "Version control with **Git** for efficient **team collaboration** and code management, essential for **remote work** and **collaboration**.",
-          "Implementation of **CI/CD** practices, resulting in a 50% reduction in deployment time, demonstrating practical experience with software development lifecycles.",
-          "**Problem-solving** and **analytical skills** enhanced through the implementation of the A* pathfinding algorithm, directly transferable to **AI development** challenges.",
-          "Application of fundamental software development and testing processes to ensure robust application performance, aligning with the need for high-quality **AI solutions**."
+          "Developed a Java-based game using the A* algorithm for AI-driven game functionalities, demonstrating proficiency in game development and **AI techniques**.",
+          "Incorporated Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized **CI/CD** practices, resulting in a 50% reduction in deployment time, showcasing a commitment to efficient development processes and optimization.",
+          "Applied fundamental software development and testing processes to ensure robust application performance, highlighting attention to detail and quality assurance."
         ]
-      }
-    ],
-    "Work Experience": [
+      },
       {
-        "Job Title": "Programming Mentor",
-        "Company": "Private Tutoring",
-        "Location": "N/A",
-        "Timeline": "February 2023 - December 2023",
-        "Duration": "11 months",
-        "Technologies": "Python, Java",
-        "skills": "Teaching, Computer systems, Programming",
-        "Link": "N/A",
+        "Job Title": "Recursive Ray Tracing",
+        "Company": "N/A (Personal Project)",
+        "Location": "N/A (Remote)",
+        "Timeline": "May 2023 - July 2023",
+        "Duration": "3 months",
+        "Technologies": "OpenGL, C++",
+        "skills": "3D graphics programming, ray tracing techniques, geometric and mathematical concepts",
+        "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
         "Key Highlights": [
-          "Personalized computer systems and **programming** tutoring, focusing on **Python** and **Java**, tailored to the student's learning style, enhancing **communication skills** essential for an **AI Engineer**.",
-          "Delivery of one-on-one lessons focusing on computer system principles and learning introductory programming, demonstrating a strong foundation in **computer systems** relevant to **AI**.",
-          "Hands-on sessions facilitated for software installation, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role and fostering **critical thinking** skills."
+          "Developed a 3D graphics application using OpenGL and ray tracing techniques, demonstrating a deep understanding of 3D graphics principles and programming.",
+          "Applied geometry and mathematical concepts to calculate light paths and surface interactions, showcasing strong **analytical** and **problem-solving skills**.",
+          "Created a visually stunning and immersive 3D environment using advanced graphics techniques, highlighting **creativity** and technical proficiency.",
+          "Demonstrated the ability to independently research, learn, and apply complex concepts in the field of 3D graphics programming."
+        ]
+      },
+      {
+        "Job Title": "Bank Account System",
+        "Company": "N/A (Personal Project)",
+        "Location": "N/A (Remote)",
+        "Timeline": "Unavailable",
+        "Duration": "Unavailable",
+        "Technologies": "Java, File I/O",
+        "skills": "Object-oriented programming, polymorphism, Java programming, scalable application development",
+        "Link": "https://github.com/vmsaif/bankAccountSystem",
+        "Key Highlights": [
+          "Designed and implemented a Java-based bank account system, demonstrating a strong foundation in object-oriented programming principles.",
+          "Developed **scalable** Java applications, showcasing an understanding of object-oriented programming and design patterns.",
+          "Optimized process efficiency by 30%, highlighting a focus on performance and optimization.",
+          "Utilized polymorphism and inheritance to create a flexible and extensible system, showcasing a deep understanding of object-oriented programming concepts."
+        ]
+      },
+      {
+        "Job Title": "Hosting a Resume on GitHub Pages",
+        "Company": "N/A (Personal Project)",
+        "Location": "N/A (Remote)",
+        "Timeline": "April 2023 - April 2023",
+        "Duration": "1 month",
+        "Technologies": "Markdown, Jekyll, Git, GitHub Pages",
+        "skills": "Web development, technical documentation, Markdown, Jekyll, Git",
+        "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
+        "Key Highlights": [
+          "Created a comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating **technical writing** and **communication skills** through effective documentation.",
+          "Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation, showcasing proficiency in web development tools.",
+          "Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages, highlighting a practical understanding of web deployment.",
+          "Demonstrated a commitment to open-source **collaboration** and knowledge sharing by making the guide available online."
+        ]
+      },
+      {
+        "Job Title": "ELF Binary Analysis",
+        "Company": "N/A (Personal Project)",
+        "Location": "N/A (Remote)",
+        "Timeline": "November 2022 - December 2022",
+        "Duration": "2 months",
+        "Technologies": "C programming, debugging, Linux OS, ELF Headers",
+        "skills": "C programming, debugging, system analysis, technical documentation",
+        "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+        "Key Highlights": [
+          "Developed a C program to analyze ELF headers of binary files, demonstrating proficiency in C programming and system-level programming.",
+          "Enhanced debugging efficiency by 20%, showcasing **problem-solving** abilities and attention to detail.",
+          "Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles, demonstrating **communication skills**.",
+          "Demonstrated a commitment to continuous improvement and knowledge sharing by actively contributing to technical documentation."
+        ]
+      },
+      {
+        "Job Title": "OpenGL Sphere Lighting",
+        "Company": "N/A (Personal Project)",
+        "Location": "N/A (Remote)",
+        "Timeline": "April 2023 - June 2023",
+        "Duration": "3 months",
+        "Technologies": "OpenGL, C++",
+        "skills": "OpenGL, C++ programming, lighting techniques, user interface design, user interactivity",
+        "Link": "https://github.com/vmsaif/openGL-sphere-",
+        "Key Highlights": [
+          "Developed a 3D graphics application using OpenGL, demonstrating proficiency in **C++ programming** and 3D graphics principles.", 
+          "Implemented sophisticated lighting techniques, showcasing an understanding of light interaction with 3D objects and enhancing visual realism.",
+          "Designed an intuitive user interface, enabling user control over lighting parameters and demonstrating a focus on user experience.", 
+          "Showcased strong **problem-solving skills** by overcoming challenges related to real-time lighting and rendering in a 3D environment." 
         ]
       }
     ]
@@ -69,161 +135,49 @@
   "Report on Changes": {
     "ATS Pass AI": [
       {
-        "Original Sentence": "Development of a sophisticated resume automation tool using cutting-edge AI technologies.",
-        "Revised Sentence": "Development of a sophisticated resume automation tool using cutting-edge AI technologies, showcasing **innovation** and **problem-solving skills**.",
+        "Original Sentence": "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Revised Sentence": "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency, demonstrating creative thinking and problem-solving skills.",
         "Keywords Added": [
-          "innovation",
+          "creative thinking",
           "problem-solving skills"
         ],
-        "Rationale": "These keywords are present in the job description and highlight valuable skills for an AI Engineer role, making the sentence more relevant to ATS."
+        "Rationale": "The job description emphasizes the need for innovative and solution-oriented individuals, hence the inclusion of 'creative thinking' and 'problem-solving skills' to highlight these attributes."
       },
       {
-        "Original Sentence": "Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
-        "Revised Sentence": "Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities aligned with the **AI Engineer** role.",
+        "Original Sentence": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical and analytical capabilities.",
+        "Revised Sentence": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical and analytical capabilities in Artificial Intelligence (AI).",
         "Keywords Added": [
-          "AI Engineer"
+          "Artificial Intelligence (AI)"
         ],
-        "Rationale": "Directly mentioning the targeted job title strengthens the relevance of the experience to the ATS and the recruiter."
+        "Rationale": "The job title explicitly mentions 'Artificial Intelligence Engineer,' making it crucial to directly include 'Artificial Intelligence (AI)' to emphasize relevance to the target role."
       },
       {
-        "Original Sentence": "System engineered to extract user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-        "Revised Sentence": "System engineered to extract user data and analyze job descriptions with advanced **AI** tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**, directly contributing to the **democratization of AI**.",
+        "Original Sentence": "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Revised Sentence": "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, contributing to the democratization of AI tools for equitable progress in the job market.",
         "Keywords Added": [
-          "AI",
-          "ATS",
-          "democratization of AI"
+          "democratization of AI",
+          "equitable progress"
         ],
-        "Rationale": "Highlighting specific AI technologies and their application in democratizing AI aligns with the company's mission and the job description's focus on AI for social good."
+        "Rationale": "The company's mission emphasizes 'Radical AI for Social Good,' so incorporating phrases like 'democratization of AI' and 'equitable progress' aligns the project with the company's values and mission."
       },
       {
-        "Original Sentence": "Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
-        "Revised Sentence": "Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight and a commitment to **innovation** relevant to the **Radical AI for Social Good Lab**'s mission.",
+        "Original Sentence": "Showcased proactive initiative and innovation by identifying a real-world problem and developing a solution using cutting-edge AI technologies.",
+        "Revised Sentence": "Showcased proactive initiative and innovation by identifying a real-world problem and developing a radical solution using cutting-edge AI technologies, reflecting critical thinking and a passion for social impact.",
         "Keywords Added": [
-          "innovation",
-          "Radical AI for Social Good Lab"
+          "radical solution",
+          "critical thinking",
+          "social impact"
         ],
-        "Rationale": "Mentioning the company name and highlighting innovation directly connects the candidate's work to the specific company and its values."
+        "Rationale": "The company values 'radical thinking' and 'social impact,' so highlighting these aspects in the project description strengthens the applicant's alignment with the company culture."
       }
     ],
-    "Blockchain Car Mileage Tracker": [
-      {
-        "Original Sentence": "Blockchain application development for secure tracking and verification of vehicle mileage for insurance purposes.",
-        "Revised Sentence": "Blockchain application development for secure tracking and verification of vehicle mileage for insurance purposes, demonstrating experience with **data preprocessing** and **security**.",
-        "Keywords Added": [
-          "data preprocessing",
-          "security"
-        ],
-        "Rationale": "These keywords are frequently found in AI Engineer job descriptions, especially those involving data-driven applications."
-      },
-      {
-        "Original Sentence": "Enhancement of data integrity and transparency, showcasing strong analytical skills and attention to detail crucial for AI development.",
-        "Revised Sentence": "Enhancement of **data integrity** and transparency, showcasing strong **analytical skills** and attention to detail crucial for **AI development**.",
-        "Keywords Added": [
-          "data integrity",
-          "analytical skills",
-          "AI development"
-        ],
-        "Rationale": "Emphasizing data integrity and analytical skills directly relates the experience to the core requirements of an AI Engineer role."
-      },
-      {
-        "Original Sentence": "Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and aligning with principles of ethical AI.",
-        "Revised Sentence": "Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and aligning with principles of **ethical AI**.",
-        "Keywords Added": [
-          "ethical AI"
-        ],
-        "Rationale": "Ethical considerations are increasingly important in AI, and this addition aligns the project with the company's values."
-      },
-      {
-        "Original Sentence": "Effective team collaboration for design, development, and testing of the application, demonstrating strong team collaboration and problem-solving skills.",
-        "Revised Sentence": "Effective **team collaboration** for design, development, and testing of the application, demonstrating strong **teamwork** and **problem-solving skills** valued in a **remote work** environment.",
-        "Keywords Added": [
-          "team collaboration",
-          "teamwork",
-          "problem-solving skills",
-          "remote work"
-        ],
-        "Rationale": "These additions highlight the candidate's ability to collaborate effectively, a crucial skill in remote work settings."
-      }
-    ],
-    "AI Path Finding": [
-      {
-        "Original Sentence": "Java-based game development project utilizing the A* algorithm to create an AI-driven game.",
-        "Revised Sentence": "**Java**-based game development project utilizing the A* algorithm to create an AI-driven game, showcasing skills in **algorithm development**.",
-        "Keywords Added": [
-          "Java",
-          "algorithm development"
-        ],
-        "Rationale": "Explicitly mentioning the programming language and highlighting algorithm development makes the experience more relevant to AI roles."
-      },
-      {
-        "Original Sentence": "Version control with Git for efficient team collaboration and code management, essential for remote work and collaboration.",
-        "Revised Sentence": "Version control with **Git** for efficient **team collaboration** and code management, essential for **remote work** and **collaboration**.",
-        "Keywords Added": [
-          "Git",
-          "team collaboration",
-          "remote work",
-          "collaboration"
-        ],
-        "Rationale": "Using relevant keywords like "Git", "team collaboration", and "remote work" makes the experience more attractive to ATS."
-      },
-      {
-        "Original Sentence": "Implementation of CI/CD practices, resulting in a 50% reduction in deployment time, demonstrating practical experience with software development lifecycles.",
-        "Revised Sentence": "Implementation of **CI/CD** practices, resulting in a 50% reduction in deployment time, demonstrating practical experience with software development lifecycles.",
-        "Keywords Added": [
-          "CI/CD"
-        ],
-        "Rationale": "Including "CI/CD" directly aligns with the technical skills mentioned in the job description."
-      },
-      {
-        "Original Sentence": "Problem-solving and analytical skills enhanced through the implementation of the A* pathfinding algorithm, directly transferable to AI development challenges.",
-        "Revised Sentence": "**Problem-solving** and **analytical skills** enhanced through the implementation of the A* pathfinding algorithm, directly transferable to **AI development** challenges.",
-        "Keywords Added": [
-          "Problem-solving",
-          "analytical skills",
-          "AI development"
-        ],
-        "Rationale": "Highlighting transferable skills like problem-solving and analytical skills directly connects the experience to the AI field."
-      },
-      {
-        "Original Sentence": "Application of fundamental software development and testing processes to ensure robust application performance, aligning with the need for high-quality AI solutions.",
-        "Revised Sentence": "Application of fundamental software development and testing processes to ensure robust application performance, aligning with the need for high-quality **AI solutions**.",
-        "Keywords Added": [
-          "AI solutions"
-        ],
-        "Rationale": "Mentioning "AI solutions" connects the candidate's experience to the desired outcome of the AI Engineer role."
-      }
-    ],
-    "Programming Mentor": [
-      {
-        "Original Sentence": "Personalized computer systems and programming tutoring, focusing on Python and Java, tailored to the student's learning style.",
-        "Revised Sentence": "Personalized computer systems and **programming** tutoring, focusing on **Python** and **Java**, tailored to the student's learning style, enhancing **communication skills** essential for an **AI Engineer**.",
-        "Keywords Added": [
-          "programming",
-          "Python",
-          "Java",
-          "communication skills",
-          "AI Engineer"
-        ],
-        "Rationale": "Highlighting specific programming languages and emphasizing communication skills makes the experience more relevant to the AI Engineer role."
-      },
-      {
-        "Original Sentence": "Delivery of one-on-one lessons focusing on computer system principles and learning introductory programming, demonstrating a strong foundation in computer systems relevant to AI.",
-        "Revised Sentence": "Delivery of one-on-one lessons focusing on computer system principles and learning introductory programming, demonstrating a strong foundation in **computer systems** relevant to **AI**.",
-        "Keywords Added": [
-          "computer systems",
-          "AI"
-        ],
-        "Rationale": "Explicitly mentioning "computer systems" and "AI" strengthens the connection between the candidate's experience and the AI field."
-      },
-      {
-        "Original Sentence": "Hands-on sessions facilitated for software installation, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role and fostering critical thinking skills.",
-        "Revised Sentence": "Hands-on sessions facilitated for software installation, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role and fostering **critical thinking** skills.",
-        "Keywords Added": [
-          "critical thinking"
-        ],
-        "Rationale": "Including "critical thinking" as a skill aligns with the problem-solving nature of the AI Engineer role."
-      }
-    ]
+    "Blockchain Car Mileage Tracker": [],
+    "AI Path Finding": [],
+    "Recursive Ray Tracing": [],
+    "Bank Account System": [],
+    "Hosting a Resume on GitHub Pages": [],
+    "ELF Binary Analysis": [],
+    "OpenGL Sphere Lighting": []
   }
 }
 ```

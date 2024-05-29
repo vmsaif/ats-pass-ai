@@ -65,7 +65,7 @@ class RagSearchTool:
                         result = True
                         print("File has been indexed before.")
         if(result == False):
-            RagSearchTool.delete_user_profile_files(delete_pretasks = True)
+            RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
         return result
     
     def process_and_index(file_path: str):
@@ -133,14 +133,14 @@ class RagSearchTool:
             f.write(current_file_hash + '\n')
         print("Hash store file updated.")
 
-    def delete_user_profile_files(delete_pretasks: bool = False):
-        """Delete the user profile files but not the folder, optionally delete pre-task files."""
+    def delete_applicant_profile_files(delete_pretasks: bool = False):
+        """Delete the applicant profile files but not the folder, optionally delete pre-task files."""
         from ats_pass_ai.output_file_paths import PATHS
 
         # Delete files in the information extraction folder
         
         RagSearchTool._delete_files_in_directory(PATHS["info_extraction_folder_path"])
-        print("User profile files deletion attempt complete.")
+        print("applicant profile files deletion attempt complete.")
 
         # Optionally delete files in the pre-tasks folder
         if delete_pretasks:

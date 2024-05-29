@@ -1,34 +1,30 @@
 ```json
 {
-  "user_skills": {
+  "applicant_skills": {
     "exact_match_with_job_description": {
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [
-        "Langchain"
-      ],
-      "Tools": [],
-      "Soft Skills": [
-        "Communication Skills",
-        "Teamwork"
-      ]
-    },
-    "partial_match_with_job_description": {
-      "Programming Languages": [
-        {
-          "name": "Java",
-          "pertially_matched_with_job_description": "Algorithm Development"
-        }
-      ],
       "Frameworks": [],
       "Tools": [],
       "Soft Skills": [
-        {
-          "name": "Leadership",
-          "pertially_matched_with_job_description": "Collaboration"
-        }
+        "Communication Skills",
+        "Teamwork",
+        "Problem-Solving",
+        "Critical Thinking"
       ]
+    },
+    "partial_match_with_job_description": {
+      "Programming Languages": {
+        "name": "Java",
+        "pertially_matched_with_job_description": "Algorithm Development"
+      },
+      "Frameworks": {},
+      "Tools": {},
+      "Soft Skills": {
+        "name": "Data Analysis",
+        "pertially_matched_with_job_description": "Data Analysis"
+      }
     }
   }
 }

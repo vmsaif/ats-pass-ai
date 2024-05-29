@@ -1,59 +1,131 @@
-# **Saif Mahmud** 204 955 5064 | msaifofficial@gmail.com | linkedin.com/in/vmsaif | Winnipeg, MB
-[empty line]
+# **Saif Mahmud**  204 955 5064 | msaiofficial@gmail.com | https://www.linkedin.com/in/vmsaif/ | saifmahmud.dev
+
 ## Summary
-Highly motivated software developer with a passion for leveraging technology for social good seeks the Artificial Intelligence Engineer position at Radical AI for Social Good Lab. Bringing strong Java-based algorithm development experience and a collaborative spirit, I aim to contribute to the democratization of AI and drive positive change through innovative solutions.
-[empty line]
+Driven Artificial Intelligence Engineer seeking to leverage expertise in AI, multi-agent systems, and NLP at Radical AI for Social Good Lab. Proven ability to develop and implement innovative solutions, as demonstrated by the creation of "ATS Pass AI," a resume optimization tool that utilizes advanced AI models to enhance job search efficiency and promote equitable progress in the job market.
+
 ## Skills
-**Programming Languages:** Python, Java
-**Frameworks:** LangChain
-**Tools:** Git, CI/CD, OpenAI API, Meta Llama 2, Google Gemini, Google Gen AI Studio
-**Soft Skills:** Communication Skills, Teamwork, Problem-Solving, Teaching, Leadership
-[empty line]
+**Programming Languages:**
+- Python
+- Java
+- C++
+- C
+
+**Frameworks:**
+- Vue.js
+- Jekyll
+- OpenGL
+- LangChain
+- CrewAI
+
+**Tools:**
+- Docker
+- Git
+- CI/CD
+- Gemini
+- Gemini Pro
+- RAG Search
+- Markdown
+
+**Soft Skills:**
+- Communication Skills
+- Teamwork
+- Problem-Solving
+- Critical Thinking
+- Data Analysis
+- Algorithm Development
+- Model Development
+- AI Virtual Agent Development
+- Blockchain development
+- Smart contract implementation
+- Data integrity
+- Game development
+- AI pathfinding algorithms
+- Software development best practices
+- Version control
+- 3D graphics programming
+- Ray tracing techniques
+- Geometric and mathematical concepts
+- Object-oriented programming
+- Polymorphism
+- Scalable application development
+- Web development
+- Technical documentation
+- Debugging
+- System analysis
+- Lighting techniques
+- User interface design
+- User interactivity
+
 ## Project Experience
-### ATS Pass AI January 2024 - Present ([Duration]) | City, State
-Technologies, frameworks, and tools used:  Python, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio
-Link: https://github.com/vmsaif/ats-pass-ai
-- Development of a sophisticated resume automation tool leveraging AI and Machine Learning technologies, directly aligning with the company's focus on AI for Social Good.
-- Utilization of advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical, analytical, and problem-solving skills.
-- System engineered to extract user data and analyze job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, highlighting expertise in Natural Language Processing and Data Preprocessing.
-- Scalable architecture developed to anticipate future needs and adaptations, showcasing foresight, innovation, and a commitment to Ethical AI principles.
+### ATS Pass AI
 [empty line]
-### Blockchain Car Mileage Tracker January 2023 - Mar 2023 ([Duration]) | City, State
-Technologies, frameworks, and tools used:  Blockchain, Smart Contracts
-Link: https://github.com/vmsaif/blockChainCarMilageTracker
-- Developed a Blockchain application for secure tracking and verification of vehicle mileage for insurance purposes, demonstrating skills in algorithm development and data analysis.
-- Enhancement of data integrity and transparency, showcasing strong analytical skills and attention to detail, aligning with the company's values of Equitable Progress and Responsible AI.
-- Smart contract crafting for tamper-proof mileage recording, enhancing trust in vehicle history and showcasing expertise in Data Preprocessing and secure data management.
-- Effective team collaboration for design, development, and testing of the application, demonstrating strong teamwork and problem-solving skills.
+[January 2024 - Present] |
+Technologies: Python, RAG Search, Multiagent, AI, CrewAI, LangChain, Gemini, Gemini Pro |
+- Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency, demonstrating creative thinking and problem-solving skills.
+- Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical and analytical capabilities in Artificial Intelligence (AI).
+- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, contributing to the democratization of AI tools for equitable progress in the job market.
+- Showcased proactive initiative and innovation by identifying a real-world problem and developing a radical solution using cutting-edge AI technologies, reflecting critical thinking and a passion for social impact.
 [empty line]
-### AI Path Finding Jul 2023 - Sep 2023 ([Duration]) | City, State
-Technologies, frameworks, and tools used:  Java, Git, CI/CD
-Link: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
-- Developed a Java-based game utilizing the A* algorithm for AI-driven gameplay, demonstrating expertise in Algorithm Development and AI principles.
-- Utilized Git for efficient version control and collaboration, highlighting experience with collaborative software development practices.
-- Implemented CI/CD practices, resulting in a 50% reduction in deployment time and showcasing a commitment to efficient and innovative development processes.
-- Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
-- Applied fundamental software development and testing processes to ensure robust application performance, aligning with the company's value of delivering high-quality solutions.
+### Blockchain Car Mileage Tracker
+[January 2023 - March 2023] |
+Technologies: Blockchain technology, Docker, Vue.js, Smart Contracts |
+- Designed and developed a blockchain solution to securely track and verify vehicle mileage for insurance purposes, showcasing a deep understanding of blockchain technology and its applications.
+- Created smart contracts to ensure tamper-proof mileage recording, enhancing trust and transparency in vehicle history.
+- Collaborated effectively within a team to design, develop, and test the application, demonstrating strong teamworking and problem-solving skills.
+- Showcased initiative and problem-solving abilities by identifying a real-world problem and leveraging blockchain technology to provide a solution.
 [empty line]
-## Work Experience
-### Programming Mentor February 2023 - December 2023 ([Duration]) | Private Tutoring | N/A
-Technologies, frameworks, and tools used: Python, Java
-Link: N/A
-- Provided personalized computer systems and programming tutoring, focusing on Python and Java, tailored to the student's learning style, emphasizing strong communication and teaching skills.
-- Delivered one-on-one lessons focusing on computer system principles and introductory programming, highlighting experience in breaking down complex concepts into understandable components.
-- Facilitated hands-on sessions for software installation, debugging, and understanding computer operations, emphasizing practical problem-solving skills relevant to a systems engineering role.
+### AI Path Finding
+[July 2023 - September 2023] |
+Technologies: Java, Git, CI/CD, A* algorithm |
+- Developed a Java-based game using the A* algorithm for AI-driven game functionalities, demonstrating proficiency in game development and AI techniques.
+- Incorporated Git for version control, ensuring efficient team collaboration and code management.
+- Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing a commitment to efficient development processes and optimization.
+- Applied fundamental software development and testing processes to ensure robust application performance, highlighting attention to detail and quality assurance.
 [empty line]
+### Recursive Ray Tracing
+[May 2023 - July 2023] |
+Technologies: OpenGL, C++ |
+- Developed a 3D graphics application using OpenGL and ray tracing techniques, demonstrating a deep understanding of 3D graphics principles and programming.
+- Applied geometry and mathematical concepts to calculate light paths and surface interactions, showcasing strong analytical and problem-solving skills.
+- Created a visually stunning and immersive 3D environment using advanced graphics techniques, highlighting creativity and technical proficiency.
+- Demonstrated the ability to independently research, learn, and apply complex concepts in the field of 3D graphics programming.
+[empty line]
+### Bank Account System
+[Unavailable] |
+Technologies: Java, File I/O |
+- Designed and implemented a Java-based bank account system, demonstrating a strong foundation in object-oriented programming principles.
+- Developed scalable Java applications, showcasing an understanding of object-oriented programming and design patterns.
+- Optimized process efficiency by 30%, highlighting a focus on performance and optimization.
+- Utilized polymorphism and inheritance to create a flexible and extensible system, showcasing a deep understanding of object-oriented programming concepts.
+[empty line]
+### Hosting a Resume on GitHub Pages
+[April 2023 - April 2023] |
+Technologies: Markdown, Jekyll, Git, GitHub Pages |
+- Created a comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating technical writing and communication skills through effective documentation.
+- Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation, showcasing proficiency in web development tools.
+- Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages, highlighting a practical understanding of web deployment.
+- Demonstrated a commitment to open-source collaboration and knowledge sharing by making the guide available online.
+[empty line]
+### ELF Binary Analysis
+[November 2022 - December 2022] |
+Technologies: C programming, debugging, Linux OS, ELF Headers |
+- Developed a C program to analyze ELF headers of binary files, demonstrating proficiency in C programming and system-level programming.
+- Enhanced debugging efficiency by 20%, showcasing problem-solving abilities and attention to detail.
+- Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles, demonstrating communication skills.
+- Demonstrated a commitment to continuous improvement and knowledge sharing by actively contributing to technical documentation.
+[empty line]
+### OpenGL Sphere Lighting
+[April 2023 - June 2023] |
+Technologies: OpenGL, C++ |
+- Developed a 3D graphics application using OpenGL, demonstrating proficiency in C++ programming and 3D graphics principles.
+- Implemented lighting techniques to create realistic 3D scenes, showcasing an understanding of light and shadow interaction.
+- Designed an intuitive user interface for controlling lighting parameters, demonstrating a focus on user experience and interactivity.
+
 ## Education
-**University of Manitoba**, City, State - BSc, Computer Science | Graduated: October 2023 - GPA:3.07
-[empty line]
+**University of Manitoba**, - Computer Science | Graduated: October 2023 | GPA: 3.07
+
 ## References
-**Abu Kabir**, Director IT Service Management, Microsoft, 204-298-3693 (Reference)
-**Safiur Mahdi**, Java Developer, Skip the Dishes, 204-583-3432 (Reference)
-[empty line]
-## Volunteer Work
-**Organization Name:** .dev Programming Club
-**Role:** Active Member
-**Responsibilities:** 
-- Engaged with the latest software development technologies and tools.
-- Collaborated on team projects focused on Java and Cloud Technologies.
-**Timeline:** 2019-2023
+## Abu Kabir
+Director IT Service Management | Microsoft | 204-298-3693
+## Safiur Mahdi
+Java Developer | Skip the Dishes | 204-583-3432
