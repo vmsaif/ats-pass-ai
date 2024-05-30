@@ -1,124 +1,73 @@
+```json
 {
-  "selected_experiences": {
-    "Most Recent Experience": [
-      {
-        "Project Title": "ATS Pass AI",
-        "Timeline": "January 2024 - Present",
-        "Duration": "Ongoing",
-        "Technologies, frameworks, and tools Used": "Python, RAG Search, Multiagent, AI",
-        "Skills": "Problem-solving, analytical, AI/ML expertise, advanced programming techniques in Python",
-        "Link": "https://github.com/vmsaif/ats-pass-ai",
-        "Key Highlights": [
-          "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
-          "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
-          "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-          "Showcased proactive initiative and innovation by identifying a real-world problem and developing a solution using cutting-edge AI technologies."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Improved job search efficiency, enhanced resume quality, increased chances of resume selection by Applicant Tracking Systems (ATS), demonstrated proficiency in AI/ML and natural language processing (NLP)."
-      }
+ "selected_experiences": {
+  "Most Recent Experience": [
+   {
+    "Project Title": "ATS Pass AI",
+    "Timeline": "January 2024 - Present",
+    "Duration": null,
+    "Technologies, frameworks, and tools Used": "Python, CrewAI, LangChain, Gemini, RAG Search",
+    "Skills": "AI, ML, NLP",
+    "Link": "https://github.com/vmsaif/ats-pass-ai",
+    "Key Highlights": [
+     "Developed a multi-agent system using AI to enhance resume tailoring",
+     "Utilized advanced AI models and multi-agent technologies to achieve high keyword alignment and ATS optimization",
+     "Showcased foresight and innovation by designing a scalable architecture for future growth"
     ],
-    "Work/Project Experience": [
-      {
-        "Project Title": "Blockchain Car Mileage Tracker",
-        "Timeline": "January 2023 - March 2023",
-        "Duration": "3 months",
-        "Technologies, frameworks, and tools Used": "Blockchain technology, Docker, Vue.js",
-        "Skills": "Blockchain development, smart contract implementation, data integrity, team collaboration",
-        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-        "Key Highlights": [
-          "Designed and developed a blockchain solution to securely track and verify vehicle mileage for insurance purposes, showcasing a deep understanding of blockchain technology and its applications.",
-          "Created smart contracts to ensure tamper-proof mileage recording, enhancing trust and transparency in vehicle history.",
-          "Collaborated effectively within a team to design, develop, and test the application, demonstrating strong teamworking and problem-solving skills.",
-          "Showcased initiative and problem-solving abilities by identifying a real-world problem and leveraging blockchain technology to provide a solution."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Enhanced data integrity and transparency in vehicle mileage tracking, reduced potential for mileage fraud, improved trust in vehicle history, demonstrated proficiency in blockchain development and smart contract implementation."
-      },
-      {
-        "Project Title": "AI Path Finding",
-        "Timeline": "July 2023 - September 2023",
-        "Duration": "3 months",
-        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* algorithm",
-        "Skills": "Game development, AI pathfinding algorithms, software development best practices, version control, CI/CD",
-        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-        "Key Highlights": [
-          "Developed a Java-based game using the A* algorithm for AI-driven game functionalities, demonstrating proficiency in game development and AI techniques.",
-          "Incorporated Git for version control, ensuring efficient team collaboration and code management.",
-          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing a commitment to efficient development processes and optimization.",
-          "Applied fundamental software development and testing processes to ensure robust application performance, highlighting attention to detail and quality assurance."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Created an engaging AI-driven game, improved development efficiency through CI/CD implementation, demonstrated proficiency in software development best practices, showcased ability to apply algorithms to practical applications."
-      },
-      {
-        "Project Title": "Recursive Ray Tracing",
-        "Timeline": "May 2023 - July 2023",
-        "Duration": "3 months",
-        "Technologies, frameworks, and tools Used": "OpenGL, C++",
-        "Skills": "3D graphics programming, ray tracing techniques, geometric and mathematical concepts",
-        "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
-        "Key Highlights": [
-          "Developed a 3D graphics application using OpenGL and ray tracing techniques, demonstrating a deep understanding of 3D graphics principles and programming.",
-          "Applied geometry and mathematical concepts to calculate light paths and surface interactions, showcasing strong analytical and problem-solving skills.",
-          "Created a visually stunning and immersive 3D environment using advanced graphics techniques, highlighting creativity and technical proficiency.",
-          "Demonstrated the ability to independently research, learn, and apply complex concepts in the field of 3D graphics programming."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Developed a visually impressive and technically sound 3D graphics application, showcased proficiency in ray tracing techniques and 3D graphics programming, demonstrated a passion for exploring and implementing cutting-edge graphics technologies.",
-      },
-      {
-        "Project Title": "Bank Account System",
-        "Timeline": "Unavailable",
-        "Duration": "Unavailable",
-        "Technologies, frameworks, and tools Used": "Java, File I/O",
-        "Skills": "Object-oriented programming, polymorphism, Java programming, scalable application development",
-        "Link": "https://github.com/vmsaif/bankAccountSystem",
-        "Key Highlights": [
-          "Designed and implemented a Java-based bank account system, demonstrating a strong foundation in object-oriented programming principles.",
-          "Developed scalable Java applications, showcasing an understanding of object-oriented programming and design patterns.",
-          "Optimized process efficiency by 30%, highlighting a focus on performance and optimization.",
-          "Utilized polymorphism and inheritance to create a flexible and extensible system, showcasing a deep understanding of object-oriented programming concepts."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Created a robust and efficient bank account system, demonstrated proficiency in object-oriented programming and Java development, showcased an ability to optimize and enhance system performance.",
-      },
-      {
-        "Project Title": "Hosting a Resume on GitHub Pages",
-        "Timeline": "April 2023 - April 2023",
-        "Duration": "1 month",
-        "Technologies, frameworks, and tools Used": "Markdown, Jekyll, Git",
-        "Skills": "Web development, technical documentation, Markdown, Jekyll, Git",
-        "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
-        "Key Highlights": [
-          "Created a comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating technical writing and documentation skills.",
-          "Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation, showcasing proficiency in web development tools.",
-          "Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages, highlighting a practical understanding of web deployment.",
-          "Demonstrated a commitment to open-source collaboration and knowledge sharing by making the guide available online."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Developed a beginner-friendly guide to web hosting and resume creation, shared knowledge and resources with the community, showcased proficiency in technical documentation and web development best practices."
-      },
-      {
-        "Project Title": "ELF Binary Analysis",
-        "Timeline": "November 2022 - December 2022",
-        "Duration": "2 months",
-        "Technologies, frameworks, and tools Used": "C programming, debugging, Linux OS",
-        "Skills": "C programming, debugging, system analysis, technical documentation",
-        "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
-        "Key Highlights": [
-          "Developed a C program to analyze ELF headers of binary files, demonstrating proficiency in C programming and system-level programming.",
-          "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities and attention to detail.",
-          "Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles.",
-          "Demonstrated a commitment to continuous improvement and knowledge sharing by actively contributing to technical documentation."
-        ],
-        "Team size": "Unavailable",
-        "Outcomes": "Developed a valuable tool for analyzing binary files, improved debugging efficiency, contributed to product documentation, showcased proficiency in C programming and system-level programming."
-      },
-      {
-        "Project Title": "OpenGL Sphere Lighting",
-        "Timeline": "April 2023 - June 2023",
-        "Duration": "3 months",
-        "Technologies, frameworks, and tools Used": "OpenGL, C++",
-        "Skills": "OpenGL, C++ programming, lighting techniques, user interface design, user interactivity",
-        "Link": "https://github.com/vmsaif/openGL-sphere-
+    "Team size": "Not Mentioned",
+    "Outcomes": "Demonstrates proficiency in AI, ML, NLP, and Python relevant to AI Engineer role."
+   }
+  ],
+  "Project Experience": [
+   {
+    "Project Title": "AI Path Finding",
+    "Timeline": "Jul 2023 - Sep 2023",
+    "Duration": null,
+    "Technologies, frameworks, and tools Used": "Java, A* Algorithm, Git, CI/CD",
+    "Skills": "AI development, pathfinding",
+    "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+    "Key Highlights": [
+     "Developed an AI-driven game using the A* pathfinding algorithm",
+     "Utilized Git for version control and CI/CD practices for efficient deployment, reducing time by 50%",
+     "Demonstrates problem-solving, analytical skills, and understanding of software development processes"
+    ],
+    "Team size": "Not Mentioned",
+    "Outcomes": "Showcases AI development skills relevant to an AI engineering internship."
+   },
+   {
+    "Project Title": "ELF Binary Analysis",
+    "Timeline": "Nov 2022 - Dec 2022",
+    "Duration": null,
+    "Technologies, frameworks, and tools Used": "C Programming, Debugging, Linux OS",
+    "Skills": "Debugging, system analysis, C programming",
+    "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+    "Key Highlights": [
+     "Developed a tool for ELF header analysis in C, emphasizing debugging, system analysis, and documentation",
+     "Improved debugging efficiency by 20%, demonstrating problem-solving abilities",
+     "Contributed to technical documentation for product improvement"
+    ],
+    "Team size": "Not Mentioned",
+    "Outcomes": "Demonstrates strong programming and systems analysis skills, transferable to AI development."
+   }
+  ],
+  "Work Experience": [
+   {
+    "Job Title": "Programming Mentor",
+    "Company Name": "Private Tutoring",
+    "Timeline": "February 2023 - December 2023",
+    "Duration": null,
+    "Technologies, frameworks, and tools Used": "Python, Java",
+    "Skills": "Mentoring, teaching",
+    "Link": "Not Mentioned",
+    "Key Highlights": [
+     "Tutored a student in computer systems and programming, improving their understanding of concepts",
+     "Tailored teaching methods to suit the student's learning style, leading to noticeable improvement",
+     "Facilitated hands-on sessions for software installation, debugging, and system understanding"
+    ],
+    "Team size": "Not Mentioned",
+    "Outcomes": "Showcases mentoring and teaching skills, valuable for collaborative AI development environments."
+   }
+  ]
+ }
+}
+```

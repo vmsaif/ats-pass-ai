@@ -14,7 +14,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
 from langchain_community.tools import DuckDuckGoSearchRun
-from ats_pass_ai.request_limiter import RequestLimiter
+from ats_pass_ai.limiter import Limiter
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 from ats_pass_ai.output_file_paths import PATHS
 
@@ -55,10 +55,18 @@ class ResumeCrew:
 		safety_settings=safety_settings,
 	)
 
-	small_llm_limiter = RequestLimiter(llm_size='SMALL').run
-	large_llm_limiter = RequestLimiter(llm_size='LARGE').run
+	small_limiter = Limiter(llm_size='SMALL', llm = genAI, langchainMethods=True)
+	large_limiter = Limiter(llm_size='LARGE', llm = genAILarge, langchainMethods=True)
 
+	# rpd, rpm limiter, these will be used on agents
+	small_llm_limiter = small_limiter.request_limiter
+	large_llm_limiter = large_limiter.request_limiter
 
+	# token limiter, these will be used on the tasks to limit the token usage.
+	small_token_limiter = small_limiter.record_token_usage
+	large_token_limiter = large_limiter.record_token_usage
+
+	# debugFlag = False
 	debugFlag = True
 
 	@crew
@@ -82,23 +90,22 @@ class ResumeCrew:
 
 			my_tasks.append(self.profile_builder_task())
 
-		# # Either way, these tasks will be executed.
-				
-		# my_tasks.append(self.ats_friendly_skills_task())
-		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# Either way, these tasks will be executed.
+		my_tasks.append(self.ats_friendly_skills_task())
+		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
-		# my_tasks.append(self.experience_choosing_task())
-		# my_tasks.append(self.split_context_of_experience_choosing_task())
-		# my_tasks.append(self.gather_info_of_chosen_experiences())
-		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
-		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		my_tasks.append(self.experience_choosing_task())
+		my_tasks.append(self.split_context_of_experience_choosing_task())
+		my_tasks.append(self.gather_info_of_chosen_experiences())
+		my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
+		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
-		# my_tasks.append(self.coursework_extraction_task())
-		# my_tasks.append(self.career_objective_task())
+		my_tasks.append(self.coursework_extraction_task())
+		my_tasks.append(self.career_objective_task())
 
-		# my_tasks.append(self.resume_in_json_task())
-		# my_tasks.append(self.resume_compilation_task())
-		# my_tasks.append(self.latex_resume_generation_task())
+		my_tasks.append(self.resume_in_json_task())
+		my_tasks.append(self.resume_compilation_task())
+		my_tasks.append(self.latex_resume_generation_task())
 		my_tasks.append(self.cover_letter_generation_task())
 				
 		# Return the crew
@@ -106,6 +113,7 @@ class ResumeCrew:
 			# max_rpm=10,
 			agents=self.agents,
 			tasks=my_tasks,
+			language="en",
 			# cache=True,
 			full_output=True,
 			process=Process.sequential,
@@ -233,6 +241,8 @@ class ResumeCrew:
 			# cache=True,
 			llm=self.genAILarge,
 			step_callback=self.large_llm_limiter
+			# step_callback=self.small_llm_limiter,
+			# llm=self.genAI
 		)
 	
 	@agent
@@ -245,6 +255,8 @@ class ResumeCrew:
 			# cache=True,
 			llm=self.genAILarge,
 			step_callback=self.large_llm_limiter
+			# step_callback=self.small_llm_limiter,
+			# llm=self.genAI
 		)
 
 	# ---------------------- Define the tasks ----------------------
@@ -299,6 +311,7 @@ class ResumeCrew:
 			context=context,
 			agent=self.cover_letter_generation_agent(),
 			output_file=PATHS["cover_letter_generation_task"],
+			callback = self.large_token_limiter
 		)
 
 	@task
@@ -318,6 +331,7 @@ class ResumeCrew:
 			expected_output=expected_output,
 			agent=self.latex_resume_agent(),
 			output_file=PATHS["latex_resume_generation_task"],
+			callback = self.large_token_limiter
 		)
 
 	@task
@@ -327,8 +341,9 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["personal_information_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter	
 		)
-	
+
 	@task
 	def education_extraction_task(self):
 		return Task(
@@ -336,6 +351,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["education_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
  
 	@task
@@ -345,6 +361,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["volunteer_work_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
 
 	@task
@@ -354,6 +371,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["awards_recognitions_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
  
 	@task
@@ -363,6 +381,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["references_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
 	
 	@task
@@ -372,6 +391,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["personal_traits_interests_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
 	
 	@task
@@ -391,6 +411,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			context=context,
 			output_file=PATHS["profile_builder_task"],
+			callback=self.small_token_limiter
 		)
 
 	@task
@@ -400,6 +421,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			output_file=PATHS["coursework_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
 
 	@task
@@ -416,6 +438,7 @@ class ResumeCrew:
 			expected_output = expected_output,
 			agent=self.generalist_agent(),
 			output_file=PATHS["work_experience_extraction_task"],
+			callback=self.small_token_limiter
 		)
 
 	@task
@@ -433,6 +456,7 @@ class ResumeCrew:
 			expected_output=expected_output,
 			agent=self.generalist_agent(),
 			output_file=PATHS["project_experience_extraction_task"],
+			callback=self.small_token_limiter
 		)
 	
 	@task
@@ -442,6 +466,7 @@ class ResumeCrew:
 			agent=self.technical_details_agent(),
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
 			output_file=PATHS["skills_from_exp_and_project"],
+			callback=self.small_token_limiter
 		)
 
 	@task
@@ -461,6 +486,7 @@ class ResumeCrew:
 			context=[self.skills_from_exp_and_project_task()],
 			output_file=PATHS["skills_extraction_task"],
 			tools=[self.queryTool],
+			callback=self.small_token_limiter
 		)
 
 	# # ----------------- Skills Match Identification -----------------
@@ -480,6 +506,7 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
+			callback=self.large_token_limiter,
 			context=[self.skills_extraction_task()],
 			tools=[self.webSearchTool],
 			output_file=PATHS["ats_friendly_skills_task"],
@@ -501,6 +528,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			context=[self.ats_friendly_skills_task()],
 			output_file=PATHS["split_context_of_ats_friendly_skills_task"],
+			callback=self.small_token_limiter			
 		)
 	
 	# ----------------- End of Skills Match Identification -----------------
@@ -526,6 +554,7 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.cross_match_evaluator_with_job_description_agent(),
+			callback=self.large_token_limiter,
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
 			output_file=PATHS["experience_choosing_task"],
 		)
@@ -547,6 +576,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			context=[self.experience_choosing_task()],
 			output_file=PATHS["split_context_of_experience_choosing_task"],
+			callback=self.small_token_limiter
 		)
 
 	# ----------------- End of Choose Work/Project Experience -----------------
@@ -573,6 +603,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			context=[self.split_context_of_experience_choosing_task()],
 			output_file=PATHS["gather_info_of_chosen_experiences"],
+			callback=self.small_token_limiter	
 		)
 
 	@task
@@ -593,6 +624,7 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.ats_keyword_integration_agent(),
+			callback=self.large_token_limiter,
 			context=[self.gather_info_of_chosen_experiences()],
 			output_file=PATHS["ats_friendly_keywords_into_experiences"],
 		)
@@ -612,6 +644,7 @@ class ResumeCrew:
 			agent=self.generalist_agent(),
 			context=[self.ats_friendly_keywords_into_experiences_task()],
 			output_file=PATHS["split_context_of_ats_friendly_keywords_into_experiences"],
+			callback=self.small_token_limiter
 		)
 	
 	@task
@@ -627,6 +660,7 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.career_objective_agent(),
+			callback=self.large_token_limiter,
 			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
 			output_file=PATHS["career_objective_task"],
 		)
@@ -666,6 +700,7 @@ class ResumeCrew:
 			description = description,
 			expected_output = expected_output,
 			agent = self.resume_in_json_agent(),
+			callback=self.large_token_limiter,
 			context = context,
 			output_file = PATHS["resume_in_json_task"],
 		)
@@ -684,9 +719,11 @@ class ResumeCrew:
 			description=description,
 			expected_output=expected_output,
 			agent=self.resume_compilation_agent(),
+			callback=self.small_token_limiter,
 			# agent=self.generalist_agent(),
 			context=[self.resume_in_json_task()],
 			output_file=PATHS["resume_compilation_task"],
+
 		)
 	
 	def load_file(self, file_path):

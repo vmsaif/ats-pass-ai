@@ -5,93 +5,97 @@
         "Name": "Python",
         "field": [
           "Programming Language",
-          "AI, ML",
-          "Data Structures and Algorithms"
-          ]
+          "AI, ML"
+        ]
       },
       {
         "Name": "Java",
         "field": [
-          "Programming Language",
-          "OOP",
-          "Software Engineering",
-          "Distributed Computing",
-          "Real-time Data Processing"
+          "Programming Language"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "Web Framework"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [
+          "Containerization"
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [
+          "3D Graphics"
         ]
       },
       {
         "Name": "C++",
         "field": [
-          "Programming Language",
-          "OOP",
-          "Software Engineering"
+          "Systems Programming"
         ]
       },
       {
-        "Name": "JavaScript",
+        "Name": "C",
         "field": [
-          "Programming Language",
-          "Web and Mobile Technologies",
-          "Distributed Computing"
+          "Systems Programming"
         ]
       },
       {
-        "Name": "SQL",
+        "Name": "RAG Search",
         "field": [
-          "Database",
-          "Database Implementation"
+          "NLP, IR"
         ]
       },
       {
-        "Name": "JSON",
+        "Name": "CrewAI",
         "field": [
-          "Database"
+          "AI, ML",
+          "Multiagent Systems"
         ]
       },
       {
-        "Name": "noSQL",
+        "Name": "LangChain",
         "field": [
-          "Database"
+          "AI, 
+          ML, 
+          LLM (Large Language Model)"
         ]
       },
       {
-        "Name": "Schema",
+        "Name": "Gemini",
         "field": [
-          "Database"
+          "AI, ML",
+          "Multiagent Systems"
         ]
       },
       {
-        "Name": "AWS",
+        "Name": "Github Actions",
         "field": [
-          "Cloud & DevOps"
+          "CI/CD"
         ]
       },
       {
-        "Name": "CI/CD",
+        "Name": "Linux OS",
         "field": [
-          "Cloud & DevOps"
-        ]
-      },
-      {
-        "Name": "GitHub Action",
-        "field": [
-          "Cloud & DevOps"
+          "Operating Systems"
         ]
       }
     ],
     "Frameworks": [
       {
-        "Name": "Angular",
-        "field": [
-          "JavaScript Framework",
-          "Web Development",
-          "Frontend Development"
-        ]
-      },
-      {
         "Name": "Spring Boot",
         "field": [
           "Java Framework"
+        ]
+      },
+      {
+        "Name": "Jekyll",
+        "field": [
+          "Documentation Framework"
         ]
       }
     ],
@@ -111,23 +115,177 @@
       {
         "Name": "Project Management",
         "field": [
-          "Management Skills",
-          "SDLC"
+          "Management Skills"
+        ]
+      },
+      {
+        "Name": "Mentoring",
+        "field": [
+          "Training Skills"
+        ]
+      },
+      {
+        "Name": "Teaching",
+        "field": [
+          "Training Skills"
+        ]
+      },
+      {
+        "Name": "Computer Systems",
+        "field": [
+          "Computer Systems"
+        ]
+      },
+      {
+        "Name": "Programming",
+        "field": [
+          "Programming"
+        ]
+      },
+      {
+        "Name": "Problem-Solving",
+        "field": [
+          "Problem Solving"
         ]
       },
       {
         "Name": "Communication",
         "field": [
-          "Interpersonal Skills",
-          "Technical Communication in CS"
+          "Interpersonal Skills"
         ]
       },
       {
+        "Name": "Data Wrangling",
+        "field": [
+          "Data Analysis"
+        ]
+      },
+      {
+        "Name": "Natural Language Processing",
+        "field": [
+          "AI, NLP"
+        ]
+      },
+      {
+        "Name": "Blockchain",
+        "field": [
+          "Distributed Systems"
+        ]
+      },
+      {
+        "Name": "Web Development",
+        "field": [
+          "Web Development"
+        ]
+      },
+      {
+        "Name": "Data Security",
+        "field": [
+          "Information Security"
+        ]
+      },
+      {
+        "Name": "Game Development",
+        "field": [
+          "Game Development"
+        ]
+      },
+      {
+        "Name": "Pathfinding",
+        "field": [
+          "AI, Robotics"
+        ]
+      },
+      {
+        "Name": "Software Testing",
+        "field": [
+          "Software Testing"
+        ]
+      },
+      {
+        "Name": "Graphics Programming",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "3D Rendering",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Computer Graphics",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Object-Oriented Programming",
+        "field": [
+          "Programming"
+        ]
+      },
+      {
+        "Name": "Data Structures",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Algorithms",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Technical Writing",
+        "field": [
+          "Writing, Technical"
+        ]
+      },
+      {
+        "Name": "Markdown",
+        "field": [
+          "Technical Documentation"
+        ]
+      },
+      {
+        "Name": "Git",
+        "field": [
+          "VCS"
+        ]
+      },
+      {
+        "Name": "Systems Programming",
+        "field": [
+          "Systems Programming"
+        ]
+      },
+      {
+        "Name": "Debugging",
+        "field": [
+          "Programming"
+        ]
+      },
+      {
+        "Name": "Storage Systems",
+        "field": [
+          "Data Storage"
+        ]
+      },
+      {
+        "Name": "Operating Systems",
+        "field": [
+          "Operating Systems"
+        ]
+      }
+    ],
+    "Soft Skills": [
+      {
         "Name": "Leadership",
         "field": [
-          "Management Skills",
-          "ELF Binary Analysis",
-          "Hosting a resume on GitHub Pages"
+          "Management Skills"
         ]
       },
       {
@@ -137,60 +295,28 @@
         ]
       },
       {
-        "Name": "Problem Solving",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
         "Name": "Adaptability",
         "field": [
-          "Analytical Skills"
+          "Interpersonal Skills"
         ]
       },
       {
         "Name": "Time Management",
         "field": [
-          "Analytical Skills"
+          "Interpersonal Skills"
         ]
       },
       {
         "Name": "Critical Thinking",
         "field": [
-          "Analytical Skills"
+          "Problem Solving"
         ]
       },
       {
         "Name": "Complexity Analysis",
         "field": [
-          "Analytical Skills"
+          "Problem Solving"
         ]
-      },
-      {
-        "Name": "Debugging and Troubleshooting",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Test driven deployment",
-        "field": [
-          "Analytical Skills"
-        ]
-      }
-    ],
-    "Soft Skills": [
-      {
-        "Name": "Communication",
-        "field": "Interpersonal Skills"
-      },
-      {
-        "Name": "Leadership",
-        "field": "Management Skills"
-      },
-      {
-        "Name": "Teamwork",
-        "field": "Collaboration Skills"
       }
     ]
   }

@@ -3,169 +3,92 @@
   "Contact Info": {
     "Full Name": "Saif Mahmud",
     "Phone": "204 955 5064",
-    "Email": "msaiofficial@gmail.com",
-    "LinkedIn Profile URL": "https://www.linkedin.com/in/vmsaif/",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn Profile URL": "https://linkedin.com/in/vmsaif",
     "Personal Website URL": "saifmahmud.dev",
-    "Address": ""
+    "Address": "Winnipeg, MB"
   },
-  "Summary": "Driven Artificial Intelligence Engineer seeking to leverage expertise in AI, multi-agent systems, and NLP at Radical AI for Social Good Lab. Proven ability to develop and implement innovative solutions, as demonstrated by the creation of \"ATS Pass AI,\" a resume optimization tool that utilizes advanced AI models to enhance job search efficiency and promote equitable progress in the job market.",
+  "Summary": "Highly motivated AI enthusiast with experience in Python and LangChain seeking the Artificial Intelligence Engineer Internship at Radical AI for Social Good Lab. Eager to contribute to the development of impactful AI solutions while furthering my knowledge of ethical AI practices and contributing to a more equitable future.",
   "Skills": {
     "Programming Languages": [
       "Python",
       "Java",
+      "JavaScript",
       "C++",
       "C"
     ],
     "Frameworks": [
-      "Vue.js",
-      "Jekyll",
-      "OpenGL",
-      "LangChain",
-      "CrewAI"
+      "LangChain"
     ],
     "Tools": [
-      "Docker",
-      "Git",
-      "CI/CD",
+      "CrewAI",
       "Gemini",
-      "Gemini Pro",
       "RAG Search",
-      "Markdown"
+      "Git",
+      "CI/CD"
     ],
     "Soft Skills": [
-      "Communication Skills",
       "Teamwork",
-      "Problem-Solving",
+      "Communication",
       "Critical Thinking",
-      "Data Analysis",
-      "Algorithm Development",
-      "Model Development",
-      "AI Virtual Agent Development",
-      "Blockchain development",
-      "Smart contract implementation",
-      "Data integrity",
-      "Game development",
-      "AI pathfinding algorithms",
-      "Software development best practices",
-      "Version control",
-      "3D graphics programming",
-      "Ray tracing techniques",
-      "Geometric and mathematical concepts",
-      "Object-oriented programming",
-      "Polymorphism",
-      "Scalable application development",
-      "Web development",
-      "Technical documentation",
-      "Debugging",
-      "System analysis",
-      "Lighting techniques",
-      "User interface design",
-      "User interactivity"
+      "Leadership"
     ]
   },
   "Projects": [
     {
       "Project Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present",
-      "Technologies": "Python, RAG Search, Multiagent, AI, CrewAI, LangChain, Gemini, Gemini Pro",
+      "Timeline": "January 2024 - Present (5 months)",
+      "Technologies": "Python, CrewAI, LangChain, Gemini, RAG Search",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Key achievements": [
-        "Developed a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency, demonstrating creative thinking and problem-solving skills.",
-        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, showcasing cutting-edge technical and analytical capabilities in Artificial Intelligence (AI).",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS, contributing to the democratization of AI tools for equitable progress in the job market.",
-        "Showcased proactive initiative and innovation by identifying a real-world problem and developing a radical solution using cutting-edge AI technologies, reflecting critical thinking and a passion for social impact."
-      ]
-    },
-    {
-      "Project Title": "Blockchain Car Mileage Tracker",
-      "Timeline": "January 2023 - March 2023",
-      "Technologies": "Blockchain technology, Docker, Vue.js, Smart Contracts",
-      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-      "Key achievements": [
-        "Designed and developed a blockchain solution to securely track and verify vehicle mileage for insurance purposes, showcasing a deep understanding of blockchain technology and its applications.",
-        "Created smart contracts to ensure tamper-proof mileage recording, enhancing trust and transparency in vehicle history.",
-        "Collaborated effectively within a team to design, develop, and test the application, demonstrating strong teamworking and problem-solving skills.",
-        "Showcased initiative and problem-solving abilities by identifying a real-world problem and leveraging blockchain technology to provide a solution."
+        "Developed a multi-agent system leveraging AI, Machine Learning (ML), and Natural Language Processing (NLP) techniques to enhance resume tailoring for improved job search efficiency.",
+        "Utilized advanced AI models like Gemini and multi-agent technologies to achieve high keyword alignment and ATS optimization, demonstrating strong data analysis skills and expertise in OpenAI API integrations.",
+        "Showcased foresight and innovation by designing a scalable architecture for future growth, aligning with Radical AI's commitment to pushing the boundaries of AI applications."
       ]
     },
     {
       "Project Title": "AI Path Finding",
-      "Timeline": "July 2023 - September 2023",
-      "Technologies": "Java, Git, CI/CD, A* algorithm",
+      "Timeline": "Jul 2023 - Sep 2023 (3 months)",
+      "Technologies": "Java, A* Algorithm, Git, CI/CD",
       "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
       "Key achievements": [
-        "Developed a Java-based game using the A* algorithm for AI-driven game functionalities, demonstrating proficiency in game development and AI techniques.",
-        "Incorporated Git for version control, ensuring efficient team collaboration and code management.",
-        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, showcasing a commitment to efficient development processes and optimization.",
-        "Applied fundamental software development and testing processes to ensure robust application performance, highlighting attention to detail and quality assurance."
-      ]
-    },
-    {
-      "Project Title": "Recursive Ray Tracing",
-      "Timeline": "May 2023 - July 2023",
-      "Technologies": "OpenGL, C++",
-      "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
-      "Key achievements": [
-        "Developed a 3D graphics application using OpenGL and ray tracing techniques, demonstrating a deep understanding of 3D graphics principles and programming.",
-        "Applied geometry and mathematical concepts to calculate light paths and surface interactions, showcasing strong analytical and problem-solving skills.",
-        "Created a visually stunning and immersive 3D environment using advanced graphics techniques, highlighting creativity and technical proficiency.",
-        "Demonstrated the ability to independently research, learn, and apply complex concepts in the field of 3D graphics programming."
-      ]
-    },
-    {
-      "Project Title": "Bank Account System",
-      "Timeline": "Unavailable",
-      "Technologies": "Java, File I/O",
-      "Link": "https://github.com/vmsaif/bankAccountSystem",
-      "Key achievements": [
-        "Designed and implemented a Java-based bank account system, demonstrating a strong foundation in object-oriented programming principles.",
-        "Developed scalable Java applications, showcasing an understanding of object-oriented programming and design patterns.",
-        "Optimized process efficiency by 30%, highlighting a focus on performance and optimization.",
-        "Utilized polymorphism and inheritance to create a flexible and extensible system, showcasing a deep understanding of object-oriented programming concepts."
-      ]
-    },
-    {
-      "Project Title": "Hosting a Resume on GitHub Pages",
-      "Timeline": "April 2023 - April 2023",
-      "Technologies": "Markdown, Jekyll, Git, GitHub Pages",
-      "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
-      "Key achievements": [
-        "Created a comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating technical writing and communication skills through effective documentation.",
-        "Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation, showcasing proficiency in web development tools.",
-        "Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages, highlighting a practical understanding of web deployment.",
-        "Demonstrated a commitment to open-source collaboration and knowledge sharing by making the guide available online."
+        "Developed an AI-driven game employing the A* pathfinding algorithm, showcasing expertise in AI development and algorithm enhancement techniques.",
+        "Utilized Git for version control and implemented CI/CD practices for efficient deployment, resulting in a 50% reduction in deployment time, reflecting strong understanding of software development best practices.",
+        "Demonstrated problem-solving and analytical skills crucial for an AI Engineer role, applying fundamental software development and testing processes to ensure robust application performance."
       ]
     },
     {
       "Project Title": "ELF Binary Analysis",
-      "Timeline": "November 2022 - December 2022",
-      "Technologies": "C programming, debugging, Linux OS, ELF Headers",
+      "Timeline": "Nov 2022 - Dec 2022 (2 months)",
+      "Technologies": "C Programming, Debugging, Linux OS",
       "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
       "Key achievements": [
-        "Developed a C program to analyze ELF headers of binary files, demonstrating proficiency in C programming and system-level programming.",
-        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities and attention to detail.",
-        "Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles, demonstrating communication skills.",
-        "Demonstrated a commitment to continuous improvement and knowledge sharing by actively contributing to technical documentation."
-      ]
-    },
-    {
-      "Project Title": "OpenGL Sphere Lighting",
-      "Timeline": "April 2023 - June 2023",
-      "Technologies": "OpenGL, C++",
-      "Link": "https://github.com/vmsaif/openGL-sphere-",
-      "Key achievements": [
-        "Developed a 3D graphics application using OpenGL, demonstrating proficiency in C++ programming and 3D graphics principles.",
-        "Implemented lighting techniques to create realistic 3D scenes, showcasing an understanding of light and shadow interaction.",
-        "Designed an intuitive user interface for controlling lighting parameters, demonstrating a focus on user experience and interactivity."
+        "Developed a tool for ELF header analysis in C, emphasizing debugging, system analysis, and documentation skills, transferable to AI development environments.",
+        "Improved debugging efficiency by 20%, highlighting strong problem-solving abilities and a proactive approach to code optimization.",
+        "Contributed to technical documentation for product improvement, demonstrating commitment to knowledge sharing and collaboration, valuable traits in an AI team."
       ]
     }
   ],
-  "Work": [],
+  "Work": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company": "Private Tutoring",
+      "Location": "",
+      "Timeline": "February 2023 - December 2023 (11 months)",
+      "Technologies": "Python, Java",
+      "Link": "",
+      "Key achievements": [
+        "Tutored a student in computer systems and programming, utilizing strong communication skills to effectively convey complex concepts in Python and Java, aligning with the collaborative nature of Radical AI's environment.",
+        "Tailored teaching methods to suit the student's learning style, demonstrating adaptability and a personalized approach, leading to noticeable improvement in their understanding of programming concepts.",
+        "Facilitated hands-on sessions for software installation, debugging, and system understanding, fostering practical skills applicable to real-world scenarios, reflecting Radical AI's emphasis on hands-on experience."
+      ]
+    }
+  ],
   "Education": {
-    "Degree": "Bsc",
+    "Degree": "BSc",
     "Major": "Computer Science",
     "University": "University of Manitoba",
-    "Location": "",
+    "Location": "Winnipeg, Manitoba",
     "Graduation Date": "October 2023",
     "GPA": "3.07"
   },

@@ -1,64 +1,57 @@
-##  Job Description Keyword and Phrase Extraction for Resume Optimization
+## Job Description Keyword and Phrase Extraction for Radical AI Virtual Internship
+
+### 1. Introduction
 
 **Role:** Artificial Intelligence Engineer (Virtual Internship)
 **Company:** Radical AI for Social Good Lab
 **Location:** Remote
 **Industry:** Artificial Intelligence, Social Good, Technology
 
-### Keyword Categorization:
+### 2. Thorough Analysis
 
-**1. Essential Skills:**
+This internship focuses on providing hands-on experience in developing and implementing AI solutions within a socially conscious framework. The ideal candidate will have a strong technical foundation in AI, ML, and NLP, coupled with an understanding and commitment to ethical AI principles.
 
-* **Hard Skills:**
-    * Artificial Intelligence (AI)
-    * Machine Learning
-    * Deep Learning
-    * Generative AI
-    * Natural Language Processing (NLP)
-    * Data Analysis
-    * Data Preprocessing
-    * Algorithm Development
-    * Model Development
-    * AI Virtual Agent Development 
-    * OpenAI API
-    * Meta Llama 2
-    * Google Gemini
-    * LangChain
-    * Google Gen AI Studio
-    * Python
-    * TensorFlow (or similar frameworks like PyTorch)
+### 3. Keyword Categorization
 
-* **Soft Skills:**
-    * Analytical Skills
-    * Problem-Solving
-    * Creative Thinking
-    * Communication Skills 
-    * Teamwork
-    * Research Presentation
+**Essential Skills:**
 
+* Artificial Intelligence (AI)
+* Machine Learning (ML)
+* Deep Learning
+* Generative AI
+* Natural Language Processing (NLP)
+* AI Model Design & Development
+* Data Analysis & Preprocessing
+* Algorithm Enhancement
+* Python
+* TensorFlow/PyTorch
+* Research Presentation
+* Teamwork & Collaboration
+* Communication Skills (written & verbal)
 
-**2. Industry/Field Specific Terms:**
+**Industry/Field Specific Terms:**
 
-* AI for Social Good
-* Democratization of AI
+* AI Virtual Agents
+* OpenAI API
+* Meta Llama 2
+* Google Gemini
+* LangChain
+* Google Gen AI Studio
 * Ethical AI
-* Responsible AI 
-* Virtual Internship
-* Remote Work
+* Social Good
+* Democratizing AI
 
-**3. Company Values & Culture:**
+**Company Values & Culture:**
 
-* Social Impact
+* Radical AI Principles
+* Social Justice
 * Equitable Progress
-* Diversity 
-* Inclusion
+* Diversity & Inclusion
 * Collaboration
-* Critical Thinking 
 * Innovation
-* Radical Thinking 
+* Critical Thinking
 
-
-**4. Action Verbs:**
+**Action Verbs:**
 
 * Design
 * Develop
@@ -70,43 +63,64 @@
 * Engage
 * Contribute
 
-**5. Partial Match Skills:**
+### 4. Prioritization and Relevance
+
+* **High Priority:** AI, ML, NLP, Python, Generative AI, Ethical AI, Social Good, OpenAI API,  TensorFlow/PyTorch
+* **Required Qualifications:** Bachelor's/Master's in relevant field, strong analytical skills, excellent communication 
+
+### 5. Keyword List Creation
+
+| Category | Keywords |
+|---|---|
+| Essential Skills | AI, Machine Learning, Deep Learning, Generative AI, NLP, Data Analysis, Python, TensorFlow, PyTorch, Research, Communication  |
+| Industry Terms | AI Virtual Agents, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Ethical AI |
+| Company Values | Social Justice, Equitable Progress, Diversity & Inclusion, Collaboration, Innovation |
+| Action Verbs | Design, Develop, Analyze, Collaborate, Enhance, Present, Contribute |
+
+### 6. Partial Match Skills
+
 ```json
 {
     "list of skills": {
         "Essential Skills": [
             {
                 "Name": "Python", 
-                "Partial_Match": ["Python Libraries", "Python Scripting", "Object-Oriented Programming"]
+                "Partial_Match": ["Python Libraries", "Object-Oriented Programming", "Scripting Languages"]
             },
             {
                 "Name": "Machine Learning", 
-                "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Regression Analysis", "Classification", "Clustering"]
+                "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Regression Analysis", "Classification Models"]
             },
             {
-                "Name": "Deep Learning",
-                "Partial_Match": ["Neural Networks", "Convolutional Neural Networks (CNNs)", "Recurrent Neural Networks (RNNs)", "Long Short-Term Memory (LSTM)"]
+                "Name": "Deep Learning", 
+                "Partial_Match": ["Neural Networks", "Convolutional Neural Networks (CNNs)", "Recurrent Neural Networks (RNNs)"]
+            },
+            {
+                "Name": "Natural Language Processing (NLP)", 
+                "Partial_Match": ["Sentiment Analysis", "Text Classification", "Named Entity Recognition", "Language Models"]
             },
             {
                 "Name": "Data Analysis",
-                "Partial_Match": ["Data Visualization", "Statistical Analysis", "Data Mining", "Data Cleaning", "Data Interpretation"]
+                "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation"]
             },
             {
-                "Name": "Communication Skills",
-                "Partial_Match": ["Technical Writing", "Presentation Skills", "Data Storytelling", "Active Listening"]
+                "Name": "TensorFlow",
+                "Partial_Match": ["Machine Learning Frameworks", "Deep Learning Libraries"]
+            },
+            {
+                "Name": "PyTorch",
+                "Partial_Match": ["Machine Learning Frameworks", "Deep Learning Libraries"]
             }
+
         ]
     }
-}
+} 
 ```
 
-**6. ATS Optimization Tips:**
 
-* **Strategic Placement:** Incorporate the keywords naturally in your resume's:
-    * **Summary/Objective:** Briefly highlight how your skills and experience align with the role and company mission. 
-    * **Skills Section:** Create a dedicated skills section listing both hard and soft skills.
-    * **Experience Descriptions:**  Use keywords when describing your previous roles and accomplishments, focusing on quantifiable results.
+### 7. ATS Optimization Tips:
 
-* **Keyword Density:** Use keywords strategically and avoid keyword stuffing. Focus on clear and concise language that accurately reflects your qualifications.
-
-* **Tailoring and Customization:**  Adapt your resume content and keywords for each job application, highlighting the most relevant skills for the specific position. 
+* Use a combination of general and specific keywords throughout your resume.
+* Incorporate keywords naturally in your skills, experience, and summary sections.
+* Quantify your experience with specific examples of projects or accomplishments.
+* Highlight your alignment with Radical AI's values and mission in your cover letter. 

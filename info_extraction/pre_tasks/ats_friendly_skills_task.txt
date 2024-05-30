@@ -5,44 +5,48 @@
       "Programming Languages": [
         "Python"
       ],
-      "Frameworks": [],
+      "Frameworks": [
+        "LangChain"
+      ],
       "Tools": [],
       "Soft Skills": [
-        "Communication Skills",
         "Teamwork",
-        "Problem-Solving",
+        "Communication",
         "Critical Thinking"
       ]
     },
     "partial_match_with_job_description": {
       "Programming Languages": {
         "name": "Java",
-        "pertially_matched_with_job_description": "Algorithm Development"
+        "pertially_matched_with_job_description": "Programming"
       },
       "Frameworks": {},
-      "Tools": {},
+      "Tools": {
+        "name": "CrewAI",
+        "pertially_matched_with_job_description": "AI Virtual Agents, OpenAI API, Multiagent Systems"
+      },
       "Soft Skills": {
-        "name": "Data Analysis",
-        "pertially_matched_with_job_description": "Data Analysis"
+        "name": "Leadership",
+        "pertially_matched_with_job_description": "Teamwork & Collaboration"
       }
     }
   },
   "missing_from_the_applicant_skills": {
     "Programming Languages": [
-      "TensorFlow (or similar frameworks like PyTorch)"
+      "TensorFlow/PyTorch"
     ],
     "Frameworks": [
+      "Tensorflow",
+      "PyTorch"
+    ],
+    "Tools": [
       "OpenAI API",
       "Meta Llama 2",
       "Google Gemini",
-      "LangChain",
       "Google Gen AI Studio"
     ],
-    "Tools": [],
     "Soft Skills": [
-      "Analytical Skills",
-      "Creative Thinking",
-      "Research Presentation"
+      "Diversity & Inclusion"
     ]
   }
 }

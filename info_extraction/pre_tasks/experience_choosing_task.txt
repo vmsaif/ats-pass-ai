@@ -2,25 +2,53 @@
 {
   "selected_experiences": {
     "Most Recent Experience": [
-      "Work/Project": "Unavailable with the given context"
+      "Project: 'ATS Pass AI' - This project aligns strongly with the AI Engineer role, highlighting proficiency in AI, ML, NLP, and Python. The use of Gemini Pro and RAG Search directly relates to the job description's emphasis on advanced AI tools and NLP. The project's focus on resume tailoring for ATS optimization showcases a deep understanding of the job application process, making it highly relevant."
     ],
-    "Work/Project Experience": [
-      "Unavailable"
+    "Project Experience": [
+      "Project: 'AI Path Finding' -  This project showcases AI development skills relevant to the internship. The use of the A* algorithm demonstrates knowledge of pathfinding, a common AI problem, and the project's game development context aligns with the creative and technical aspects of the role. The mention of Git and CI/CD highlights familiarity with essential software development practices.",
+      "Project: 'ELF Binary Analysis' -  While not directly related to AI, this project demonstrates strong programming and systems analysis skills in C and Linux, which are transferable and valuable in an AI engineering environment. The emphasis on debugging and documentation aligns with the need for meticulous and detail-oriented work in AI development."
     ],
-    "[The other type between work or project experience]": [
-      "Unavailable"
-    ]
-  },
+    "Work Experience": []
+  }
+}
+```
+
+```json
+{
   "reason for choosing, How it is relevant to the job": [
     {
-      "title": "Unavailable",
-      "reason": "Unavailable"
+      "title": "ATS Pass AI",
+      "reason": "Directly aligns with AI, ML, NLP, and Python requirements. Utilizes advanced AI tools like Gemini Pro and RAG Search. Demonstrates understanding of ATS optimization, a key aspect of the job application domain."
+    },
+    {
+      "title": "AI Path Finding",
+      "reason": "Showcases AI development skills and knowledge of the A* algorithm.  Game development context aligns with the creative and technical aspects of the role. Highlights familiarity with Git and CI/CD."
+    },
+    {
+      "title": "ELF Binary Analysis",
+      "reason": "Demonstrates strong programming and systems analysis skills in C and Linux, transferable to AI engineering.  Highlights debugging and documentation skills, essential for meticulous AI development."
     }
   ],
   "rejected_experiences": [
     {
-      "title": "Unavailable",
-      "reason": "Not aligned with the key requirements of the job description or less relevant compared to selected experiences."
+      "title": "Programming Mentor",
+      "reason": "While showcasing teaching and communication skills, it lacks direct relevance to AI, ML, or NLP, which are central to the internship."
+    },
+    {
+      "title": "Blockchain Car Mileage Tracker",
+      "reason": "Focuses on blockchain and web development, which are not directly aligned with the AI Engineer role's core requirements."
+    },
+    {
+      "title": "Recursive Ray Tracing",
+      "reason": "While showcasing graphics programming expertise, it's not directly applicable to the AI and NLP focus of the internship."
+    },
+    {
+      "title": "Bank Account System",
+      "reason": "Demonstrates object-oriented programming but lacks direct relevance to AI, ML, or NLP."
+    },
+    {
+      "title": "Hosting a Resume on GitHub Pages",
+      "reason": "Focuses on technical writing and web hosting, not directly relevant to the AI Engineer role."
     }
   ]
 }

@@ -24,8 +24,8 @@ cover_letter_generation_task:
 
 
   expected_output: >
-    The final cover letter must be formatted as follows and contain no placeholders. Each section should be filled with relevant content or omitted if not applicable:
-
+    Only mention sections, if information is available. Otherwise, simply omit the section and its placeholders. **The final output must not contain any placeholders.**
+    
     [Applicant's Name]
     [Applicant's Address, if available]
     [City, State, Zip Code, if available]
@@ -54,14 +54,10 @@ cover_letter_generation_task:
     Sincerely,
     [Applicant's Name]
 
-
-
-
-
 latex_resume_generation_task:
   description: >
     Your task is to generate a one-page resume in LaTeX format based on the provided data. 
-    If a section is not present do not include it including the placeholders, and square brackets []. 
+    If a section is not present do not include it including the placeholders, and square brackets []. Each **word** must be replaced with \textbf{word} in LaTeX.
     
   expected_output: >
     \input{preamble.tex} 
@@ -133,7 +129,7 @@ latex_resume_generation_task:
 
       % If there is another type of experience, eg, you chose work experience, then you found another type eg, project experience, then you can add another section here. However, do not repeat.
 
-      \section{[If available, another type of experience between Work and Project Experience depending which one you chose \section]}
+      \section{[If available, another type of experience between Work Experience and Project Experience depending which one you chose \section]}
         \experienceTitle{[Title 1]}
         \summaryPoints{[Any keywords upto 3 separated by Pipe symbol and an space] }
         \subHeading{[City, State] | [from month year] - [to month year]}
@@ -150,7 +146,6 @@ latex_resume_generation_task:
         %... so on, repeat the same structure for other experiences...
       \end{minipage}
     \end{document}
-
 
 resume_compilation_task:
   description: >
@@ -249,6 +244,7 @@ resume_in_json_task:
     1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "LinkedIn Profile URL", "Personal Website URL", and "Address".
     2.  **Summary:** Write down the summary provided in the input data.
     3.  **Skills:** Follow the structure below to organize the skills into categories. 
+      - First, fill this section from the "exact_match_with_job_description", then "partial_match_with_job_description", then after that, fill from "skills" and "technologies" from the experiences. Each category should have up to 5 skills.
       {{
         "Skills": {{
           "Programming Languages": [],
@@ -271,6 +267,7 @@ resume_in_json_task:
 
     **Input Data**:
     Check the context provided to you.
+
 
   expected_output: >
     ```json
@@ -344,13 +341,16 @@ personal_information_extraction_task:
 
     How you should use the tool:
     argument:
-    "question": "Personal Details"
+    "question": "Give me Personal Details about the applicant"
 
     The tool will return a large chunk of information. look "deeply" into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
-    for example, if you didn't find the GitHub, ask the tool "GitHub" to get the GitHub link, then make sure whether the link is a repository link or a profile link. 
+    for example, if you didn't find the GitHub, ask the tool "Do the applicant have GitHub?" to get the GitHub link.
 
+    This is what the GitHub profile link looks like: https://github.com/username
+    This is what the GitHub repository link looks like: https://github.com/username/repository_name
+
+    If you find the GitHub repository link, simply remove the repository name from the link to make it a GitHub profile link as it will contain the "username". Use that as the GitHub link.
   expected_output: >
-    In JSON format, Remove the rows with null values:
       {
         "Personal Information": {
           "Full Name": "",
@@ -360,8 +360,8 @@ personal_information_extraction_task:
           "Other Social Media Profiles": "",
           "Personal Website": "",
           "Portfolio": "",
-          "GitHub": "",
-          "Address": "",
+          "GitHub": "[https://github.com/username/ not https://github.com/username/repository_name]",
+          "Address": "[example: 123 Street]",
           "City": "",
           "State": "",
           "Zip Code": "",
@@ -877,8 +877,6 @@ ats_friendly_skills_task:
         }
       }
 
-
-
 split_context_of_ats_friendly_skills_task:
   description: >
     Split the context provided to you at the breaking point "No Match (from job description):" or "missing_from_the_applicant_skills" whichever comes first. In your output, you will provide everything before the "No Match (from the job description):" as the final output of the task.
@@ -1239,8 +1237,6 @@ gather_info_of_chosen_experiences:
       ]
     }
 
-
-
 # ---------------ats_keyword_integration_agent (ATS Keyword Integration Specialist) tasks---------------
 
 ats_friendly_keywords_into_experiences:
@@ -1280,7 +1276,7 @@ ats_friendly_keywords_into_experiences:
       "Technologies": "",
       "skills": "",
       "Link": "",
-      "Key Highlights": [(Up to 3-4 key highlights),
+      "Key Highlights": [(Up to 3 key highlights)],
         "",
         "",
         "",
@@ -1298,7 +1294,7 @@ ats_friendly_keywords_into_experiences:
       "Technologies": "",
       "skills": "",
       "Link": "",
-      "Key Highlights": [(Up to 3-4 key highlights)
+      "Key Highlights": [(Up to 3 key highlights)
         "",
         "",
         "",

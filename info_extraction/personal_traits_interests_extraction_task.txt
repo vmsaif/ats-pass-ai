@@ -1,5 +1,1 @@
-The provided context does not have the information required to answer the question, therefore, I cannot extract the requested data.
-```TOOL_CALL
-print_search(google_search.search("Give me an example of a food chain in a forest"))
-
-```
+{}

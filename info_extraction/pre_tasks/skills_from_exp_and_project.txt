@@ -1,4 +1,188 @@
-```TOOL_CALL
-print_search(google_search.search("What is the name of the largest ocean in the world"))
-
-```
+{
+  "Combined Skills List": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "Java",
+        "field": "Programming Language"
+      },
+      {
+        "Name": "Vue.js",
+        "field": "Web Framework"
+      },
+      {
+        "Name": "Docker",
+        "field": "Containerization"
+      },
+      {
+        "Name": "OpenGL",
+        "field": "3D Graphics"
+      },
+      {
+        "Name": "C++",
+        "field": "Systems Programming"
+      },
+      {
+        "Name": "C",
+        "field": "Systems Programming"
+      },
+      {
+        "Name": "RAG Search",
+        "field": "NLP, IR"
+      },
+      {
+        "Name": "Github Actions",
+        "field": "CI/CD"
+      },
+      {
+        "Name": "Linux OS",
+        "field": "Operating Systems"
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "Spring Boot",
+        "field": "Java Framework"
+      },
+      {
+        "Name": "Jekyll",
+        "field": "Documentation Framework"
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Data Analysis",
+        "field": "Analytical Skills"
+      },
+      {
+        "Name": "Machine Learning",
+        "field": "AI, ML"
+      },
+      {
+        "Name": "Project Management",
+        "field": "Management Skills"
+      },
+      {
+        "Name": "Mentoring",
+        "field": "Training Skills"
+      },
+      {
+        "Name": "Teaching",
+        "field": "Training Skills"
+      },
+      {
+        "Name": "Computer Systems",
+        "field": "Computer Systems"
+      },
+      {
+        "Name": "Programming",
+        "field": "Programming"
+      },
+      {
+        "Name": "Problem-Solving",
+        "field": "Problem Solving"
+      },
+      {
+        "Name": "Communication",
+        "field": "Interpersonal Skills"
+      },
+      {
+        "Name": "Data Wrangling",
+        "field": "Data Analysis"
+      },
+      {
+        "Name": "Natural Language Processing",
+        "field": "AI, NLP"
+      },
+      {
+        "Name": "Blockchain",
+        "field": "Distributed Systems"
+      },
+      {
+        "Name": "Web Development",
+        "field": "Web Development"
+      },
+      {
+        "Name": "Data Security",
+        "field": "Information Security"
+      },
+      {
+        "Name": "Game Development",
+        "field": "Game Development"
+      },
+      {
+        "Name": "Pathfinding",
+        "field": "AI, Robotics"
+      },
+      {
+        "Name": "Software Testing",
+        "field": "Software Testing"
+      },
+      {
+        "Name": "Graphics Programming",
+        "field": "Computer Graphics"
+      },
+      {
+        "Name": "3D Rendering",
+        "field": "Computer Graphics"
+      },
+      {
+        "Name": "Computer Graphics",
+        "field": "Computer Graphics"
+      },
+      {
+        "Name": "Object-Oriented Programming",
+        "field": "Programming"
+      },
+      {
+        "Name": "Data Structures",
+        "field": "Computer Science"
+      },
+      {
+        "Name": "Algorithms",
+        "field": "Computer Science"
+      },
+      {
+        "Name": "Technical Writing",
+        "field": "Writing, Technical"
+      },
+      {
+        "Name": "Markdown",
+        "field": "Technical Documentation"
+      },
+      {
+        "Name": "Git",
+        "field": "VCS"
+      },
+      {
+        "Name": "Systems Programming",
+        "field": "Systems Programming"
+      },
+      {
+        "Name": "Debugging",
+        "field": "Programming"
+      },
+      {
+        "Name": "Storage Systems",
+        "field": "Data Storage"
+      },
+      {
+        "Name": "Operating Systems",
+        "field": "Operating Systems"
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Leadership",
+        "field": "Management Skills"
+      },
+      {
+        "Name": "Teamwork",
+        "field": "Collaboration Skills"
+      }
+    ]
+  }
+}

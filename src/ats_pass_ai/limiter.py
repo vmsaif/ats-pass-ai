@@ -3,15 +3,17 @@ import os
 import sqlite3
 import time
 
-class RequestLimiter:
+class Limiter:
     # Constants for rate limits
     # Gemini 1.5 pro
     LLM_LARGE_RPM_LIMIT = 2
     LLM_LARGE_DAILY_REQUEST_LIMIT = 50
+    LLM_LARGE_TOKEN_PER_MINUTE_LIMIT = 32000
 
     # Gemini 1.0 pro
     LLM_SMALL_RPM_LIMIT = 15
     LLM_SMALL_DAILY_REQUEST_LIMIT = 1500
+    LLM_SMALL_TOKEN_PER_MINUTE_LIMIT = 32000
 
     # Time constants
     SECONDS_IN_MINUTE = 60
@@ -21,12 +23,14 @@ class RequestLimiter:
     DB_DIR = 'custom_db'
     DB_FILE = 'request_limiter.db'
 
-    def __init__(self, llm_size: str):
+    def __init__(self, llm_size: str, llm, langchainMethods: bool):
+        self.langchainMethods = langchainMethods
+        self.llm = llm
         self.llm_size = llm_size.upper()
         self._set_limits(llm_size)
         self._config_db()
 
-    def run(self, output):
+    def request_limiter(self, output):
         timestamp = datetime.now().timestamp()
         # Check if RPM limit is reached
         if self._count_requests_in_last_period('minute') >= self.llm_rpm_limit:
@@ -43,19 +47,15 @@ class RequestLimiter:
         self._record_request(timestamp)
         return True  # Request processed successfully
 
-    # def _calculate_time_to_next_minute(self, current_time):
-    #     """Calculate the time remaining to the start of the next minute."""
-    #     seconds_current_minute = current_time % 60  # Find out how many seconds have passed in the current minute
-    #     seconds_until_next_minute = 60 - seconds_current_minute  # Calculate how many seconds are left until the next minute
-    #     return seconds_until_next_minute
-    
     def _set_limits(self, llm_size: str):
         if llm_size == 'LARGE':
             self.llm_rpm_limit = self.LLM_LARGE_RPM_LIMIT
             self.llm_daily_request_limit = self.LLM_LARGE_DAILY_REQUEST_LIMIT
+            self.llm_token_per_minute_limit = self.LLM_LARGE_TOKEN_PER_MINUTE_LIMIT
         elif llm_size == 'SMALL':
             self.llm_rpm_limit = self.LLM_SMALL_RPM_LIMIT
             self.llm_daily_request_limit = self.LLM_SMALL_DAILY_REQUEST_LIMIT
+            self.llm_token_per_minute_limit = self.LLM_SMALL_TOKEN_PER_MINUTE_LIMIT
         else:
             raise ValueError("Invalid LLM size. Must be either 'LARGE' or 'SMALL'")
 
@@ -71,6 +71,13 @@ class RequestLimiter:
                 llm_size TEXT
             )
         ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Tokens (
+                usage_time REAL,
+                tokens_used INTEGER,
+                llm_size TEXT
+            )
+        ''')
         self.conn.commit()
 
     def __del__(self):
@@ -79,6 +86,37 @@ class RequestLimiter:
     def _record_request(self, timestamp):
         self.cursor.execute('INSERT INTO Requests (request_time, llm_size) VALUES (?, ?)', (timestamp, self.llm_size))
         self.conn.commit()
+
+    def record_token_usage(self, output):
+        if(self._count_tokens_in_last_minute() >= self.llm_token_per_minute_limit):
+            print(f"Token limit exceeded. Waiting {self.SECONDS_IN_MINUTE} seconds to start next minute.")
+            time.sleep(self.SECONDS_IN_MINUTE)
+
+        # now, we can proceed to record the token usage and thus the program.
+        if(self.langchainMethods):
+            tokens_used = self.llm.get_num_tokens(output.raw_output)
+        else:
+            # langchainMethods is False, meaning it is a direct gemini model. This is a llm_task.py file call.
+            token_dict_from_gemini = self.llm.count_tokens(contents = output)
+            tokens_used = token_dict_from_gemini.total_tokens
+            
+        timestamp = datetime.now().timestamp()
+        self.cursor.execute('INSERT INTO Tokens (usage_time, tokens_used, llm_size) VALUES (?, ?, ?)', 
+                            (timestamp, tokens_used, self.llm_size))
+        self.conn.commit()
+        return True
+
+    def _count_tokens_in_last_minute(self):
+        current_timestamp = datetime.now().timestamp()
+        period_start_timestamp = current_timestamp - self.SECONDS_IN_MINUTE
+
+        self.cursor.execute('SELECT SUM(tokens_used) FROM Tokens WHERE usage_time >= ? AND llm_size = ?', 
+                            (period_start_timestamp, self.llm_size))
+        
+        result = self.cursor.fetchone()[0]
+        if result is None:
+            result = 0
+        return result
 
     def _count_requests_in_last_period(self, period):
         current_timestamp = datetime.now().timestamp()
@@ -90,7 +128,7 @@ class RequestLimiter:
 
 def printRemainingRequestsPerDay():
     for size in ['SMALL', 'LARGE']:
-        limiter = RequestLimiter(size)
+        limiter = Limiter(size, None, False)
         # Use the appropriate daily request limit based on the size of the LLM
         if size == 'SMALL':
             rpd_remaining = limiter.LLM_SMALL_DAILY_REQUEST_LIMIT - limiter._count_requests_in_last_period('day')
@@ -100,13 +138,13 @@ def printRemainingRequestsPerDay():
         print(f"{size} LLM Remaining RPD: {rpd_remaining}")
 
 def printWholeTable():
-    limiter = RequestLimiter('SMALL')
+    limiter = Limiter('SMALL')
     limiter.cursor.execute('SELECT COUNT(*) FROM Requests WHERE llm_size = "SMALL"')
     print("\nSmall LLM:\n")
     for row in limiter.cursor.fetchall():
         print(row)
 
-    limiter = RequestLimiter('LARGE')
+    limiter = Limiter('LARGE')
     limiter.cursor.execute('SELECT * FROM Requests WHERE llm_size = "LARGE"')
     print("\nLarge LLM:\n")
     for row in limiter.cursor.fetchall():
@@ -114,11 +152,11 @@ def printWholeTable():
 
 def cleanTable():
     print("\nCleaning table...\n")
-    limiter = RequestLimiter('SMALL')
+    limiter = Limiter('SMALL')
     limiter.cursor.execute('DELETE FROM Requests WHERE llm_size = "SMALL"')
     limiter.conn.commit()
 
-    limiter = RequestLimiter('LARGE')
+    limiter = Limiter('LARGE')
     limiter.cursor.execute('DELETE FROM Requests WHERE llm_size = "LARGE"')
     limiter.conn.commit()
 

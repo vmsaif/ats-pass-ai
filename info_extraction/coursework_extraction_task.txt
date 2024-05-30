@@ -1,3 +1,9 @@
 {
-  "Relevant Coursework (to the Job Description)": []
+  "Relevant Coursework (to the Job Description)": [
+    "Distributed Computing (Python | JavaScript)",
+    "Data Structures and Algorithms (Java)",
+    "Object Orientation (Java | C++)",
+    "AI and Game Development (Java | Python)",
+    "Software Engineering (Java | Unit Testing)"
+  ]
 }

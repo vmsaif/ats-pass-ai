@@ -12,7 +12,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 import agentops
 from langchain_community.tools import DuckDuckGoSearchRun
-from ats_pass_ai.request_limiter import RequestLimiter
+from limiter import Limiter
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 from ats_pass_ai.output_file_paths import PATHS
 
@@ -51,8 +51,8 @@ class ResumeCrew:
 		safety_settings=safety_settings,
 	)
 
-	small_llm_limiter = RequestLimiter(llm_size='small').run
-	large_llm_limiter = RequestLimiter(llm_size='large').run
+	small_llm_limiter = Limiter(llm_size='small').request_limiter
+	large_llm_limiter = Limiter(llm_size='large').request_limiter
 
 	@crew
 	def crew(self) -> Crew:
@@ -610,7 +610,7 @@ import agentops
 
 from ats_pass_ai.tools.rag_search_tool import SearchInChromaDB
 from ats_pass_ai.output_file_paths import PATHS
-from ats_pass_ai.request_limiter import RequestLimiter
+from limiter import Limiter
 
 @CrewBase
 class ResumeCrew:
@@ -623,8 +623,8 @@ class ResumeCrew:
 	agentops.init(tags=["resume-crew"])
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
 	
-	small_llm_limiter = RequestLimiter(llm_size='small').run
-	large_llm_limiter = RequestLimiter(llm_size='large').run
+	small_llm_limiter = Limiter(llm_size='small').request_limiter
+	large_llm_limiter = Limiter(llm_size='large').request_limiter
 
 	safety_settings = {
 		HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,

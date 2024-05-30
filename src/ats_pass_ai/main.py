@@ -5,7 +5,7 @@
 """
 from datetime import timedelta
 from textwrap import dedent
-from ats_pass_ai.request_limiter import printRemainingRequestsPerDay
+from ats_pass_ai.limiter import printRemainingRequestsPerDay
 from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool, SearchInChromaDB
 from ats_pass_ai.tools.llm_task import LLMTask
@@ -139,7 +139,12 @@ def run():
 
             # Run the main crew program
             crew = ResumeCrew().crew()
-            crew.kickoff()
+            
+            try:
+                crew.kickoff()
+            except Exception as e:
+                crew.kickoff() # Retry once
+
             # print(crew.usage_metrics)
         crew_run_time = t.interval
     

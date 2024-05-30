@@ -2,16 +2,16 @@
   "Personal Information": {
     "Full Name": "Saif Mahmud",
     "Phone Number": "204 955 5064",
-    "Email": "msaiofficial@gmail.com",
-    "LinkedIn": "https://www.linkedin.com/in/vmsaif/",
-    "Other Social Media Profiles": null,
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "https://linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": "",
     "Personal Website": "saifmahmud.dev",
-    "Portfolio": null,
+    "Portfolio": "",
     "GitHub": "https://github.com/vmsaif/",
-    "Address": null,
+    "Address": "Winnipeg, MB",
     "City": "Winnipeg",
     "State": "MB",
-    "Zip Code": null,
-    "Country": null
+    "Zip Code": "",
+    "Country": ""
   }
 }
