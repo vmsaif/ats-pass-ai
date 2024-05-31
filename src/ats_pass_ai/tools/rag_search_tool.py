@@ -7,7 +7,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 import hashlib
 import shutil
-
+from ats_pass_ai.output_file_paths import PATHS
 
 # Set up the embedding function
 embedding_function = OllamaEmbeddings(model='nomic-embed-text')
@@ -31,8 +31,7 @@ class SearchInChromaDB:
 
 class RagSearchTool:
 
-    persist_directory = "./chroma_db"
-    hash_file_name = "hash_store.txt"
+    persist_directory = PATHS['rag_db_perist_dir']
     
     def _file_hash(file_path: str) -> str:
         """Generate a hash for a given file."""
@@ -71,7 +70,7 @@ class RagSearchTool:
     def process_and_index(file_path: str):
         """Reads TXT file and indexes its content in Chroma DB."""
 
-        hash_file_path = f"{RagSearchTool.persist_directory}/{RagSearchTool.hash_file_name}" #should be in the same directory as the Chroma DB
+        hash_file_path = PATHS['hash_file_path'] # should be in the same directory as the Chroma DB
 
         run_flag = False
 
@@ -92,7 +91,7 @@ class RagSearchTool:
             # delete the existing Chroma DB if it exists
             RagSearchTool._delete_persist_directory()
 
-            loader = TextLoader(file_path)
+            loader = TextLoader(file_path, encoding='utf-8')
             doc = loader.load()
             
             # Split the content into chunks
@@ -105,8 +104,7 @@ class RagSearchTool:
                     {split}
                     -----------------------------------------------------
                 """))
-            
-            
+    
             # Now index the content in Chroma DB
             if splits:
                 # Create a VectorStore with document embedding
@@ -115,7 +113,6 @@ class RagSearchTool:
                 print("Content indexed in Chroma DB")
 
                 RagSearchTool._updateHashFile(file_path, hash_file_path)
-
                 return "Content indexed in DB"
             else:
                 return "No content available for processing."  
@@ -135,7 +132,7 @@ class RagSearchTool:
 
     def delete_applicant_profile_files(delete_pretasks: bool = False):
         """Delete the applicant profile files but not the folder, optionally delete pre-task files."""
-        from ats_pass_ai.output_file_paths import PATHS
+        
 
         # Delete files in the information extraction folder
         
@@ -144,9 +141,9 @@ class RagSearchTool:
 
         # Optionally delete files in the pre-tasks folder
         if delete_pretasks:
-            pre_tasks_path = PATHS["pre_tasks_folder_path"]
-            RagSearchTool._delete_files_in_directory(pre_tasks_path)
-            print("Pre-task files deletion attempt complete.")
+            RagSearchTool._delete_files_in_directory(PATHS["draft_output"])
+            RagSearchTool._delete_files_in_directory(PATHS["pre_tasks_folder_path"])
+            print("Pre-task files deletion attempt complete. Deleted Draft output and Pre-tasks files.")
 
     def _delete_files_in_directory(directory_path):
         """Helper function to delete all files in the specified directory and print the operation results."""

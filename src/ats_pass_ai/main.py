@@ -7,15 +7,17 @@ from datetime import timedelta
 from textwrap import dedent
 from ats_pass_ai.limiter import printRemainingRequestsPerDay
 from ats_pass_ai.resume_crew import ResumeCrew
-from ats_pass_ai.tools.rag_search_tool import RagSearchTool, SearchInChromaDB
+from ats_pass_ai.tools.rag_search_tool import RagSearchTool
 from ats_pass_ai.tools.llm_task import LLMTask
 from ats_pass_ai.output_file_paths import PATHS
 from ats_pass_ai.timer import Timer
 from ats_pass_ai.latex_generator import compile_latex
 # First, Lets Organize the applicant Information provided by the applicant.
-applicant_info_file_path = 'info_files/applicant_info.txt'
-jd_file_path = 'info_files/job_description.txt'
 
+applicant_info_file_path = PATHS["applicant_info_file_path"]
+jd_file_path = PATHS["jd_file_path"]
+
+# After organizing the applicant information, we will extract the keywords from the job description 
 applicant_info_orgainzed_file_path = PATHS["applicant_info_organized"]
 jd_extracted_keywords_file_path = PATHS["jd_keyword_extraction"]
 
@@ -52,58 +54,58 @@ def run():
 
         # Now, lets extract the keywords from the job description
         jd_extraction_system_instruction = dedent("""
-                    Task: Job Description Keyword and Phrase Extraction for Resume Optimization
+    Task: Job Description Keyword and Phrase Extraction for Resume Optimization
 
-                    Objective: Extract relevant keywords and phrases from the provided job description to optimize your resume for Applicant Tracking Systems (ATS) and human reviewers.
+    Objective: Extract relevant keywords and phrases from the provided job description to optimize the resume for Applicant Tracking Systems (ATS) and human reviewers.
 
-                    Instructions:
+    Instructions:
 
-                    1. Make a short introduction of the role and the company.
-                        Role: [Role Title]
-                        Company: [Company Name]
-                        Location: [Location]
-                        Industry: [Industry/Field]
-                    
-                    2. Thorough Analysis: Carefully read the job description to understand the required skills, responsibilities, qualifications, company culture, and overall job context. 
+    1. Introduction:
+        - Role: [Role Title]
+        - Company: [Company Name]
+        - Location: [Location]
+        - Industry: [Industry/Field]
+    
+    2. Thorough Analysis: Review the job description to understand required skills, responsibilities, qualifications, and company culture.
+    
+    3. Keyword Categorization: 
+        * **Essential Skills:** Identify hard and soft skills emphasized in the job description.
+        * **Industry Terms:** Extract common industry-specific terms.
+        * **Company Values & Culture:** Note keywords reflecting the company's mission and values.
+        * **Action Verbs:** List action verbs associated with required responsibilities.
+    
+    4. Prioritization and Relevance:
+        * **Frequency and Emphasis:** Note frequently mentioned or emphasized keywords.
+        * **Essential vs. Preferred Qualifications:** Distinguish between mandatory and preferred skills.
 
-                    3. Keyword Categorization: 
+    5. Keyword List Creation: Compile the extracted keywords into a structured json format, categorized for easy reference.
+    
+    6. Partial Match Skills:
+        * Create a list of "partial match" skills, categorizing skills that correspond to broader skills mentioned in the job description.
+        * Format as JSON:
+          {
+              "list of skills": {
+                  "Essential Skills": [
+                      {
+                          "Name": "Skill 1", 
+                          "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
+                      },
+                      {
+                          "Name": "Skill 2", 
+                          "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
+                      }
+                  ]
+              }
+          }
+        
+    
+    7. ATS Optimization Tips:
+        * **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume.
+        * **Keyword Density:** Use keywords thoughtfully without "keyword stuffing."
+        * **Tailoring and Customization:** Adapt keywords and content for each job application.
 
-                        * **Essential Skills:** Identify the core skills and qualifications emphasized in the job description, including both hard skills (e.g., specific software, tools, technical abilities) and soft skills (e.g., communication, teamwork, problem-solving).
-                        * **Industry/Field Specific Terms:**  Extract keywords and phrases commonly used within the specific industry or field of the job. 
-                        * **Company Values & Culture:** Identify keywords that reflect the company's mission, values, and work environment (e.g., innovation, collaboration, customer-focus). 
-                        * **Action Verbs:** Extract action verbs associated with skills and responsibilities (e.g., manage, develop, implement, lead) to showcase your abilities effectively.
-
-                    4. Prioritization and Relevance:
-
-                        * **Frequency and Emphasis:** Pay close attention to keywords mentioned multiple times or with particular emphasis in the job description.
-                        * **Required vs. Preferred Qualifications:** Differentiate between essential requirements and preferred or "nice-to-have" skills.
-                        * **Alignment with Your Background:** Focus on extracting keywords that align with your skills and experience, ensuring you can genuinely demonstrate those qualities.
-
-                    5. Keyword List Creation: Create a structured list or table with the extracted keywords organized by category for easy reference.
-                                                  
-                    6. Make a list of "partial match" skills. For example, if the job description mentions "Microsoft Office Suite," you can include "Microsoft Word," "Excel," "PowerPoint," etc. as partial matching skills. Later on this will be used to find comparable items from the applicant's skills. You should represent this as a json object with the following format:
-                    {
-                        "list of skills": {
-                        "Essential Skills": [
-                            {
-                                Name: "Skill 1", 
-                                Partial_Match: ["Partial Match 1", "Partial Match 2"]
-                            },
-                            {
-                                Name: "Skill 2", 
-                                Partial_Match: ["Partial Match 1", "Partial Match 2"]
-                            }
-                        ]
-                    } 
-                                                  
-                    7. ATS Optimization Tips: 
-
-                        * **Strategic Keyword Placement:**  Integrate keywords naturally throughout your resume, particularly in the skills section, experience descriptions, and summary/objective statement.
-                        * **Keyword Density:** Use keywords thoughtfully and avoid excessive repetition or "keyword stuffing," which can be penalized by ATS algorithms.
-                        * **Tailoring and Customization:** Adapt the extracted keywords and your resume content to each specific job application, highlighting the most relevant qualifications for each role.
-
-                    Outcome: A comprehensive list of relevant keywords and actionable tips to optimize your resume for both ATS algorithms and human reviewers, increasing your chances of landing an interview.
-                    """)
+    Outcome: A comprehensive list of relevant keywords and actionable tips to optimize resume for ATS algorithms and human reviewers, enhancing interview prospects.
+    """)
 
         with Timer() as t:
             organizer = LLMTask("Applicant Info Organize", 

@@ -66,8 +66,8 @@ class ResumeCrew:
 	small_token_limiter = small_limiter.record_token_usage
 	large_token_limiter = large_limiter.record_token_usage
 
-	# debugFlag = False
-	debugFlag = True
+	debugFlag = False
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:

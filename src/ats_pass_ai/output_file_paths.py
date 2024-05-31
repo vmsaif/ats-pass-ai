@@ -1,45 +1,63 @@
 # Base directory variables
-info_files = 'info_files'
-info_extraction = 'info_extraction'
-pre_tasks = f'{info_extraction}/pre_tasks'
-job_description = f'{info_files}/job_description.txt'
-jd_keyword_extraction = f'{info_extraction}/jd_keyword_extraction'
-draft_output = f'{info_extraction}/draft_output'
+info_files_dir = 'info_files'
+info_extraction_dir = 'info_extraction'
+pre_tasks_dir = f'{info_extraction_dir}/pre_tasks'
+jd_keyword_extraction = f'{info_extraction_dir}/jd_keyword_extraction'
+draft_output_dir = f'{info_extraction_dir}/draft_output'
+llm_task_output_dir = f'{info_files_dir}/llm_task_output'
 src_root = 'src/ats_pass_ai'
+limiter_db_dir = 'custom_db'
+rag_db_perist_dir = "./chroma_db"
 
 # Config dictionary with all paths
+
 PATHS = {
+    "applicant_info_file_path": f"{info_files_dir}/applicant_info.txt",
+    "applicant_info_organized": f"{llm_task_output_dir}/applicant_info_organized.txt",
+    "jd_file_path": f"{info_files_dir}/job_description.txt",
+    "jd_keyword_extraction": f"{llm_task_output_dir}/job_description_extracted_keywords.txt",
+
+    "limiter_db_dir": limiter_db_dir,
+    "limiter_db_file": f"{limiter_db_dir}/request_limiter.db",
+    
     "src_root": src_root,
-    "applicant_info_organized": f"{info_files}/applicant_info_organized.txt",
-    "info_extraction_folder_path": info_extraction,
-    "pre_tasks_folder_path": pre_tasks,
-    "job_description": job_description,
-    "jd_keyword_extraction": f"{jd_keyword_extraction}/job_description_extracted_keywords.txt",
-    "personal_information_extraction_task": f"{pre_tasks}/personal_information_extraction_task.txt",
-    "education_extraction_task": f"{info_extraction}/education_extraction_task.txt",
-    "volunteer_work_extraction_task": f"{info_extraction}/volunteer_work_extraction_task.txt",
-    "awards_recognitions_extraction_task": f"{info_extraction}/awards_recognitions_extraction_task.txt",
-    "references_extraction_task": f"{info_extraction}/references_extraction_task.txt",
-    "personal_traits_interests_extraction_task": f"{info_extraction}/personal_traits_interests_extraction_task.txt",
-    "profile_builder_task": f"{info_extraction}/profile_builder_task.txt",
-    "work_experience_extraction_task": f"{pre_tasks}/work_experience_extraction_task.txt",
-    "project_experience_extraction_task": f"{pre_tasks}/project_experience_extraction_task.txt",
-    "skills_from_exp_and_project": f"{pre_tasks}/skills_from_exp_and_project.txt",
-    "skills_extraction_task": f"{pre_tasks}/skills_extraction_task.txt",
-    "coursework_extraction_task": f"{info_extraction}/coursework_extraction_task.txt",
-    "ats_friendly_skills_task": f"{pre_tasks}/ats_friendly_skills_task.txt",
-    "find_comparable_items_from_missing_skills": f"{pre_tasks}/find_comparable_items_from_missing_skills.txt",
-    "reduce_missing_skills_task": f"{pre_tasks}/reduce_missing_skills_task.txt",
-    "split_context_of_ats_friendly_skills_task": f"{info_extraction}/split_context_of_ats_friendly_skills_task.txt",
-    "experience_choosing_task": f"{pre_tasks}/experience_choosing_task.txt",
-    "split_context_of_experience_choosing_task": f"{pre_tasks}/split_context_of_experience_choosing_task.txt",
-    "gather_info_of_chosen_experiences": f"{pre_tasks}/gather_info_of_chosen_experiences.txt",
-    "ats_friendly_keywords_into_experiences": f"{pre_tasks}/ats_friendly_keywords_into_experiences.txt",
-    "split_context_of_ats_friendly_keywords_into_experiences": f"{info_extraction}/split_context_of_ats_friendly_keywords_into_experiences.txt",
-    "career_objective_task": f"{info_extraction}/career_objective_task.txt",
-    "resume_in_json_task": f"{draft_output}/resume_in_json_task.txt",
-    "resume_compilation_task": f"{draft_output}/resume_compilation_task.txt",
+    "info_files_dir": info_files_dir,
+    "info_extraction_dir": info_extraction_dir,
+    "pre_tasks_dir": pre_tasks_dir,
+    "draft_output_dir": draft_output_dir,
+    "llm_task_output_dir": llm_task_output_dir,
+
+    "rag_db_perist_dir": rag_db_perist_dir,
+    "hash_file_path": f"{rag_db_perist_dir}/hash_store.txt",
+    
+    "info_extraction_folder_path": info_extraction_dir,
+    "pre_tasks_folder_path": pre_tasks_dir,
+    
+    "personal_information_extraction_task": f"{pre_tasks_dir}/personal_information_extraction_task.txt",
+    "education_extraction_task": f"{info_extraction_dir}/education_extraction_task.txt",
+    "volunteer_work_extraction_task": f"{info_extraction_dir}/volunteer_work_extraction_task.txt",
+    "awards_recognitions_extraction_task": f"{info_extraction_dir}/awards_recognitions_extraction_task.txt",
+    "references_extraction_task": f"{info_extraction_dir}/references_extraction_task.txt",
+    "personal_traits_interests_extraction_task": f"{info_extraction_dir}/personal_traits_interests_extraction_task.txt",
+    "profile_builder_task": f"{info_extraction_dir}/profile_builder_task.txt",
+    "work_experience_extraction_task": f"{pre_tasks_dir}/work_experience_extraction_task.txt",
+    "project_experience_extraction_task": f"{pre_tasks_dir}/project_experience_extraction_task.txt",
+    "skills_from_exp_and_project": f"{pre_tasks_dir}/skills_from_exp_and_project.txt",
+    "skills_extraction_task": f"{pre_tasks_dir}/skills_extraction_task.txt",
+    "coursework_extraction_task": f"{info_extraction_dir}/coursework_extraction_task.txt",
+    "ats_friendly_skills_task": f"{pre_tasks_dir}/ats_friendly_skills_task.txt",
+    "find_comparable_items_from_missing_skills": f"{pre_tasks_dir}/find_comparable_items_from_missing_skills.txt",
+    "reduce_missing_skills_task": f"{pre_tasks_dir}/reduce_missing_skills_task.txt",
+    "split_context_of_ats_friendly_skills_task": f"{info_extraction_dir}/split_context_of_ats_friendly_skills_task.txt",
+    "experience_choosing_task": f"{pre_tasks_dir}/experience_choosing_task.txt",
+    "split_context_of_experience_choosing_task": f"{pre_tasks_dir}/split_context_of_experience_choosing_task.txt",
+    "gather_info_of_chosen_experiences": f"{pre_tasks_dir}/gather_info_of_chosen_experiences.txt",
+    "ats_friendly_keywords_into_experiences": f"{pre_tasks_dir}/ats_friendly_keywords_into_experiences.txt",
+    "split_context_of_ats_friendly_keywords_into_experiences": f"{info_extraction_dir}/split_context_of_ats_friendly_keywords_into_experiences.txt",
+    "career_objective_task": f"{info_extraction_dir}/career_objective_task.txt",
+    "resume_in_json_task": f"{draft_output_dir}/resume_in_json_task.txt",
+    "resume_compilation_task": f"{draft_output_dir}/resume_compilation_task.txt",
     "latex_resume_generation_task": f"{src_root}/latex_class/resume_generation_task.tex", 
-    "final_output_dir": f"{draft_output}/",
-    "cover_letter_generation_task": f"{draft_output}/cover_letter_generation_task.txt",
+    "final_output_dir": f"{draft_output_dir}/",
+    "cover_letter_generation_task": f"{draft_output_dir}/cover_letter_generation_task.txt",
 }

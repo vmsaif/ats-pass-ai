@@ -39,7 +39,7 @@ class LLMTask:
 			return True
 		
 		try:
-			with open(self.user_info_orgainzed_file_path, 'r') as f:
+			with open(self.user_info_orgainzed_file_path, 'r', encoding='utf-8') as f:
 				content = f.read()
 			if len(content) < 50:
 				print(f"{self.task_name} output file found but it is most likely empty.")

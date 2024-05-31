@@ -11,9 +11,11 @@ google-generativeai = "^0.5.2"
 agentops = "^0.1.9"
 duckduckgo-search = "^6.1.0"
 crewai = {extras = ["tools"], version = "^0.30.11"}
+prettytable = "^3.10.0"
 
 [tool.poetry.scripts]
 ats_pass_ai = "ats_pass_ai.main:run"
+ats_pass_ai_check_limit = "ats_pass_ai.limiter:printRemainingRequestsPerDay"
 
 [build-system]
 requires = ["poetry-core"]

@@ -90,14 +90,29 @@ latex_resume_generation_task:
 
         \section{VOLUNTEER} % if data available
           \subsection{[Title]}
-          \subHeading{[Role]| [Location] | [Timeline]}
+          \subHeading{[Role] | [Location] | [Timeline]}
           - [highlights] \newline
           - [highlights]
         \sectionsep
 
+        \section{AWARDS} % if data available
+          \subsection{[Award Name]}
+          \subHeading{[Awarding Organization] | [Date]}
+          - [Reason for recognition] \newline
+          - [Reason for recognition]
+        \sectionsep
+
+        \section{REFERENCES} % if data available
+          \subsection{[Name]}
+          \subHeading{[Position] | [Company]}
+          - [Contact Information] \newline
+          - [Relationship]
+        \sectionsep
+          
         \section{ACTIVITIES} % if data available
-        - [Activity 1] \\
-        - [Activity 2]
+          - [Activity 1] \\
+          - [Activity 2]
+        \sectionsep
 
     \end{minipage}
     \hfill
@@ -327,9 +342,33 @@ resume_in_json_task:
         "Graduation Date": "...",
         "GPA": "..."
       },
-      "Additional": {
-        "References": "..."
-      }
+      "References": [
+        {
+          "Name": "...",
+          "Position": "...",
+          "Company": "...",
+          "Contact Information": "...",
+          "Relationship": "..."
+        },
+        ...
+      ]
+      "Volunteer": [
+        {
+          "Title": "...",
+          "Role": "...",
+          "Location": "...",
+          "Timeline": "...",
+          "Highlights": [
+            "...",
+            "..."
+          ]
+        },
+        ...
+      ],
+      "Activities": [
+        "...",
+        "..."
+      ]
     }
     ``` 
 
@@ -375,7 +414,7 @@ education_extraction_task:
     You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive education details.
     How you should use the tool:
     argument:
-    "question": "Give me the list of all educational qualifications, including degrees, majors, universities, graduation dates, and any honors or distinctions."
+    "question": "Give me the list of all educational, academic qualifications and degrees obtained by the Applicant."
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, Re-run the tool with the missing field. 
   expected_output: >
       {

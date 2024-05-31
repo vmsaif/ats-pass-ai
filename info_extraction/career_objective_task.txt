@@ -1,3 +1,0 @@
-{
-    "Career Objective": "Highly motivated AI enthusiast with experience in Python and LangChain seeking the Artificial Intelligence Engineer Internship at Radical AI for Social Good Lab. Eager to contribute to the development of impactful AI solutions while furthering my knowledge of ethical AI practices and contributing to a more equitable future."
-  }
