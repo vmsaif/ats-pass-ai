@@ -1,0 +1,65 @@
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Job Title": "Architect",
+      "Company": "RSB Properties Ltd.",
+      "Location": "N/A",
+      "Timeline": "Oct 2022 - Jul 2023",
+      "Duration": "9 months",
+      "Technologies": "N/A",
+      "skills": [
+        "Preparation of preliminary and detailed **architectural drawings**",
+        "Creating computer-generated **3D models** and **rendering**",
+        "Monitoring project progress and reporting errors"
+      ],
+      "Link": "N/A",
+      "Key Highlights": [
+        "Prepared **design solutions** and **construction documents**, applying **problem-solving** skills to address design challenges while meeting project **schedules**.",
+        "Collaborated effectively with cross-functional teams, including engineers and contractors, to ensure seamless project execution.",
+        "Utilized strong **communication skills** to present design concepts and technical drawings to clients and stakeholders."
+      ]
+    },
+    "Work/Project Experience": [
+      {
+        "Job Title": "Architectural Intern",
+        "Company": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
+        "Location": "N/A",
+        "Timeline": "Jun 2019 - Sep 2019",
+        "Duration": "3 months",
+        "Technologies": "N/A",
+        "skills": [
+          "Prepared working **drawings** for residential, commercial, and interior projects",
+          "Arranged RAJUK sheets and layouts",
+          "Composed **construction documents** and **BOQs**",
+          "Prepared **3D models** and **rendering**s for visual representation"
+        ],
+        "Link": "N/A",
+        "Key Highlights": [
+          "Contributed to the **design** and development of **architectural drawings**, applying knowledge of building codes and regulations.",
+          "Demonstrated proficiency in using **software** for **3D visualization** and **rendering**, enhancing the presentation of design concepts.",
+          "Gained practical experience in preparing **construction documents**, including **BOQs**, contributing to the successful execution of projects."
+        ]
+      },
+      {
+        "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
+        "Company": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
+        "Location": "N/A",
+        "Timeline": "Jan 2022 - Jul 2022",
+        "Duration": "6 months",
+        "Technologies": "N/A",
+        "skills": [
+          "Prepared technical and detailed **drawings**",
+          "Prepared **3D models** for necessary representation and implementation",
+          "Prepared graphical presentation for technical validation"
+        ],
+        "Link": "N/A",
+        "Key Highlights": [
+          "Developed technical **drawings** and **3D models** that met accessibility standards and guidelines.",
+          "Collaborated with a team to assess and analyze the accessibility of built environments.",
+          "Utilized **design** skills to propose and present **solutions** that promoted inclusivity and accessibility."
+        ]
+      }
+    ],
+    "Project Experience": []
+  }
+}

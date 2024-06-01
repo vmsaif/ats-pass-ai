@@ -141,7 +141,7 @@ class RagSearchTool:
 
         # Optionally delete files in the pre-tasks folder
         if delete_pretasks:
-            RagSearchTool._delete_files_in_directory(PATHS["draft_output"])
+            RagSearchTool._delete_files_in_directory(PATHS["draft_output_dir"])
             RagSearchTool._delete_files_in_directory(PATHS["pre_tasks_folder_path"])
             print("Pre-task files deletion attempt complete. Deleted Draft output and Pre-tasks files.")
 

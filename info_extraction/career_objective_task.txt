@@ -1,0 +1,3 @@
+{
+    "Career Objective": "Highly motivated Architect with a demonstrated ability to translate design concepts into detailed construction documents and 3D visualizations, seeking to leverage expertise in AutoCAD, SketchUp, and Revit at Shibori Ltd. to contribute to innovative and sustainable design solutions."
+  }

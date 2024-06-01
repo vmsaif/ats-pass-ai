@@ -1,0 +1,11 @@
+{
+  "Education": {
+    "Degree": "Bachelor of Architecture (B.Arch)",
+    "Major": null,
+    "University": "North South University",
+    "University Location": null,
+    "Graduation Date": "Jan 2021",
+    "GPA": "2.7/4.0 (82%)",
+    "Honors/Distinctions": null
+  }
+}

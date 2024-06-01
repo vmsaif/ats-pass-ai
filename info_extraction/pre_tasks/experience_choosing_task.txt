@@ -1,0 +1,53 @@
+```json
+{
+  "selected_experiences": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Work Experience: Architect at RSB Properties Ltd. (Oct 2022 - Jul 2023)"
+      }
+    ],
+    "Work/Project Experience": [
+      "Work Experience: Architectural Intern at Tania Karim, Nurur Rahman Khan and Associates (TKNRK) (Jun 2019 - Sep 2019)",
+      "Work Experience: Technical Trainee on Reasonable Accommodation and Accessibility at Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP) (Jan 2022 - Jul 2022)"
+    ],
+    "Project Experience": []
+  }
+}
+```
+
+```json
+{
+  "reason for choosing, How it is relevant to the job": [
+    {
+      "title": "Work Experience: Architect at RSB Properties Ltd. (Oct 2022 - Jul 2023)",
+      "reason": "This is the most recent experience and directly aligns with the 'Architect' role. It highlights the use of essential software like AutoCAD, SketchUp, Revit, and 3DS Max, reflecting proficiency in 3D visualization and construction document preparation. The experience demonstrates a strong foundation in architectural design principles and technical skills."
+    },
+    {
+      "title": "Work Experience: Architectural Intern at Tania Karim, Nurur Rahman Khan and Associates (TKNRK) (Jun 2019 - Sep 2019)",
+      "reason": "This experience showcases a practical understanding of the architectural workflow, from preparing working drawings and RAJUK sheets to composing construction documents and BOQs.  The mention of BOQs directly corresponds with the job description's keyword 'BOQ Preparation,' signifying familiarity with this essential industry document. Additionally, the experience highlights 3D modeling and rendering skills, aligning with the job's visualization requirements."
+    },
+    {
+      "title": "Work Experience: Technical Trainee on Reasonable Accommodation and Accessibility at Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP) (Jan 2022 - Jul 2022)",
+      "reason": "While seemingly different, this experience demonstrates the applicant's ability to apply architectural skills in a specialized context. Preparing technical and detailed drawings, along with 3D models for implementation, showcases adaptability and a commitment to inclusive design principles, aligning with the company's value of 'Diversity & Inclusion.' This experience highlights problem-solving skills and the ability to cater designs to specific needs."
+    }
+  ],
+  "rejected_experiences": [
+    {
+      "title": "Work Experience: Project Architect at Integrated Design (Project: Visualization of BSRM Tunnel Service Area) (Sep 2021 - Dec 2021)",
+      "reason": "Although this experience involves relevant keywords like '3D model' and 'visualization,' it overlaps significantly with the 'Architect' role at RSB Properties, which is more recent and provides a broader range of responsibilities."
+    },
+    {
+      "title": "Work Experience: Junior Designer at Simple Interiors (Apr 2017 - Dec 2017)",
+      "reason": "While involving 3D modeling and technical drawings, this experience focuses primarily on interior design, which might not be as directly applicable to the architectural focus of the Shibori Ltd. role."
+    },
+    {
+      "title": "Work Experience: Graphic Designer at UniAssist Global Education (Sep 2019 - Dec 2019)",
+      "reason": "This experience, while showcasing design skills and software proficiency, is heavily geared towards graphic design and lacks direct relevance to the architectural keywords and requirements outlined in the job description."
+    },
+    {
+      "title": "Project Experience: Visualization of BSRM Tunnel Service Area (Sep 2021 - Dec 2021)",
+      "reason": "This project, though visually oriented, is already represented within the 'Project Architect' work experience at Integrated Design.  Choosing the work experience over the project provides a more comprehensive view of the applicant's responsibilities and contributions."
+    }
+  ]
+}
+```

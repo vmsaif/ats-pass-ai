@@ -1,0 +1,187 @@
+```json
+{
+  "Contact Info": {
+    "Full Name": "Tahsin Ridwan Pulok",
+    "Phone": "+880 1785 051566",
+    "Email": "tahsin.pulok@gmail.com",
+    "LinkedIn Profile URL": "",
+    "Personal Website URL": null,
+    "Address": "Zigatola, Dhanmondi, Dhaka- 1209."
+  },
+  "Summary": "Highly motivated Architect with a demonstrated ability to translate design concepts into detailed construction documents and 3D visualizations, seeking to leverage expertise in AutoCAD, SketchUp, and Revit at Shibori Ltd. to contribute to innovative and sustainable design solutions.",
+  "Skills": {
+    "Programming Languages": [],
+    "Frameworks": [],
+    "Tools": [
+      "Construction Documents",
+      "BOQ Preparation",
+      "AutoCAD",
+      "SketchUp",
+      "3ds Max",
+      "Revit",
+      "Rhino",
+      "Creating computer-generated 3D models and rendering",
+      "Prepared 3D models for necessary representation and implementation",
+      "Prepared 3D model of architecture and landscape of the project",
+      "Prepared 3D models and renderings for visual representation",
+      "Prepared 3D models and renders"
+    ],
+    "Soft Skills": [
+      "Communication",
+      "Teamwork",
+      "Independent Work",
+      "Proficient in diverse digital design software",
+      "Preparation of preliminary and detailed architectural drawings",
+      "Prepared technical and detailed drawings",
+      "Prepared working drawings for residential, commercial and interior projects",
+      "Prepared detailed drawings for interior projects",
+      "Arranged RAJUK sheets and layouts"
+    ]
+  },
+  "Projects": [],
+  "Work": [
+    {
+      "Job Title": "Architect",
+      "Company": "RSB Properties Ltd.",
+      "Location": "N/A",
+      "Timeline": "Oct 2022 - Jul 2023",
+      "Technologies": "N/A",
+      "Link": "N/A",
+      "Key achievements": [
+        "Prepared design solutions and construction documents, applying problem-solving skills to address design challenges while meeting project schedules.",
+        "Collaborated effectively with cross-functional teams, including engineers and contractors, to ensure seamless project execution.",
+        "Utilized strong communication skills to present design concepts and technical drawings to clients and stakeholders."
+      ]
+    },
+    {
+      "Job Title": "Architectural Intern",
+      "Company": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
+      "Location": "N/A",
+      "Timeline": "Jun 2019 - Sep 2019",
+      "Technologies": "N/A",
+      "Link": "N/A",
+      "Key achievements": [
+        "Contributed to the design and development of architectural drawings, applying knowledge of building codes and regulations.",
+        "Demonstrated proficiency in using software for 3D visualization and rendering, enhancing the presentation of design concepts.",
+        "Gained practical experience in preparing construction documents, including BOQs, contributing to the successful execution of projects."
+      ]
+    },
+    {
+      "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
+      "Company": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
+      "Location": "N/A",
+      "Timeline": "Jan 2022 - Jul 2022",
+      "Technologies": "N/A",
+      "Link": "N/A",
+      "Key achievements": [
+        "Developed technical drawings and 3D models that met accessibility standards and guidelines.",
+        "Collaborated with a team to assess and analyze the accessibility of built environments.",
+        "Utilized design skills to propose and present solutions that promoted inclusivity and accessibility."
+      ]
+    }
+  ],
+  "Education": {
+    "Degree": "Bachelor of Architecture (B.Arch)",
+    "Major": null,
+    "University": "North South University",
+    "Location": null,
+    "Graduation Date": "Jan 2021",
+    "GPA": "2.7/4.0 (82%)"
+  },
+  "References": [
+    {
+      "Name": "Shaila Joarder",
+      "Position": "Associate Professor",
+      "Company": "Department of Architecture, North South University",
+      "Contact Information": "Email: shaila.joarder@northsouth.edu",
+      "Relationship": null
+    },
+    {
+      "Name": "Fariha Yasmin Faruque",
+      "Position": "Architectural Designer",
+      "Company": "ProWise Engineering Inc.",
+      "Contact Information": "Email: fariha.faruque@prowise.ca",
+      "Relationship": null
+    },
+    {
+      "Name": "Krishno Sen",
+      "Position": "Senior Analysts",
+      "Company": "Leaving No One Behind (LNOB), BRAC Bangladesh",
+      "Contact Information": "Email: krishno.sen@brac.net",
+      "Relationship": null
+    }
+  ],
+  "Volunteer": [
+    {
+      "Title": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Role": "Designer and builder",
+      "Location": null,
+      "Timeline": "January 2019",
+      "Highlights": [
+        "Designed and had hands-on experience in building a small toilet from scratch using sustainable local materials."
+      ]
+    },
+    {
+      "Title": "Department of Architecture, North South University",
+      "Role": "Volunteer",
+      "Location": null,
+      "Timeline": "March 2019",
+      "Highlights": [
+        "Volunteered as an organizer and distributed invitations to other schools."
+      ]
+    },
+    {
+      "Title": "Department of Architecture, North South University",
+      "Role": "Volunteer",
+      "Location": null,
+      "Timeline": "June 2015",
+      "Highlights": [
+        "Volunteered as an organizer."
+      ]
+    }
+  ],
+  "Activities": [],
+  "Awards and Recognitions": [
+    {
+      "Award Name": "Certificate in recognition of Excellent Result in S.S.C",
+      "Awarding Organization": "Prothom Alo & UCB Bank",
+      "Date": "2012",
+      "Reason": "Excellent Result in S.S.C"
+    },
+    {
+      "Award Name": "Publication of Essay on 'The Evolution of Architectural Representation'",
+      "Awarding Organization": "North South University",
+      "Date": null,
+      "Reason": "Essay selected for publication in 'Para-architectural Musings'"
+    },
+    {
+      "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
+      "Awarding Organization": "Eastern University",
+      "Date": "2014",
+      "Reason": "Course completion"
+    },
+    {
+      "Award Name": "Certificates on Multiple online courses",
+      "Awarding Organization": "Udemy",
+      "Date": "none provided",
+      "Reason": "Course completions"
+    }
+  ],
+  "Personal Traits and Interests": {
+    "Strengths": "Proficient in diverse digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.\nNaturally sociable, fostering excellent relationships with colleagues and mentors alike.\nWell-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.\nA habitual photographer with an eye for detail and an ability to multitask.\nPossesses an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
+    "Weaknesses": null,
+    "Hobbies": "Reading\n3D Modeling (sketchfab.com/tahsinpulok)\nPhotography (viewbug.com/member/tahsinpulok)\nTravelling\nGaming",
+    "Passions": null,
+    "Fears": null,
+    "Motivations": null,
+    "Dreams": null,
+    "Goals": null
+  },
+  "Miscellaneous": {
+    "Languages Spoken": null,
+    "Certifications": null,
+    "Professional Affiliations": null,
+    "Other Relevant Details": null
+  }
+}
+```

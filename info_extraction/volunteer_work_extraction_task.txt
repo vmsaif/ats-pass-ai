@@ -1,0 +1,22 @@
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had hands-on experience in building a small toilet from scratch using sustainable local materials.",
+      "Timeline": "January 2019"
+    },
+    {
+      "Organization Name": "Department of Architecture, North South University",
+      "Role": "Volunteer",
+      "Responsibilities": "Volunteered as an organizer and distributed invitations to other schools.",
+      "Timeline": "March 2019"
+    },
+    {
+      "Organization Name": "Department of Architecture, North South University",
+      "Role": "Volunteer",
+      "Responsibilities": "Volunteered as an organizer.",
+      "Timeline": "June 2015"
+    }
+  ]
+}

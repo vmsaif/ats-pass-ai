@@ -1,0 +1,28 @@
+{
+  "Awards and Recognitions": [
+    {
+      "Award Name": "Certificate in recognition of Excellent Result in S.S.C",
+      "Awarding Organization": "Prothom Alo & UCB Bank",
+      "Date": "2012",
+      "Reason": "Excellent Result in S.S.C"
+    },
+    {
+      "Award Name": "Publication of Essay on 'The Evolution of Architectural Representation'",
+      "Awarding Organization": "North South University",
+      "Date": null,
+      "Reason": "Essay selected for publication in \'Para-architectural Musings\'"
+    },
+    {
+      "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
+      "Awarding Organization": "Eastern University",
+      "Date": "2014",
+      "Reason": "Course completion"
+    },
+    {
+      "Award Name": "Certificates on Multiple online courses",
+      "Awarding Organization": "Udemy",
+      "Date": "none provided",
+      "Reason": "Course completions"
+    }
+  ]
+}

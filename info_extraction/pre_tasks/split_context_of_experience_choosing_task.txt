@@ -1,0 +1,14 @@
+{
+  "selected_experiences": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Work Experience: Architect at RSB Properties Ltd. (Oct 2022 - Jul 2023)"
+      }
+    ],
+    "Work/Project Experience": [
+      "Work Experience: Architectural Intern at Tania Karim, Nurur Rahman Khan and Associates (TKNRK) (Jun 2019 - Sep 2019)",
+      "Work Experience: Technical Trainee on Reasonable Accommodation and Accessibility at Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP) (Jan 2022 - Jul 2022)"
+    ],
+    "Project Experience": []
+  }
+}

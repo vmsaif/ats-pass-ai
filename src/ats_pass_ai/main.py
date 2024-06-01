@@ -112,9 +112,9 @@ def run():
                             applicant_info_file_path, 
                             applicant_info_orgainzed_file_path, 
                             organize_system_instruction, 
-                            override=False
+                            override=True
                         )
-            organizer.run()
+            # organizer.run()
         info_organizing_time = t.interval
 
         
@@ -124,9 +124,9 @@ def run():
                                                 jd_file_path, 
                                                 jd_extracted_keywords_file_path, 
                                                 jd_extraction_system_instruction, 
-                                                override=False
+                                                override=True
                                         )
-            job_description_extractor.run()
+            # job_description_extractor.run()
 
         jd_extraction_time = t.interval
 
@@ -137,7 +137,7 @@ def run():
 
         with Timer() as t:
             # Delete the applicant profile files but not the folder To start fresh
-            # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+            RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
 
             # Run the main crew program
             crew = ResumeCrew().crew()
@@ -145,9 +145,9 @@ def run():
             try:
                 crew.kickoff()
             except Exception as e:
-                crew.kickoff() # Retry once
+                print(f"Error: {e}")
+                # crew.kickoff() # Retry once
 
-            # print(crew.usage_metrics)
         crew_run_time = t.interval
     
         with Timer() as t:

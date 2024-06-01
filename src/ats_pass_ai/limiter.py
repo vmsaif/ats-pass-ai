@@ -201,5 +201,5 @@ def cleanTable():
     limiter.conn.commit()
 
 if __name__ == '__main__':
-    # print_rpd_table()
-    print_token_table()
+    print_rpd_table()
+    # print_token_table()

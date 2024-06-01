@@ -1,0 +1,117 @@
+## Shibori Ltd. - Architect Recruitment - Keyword Analysis & Optimization
+
+**1. Introduction:**
+
+* **Role:** Architect
+* **Company:** Shibori Ltd.
+* **Location:** Not specified (consider adding if known)
+* **Industry:** Interior Design & Architecture
+
+**2. Thorough Analysis:** This job description emphasizes creativity, technical skills, collaboration, and experience with a variety of project stages from conception to implementation. They also highlight sustainability, problem-solving, and communication skills. 
+
+**3. Keyword Categorization:**
+
+* **Essential Skills:**
+    * **Hard Skills:** Architecture, Design Solutions, Construction Documents, Drawings, Specifications, Schedules, Materials Research, 3D Visualization, Software Proficiency, BOQ Preparation, Microsoft Office Suite 
+    * **Soft Skills:** Collaboration, Communication, Presentation Skills, Problem-Solving, Critical Thinking, Independent Work, Teamwork
+* **Industry Terms:** Bill of Quantities (BOQ), Sustainable Design, Building Codes, Project Management Software 
+* **Company Values & Culture:**  Passion for Design, Innovative, Fast-Paced Environment, Professional Development, Growth, Challenging, Rewarding, Exciting Projects, Diverse, Inclusive
+* **Action Verbs:** Develop, Prepare, Coordinate, Research, Evaluate, Stay Up-to-Date, Contribute
+
+**4. Prioritization and Relevance:**
+
+* **Frequency and Emphasis:**  Design, Collaboration, Technical Skills, Communication, Problem-Solving, Construction Documents, 3D Visualization
+* **Essential vs. Preferred Qualifications:** Experience (1+ year) is preferred, but freshers are welcome, suggesting a focus on potential and eagerness to learn.
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "Essential Skills": [
+    "Architecture", 
+    "Design Solutions", 
+    "Construction Documents",
+    "Drawings",
+    "Specifications",
+    "Schedules",
+    "Materials Research",
+    "3D Visualization",
+    "Software Proficiency",
+    "BOQ Preparation",
+    "Microsoft Office Suite",
+    "Collaboration",
+    "Communication",
+    "Presentation Skills",
+    "Problem-Solving",
+    "Critical Thinking",
+    "Independent Work",
+    "Teamwork"
+  ],
+  "Industry Terms": [
+    "Bill of Quantities (BOQ)",
+    "Sustainable Design",
+    "Building Codes",
+    "Project Management Software"
+  ],
+  "Company Values": [
+    "Passion for Design",
+    "Innovative",
+    "Fast-Paced Environment",
+    "Professional Development",
+    "Growth",
+    "Challenging",
+    "Rewarding",
+    "Exciting Projects",
+    "Diverse",
+    "Inclusive"
+  ],
+  "Action Verbs": [
+    "Develop",
+    "Prepare",
+    "Coordinate",
+    "Research",
+    "Evaluate",
+    "Stay Up-to-Date",
+    "Contribute"
+  ]
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills": {
+    "Essential Skills": [
+      {
+        "Name": "3D Visualization",
+        "Partial_Match": ["AutoCAD", "Revit", "SketchUp", "3ds Max", "Lumion"]
+      },
+      {
+        "Name": "Software Proficiency",
+        "Partial_Match": ["Adobe Creative Suite", "Rhino", "V-Ray", "Grasshopper"]
+      },
+      {
+        "Name": "Construction Documents",
+        "Partial_Match": ["Shop Drawings", "Construction Administration", "Submittals", "RFIs"]
+      },
+      {
+        "Name": "Sustainable Design",
+        "Partial_Match": ["LEED Accreditation", "Passive Design", "Green Building", "Energy Modeling"]
+      },
+      {
+        "Name": "Project Management",
+        "Partial_Match": ["Asana", "Trello", "Jira", "Microsoft Project"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Incorporate keywords naturally within the "Skills" section, work experience descriptions (using the STAR method to showcase skills in past projects), and potentially even your resume summary.
+* **Keyword Density:**  Avoid "keyword stuffing." Aim for a balance between keyword usage and natural, compelling language.
+* **Tailoring and Customization:** Adapt your resume for each application, prioritizing keywords most relevant to the specific job description. 
+* **Action Verbs & Numbers:**  Use action verbs to describe your accomplishments and quantify your impact whenever possible (e.g., "Led the design of a 10,000 sq ft office space..."). 
+* **Portfolio:** Given the visual nature of the field, your portfolio is crucial.  Highlight projects that demonstrate the skills and experience outlined in the job description. 

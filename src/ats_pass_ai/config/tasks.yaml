@@ -3,7 +3,6 @@
 # Description: This file contains the task descriptions for the 'ATS Pass AI' project.
 # Version: 1.0
 
-
 cover_letter_generation_task:
   description: >
     Generate a customized cover letter for a specific job application using the provided applicant details and job description. The cover letter should persuasively link the applicant’s skills, experiences, and personal philosophy with the job requirements and company culture. Ensure all placeholders are either replaced with relevant information or removed if the information is not available.
@@ -22,9 +21,8 @@ cover_letter_generation_task:
     - Address the cover letter to a specific person whenever possible.
     - Maintain a professional, concise tone, ensuring the cover letter appears personally crafted rather than generated.
 
-
   expected_output: >
-    Only mention sections, if information is available. Otherwise, simply omit the section and its placeholders. **The final output must not contain any placeholders.**
+    Only mention sections, if information is available. Otherwise, simply omit the section and its placeholders. **The final output must not contain any placeholders.** This output below will be generated in a doc file.
     
     [Applicant's Name]
     [Applicant's Address, if available]
@@ -39,25 +37,25 @@ cover_letter_generation_task:
 
     Dear [{{Hiring Manager's Name}} or Hiring Manager],
 
-    Introduction: (Briefly introduce yourself and state the position you are applying for.)
+    (Introduction: Briefly introduce yourself and state the position you are applying for.)
 
-    Paragraph 1: (Discuss your skills and technical proficiencies that align with the job description, providing specific examples.)
+    (Paragraph 1: Discuss your skills and technical proficiencies that align with the job description, providing specific examples.)
 
-    Paragraph 2: (Provide detailed examples of relevant projects or work experiences, including outcomes and their relevance to the job requirements.)
+    (Paragraph 2: Provide detailed examples of relevant projects or work experiences, including outcomes and their relevance to the job requirements.)
 
-    Paragraph 3: (Explain how your philosophy or career goals align with the company's values and mission.)
+    (Paragraph 3: Explain how your philosophy or career goals align with the company's values and mission.)
 
-    Paragraph 4: (Highlight your soft skills and their relevance to the role.)
+    (Paragraph 4: Highlight your soft skills and their relevance to the role.)
 
-    Conclusion: (Express your interest in the role, invite the hiring manager to review your resume, and suggest a follow-up discussion.)
+    (Conclusion: Express your interest in the role, invite the hiring manager to review your resume, and suggest a follow-up discussion.)
 
-    Sincerely,
+    [Sincerely, or Best Regards, or Respectfully, Kinds Regards, etc.]
     [Applicant's Name]
 
 latex_resume_generation_task:
   description: >
     Your task is to generate a one-page resume in LaTeX format based on the provided data. 
-    If a section is not present do not include it including the placeholders, and square brackets []. Each **word** must be replaced with \textbf{word} in LaTeX.
+    If a section is not present do not include it including the placeholders, and square brackets []. Each **word** must be replaced with \textbf{word} in LaTeX. Make sure not to bold more than words inside a section. Decide which 3 words are most important, and bold them. Others should be regular text. 
     
   expected_output: >
     \input{preamble.tex} 
@@ -131,7 +129,7 @@ latex_resume_generation_task:
         \vspace{15pt} % Hacky fix for awkward extra vertical space only for the first section, otherwise, \vspace{5pt} is sufficient
         
         \begin{tightemize}
-          \item [highlight 1, if you use any % symbol, use \%, for example 50\%, same for & symbol and other special characters]
+          \item [highlight 1, if you use any % symbol, use \%, for example, 50\%, same for & symbol as \& and other special characters because LaTeX uses them for special purposes.]
           \item [highlight 2]
           \item [highlight 3]
           \item [Relevant link, example: Project repository available on \href{[GitHub link]}{\underline{GitHub}}.]
@@ -285,7 +283,6 @@ resume_in_json_task:
 
 
   expected_output: >
-    ```json
     {
       "Contact Info": {
         "Full Name": "...",
@@ -370,7 +367,6 @@ resume_in_json_task:
         "..."
       ]
     }
-    ``` 
 
 # ------------- generalist_agent -> applicant Basic Profile Creation -------------
 
@@ -442,7 +438,7 @@ coursework_extraction_task:
     After extracting the coursework, prioritize the courses from top to bottom that are relevant to the job description as the first 3-5 courses in the list, ignoring others. 
 
     Here are the Job Description Keywords:
-    {job_description_keywords}
+    {jd_keyword_extraction}
   expected_output: >
     Ignore any key if not available. Relevant courses should be prioritized.
       {
@@ -704,18 +700,6 @@ project_experience_extraction_task:
         ]
       }
 
-
-# ------------- generalist_agent -> Process information from the applicant's experiences -------------
-
-split_context_of_experience_choosing_task:
-  description: >
-    Split the context provided to you at the breaking point "Explanation for choosing and not choosing Other Experiences:". In your output, you will provide everything before the "Explanation for choosing and not choosing Other Experiences:" as the final output of the task.
-
-    The context you need to split is provided to you from the previous task.
-    
-  expected_output: >
-    Everything before the "Explanation for choosing and not choosing Other Experiences:" will be the final output of the task.
-
 gather_info_of_chosen_experiences:
   description: >
     Extract and provide detailed information for each of the "selected_experiences" using the content below. Maintain the order of experiences as they are given, and group them correctly as "Work Experience", "Project Experience" and Recent Experience.
@@ -865,26 +849,24 @@ ats_friendly_skills_task:
 
     - **'Partial Match'**: Skills or experiences that are somehow related and the applicant but not identical to the job requirements.
 
-      In JSON Format:
-
       {
         "applicant_skills": {
           "partial_match_with_job_description": {
             "Programming Languages": {
               "name": "item 1",
-              "pertially_matched_with_job_description": "item 1"
+              "relavant_to_the_job_description": "item 1"
             },
             "Frameworks": {
               "name": "item 1",
-              "pertially_matched_with_job_description": "item 1"
+              "relavant_to_the_job_description": "item 1"
             },
             "Tools": {
               "name": "item 1",
-              "pertially_matched_with_job_description": "item 1"
+              "relavant_to_the_job_description": "item 1"
             },
             "Soft Skills": {
               "name": "item 1",
-              "pertially_matched_with_job_description": "item 1"
+              "relavant_to_the_job_description": "item 1"
             }
           }
         }
@@ -923,56 +905,55 @@ split_context_of_ats_friendly_skills_task:
     Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
 
   expected_output: >
-    In JSON:
-      {
-        "applicant_skills": {
-          "exact_match_with_job_description": {
-            "Programming Languages": [
-              "item 1",
-              "item 2",
-              ...
-            ],
-            "Frameworks": [
-              "item 1",
-              "item 2",
-              ...
-            ],
-            "Tools": [
-              "item 1",
-              "item 2",
-              ...
-            ],
-            "Soft Skills": [
-              "item 1",
-              "item 2",
-              ...
-            ]
-          },
+    {
+      "applicant_skills": {
+        "exact_match_with_job_description": {
+          "Programming Languages": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Frameworks": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Tools": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Soft Skills": [
+            "item 1",
+            "item 2",
+            ...
+          ]
+        },
 
-          "partial_match_with_job_description": {
-            "Programming Languages": [
-              "item 1",
-              "item 2",
-              ...
-            ],
-            "Frameworks": [
-              "item 1",
-              "item 2",
-              ...
-            ],
-            "Tools": [
-              "item 1",
-              "item 2",
-              ...
-            ],
-            "Soft Skills": [
-              "item 1",
-              "item 2",
-              ...
-            ]
-          }
+        "partial_match_with_job_description": {
+          "Programming Languages": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Frameworks": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Tools": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Soft Skills": [
+            "item 1",
+            "item 2",
+            ...
+          ]
         }
       }
+    }
 
 experience_choosing_task:
   description: >
@@ -996,7 +977,6 @@ experience_choosing_task:
   expected_output: >
     Output should present any combination of 3 total experiences, either all work, all projects, or a mix, selected based on their relevance to the job description and balanced consideration. You must prioritize based on importance and the most recent.
 
-    ```json
     {
       "selected_experiences": {
         "Most Recent Experience": [
@@ -1013,10 +993,9 @@ experience_choosing_task:
         ]
       }
     }
-    ```
 
-    * **Explanation for choosing and not choosing Other Experiences:**
-    ```json
+    **Explanation for choosing and not choosing Other Experiences:**
+    
     {
       "reason for choosing, How it is relevant to the job": [
         {
@@ -1033,7 +1012,15 @@ experience_choosing_task:
         ...
       ]
     }
-    ```
+
+split_context_of_experience_choosing_task:
+  description: >
+    Split the context provided to you at the breaking point "Explanation for choosing and not choosing Other Experiences:". In your output, you will provide everything before the "Explanation for choosing and not choosing Other Experiences:" as the final output of the task.
+
+    The context you need to split is provided to you from the previous task.
+    
+  expected_output: >
+    Everything before the "Explanation for choosing and not choosing Other Experiences:" will be the final output of the task.
 
 # -------------Technical Details Agent (Technical Skills and Professional Affiliations Specialist) tasks--------------
 skills_from_exp_and_project_task:
@@ -1046,63 +1033,66 @@ skills_from_exp_and_project_task:
       query: str = Field(description="search query to look up")
     
   expected_output: >
-    In JSON format:
+    eg means for example
       {
-        "Combined Skills List": {
+        "Skills List": {
           "Technologies": {
             {
-              "Name": "Python",
-              "field": "Programming Language"
+              "Name": "[name of the technology]",
+              "field": "[Possible Category of the technology, eg. Programming Language]"
             },
             {
-              "Name": "Java",
-              "field": "Programming Language, ..."
+              "Name": "eg. Java",
+              "field": [ 
+                "Programming Language",
+                "Backend Development",
+                "etc..."
+              ]
+              
             }
           },
           "Frameworks": {
             {
-              "Name": "Langchain",
-              "field": "AI, LLM, ..."
+              "Name": "[name of the framework]",
+              "field": "[Possible Category of the framework, eg. Web Development]"
             },
             {
-              "Name": "Angular",
-              "field": "JavaScript Framework, ...."
-            },
-            {
-              "Name": "Spring Boot",
-              "field": "Java Framework"
+              "Name": "eg. Angular",
+              "field": [ 
+                "JavaScript Framework",
+                "Frontend Development",
+                "etc..."
+              ]
             }
           },
-
           "Skills": {
             {
-              "Name": "Data Analysis",
-              "field": "Analytical Skills, ..."
+              "Name": "[name of the skill]",
+              "field": "[Possible Category of the skill, eg. Analytical Skills]"
             },
             {
-              "Name": "Machine Learning",
-              "field": "AI, ML, ..."
-            },
-            {
-              "Name": "Project Management",
-              "field": "Management Skills, ..."
+              "Name": "eg. Data Analysis",
+              "field": [ 
+                "Analytical Skills",
+                "etc..."
+              ]
             }
           },
-
           "Soft Skills": {
             {
-              "Name": "Communication",
-              "field": "Interpersonal Skills"
+              "Name": "[name of the soft skill]",
+              "field": "[Possible Category of the soft skill, eg. Interpersonal Skills]"
             },
             {
-              "Name": "Leadership",
-              "field": "Management Skills"
-            },
-            {
-              "Name": "Teamwork",
-              "field": "Collaboration Skills"
+              "Name": "eg. Communication",
+              "field": [ 
+                "Interpersonal Skills",
+                "etc..."
+              ]
             }
           }
+        }
+      }
 
 skills_extraction_task:
   description: >
@@ -1119,91 +1109,66 @@ skills_extraction_task:
     You are also provided another web search tool to search for the skills that you are not familiar with to know in which field or category they belong.
 
   expected_output: >
-    In JSON format:
+    eg means for example
       {
         "combined skills list of applicant": {
           "Technologies": {
             {
-              "Name": "Python",
+              "Name": "[name of the technology]",
               "field": [
-                "Programming Language",
-                "AI, ML",
-                "..."
-                ]
+                "Possible Category of the technology, eg. Programming Language, Backend Development",
             },
             {
-              "Name": "Java",
-              "field": [
+              "Name": "eg. Java",
+              "field": [ 
                 "Programming Language",
-                "..."
+                "Backend Development",
+                "etc..."
               ]
             }
           },
           "Frameworks": {
             {
-              "Name": "Langchain",
-              "field": [
-                "AI, 
-                ML, 
-                LLM (Large Language Model),",
-                "..."
-              ]
+              "Name": "[name of the framework]",
+              "field": "[Possible Category of the framework, eg. Web Development]"
             },
             {
-              "Name": "Angular",
-              "field": [
+              "Name": "eg. Angular",
+              "field": [ 
                 "JavaScript Framework",
-                "Web Development",
                 "Frontend Development",
-                "..."
+                "etc..."
               ]
-            },
-            {
-              "Name": "Spring Boot",
-              "field": [
-                "Java Framework",
-                "..."
             }
           },
-
           "Skills": {
             {
-              "Name": "Data Analysis",
-              "field": [
+              "Name": "[name of the skill]",
+              "field": "[Possible Category of the skill, eg. Analytical Skills]"
+            },
+            {
+              "Name": "eg. Data Analysis",
+              "field": [ 
                 "Analytical Skills",
-                "..."
-              ]
-            },
-            {
-              "Name": "Machine Learning",
-              "field": [
-                "AI, ML",
-                "..."
-              ]
-            },
-            {
-              "Name": "Project Management",
-              "field": [
-                "Management Skills",
-                "..."
+                "etc..."
               ]
             }
           },
-
           "Soft Skills": {
             {
-              "Name": "Communication",
-              "field": "Interpersonal Skills"
+              "Name": "[name of the soft skill]",
+              "field": "[Possible Category of the soft skill, eg. Interpersonal Skills]"
             },
             {
-              "Name": "Leadership",
-              "field": "Management Skills"
-            },
-            {
-              "Name": "Teamwork",
-              "field": "Collaboration Skills"
+              "Name": "eg. Communication",
+              "field": [ 
+                "Interpersonal Skills",
+                "etc..."
+              ]
             }
           }
+        }
+      }
 
 # --------------------------------------------------------
 

@@ -1,0 +1,14 @@
+{
+  "Project Experience": [
+    {
+      "Project Title": "Visualization of BSRM Tunnel Service Area",
+      "Timeline": "Sep 2021 - Dec 2021",
+      "Technologies, frameworks, and tools Used": "AutoCAD, SketchUP, 3DS Max, Rhino, Revit, Photoshop, Illustrator, CorelDraw, V-Ray, Enscape, Lumion, Twinmotion",
+      "Skills": "Prepared 3D model of architecture and landscape of the project, Prepared 2D renders and 3D animations",
+      "Link": null,
+      "Key Highlights": [],
+      "Team size": null,
+      "Outcomes": null
+    }
+  ]
+}

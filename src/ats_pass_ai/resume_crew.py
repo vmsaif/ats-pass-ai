@@ -272,7 +272,7 @@ class ResumeCrew:
 
 		
 		# add the job description extracted keywords
-		description = description + f'\n Today\'s Date:{today_date}\n' + self.load_file(PATHS["job_description"]) 
+		description = description + f'\n Today\'s Date:{today_date}\n' + self.load_file(PATHS["jd_file_path"]) 
 
 		context = []
 
@@ -416,8 +416,16 @@ class ResumeCrew:
 
 	@task
 	def coursework_extraction_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('coursework_extraction_task')
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		description = description.format(jd_keyword_extraction = self.load_file(PATHS["jd_keyword_extraction"]))
+
 		return Task(
-			config=self.tasks_config["coursework_extraction_task"],
+			description=description,
+			expected_output=expected_output,
 			agent=self.generalist_agent(),
 			output_file=PATHS["coursework_extraction_task"],
 			tools=[self.queryTool],
@@ -637,7 +645,8 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
-		# task_description = task_description + "\n" + self.load_file(PATHS["ats_friendly_keywords_into_experiences"])
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["ats_friendly_keywords_into_experiences"])
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
