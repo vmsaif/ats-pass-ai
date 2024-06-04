@@ -458,11 +458,14 @@ volunteer_work_extraction_task:
     "question": "Give me a list of all volunteer experiences, including organization names, roles, responsibilities, and dates."
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+
+    When extracting the data, count the number of characters in the "Organization Name" field and include that count in the output.
   expected_output: >
       {
         "Volunteer Work": [
           {
             "Organization Name": "",
+            "Name length in characters": "",
             "Role": "",
             "Responsibilities": "",
             "Timeline": "",

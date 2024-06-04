@@ -1,6 +1,6 @@
 import subprocess
 import os
-def compile_latex(tex_path, output_dir):
+def compile_latex(tex_path, output_dir = None):
     
     sanitized_file(tex_path)
     filename = os.path.basename(tex_path)
@@ -8,10 +8,11 @@ def compile_latex(tex_path, output_dir):
 
     try:
         command = [
-            'xelatex', 
-            '-interaction=nonstopmode', 
-            '-output-directory', f"../../../{output_dir}", 
+            'xelatex',
+            '-interaction=nonstopmode',  
+            '-output-directory', f"{output_dir}",
             filename]
+                
         # print cwd
         result = subprocess.run(command, cwd = class_path, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)        
         # Print outputs regardless of success
@@ -19,7 +20,7 @@ def compile_latex(tex_path, output_dir):
         # print(result.stdout)
         
         if result.returncode == 0:
-            print("PDF generated successfully!")
+            print("\n\n------PDF generated successfully!-----\n\n")
         else:
             print("PDF generation had issues:")
             print("Error Output:")

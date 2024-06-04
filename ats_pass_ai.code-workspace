@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"grammarly.selectors": [
+			{
+				"language": "yaml",
+				"scheme": "file",
+				"pattern": "src/ats_pass_ai/config/tasks.yaml"
+			}
+		]
+	}
+}

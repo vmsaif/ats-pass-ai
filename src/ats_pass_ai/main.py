@@ -7,6 +7,7 @@ from datetime import timedelta
 from textwrap import dedent
 from ats_pass_ai.limiter import printRemainingRequestsPerDay
 from ats_pass_ai.resume_crew import ResumeCrew
+from ats_pass_ai.themes_crew.omega_theme.omega_theme_crew import OmegaThemeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool
 from ats_pass_ai.tools.llm_task import LLMTask
 from ats_pass_ai.output_file_paths import PATHS
@@ -137,21 +138,23 @@ def run():
 
         with Timer() as t:
             # Delete the applicant profile files but not the folder To start fresh
-            RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+            # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
 
             # Run the main crew program
             crew = ResumeCrew().crew()
             
-            try:
-                crew.kickoff()
-            except Exception as e:
-                print(f"Error: {e}")
-                # crew.kickoff() # Retry once
+            # try:
+            #     crew.kickoff()
+            # except Exception as e:
+            #     print(f"Error: {e}")
+            #     # crew.kickoff() # Retry once
 
         crew_run_time = t.interval
     
         with Timer() as t:
-            compile_latex(PATHS["latex_resume_generation_task"], PATHS["final_output_dir"])
+            omega_theme_crew = OmegaThemeCrew().crew()
+            omega_theme_crew.kickoff()
+            compile_latex(PATHS["omega_theme_final_output_tex"], PATHS["omega_theme_final_output_pdf"])
         latex_generation_time = t.interval
 
     program_run_time = total_time.interval

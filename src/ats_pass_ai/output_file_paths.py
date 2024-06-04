@@ -6,6 +6,7 @@ jd_keyword_extraction = f'{info_extraction_dir}/jd_keyword_extraction'
 draft_output_dir = f'{info_extraction_dir}/draft_output'
 llm_task_output_dir = f'{info_files_dir}/llm_task_output'
 src_root = 'src/ats_pass_ai'
+themes_crew_dir = f'{src_root}/themes_crew'
 limiter_db_dir = 'custom_db'
 rag_db_perist_dir = "./chroma_db"
 
@@ -58,6 +59,16 @@ PATHS = {
     "resume_in_json_task": f"{draft_output_dir}/resume_in_json_task.txt",
     "resume_compilation_task": f"{draft_output_dir}/resume_compilation_task.txt",
     "latex_resume_generation_task": f"{src_root}/latex_class/resume_generation_task.tex", 
-    "final_output_dir": f"{draft_output_dir}/",
     "cover_letter_generation_task": f"{draft_output_dir}/cover_letter_generation_task.txt",
+
+    "omega_theme_final_output_tex": f"{themes_crew_dir}/omega_theme/theme_latex/omega_theme_final_output.tex",
+    "omega_theme_final_output_pdf": f"../../../../../{themes_crew_dir}/omega_theme/theme_latex/", # need to go back to project root from class path
+
+    "namesection": f"{themes_crew_dir}/omega_theme/theme_latex/namesection.tex",
+    "educationsection": f"{themes_crew_dir}/omega_theme/theme_latex/educationsection.tex",
+    "courseworksection": f"{themes_crew_dir}/omega_theme/theme_latex/courseworksection.tex",
+    "volunteersection": f"{themes_crew_dir}/omega_theme/theme_latex/volunteersection.tex",
+    "referencessection": f"{themes_crew_dir}/omega_theme/theme_latex/referencessection.tex",
+    "careerobjectivesection": f"{themes_crew_dir}/omega_theme/theme_latex/careerobjectivesection.tex",
+    "experiencesection": f"{themes_crew_dir}/omega_theme/theme_latex/experiencesection.tex",
 }

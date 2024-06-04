@@ -1,0 +1,365 @@
+# Author: Saif Mahmud
+# Date: 2024-06-01
+# Description: This file generates the latex code tasks for the Omega Theme.
+# Version: 1.0
+
+namesection:
+  description: >
+    Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
+
+    In the output, 
+    The first line contains the name. 
+    The second line will contain urls upto 2. then \\ to linebreak.
+    The thirdline will contain the email, phone number, and location.
+    Pipeline '|' should be used to separate the data and must not be the last character of the output.
+    the commands which starts with '\' are important. Do not change them.
+  expected_output: >
+    \namesection{Saif}{Mahmud }
+      {\urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+      \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB}
+    \sectionsep
+
+educationsection:
+  description: >
+    Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
+
+    In the output,
+    The first line contains the section name "Education".
+    The second line contains the university name.
+    The third line contains the degree and major. 
+    The fourth line contains the graduation date.  
+
+    Example:
+
+    \section{Education}
+      \subsection{University of Manitoba}
+      \summaryPoints{BSc Major in Computer Science}
+      \subHeading{Graduated, October 2023}
+    \sectionsep
+
+    Conditions:
+    - Only generate the \section{Education} if there is at least one element provided. Otherwise, each line the output should be latex comments, starting with '%'.
+      %\section{}
+      %\sectionsep. 
+    
+  expected_output: >
+
+courseworksection:
+  description: >
+    Extract the coursework information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+
+    In the output,
+    The first line contains the section name "Relevant Courses".
+    The next lines contain the courses with the course name and 
+      if provided, the programming languages used in the course in parentheses separated by a pipeline '|'. The courses should be separated by a double backslash '\\' which is the line break command in LaTeX.
+    The last line contains the command '\sectionsep' to separate the sections.
+
+    Example:
+    \section{Relevant Courses} 
+      Operating Systems (Linux | C) \\
+      Distributed Computing (Python | JavaScript) \\
+      Database Implementation (Python | SQL) \\
+      Data Structures and Algorithms (Java) \\
+      Object Orientation (Java | C++) \\
+    \sectionsep
+
+    Conditions:
+    - Only generate the \section{Relevant Courses} if there is at least one element provided. Otherwise, the output should be latex comments, starting with '%'.
+      %\section{}
+      %\sectionsep.
+  expected_output: >
+
+volunteersection:
+  description: >
+    Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+
+    **Task Details**:
+    
+    1. **Section Header**:
+       - Begin with a `\section{VOLUNTEER}` command if volunteer data is available. If no data is provided, the output should remain empty.
+
+    2. **Organization Name**:
+       - Use `\subsection{}` for organization name less than 20 characters. If any organization name exceeds 20 characters, use `\subHeading{}` to maintain visual consistency for all Organization names entries.
+
+    3. **Role and Timeline**:
+       - Present the role and the timeline of the volunteer activity in the format: `Role | Organization | Year-Year`. Use `\subHeading{}` for this line to maintain visual hierarchy and readability.
+
+    4. **Responsibilities**:
+       - List each responsibility starting with a dash (`-`) always use `\\` for line breaks.
+
+    5. **Adding Another Entry**:
+        - If there are multiple volunteer entries, use `\entryVSpace` to separate each entry and maintain a consistent structure.
+       
+    6. **Section Separator**:
+       - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+
+    7. **Special Character Handling**:
+       - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+         - `%` to `\%`
+         - `$` to `\$`
+         - `&` to `\&`
+         - `#` to `\#`
+         - `_` to `\_`
+
+    **Example Outputs**:
+
+    **Example 1 - Short Organization Name**:
+
+    \section{VOLUNTEER}
+    \subsection{.dev Programming Club}
+    \subHeading{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+    - Engaged with the latest software development technologies and tools. \\
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+    \entryVSpace
+    \sectionsep
+
+    **Example 2 - Long Organization Name**:
+
+    \section{VOLUNTEER}
+    \subHeading{Student Union of University of Manitoba} % Using \subHeading{} due to length is greater than 20 characters
+    \subHeading{Active Member | 2019-2023}
+    - Engaged with the latest software development technologies and tools. \\
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+    \entryVSpace
+    \sectionsep
+
+    **Conditions**:
+    - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+      %\section{}
+      %\sectionsep.
+  expected_output: >
+
+referencessection:
+  description: >
+    Extract the references information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+
+    In the output,
+    - The first line contains the section name "References".
+    - The next line contain the references with the name,
+    - The next line contains the position, company.
+    - The next line contains the contact information, email, phone number, location. Each of these should be started with a '-' and separated by a double backslash '\\' which is the line break command in LaTeX.
+    - The next line contains the relationship.
+    - The last line contains the command '\sectionsep' to separate the sections, or if there are multiple references, use '\entryVSpace' to separate each reference.
+
+    Example:
+    \section{References} 
+      \subsection{Dr. John Doe}
+      \subHeading{Professor | University of Manitoba}
+      - drjohndoe@example.com \\
+      - 123 456 7890 \\
+      - Relationship: Academic Advisor \\
+      
+      \entryVSpace
+
+    \subsection{Jane Smith}
+      \subHeading{Manager | ABC Company}
+      - example@example.com
+      - 123 456 7890 \\
+      - Relationship: Former Supervisor \\
+    \sectionsep
+
+    Conditions:
+    - Only generate the \section{References} if there is at least one element provided. Otherwise, the output should be blank as 
+      %\section{}
+      %\sectionsep.
+      Do Nothing else. Keep the output empty.
+  expected_output: >
+
+careerobjectivesection:
+  description: >
+    Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+
+    In the output,
+    - The first line contains the section name "Career Objective". 
+    - The next line contains the career objective statement.
+    - The last line contains the command '\sectionsep' to separate the sections.
+
+    Example:
+    \section{Career Goal} 
+      \betweensummaryPointsVSpace
+      \subHeading{Highly motivated Architect with a demonstrated ability to translate design concepts into detailed construction documents and 3D visualizations, seeking to leverage expertise in AutoCAD, SketchUp, and Revit at Shibori Ltd. to contribute to innovative and sustainable design solutions.}
+    \sectionsep
+  expected_output: >
+
+experiencesection:
+  description: >
+    Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+
+    In the output,
+    - The first line contains the command \betweenProjectsVSpace. **This is important**
+    - The next line contains the section name "Experience" or "Project Experience" or "Academic Projecr" based on the context provided, \section{Experience} or \section{Project Experience} or \section{Academic Project}.
+    - The next line contains the experience title. \experienceTitle{Experience Title} or \experienceTitle{Project Title} or \experienceTitle{Academic Project Title}.
+    - The next line contains the summary points up to 3 points. It will start with a space and a pipeline '|', each point should be Separated by a pipeline '|', and the last point should not have a pipeline at the end. **(Maximum 3 points)**, use the command \summaryPoints{ | Point 1 | Point 2 | Point 3} to start the summary points.
+    - The next line contains the subheading with the role and timeline.
+    - The next line contains the description of the experience. 
+    - The next line contains the command \vspace{15pt} for the first experience and \vspace{10pt} for the rest of the experiences.
+    - The next line contains the command \begin{tightemize} to start the list of responsibilities.
+    - The next lines contain the responsibilities starting with a '\item' command. Each responsibility should be started with a '\item' command.
+    - The next line contains the command \end{tightemize} to end the list of responsibilities.
+    - The next line contains the command \sectionsep to separate the sections.
+    - Each command is important.
+
+    Example:
+    \betweenProjectsVSpace
+    \experienceTitle{ATS Pass AI}
+    \summaryPoints{ | Python | Multiagent | AI} % Choose up to 3 points
+    \subHeading{Resume Automation Tool - January 2024 - Present}
+    \betweensummaryPointsVSpace
+    Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+    \vspace{15pt}
+    \begin{tightemize}
+    \item Utilized advanced AI models ...
+    \item Engineered a system ...
+    \item Developed \textbf{scalable architecture} to ..
+    \item Project repository available on \href{https://github.com/vmsaif/ats-pass-ai}{\underline{GitHub}}.
+    \end{tightemize}
+    
+    % adding another experience entry
+    \betweenProjectsVSpace
+    \experienceTitle{Software Developer}
+    \summaryPoints{ | Python | Django | React} % Maximum 3 points
+    \subHeading{Software Developer - January 2023 - December 2023}
+    \betweensummaryPointsVSpace
+    Developed and maintained web applications using Django and React, ensuring high performance and user-friendly interfaces.
+    \vspace{10pt}
+    \begin{tightemize}
+    \item Collaborated with cross-functional teams to design and implement new features, enhancing user experience and functionality.
+    % so on...
+  expected_output: >
+
+awards_recognitions_extraction_task:
+  description: >
+
+  expected_output: >
+    In JSON format: 
+      {
+        "Awards and Recognitions": [
+          {
+            "Award Name": "",
+            "Awarding Organization": "",
+            "Date": "",
+            "Reason": "",
+            ...
+          }, 
+          ...
+        ]
+      }
+
+references_extraction_task:
+  description: >
+
+  expected_output: >
+    {
+      "References": [
+        {
+          "Name": "",
+          "Position": "",
+          "Company": "",
+          "Contact Information": "",
+          "Relationship": "",
+          ...
+        }, 
+        ...
+      ]
+    }
+
+personal_traits_interests_extraction_task:
+  description: >
+
+  expected_output: >
+    {
+      "Personal Traits and Interests": {
+        "Strengths": "",
+        "Hobbies": "",
+        "Passions": "",
+        ...
+      }
+    }
+
+miscellaneous_extraction_task:
+  description: >
+
+  expected_output: >
+      {
+        "Miscellaneous": {
+          "Languages Spoken": "",
+          "Certifications": "",
+          "Professional Affiliations": "",
+          "Other Relevant Details": "",
+          ...
+        }
+      }
+
+split_context_of_ats_friendly_keywords_into_experiences:
+  description: >
+
+
+  expected_output: >
+
+career_objective_task:
+  description: >
+
+  expected_output: >
+    A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the applicant's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
+
+    In JSON format:
+      {
+        "Career Objective": "..."
+      }
+
+split_context_of_ats_friendly_skills_task:
+  description: >
+    Split the context provided to you at the breaking point "No Match (from job description):" or "missing_from_the_applicant_skills" whichever comes first. In your output, you will provide everything before the "No Match (from the job description):" as the final output of the task.
+
+    Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
+
+  expected_output: >
+    {
+      "applicant_skills": {
+        "exact_match_with_job_description": {
+          "Programming Languages": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Frameworks": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Tools": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Soft Skills": [
+            "item 1",
+            "item 2",
+            ...
+          ]
+        },
+
+        "partial_match_with_job_description": {
+          "Programming Languages": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Frameworks": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Tools": [
+            "item 1",
+            "item 2",
+            ...
+          ],
+          "Soft Skills": [
+            "item 1",
+            "item 2",
+            ...
+          ]
+        }
+      }
+    }

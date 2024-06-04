@@ -126,7 +126,14 @@ class Limiter:
         
         self.cursor.execute('SELECT COUNT(*) FROM Requests WHERE request_time >= ? AND llm_size = ?', 
                             (period_start_timestamp, self.llm_size))
-        return self.cursor.fetchone()[0]
+        result = self.cursor.fetchone()
+        if result is None:
+            result = 0
+        else:
+            result = result[0]
+        return result
+
+# class ends here
 
 def printRemainingRequestsPerDay():
     for size in ['SMALL', 'LARGE']:
@@ -143,12 +150,19 @@ def printRemainingRequestsPerDay():
 def time_stamp_to_human_readable(time_stamp):
     return datetime.fromtimestamp(time_stamp).strftime('%Y-%m-%d %H:%M:%S')
 
-def print_rpd_table():
+def print_rpd_table(llm_size: str = None, upto: int = 100):
     # Printing Requests table
+
+    if(llm_size == None):
+        # get upto requests
+        execute_string = f"SELECT * FROM Requests ORDER BY llm_size ASC, request_time DESC LIMIT {upto}"
+    else:
+        execute_string = f"SELECT * FROM Requests where llm_size = '{llm_size}' ORDER BY request_time DESC LIMIT {upto}"
+
     limiter = Limiter('ANY', None, False)
 
     # Printing Requests table
-    limiter.cursor.execute("SELECT * FROM Requests ORDER BY llm_size ASC, request_time DESC")
+    limiter.cursor.execute(execute_string)
     requests = limiter.cursor.fetchall()
     requests_table = PrettyTable()
     requests_table.field_names = ["#", "Request Time", "LLM Size"]
@@ -158,6 +172,7 @@ def print_rpd_table():
         requests_table.add_row([i, human_readable_time, row[1]])
     print("Requests Table:")
     print(requests_table)
+    print(f"\nLimited output to {upto} entries.\n")
 
 def print_token_table():
     limiter = Limiter('ANY', None, False)
@@ -201,5 +216,6 @@ def cleanTable():
     limiter.conn.commit()
 
 if __name__ == '__main__':
-    print_rpd_table()
+    # printRemainingRequestsPerDay()
+    print_rpd_table('LARGE', 50)
     # print_token_table()

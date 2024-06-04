@@ -25,6 +25,7 @@ class ResumeCrew:
 	tasks_config_path = 'config/tasks.yaml'
 	tasks_config = tasks_config_path # because tasks_config somehow getting recognized as a dictionary, not a simple string path.
 
+	os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 	# agentops.init(tags=["resume-crew"])
 
 	debugFlag = False
@@ -794,7 +795,7 @@ class ResumeCrew:
 		"""Load text from multiple files"""
 		all_text = ""
 		for path in paths:
-			file_content = self.load_file(PATHS[path])
+			file_content = self.load_file(PATHS[paths])
 			if isinstance(file_content, str):  # Ensure the content is a string	
 				all_text += file_content + "\n"
 			else:

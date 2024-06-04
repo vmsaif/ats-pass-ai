@@ -1,0 +1,44 @@
+\documentclass[]{ats-pass-ai-openfront}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\begin{document}
+\newcommand{\skillsVSpace}{\vspace{7pt}\\}
+\newcommand{\entryVSpace}{%
+  \par\vspace{10pt}
+}
+\newcommand{\betweenProjectsVSpace}{\vspace{10pt}}
+\newcommand{\betweensummaryPointsVSpace}{\vspace{5pt}}
+
+% LAST UPDATED DATE
+\lastupdated
+
+\input{namesection.tex}
+
+\begin{minipage}[t]{0.34\textwidth}
+    
+  \input{educationsection.tex}
+  \input{courseworksection.tex}
+
+    \section{Skills} 
+    \subHeading{Tools}
+      Construction Documents \textbullet{} BOQ Preparation \textbullet{} \textbf{AutoCAD} \textbullet{} \textbf{SketchUp} \textbullet{} 3ds Max \textbullet{} \textbf{Revit} \textbullet{} Rhino \textbullet{} 
+    \skillsVSpace
+
+    \subHeading{Soft Skills}
+      Communication \textbullet{} Teamwork \textbullet{} Independent Work \textbullet{} Proficient in diverse digital design software \textbullet{} Preparation of preliminary and detailed architectural drawings \textbullet{} 
+    \skillsVSpace
+    \sectionsep
+
+    \input{volunteersection.tex}
+    \input{referencessection.tex}
+
+
+\end{minipage} \hspace{15pt} 
+\begin{minipage}[t]{0.60\textwidth}
+
+  \input{careerobjectivesection.tex}
+  \input{experiencesection.tex}
+
+\end{minipage}
+\end{document}
