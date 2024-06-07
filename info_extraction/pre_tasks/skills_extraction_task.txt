@@ -2,282 +2,86 @@
   "combined skills list of applicant": {
     "Technologies": [
       {
-        "Name": "AutoCAD",
+        "Name": "3D Modeling Software",
         "field": [
-          "Computer-Aided Design (CAD)",
           "Architecture",
-          "Interior Design"
-        ]
-      },
-      {
-        "Name": "SketchUP",
-        "field": [
-          "3D Modeling",
-          "Architecture",
-          "Interior Design"
-        ]
-      },
-      {
-        "Name": "3DS Max",
-        "field": [
-          "3D Modeling",
-          "Animation",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Rhino",
-        "field": [
-          "3D Modeling",
-          "Architecture",
+          "Design",
           "Engineering"
         ]
       },
       {
-        "Name": "Revit",
+        "Name": "Computer-Aided Design (CAD)",
         "field": [
-          "Building Information Modeling (BIM)",
           "Architecture",
-          "Construction"
+          "Design",
+          "Engineering"
         ]
       },
       {
-        "Name": "Photoshop",
+        "Name": "Rendering Software",
         "field": [
-          "Image Editing",
-          "Graphic Design",
-          "Web Design"
-        ]
-      },
-      {
-        "Name": "Illustrator",
-        "field": [
-          "Vector Graphics",
-          "Graphic Design",
-          "Web Design"
-        ]
-      },
-      {
-        "Name": "CorelDraw",
-        "field": [
-          "Vector Graphics",
-          "Graphic Design",
-          "Web Design"
-        ]
-      },
-      {
-        "Name": "V-Ray",
-        "field": [
-          "Rendering",
-          "3D Visualization",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Enscape",
-        "field": [
-          "Virtual Reality (VR)",
           "Architecture",
-          "Interior Design"
-        ]
-      },
-      {
-        "Name": "Lumion",
-        "field": [
-          "3D Rendering",
-          "Architecture",
-          "Landscape Architecture"
-        ]
-      },
-      {
-        "Name": "Twinmotion",
-        "field": [
-          "Real-Time Rendering",
-          "Architecture",
-          "Virtual Reality (VR)"
+          "Design",
+          "Engineering"
         ]
       }
     ],
     "Frameworks": [],
     "Skills": [
       {
-        "Name": "Preparation of preliminary and detailed architectural drawings",
+        "Name": "Architectural Design",
         "field": [
           "Architecture",
-          "Drafting",
+          "Design",
           "Engineering"
         ]
       },
       {
-        "Name": "Creating computer-generated 3D models and rendering",
+        "Name": "Construction Document Preparation",
         "field": [
-          "3D Modeling",
-          "Visualization",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Monitoring project progress and reporting errors",
-        "field": [
-          "Project Management",
-          "Quality Assurance",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Prepared technical and detailed drawings",
-        "field": [
-          "Drafting",
-          "Engineering",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Prepared 3D models for necessary representation and implementation",
-        "field": [
-          "3D Modeling",
           "Architecture",
+          "Design",
           "Engineering"
         ]
       },
       {
-        "Name": "Prepared graphical presentation for technical validation",
+        "Name": "Project Management",
         "field": [
-          "Technical Writing",
-          "Communication",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Prepared 3D model of architecture and landscape of the project",
-        "field": [
-          "3D Modeling",
           "Architecture",
-          "Landscape Architecture"
-        ]
-      },
-      {
-        "Name": "Prepared 2D renders and 3D animations",
-        "field": [
-          "Rendering",
-          "Animation",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Prepared working drawings for residential, commercial and interior projects",
-        "field": [
-          "Drafting",
-          "Architecture",
-          "Interior Design"
-        ]
-      },
-      {
-        "Name": "Arranged RAJUK sheets and layouts",
-        "field": [
-          "Layout Design",
-          "Architecture",
+          "Design",
           "Engineering"
         ]
       },
       {
-        "Name": "Composed construction documents and BOQs",
+        "Name": "Technical Drawing",
         "field": [
-          "Construction",
-          "Project Management",
-          "Architecture"
+          "Architecture",
+          "Design",
+          "Engineering"
         ]
       },
       {
-        "Name": "Prepared 3D models and renderings for visual representation",
+        "Name": "3D Modeling",
         "field": [
-          "3D Modeling",
-          "Rendering",
-          "Visualization"
+          "Architecture",
+          "Design"
         ]
       },
       {
-        "Name": "Prepared 3D models and renders",
+        "Name": "Computer-Generated Imagery (CGI)",
         "field": [
-          "3D Modeling",
-          "Rendering",
-          "Visualization"
+          "Design",
+          "Visual Effects"
         ]
       },
       {
-        "Name": "Took measurements on-site for technical drawings",
+        "Name": "Graphic Design",
         "field": [
-          "Surveying",
-          "Drafting",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Prepared detailed drawings for interior projects",
-        "field": [
-          "Drafting",
-          "Interior Design",
-          "Architecture"
-        ]
-      },
-      {
-        "Name": "Designed and prepared banners, backdrops and brochures for Education Expo 2019",
-        "field": [
-          "Graphic Design",
-          "Marketing",
-          "Advertising"
-        ]
-      },
-      {
-        "Name": "Designed the official logo, social media posts, receipts and other official document formats",
-        "field": [
-          "Graphic Design",
-          "Branding",
+          "Design",
           "Marketing"
         ]
       }
     ],
-    "Soft Skills": [
-      {
-        "Name": "Proficient in diverse digital design software",
-        "field": [
-          "Software Proficiency",
-          "Digital Design"
-        ]
-      },
-      {
-        "Name": "Naturally sociable and outgoing personality",
-        "field": [
-          "Interpersonal skills",
-        ]
-      },
-      {
-        "Name": "Well-versed in navigating deadline-sensitive projects",
-        "field": [
-          "Time Management",
-          "Project Management"
-        ]
-      },
-      {
-        "Name": "A habitual photographer with an eye for detail",
-        "field": [
-          "Photography",
-          "Attention to Detail"
-        ]
-      },
-      {
-        "Name": "Well-developed communication skills",
-        "field": [
-          "Communication",
-        ]
-      },
-      {
-        "Name": "Ability to work both independently and collaboratively",
-        "field": [
-          "Teamwork",
-          "Self-reliance"
-        ]
-      }
-    ]
+    "Soft Skills": []
   }
 }

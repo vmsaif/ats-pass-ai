@@ -2,41 +2,27 @@
 {
   "applicant_skills": {
     "exact_match_with_job_description": {
-      "Essential Skills": [
-        "Construction Documents",
-        "BOQ Preparation",
-        "Communication",
-        "Teamwork",
-        "Independent Work"
+      "Skills": [
+        "Architectural Design",
+        "Construction Documents"
       ],
-      "Industry Terms": []
+      "Tools": [
+        "AutoCAD",
+        "SketchUp"
+      ]
     },
     "partial_match_with_job_description": {
-      "Essential Skills": {
-        "3D Visualization": [
-          "AutoCAD",
-          "SketchUp",
-          "3ds Max",
-          "Revit",
-          "Creating computer-generated 3D models and rendering",
-          "Prepared 3D models for necessary representation and implementation",
-          "Prepared 3D model of architecture and landscape of the project",
-          "Prepared 3D models and renderings for visual representation",
-          "Prepared 3D models and renders"
-        ],
-        "Software Proficiency": [
-          "Rhino",
-          "Proficient in diverse digital design software"
-        ],
-        "Drawings": [
-          "Preparation of preliminary and detailed architectural drawings",
-          "Prepared technical and detailed drawings",
-          "Prepared working drawings for residential, commercial and interior projects",
-          "Prepared detailed drawings for interior projects"
-        ]
+      "Skills": {
+        "Name": "3D Modeling Software",
+        "relavant_to_the_job_description": "3D Visualization"
       },
-      "Industry Terms": {
-        "Building Codes": "Arranged RAJUK sheets and layouts"
+      "Tools": {
+        "Name": "Rendering Software",
+        "relavant_to_the_job_description": "3D Visualization"
+      },
+      "Soft Skills": {
+        "Name": "Project Management",
+        "relavant_to_the_job_description": "Project Management"
       }
     }
   }

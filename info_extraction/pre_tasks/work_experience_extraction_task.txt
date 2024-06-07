@@ -4,10 +4,14 @@
       "Job Title": "Architect",
       "Company Name": "RSB Properties Ltd.",
       "Timeline": "Oct 2022 - Jul 2023",
-      "Technologies, frameworks, and tools Used": "AutoCAD, SketchUP, 3DS Max, Rhino, Revit, Photoshop, Illustrator, CorelDraw, V-Ray, Enscape, Lumion, Twinmotion",
-      "Skills": "Preparation of preliminary and detailed architectural drawings, Creating computer-generated 3D models and rendering, Monitoring project progress and reporting errors",
+      "Technologies, frameworks, and tools Used": null,
+      "Skills": null,
       "Link": null,
-      "Key Highlights": [],
+      "Key Highlights": [
+        "- Preparation of preliminary and detailed architectural drawings.",
+        "- Creating computer-generated 3D models and rendering.",
+        "- Monitoring project progress and reporting errors."
+      ],
       "Team size": null,
       "Outcomes": null
     },
@@ -15,21 +19,28 @@
       "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
       "Company Name": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
       "Timeline": "Jan 2022 - Jul 2022",
-      "Technologies, frameworks, and tools Used": "AutoCAD, SketchUP, 3DS Max, Rhino, Revit, Photoshop, Illustrator, CorelDraw, V-Ray, Enscape, Lumion, Twinmotion",
-      "Skills": "Prepared technical and detailed drawings, Prepared 3D models for necessary representation and implementation, Prepared graphical presentation for technical validation",
+      "Technologies, frameworks, and tools Used": null,
+      "Skills": null,
       "Link": null,
-      "Key Highlights": [],
+      "Key Highlights": [
+        "- Prepared technical and detailed drawings.",
+        "- Prepared 3D models for necessary representation and implementation.",
+        "- Prepared graphical presentation for technical validation."
+      ],
       "Team size": null,
       "Outcomes": null
     },
     {
       "Job Title": "Project Architect",
-      "Company Name": "Integrated Design (Project: Visualization of BSRM Tunnel Service Area)",
+      "Company Name": "Integrated Design",
       "Timeline": "Sep 2021 - Dec 2021",
-      "Technologies, frameworks, and tools Used": "AutoCAD, SketchUP, 3DS Max, Rhino, Revit, Photoshop, Illustrator, CorelDraw, V-Ray, Enscape, Lumion, Twinmotion",
-      "Skills": "Prepared 3D model of architecture and landscape of the project, Prepared 2D renders and 3D animations",
+      "Technologies, frameworks, and tools Used": null,
+      "Skills": null,
       "Link": null,
-      "Key Highlights": [],
+      "Key Highlights": [
+        "- Prepared 3D model of architecture and landscape of the project.",
+        "- Prepared 2D renders and 3D animations."
+      ],
       "Team size": null,
       "Outcomes": null
     },
@@ -37,10 +48,15 @@
       "Job Title": "Architectural Intern",
       "Company Name": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
       "Timeline": "Jun 2019 - Sep 2019",
-      "Technologies, frameworks, and tools Used": "AutoCAD, SketchUP, 3DS Max, Rhino, Revit, Photoshop, Illustrator, CorelDraw",
-      "Skills": "Prepared working drawings for residential, commercial and interior projects, Arranged RAJUK sheets and layouts, Composed construction documents and BOQs, Prepared 3D models and renderings for visual representation",
+      "Technologies, frameworks, and tools Used": null,
+      "Skills": null,
       "Link": null,
-      "Key Highlights": [],
+      "Key Highlights": [
+        "- Prepared working drawings for residential, commercial and interior projects.",
+        "- Arranged RAJUK sheets and layouts.",
+        "- Composed construction documents and BOQs.",
+        "- Prepared 3D models and renderings for visual representation."
+      ],
       "Team size": null,
       "Outcomes": null
     },
@@ -48,10 +64,14 @@
       "Job Title": "Junior Designer",
       "Company Name": "Simple Interiors",
       "Timeline": "Apr 2017 - Dec 2017",
-      "Technologies, frameworks, and tools Used": "AutoCAD, SketchUP, 3DS Max, Rhino, Revit, Photoshop, Illustrator, CorelDraw",
-      "Skills": "Prepared 3D models and renders, Took measurements on-site for technical drawings, Prepared detailed drawings for interior projects",
+      "Technologies, frameworks, and tools Used": null,
+      "Skills": null,
       "Link": null,
-      "Key Highlights": [],
+      "Key Highlights": [
+        "- Prepared 3D models and renders.",
+        "- Took measurements on-site for technical drawings.",
+        "- Prepared detailed drawings for interior projects."
+      ],
       "Team size": null,
       "Outcomes": null
     },
@@ -59,10 +79,13 @@
       "Job Title": "Graphic Designer",
       "Company Name": "UniAssist Global Education",
       "Timeline": "Sep 2019 - Dec 2019",
-      "Technologies, frameworks, and tools Used": "Photoshop, Illustrator, CorelDraw",
-      "Skills": "Designed and prepared banners, backdrops and brochures for Education Expo 2019, Designed the official logo, social media posts, receipts and other official document formats",
+      "Technologies, frameworks, and tools Used": null,
+      "Skills": null,
       "Link": null,
-      "Key Highlights": [],
+      "Key Highlights": [
+        "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.",
+        "- Designed the official logo, social media posts, receipts and other official document formats."
+      ],
       "Team size": null,
       "Outcomes": null
     }

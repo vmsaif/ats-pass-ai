@@ -78,21 +78,24 @@ class LLMTask:
 		self.safety_settings = [
 			{
 				"category": "HARM_CATEGORY_HARASSMENT",
-				"threshold": "BLOCK_ONLY_HIGH"
+				"threshold": "BLOCK_NONE"
 			},
 			{
 				"category": "HARM_CATEGORY_HATE_SPEECH",
-				"threshold": "BLOCK_ONLY_HIGH"
+				"threshold": "BLOCK_NONE"
 			},
 			{
 				"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-				"threshold": "BLOCK_MEDIUM_AND_ABOVE"
+				"threshold": "BLOCK_NONE"
 			},
 			{
 				"category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-				"threshold": "BLOCK_ONLY_HIGH"
+				"threshold": "BLOCK_NONE"
 			},
 		]
 		self._set_model()
 		self.large_llm_limiter = Limiter(llm_size='LARGE', llm = self.model, langchainMethods=False)
 		genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+
+
+	

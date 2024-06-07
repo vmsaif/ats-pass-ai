@@ -1,12 +1,8 @@
 {
   "Personal Traits and Interests": {
-    "Strengths": "Proficient in diverse digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.\nNaturally sociable, fostering excellent relationships with colleagues and mentors alike.\nWell-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.\nA habitual photographer with an eye for detail and an ability to multitask.\nPossesses an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
-    "Hobbies": "Reading\n3D Modeling (sketchfab.com/tahsinpulok)\nPhotography (viewbug.com/member/tahsinpulok)\nTravelling\nGaming",
-    "Passions": null,
+    "Strengths": null,
     "Weaknesses": null,
-    "Fears": null,
-    "Motivations": null,
-    "Dreams": null,
-    "Goals": null
+    "Hobbies": null,
+    "Passions": null
   }
 }

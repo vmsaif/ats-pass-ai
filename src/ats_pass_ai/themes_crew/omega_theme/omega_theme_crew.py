@@ -18,13 +18,13 @@ from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import SimpleSpanProcessor, ConsoleSpanExporter
 
-trace.set_tracer_provider(TracerProvider())
-trace.get_tracer_provider().add_span_processor(
-	SimpleSpanProcessor(ConsoleSpanExporter())
-)
+# trace.set_tracer_provider(TracerProvider())
+# trace.get_tracer_provider().add_span_processor(
+# 	SimpleSpanProcessor(ConsoleSpanExporter())
+# )
 
 os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
-os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
+# os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 
 class OmegaThemeCrew:
 	"""Resume Maker Crew"""
@@ -37,7 +37,7 @@ class OmegaThemeCrew:
 
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
-		temperature=0.5,
+		temperature=0.2,
 		safety_settings = {
 			HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
 			HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
@@ -168,14 +168,23 @@ class OmegaThemeCrew:
 			output_file=PATHS["experiencesection"],
 			callback=self.small_token_limiter
 		)
+	
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
 
+		tasks = [
+				# self.namesection(),
+				# self.educationsection(),
+				# self.courseworksection(),
+				self.volunteerworksection(),
+				# self.referencessection(),
+				# self.careerobjectivesection(),
+				# self.experiencesection()
+			]
 		# Return the crew
 		return Crew(
 			agents=[self.latex_maker_agent()],
-			tasks=[self.namesection(), self.educationsection(), self.courseworksection(), self.volunteerworksection(), self.referencessection(), self.careerobjectivesection(), self.experiencesection()],
-			# tasks=[self.courseworksection()],
+			tasks=tasks,
 			language="en",
 			# cache=True,
 			full_output=True,

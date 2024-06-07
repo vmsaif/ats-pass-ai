@@ -18,7 +18,7 @@ class Limiter:
     LLM_SMALL_TOKEN_PER_MINUTE_LIMIT = 32000
 
     # Time constants
-    SECONDS_IN_MINUTE = 60
+    SECONDS_IN_MINUTE = 65
     SECONDS_IN_DAY = 86400
 
     # Database configuration
@@ -35,9 +35,8 @@ class Limiter:
         timestamp = datetime.now().timestamp()
         # Check if RPM limit is reached
         if self._count_requests_in_last_period('minute') >= self.llm_rpm_limit:
-            time_to_wait = self.SECONDS_IN_MINUTE
-            print(f"RPM limit exceeded. Waiting {time_to_wait} seconds to start next minute.")
-            time.sleep(time_to_wait)  # Sleep 1 minute
+            print(f"RPM limit exceeded. Waiting {self.SECONDS_IN_MINUTE} seconds to start next minute.")
+            time.sleep(self.SECONDS_IN_MINUTE)  # Sleep 1 minute
             return False  # Indicate that RPM limit was exceeded
         if self._count_requests_in_last_period('day') >= self.llm_daily_request_limit:
             print("Daily limit exceeded. Do you want to continue?")

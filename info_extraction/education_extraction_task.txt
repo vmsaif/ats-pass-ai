@@ -7,5 +7,23 @@
     "Graduation Date": "Jan 2021",
     "GPA": "2.7/4.0 (82%)",
     "Honors/Distinctions": null
+  },
+  "Education": {
+    "Degree": "Higher School Certificate (H.S.C)",
+    "Major": "Science",
+    "University": "Ideal College",
+    "University Location": null,
+    "Graduation Date": "Jun 2014",
+    "GPA": "4.8/5.0",
+    "Honors/Distinctions": null
+  },
+  "Education": {
+    "Degree": "Secondary School Certificate (S.S.C)",
+    "Major": "Science",
+    "University": "Junior Laboratory High School",
+    "University Location": null,
+    "Graduation Date": "Mar 2012",
+    "GPA": "5.0/5.0",
+    "Honors/Distinctions": null
   }
 }

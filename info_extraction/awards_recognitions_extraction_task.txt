@@ -7,22 +7,16 @@
       "Reason": "Excellent Result in S.S.C"
     },
     {
-      "Award Name": "Publication of Essay on 'The Evolution of Architectural Representation'",
-      "Awarding Organization": "North South University",
+      "Award Name": "Essay on \"The Evolution of Architectural Representation\"",
+      "Awarding Organization": "North South University Publication",
       "Date": null,
-      "Reason": "Essay selected for publication in \'Para-architectural Musings\'"
+      "Reason": "selected for publication in \'Para-architectural Musings\'"
     },
     {
       "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
       "Awarding Organization": "Eastern University",
       "Date": "2014",
-      "Reason": "Course completion"
-    },
-    {
-      "Award Name": "Certificates on Multiple online courses",
-      "Awarding Organization": "Udemy",
-      "Date": "none provided",
-      "Reason": "Course completions"
+      "Reason": null
     }
   ]
 }

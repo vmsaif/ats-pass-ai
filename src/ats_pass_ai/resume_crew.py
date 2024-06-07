@@ -25,7 +25,9 @@ class ResumeCrew:
 	tasks_config_path = 'config/tasks.yaml'
 	tasks_config = tasks_config_path # because tasks_config somehow getting recognized as a dictionary, not a simple string path.
 
-	os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
+	os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
+
+	# os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 	# agentops.init(tags=["resume-crew"])
 
 	debugFlag = False
@@ -92,22 +94,22 @@ class ResumeCrew:
 			my_tasks.append(self.profile_builder_task())
 
 		# Either way, these tasks will be executed.
-		my_tasks.append(self.ats_friendly_skills_task())
+		my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
 		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
-		my_tasks.append(self.experience_choosing_task())
+		my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
 		my_tasks.append(self.split_context_of_experience_choosing_task())
 		my_tasks.append(self.gather_info_of_chosen_experiences())
-		my_tasks.append(self.ats_friendly_keywords_into_experiences_task())
+		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------------------- uses large llm
 		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
 		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task())
+		my_tasks.append(self.career_objective_task()) 
 
-		my_tasks.append(self.resume_in_json_task())
-		my_tasks.append(self.resume_compilation_task())
-		my_tasks.append(self.latex_resume_generation_task())
-		my_tasks.append(self.cover_letter_generation_task())
+		my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.resume_compilation_task())
+		# my_tasks.append(self.latex_resume_generation_task())
+		my_tasks.append(self.cover_letter_generation_task()) # --------------------------- uses large llm
 				
 		# Return the crew
 		return Crew(
@@ -176,9 +178,11 @@ class ResumeCrew:
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
-			llm=self.genAILarge,
+			# llm=self.genAILarge,
+			llm = self.genAI,
 			function_calling_llm=self.genAI,
-			step_callback=self.large_llm_limiter,
+			# step_callback=self.large_llm_limiter,
+			step_callback=self.small_llm_limiter,
 			tools=[self.queryTool],
 		)
 
@@ -670,7 +674,7 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.career_objective_agent(),
-			callback=self.large_token_limiter,
+			callback=self.small_token_limiter,
 			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
 			output_file=PATHS["career_objective_task"],
 		)

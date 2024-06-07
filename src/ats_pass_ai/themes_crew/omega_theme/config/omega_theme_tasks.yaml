@@ -8,40 +8,48 @@ namesection:
     Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
 
     In the output, 
-    The first line contains the name. 
-    The second line will contain urls upto 2. then \\ to linebreak.
-    The thirdline will contain the email, phone number, and location.
-    Pipeline '|' should be used to separate the data and must not be the last character of the output.
-    the commands which starts with '\' are important. Do not change them.
+    - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}.
+    - Then the next line will contain the urls. Use the command \urlstyle{same} to keep the urls in the same style as the text. The line will contain urls upto 2. then \\ to linebreak. Use \href for the urls. The argument of \href should be the url and the text should be the url without the protocol.
+    - The thirdline will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of City, Province.
+    - Pipeline '|' should be used to separate the data and must not be the last character of the output.
+    - The output should raw latex code and should not be in a code block.
+
+    Example:
+    \namesection{Saif}{Mahmud}
+    {
+      \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+      \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+    }
+
+    Here is the information you need and convert them into LaTeX format:
   expected_output: >
-    \namesection{Saif}{Mahmud }
-      {\urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
-      \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB}
-    \sectionsep
 
 educationsection:
   description: >
     Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
 
     In the output,
-    The first line contains the section name "Education".
-    The second line contains the university name.
-    The third line contains the degree and major. 
-    The fourth line contains the graduation date.  
+    - The first line contains the section name "Education". Use the command \section{Education}.
+    - The next lines contain the education information with the following format:
+      - The first line contains the institution name. Use the command \customTitle{Institution Name}.
+      - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+      - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+      - The next line contains the command \newEntryVSpace to separate the educations. Only use this command if there are multiple educations. Otherwise, do not use this command.
+      - Do not choose more than two educations. Choose the most recent ones.
 
     Example:
-
     \section{Education}
-      \subsection{University of Manitoba}
-      \summaryPoints{BSc Major in Computer Science}
-      \subHeading{Graduated, October 2023}
-    \sectionsep
+      \customTitle{University of Manitoba}
+      \semiTitle{BSc Major in Computer Science}
+      \subTitle{Graduated, October 2023}
+
+    \newEntryVSpace % use it if there are multiple educations to separate them.   
 
     Conditions:
     - Only generate the \section{Education} if there is at least one element provided. Otherwise, each line the output should be latex comments, starting with '%'.
       %\section{}
       %\sectionsep. 
-    
+    - Your output should be raw LaTeX code and should not be in a code block.
   expected_output: >
 
 courseworksection:
@@ -49,85 +57,70 @@ courseworksection:
     Extract the coursework information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
     In the output,
-    The first line contains the section name "Relevant Courses".
-    The next lines contain the courses with the course name and 
-      if provided, the programming languages used in the course in parentheses separated by a pipeline '|'. The courses should be separated by a double backslash '\\' which is the line break command in LaTeX.
-    The last line contains the command '\sectionsep' to separate the sections.
-
+    - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}.
+    - The next lines contain the coursework information with the following format:
+      - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
+      - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
+      - Use the command \sectionsep at the end to separate the coursework from other sections.
+    
     Example:
-    \section{Relevant Courses} 
-      Operating Systems (Linux | C) \\
-      Distributed Computing (Python | JavaScript) \\
-      Database Implementation (Python | SQL) \\
-      Data Structures and Algorithms (Java) \\
-      Object Orientation (Java | C++) \\
+    \section{Relevant Courses}
+    \body{
+        Operating Systems (Linux | C) \\
+        Distributed Computing (Python) \\
+        Database Implementation (Python | SQL) \\
+        Data Structures and Algorithms (Java) \\
+        Object Orientation (Java | C++) \\
+        Software Engineering (Java | Unit Testing)
+    }
     \sectionsep
 
     Conditions:
     - Only generate the \section{Relevant Courses} if there is at least one element provided. Otherwise, the output should be latex comments, starting with '%'.
-      %\section{}
-      %\sectionsep.
+      % \section{}
+      % \sectionsep
+    - Your output should be raw LaTeX code and should not be in a code block.
   expected_output: >
 
 volunteersection:
   description: >
     Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
 
-    **Task Details**:
-    
-    1. **Section Header**:
-       - Begin with a `\section{VOLUNTEER}` command if volunteer data is available. If no data is provided, the output should remain empty.
+    In your output, follow these guidelines:
 
-    2. **Organization Name**:
-       - Use `\subsection{}` for organization name less than 20 characters. If any organization name exceeds 20 characters, use `\subHeading{}` to maintain visual consistency for all Organization names entries.
+    - The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`.
+    - Each volunteer entry should be structured as follows:
+      - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+      - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+      - List each responsibility starting with a dash (`-`) and end with `\\` for line breaks.
+      - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+    - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+    - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+      - `%` to `\%`
+      - `$` to `\$`
+      - `&` to `\&`
+      - `#` to `\#`
+      - `_` to `\_`
 
-    3. **Role and Timeline**:
-       - Present the role and the timeline of the volunteer activity in the format: `Role | Organization | Year-Year`. Use `\subHeading{}` for this line to maintain visual hierarchy and readability.
-
-    4. **Responsibilities**:
-       - List each responsibility starting with a dash (`-`) always use `\\` for line breaks.
-
-    5. **Adding Another Entry**:
-        - If there are multiple volunteer entries, use `\entryVSpace` to separate each entry and maintain a consistent structure.
-       
-    6. **Section Separator**:
-       - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
-
-    7. **Special Character Handling**:
-       - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
-         - `%` to `\%`
-         - `$` to `\$`
-         - `&` to `\&`
-         - `#` to `\#`
-         - `_` to `\_`
-
-    **Example Outputs**:
-
-    **Example 1 - Short Organization Name**:
+    Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
 
     \section{VOLUNTEER}
-    \subsection{.dev Programming Club}
-    \subHeading{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
-    - Engaged with the latest software development technologies and tools. \\
-    - Collaborated on team projects focused on Python and Cloud Technologies. 
-    \entryVSpace
-    \sectionsep
-
-    **Example 2 - Long Organization Name**:
-
-    \section{VOLUNTEER}
-    \subHeading{Student Union of University of Manitoba} % Using \subHeading{} due to length is greater than 20 characters
-    \subHeading{Active Member | 2019-2023}
-    - Engaged with the latest software development technologies and tools. \\
-    - Collaborated on team projects focused on Python and Cloud Technologies. 
-    \entryVSpace
+      \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+      \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+      \body{
+        - Engaged with the latest software development technologies and tools. \\ 
+        - Collaborated on team projects focused on Python and Cloud Technologies. 
+      }
+      \newEntryVSpace % Use this to separate multiple entries.
     \sectionsep
 
     **Conditions**:
     - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
-      %\section{}
-      %\sectionsep.
+      % \section{}
+      % \sectionsep.
+    - Your output should be raw LaTeX code and should not be in a code block.
   expected_output: >
+    LaTeX code for the volunteer section without any code block quotes.
 
 referencessection:
   description: >
@@ -163,6 +156,7 @@ referencessection:
       %\section{}
       %\sectionsep.
       Do Nothing else. Keep the output empty.
+    - - Your output should follow latex syntax, no need for any code block quotes.
   expected_output: >
 
 careerobjectivesection:
@@ -170,61 +164,65 @@ careerobjectivesection:
     Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
     In the output,
-    - The first line contains the section name "Career Objective". 
-    - The next line contains the career objective statement.
-    - The last line contains the command '\sectionsep' to separate the sections.
-
+    - The first line contains the section name "Career Objective". Use the command \section{Career Objective}.
+    - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+    
     Example:
-    \section{Career Goal} 
-      \betweensummaryPointsVSpace
-      \subHeading{Highly motivated Architect with a demonstrated ability to translate design concepts into detailed construction documents and 3D visualizations, seeking to leverage expertise in AutoCAD, SketchUp, and Revit at Shibori Ltd. to contribute to innovative and sustainable design solutions.}
-    \sectionsep
+    \section{Career Goal}
+        \careerGoalBody{
+            Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+    - Output should be raw LaTeX code and should not be in a code block.
   expected_output: >
 
 experiencesection:
   description: >
-    Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+    This function takes applicant data as input and extracts the experience information. This information is then formatted into a LaTeX representation.
+    Follow this structure for each experience entry:
 
-    In the output,
-    - The first line contains the command \betweenProjectsVSpace. **This is important**
-    - The next line contains the section name "Experience" or "Project Experience" or "Academic Projecr" based on the context provided, \section{Experience} or \section{Project Experience} or \section{Academic Project}.
-    - The next line contains the experience title. \experienceTitle{Experience Title} or \experienceTitle{Project Title} or \experienceTitle{Academic Project Title}.
-    - The next line contains the summary points up to 3 points. It will start with a space and a pipeline '|', each point should be Separated by a pipeline '|', and the last point should not have a pipeline at the end. **(Maximum 3 points)**, use the command \summaryPoints{ | Point 1 | Point 2 | Point 3} to start the summary points.
-    - The next line contains the subheading with the role and timeline.
-    - The next line contains the description of the experience. 
-    - The next line contains the command \vspace{15pt} for the first experience and \vspace{10pt} for the rest of the experiences.
-    - The next line contains the command \begin{tightemize} to start the list of responsibilities.
-    - The next lines contain the responsibilities starting with a '\item' command. Each responsibility should be started with a '\item' command.
-    - The next line contains the command \end{tightemize} to end the list of responsibilities.
-    - The next line contains the command \sectionsep to separate the sections.
-    - Each command is important.
+    \betweenProjectsVSpace  % Use thisat the beginning of each experience entry
+    \experienceTitle{Experience Title} % Replace 'Experience Title' with the actual title (e.g., 'ATS Pass AI', 'Software Developer'). Use this command for work experience, projects, academic work, etc.
+    \summaryPoints{| Point 1 | Point 2 | Point 3} % Choose up to 3 concise (1-2 words) points that represent the experience. Don't add a pipeline at the end. 
+    \subHeading{Role - Start Date - End Date} % Specify the role and timeframe of the experience.
+    \betweenSummaryPointsVSpace % Use this for spacing.
+    Write a brief summary of the experience in a sentence or two. 
+    \vspaceForFirstProject % Use this to add extra space for the first experience section entry. Otherwise, use \vspaceForOtherProject
+
+    \begin{tightemize}
+    \item Detail 1 about the experience.
+    \item Detail 2 about the experience.
+    ...  % Add more detail items as needed
+    \end{tightemize}
 
     Example:
-    \betweenProjectsVSpace
-    \experienceTitle{ATS Pass AI}
-    \summaryPoints{ | Python | Multiagent | AI} % Choose up to 3 points
-    \subHeading{Resume Automation Tool - January 2024 - Present}
-    \betweensummaryPointsVSpace
-    Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
-    \vspace{15pt}
+    \betweenProjectsVSpace 
+    \experienceTitle{ATS Pass AI} 
+    \summaryPoints{| Python | Multiagent | AI} 
+    \subHeading{Resume Automation Tool - January 2024 - Present} 
+    \betweenSummaryPointsVSpace 
+    Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. 
+    \vspaceForFirstProject
     \begin{tightemize}
-    \item Utilized advanced AI models ...
-    \item Engineered a system ...
-    \item Developed \textbf{scalable architecture} to ..
+    \item Utilized advanced AI models to automate resume writing and tailoring processes, resulting in a 30% increase in interview callbacks.
+    \item Engineered a system to extract and analyze job descriptions, match keywords, and generate personalized resumes for various job applications.
+    \item Developed \textbf{scalable architecture} to handle multiple users concurrently, ensuring high performance and reliability.
     \item Project repository available on \href{https://github.com/vmsaif/ats-pass-ai}{\underline{GitHub}}.
     \end{tightemize}
-    
-    % adding another experience entry
-    \betweenProjectsVSpace
+
+    \betweenProjectsVSpace 
     \experienceTitle{Software Developer}
-    \summaryPoints{ | Python | Django | React} % Maximum 3 points
+    \summaryPoints{ | Python | Django | React} 
     \subHeading{Software Developer - January 2023 - December 2023}
-    \betweensummaryPointsVSpace
+    \betweenSummaryPointsVSpace
     Developed and maintained web applications using Django and React, ensuring high performance and user-friendly interfaces.
-    \vspace{10pt}
+    \vspaceForOtherProject
     \begin{tightemize}
     \item Collaborated with cross-functional teams to design and implement new features, enhancing user experience and functionality.
-    % so on...
+    \end{tightemize} 
+
+    Important: 
+    - Output should be in valid LaTeX syntax.
+    - No code block quotes are necessary.
   expected_output: >
 
 awards_recognitions_extraction_task:

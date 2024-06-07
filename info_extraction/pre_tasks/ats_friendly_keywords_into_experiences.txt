@@ -1,212 +1,146 @@
+```json
 {
   "applicant's Experiences with ATS Keywords": {
     "Most Recent Experience": {
-      "Job Title": "Architect",
-      "Company": "RSB Properties Ltd.",
-      "Location": "N/A",
-      "Timeline": "Oct 2022 - Jul 2023",
-      "Duration": "9 months",
-      "Technologies": "N/A",
-      "skills": [
-        "Preparation of preliminary and detailed **architectural drawings**",
-        "Creating computer-generated **3D models** and **rendering**",
-        "Monitoring project progress and reporting errors"
-      ],
-      "Link": "N/A",
-      "Key Highlights": [
-        "Prepared **design solutions** and **construction documents**, applying **problem-solving** skills to address design challenges while meeting project **schedules**.",
-        "Collaborated effectively with cross-functional teams, including engineers and contractors, to ensure seamless project execution.",
-        "Utilized strong **communication skills** to present design concepts and technical drawings to clients and stakeholders."
-      ]
-    }
-  },
-  "Work/Project Experience": [
-    {
-      "Job Title": "Architectural Intern",
-      "Company": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
-      "Location": "N/A",
-      "Timeline": "Jun 2019 - Sep 2019",
-      "Duration": "3 months",
-      "Technologies": "N/A",
-      "skills": [
-        "Prepared working **drawings** for residential, commercial, and interior projects",
-        "Arranged RAJUK sheets and layouts",
-        "Composed **construction documents** and **BOQs**",
-        "Prepared **3D models** and **rendering**s for visual representation"
-      ],
-      "Link": "N/A",
-      "Key Highlights": [
-        "Contributed to the **design** and development of **architectural drawings**, applying knowledge of building codes and regulations.",
-        "Demonstrated proficiency in using **software** for **3D visualization** and **rendering**, enhancing the presentation of design concepts.",
-        "Gained practical experience in preparing **construction documents**, including **BOQs**, contributing to the successful execution of projects."
-      ]
+      "Work": {
+        "Job Title": "Architect",
+        "Company": "RSB Properties Ltd.",
+        "Location": "N/A",
+        "Timeline": "Oct 2022 - Jul 2023",
+        "Duration": "9 months",
+        "Technologies": "AutoCAD, SketchUp, 3DS Max, Rhino, Revit, Photoshop, Illustrator, V-Ray, Enscape, Lumion, Twinmotion, Microsoft Office",
+        "skills": "Architectural design, digital production methods, 3D modeling, rendering, project monitoring, error reporting",
+        "Link": null,
+        "Key Highlights": [
+          "Prepared **Construction Documents** and **Design Solutions** utilizing **AutoCAD**, **SketchUp**, and **Revit**, ensuring timely project delivery.",
+          "Collaborated with cross-functional teams to maintain design cohesion and project alignment, showcasing strong **Teamwork** and **Communication Skills**.",
+          "Successfully monitored project progress, identified and reported errors, and implemented corrective measures, enhancing project efficiency and quality."
+        ]
+      }
     },
-    {
-      "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
-      "Company": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
-      "Location": "N/A",
-      "Timeline": "Jan 2022 - Jul 2022",
-      "Duration": "6 months",
-      "Technologies": "N/A",
-      "skills": [
-        "Prepared technical and detailed **drawings**",
-        "Prepared **3D models** for necessary representation and implementation",
-        "Prepared graphical presentation for technical validation"
-      ],
-      "Link": "N/A",
-      "Key Highlights": [
-        "Developed technical **drawings** and **3D models** that met accessibility standards and guidelines.",
-        "Collaborated with a team to assess and analyze the accessibility of built environments.",
-        "Utilized **design** skills to propose and present **solutions** that promoted inclusivity and accessibility."
-      ]
-    }
-  ],
-  "Project Experience": []
-},
-{
-  "Report on Changes": {
-    "ATS Pass AI": [
+    "Work Experience": [
       {
-        "Original Sentence": "Preparation of preliminary and detailed architectural drawings",
-        "Revised Sentence": "Preparation of preliminary and detailed **architectural drawings**",
-        "Keywords Added": [
-          "architectural drawings"
-        ],
-        "Rationale": "Emphasizes the applicant's core skill and aligns with the job description's focus on architectural design."
+        "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
+        "Company": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
+        "Location": "N/A",
+        "Timeline": "Jan 2022 - Jul 2022",
+        "Duration": "6 months",
+        "Technologies": "AutoCAD, SketchUp, 3DS Max, Rhino, Revit, Photoshop, Illustrator, V-Ray, Enscape, Lumion, Twinmotion, Microsoft Office",
+        "skills": "Architectural design, digital production methods, 3D modeling, rendering, technical drawing, graphical presentation",
+        "Link": null,
+        "Key Highlights": [
+          "Developed comprehensive understanding of **Building Codes** and accessibility standards, applying this knowledge to technical drawings and 3D models.",
+          "Contributed to the development of **Design Solutions** that promoted inclusivity and accessibility in various architectural projects.",
+          "Enhanced **Presentation Skills** by effectively communicating technical information to diverse audiences."
+        ]
       },
       {
-        "Original Sentence": "Creating computer-generated 3D models and rendering",
-        "Revised Sentence": "Creating computer-generated **3D models** and **rendering**",
-        "Keywords Added": [
-          "3D models",
-          "rendering"
-        ],
-        "Rationale": "Highlights the applicant's proficiency in essential software skills mentioned in the job description."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Prepared **design solutions** and **construction documents**, applying **problem-solving** skills to address design challenges while meeting project **schedules**.",
-        "Keywords Added": [
-          "design solutions",
-          "construction documents",
-          "problem-solving",
-          "schedules"
-        ],
-        "Rationale": "These keywords directly address key requirements and responsibilities outlined in the job description, showcasing the applicant's ability to handle the role's demands."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Collaborated effectively with cross-functional teams, including engineers and contractors, to ensure seamless project execution.",
-        "Keywords Added": [
-          "Collaborated"
-        ],
-        "Rationale": "Demonstrates the applicant's ability to work effectively in a team-oriented environment, aligning with the job description's emphasis on collaboration."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Utilized strong **communication skills** to present design concepts and technical drawings to clients and stakeholders.",
-        "Keywords Added": [
-          "communication skills"
-        ],
-        "Rationale": "Highlights the applicant's ability to effectively communicate design ideas, which is crucial for an architect role as emphasized in the job description."
-      },
-      {
-        "Original Sentence": "Prepared working drawings for residential, commercial and interior projects",
-        "Revised Sentence": "Prepared working **drawings** for residential, commercial, and interior projects",
-        "Keywords Added": [
-          "drawings"
-        ],
-        "Rationale": "Emphasizes a fundamental skill required for an architect and aligns it with the job description."
-      },
-      {
-        "Original Sentence": "Composed construction documents and BOQs",
-        "Revised Sentence": "Composed **construction documents** and **BOQs**",
-        "Keywords Added": [
-          "construction documents",
-          "BOQs"
-        ],
-        "Rationale": "Directly uses terms from the job description, highlighting the applicant's experience with essential documentation."
-      },
-      {
-        "Original Sentence": "Prepared 3D models and renderings for visual representation",
-        "Revised Sentence": "Prepared **3D models** and **rendering**s for visual representation",
-        "Keywords Added": [
-          "3D models",
-          "rendering"
-        ],
-        "Rationale": "These keywords are directly mentioned in the job description, emphasizing the applicant's skills in these areas."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Contributed to the **design** and development of **architectural drawings**, applying knowledge of building codes and regulations.",
-        "Keywords Added": [
-          "design",
-          "architectural drawings"
-        ],
-        "Rationale": "Connects the applicant's experience to the core responsibilities of an architect role."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Demonstrated proficiency in using **software** for **3D visualization** and **rendering**, enhancing the presentation of design concepts.",
-        "Keywords Added": [
-          "software",
-          "3D visualization",
-          "rendering"
-        ],
-        "Rationale": "Highlights the applicant's technical skills, which are highly relevant to the job description's requirements."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Gained practical experience in preparing **construction documents**, including **BOQs**, contributing to the successful execution of projects.",
-        "Keywords Added": [
-          "construction documents",
-          "BOQs"
-        ],
-        "Rationale": "Emphasizes the applicant's hands-on experience with critical documentation, aligning with the job description's requirements."
-      },
-      {
-        "Original Sentence": "Prepared technical and detailed drawings",
-        "Revised Sentence": "Prepared technical and detailed **drawings**",
-        "Keywords Added": [
-          "drawings"
-        ],
-        "Rationale": "Highlights a fundamental skill for an architect, directly reflecting the language of the job description."
-      },
-      {
-        "Original Sentence": "Prepared 3D models for necessary representation and implementation",
-        "Revised Sentence": "Prepared **3D models** for necessary representation and implementation",
-        "Keywords Added": [
-          "3D models"
-        ],
-        "Rationale": "Aligns the applicant's experience with the job description's requirement for 3D modeling skills."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Developed technical **drawings** and **3D models** that met accessibility standards and guidelines.",
-        "Keywords Added": [
-          "drawings",
-          "3D models"
-        ],
-        "Rationale": "Showcases the applicant's ability to apply technical skills while adhering to industry standards."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Collaborated with a team to assess and analyze the accessibility of built environments.",
-        "Keywords Added": [
-          "Collaborated"
-        ],
-        "Rationale": "Emphasizes teamwork and collaboration skills, aligning with the job description's emphasis on a collaborative work environment."
-      },
-      {
-        "Original Sentence": "N/A",
-        "Revised Sentence": "Utilized **design** skills to propose and present **solutions** that promoted inclusivity and accessibility.",
-        "Keywords Added": [
-          "design",
-          "solutions"
-        ],
-        "Rationale": "Highlights the applicant's ability to develop and present design solutions, aligning with the core responsibilities of an architect."
+        "Job Title": "Architectural Intern",
+        "Company": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
+        "Location": "N/A",
+        "Timeline": "Jun 2019 - Sep 2019",
+        "Duration": "3 months",
+        "Technologies": "AutoCAD, SketchUp, 3DS Max, Rhino, Revit, Photoshop, Illustrator, V-Ray, Enscape, Lumion, Twinmotion, Microsoft Office",
+        "skills": "Architectural design, digital production methods, 3D modeling, rendering, working drawings, RAJUK sheets, layouts, construction documents, BOQs",
+        "Link": null,
+        "Key Highlights": [
+          "Assisted in the preparation of **Construction Documents**, including **working drawings**, **RAJUK sheets**, and **BOQs**, gaining practical experience in the documentation process.",
+          "Utilized **AutoCAD** and **SketchUp** to create **3D Visualizations** and presentations, supporting senior architects in design communication.",
+          "Developed a strong foundation in **Architectural Design** principles and practices, contributing to a range of residential and commercial projects."
+        ]
       }
     ],
-    "Experience Title": []
+    "Project Experience": []
+  },
+  "Report on Changes": {
+    "ATS Pass AI": {
+      "Most Recent Experience": [
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Prepared **Construction Documents** and **Design Solutions** utilizing **AutoCAD**, **SketchUp**, and **Revit**, ensuring timely project delivery.",
+          "Keywords Added": [
+            "Construction Documents",
+            "Design Solutions",
+            "AutoCAD",
+            "SketchUp",
+            "Revit"
+          ],
+          "Rationale": "Incorporating these keywords directly addresses the job description's emphasis on technical proficiency in these specific software and key responsibilities of the role. This increases the relevance of the applicant's experience to the ATS and the recruiter."
+        },
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Collaborated with cross-functional teams to maintain design cohesion and project alignment, showcasing strong **Teamwork** and **Communication Skills**.",
+          "Keywords Added": [
+            "Teamwork",
+            "Communication Skills"
+          ],
+          "Rationale": "The job description explicitly mentions the need for strong collaboration and communication skills. Highlighting these soft skills through relevant keywords strengthens the applicant's profile and demonstrates their suitability for the role."
+        },
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Successfully monitored project progress, identified and reported errors, and implemented corrective measures, enhancing project efficiency and quality.",
+          "Keywords Added": [],
+          "Rationale": "While this bullet point doesn't introduce new keywords, it restructures the sentence to emphasize action verbs and quantifiable achievements, making it more impactful and ATS-friendly."
+        }
+      ],
+      "Work Experience 1": [
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Developed comprehensive understanding of **Building Codes** and accessibility standards, applying this knowledge to technical drawings and 3D models.",
+          "Keywords Added": [
+            "Building Codes"
+          ],
+          "Rationale": "The job description lists familiarity with building codes as a preferred qualification. Adding this keyword strengthens the applicant's profile by demonstrating relevant knowledge."
+        },
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Contributed to the development of **Design Solutions** that promoted inclusivity and accessibility in various architectural projects.",
+          "Keywords Added": [
+            "Design Solutions"
+          ],
+          "Rationale": "This keyword aligns the experience with the job description's focus on creating innovative and inclusive design solutions."
+        },
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Enhanced **Presentation Skills** by effectively communicating technical information to diverse audiences.",
+          "Keywords Added": [
+            "Presentation Skills"
+          ],
+          "Rationale": "Effective communication is highly valued in the job description. Highlighting the applicant's presentation skills through a relevant keyword strengthens their candidacy."
+        }
+      ],
+      "Work Experience 2": [
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Assisted in the preparation of **Construction Documents**, including **working drawings**, **RAJUK sheets**, and **BOQs**, gaining practical experience in the documentation process.",
+          "Keywords Added": [
+            "Construction Documents",
+            "working drawings",
+            "BOQs"
+          ],
+          "Rationale": "The keywords directly address the job requirements related to construction documentation, a core aspect of the architect's role.  "
+        },
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Utilized **AutoCAD** and **SketchUp** to create **3D Visualizations** and presentations, supporting senior architects in design communication.",
+          "Keywords Added": [
+            "AutoCAD",
+            "SketchUp",
+            "3D Visualizations"
+          ],
+          "Rationale": "The addition of these technical keywords showcases the applicant's proficiency in industry-standard software for 3D modeling and visualization."
+        },
+        {
+          "Original Sentence": "N/A",
+          "Revised Sentence": "Developed a strong foundation in **Architectural Design** principles and practices, contributing to a range of residential and commercial projects.",
+          "Keywords Added": [
+            "Architectural Design"
+          ],
+          "Rationale": "This keyword emphasizes the applicant's fundamental understanding of architectural principles, a core requirement for the role."
+        }
+      ]
+    },
+    "Experience Title": {}
   }
 }
+```

@@ -1,112 +1,95 @@
 {
-  "applicant Profile": {
-    "Personal Details": {
-      "Full Name": "Tahsin Ridwan Pulok",
-      "Phone Number": "+880 1785 051566",
-      "Email": "tahsin.pulok@gmail.com",
-      "LinkedIn": null,
-      "Other Social Media Profiles": null,
-      "Personal Website": null,
-      "Portfolio": "sketchfab.com/tahsinpulok",
-      "GitHub": null,
-      "Address": "Zigatola, Dhanmondi, Dhaka- 1209.",
-      "City": null,
-      "State": null,
-      "Zip Code": null,
-      "Country": null
-    },
-    "Education": {
-      "Degree": "Bachelor of Architecture (B.Arch)",
-      "Major": null,
-      "University": "North South University",
-      "Location": null,
-      "Graduation Date": "Jan 2021",
-      "GPA": "2.7/4.0 (82%)"
-    },
-    "Volunteer Work": [
-      {
-        "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
-        "Role": "Designer and builder",
-        "Responsibilities": "Designed and had hands-on experience in building a small toilet from scratch using sustainable local materials.",
-        "Timeline": "January 2019"
+    "applicant Profile": {
+      "Personal Details": {
+        "Full Name": "Tahsin Ridwan Pulok",
+        "Phone Number": "+880 1785 051566",
+        "Email": "tahsin.pulok@gmail.com",
+        "LinkedIn": null,
+        "Other Social Media Profiles": "[sketchfab.com/tahsinpulok](sketchfab.com/tahsinpulok),\n[viewbug.com/member/tahsinpulok](viewbug.com/member/tahsinpulok)",
+        "Personal Website": null,
+        "Portfolio": null,
+        "GitHub": null,
+        "Address": "Zigatola, Dhanmondi, Dhaka- 1209.",
+        "City": null,
+        "State": null,
+        "Zip Code": null,
+        "Country": null
       },
-      {
-        "Organization Name": "Department of Architecture, North South University",
-        "Role": "Volunteer",
-        "Responsibilities": "Volunteered as an organizer and distributed invitations to other schools.",
-        "Timeline": "March 2019"
+      "Education": [
+        {
+          "Degree": "Bachelor of Architecture (B.Arch)",
+          "Major": null,
+          "University": "North South University",
+          "University Location": null,
+          "Graduation Date": "Jan 2021",
+          "GPA": "2.7/4.0 (82%)",
+          "Honors/Distinctions": null
+        },
+        {
+          "Degree": "Higher School Certificate (H.S.C)",
+          "Major": "Science",
+          "University": "Ideal College",
+          "University Location": null,
+          "Graduation Date": "Jun 2014",
+          "GPA": "4.8/5.0",
+          "Honors/Distinctions": null
+        },
+        {
+          "Degree": "Secondary School Certificate (S.S.C)",
+          "Major": "Science",
+          "University": "Junior Laboratory High School",
+          "University Location": null,
+          "Graduation Date": "Mar 2012",
+          "GPA": "5.0/5.0",
+          "Honors/Distinctions": null
+        }
+      ],
+      "Volunteer Work": [
+        {
+          "Organization Name": "UniAssist Global Education",
+          "Role": "Graphic Designer",
+          "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+          "Timeline": "Sep 2019 - Dec 2019"
+        },
+        {
+          "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+          "Role": "Designer and builder",
+          "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+          "Timeline": "January 2019"
+        }
+      ],
+      "Awards and Recognitions": [
+        {
+          "Award Name": "Certificate in recognition of Excellent Result in S.S.C",
+          "Awarding Organization": "Prothom Alo & UCB Bank",
+          "Date": "2012",
+          "Reason": "Excellent Result in S.S.C"
+        },
+        {
+          "Award Name": "Essay on \"The Evolution of Architectural Representation\"",
+          "Awarding Organization": "North South University Publication",
+          "Date": null,
+          "Reason": "selected for publication in \'Para-architectural Musings\'"
+        },
+        {
+          "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
+          "Awarding Organization": "Eastern University",
+          "Date": "2014",
+          "Reason": null
+        }
+      ],
+      "References": [],
+      "Personal Traits and Interests": {
+        "Strengths": null,
+        "Weaknesses": null,
+        "Hobbies": null,
+        "Passions": null
       },
-      {
-        "Organization Name": "Department of Architecture, North South University",
-        "Role": "Volunteer",
-        "Responsibilities": "Volunteered as an organizer.",
-        "Timeline": "June 2015"
+      "Miscellaneous": {
+        "Languages Spoken": null,
+        "Certifications": null,
+        "Professional Affiliations": null,
+        "Other Relevant Details": null
       }
-    ],
-    "Awards and Recognitions": [
-      {
-        "Award Name": "Certificate in recognition of Excellent Result in S.S.C",
-        "Awarding Organization": "Prothom Alo & UCB Bank",
-        "Date": "2012",
-        "Reason": "Excellent Result in S.S.C"
-      },
-      {
-        "Award Name": "Publication of Essay on 'The Evolution of Architectural Representation'",
-        "Awarding Organization": "North South University",
-        "Date": null,
-        "Reason": "Essay selected for publication in \'Para-architectural Musings\'"
-      },
-      {
-        "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
-        "Awarding Organization": "Eastern University",
-        "Date": "2014",
-        "Reason": "Course completion"
-      },
-      {
-        "Award Name": "Certificates on Multiple online courses",
-        "Awarding Organization": "Udemy",
-        "Date": "none provided",
-        "Reason": "Course completions"
-      }
-    ],
-    "References": [
-      {
-        "Name": "Shaila Joarder",
-        "Position": "Associate Professor",
-        "Company": "Department of Architecture, North South University",
-        "Contact Information": "Email: shaila.joarder@northsouth.edu",
-        "Relationship": null
-      },
-      {
-        "Name": "Fariha Yasmin Faruque",
-        "Position": "Architectural Designer",
-        "Company": "ProWise Engineering Inc.",
-        "Contact Information": "Email: fariha.faruque@prowise.ca",
-        "Relationship": null
-      },
-      {
-        "Name": "Krishno Sen",
-        "Position": "Senior Analysts",
-        "Company": "Leaving No One Behind (LNOB), BRAC Bangladesh",
-        "Contact Information": "Email: krishno.sen@brac.net",
-        "Relationship": null
-      }
-    ],
-    "Personal Traits and Interests": {
-      "Strengths": "Proficient in diverse digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.\nNaturally sociable, fostering excellent relationships with colleagues and mentors alike.\nWell-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.\nA habitual photographer with an eye for detail and an ability to multitask.\nPossesses an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
-      "Weaknesses": null,
-      "Hobbies": "Reading\n3D Modeling (sketchfab.com/tahsinpulok)\nPhotography (viewbug.com/member/tahsinpulok)\nTravelling\nGaming",
-      "Passions": null,
-      "Fears": null,
-      "Motivations": null,
-      "Dreams": null,
-      "Goals": null
-    },
-    "Miscellaneous": {
-      "Languages Spoken": null,
-      "Certifications": null,
-      "Professional Affiliations": null,
-      "Other Relevant Details": null
     }
   }
-}

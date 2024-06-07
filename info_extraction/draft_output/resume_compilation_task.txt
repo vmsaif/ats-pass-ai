@@ -1,58 +1,41 @@
-```
-# **Tahsin Ridwan Pulok** | +880 1785 051566 | tahsin.pulok@gmail.com | Zigatola, Dhanmondi, Dhaka- 1209.
+# Tahsin Ridwan Pulock | +880 1785 051566 | tahsin.pulok@gmail.com | Zigatola, Dhanmondi, Dhaka- 1209.
 
 ## Summary
-Highly motivated Architect with a demonstrated ability to translate design concepts into detailed construction documents and 3D visualizations, seeking to leverage expertise in AutoCAD, SketchUp, and Revit at Shibori Ltd. to contribute to innovative and sustainable design solutions.
+Highly motivated Architect with a passion for innovative design and a proven track record in preparing Construction Documents and developing Design Solutions using AutoCAD and SketchUp. Seeking to contribute to Shibori Ltd.'s commitment to creative and collaborative design, leveraging strong teamwork and communication skills to deliver exceptional architectural projects.
 
 ## Skills
-**Tools:**
-- Construction Documents
-- BOQ Preparation
-- AutoCAD
-- SketchUp
-- 3ds Max
-- Revit
-- Rhino
-- Creating computer-generated 3D models and rendering
-- Prepared 3D models for necessary representation and implementation
-- Prepared 3D model of architecture and landscape of the project
-- Prepared 3D models and renderings for visual representation
-- Prepared 3D models and renders
+**Tools:** AutoCAD, SketchUp, 3DS Max, Rhino, Revit, Photoshop, Illustrator, V-Ray, Enscape, Lumion, Twinmotion, Microsoft Office
 
-**Soft Skills:**
-- Communication
-- Teamwork
-- Independent Work
-- Proficient in diverse digital design software
-- Preparation of preliminary and detailed architectural drawings
-- Prepared technical and detailed drawings
-- Prepared working drawings for residential, commercial and interior projects
-- Prepared detailed drawings for interior projects
-- Arranged RAJUK sheets and layouts
-
-## Project Experience
+**Soft Skills:** Teamwork, Communication Skills, Project Management, 3D Visualization, Presentation Skills
 
 ## Work Experience
-### Architect | RSB Properties Ltd. | Oct 2022 - Jul 2023 (9 months)
-- Prepared design solutions and construction documents, applying problem-solving skills to address design challenges while meeting project schedules.
-- Collaborated effectively with cross-functional teams, including engineers and contractors, to ensure seamless project execution.
-- Utilized strong communication skills to present design concepts and technical drawings to clients and stakeholders.
+### Architect | Oct 2022 - Jul 2023 ([Duration]) | RSB Properties Ltd. | N/A
+- Prepared Construction Documents and Design Solutions utilizing AutoCAD, SketchUp, and Revit, ensuring timely project delivery.
+- Collaborated with cross-functional teams to maintain design cohesion and project alignment, showcasing strong Teamwork and Communication Skills.
+- Successfully monitored project progress, identified and reported errors, and implemented corrective measures, enhancing project efficiency and quality.
 
-### Architectural Intern | Tania Karim, Nurur Rahman Khan and Associates (TKNRK) | Jun 2019 - Sep 2019 (3 months)
-- Contributed to the design and development of architectural drawings, applying knowledge of building codes and regulations.
-- Demonstrated proficiency in using software for 3D visualization and rendering, enhancing the presentation of design concepts.
-- Gained practical experience in preparing construction documents, including BOQs, contributing to the successful execution of projects.
+### Technical Trainee on Reasonable Accommodation and Accessibility | Jan 2022 - Jul 2022 ([Duration]) | Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP) | N/A
+- Developed comprehensive understanding of Building Codes and accessibility standards, applying this knowledge to technical drawings and 3D models.
+- Contributed to the development of Design Solutions that promoted inclusivity and accessibility in various architectural projects.
+- Enhanced Presentation Skills by effectively communicating technical information to diverse audiences.
 
-### Technical Trainee on Reasonable Accommodation and Accessibility | Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP) | Jan 2022 - Jul 2022 (6 months)
-- Developed technical drawings and 3D models that met accessibility standards and guidelines.
-- Collaborated with a team to assess and analyze the accessibility of built environments.
-- Utilized design skills to propose and present solutions that promoted inclusivity and accessibility.
+### Architectural Intern | Jun 2019 - Sep 2019 ([Duration]) | Tania Karim, Nurur Rahman Khan and Associates (TKNRK) | N/A
+- Assisted in the preparation of Construction Documents, including working drawings, RAJUK sheets, and BOQs, gaining practical experience in the documentation process.
+- Utilized AutoCAD and SketchUp to create 3D Visualizations and presentations, supporting senior architects in design communication.
+- Developed a strong foundation in Architectural Design principles and practices, contributing to a range of residential and commercial projects.
 
 ## Education
-**North South University** | Bachelor of Architecture (B.Arch) | Graduated: Jan 2021 | GPA: 2.7/4.0 (82%)
+North South University, City, State - Bachelor of Architecture (B.Arch), Graduated: Jan 2021 - GPA: 2.7/4.0 (82%)
 
-## References
-- Shaila Joarder | Associate Professor | Department of Architecture, North South University | Email: shaila.joarder@northsouth.edu
-- Fariha Yasmin Faruque | Architectural Designer | ProWise Engineering Inc. | Email: fariha.faruque@prowise.ca
-- Krishno Sen | Senior Analysts | Leaving No One Behind (LNOB), BRAC Bangladesh | Email: krishno.sen@brac.net
-```
+## Volunteer
+### Graphic Designer | Sep 2019 - Dec 2019
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+- Designed the official logo, social media posts, receipts and other official document formats.
+
+### Designer and builder | January 2019
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+
+## Awards and Recognitions
+- Certificate in recognition of Excellent Result in S.S.C, Prothom Alo & UCB Bank, 2012, Excellent Result in S.S.C
+- Essay on "The Evolution of Architectural Representation", North South University Publication, selected for publication in 'Para-architectural Musings'
+- Certificate on Course of ‘Web Design’ for College Students, Eastern University, 2014

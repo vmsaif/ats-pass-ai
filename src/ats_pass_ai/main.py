@@ -84,20 +84,20 @@ def run():
     6. Partial Match Skills:
         * Create a list of "partial match" skills, categorizing skills that correspond to broader skills mentioned in the job description.
         * Format as JSON:
-          {
-              "list of skills": {
-                  "Essential Skills": [
-                      {
-                          "Name": "Skill 1", 
-                          "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
-                      },
-                      {
-                          "Name": "Skill 2", 
-                          "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
-                      }
-                  ]
-              }
-          }
+        {
+            "list of skills": {
+                "Essential Skills": [
+                    {
+                        "Name": "Skill 1", 
+                        "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
+                    },
+                    {
+                        "Name": "Skill 2", 
+                        "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
+                    }
+                ]
+            }
+        }
         
     
     7. ATS Optimization Tips:
@@ -118,7 +118,6 @@ def run():
             # organizer.run()
         info_organizing_time = t.interval
 
-        
         with Timer() as t:
             # Change the override to True to force the extraction, ie, new job description
             job_description_extractor = LLMTask("Job desc keyword extraction", 
@@ -128,7 +127,6 @@ def run():
                                                 override=True
                                         )
             # job_description_extractor.run()
-
         jd_extraction_time = t.interval
 
         with Timer() as t:
@@ -138,16 +136,17 @@ def run():
 
         with Timer() as t:
             # Delete the applicant profile files but not the folder To start fresh
-            # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
-
-            # Run the main crew program
-            crew = ResumeCrew().crew()
             
-            # try:
-            #     crew.kickoff()
-            # except Exception as e:
-            #     print(f"Error: {e}")
-            #     # crew.kickoff() # Retry once
+            try:
+                # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+                crew = ResumeCrew().crew()
+                # crew.kickoff()
+            except Exception as e:
+                print(f"Error: {e}")
+                # exit the program
+                print("Exiting the program due to error in crew kickoff")
+                exit(1)
+                # crew.kickoff() # Retry once
 
         crew_run_time = t.interval
     

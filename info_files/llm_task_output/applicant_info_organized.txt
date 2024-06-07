@@ -1,181 +1,188 @@
 # Personal Details
-This section contains the personal details of the applicant such as their full name, current address, phone number and email address.
+## Contact Information
+This section contains the contact details of the applicant, Tahsin Ridwan Pulock.
 
-TAHSIN RIDWAN PULOK
-ARCHITECT
-Zigatola, Dhanmondi, Dhaka- 1209.
-+880 1785 051566
+Tahsin Ridwan Pulock  
+Architect  
+Zigatola, Dhanmondi, Dhaka- 1209.  
++880 1785 051566  
 tahsin.pulok@gmail.com
 
+## Social Media
+This section contains links to the Applicant's online profiles for SketchFab and ViewBug.
+
+[sketchfab.com/tahsinpulok](sketchfab.com/tahsinpulok)  
+[viewbug.com/member/tahsinpulok](viewbug.com/member/tahsinpulok)
+
 # Profile
-This section contains a brief self-description by the applicant.
+This section contains a summary of the Applicant's skills, experience, and interests. It highlights their expertise in architectural design, digital production methods, and passion for creativity. 
 
-Tahsin Ridwan Pulok is a Bachelor of Architecture (B.Arch) graduate from North South University, with experience in both freelancing and various professional roles. He excels in translating creative vision and perception into imaginative yet functional architectural designs, prioritizing engaging and aesthetically pleasing spaces.
+This individual is a Bachelor of Architecture (B.Arch) graduate from North South University with experience in freelancing and various architectural roles. They possess a strong ability to translate creative vision into functional architectural designs, with a focus on creating engaging and visually appealing spaces.
 
-Beyond his architectural expertise, Tahsin possesses a strong command of diverse software and digital production methods. His interests extend to 3D modeling, generative arts, and illustrations, reflecting a holistic approach to design. An avid reader and tech enthusiast, he actively explores the latest technologies and visualization products.
+Beyond their architectural expertise, they have proficiency in a range of software and digital production techniques. Their interests span 3D modeling, generative arts, and illustrations, showcasing a well-rounded approach to design and innovation. 
+
+They are also an avid book reader and technology enthusiast, always eager to explore emerging technologies and visualization tools.
+
 
 # Experience
-This section contains the detailed professional career of the applicant, starting from the most recent. It highlights the organizations he has worked for, the durations, his roles and responsibilities.
+This section details the Applicant's professional work history, chronologically ordered, with the most recent position listed first. Each entry includes the job title, company name, employment dates, supervisor's name, and a brief description of their responsibilities.
 
 ## Architect
-**RSB Properties Ltd. | Part-time**
-Supervisor: Mr. Md Amanullah
+**RSB Properties Ltd.** | Part-time  
+Oct 2022 - Jul 2023  
+Supervisor: Mr. Md Amanullah  
 - Preparation of preliminary and detailed architectural drawings.
 - Creating computer-generated 3D models and rendering.
 - Monitoring project progress and reporting errors.
-Oct 2022 - Jul 2023
 
 ## Technical Trainee on Reasonable Accommodation and Accessibility
-**Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)**
+**Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)**  
+Jan 2022 - Jul 2022  
 Supervisor: Mr. Krishno Sen
 - Prepared technical and detailed drawings.
 - Prepared 3D models for necessary representation and implementation.
 - Prepared graphical presentation for technical validation.
-Jan 2022 - Jul 2022
 
 ## Project Architect
-**Integrated Design (Project: Visualization of BSRM Tunnel Service Area) | Full-time**
-Supervisor: Ar. Maruf-ul Ahsan, Ar. Md. Majibur Rahman
+**Integrated Design** (Project: Visualization of BSRM Tunnel Service Area) | Full-time  
+Sep 2021 - Dec 2021  
+Supervisor: Ar. Maruf-ul Ahsan, Ar. Md. Majibur Rahman  
 - Prepared 3D model of architecture and landscape of the project.
 - Prepared 2D renders and 3D animations.
-Sep 2021 - Dec 2021
 
 ## Architectural Intern
-**Tania Karim, Nurur Rahman Khan and Associates (TKNRK) | Internship**
+**Tania Karim, Nurur Rahman Khan and Associates (TKNRK)** | Internship  
+Jun 2019 - Sep 2019  
 Supervisor: Ar. Nurur Rahman Khan, Ar. Joya Ahsan
 - Prepared working drawings for residential, commercial and interior projects.
 - Arranged RAJUK sheets and layouts.
 - Composed construction documents and BOQs.
 - Prepared 3D models and renderings for visual representation.
-Jun 2019 - Sep 2019
 
-## Junior Designer
-**Simple Interiors | Part-time**
+## Junior Designer 
+**Simple Interiors** | Part-time  
+Apr 2017 - Dec 2017  
 Supervisor: Mr. Dip Sazzad
 - Prepared 3D models and renders.
 - Took measurements on-site for technical drawings.
 - Prepared detailed drawings for interior projects.
-Apr 2017 - Dec 2017
 
 ## Graphic Designer
-**UniAssist Global Education | Part-time**
+**UniAssist Global Education** | Part-time  
+Sep 2019 - Dec 2019  
 Supervisor: Mr. Ahsan Rakib Khan
 - Designed and prepared banners, backdrops and brochures for Education Expo 2019.
 - Designed the official logo, social media posts, receipts and other official document formats.
-Sep 2019 - Dec 2019
 
 # Voluntary Experiences
-This section contains the voluntary work or contributions the applicant has done in different organizations or activities.
+This section lists the Applicant's volunteer work. Each entry includes the name of the organization, date, position held, and tasks performed.
 
-## Toilet for Underprivileged Families | January 2019
-**Organizer:** Safe Bangladesh & Ar. Fawaz Rob
-**Position:** Designer and builder | Supervisor: Fawaz Rob
-**Task:** Designed and had hands-on experience in building a small toilet from scratch using sustainable local materials.
+## Toilet for Underprivileged Families 
+**Safe Bangladesh & Ar. Fawaz Rob** | January 2019  
+Position: Designer and builder | Supervisor: Fawaz Rob  
+Task: Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
 
-## Kathon Presentation (A Language for Delta) | March 2019
-**Organizer:** Department of Architecture, North South University
-**Position:** Volunteer | Supervisor: Ismat Hossain
-**Task:** Volunteered as an organizer and distributed invitations to other schools.
+## Kathon Presentation (A Language for Delta)
+**Department of Architecture, North South University** | March 2019  
+Position: Volunteer | Supervisor: Ismat Hossain  
+Task: Volunteered as an organizer and distributed invitations to other schools.
 
-## Design Charrette | June 2015
-**Organizer:** Department of Architecture, North South University
-**Position:** Volunteer | Supervisor: Ishraq Zahra Khan
-**Task:** Volunteered as an organizer.
+## Design Charrette
+**Department of Architecture, North South University** | June 2015  
+Position: Volunteer | Supervisor: Ishraq Zahra Khan  
+Task: Volunteered as an organizer.
 
 # Education
-This section contains the academic qualifications and degrees earned by the applicant throughout their academic career. It also contains the institutions they attended and the grades or GPA they obtained.
+This section outlines the Applicant's academic background. It includes degrees obtained, institutions attended, dates of attendance, and GPA achieved.
 
-## Bachelor of Architecture (B.Arch)
-**Institute:** North South University
-**Duration:** Jan 2015 - Jan 2021
-**CGPA:** 2.7/4.0 (82%)
+## Bachelor of Architecture (B.Arch)  
+**North South University** | Jan 2015 - Jan 2021  
+CGPA: 2.7/4.0 (82%)  
 
-## Higher School Certificate (H.S.C) 
-**Institute:** Ideal College
-**Duration:** Jul 2012 - Jun 2014
-**GPA:** 4.8/5.0
-**Background:** Science
+## Higher School Certificate (H.S.C)  
+**Ideal College** | Jul 2012 - Jun 2014  
+GPA: 4.8/5.0  
+Background: Science
 
-## Secondary School Certificate (S.S.C)
-**Institute:** Junior Laboratory High School
-**Duration:** Jan 2009 - Mar 2012
-**GPA:** 5.0/5.0
-**Background:** Science
+## Secondary School Certificate (S.S.C)  
+**Junior Laboratory High School** | Jan 2009 - Mar 2012  
+GPA: 5.0/5.0  
+Background: Science  
 
-# Hobbies And Interests
-This section highlights the applicant's hobbies and areas of interest outside their professional and academic pursuits.
+# Hobbies and Interests
+This section lists the Applicant's hobbies and interests.
 
-- Reading
-- 3D Modeling (sketchfab.com/tahsinpulok)
-- Photography (viewbug.com/member/tahsinpulok)
-- Travelling
-- Gaming
+* Reading
+* 3D Modeling
+* Photography
+* Travelling
+* Gaming
 
-# Certificates And Awards
-This section lists any certificates or awards received by the applicant, showcasing their accomplishments and recognition.
+# Certificates and Awards
+This section lists the Applicant's certificates and awards received.
 
-- Certificate in recognition of Excellent Result in S.S.C by Prothom Alo & UCB Bank (2012)
-- Essay on "The Evolution of Architectural Representation" (Independent Study course ARC 492) selected for publication in 'Para-architectural Musings' by North South University Publication.
-- Certificate on Course of ‘Web Design’ for College Students by Eastern University (2014)
-- Certificates on Multiple online courses by Udemy
+* Certificate in recognition of Excellent Result in S.S.C by Prothom Alo & UCB Bank (2012)
+* Essay on "The Evolution of Architectural Representation" (course: Independent Study (ARC 492)) selected for publication in 'Para-architectural Musings' by North South University Publication
+* Certificate on Course of ‘Web Design’ for College Students by Eastern University (2014)
+* Certificates on Multiple online courses by Udemy
 
 # Software Expertise
-This section showcases the applicant's proficiency in various software programs, categorized by their application.
+This section lists the Applicant's proficiency in various software, categorized by their primary functions. 
 
 ## Drafting and Modeling
-- Autodesk AutoCAD
-- SketchUP
-- Autodesk 3DS Max
-- Rhino
-- Autodesk Revit
+* Autodesk AutoCAD
+* SketchUP
+* Autodesk 3DS Max
+* Rhino
+* Autodesk Revit
 
 ## Presentation and Documentation
-- Adobe Photoshop
-- Adobe Illustrator
-- CorelDraw
-- Microsoft Office
+* Adobe Photoshop
+* Adobe Illustrator
+* CorelDraw
+* Microsoft Office
 
 ## Rendering and Visualization
-- V-Ray
-- Enscape
-- Lumion
-- Twinmotion
+* V-Ray
+* Enscape
+* Lumion
+* Twinmotion
 
 ## Video and Visual Editing
-- Wondershare Filmora
-- Adobe Premiere Pro
+* Wondershare Filmora
+* Adobe Premiere Pro
 
 # Language Proficiency
-This section details the languages the applicant is fluent in, including their ability to communicate and write coherently.
+This section details the Applicant's language proficiency.
 
-- Fluent in Bangla and English (written and spoken)
-- Understands Hindi and Urdu due to their similarities with Bangla.
+* Can communicate and write coherently in both Bangla and English.
+* Understand Hindi and Urdu due to their similarities with Bangla.
 
 # References
-This section lists the contact details of individuals who can provide professional references for the applicant, including their names, titles, affiliations, and contact information.
+This section contains the contact information of individuals who can provide references for the applicant. 
 
 ## Shaila Joarder
-Associate Professor, Department of Architecture, North South University
-MBEnv, University of New South Wales, Australia
+Associate Professor, Department of Architecture, North South University  
+MBEnv, University of New South Wales, Australia  
 Email: shaila.joarder@northsouth.edu
 
 ## Fariha Yasmin Faruque
-Architectural Designer, ProWise Engineering Inc.
-Ex. Lecturer, Department of Architecture, North South University
-MA, Architectural History, University College London, UK
+Architectural Designer, ProWise Engineering Inc.  
+Ex. Lecturer, Department of Architecture, North South University  
+MA, Architectural History, University College London, UK  
 Email: fariha.faruque@prowise.ca
 
 ## Krishno Sen
-Senior Analysts, Leaving No One Behind (LNOB), BRAC Bangladesh
-Ex. Disability Inclusion Technical Specialist, Handicap International
-Ex. Head of Rehabilitation, CRP Bangladesh
+Senior Analysts, Leaving No One Behind (LNOB), BRAC Bangladesh  
+Ex. Disability Inclusion Technical Specialist, Handicap International  
+Ex. Head of Rehabilitation, CRP Bangladesh  
 Email: krishno.sen@brac.net
 
 # Personal Skills
-This section highlights the applicant's key personal skills relevant to their professional and personal development.
+This section highlights the Applicant's key personal skills relevant to their professional life. 
 
-- Proficient in diverse digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.
-- Naturally sociable, fostering excellent relationships with colleagues and mentors alike.
-- Well-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.
-- A habitual photographer with an eye for detail and an ability to multitask.
-- Possesses an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.
+* Proficient in a diverse array of digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.
+* Naturally sociable, fostering excellent relationships with colleagues and mentors alike.
+* Well-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.
+* A habitual photographer with an eye for detail and an ability to multitask.
+* Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively. 

@@ -1,25 +1,18 @@
 {
   "Volunteer Work": [
     {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
       "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
       "Name length in characters": 31,
       "Role": "Designer and builder",
-      "Responsibilities": "Designed and had hands-on experience in building a small toilet from scratch using sustainable local materials.",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
       "Timeline": "January 2019"
-    },
-    {
-      "Organization Name": "Department of Architecture, North South University",
-      "Name length in characters": 50,
-      "Role": "Volunteer",
-      "Responsibilities": "Volunteered as an organizer and distributed invitations to other schools.",
-      "Timeline": "March 2019"
-    },
-    {
-      "Organization Name": "Department of Architecture, North South University",
-      "Name length in characters": 50,
-      "Role": "Volunteer",
-      "Responsibilities": "Volunteered as an organizer.",
-      "Timeline": "June 2015"
     }
   ]
 }
