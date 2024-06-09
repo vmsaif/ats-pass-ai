@@ -17460,3 +17460,1339 @@ agent=LaTeX Code Generator
 }
 \newEntryVSpace
 \sectionsep2024-06-06 23:08:28: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:46:45: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - List each responsibility starting with a dash (`-`) and end with `\\` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\ 
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:46:45: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:46:49: task=\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\\
+- Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep2024-06-07 09:46:49: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:50:01: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
+In the output, - The first line contains the section name "Education". Use the command \section{Education}. - The next lines contain the education information with the following format:
+  - The first line contains the institution name. Use the command \customTitle{Institution Name}.
+  - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+  - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+  - The next line contains the command \newEntryVSpace to separate the educations. Only use this command if there are multiple educations. Otherwise, do not use this command.
+  - Do not choose more than two educations. Choose the most recent ones.
+
+Example: \section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.   
+\sectionsep % use it at the end to separate the sections.
+Conditions: - Only generate the \section{Education} if there is at least one element provided. Otherwise, each line the output should be latex comments, starting with '%'.
+  %\section{}
+  %\sectionsep. 
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Education": {
+    "Degree": "Bachelor of Architecture (B.Arch)",
+    "Major": null,
+    "University": "North South University",
+    "University Location": null,
+    "Graduation Date": "Jan 2021",
+    "GPA": "2.7/4.0 (82%)",
+    "Honors/Distinctions": null
+  },
+  "Education": {
+    "Degree": "Higher School Certificate (H.S.C)",
+    "Major": "Science",
+    "University": "Ideal College",
+    "University Location": null,
+    "Graduation Date": "Jun 2014",
+    "GPA": "4.8/5.0",
+    "Honors/Distinctions": null
+  },
+  "Education": {
+    "Degree": "Secondary School Certificate (S.S.C)",
+    "Major": "Science",
+    "University": "Junior Laboratory High School",
+    "University Location": null,
+    "Graduation Date": "Mar 2012",
+    "GPA": "5.0/5.0",
+    "Honors/Distinctions": null
+  }
+}2024-06-07 09:50:01: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:50:04: task=%\section{Education}
+\customTitle{North South University}
+\semiTitle{Bachelor of Architecture (B.Arch)}
+\subTitle{Graduated, Jan 2021}
+
+\newEntryVSpace
+
+\customTitle{Ideal College}
+\semiTitle{Higher School Certificate (H.S.C), Science}
+\subTitle{Graduated, Jun 2014}
+\sectionsep2024-06-07 09:50:04: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:50:04: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - List each responsibility starting with a dash (`-`) and end with `\\` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\ 
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:50:04: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:50:08: task=\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Education Expo 2019 | Sep 2019 - Dec 2019}
+\begin{itemize}
+    \item Designed and prepared banners, backdrops and brochures. \\
+    - Designed the official logo, social media posts, receipts and other official document formats.
+\end{itemize}
+\newEntryVSpace
+
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\begin{itemize}
+    \item Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+\end{itemize}
+\sectionsep2024-06-07 09:50:08: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:51:55: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
+In the output, - The first line contains the section name "Education". Use the command \section{Education}. - The next lines contain the education information with the following format:
+  - The first line contains the institution name. Use the command \customTitle{Institution Name}.
+  - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+  - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+  - The next line contains the command \newEntryVSpace to separate the educations. Only use this command if there are multiple educations. Otherwise, do not use this command.
+  - Do not choose more than two educations. Choose the most recent ones.
+
+Example: \section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.   
+\sectionsep % use it at the end to separate the sections.
+Conditions: - Only generate the \section{Education} if there is at least one element provided. Otherwise, each line the output should be latex comments, starting with '%'.
+  %\section{}
+  %\sectionsep. 
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Education": {
+    "Degree": "Bachelor of Architecture (B.Arch)",
+    "Major": null,
+    "University": "North South University",
+    "University Location": null,
+    "Graduation Date": "Jan 2021",
+    "GPA": "2.7/4.0 (82%)",
+    "Honors/Distinctions": null
+  },
+  "Education": {
+    "Degree": "Higher School Certificate (H.S.C)",
+    "Major": "Science",
+    "University": "Ideal College",
+    "University Location": null,
+    "Graduation Date": "Jun 2014",
+    "GPA": "4.8/5.0",
+    "Honors/Distinctions": null
+  },
+  "Education": {
+    "Degree": "Secondary School Certificate (S.S.C)",
+    "Major": "Science",
+    "University": "Junior Laboratory High School",
+    "University Location": null,
+    "Graduation Date": "Mar 2012",
+    "GPA": "5.0/5.0",
+    "Honors/Distinctions": null
+  }
+}2024-06-07 09:51:55: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:51:58: task=\section{Education}
+  \customTitle{North South University}
+  \semiTitle{Bachelor of Architecture (B.Arch)}
+  \subTitle{Graduated, Jan 2021}
+
+  \newEntryVSpace
+
+  \customTitle{Ideal College}
+  \semiTitle{Higher School Certificate (H.S.C) Science}
+  \subTitle{Graduated, Jun 2014}
+
+\sectionsep2024-06-07 09:51:58: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:51:58: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with `\\` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\ 
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:51:58: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:52:04: task=\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019. \\ 
+- Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep2024-06-07 09:52:04: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:54:14: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with `\vspace{5pt}` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\ 
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:54:14: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:54:21: task=```
+\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019. \\
+- Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep
+```2024-06-07 09:54:21: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:54:49: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with `\vspace{5pt}` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \vspace{5pt} 
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:54:49: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:54:54: task=\section{VOLUNTEER}
+  \smallSubSection{UniAssist Global Education}
+  \subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+  \body{
+    - Designed and prepared banners, backdrops and brochures for Education Expo 2019.\hspace{1cm} \vspace{5pt} 
+    - Designed the official logo, social media posts, receipts and other official document formats. \vspace{5pt} 
+  }
+  \newEntryVSpace
+  \smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+  \subTitle{Designer and builder | January 2019}
+  \body{
+    - Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.\hspace{1cm} \vspace{5pt} 
+  }
+  \newEntryVSpace
+\sectionsep2024-06-07 09:54:54: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:55:28: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with `\vspace{5pt}` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \vspace{5pt} 
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:55:28: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:55:33: task=```
+\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\vspace{5pt}
+- Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep
+```2024-06-07 09:55:33: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:56:57: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with '\\' then a `\vspace{5pt}` for line breaks.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\
+    \vspace{5pt}
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:56:57: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:57:05: task=```latex
+% Check if there are any volunteer entries
+\ifthenelse{\isempty{\VolunteerWork}}{
+  % No volunteer entries, so output latex comments
+  % \section{VOLUNTEER}
+  % \sectionsep
+}{
+  % There are volunteer entries, so generate the section
+  \section{VOLUNTEER}
+  % Loop through each volunteer entry
+  \foreach \VolunteerEntry in \VolunteerWork {
+    % Replace special LaTeX characters with escaped versions
+    \renewcommand*{\OrganizationName}{\expandafter\escapestring\expandafter{\VolunteerEntry["Organization Name"]}}
+    \renewcommand*{\Role}{\expandafter\escapestring\expandafter{\VolunteerEntry["Role"]}}
+    \renewcommand*{\Timeline}{\expandafter\escapestring\expandafter{\VolunteerEntry["Timeline"]}}
+    \renewcommand*{\Responsibilities}{\expandafter\escapestring\expandafter{\VolunteerEntry["Responsibilities"]}}
+
+    % Use \subsection{} or \smallSubSection{} based on the length of the organization name
+    \ifthenelse{\length{\OrganizationName} > 20}{
+      \smallSubSection{\OrganizationName}
+    }{
+      \subsection{\OrganizationName}
+    }
+
+    % Output the role and timeline
+    \subTitle{\Role | \Timeline}
+
+    % Output the responsibilities
+    \body{
+      -\Responsibilities\\ \vspace{5pt}
+    }
+
+    % Add a vertical space to separate each entry
+    \newEntryVSpace
+  }
+
+  % Add a vertical space to separate the volunteer section from the next section
+  \sectionsep
+}
+```2024-06-07 09:57:05: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:57:37: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with '\\'.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\
+    \vspace{5pt}
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:57:37: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:57:47: task=\section{VOLUNTEER}
+\subsection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n
+\vspace{5pt}
+- Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+\subsection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep2024-06-07 09:57:47: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:58:33: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with '\\'.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\
+    \vspace{5pt}
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:58:33: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:58:38: task=\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+    - Designed and prepared banners, backdrops and brochures for Education Expo 2019.\
+    \vspace{5pt}
+    - Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace % Use this to separate multiple entries.
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+    - Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep2024-06-07 09:58:38: status=completed
+agent=LaTeX Code Generator
+2024-06-07 09:59:25: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with '\\'.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\
+    \vspace{5pt}
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code and should not be in a code block.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 09:59:25: status=started
+agent=LaTeX Code Generator
+2024-06-07 09:59:30: task=```
+\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+    - Designed and prepared banners, backdrops and brochures for Education Expo 2019.\\
+    \vspace{5pt}
+    - Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+    - Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep
+```2024-06-07 09:59:30: status=completed
+agent=LaTeX Code Generator
+2024-06-07 10:00:10: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with '\\'.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\
+    \vspace{5pt}
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code without any code block quotes.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 10:00:10: status=started
+agent=LaTeX Code Generator
+2024-06-07 10:00:15: task=% \section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\body{
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\\
+\vspace{5pt}
+- Designed the official logo, social media posts, receipts and other official document formats.
+}
+\newEntryVSpace
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\body{
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+}
+\newEntryVSpace
+\sectionsep2024-06-07 10:00:15: status=completed
+agent=LaTeX Code Generator
+2024-06-07 10:00:36: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Next inside \body{} List each responsibility starting with a dash (`-`) and end with '\\'.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \body{
+    - Engaged with the latest software development technologies and tools. \\
+    \vspace{5pt}
+    - Collaborated on team projects focused on Python and Cloud Technologies. 
+  }
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code without any code block quotes.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-07 10:00:36: status=started
+agent=LaTeX Code Generator
+2024-06-07 10:00:41: task=% \section{VOLUNTEER}
+% \sectionsep.
+\section{VOLUNTEER}
+  \smallSubSection{UniAssist Global Education}
+  \subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+  \body{
+    - Designed and prepared banners, backdrops and brochures for Education Expo 2019.\\
+    \vspace{5pt}
+    - Designed the official logo, social media posts, receipts and other official document formats.
+  }
+  \newEntryVSpace
+  \smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+  \subTitle{Designer and builder | January 2019}
+  \body{
+    - Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+  }
+  \newEntryVSpace
+\sectionsep2024-06-07 10:00:41: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:25:35: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+  - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+  \newEntryVSpace % Use this to separate multiple entries.
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code without any code block quotes.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-08 08:25:35: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:25:40: task=\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+  \subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\newEntryVSpace
+
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+  \subTitle{Designer and builder | January 2019}
+  \begin{vitemize}
+    \item Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+  \end{vitemize}
+\sectionsep2024-06-08 08:25:40: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:27:17: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code without any code block quotes.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-08 08:27:17: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:27:22: task=```
+\section{VOLUNTEER}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\begin{vitemize}
+\vspace{5pt}
+- Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+\vspace{5pt}
+- Designed the official logo, social media posts, receipts and other official document formats.
+\end{vitemize}
+
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\begin{vitemize}
+\vspace{5pt}
+- Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+\end{vitemize}
+
+\sectionsep
+```2024-06-08 08:27:22: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:27:55: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
+  - Use `\vspace{5pt}` to add space between each responsibility for better readability.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code without any code block quotes.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-08 08:27:55: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:28:00: task=\section{VOLUNTEER}
+\smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+\subTitle{Designer and builder | January 2019}
+\begin{vitemize}
+  \vspace{5pt}
+  \item Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+\end{vitemize}
+\smallSubSection{UniAssist Global Education}
+\subTitle{Graphic Designer | Sep 2019 - Dec 2019}
+\begin{vitemize}
+  \vspace{5pt}
+  \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+  \vspace{5pt}
+  \item Designed the official logo, social media posts, receipts and other official document formats.
+\end{vitemize}
+\sectionsep2024-06-08 08:28:00: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:28:34: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`. - Each volunteer entry should be structured as follows:
+  - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+  - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+  - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
+- Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections. - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
+  - `%` to `\%`
+  - `$` to `\$`
+  - `&` to `\&`
+  - `#` to `\#`
+  - `_` to `\_`
+
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+- Your output should be raw LaTeX code without any code block quotes.
+
+
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": "UniAssist Global Education",
+      "Name length in characters": 26,
+      "Role": "Graphic Designer",
+      "Responsibilities": "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
+      "Timeline": "Sep 2019 - Dec 2019"
+    },
+    {
+      "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
+      "Name length in characters": 31,
+      "Role": "Designer and builder",
+      "Responsibilities": "Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
+      "Timeline": "January 2019"
+    }
+  ]
+}2024-06-08 08:28:34: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:28:39: task=\section{VOLUNTEER}
+  \smallSubSection{UniAssist Global Education}
+  \subTitle{Designer | Sep 2019 - Dec 2019}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+  \smallSubSection{Safe Bangladesh \& Ar. Fawaz Rob}
+  \subTitle{Designer and builder | January 2019}
+  \begin{vitemize}
+    \item Designed and had a hand on experience on how to properly build a small toilet from scratch by using sustainable local materials.
+  \end{vitemize}
+\sectionsep2024-06-08 08:28:39: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:34:34: task=Extract the references information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the references information with the following format:
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference.
+  - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+  - Do not choose more than two references. Choose the most relevant ones.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+  Do Nothing else. Keep the output empty.
+- Your output should follow latex syntax, no need for any code block quotes.
+
+
+{}2024-06-08 08:34:34: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:34:37: task=\section{References}
+    \subsection{Ibrahim Mahmoud}
+    \subTitle{Engineering Manager}
+    \subTitle{Shopify}
+    \body{204-272-7673 | ON}
+
+    \newEntryVSpace
+
+    \subsection{Saba Pasha}
+    \subTitle{Senior Software Engineer}
+    \subTitle{Wealthsimple}
+    \body{647-958-3210 | ON}
+\sectionsep2024-06-08 08:34:37: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:35:42: task=Extract the references information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the references information with the following format:
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference.
+  - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+  - Do not choose more than two references. Choose the most relevant ones.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+  Do Nothing else. Keep the output empty.
+- Your output should follow latex syntax, no need for any code block quotes.
+Here is the information you need and convert them into LaTeX format:
+
+
+{}2024-06-08 08:35:42: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:35:44: task=% \section{References}
+% \sectionsep2024-06-08 08:35:44: status=completed
+agent=LaTeX Code Generator
+2024-06-08 08:54:14: task=Extract the references information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the references information with the following format:
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference.
+  - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+  - Do not choose more than two references. Choose the most relevant ones.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+  Do Nothing else. Keep the output empty.
+- Your output should follow latex syntax, no need for any code block quotes.
+Here is the information you need and convert them into LaTeX format:
+
+
+{
+  "References": []
+}2024-06-08 08:54:14: status=started
+agent=LaTeX Code Generator
+2024-06-08 08:54:15: task=```
+% \section{References}
+% \sectionsep
+```2024-06-08 08:54:15: status=completed

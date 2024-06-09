@@ -12,6 +12,7 @@ agentops = "^0.1.9"
 duckduckgo-search = "^6.1.0"
 crewai = {extras = ["tools"], version = "^0.30.11"}
 prettytable = "^3.10.0"
+sentence-transformers = "^3.0.1"
 
 [tool.poetry.scripts]
 ats_pass_ai = "ats_pass_ai.main:run"

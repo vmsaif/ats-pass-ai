@@ -134,27 +134,26 @@ def run():
             RagSearchTool.process_and_index(applicant_info_orgainzed_file_path)
         indexing_time = t.interval
 
-        with Timer() as t:
-            # Delete the applicant profile files but not the folder To start fresh
-            
+        with Timer() as t:         
             try:
-                # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+                # Delete the applicant profile files but not the folder To start fresh
+                RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
                 crew = ResumeCrew().crew()
-                # crew.kickoff()
+                crew.kickoff()
             except Exception as e:
                 print(f"Error: {e}")
                 # exit the program
-                print("Exiting the program due to error in crew kickoff")
-                exit(1)
+                # print("Exiting the program due to error in crew kickoff")
+                # exit(1)
                 # crew.kickoff() # Retry once
 
         crew_run_time = t.interval
     
-        with Timer() as t:
-            omega_theme_crew = OmegaThemeCrew().crew()
-            omega_theme_crew.kickoff()
-            compile_latex(PATHS["omega_theme_final_output_tex"], PATHS["omega_theme_final_output_pdf"])
-        latex_generation_time = t.interval
+        # with Timer() as t:
+        #     omega_theme_crew = OmegaThemeCrew().crew()
+        #     # omega_theme_crew.kickoff()
+        #     # compile_latex(PATHS["omega_theme_final_output_tex"], PATHS["omega_theme_final_output_pdf"])
+        # latex_generation_time = t.interval
 
     program_run_time = total_time.interval
     
@@ -165,7 +164,7 @@ def run():
     print_task_time("JD Extraction", jd_extraction_time)
     print_task_time("Indexing", indexing_time)
     print_task_time("Crew Run", crew_run_time)
-    print_task_time("Latex Generation", latex_generation_time)
+    # print_task_time("Latex Generation", latex_generation_time)
     print_task_time("Total", program_run_time)
     printRemainingRequestsPerDay()
 

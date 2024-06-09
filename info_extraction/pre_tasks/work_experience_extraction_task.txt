@@ -4,14 +4,10 @@
       "Job Title": "Architect",
       "Company Name": "RSB Properties Ltd.",
       "Timeline": "Oct 2022 - Jul 2023",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": "- Preparation of preliminary and detailed architectural drawings.\n- Creating computer-generated 3D models and rendering.\n- Monitoring project progress and reporting errors.",
       "Link": null,
-      "Key Highlights": [
-        "- Preparation of preliminary and detailed architectural drawings.",
-        "- Creating computer-generated 3D models and rendering.",
-        "- Monitoring project progress and reporting errors."
-      ],
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     },
@@ -19,28 +15,21 @@
       "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
       "Company Name": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
       "Timeline": "Jan 2022 - Jul 2022",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": "- Prepared technical and detailed drawings.\n- Prepared 3D models for necessary representation and implementation.\n- Prepared graphical presentation for technical validation.",
       "Link": null,
-      "Key Highlights": [
-        "- Prepared technical and detailed drawings.",
-        "- Prepared 3D models for necessary representation and implementation.",
-        "- Prepared graphical presentation for technical validation."
-      ],
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     },
     {
       "Job Title": "Project Architect",
-      "Company Name": "Integrated Design",
+      "Company Name": "Integrated Design (Project: Visualization of BSRM Tunnel Service Area)",
       "Timeline": "Sep 2021 - Dec 2021",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": "- Prepared a 3D model of the architecture and landscape of the project.\n- Prepared 2D renders and 3D animations.",
       "Link": null,
-      "Key Highlights": [
-        "- Prepared 3D model of architecture and landscape of the project.",
-        "- Prepared 2D renders and 3D animations."
-      ],
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     },
@@ -48,15 +37,10 @@
       "Job Title": "Architectural Intern",
       "Company Name": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
       "Timeline": "Jun 2019 - Sep 2019",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": "- Prepared working drawings for residential, commercial and interior projects.\n- Arranged RAJUK sheets and layouts.\n- Composed construction documents and BOQs.\n- Prepared 3D models and renderings for visual representation.",
       "Link": null,
-      "Key Highlights": [
-        "- Prepared working drawings for residential, commercial and interior projects.",
-        "- Arranged RAJUK sheets and layouts.",
-        "- Composed construction documents and BOQs.",
-        "- Prepared 3D models and renderings for visual representation."
-      ],
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     },
@@ -64,14 +48,10 @@
       "Job Title": "Junior Designer",
       "Company Name": "Simple Interiors",
       "Timeline": "Apr 2017 - Dec 2017",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": "- Prepared 3D models and renders.\n- Took measurements on-site for technical drawings.\n- Prepared detailed drawings for interior projects.",
       "Link": null,
-      "Key Highlights": [
-        "- Prepared 3D models and renders.",
-        "- Took measurements on-site for technical drawings.",
-        "- Prepared detailed drawings for interior projects."
-      ],
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     },
@@ -79,13 +59,10 @@
       "Job Title": "Graphic Designer",
       "Company Name": "UniAssist Global Education",
       "Timeline": "Sep 2019 - Dec 2019",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": "- Designed and prepared banners, backdrops and brochures or Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
       "Link": null,
-      "Key Highlights": [
-        "- Designed and prepared banners, backdrops and brochures for Education Expo 2019.",
-        "- Designed the official logo, social media posts, receipts and other official document formats."
-      ],
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     }

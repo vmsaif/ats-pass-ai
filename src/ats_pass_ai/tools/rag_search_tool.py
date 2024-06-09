@@ -1,8 +1,13 @@
 import os
 from textwrap import dedent
-from langchain_community.embeddings import OllamaEmbeddings
+# from langchain_community.embeddings import OllamaEmbeddings
 from langchain.tools import tool
 from langchain_community.vectorstores import Chroma
+
+# from chromadb.utils.embedding_functions import GoogleGenerativeAiEmbeddingFunction
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+# from langchain.docstore.document import Document
+# from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 import hashlib
@@ -10,7 +15,27 @@ import shutil
 from ats_pass_ai.output_file_paths import PATHS
 
 # Set up the embedding function
-embedding_function = OllamaEmbeddings(model='nomic-embed-text')
+# embedding_function = OllamaEmbeddings(model='nomic-embed-text')
+# embedding_function = OllamaEmbeddings(model='mxbai-embed-large')
+# embedding_function = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
+
+from langchain_core.embeddings import Embeddings
+from chromadb.api.types import EmbeddingFunction
+
+# Adapter to use Chroma Embeddings with Langchain Embeddings
+class ChromaEmbeddingsAdapter(Embeddings):
+    def __init__(self, ef: EmbeddingFunction):
+        self.ef = ef
+
+    def embed_documents(self, texts):
+        return self.ef(texts)
+
+    def embed_query(self, query):
+        return self.ef([query])[0]
+    
+# embedding_function = ChromaEmbeddingsAdapter(GoogleGenerativeAiEmbeddingFunction(api_key=os.getenv('GOOGLE_API_KEY')))
+embedding_function = ChromaEmbeddingsAdapter(SentenceTransformerEmbeddingFunction(model_name='all-MiniLM-L6-v2'))
+
 
 # Tool to search in Chroma DB
 class SearchInChromaDB:
@@ -26,7 +51,8 @@ class SearchInChromaDB:
             You need to understand the content and extract the information you need within the chunk without any further calling of this tool.
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
-        results = vectorstore.similarity_search(question)
+        results = vectorstore.similarity_search(query = question, k = 3)
+        
         return results
 
 class RagSearchTool:
@@ -45,7 +71,6 @@ class RagSearchTool:
     def _file_indexed_before(file_path: str, hash_file_path: str) -> bool:
         """Check if a file has been indexed in Chroma DB."""
         current_file_hash = RagSearchTool._file_hash(file_path)
-        
         result = False
 
         # Check if the file hash is in the hash_store, if not, then then file definitely has not been indexed
@@ -84,8 +109,10 @@ class RagSearchTool:
             if not RagSearchTool._file_indexed_before(file_path, hash_file_path):
                 run_flag = True
                 print("File has not been processed before.")
+            else:
+                print("File has been indexed before. Skipping Indexing.")
 
-        if(run_flag):  
+        if(run_flag):
             # Load the content from the file
 
             # delete the existing Chroma DB if it exists
@@ -93,23 +120,19 @@ class RagSearchTool:
 
             loader = TextLoader(file_path, encoding='utf-8')
             doc = loader.load()
-            
+            # print(doc)
             # Split the content into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=200)
+            text_splitter = RecursiveCharacterTextSplitter(chunk_size=900, chunk_overlap=200)
             splits = text_splitter.split_documents(doc)  # Split large document content
-            
-            for split in splits:
-                print(dedent(f"""
-                    ------------------ Content chunk ------------------
-                    {split}
-                    -----------------------------------------------------
-                """))
-    
+            # print ("Splits: ", splits[0])
             # Now index the content in Chroma DB
             if splits:
                 # Create a VectorStore with document embedding
                 print("Indexing content in DB...")
-                Chroma.from_documents(splits, embedding=embedding_function, persist_directory=RagSearchTool.persist_directory)
+                # print(splits)
+                # for split in splits:
+                #     print(split)
+                Chroma.from_documents(documents=splits, embedding=embedding_function, persist_directory=RagSearchTool.persist_directory)
                 print("Content indexed in Chroma DB")
 
                 RagSearchTool._updateHashFile(file_path, hash_file_path)
@@ -126,15 +149,19 @@ class RagSearchTool:
     def _updateHashFile(file_path: str, hash_file_path: str):
         """Update the hash store file with the hash of the processed file."""
         current_file_hash = RagSearchTool._file_hash(file_path)
-        with open(hash_file_path, 'a') as f:
-            f.write(current_file_hash + '\n')
-        print("Hash store file updated.")
+
+        try:
+            if not os.path.exists(hash_file_path):
+                with open(hash_file_path, 'w') as file:
+                    print("New hash store file created.")
+            with open(hash_file_path, 'a') as f:
+                f.write(current_file_hash + '\n')
+            print("Hash store file updated.")
+        except Exception as e:
+            print(f"Error while updating/creating hash store file: {e}")
 
     def delete_applicant_profile_files(delete_pretasks: bool = False):
         """Delete the applicant profile files but not the folder, optionally delete pre-task files."""
-        
-
-        # Delete files in the information extraction folder
         
         RagSearchTool._delete_files_in_directory(PATHS["info_extraction_folder_path"])
         print("applicant profile files deletion attempt complete.")
@@ -147,6 +174,7 @@ class RagSearchTool:
 
     def _delete_files_in_directory(directory_path):
         """Helper function to delete all files in the specified directory and print the operation results."""
+        print(f"Deleting files in directory: {directory_path}")
         entries = os.listdir(directory_path)
         for entry in entries:
             full_path = os.path.join(directory_path, entry)
@@ -160,5 +188,3 @@ class RagSearchTool:
                     print(f"Error while deleting {full_path}: {e}")
             else:
                 print(f"Skipped: {full_path} (not a file)")
-
-

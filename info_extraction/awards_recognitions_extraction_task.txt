@@ -7,16 +7,22 @@
       "Reason": "Excellent Result in S.S.C"
     },
     {
-      "Award Name": "Essay on \"The Evolution of Architectural Representation\"",
+      "Award Name": "My essay on “The Evolution of Architectural Representation” of the course “Independent Study (ARC 492)",
       "Awarding Organization": "North South University Publication",
-      "Date": null,
-      "Reason": "selected for publication in \'Para-architectural Musings\'"
+      "Date": "NA",
+      "Reason": "My essay got selected for publishing in the book, ‘Para-architectural Musings’"
     },
     {
       "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
       "Awarding Organization": "Eastern University",
       "Date": "2014",
-      "Reason": null
+      "Reason": "NA"
+    },
+    {
+      "Award Name": "Certificates on Multiple online courses",
+      "Awarding Organization": "Udemy",
+      "Date": "NA",
+      "Reason": "NA"
     }
   ]
 }

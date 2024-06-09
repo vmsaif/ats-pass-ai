@@ -26,8 +26,7 @@ class ResumeCrew:
 	tasks_config = tasks_config_path # because tasks_config somehow getting recognized as a dictionary, not a simple string path.
 
 	os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
-
-	# os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
+	os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 	# agentops.init(tags=["resume-crew"])
 
 	debugFlag = False
@@ -93,23 +92,23 @@ class ResumeCrew:
 
 			my_tasks.append(self.profile_builder_task())
 
-		# Either way, these tasks will be executed.
-		my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
-		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# # Either way, these tasks will be executed.
+		# my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
-		my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
-		my_tasks.append(self.split_context_of_experience_choosing_task())
-		my_tasks.append(self.gather_info_of_chosen_experiences())
-		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------------------- uses large llm
-		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		# my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.split_context_of_experience_choosing_task())
+		# my_tasks.append(self.gather_info_of_chosen_experiences())
+		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
-		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task()) 
+		# my_tasks.append(self.coursework_extraction_task())
+		# my_tasks.append(self.career_objective_task()) 
 
-		my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
 		# my_tasks.append(self.resume_compilation_task())
 		# my_tasks.append(self.latex_resume_generation_task())
-		my_tasks.append(self.cover_letter_generation_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.cover_letter_generation_task()) # --------------------------- uses large llm
 				
 		# Return the crew
 		return Crew(
@@ -747,7 +746,7 @@ class ResumeCrew:
 				return file.read()
 		except IOError as e:
 			print(f"Error opening or reading the file {file_path}: {e}")
-			return False
+			return ""
 
 
 	def load_all_files(self, directory_path) -> str:
@@ -764,6 +763,7 @@ class ResumeCrew:
 						all_text += file.read() + "\n"  # Append text with a newline to separate files
 				except IOError as e:
 					print(f"Error opening or reading the file {full_path}: {e}")
+
 		return all_text
 
 	def yaml_loader(self, task_name):

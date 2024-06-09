@@ -17,6 +17,7 @@
 \usepackage{afterpage}
 % Publications
 \usepackage{cite}
+\usepackage{enumitem} % for tight lists
 \renewcommand\refname{\vskip -1.5cm}
 
 % Color definitions
@@ -107,6 +108,17 @@ Last Updated on \\
   {\normalfont\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{18pt}\selectfont\color{subheadings}\raggedright\uppercase}}
 \makeatother
 
+% Volunteer section itemize
+\newenvironment{vitemize}{  % Accepts one parameter
+\vspace{-5pt}  % Use the parameter to add vertical space
+\itemFont  % Set the font family
+\fontsize{11pt}{14pt}\selectfont  % Set the font size
+\begin{itemize}[leftmargin=*] \itemsep1pt \parskip0pt \parsep0pt  % Start itemize with fewer gaps
+}{  
+\end{itemize}
+}
+
+
 % career goal body
 \newcommand{\careerGoalBody}[1]{
 {\color{headings}\raggedright\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{12pt}{14pt}\selectfont {#1\\}\par\vspace{3pt}}
@@ -168,7 +180,7 @@ Last Updated on \\
 
 % SubTitle command
 \newcommand{\smallSubSection}[1]{
-{\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{14pt}\selectfont\uppercase {#1}\vspace{3pt}\par}}
+{\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-SemiBold}\fontsize{12.5pt}{14pt}\selectfont\uppercase {#1}\vspace{3pt}\par}}
 
 \newcommand{\body}[1]{
   % \color{subheadings}

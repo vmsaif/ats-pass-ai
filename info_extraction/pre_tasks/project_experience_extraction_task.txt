@@ -1,19 +1,59 @@
-```json
 {
   "Project Experience": [
     {
-      "Project Title": "Visualization of BSRM Tunnel Service Area",
-      "Timeline": "Sep 2021 - Dec 2021",
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": null,
+      "Project Title": "3D Model of Architecture and Landscape of BSRM Tunnel Service Area",
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nEnscape\nLumion\nTwinmotion",
+      "Skills": [],
       "Link": null,
       "Key Highlights": [
-        "Prepared 3D model of architecture and landscape of the project.",
+        "Prepared a 3D model of the architecture and landscape of the project.",
         "Prepared 2D renders and 3D animations."
       ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": null,
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": [],
+      "Link": null,
+      "Key Highlights": [
+        "Prepared working drawings for residential, commercial and interior projects.",
+        "Arranged RAJUK sheets and layouts.",
+        "Composed construction documents and BOQs.",
+        "Prepared 3D models and renderings for visual representation."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": null,
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": [],
+      "Link": null,
+      "Key Highlights": [
+        "Prepared 3D models and renders.",
+        "Took measurements on-site for technical drawings.",
+        "Prepared detailed drawings for interior projects."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": null,
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Autodesk AutoCAD\nSketchUP\nAutodesk 3DS Max\nRhino\nAutodesk Revit\nAdobe Photoshop\nAdobe Illustrator\nCorelDraw\nMicrosoft Office\nV-Ray\nEnscape\nLumion\nTwinmotion",
+      "Skills": [
+        "Designed and prepared banners, backdrops and brochures or Education Expo 2019.",
+        "Designed the official logo, social media posts, receipts and other official document formats."
+      ],
+      "Link": null,
+      "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
     }
   ]
 }
-```

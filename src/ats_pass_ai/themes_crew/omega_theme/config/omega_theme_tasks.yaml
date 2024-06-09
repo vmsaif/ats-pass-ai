@@ -38,18 +38,22 @@ educationsection:
       - Do not choose more than two educations. Choose the most recent ones.
 
     Example:
+
     \section{Education}
       \customTitle{University of Manitoba}
       \semiTitle{BSc Major in Computer Science}
       \subTitle{Graduated, October 2023}
 
-    \newEntryVSpace % use it if there are multiple educations to separate them.   
+      \newEntryVSpace % use it if there are multiple educations to separate them.   
+    \sectionsep % use it at the end to separate the sections.
 
     Conditions:
     - Only generate the \section{Education} if there is at least one element provided. Otherwise, each line the output should be latex comments, starting with '%'.
       %\section{}
       %\sectionsep. 
     - Your output should be raw LaTeX code and should not be in a code block.
+
+    Here is the information you need and convert them into LaTeX format:
   expected_output: >
 
 courseworksection:
@@ -80,6 +84,8 @@ courseworksection:
       % \section{}
       % \sectionsep
     - Your output should be raw LaTeX code and should not be in a code block.
+
+    Here is the information you need and convert them into LaTeX format:
   expected_output: >
 
 volunteersection:
@@ -92,8 +98,7 @@ volunteersection:
     - Each volunteer entry should be structured as follows:
       - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
       - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
-      - List each responsibility starting with a dash (`-`) and end with `\\` for line breaks.
-      - Use `\newEntryVSpace` to separate each volunteer entry and maintain a consistent structure.
+      - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
     - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
     - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
       - `%` to `\%`
@@ -107,57 +112,62 @@ volunteersection:
     \section{VOLUNTEER}
       \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
       \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
-      \body{
-        - Engaged with the latest software development technologies and tools. \\ 
-        - Collaborated on team projects focused on Python and Cloud Technologies. 
-      }
-      \newEntryVSpace % Use this to separate multiple entries.
+      \begin{vitemize}
+        \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+        \item Designed the official logo, social media posts, receipts and other official document formats.
+      \end{vitemize}
     \sectionsep
 
     **Conditions**:
     - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
       % \section{}
       % \sectionsep.
-    - Your output should be raw LaTeX code and should not be in a code block.
+    - Your output should be raw LaTeX code without any code block quotes.
+
+    Here is the information you need and convert them into LaTeX format:
   expected_output: >
-    LaTeX code for the volunteer section without any code block quotes.
+    No blockquote is needed for the output.
 
 referencessection:
   description: >
     Extract the references information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
     In the output,
-    - The first line contains the section name "References".
-    - The next line contain the references with the name,
-    - The next line contains the position, company.
-    - The next line contains the contact information, email, phone number, location. Each of these should be started with a '-' and separated by a double backslash '\\' which is the line break command in LaTeX.
-    - The next line contains the relationship.
-    - The last line contains the command '\sectionsep' to separate the sections, or if there are multiple references, use '\entryVSpace' to separate each reference.
+    - The first line contains the section name "References". Use the command \section{References}.
+    - The next lines contain the references information with the following format:
+      - Use the command \subsection{} for the name of the reference.
+      - Use the command \subTitle{} for the position and company of the reference.
+      - Use the command \body{} for the contact information of the reference.
+      - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+      - Do not choose more than two references. Choose the most relevant ones.
 
     Example:
-    \section{References} 
-      \subsection{Dr. John Doe}
-      \subHeading{Professor | University of Manitoba}
-      - drjohndoe@example.com \\
-      - 123 456 7890 \\
-      - Relationship: Academic Advisor \\
-      
-      \entryVSpace
+    \section{References}
+        \subsection{Abu Kabir}
+        \subTitle{Director, IT Service Management}
+        \subTitle{Microsoft Corporation}
+        \body{204-298-3693 | Winnipeg, MB}
 
-    \subsection{Jane Smith}
-      \subHeading{Manager | ABC Company}
-      - example@example.com
-      - 123 456 7890 \\
-      - Relationship: Former Supervisor \\
+        \newEntryVSpace
+
+        \subsection{Safiur Mahdi}
+        \subTitle{Software Developer}
+        \subTitle{Skip The Dishes}
+        \body{204-583-3432 | Winnipeg, MB}
     \sectionsep
 
     Conditions:
-    - Only generate the \section{References} if there is at least one element provided. Otherwise, the output should be blank as 
-      %\section{}
-      %\sectionsep.
+    - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+      % \section{}
+      % \sectionsep.
       Do Nothing else. Keep the output empty.
-    - - Your output should follow latex syntax, no need for any code block quotes.
+    - Your output should follow latex syntax, no need for any code block quotes.
+
+    Here is the information you need and convert them into LaTeX format:
+
   expected_output: >
+    No blockquote is needed for the output.
+
 
 careerobjectivesection:
   description: >

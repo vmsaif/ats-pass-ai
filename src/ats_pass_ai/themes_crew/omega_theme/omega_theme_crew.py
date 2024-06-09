@@ -23,7 +23,7 @@ from opentelemetry.sdk.trace.export import SimpleSpanProcessor, ConsoleSpanExpor
 # 	SimpleSpanProcessor(ConsoleSpanExporter())
 # )
 
-os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
+# os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
 # os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 
 class OmegaThemeCrew:
@@ -176,8 +176,8 @@ class OmegaThemeCrew:
 				# self.namesection(),
 				# self.educationsection(),
 				# self.courseworksection(),
-				self.volunteerworksection(),
-				# self.referencessection(),
+				# self.volunteerworksection(),
+				self.referencessection(),
 				# self.careerobjectivesection(),
 				# self.experiencesection()
 			]

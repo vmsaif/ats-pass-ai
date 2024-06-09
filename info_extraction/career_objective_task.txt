@@ -1,3 +1,0 @@
-{
-    "Career Objective": "Highly motivated Architect with a passion for innovative design and a proven track record in preparing Construction Documents and developing Design Solutions using AutoCAD and SketchUp. Seeking to contribute to Shibori Ltd.'s commitment to creative and collaborative design, leveraging strong teamwork and communication skills to deliver exceptional architectural projects."
-  }

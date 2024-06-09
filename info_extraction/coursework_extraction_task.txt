@@ -1,5 +1,0 @@
-This context does not mention coursework details, so I cannot extract the requested data from the provided context.
-
-{
-  "Relevant Coursework (to the Job Description)": []
-}

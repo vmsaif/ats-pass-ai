@@ -1,10 +1,10 @@
 {
   "Personal Information": {
-    "Full Name": "Tahsin Ridwan Pulok",
+    "Full Name": "TAHSIN RIDWAN PULOK",
     "Phone Number": "+880 1785 051566",
     "Email": "tahsin.pulok@gmail.com",
     "LinkedIn": null,
-    "Other Social Media Profiles": "[sketchfab.com/tahsinpulok](sketchfab.com/tahsinpulok),\n[viewbug.com/member/tahsinpulok](viewbug.com/member/tahsinpulok)",
+    "Other Social Media Profiles": null,
     "Personal Website": null,
     "Portfolio": null,
     "GitHub": null,
