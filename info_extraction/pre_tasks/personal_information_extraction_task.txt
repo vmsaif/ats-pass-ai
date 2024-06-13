@@ -8,8 +8,8 @@
     "Personal Website": null,
     "Portfolio": null,
     "GitHub": null,
-    "Address": "Zigatola, Dhanmondi, Dhaka- 1209.",
-    "City": null,
+    "Address": "Zigatola, Dhanmondi, Dhaka- 1209",
+    "City": "Dhaka",
     "State": null,
     "Zip Code": null,
     "Country": null

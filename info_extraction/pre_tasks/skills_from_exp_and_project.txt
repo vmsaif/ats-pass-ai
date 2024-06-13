@@ -1,216 +1,178 @@
 {
-  "Skills List": {
-    "Technologies": [
-      {
-        "Name": "Autodesk AutoCAD",
-        "field": [
-          "Architecture Software",
-          "Computer-aided Design (CAD)"
-        ]
-      },
-      {
-        "Name": "SketchUP",
-        "field": [
-          "3D Modeling Software",
-          "Architecture Software"
-        ]
-      },
-      {
-        "Name": "Autodesk 3DS Max",
-        "field": [
-          "3D Modeling Software",
-          "Animation Software"
-        ]
-      },
-      {
-        "Name": "Rhino",
-        "field": [
-          "3D Modeling Software",
-          "Computer-aided Design (CAD)"
-        ]
-      },
-      {
-        "Name": "Autodesk Revit",
-        "field": [
-          "Architecture Software",
-          "Building Information Modeling (BIM)"
-        ]
-      },
-      {
-        "Name": "Adobe Photoshop",
-        "field": [
-          "Image Editing Software",
-          "Graphic Design Software"
-        ]
-      },
-      {
-        "Name": "Adobe Illustrator",
-        "field": [
-          "Vector Graphics Software",
-          "Graphic Design Software"
-        ]
-      },
-      {
-        "Name": "CorelDraw",
-        "field": [
-          "Vector Graphics Software",
-          "Graphic Design Software"
-        ]
-      },
-      {
-        "Name": "Microsoft Office",
-        "field": [
-          "Office Suite",
-          "Productivity Software"
-        ]
-      },
-      {
-        "Name": "V-Ray",
-        "field": [
-          "Rendering Software"
-        ]
-      },
-      {
-        "Name": "Enscape",
-        "field": [
-          "Rendering Software"
-        ]
-      },
-      {
-        "Name": "Lumion",
-        "field": [
-          "Rendering Software"
-        ]
-      },
-      {
-        "Name": "Twinmotion",
-        "field": [
-          "Rendering Software"
-        ]
-      }
-    ],
-    "Frameworks": [],
-    "Skills": [
-      {
-        "Name": "Preparation of architectural drawings",
-        "field": [
-          "Architecture Skills",
-          "Construction Management"
-        ]
-      },
-      {
-        "Name": "Creating computer-generated 3D models and rendering",
-        "field": [
-          "3D Modeling",
-          "Rendering Techniques"
-        ]
-      },
-      {
-        "Name": "Monitoring project progress and reporting errors",
-        "field": [
-          "Project Management",
-          "Construction Management"
-        ]
-      },
-      {
-        "Name": "Preparing technical and detailed drawings",
-        "field": [
-          "Architecture Skills",
-          "Construction Management"
-        ]
-      },
-      {
-        "Name": "Preparing 3D models for necessary representation and implementation",
-        "field": [
-          "3D Modeling",
-          "Architecture Skills"
-        ]
-      },
-      {
-        "Name": "Preparing graphical presentation for technical validation",
-        "field": [
-          "Presentation Skills",
-          "Technical Communication"
-        ]
-      },
-      {
-        "Name": "Preparing a 3D model of the architecture and landscape of the project",
-        "field": [
-          "3D Modeling",
-          "Architecture Skills"
-        ]
-      },
-      {
-        "Name": "Preparing 2D renders and 3D animations",
-        "field": [
-          "Rendering Techniques",
-          "Animation Techniques"
-        ]
-      },
-      {
-        "Name": "Preparing working drawings for residential, commercial and interior projects",
-        "field": [
-          "Architecture Skills",
-          "Construction Management"
-        ]
-      },
-      {
-        "Name": "Arranging RAJUK sheets and layouts",
-        "field": [
-          "Architecture Skills",
-          "Construction Management"
-        ]
-      },
-      {
-        "Name": "Composing construction documents and BOQs",
-        "field": [
-          "Construction Management",
-          "Architecture Skills"
-        ]
-      },
-      {
-        "Name": "Preparing 3D models and renderings for visual representation",
-        "field": [
-          "3D Modeling",
-          "Rendering Techniques"
-        ]
-      },
-      {
-        "Name": "Preparing 3D models and renders",
-        "field": [
-          "3D Modeling",
-          "Rendering Techniques"
-        ]
-      },
-      {
-        "Name": "Taking measurements on-site for technical drawings",
-        "field": [
-          "Architecture Skills",
-          "Construction Management"
-        ]
-      },
-      {
-        "Name": "Preparing detailed drawings for interior projects",
-        "field": [
-          "Architecture Skills",
-          "Interior Design"
-        ]
-      },
-      {
-        "Name": "Designing and preparing banners, backdrops and brochures or Education Expo 2019",
-        "field": [
-          "Graphic Design",
-          "Marketing and Communications"
-        ]
-      },
-      {
-        "Name": "Designing the official logo, social media posts, receipts and other official document formats",
-        "field": [
-          "Graphic Design",
-          "Marketing and Communications"
-        ]
-      }
-    ],
-    "Soft Skills": []
+    "Skills List": {
+      "Technologies": [
+        {
+          "Name": "AutoCAD",
+          "field": [
+            "Computer-aided design (CAD)", 
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "SketchUp",
+          "field": [
+            "3D modeling",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "3DS Max",
+          "field": [
+            "3D modeling",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Revit",
+          "field": [
+            "Building Information Modeling (BIM)",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "V-Ray",
+          "field": [
+            "3D rendering",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Enscape",
+          "field": [
+            "3D rendering",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Photoshop",
+          "field": [
+            "Image editing",
+            "Graphic design"
+          ]
+        },
+        {
+          "Name": "Illustrator",
+          "field": [
+            "Vector graphics",
+            "Graphic design"
+          ]
+        }
+      ],
+      "Frameworks": [],
+      "Skills": [
+        {
+          "Name": "Preparation of preliminary and detailed architectural drawings",
+          "field": [
+            "Architectural design",
+            "Drafting"
+          ]
+        },
+        {
+          "Name": "Creating computer-generated 3D models and rendering",
+          "field": [
+            "3D modeling",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Monitoring project progress and reporting errors",
+          "field": [
+            "Project management",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Prepared technical and detailed drawings.",
+          "field": [
+            "Architectural design",
+            "Drafting"
+          ]
+        },
+        {
+          "Name": "Prepared 3D models for necessary representation and implementation.",
+          "field": [
+            "3D modeling",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Prepared graphical presentation for technical validation",
+          "field": [
+            "Presentation",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Prepared a 3D model of the architecture and landscape of the project.",
+          "field": [
+            "3D modeling",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Prepared 2D renders and 3D animations",
+          "field": [
+            "3D rendering",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Prepared working drawings for residential, commercial and interior projects.",
+          "field": [
+            "Architectural design",
+            "Drafting"
+          ]
+        },
+        {
+          "Name": "Arranged RAJUK sheets and layouts.",
+          "field": [
+            "Architectural design",
+            "Drafting"
+          ]
+        },
+        {
+          "Name": "Composed construction documents and BOQs",
+          "field": [
+            "Architectural design",
+            "Document preparation"
+          ]
+        },
+        {
+          "Name": "Prepared 3D models and renders.",
+          "field": [
+            "3D modeling",
+            "Architectural design"
+          ]
+        },
+        {
+          "Name": "Took measurements on-site for technical drawings.",
+          "field": [
+            "Architectural design",
+            "Surveying"
+          ]
+        },
+        {
+          "Name": "Prepared detailed drawings for interior projects.",
+          "field": [
+            "Architectural design",
+            "Drafting"
+          ]
+        },
+        {
+          "Name": "Designed and prepared banners, backdrops and brochures or Education Expo 2019.",
+          "field": [
+            "Graphic design",
+            "Marketing"
+          ]
+        },
+        {
+          "Name": "Designed the official logo, social media posts, receipts and other official document formats.",
+          "field": [
+            "Graphic design",
+            "Marketing"
+          ]
+        }
+      ],
+      "Soft Skills": []
+    }
   }
-}

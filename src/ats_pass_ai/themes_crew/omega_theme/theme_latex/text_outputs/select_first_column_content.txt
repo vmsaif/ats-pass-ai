@@ -1,0 +1,66 @@
+```json
+{
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "degree": "Bachelor of Architecture (B.Arch)",
+          "major": null,
+          "university": "North South University",
+          "university_location": null,
+          "graduation_date": "Jan 2021",
+          "gpa": "2.7/4.0 (82%)",
+          "honors_distinctions": null
+        },
+        {
+          "degree": "Higher School Certificate (H.S.C)",
+          "major": "Science",
+          "university": "Ideal College",
+          "university_location": null,
+          "graduation_date": "Jun 2014",
+          "gpa": "4.8/5.0",
+          "honors_distinctions": null
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Shaila Joarder",
+          "position": "Associate Professor",
+          "company": "Department of Architecture, North South University",
+          "contact_information": "shaila.joarder@northsouth.edu",
+          "relationship": null
+        },
+        {
+          "name": "Fariha Yasmin Faruque",
+          "position": "Architectural Designer",
+          "company": "ProWise Engineering Inc.",
+          "contact_information": "fariha.faruque@prowise.ca",
+          "relationship": null
+        }
+      ]
+    }
+  ],
+  "omitted_sections": [
+    {
+      "section": "Volunteer Work",
+      "reason": "Limited relevance to job requirements."
+    },
+    {
+      "section": "Awards and Recognitions",
+      "reason": "Limited relevance to job requirements."
+    },
+    {
+      "section": "Personal Traits and Interests",
+      "reason": "Limited relevance to job requirements."
+    },
+    {
+      "section": "Miscellaneous",
+      "reason": "No relevant information for job application."
+    }
+  ]
+}
+```

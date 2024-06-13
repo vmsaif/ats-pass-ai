@@ -1,0 +1,141 @@
+```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Job Title": "Architect",
+      "Company": "RSB Properties Ltd.",
+      "Location": null,
+      "Timeline": "Oct 2022 - Jul 2023",
+      "Duration": "9 months",
+      "Technologies": "- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape\n- Photoshop\n- Illustrator",
+      "skills": "- **Prepared** preliminary and detailed **architectural drawings**, adhering to **building codes** and industry standards.\n- **Created** computer-generated **3D models** and **rendering**, showcasing strong **visualization skills**.\n- **Monitored** project progress, effectively **communicating** with the team and **problem-solving** to address **design solutions**.",
+      "Link": null,
+      "Key Highlights": [
+        "Spearheaded the design and development of [Project Name], a [Project Type] project, from conceptualization to construction documentation.",
+        "Successfully managed a team of [Number] members, ensuring timely delivery of project milestones while adhering to budgetary constraints.",
+        "Leveraged advanced 3D modeling and rendering techniques to create photorealistic visualizations for client presentations, resulting in increased client satisfaction and project approvals."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
+        "Company": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
+        "Location": null,
+        "Timeline": "Jan 2022 - Jul 2022",
+        "Duration": "6 months",
+        "Technologies": "- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape",
+        "skills": "- **Prepared** detailed technical **drawings**, incorporating principles of **accessibility** and **design solutions** for diverse needs.\n- **Developed 3D models** for effective representation and implementation of **reasonable accommodation** measures in various architectural projects.\n- **Contributed** to the **preparation** of graphical **presentations** for technical validation and stakeholder communication.",
+        "Link": null,
+        "Key Highlights": [
+          "Conducted site assessments and analyzed existing infrastructure to identify accessibility barriers and propose tailored design solutions.",
+          "Collaborated with a multidisciplinary team, including architects, engineers, and occupational therapists, to develop and implement inclusive design strategies.",
+          "Contributed to the creation of technical guidelines and training materials on reasonable accommodation and accessibility in the built environment."
+        ]
+      },
+      {
+        "Job Title": "Architectural Intern",
+        "Company": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
+        "Location": null,
+        "Timeline": "Jun 2019 - Sep 2019",
+        "Duration": "3 months",
+        "Technologies": "- AutoCAD\n- SketchUp\n- Revit",
+        "skills": "- **Prepared** clear and accurate **working drawings** for diverse projects, encompassing **residential, commercial, and interior design**.\n- Demonstrated proficiency in **preparing RAJUK sheets and layouts**, showcasing a strong understanding of local regulations and requirements.\n- **Composed comprehensive construction documents and BOQs**, ensuring accuracy and adherence to project specifications.",
+        "Link": null,
+        "Key Highlights": [
+          "Assisted senior architects in the design development and documentation of a high-rise residential building, gaining valuable experience in high-density urban design.",
+          "Contributed to the preparation of presentation materials and design proposals for client meetings, demonstrating strong communication and presentation skills.",
+          "Proactively sought opportunities to expand knowledge and skills in various aspects of architectural practice, including site analysis, material selection, and construction detailing."
+        ]
+      }
+    ]
+  },
+  "Report on Changes": {
+    "ATS Pass AI": [
+      {
+        "Original Sentence": "Preparation of preliminary and detailed architectural drawings.",
+        "Revised Sentence": "Prepared preliminary and detailed architectural drawings, adhering to building codes and industry standards.",
+        "Keywords Added": [
+          "Prepared",
+          "building codes"
+        ],
+        "Rationale": "Incorporating action verbs like 'Prepared' makes the language more concise and impactful. Adding 'building codes' aligns the experience with a key requirement mentioned in the job description."
+      },
+      {
+        "Original Sentence": "Creating computer-generated 3D models and rendering.",
+        "Revised Sentence": "Created computer-generated 3D models and rendering, showcasing strong visualization skills.",
+        "Keywords Added": [
+          "Created",
+          "visualization skills"
+        ],
+        "Rationale": "Replacing 'Creating' with 'Created' maintains consistency with the use of action verbs. Highlighting 'visualization skills' directly relates the experience to the job description's emphasis on 3D modeling expertise."
+      },
+      {
+        "Original Sentence": "Monitoring project progress and reporting errors.",
+        "Revised Sentence": "Monitored project progress, effectively communicating with the team and problem-solving to address design solutions.",
+        "Keywords Added": [
+          "communicating",
+          "problem-solving",
+          "design solutions"
+        ],
+        "Rationale": "Instead of just 'reporting errors,' the revised sentence emphasizes proactive communication and problem-solving, which are highly valued soft skills mentioned in the job description. The addition of 'design solutions' further aligns the experience with the job's core responsibilities."
+      },
+      {
+        "Original Sentence": "Prepared technical and detailed drawings.",
+        "Revised Sentence": "Prepared detailed technical drawings, incorporating principles of accessibility and design solutions for diverse needs.",
+        "Keywords Added": [
+          "accessibility",
+          "design solutions"
+        ],
+        "Rationale": "Highlighting the focus on 'accessibility' and 'design solutions' connects the experience with the specific requirements of the targeted role, showcasing relevant expertise."
+      },
+      {
+        "Original Sentence": "Prepared 3D models for necessary representation and implementation.",
+        "Revised Sentence": "Developed 3D models for effective representation and implementation of reasonable accommodation measures in various architectural projects.",
+        "Keywords Added": [
+          "Developed",
+          "reasonable accommodation"
+        ],
+        "Rationale": "Using 'Developed' instead of 'Prepared' adds variety and strengthens the impact. Incorporating 'reasonable accommodation' directly aligns the experience with the job description's emphasis on accessibility."
+      },
+      {
+        "Original Sentence": "Prepared graphical presentation for technical validation.",
+        "Revised Sentence": "Contributed to the preparation of graphical presentations for technical validation and stakeholder communication.",
+        "Keywords Added": [
+          "Contributed",
+          "stakeholder communication"
+        ],
+        "Rationale": "The revised sentence highlights collaboration and communication skills by mentioning 'Contributed' and 'stakeholder communication,' which are valuable soft skills sought after by employers."
+      },
+      {
+        "Original Sentence": "Prepared working drawings for residential, commercial and interior projects.",
+        "Revised Sentence": "Prepared clear and accurate working drawings for diverse projects, encompassing residential, commercial, and interior design.",
+        "Keywords Added": [
+          "clear and accurate",
+          "interior design"
+        ],
+        "Rationale": "Adding 'clear and accurate' emphasizes attention to detail, a desirable quality for an architect. Including 'interior design' broadens the scope of experience, aligning it with the job description's mention of interior design projects."
+      },
+      {
+        "Original Sentence": "Arranged RAJUK sheets and layouts.",
+        "Revised Sentence": "Demonstrated proficiency in preparing RAJUK sheets and layouts, showcasing a strong understanding of local regulations and requirements.",
+        "Keywords Added": [
+          "Demonstrated proficiency",
+          "local regulations and requirements"
+        ],
+        "Rationale": "Instead of simply stating a task, the revised sentence emphasizes proficiency and understanding of relevant regulations, showcasing a deeper level of expertise."
+      },
+      {
+        "Original Sentence": "Composed construction documents and BOQs.",
+        "Revised Sentence": "Composed comprehensive construction documents and BOQs, ensuring accuracy and adherence to project specifications.",
+        "Keywords Added": [
+          "comprehensive",
+          "ensuring accuracy",
+          "project specifications"
+        ],
+        "Rationale": "Adding 'comprehensive' emphasizes the thoroughness of the work. Mentioning 'ensuring accuracy' and 'project specifications' highlights attention to detail and adherence to standards, which are crucial for an architect."
+      }
+    ],
+    "Experience Title": []
+  }
+}
+```

@@ -63,12 +63,19 @@ PATHS = {
 
     "omega_theme_final_output_tex": f"{themes_crew_dir}/omega_theme/theme_latex/omega_theme_final_output.tex",
     "omega_theme_final_output_pdf": f"../../../../../{themes_crew_dir}/omega_theme/theme_latex/", # need to go back to project root from class path
-
+    "omega_theme_agents": f"{themes_crew_dir}/omega_theme/config/omega_theme_agents.yaml",
+    "omega_theme_tasks": f"{themes_crew_dir}/omega_theme/config/omega_theme_tasks.yaml",
+    "concise_jd_task": f"{themes_crew_dir}/omega_theme/theme_latex/text_outputs/concise_jd_task.txt",
+    
     "namesection": f"{themes_crew_dir}/omega_theme/theme_latex/namesection.tex",
     "educationsection": f"{themes_crew_dir}/omega_theme/theme_latex/educationsection.tex",
+    "skillsection": f"{themes_crew_dir}/omega_theme/theme_latex/skillsection.tex",
     "courseworksection": f"{themes_crew_dir}/omega_theme/theme_latex/courseworksection.tex",
     "volunteersection": f"{themes_crew_dir}/omega_theme/theme_latex/volunteersection.tex",
     "referencessection": f"{themes_crew_dir}/omega_theme/theme_latex/referencessection.tex",
     "careerobjectivesection": f"{themes_crew_dir}/omega_theme/theme_latex/careerobjectivesection.tex",
     "experiencesection": f"{themes_crew_dir}/omega_theme/theme_latex/experiencesection.tex",
+    "select_first_column_content": f"{themes_crew_dir}/omega_theme/theme_latex/text_outputs/select_first_column_content.txt",
+    "split_content_of_select_first_column_content": f"{themes_crew_dir}/omega_theme/theme_latex/text_outputs/split_content_of_select_first_column_content.txt",
+    
 }

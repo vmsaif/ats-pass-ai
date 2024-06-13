@@ -1,0 +1,68 @@
+```json
+{
+  "selected_experiences": {
+    "Most Recent Experience": [
+      "Work: {
+      'Job Title': 'Architect',
+      'Company Name': 'RSB Properties Ltd.',
+      'Timeline': 'Oct 2022 - Jul 2023',
+      'Technologies, frameworks, and tools Used': '- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape\n- Photoshop\n- Illustrator',
+      'Skills': '- Preparation of preliminary and detailed architectural drawings.\n- Creating computer-generated 3D models and rendering.\n- Monitoring project progress and reporting errors.'
+      }"
+    ],
+    "Work Experience": [
+      "{
+      'Job Title': 'Technical Trainee on Reasonable Accommodation and Accessibility',
+      'Company Name': 'Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)',
+      'Timeline': 'Jan 2022 - Jul 2022',
+      'Technologies, frameworks, and tools Used': '- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape',
+      'Skills': '- Prepared technical and detailed drawings.\n- Prepared 3D models for necessary representation and implementation.\n- Prepared graphical presentation for technical validation.'
+      }",
+      "{
+      'Job Title': 'Architectural Intern',
+      'Company Name': 'Tania Karim, Nurur Rahman Khan and Associates (TKNRK)',
+      'Timeline': 'Jun 2019 - Sep 2019',
+      'Technologies, frameworks, and tools Used': '- AutoCAD\n- SketchUp\n- Revit',
+      'Skills': '- Prepared working drawings for residential, commercial and interior projects.\n- Arranged RAJUK sheets and layouts.\n- Composed construction documents and BOQs.'
+      }"
+    ],
+    "Project Experience": []
+  }
+}
+```
+```json
+{
+  "reason for choosing, How it is relevant to the job": [
+    {
+      "title": "Architect at RSB Properties Ltd.",
+      "reason": "This is the most recent experience and showcases the applicant's direct experience in architectural design, 3D modeling, and project monitoring – all essential skills highlighted in the job description."
+    },
+    {
+      "title": "Technical Trainee on Reasonable Accommodation and Accessibility at Humanity & Inclusion",
+      "reason": "This experience demonstrates the applicant's proficiency in using relevant software (AutoCAD, SketchUp, Revit) for technical drawings and 3D modeling, aligning with the job description's emphasis on technical skills."
+    },
+    {
+      "title": "Architectural Intern at Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
+      "reason": "This experience highlights the applicant's experience in preparing construction documents and BOQs, indicating a practical understanding of the architectural workflow and project documentation – a crucial aspect of the advertised role."
+    }
+  ],
+  "rejected_experiences": [
+    {
+      "title": "Project Architect at Integrated Design",
+      "reason": "While seemingly relevant, this project experience overlaps significantly with the 'Visualization of BSRM Tunnel Service Area' project, and the provided details are less comprehensive than the chosen work experiences."
+    },
+    {
+      "title": "Junior Designer at Simple Interiors",
+      "reason": "This experience, although involving 3D modeling and technical drawings, primarily focuses on interior design, which may not be as directly relevant to the broader architectural role offered by Shibori Ltd."
+    },
+    {
+      "title": "Graphic Designer at UniAssist Global Education",
+      "reason": "This experience, while showcasing design skills, is heavily focused on graphic design and lacks direct relevance to the architectural skills and software emphasized in the job description."
+    },
+    {
+      "title": "Visualization of BSRM Tunnel Service Area Project",
+      "reason": "This project, while highlighting 3D modeling and visualization skills, is already represented within the 'Project Architect' work experience at Integrated Design and doesn't offer additional unique value."
+    }
+  ]
+}
+```

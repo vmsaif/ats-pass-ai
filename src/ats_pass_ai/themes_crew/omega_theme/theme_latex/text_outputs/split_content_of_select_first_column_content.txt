@@ -1,0 +1,40 @@
+{
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "degree": "Bachelor of Architecture (B.Arch)",
+          "major": null,
+          "university": "North South University",
+          "graduation_date": "Jan 2021",
+          "gpa": "2.7/4.0 (82%)"
+        },
+        {
+          "degree": "Higher School Certificate (H.S.C)",
+          "major": "Science",
+          "university": "Ideal College",
+          "graduation_date": "Jun 2014",
+          "gpa": "4.8/5.0"
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Shaila Joarder",
+          "position": "Associate Professor",
+          "company": "Department of Architecture, North South University",
+          "contact_information": "shaila.joarder@northsouth.edu"
+        },
+        {
+          "name": "Fariha Yasmin Faruque",
+          "position": "Architectural Designer",
+          "company": "ProWise Engineering Inc.",
+          "contact_information": "fariha.faruque@prowise.ca"
+        }
+      ]
+    }
+  ]
+}

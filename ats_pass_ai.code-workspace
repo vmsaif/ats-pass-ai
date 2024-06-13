@@ -10,6 +10,11 @@
 				"language": "yaml",
 				"scheme": "file",
 				"pattern": "src/ats_pass_ai/config/tasks.yaml"
+			},
+			{
+				"language": "yaml",
+				"scheme": "file",
+				"pattern": "src/ats_pass_ai/themes_crew/omega_theme/config/omega_theme_tasks.yaml"
 			}
 		]
 	}

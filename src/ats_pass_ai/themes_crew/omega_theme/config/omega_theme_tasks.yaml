@@ -5,14 +5,14 @@
 
 namesection:
   description: >
-    Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
+    Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
 
     In the output, 
     - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}.
-    - Then the next line will contain the urls. Use the command \urlstyle{same} to keep the urls in the same style as the text. The line will contain urls upto 2. then \\ to linebreak. Use \href for the urls. The argument of \href should be the url and the text should be the url without the protocol.
-    - The thirdline will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of City, Province.
+    - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol.
+    - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province.
     - Pipeline '|' should be used to separate the data and must not be the last character of the output.
-    - The output should raw latex code and should not be in a code block.
+    - The output should be raw latex code and should not be in a code block.
 
     Example:
     \namesection{Saif}{Mahmud}
@@ -21,20 +21,100 @@ namesection:
       \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
     }
 
-    Here is the information you need and convert them into LaTeX format:
+    Here is the information you need and convert into LaTeX format:
   expected_output: >
+
+concise_jd_task:
+  description: >
+    Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+
+    The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+  expected_output: >
+    A concise summary of the job description, no more than 2000 characters, effectively outlining the main responsibilities and essential qualifications required for the role. This summary should provide enough information to facilitate effective decision-making regarding the inclusion of relevant sections in the applicant's resume.
+
+select_first_column_content:
+  description: >
+    Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with job specifications provided.
+
+    **Applicant's Data Includes**:
+    - Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous
+
+    **Procedure**:
+    1. **Assess Relevance**: Match each section's relevance to the job description.
+    2. **Prioritization**:
+       - Always include at **least one "Reference"** if available. Choose the most relevant ones.
+       - Prioritize recent and impactful achievements and qualifications.
+    3. **Selection Strategy**:
+       - Target sections directly related to job skills and qualifications.
+       - Emphasize Education and Awards for their impact.
+       - Include broader sections like Personal Traits only if they offer significant advantages.
+    4. **Content Limitation**: Choose up to 2 sections and a total of 3 sub-sections, ensuring all fields are complete.
+
+    **Output Expectations**:
+    Generate a JSON object detailing the selected and omitted sections.
+
+    # Provided data:
+    ## Applicant's Information: 
+    {applicant_information}
+
+    ## Job Description Keywords: 
+    Provided in the context.
+    
+  expected_output: >
+    Produce a concise JSON object outlining the chosen sections for the resume's first column. The output should detail the rationale behind each selection, reflecting strategic decisions made based on job relevance.
+
+    {
+      "selected_sections": [
+        {
+          "section": "Education",
+          "sub_sections": [
+            {
+              "institution": "University of Manitoba",
+              "degree": "BSc Major in Computer Science",
+              "graduation_status": "Graduated",
+              "graduation_date": "October 2023"
+            },
+            ...
+          ]
+        },
+        {
+          "section": "References",
+          "sub_sections": [
+            {
+              "name": "Abu Kabir",
+              "position": "Director, IT Service Management",
+              "company": "Microsoft Corporation",
+              "contact_information": "204-298-3693 | Winnipeg, MB"
+            },
+            ...
+          ]
+        }
+      ],
+      "omitted_sections": [
+        {
+          "section": "Personal Traits and Interests",
+          "reason": "Limited relevance to the job requirements."
+        }
+      ]
+    }
+
+split_content_of_select_first_column_content:
+  description: >
+    You are provided with a JSON object from the previous context that contains the "selected_sections" and "omitted_sections". Split the context provided to you at the point "omitted_sections". In your output, you will provide everything before the "omitted_sections" as the final output of the task. Do not change the format of the JSON object.
+  expected_output: >
+    Everything before the "omitted_sections" will be the final output of the task.
 
 educationsection:
   description: >
-    Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be completely empty.
+    Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
 
     In the output,
-    - The first line contains the section name "Education". Use the command \section{Education}.
-    - The next lines contain the education information with the following format:
+    - The first line contains the section named "Education". Use the command \section{Education}.
+    - The next lines contain the educational information in the following format:
       - The first line contains the institution name. Use the command \customTitle{Institution Name}.
       - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
       - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
-      - The next line contains the command \newEntryVSpace to separate the educations. Only use this command if there are multiple educations. Otherwise, do not use this command.
+      - The next line contains the command \newEntryVSpace to separate the education. Only use this command if there are multiple educations. Otherwise, do not use this command.
       - Do not choose more than two educations. Choose the most recent ones.
 
     Example:
@@ -48,12 +128,11 @@ educationsection:
     \sectionsep % use it at the end to separate the sections.
 
     Conditions:
-    - Only generate the \section{Education} if there is at least one element provided. Otherwise, each line the output should be latex comments, starting with '%'.
-      %\section{}
-      %\sectionsep. 
+    - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+      % No education information provided. 
     - Your output should be raw LaTeX code and should not be in a code block.
 
-    Here is the information you need and convert them into LaTeX format:
+    Here is the information you need and convert into LaTeX format:
   expected_output: >
 
 courseworksection:
@@ -62,7 +141,7 @@ courseworksection:
 
     In the output,
     - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}.
-    - The next lines contain the coursework information with the following format:
+    - The next lines contain the coursework information in the following format:
       - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
       - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
       - Use the command \sectionsep at the end to separate the coursework from other sections.
@@ -80,13 +159,49 @@ courseworksection:
     \sectionsep
 
     Conditions:
-    - Only generate the \section{Relevant Courses} if there is at least one element provided. Otherwise, the output should be latex comments, starting with '%'.
-      % \section{}
-      % \sectionsep
+    - If there is no Course information, each line of the output should be latex comments, starting with '%'. 
+      % \section{Relevant Courses}
+      % \sectionsep. 
     - Your output should be raw LaTeX code and should not be in a code block.
 
-    Here is the information you need and convert them into LaTeX format:
+    Here is the information you need and convert into LaTeX format:
   expected_output: >
+
+skillsection:
+  description: >
+    Convert the applicant's skills data into LaTeX format.
+
+    **Instructions**:
+    1. **Section Header**: Begin with the section title using \section{Skills}.
+    2. **Skill Categories**: 
+       - Use \subTitle{} to introduce each skill category.
+       - List skills in each category using \body{}, separating items with \textbullet{}, ensuring each item is concise (1-3 words).
+       - Limit the number of categories to five, focusing on both exact and partial match skills relevant to the job.
+    3. **Formatting**:
+       - Use \skillsVSpace between each category to maintain visual separation.
+       - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+
+    The output should be crafted to fit seamlessly within a professional resume, reflecting the applicant's most pertinent skills in a concise and organized manner.
+
+    Example:
+    \section{Skills}
+    \subTitle{Programming Languages:}
+    \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
+    \skillsVSpace
+
+    \subTitle{AI and Machine Learning:}
+    \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI}
+    \skillsVSpace   
+
+    \subTitle{Soft Skills:}
+    \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork}
+    \sectionsep
+
+    **Conditions**:
+    - Provide raw latex, not in a code block.
+  expected_output: >
+
+
 
 volunteersection:
   description: >
@@ -96,7 +211,7 @@ volunteersection:
 
     - The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`.
     - Each volunteer entry should be structured as follows:
-      - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization names entries.
+      - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries.
       - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
       - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
     - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
@@ -107,7 +222,7 @@ volunteersection:
       - `#` to `\#`
       - `_` to `\_`
 
-    Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be same for all entries.
+    Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
 
     \section{VOLUNTEER}
       \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
@@ -124,17 +239,17 @@ volunteersection:
       % \sectionsep.
     - Your output should be raw LaTeX code without any code block quotes.
 
-    Here is the information you need and convert them into LaTeX format:
+    Here is the information you need and convert into LaTeX format:
   expected_output: >
     No blockquote is needed for the output.
 
 referencessection:
   description: >
-    Extract the references information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+    Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
     In the output,
     - The first line contains the section name "References". Use the command \section{References}.
-    - The next lines contain the references information with the following format:
+    - The next lines contain the reference information in the following format:
       - Use the command \subsection{} for the name of the reference.
       - Use the command \subTitle{} for the position and company of the reference.
       - Use the command \body{} for the contact information of the reference.
@@ -163,18 +278,17 @@ referencessection:
       Do Nothing else. Keep the output empty.
     - Your output should follow latex syntax, no need for any code block quotes.
 
-    Here is the information you need and convert them into LaTeX format:
+    Here is the information you need and convert into LaTeX format:
 
   expected_output: >
     No blockquote is needed for the output.
-
 
 careerobjectivesection:
   description: >
     Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
     In the output,
-    - The first line contains the section name "Career Objective". Use the command \section{Career Objective}.
+    - The first line contains the section named "Career Objective". Use the command \section{Career Objective}.
     - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
     
     Example:
@@ -190,7 +304,7 @@ experiencesection:
     This function takes applicant data as input and extracts the experience information. This information is then formatted into a LaTeX representation.
     Follow this structure for each experience entry:
 
-    \betweenProjectsVSpace  % Use thisat the beginning of each experience entry
+    \betweenProjectsVSpace  % Use this at the beginning of each experience entry
     \experienceTitle{Experience Title} % Replace 'Experience Title' with the actual title (e.g., 'ATS Pass AI', 'Software Developer'). Use this command for work experience, projects, academic work, etc.
     \summaryPoints{| Point 1 | Point 2 | Point 3} % Choose up to 3 concise (1-2 words) points that represent the experience. Don't add a pipeline at the end. 
     \subHeading{Role - Start Date - End Date} % Specify the role and timeframe of the experience.
@@ -224,7 +338,7 @@ experiencesection:
     \summaryPoints{ | Python | Django | React} 
     \subHeading{Software Developer - January 2023 - December 2023}
     \betweenSummaryPointsVSpace
-    Developed and maintained web applications using Django and React, ensuring high performance and user-friendly interfaces.
+    Developed and maintained web applications using Django and React, ensuring high-performance and user-friendly interfaces.
     \vspaceForOtherProject
     \begin{tightemize}
     \item Collaborated with cross-functional teams to design and implement new features, enhancing user experience and functionality.

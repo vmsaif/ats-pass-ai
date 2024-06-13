@@ -1,7 +1,8 @@
 {
   "Personal Traits and Interests": {
     "Strengths": "- Proficient in a diverse array of digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.\n- Naturally sociable, fostering excellent relationships with colleagues and mentors alike.\n- Well-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.\n- A habitual photographer with an eye for detail and an ability to multitask.\n- Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
-    "Hobbies": null,
-    "Passions": "3D modeling, generative arts, and illustrations"
+    "Hobbies": "- 3D modeling\n- generative arts\n- illustrations\n- reading\n- exploring the latest technologies and visualization products",
+    "Passions": "- design\n- creativity",
+    "Weaknesses": null
   }
 }

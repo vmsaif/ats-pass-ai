@@ -89,26 +89,28 @@ class ResumeCrew:
 			my_tasks.append(self.project_experience_extraction_task())
 			my_tasks.append(self.skills_from_exp_and_project_task())
 			my_tasks.append(self.skills_extraction_task())
-
 			my_tasks.append(self.profile_builder_task())
 
 		# # Either way, these tasks will be executed.
-		# my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
-		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
+		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
-		# my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
-		# my_tasks.append(self.split_context_of_experience_choosing_task())
-		# my_tasks.append(self.gather_info_of_chosen_experiences())
-		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------------------- uses large llm
-		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
+		my_tasks.append(self.split_context_of_experience_choosing_task())
+		my_tasks.append(self.gather_info_of_chosen_experiences())
 
-		# my_tasks.append(self.coursework_extraction_task())
-		# my_tasks.append(self.career_objective_task()) 
+		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------- uses large llm
+		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
+		my_tasks.append(self.coursework_extraction_task())
+		my_tasks.append(self.career_objective_task()) 
+
+		# -------------------------------------
 		# my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
 		# my_tasks.append(self.resume_compilation_task())
 		# my_tasks.append(self.latex_resume_generation_task())
 		# my_tasks.append(self.cover_letter_generation_task()) # --------------------------- uses large llm
+		# -------------------------------------
 				
 		# Return the crew
 		return Crew(
@@ -120,7 +122,6 @@ class ResumeCrew:
 			full_output=True,
 			process=Process.sequential,
 			# process=Process.hierarchical,
-			# manager_llm=self.composerLLM,
 			verbose=2,
 			# memory=True,
 			# embedder={
@@ -507,13 +508,14 @@ class ResumeCrew:
 	def ats_friendly_skills_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_skills_task')
-		
 		src_1 = self.load_file(PATHS["jd_keyword_extraction"])
 		task_description = yaml[0].format(src_1 = src_1)
+		
 		expected_output = yaml[1]
 		
-		if(self.debugFlag):
+		if(self.profile_already_created() or self.debugFlag):
 			task_description = task_description + "\n" + self.load_file(PATHS["skills_extraction_task"])
+		
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -557,7 +559,7 @@ class ResumeCrew:
 		task_description = yaml[0].format(jd_keyword = jd_keyword, today_date = today_date)
 
 		# # add the project and work experience data
-		if(self.debugFlag):
+		if(self.profile_already_created() or self.debugFlag):
 			task_description = task_description + "\n" + self.load_file(PATHS["work_experience_extraction_task"]) + "\n" + self.load_file(PATHS["project_experience_extraction_task"])
 
 		expected_output = yaml[1]
@@ -651,6 +653,7 @@ class ResumeCrew:
 
 		if(self.debugFlag):
 			task_description = task_description + "\n" + self.load_file(PATHS["ats_friendly_keywords_into_experiences"])
+
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -669,6 +672,9 @@ class ResumeCrew:
 		task_description = yaml[0].format(job_description = job_description)
 		expected_output = yaml[1]
 
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_skills_task"]) + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
+
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
@@ -678,66 +684,65 @@ class ResumeCrew:
 			output_file=PATHS["career_objective_task"],
 		)
 
-	@task
-	def resume_in_json_task(self):
+	# @task
+	# def resume_in_json_task(self):
 
-		context = []
+	# 	context = []
 
-		# Either way these context is needed to complete the task.
+	# 	# Either way these context is needed to complete the task.
 
-		context.append(self.split_context_of_ats_friendly_skills_task())
-		context.append(self.coursework_extraction_task())
-		context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
-		context.append(self.career_objective_task())
+	# 	context.append(self.split_context_of_ats_friendly_skills_task())
+	# 	context.append(self.coursework_extraction_task())
+	# 	context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+	# 	context.append(self.career_objective_task())
 
-		# Load YAML file
-		yaml = self.yaml_loader('resume_in_json_task')
+	# 	# Load YAML file
+	# 	yaml = self.yaml_loader('resume_in_json_task')
 		
-		# append data to the yaml[0] in new paragraph
-		description = yaml[0]
-		description = description.format(today_date = datetime.date.today().strftime("%B %d, %Y"))
-		expected_output = yaml[1]
+	# 	# append data to the yaml[0] in new paragraph
+	# 	description = yaml[0]
+	# 	description = description.format(today_date = datetime.date.today().strftime("%B %d, %Y"))
+	# 	expected_output = yaml[1]
 
-		if(self.profile_already_created()):
+	# 	if(self.profile_already_created()):
 
-			print("Profile already found. Simply loading the output txt files in the context.")
-			# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
-			description = description + "\n" + self.load_file(PATHS["profile_builder_task"])
-		else :	
-			# need to build profile from scratch
-			# insert the profile_builder_task at the beginning of the context
-			print("Profile not found. Will wait for the profile to be built.")
-			context.insert(0, self.profile_builder_task()) 
+	# 		print("Profile already found. Simply loading the output txt files in the context.")
+	# 		# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
+	# 		description = description + "\n" + self.load_file(PATHS["profile_builder_task"])
+	# 	else :	
+	# 		# need to build profile from scratch
+	# 		# insert the profile_builder_task at the beginning of the context
+	# 		print("Profile not found. Will wait for the profile to be built.")
+	# 		context.insert(0, self.profile_builder_task()) 
 
-		return Task(
-			description = description,
-			expected_output = expected_output,
-			agent = self.resume_in_json_agent(),
-			callback=self.large_token_limiter,
-			context = context,
-			output_file = PATHS["resume_in_json_task"],
-		)
+	# 	return Task(
+	# 		description = description,
+	# 		expected_output = expected_output,
+	# 		agent = self.resume_in_json_agent(),
+	# 		callback=self.large_token_limiter,
+	# 		context = context,
+	# 		output_file = PATHS["resume_in_json_task"],
+	# 	)
 	
-	@task
-	def resume_compilation_task(self):
-		# load the yaml file
-		yaml = self.yaml_loader('resume_compilation_task')
-		description = yaml[0]
-		expected_output = yaml[1]
+	# @task
+	# def resume_compilation_task(self):
+	# 	# load the yaml file
+	# 	yaml = self.yaml_loader('resume_compilation_task')
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = yaml[0] + '\n' + self.load_file(PATHS["resume_in_json_task"])
+	# 	if(self.debugFlag):
+	# 		description = yaml[0] + '\n' + self.load_file(PATHS["resume_in_json_task"])
 
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.resume_compilation_agent(),
-			callback=self.small_token_limiter,
-			# agent=self.generalist_agent(),
-			context=[self.resume_in_json_task()],
-			output_file=PATHS["resume_compilation_task"],
-
-		)
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.resume_compilation_agent(),
+	# 		callback=self.small_token_limiter,
+	# 		# agent=self.generalist_agent(),
+	# 		context=[self.resume_in_json_task()],
+	# 		output_file=PATHS["resume_compilation_task"],
+	# 	)
 	
 	def load_file(self, file_path):
 		"""Load text file"""
@@ -747,7 +752,6 @@ class ResumeCrew:
 		except IOError as e:
 			print(f"Error opening or reading the file {file_path}: {e}")
 			return ""
-
 
 	def load_all_files(self, directory_path) -> str:
 		# Initialize the text
@@ -769,10 +773,14 @@ class ResumeCrew:
 	def yaml_loader(self, task_name):
 		# load the yaml file
 		output = []
-		with open(f'{PATHS["src_root"]}/{self.tasks_config_path}', 'r') as file:
-			yaml_data = yaml.safe_load(file)
-			output.append(yaml_data[task_name]['description'])
-			output.append(yaml_data[task_name]['expected_output'])
+		try:
+			with open(f'{PATHS["src_root"]}/{self.tasks_config_path}', 'r') as file:
+				yaml_data = yaml.safe_load(file)
+				output.append(yaml_data[task_name]['description'])
+				output.append(yaml_data[task_name]['expected_output'])
+		except IOError as e:
+			print(f"Error while loading yaml file: {e}")
+		
 		return output
 	
 	def profile_already_created(self) -> bool:

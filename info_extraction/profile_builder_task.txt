@@ -9,7 +9,7 @@
       "Personal Website": null,
       "Portfolio": null,
       "GitHub": null,
-      "Address": "Zigatola, Dhanmondi, Dhaka- 1209.",
+      "Address": "Zigatola, Dhanmondi, Dhaka- 1209",
       "City": "Dhaka",
       "State": null,
       "Zip Code": null,
@@ -47,19 +47,22 @@
     "Volunteer Work": [
       {
         "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
-        "Role": "Designer and builder | Supervisor: Fawaz Rob",
+        "Name length in characters": 17,
+        "Role": "Designer and builder",
         "Responsibilities": "Designed and had hands-on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
         "Timeline": "January 2019"
       },
       {
         "Organization Name": "Department of Architecture, North South University",
-        "Role": "Volunteer | Supervisor: Ismat Hossain",
+        "Name length in characters": 44,
+        "Role": "Volunteer",
         "Responsibilities": "Volunteered as an organizer and distributed invitations to other schools.",
         "Timeline": "March 2019"
       },
       {
         "Organization Name": "Department of Architecture, North South University",
-        "Role": "Volunteer | Supervisor: Ishraq Zahra Khan",
+        "Name length in characters": 44,
+        "Role": "Volunteer",
         "Responsibilities": "Volunteered as an organizer.",
         "Timeline": "June 2015"
       }
@@ -72,22 +75,22 @@
         "Reason": "Excellent Result in S.S.C"
       },
       {
-        "Award Name": "My essay on “The Evolution of Architectural Representation” of the course “Independent Study (ARC 492)",
+        "Award Name": "Publication of essay",
         "Awarding Organization": "North South University Publication",
-        "Date": "NA",
-        "Reason": "My essay got selected for publishing in the book, ‘Para-architectural Musings’"
+        "Date": "N/A",
+        "Reason": "Essay on “The Evolution of Architectural Representation” got selected for publishing in the book, ‘Para-architectural Musings’"
       },
       {
-        "Award Name": "Certificate on Course of ‘Web Design’ for College Students",
-        "Awarding Organization": "Eastern University",
+        "Award Name": "Certificate on Course of ‘Web Design’",
+        "Awarding Organization": "Eastern University (2014)",
         "Date": "2014",
-        "Reason": "NA"
+        "Reason": "Course of ‘Web Design’ for College Students"
       },
       {
         "Award Name": "Certificates on Multiple online courses",
         "Awarding Organization": "Udemy",
-        "Date": "NA",
-        "Reason": "NA"
+        "Date": "N/A",
+        "Reason": "Multiple online courses"
       }
     ],
     "References": [
@@ -95,34 +98,30 @@
         "Name": "Shaila Joarder",
         "Position": "Associate Professor",
         "Company": "Department of Architecture, North South University",
-        "Contact Information": "Email: shaila.joarder@northsouth.edu",
-        "Relationship": "Professional"
+        "Contact Information": "shaila.joarder@northsouth.edu",
+        "Relationship": null
       },
       {
         "Name": "Fariha Yasmin Faruque",
         "Position": "Architectural Designer",
         "Company": "ProWise Engineering Inc.",
-        "Contact Information": "Email: fariha.faruque@prowise.ca",
-        "Relationship": "Professional"
+        "Contact Information": "fariha.faruque@prowise.ca",
+        "Relationship": null
       },
       {
         "Name": "Krishno Sen",
         "Position": "Senior Analysts",
         "Company": "Leaving No One Behind (LNOB), BRAC Bangladesh",
-        "Contact Information": "Email: krishno.sen@brac.net",
-        "Relationship": "Professional"
+        "Contact Information": "krishno.sen@brac.net",
+        "Relationship": null
       }
     ],
     "Personal Traits and Interests": {
-      "Strengths": "- Proficient in a diverse array of digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.\n- Naturally sociable, fostering excellent relationships with colleagues and mentors alike.\n- Well-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.\n- A habitual photographer with an eye for detail and an ability to multitask.\n- Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
-      "Hobbies": null,
-      "Passions": "3D modeling, generative arts, and illustrations"
+      "Strengths": "* Proficient in a diverse array of digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.\n* Naturally sociable, fostering excellent relationships with colleagues and mentors alike.\n* Well-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.\n* A habitual photographer with an eye for detail and an ability to multitask.\n* Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
+      "Weaknesses": null,
+      "Hobbies": "* 3D modeling\n* generative arts\n* illustrations\n* reading\n* exploring the latest technologies and visualization products",
+      "Passions": "* design\n* creativity"
     },
-    "Miscellaneous": {
-      "Languages Spoken": null,
-      "Certifications": null,
-      "Professional Affiliations": null,
-      "Other Relevant Details": null
-    }
+    "Miscellaneous": {}
   }
 }

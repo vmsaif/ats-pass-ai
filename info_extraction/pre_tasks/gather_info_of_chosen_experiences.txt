@@ -1,70 +1,45 @@
 {
-  "Work Experience": [
-    {
+  "selected_experiences": {
+    "Most Recent Experience": [
+      {
       "Job Title": "Architect",
       "Company Name": "RSB Properties Ltd.",
       "Timeline": "Oct 2022 - Jul 2023",
+      "Duration": "9 months",
       "Technologies, frameworks, and tools Used": "- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape\n- Photoshop\n- Illustrator",
       "Skills": "- Preparation of preliminary and detailed architectural drawings.\n- Creating computer-generated 3D models and rendering.\n- Monitoring project progress and reporting errors.",
       "Link": null,
       "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
-    },
-    {
+      }
+    ],
+    "Work Experience": [
+      {
       "Job Title": "Technical Trainee on Reasonable Accommodation and Accessibility",
       "Company Name": "Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)",
       "Timeline": "Jan 2022 - Jul 2022",
+      "Duration": "6 months",
       "Technologies, frameworks, and tools Used": "- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape",
       "Skills": "- Prepared technical and detailed drawings.\n- Prepared 3D models for necessary representation and implementation.\n- Prepared graphical presentation for technical validation.",
       "Link": null,
       "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
-    },
-    {
-      "Job Title": "Project Architect",
-      "Company Name": "Integrated Design (Project: Visualization of BSRM Tunnel Service Area)",
-      "Timeline": "Sep 2021 - Dec 2021",
-      "Technologies, frameworks, and tools Used": "- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape\n- Photoshop\n- Illustrator",
-      "Skills": "- Prepared a 3D model of the architecture and landscape of the project.\n- Prepared 2D renders and 3D animations.",
-      "Link": null,
-      "Key Highlights": [],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
+      },
+      {
       "Job Title": "Architectural Intern",
       "Company Name": "Tania Karim, Nurur Rahman Khan and Associates (TKNRK)",
       "Timeline": "Jun 2019 - Sep 2019",
+      "Duration": "3 months",
       "Technologies, frameworks, and tools Used": "- AutoCAD\n- SketchUp\n- Revit",
       "Skills": "- Prepared working drawings for residential, commercial and interior projects.\n- Arranged RAJUK sheets and layouts.\n- Composed construction documents and BOQs.",
       "Link": null,
       "Key Highlights": [],
       "Team size": null,
       "Outcomes": null
-    },
-    {
-      "Job Title": "Junior Designer",
-      "Company Name": "Simple Interiors",
-      "Timeline": "Apr 2017 - Dec 2017",
-      "Technologies, frameworks, and tools Used": "- AutoCAD\n- SketchUp\n- Revit\n- Photoshop\n- Illustrator",
-      "Skills": "- Prepared 3D models and renders.\n- Took measurements on-site for technical drawings.\n- Prepared detailed drawings for interior projects.",
-      "Link": null,
-      "Key Highlights": [],
-      "Team size": null,
-      "Outcomes": null
-    },
-    {
-      "Job Title": "Graphic Designer",
-      "Company Name": "UniAssist Global Education",
-      "Timeline": "Sep 2019 - Dec 2019",
-      "Technologies, frameworks, and tools Used": "- Photoshop\n- Illustrator",
-      "Skills": "- Designed and prepared banners, backdrops and brochures or Education Expo 2019.\n- Designed the official logo, social media posts, receipts and other official document formats.",
-      "Link": null,
-      "Key Highlights": [],
-      "Team size": null,
-      "Outcomes": null
-    }
-  ]
+      }
+    ],
+    "Project Experience": []
+  }
 }

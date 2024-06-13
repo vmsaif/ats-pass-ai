@@ -23,7 +23,6 @@ applicant_info_orgainzed_file_path = PATHS["applicant_info_organized"]
 jd_extracted_keywords_file_path = PATHS["jd_keyword_extraction"]
 
 def run():
-
     with Timer() as total_time:
         # This will not run if there is already an organized file,
         organize_system_instruction = dedent("""
@@ -137,9 +136,9 @@ def run():
         with Timer() as t:         
             try:
                 # Delete the applicant profile files but not the folder To start fresh
-                RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+                # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
                 crew = ResumeCrew().crew()
-                crew.kickoff()
+                # crew.kickoff()
             except Exception as e:
                 print(f"Error: {e}")
                 # exit the program
@@ -149,11 +148,11 @@ def run():
 
         crew_run_time = t.interval
     
-        # with Timer() as t:
-        #     omega_theme_crew = OmegaThemeCrew().crew()
-        #     # omega_theme_crew.kickoff()
-        #     # compile_latex(PATHS["omega_theme_final_output_tex"], PATHS["omega_theme_final_output_pdf"])
-        # latex_generation_time = t.interval
+        with Timer() as t:
+            omega_theme_crew = OmegaThemeCrew().crew()
+            omega_theme_crew.kickoff()
+            compile_latex(PATHS["omega_theme_final_output_tex"], PATHS["omega_theme_final_output_pdf"])
+        latex_generation_time = t.interval
 
     program_run_time = total_time.interval
     

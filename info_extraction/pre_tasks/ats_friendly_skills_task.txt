@@ -1,0 +1,69 @@
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Software": [
+        "AutoCAD",
+        "Revit",
+        "SketchUp",
+        "Microsoft Office"
+      ],
+      "Hard Skills": [
+        "Construction Documents",
+        "3D Visualization",
+        "Presentation Skills",
+        "Time Management"
+      ],
+      "Soft Skills": [
+        "Teamwork",
+        "Communication Skills"
+      ]
+    },
+    "partial_match_with_overlapping_skills": {
+      "Software": {
+        "Skill Name": "3ds Max",
+        "Relevance": "Related to 3D Visualization software mentioned in the job description."
+      },
+      "Hard Skills": {
+        "Skill Name": "Creating computer-generated 3D models and rendering",
+        "Relevance": "This skill aligns with the '3D Visualization' requirement outlined in the job description."
+      },
+      "Soft Skills": {
+        "Skill Name": "Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
+        "Relevance": "This highlights 'Communication Skills' and 'Teamwork' which are required for the position."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Hard Skills": [
+        "Bill of Quantities (BOQ)",
+        "Materials Selection"
+      ],
+      "Industry Terms": [
+        "Architecture",
+        "Interior Design",
+        "Construction",
+        "Design Solutions",
+        "Building Codes",
+        "Sustainable Design",
+        "Project Management",
+        "Project Implementation",
+        "Consultants",
+        "Contractors"
+      ],
+      "Company Values": [
+        "Creative",
+        "Innovative",
+        "Collaborative",
+        "Fast-Paced",
+        "Passion",
+        "Professional Development",
+        "Growth",
+        "Challenging",
+        "Rewarding",
+        "Diversity",
+        "Inclusion"
+      ]
+    }
+  }
+}
+```

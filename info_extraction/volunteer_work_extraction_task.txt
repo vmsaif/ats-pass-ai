@@ -2,22 +2,22 @@
   "Volunteer Work": [
     {
       "Organization Name": "Safe Bangladesh & Ar. Fawaz Rob",
-      "Name length in characters": 31,
-      "Role": "Designer and builder | Supervisor: Fawaz Rob",
+      "Name length in characters": 17,
+      "Role": "Designer and builder",
       "Responsibilities": "Designed and had hands-on experience on how to properly build a small toilet from scratch by using sustainable local materials.",
       "Timeline": "January 2019"
     },
     {
       "Organization Name": "Department of Architecture, North South University",
-      "Name length in characters": 47,
-      "Role": "Volunteer | Supervisor: Ismat Hossain",
+      "Name length in characters": 44,
+      "Role": "Volunteer",
       "Responsibilities": "Volunteered as an organizer and distributed invitations to other schools.",
       "Timeline": "March 2019"
     },
     {
       "Organization Name": "Department of Architecture, North South University",
-      "Name length in characters": 47,
-      "Role": "Volunteer | Supervisor: Ishraq Zahra Khan",
+      "Name length in characters": 44,
+      "Role": "Volunteer",
       "Responsibilities": "Volunteered as an organizer.",
       "Timeline": "June 2015"
     }
