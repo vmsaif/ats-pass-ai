@@ -1,37 +1,49 @@
-Shibori Ltd. - Architect Recruitment
+About the job
+Artificial Intelligence Engineer
 
-Shibori Ltd., a leading interior design and architecture firm, is seeking a talented and motivated architect to join our team. We are looking for someone with a passion for design, strong technical skills, and the ability to work collaboratively in a fast-paced environment.
-Responsibilities:
+About Radical AI:
 
-Develop creative and innovative design solutions for a variety of projects.
-Prepare detailed construction documents, including drawings, specifications, and schedules.
-Coordinate with clients, consultants, and contractors throughout the design and construction process.
-Research and evaluate materials and systems for project implementation.
-Stay up-to-date with the latest trends and technologies in the field.
-Qualifications:
+Radical AI Principles
+We recognize that power is distributed unevenly, and People of Color, Black, Indigenous, Women, Queer, Trans, Gender Non-Conforming, Poor, Dis-abled, and other communities are pushed to the margins. We commit to resisting these interlocking systems of oppression, including Racism, Coloniality, Casteism, Heteropatriarchy, Capitalism, and Ableism. We commit to striving toward collective liberation.1
+We center radical work by communities at the margins.
+We recognize that all technologies rearrange power.
+We are critical of how AI shifts power. In particular, we recognize AI is frequently extractive, exploitative, surveilling, controlling, prescriptive, and reductionist. We recognize AI frequently prevents consent, deliberation, investigation, intervention, resistance, and agency.
+We recognize the privilege of being adjacent to institutions creating technologies. We use this privilege to step up to expose oppressive technologies and to center those harmed, and to step back, ceding power, listening, and co-conspiring when those voices speak.
+We value dreaming up and building human/AI systems that put power in the hands of the people. We recognize this is vulnerable and important work.
+We recognize that reforming harmful AI can reduce harm to some while legitimizing (“ethics-washing”) systems still harming others2. Only by understanding the root of the harm and centering those most impacted can we make these complex tactical decisions, deciding when to minimize harm done by AI and when to call for its abolition3. We recognize that no one has a ‘view from nowhere’4. We practice reflexivity, naming who we are, how who we are influences what we do, and whose perspectives are missing.
 
-Bachelor's or Master's degree in Architecture from an accredited program.
-Strong 3D visualization skills and proficiency in relevant software.
-Good understanding of Bill of Quantities (BOQ) preparation and materials selection.
-At least 1 year of experience in a professional setting, but freshers are encouraged to apply.
-Excellent communication and presentation skills.
-Ability to work independently and as part of a team.
-Strong problem-solving and critical thinking skills.
-Proficiency in Microsoft Office Suite.
-Bonus Qualifications:
+At the Radical AI for Social Good Lab, we’re dedicated to leveraging AI responsibly. Our core mission is to democratize AI technology, making it a catalyst for education, social mobility, and equitable progress across global communities.
+Role Overview:
 
-Experience with sustainable design principles and practices.
-Knowledge of local building codes and regulations.
-Familiarity with project management software.
-Benefits:
+Join our Virtual Internship as an Artificial Intelligence Engineer. This role is a deep dive into the realms of machine learning, deep learning, generative AI, and natural language processing. You will contribute to generative AI projects and enhance your skills in a dynamic, virtual environment.
+Key Responsibilities:
 
-Competitive salary and benefits package.
-Opportunities for professional development and growth.
-Challenging and rewarding work environment.
-Chance to contribute to exciting and innovative projects.
-To Apply:
+Design and develop innovative AI models.
+Analyze and preprocess data for machine learning applications.
+Collaborate with AI teams to enhance algorithms and models.
+Present research findings and engage in critical team discussions.
+Contribute to the development of our AI virtual agents.
+Program Highlights:
 
-Please submit your resume, portfolio, and a cover letter outlining your qualifications and interest in the position to shiboricareer@gmail.com
-Deadline for application: June 10, 2024
+Duration: 3 months, with flexible start dates between March and July 2024.
+Access: Full use of the Radical AI Platform.
+Feedback: Direct feedback from the Radical AI Core Team.
+Technologies Engaged:
+OpenAI API
+Meta Llama 2
+Google Gemini
+LangChain
+Google Gen AI Studio
+Python
+Requirements:
 
-Shibori Ltd. is an equal opportunity employer committed to fostering a diverse and inclusive workplace. We encourage all qualified candidates to apply.
+Bachelor’s or Master’s in Computer Science, AI, or related fields.
+Profound knowledge of AI, machine learning, and NLP.
+Expertise in Python and AI development frameworks like TensorFlow or PyTorch.
+Strong analytical, problem-solving, and creative thinking skills.
+Excellent communication and teamwork abilities.
+Additional Information:
+
+Unpaid position with remote work setup.
+Stable internet connection required.
+Radical AI is an equal opportunity organization, committed to diversity and inclusion.

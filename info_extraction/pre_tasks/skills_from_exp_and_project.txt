@@ -2,177 +2,394 @@
     "Skills List": {
       "Technologies": [
         {
-          "Name": "AutoCAD",
+          "Name": "Java",
           "field": [
-            "Computer-aided design (CAD)", 
-            "Architectural design"
+            "Programming Language",
+            "Android Development",
+            "Game Development", 
+            "Backend Development"
           ]
         },
         {
-          "Name": "SketchUp",
+          "Name": "Python",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Programming Language",
+            "Machine Learning",
+            "Data Analysis",
+            "Backend Development"
           ]
         },
         {
-          "Name": "3DS Max",
+          "Name": "C++",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Programming Language",
+            "Game Development",
+            "Graphics",
+            "Low-level Programming"
           ]
         },
         {
-          "Name": "Revit",
+          "Name": "C Programming",
           "field": [
-            "Building Information Modeling (BIM)",
-            "Architectural design"
+            "Programming Language",
+            "Systems Programming",
+            "Operating Systems"
           ]
         },
         {
-          "Name": "V-Ray",
+          "Name": "OpenGL",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Graphics Library",
+            "3D Graphics",
+            "Game Development"
           ]
         },
         {
-          "Name": "Enscape",
+          "Name": "Docker",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Containerization",
+            "Cloud Computing",
+            "DevOps"
           ]
         },
         {
-          "Name": "Photoshop",
+          "Name": "Vue.js",
           "field": [
-            "Image editing",
-            "Graphic design"
+            "Front End Framework",
+            "JavaScript",
+            "Web Development"
           ]
         },
         {
-          "Name": "Illustrator",
+          "Name": "Git",
           "field": [
-            "Vector graphics",
-            "Graphic design"
+            "Version Control",
+            "Software Development",
+            "Collaboration"
+          ]
+        },
+        {
+          "Name": "SQL",
+          "field": [
+            "Database Management",
+            "Data Analysis",
+            "Android Development"
+          ]
+        },
+        {
+          "Name": "HSQLDB",
+          "field": [
+            "Database Management",
+            "Embedded Databases",
+            "Android Development"
+          ]
+        },
+        {
+          "Name": "React",
+          "field": [
+            "Front End Framework",
+            "JavaScript",
+            "Web Development"
+          ]
+        },
+        {
+          "Name": "Multiagent",
+          "field": [
+            "Artificial Intelligence",
+            "Autonomous Systems",
+            "Distributed Systems"
+          ]
+        },
+        {
+          "Name": "AI",
+          "field": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Game Development"
+          ]
+        },
+        {
+          "Name": "RAG Search",
+          "field": [
+            "Information Retrieval",
+            "Machine Learning",
+            "Search Engines"
+          ]
+        },
+        {
+          "Name": "Gemini",
+          "field": [
+            "Natural Language Processing",
+            "Machine Learning",
+            "Artificial Intelligence"
+          ]
+        },
+        {
+          "Name": "Node.js",
+          "field": [
+            "JavaScript",
+            "Backend Development",
+            "Web Development"
+          ]
+        },
+        {
+          "Name": "MongoDB",
+          "field": [
+            "Database Management",
+            "NoSQL",
+            "Document Databases"
+          ]
+        },
+        {
+          "Name": "Firebase",
+          "field": [
+            "Backend Development",
+            "Mobile Development",
+            "Cloud Computing"
+          ]
+        },
+        {
+          "Name": "TensorFlow",
+          "field": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Deep Learning"
+          ]
+        },
+        {
+          "Name": "Docker",
+          "field": [
+            "Containerization",
+            "DevOps",
+            "Cloud Computing"
+          ]
+        },
+        {
+          "Name": "Angular",
+          "field": [
+            "Front End Framework",
+            "JavaScript",
+            "Web Development"
+          ]
+        },
+        {
+          "Name": "TCP/IP",
+          "field": [
+            "Networking",
+            "Internet Protocols",
+            "Data Communication"
+          ]
+        },
+        {
+          "Name": "Multithreading",
+          "field": [
+            "Concurrency",
+            "Parallel Programming",
+            "Software Development"
+          ]
+        },
+        {
+          "Name": "Network",
+          "field": [
+            "Networking",
+            "Data Communication",
+            "Internet Technologies"
+          ]
+        },
+        {
+          "Name": "A* Algorithm",
+          "field": [
+            "Artificial Intelligence",
+            "Pathfinding",
+            "Game Development"
+          ]
+        },
+        {
+          "Name": "Ray Tracing",
+          "field": [
+            "Graphics",
+            "Computer Vision",
+            "Artificial Intelligence"
           ]
         }
       ],
-      "Frameworks": [],
+      "Frameworks": [
+        {
+          "Name": "Android Studio",
+          "field": [
+            "Android Development",
+            "Mobile Development",
+            "Java"
+          ]
+        }
+      ],
       "Skills": [
         {
-          "Name": "Preparation of preliminary and detailed architectural drawings",
+          "Name": "Programming",
           "field": [
-            "Architectural design",
-            "Drafting"
+            "Software Development",
+            "Computer Science"
           ]
         },
         {
-          "Name": "Creating computer-generated 3D models and rendering",
+          "Name": "Tutoring",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Education",
+            "Teaching",
+            "Mentoring"
           ]
         },
         {
-          "Name": "Monitoring project progress and reporting errors",
+          "Name": "Mentoring",
           "field": [
-            "Project management",
-            "Architectural design"
+            "Education",
+            "Leadership",
+            "Training"
           ]
         },
         {
-          "Name": "Prepared technical and detailed drawings.",
+          "Name": "Python Systems Engineering",
           "field": [
-            "Architectural design",
-            "Drafting"
+            "Engineering",
+            "Python",
+            "Systems Engineering"
           ]
         },
         {
-          "Name": "Prepared 3D models for necessary representation and implementation.",
+          "Name": "Resume Optimization",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Career Development",
+            "Job Search"
           ]
         },
         {
-          "Name": "Prepared graphical presentation for technical validation",
+          "Name": "ATS Optimization",
           "field": [
-            "Presentation",
-            "Architectural design"
+            "Career Development",
+            "Job Search"
           ]
         },
         {
-          "Name": "Prepared a 3D model of the architecture and landscape of the project.",
+          "Name": "Blockchain",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Cryptocurrency",
+            "Data Security",
+            "Distributed Systems"
           ]
         },
         {
-          "Name": "Prepared 2D renders and 3D animations",
+          "Name": "Smart Contracts",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Blockchain",
+            "Ethereum",
+            "Distributed Systems"
           ]
         },
         {
-          "Name": "Prepared working drawings for residential, commercial and interior projects.",
+          "Name": "Mileage Tracking",
           "field": [
-            "Architectural design",
-            "Drafting"
+            "Logistics",
+            "Transportation",
+            "Data Management"
           ]
         },
         {
-          "Name": "Arranged RAJUK sheets and layouts.",
+          "Name": "Game Development",
           "field": [
-            "Architectural design",
-            "Drafting"
+            "Software Development",
+            "Artificial Intelligence",
+            "Graphics"
           ]
         },
         {
-          "Name": "Composed construction documents and BOQs",
+          "Name": "Object-Oriented Programming",
           "field": [
-            "Architectural design",
-            "Document preparation"
+            "Software Development",
+            "Computer Science",
+            "Java"
           ]
         },
         {
-          "Name": "Prepared 3D models and renders.",
+          "Name": "Polymorphism",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Software Development",
+            "Computer Science"
           ]
         },
         {
-          "Name": "Took measurements on-site for technical drawings.",
+          "Name": "Account Management",
           "field": [
-            "Architectural design",
-            "Surveying"
+            "Finance",
+            "Business",
+            "Customer Service"
           ]
         },
         {
-          "Name": "Prepared detailed drawings for interior projects.",
+          "Name": "Markdown",
           "field": [
-            "Architectural design",
-            "Drafting"
+            "Documentation",
+            "Technical Writing",
+            "Content Creation"
           ]
         },
         {
-          "Name": "Designed and prepared banners, backdrops and brochures or Education Expo 2019.",
+          "Name": "Jekyll",
           "field": [
-            "Graphic design",
-            "Marketing"
+            "Static Site Generator",
+            "Web Development",
+            "Content Creation"
           ]
         },
         {
-          "Name": "Designed the official logo, social media posts, receipts and other official document formats.",
+          "Name": "Version Control",
           "field": [
-            "Graphic design",
-            "Marketing"
+            "Software Development",
+            "Collaboration",
+            "Git"
           ]
-        }
-      ],
-      "Soft Skills": []
-    }
-  }
+        },
+        {
+          "Name": "Debugging",
+          "field": [
+            "Software Development",
+            "Problem Solving",
+            "Programming"
+          ]
+        },
+        {
+          "Name": "Linux OS",
+          "field": [
+            "Operating Systems",
+            "Computer Science",
+            "Software Development"
+          ]
+        },
+        {
+          "Name": "Lighting",
+          "field": [
+            "Graphics",
+            "Game Development",
+            "3D Animation"
+          ]
+        },
+        {
+          "Name": "UI/UX Design",
+          "field": [
+            "User Experience",
+            "Web Development",
+            "Mobile Development"
+          ]
+        },
+        {
+          "Name": "Database Management",
+          "field": [
+            "Data Analysis",
+            "Information Technology",
+            "Software Development"
+          ]
+        },
+        {
+          "Name": "AI Decision-Making",
+          "field": [
+            "Artificial Intelligence",
+            "Machine Learning

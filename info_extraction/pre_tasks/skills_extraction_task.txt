@@ -2,249 +2,191 @@
     "combined skills list of applicant": {
       "Technologies": [
         {
-          "Name": "AutoCAD",
+          "Name": "Python",
           "field": [
-            "Computer-aided design (CAD)", 
-            "Architectural design"
+            "Programming Language",
+            "Machine Learning",
+            "Data Analysis",
+            "Backend Development"
           ]
         },
         {
-          "Name": "SketchUp",
+          "Name": "JavaScript",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Programming Language",
+            "Front End Framework",
+            "Web Development"
           ]
         },
         {
-          "Name": "3DS Max",
+          "Name": "Java",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Programming Language",
+            "Android Development",
+            "Game Development",
+            "Backend Development"
           ]
         },
         {
-          "Name": "Revit",
+          "Name": "C++",
           "field": [
-            "Building Information Modeling (BIM)",
-            "Architectural design"
+            "Programming Language",
+            "Game Development",
+            "Graphics",
+            "Low-level Programming"
           ]
         },
         {
-          "Name": "V-Ray",
+          "Name": "SQL",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Database Management",
+            "Data Analysis",
+            "Android Development"
           ]
         },
         {
-          "Name": "Enscape",
+          "Name": "MySQL",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Database Management",
+            "Relational Databases",
+            "SQL"
           ]
         },
         {
-          "Name": "Photoshop",
+          "Name": "noSQL",
           "field": [
-            "Image editing",
-            "Graphic design"
+            "Database Management",
+            "Non-Relational Databases"
           ]
         },
         {
-          "Name": "Illustrator",
+          "Name": "JSON",
           "field": [
-            "Vector graphics",
-            "Graphic design"
+            "Data Format",
+            "Web Development",
+            "Data Exchange"
           ]
         },
         {
-          "Name": "Autodesk",
+          "Name": "Schema",
           "field": [
-            "Computer-aided design (CAD)", 
-            "Architectural design"
+            "Database Management",
+            "Data Structure",
+            "Data Modeling"
           ]
         },
         {
-          "Name": "Rhino",
+          "Name": "Docker",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Containerization",
+            "Cloud Computing",
+            "DevOps"
           ]
         },
         {
-          "Name": "CorelDraw",
+          "Name": "Multiagent",
           "field": [
-            "Graphic design"
+            "Artificial Intelligence",
+            "Autonomous Systems",
+            "Distributed Systems"
           ]
         },
         {
-          "Name": "Microsoft Office",
+          "Name": "AI",
           "field": [
-            "Document preparation"
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Game Development"
           ]
         },
         {
-          "Name": "Lumion",
+          "Name": "RAG Search",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Information Retrieval",
+            "Machine Learning",
+            "Search Engines"
           ]
         },
         {
-          "Name": "Twinmotion",
+          "Name": "Gemini",
           "field": [
-            "3D rendering",
-            "Architectural design"
+            "Natural Language Processing",
+            "Machine Learning",
+            "Artificial Intelligence"
+          ]
+        },
+        {
+          "Name": "Node.js",
+          "field": [
+            "JavaScript",
+            "Backend Development",
+            "Web Development"
+          ]
+        },
+        {
+          "Name": "MongoDB",
+          "field": [
+            "Database Management",
+            "NoSQL",
+            "Document Databases"
+          ]
+        },
+        {
+          "Name": "CI/CD",
+          "field": [
+            "Cloud Computing",
+            "Software Development",
+            "DevOps"
+          ]
+        },
+        {
+          "Name": "GitHub Action",
+          "field": [
+            "Cloud Computing",
+            "Software Development",
+            "DevOps"
+          ]
+        },
+        {
+          "Name": "AWS",
+          "field": [
+            "Cloud Computing",
+            "Infrastructure as a Service",
+            "Web Services"
           ]
         }
       ],
-      "Frameworks": [],
+      "Frameworks": [
+        {
+          "Name": "Android Studio",
+          "field": [
+            "Android Development",
+            "Mobile Development",
+            "Java"
+          ]
+        }
+      ],
       "Skills": [
         {
-          "Name": "Preparation of preliminary and detailed architectural drawings",
+          "Name": "Programming",
           "field": [
-            "Architectural design",
-            "Drafting"
+            "Software Development",
+            "Computer Science"
           ]
         },
         {
-          "Name": "Creating computer-generated 3D models and rendering",
+          "Name": "Database Management",
           "field": [
-            "3D modeling",
-            "Architectural design"
+            "Data Analysis",
+            "Information Technology",
+            "Software Development"
           ]
         },
         {
-          "Name": "Monitoring project progress and reporting errors",
+          "Name": "AI Decision-Making",
           "field": [
-            "Project management",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Prepared technical and detailed drawings.",
-          "field": [
-            "Architectural design",
-            "Drafting"
-          ]
-        },
-        {
-          "Name": "Prepared 3D models for necessary representation and implementation.",
-          "field": [
-            "3D modeling",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Prepared graphical presentation for technical validation",
-          "field": [
-            "Presentation",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Prepared a 3D model of the architecture and landscape of the project.",
-          "field": [
-            "3D modeling",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Prepared 2D renders and 3D animations",
-          "field": [
-            "3D rendering",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Prepared working drawings for residential, commercial and interior projects.",
-          "field": [
-            "Architectural design",
-            "Drafting"
-          ]
-        },
-        {
-          "Name": "Arranged RAJUK sheets and layouts.",
-          "field": [
-            "Architectural design",
-            "Drafting"
-          ]
-        },
-        {
-          "Name": "Composed construction documents and BOQs",
-          "field": [
-            "Architectural design",
-            "Document preparation"
-          ]
-        },
-        {
-          "Name": "Prepared 3D models and renders.",
-          "field": [
-            "3D modeling",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Took measurements on-site for technical drawings.",
-          "field": [
-            "Architectural design",
-            "Surveying"
-          ]
-        },
-        {
-          "Name": "Prepared detailed drawings for interior projects.",
-          "field": [
-            "Architectural design",
-            "Drafting"
-          ]
-        },
-        {
-          "Name": "Designed and prepared banners, backdrops and brochures or Education Expo 2019.",
-          "field": [
-            "Graphic design",
-            "Marketing"
-          ]
-        },
-        {
-          "Name": "Designed the official logo, social media posts, receipts and other official document formats.",
-          "field": [
-            "Graphic design",
-            "Marketing"
-          ]
-        },
-        {
-          "Name": "Proficient in a diverse array of digital design software, with a keen enthusiasm for mastering new technologies in digital visualization.",
-          "field": [
-            "3D modeling",
-            "Architectural design"
-          ]
-        },
-        {
-          "Name": "Naturally sociable, fostering excellent relationships with colleagues and mentors alike.",
-          "field": [
-            "Communication skills",
-            "Soft skills"
-          ]
-        },
-        {
-          "Name": "Well-versed in navigating deadline-sensitive projects, optimizing resources to meet and exceed objectives.",
-          "field": [
-            "Project management",
-            "Soft skills"
-          ]
-        },
-        {
-          "Name": "A habitual photographer with an eye for detail and an ability to multitask.",
-          "field": [
-            "Photography",
-            "Multitasking"
-          ]
-        },
-        {
-          "Name": "Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
-          "field": [
-            "Communication skills",
-            "Soft skills"
+            "Artificial Intelligence",
+            "Machine Learning"
           ]
         }
       ],

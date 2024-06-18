@@ -1,30 +1,53 @@
+```json
 {
   "selected_experiences": {
     "Most Recent Experience": [
-      "Work: {
-      'Job Title': 'Architect',
-      'Company Name': 'RSB Properties Ltd.',
-      'Timeline': 'Oct 2022 - Jul 2023',
-      'Technologies, frameworks, and tools Used': '- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape\n- Photoshop\n- Illustrator',
-      'Skills': '- Preparation of preliminary and detailed architectural drawings.\n- Creating computer-generated 3D models and rendering.\n- Monitoring project progress and reporting errors.'
-      }"
+      {
+        "Project Title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
+        "Skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Key Highlights": [
+          "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+          "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+          "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+          "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+        ],
+        "Team size": null,
+        "Outcomes": null
+      }
     ],
-    "Work Experience": [
-      "{
-      'Job Title': 'Technical Trainee on Reasonable Accommodation and Accessibility',
-      'Company Name': 'Humanity & Inclusion (HI), Centre for the Rehabilitation of the Paralysed (CRP)',
-      'Timeline': 'Jan 2022 - Jul 2022',
-      'Technologies, frameworks, and tools Used': '- AutoCAD\n- SketchUp\n- 3DS Max\n- Revit\n- V-Ray\n- Enscape',
-      'Skills': '- Prepared technical and detailed drawings.\n- Prepared 3D models for necessary representation and implementation.\n- Prepared graphical presentation for technical validation.'
-      }",
-      "{
-      'Job Title': 'Architectural Intern',
-      'Company Name': 'Tania Karim, Nurur Rahman Khan and Associates (TKNRK)',
-      'Timeline': 'Jun 2019 - Sep 2019',
-      'Technologies, frameworks, and tools Used': '- AutoCAD\n- SketchUp\n- Revit',
-      'Skills': '- Prepared working drawings for residential, commercial and interior projects.\n- Arranged RAJUK sheets and layouts.\n- Composed construction documents and BOQs.'
-      }"
+    "Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Technologies, frameworks, and tools Used": "A* Algorithm | Java | Git | CI/CD",
+        "Skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        ],
+        "Team size": null,
+        "Outcomes": null
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Technologies, frameworks, and tools Used": "AI Decision-Making | Java",
+        "Skills": "Java, AI, Game Development, UI/UX Design",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        ],
+        "Team size": null,
+        "Outcomes": null
+      }
     ],
-    "Project Experience": []
+    "Work Experience": []
   }
 }
+```

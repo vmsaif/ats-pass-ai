@@ -145,7 +145,6 @@ def run():
                 # print("Exiting the program due to error in crew kickoff")
                 # exit(1)
                 # crew.kickoff() # Retry once
-
         crew_run_time = t.interval
     
         with Timer() as t:
@@ -163,7 +162,7 @@ def run():
     print_task_time("JD Extraction", jd_extraction_time)
     print_task_time("Indexing", indexing_time)
     print_task_time("Crew Run", crew_run_time)
-    # print_task_time("Latex Generation", latex_generation_time)
+    print_task_time("Latex Generation", latex_generation_time)
     print_task_time("Total", program_run_time)
     printRemainingRequestsPerDay()
 

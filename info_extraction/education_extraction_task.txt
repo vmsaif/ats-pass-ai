@@ -1,31 +1,11 @@
 {
-  "Education": [
-    {
-      "Degree": "Bachelor of Architecture (B.Arch)",
-      "Major": null,
-      "University": "North South University",
-      "University Location": null,
-      "Graduation Date": "Jan 2021",
-      "GPA": "2.7/4.0 (82%)",
-      "Honors/Distinctions": null
-    },
-    {
-      "Degree": "Higher School Certificate (H.S.C)",
-      "Major": "Science",
-      "University": "Ideal College",
-      "University Location": null,
-      "Graduation Date": "Jun 2014",
-      "GPA": "4.8/5.0",
-      "Honors/Distinctions": null
-    },
-    {
-      "Degree": "Secondary School Certificate (S.S.C)",
-      "Major": "Science",
-      "University": "Junior Laboratory High School",
-      "University Location": null,
-      "Graduation Date": "Mar 2012",
-      "GPA": "5.0/5.0",
-      "Honors/Distinctions": "Certificate in recognition of Excellent Result in S.S.C by Prothom Alo & UCB Bank (2012)"
-    }
-  ]
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "University Location": null,
+    "Graduation Date": "October 2023",
+    "GPA": "3.07",
+    "Honors/Distinctions": null
+  }
 }

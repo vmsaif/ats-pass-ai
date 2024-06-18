@@ -731,6 +731,7 @@ gather_info_of_chosen_experiences:
           "Technologies, frameworks, and tools Used": "",
           "Skills": "",
           "Link": "",
+          "Short Description": "",
           "Key Highlights": [
             "",
             "",
@@ -748,6 +749,7 @@ gather_info_of_chosen_experiences:
           "Technologies, frameworks, and tools Used": "",
           "Skills": "",
           "Link": "",
+          "Short Description": "",
           "Key Highlights": [
             "",
             "",
@@ -762,12 +764,12 @@ gather_info_of_chosen_experiences:
 
 split_context_of_ats_friendly_keywords_into_experiences:
   description: >
-    Split the context provided to you at the breaking point "## Report on Changes". In your output, you will provide everything before the "Report on Changes" as the final output of the task. Ensure you maintain the order of experiences as they are given. The structure should be the same as the input context. Do not remove any words from the "Technologies", "Key Highlights", "Skills", "Outcomes", "Link", "Team size", "Duration", "Timeline", or "Title".
+    Split the context provided to you at the breaking point "## reason for choosing, How it is relevant to the job". In your output, you will provide everything before the "reason for choosing, How it is relevant to the job" as the final output of the task. Ensure you maintain the order of experiences as they are given. The structure should be the same as the input context. Do not remove any words from the "Technologies", "Key Highlights", "Skills", "Outcomes", "Link", "Team size", "Duration", "Timeline", or "Title".
 
     The context you need to split is provided to you from the previous task.
 
   expected_output: >
-    Every Single line before the "Report on Changes" will be the final output of the task in JSON format with the same structure as the input context. 
+    Every Single line before the "reason for choosing, How it is relevant to the job" will be the final output of the task in JSON format with the same structure as the input context. 
 
 # ------------- career_objective_agent -> Career Objective Crafting -------------
 
@@ -788,7 +790,10 @@ career_objective_task:
 
     - **Tool:** This tool is directly connected to the applicant's information. You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Also, consider(not mandatory) the applicant's philosophy and approach to software development when crafting the career objective statement if available.
 
-    Make the career objective statement concise and impactful, focusing on the applicant's unique value proposition and how it aligns with the job description and the company's mission. Do not make more than 3-4 sentences(350 characters). It must include the Job Title and the Company Name. 
+    Make the career objective statement concise and impactful, focusing on the applicant's unique value proposition and how it aligns with the job description and the company's mission. 
+    
+    Restriction:
+    - Do not make more than around 30-36 words. It must include the Job Title and the Company Name. 
 
   expected_output: >
     A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the applicant's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
@@ -821,6 +826,7 @@ ats_friendly_skills_task:
     4. **Categorization**:
        - You need to find a suitable category name for each skill (e.g., Programming Languages, Soft Skills). You can use the hint from the "field" in the context provided to you or use your judgment.
        - Organize skills into categories (e.g., Programming Languages, Soft Skills). Create up to 5 categories for "Exact Match", and "Partial Match", Each category should contain up to 5 items. No limitation for the "No Match" category.
+       - Each skill should be 1-3 words long.
 
     5. **Structured Report**:
        - Produce a report categorizing findings into 'Exact Match', 'Partial Match', and 'No Match'.
@@ -1209,7 +1215,9 @@ ats_friendly_keywords_into_experiences:
     **Guidelines:**
       - **Relevance:** Only integrate keywords that are directly relevant to the described experience.
       - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
-      - **Conciseness and Clarity:** Employ powerful action verbs and succinct phrases to convey significant achievements in 1-2 compelling sentences.
+      - **Conciseness and Clarity:** 
+        -- Limit the short description to 10-15 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in 1-2 compelling sentences. That is, use approximately 12-15 words per key highlight.
       - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
 
@@ -1239,6 +1247,7 @@ ats_friendly_keywords_into_experiences:
       "Technologies": "",
       "skills": "",
       "Link": "",
+      "Short Description": "(About 15 words)",
       "Key Highlights": [(Up to 3 key highlights)],
         "",
         "",
@@ -1257,6 +1266,7 @@ ats_friendly_keywords_into_experiences:
       "Technologies": "",
       "skills": "",
       "Link": "",
+      "Short Description": "(About 15 words)",
       "Key Highlights": [(Up to 3 key highlights)
         "",
         "",

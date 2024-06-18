@@ -4,18 +4,18 @@
       "section": "Education",
       "sub_sections": [
         {
-          "degree": "Bachelor of Architecture (B.Arch)",
-          "major": null,
-          "university": "North South University",
-          "graduation_date": "Jan 2021",
-          "gpa": "2.7/4.0 (82%)"
+          "institution": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
         },
         {
-          "degree": "Higher School Certificate (H.S.C)",
-          "major": "Science",
-          "university": "Ideal College",
-          "graduation_date": "Jun 2014",
-          "gpa": "4.8/5.0"
+          "coursework": [
+            "Relevant Coursework (to the Job Description):",
+            "- Distributed Computing (Python | JavaScript)",
+            "- Data Structures and Algorithms (Java)",
+            "- AI and Game Development (Java | Python)"
+          ]
         }
       ]
     },
@@ -23,16 +23,16 @@
       "section": "References",
       "sub_sections": [
         {
-          "name": "Shaila Joarder",
-          "position": "Associate Professor",
-          "company": "Department of Architecture, North South University",
-          "contact_information": "shaila.joarder@northsouth.edu"
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
         },
         {
-          "name": "Fariha Yasmin Faruque",
-          "position": "Architectural Designer",
-          "company": "ProWise Engineering Inc.",
-          "contact_information": "fariha.faruque@prowise.ca"
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432 | Winnipeg, MB"
         }
       ]
     }

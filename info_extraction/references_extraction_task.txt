@@ -1,24 +1,17 @@
 {
   "References": [
     {
-      "Name": "Shaila Joarder",
-      "Position": "Associate Professor",
-      "Company": "Department of Architecture, North South University",
-      "Contact Information": "shaila.joarder@northsouth.edu",
+      "Name": "Abu Kabir",
+      "Position": "Director IT Service Management",
+      "Company": "Microsoft",
+      "Contact Information": "204-298-3693",
       "Relationship": null
     },
     {
-      "Name": "Fariha Yasmin Faruque",
-      "Position": "Architectural Designer",
-      "Company": "ProWise Engineering Inc.",
-      "Contact Information": "fariha.faruque@prowise.ca",
-      "Relationship": null
-    },
-    {
-      "Name": "Krishno Sen",
-      "Position": "Senior Analysts",
-      "Company": "Leaving No One Behind (LNOB), BRAC Bangladesh",
-      "Contact Information": "krishno.sen@brac.net",
+      "Name": "Safiur Mahdi",
+      "Position": "Java Developer",
+      "Company": "Skip the Dishes",
+      "Contact Information": "204-583-3432",
       "Relationship": null
     }
   ]

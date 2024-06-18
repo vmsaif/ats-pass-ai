@@ -1,43 +1,17 @@
-**Job Title: Architect**
+**Artificial Intelligence Engineer**
 
-**Company: Shibori Ltd.**
+**Essential Responsibilities:**
 
-**Responsibilities:**
+* Design and develop innovative AI models
+* Analyze and preprocess data for machine learning applications
+* Enhance algorithms and models in collaboration with AI teams
+* Present research findings and participate in critical team discussions
+* Contribute to the development of AI virtual agents
 
-* Develop creative and innovative design solutions.
-* Prepare detailed construction documents (drawings, specifications, schedules).
-* Coordinate with clients, consultants, and contractors.
-* Research and evaluate materials and systems.
-* Stay up-to-date with industry trends and technologies.
+**Essential Qualifications:**
 
-**Qualifications:**
-
-* Bachelor's or Master's in Architecture from an accredited program.
-* Strong 3D visualization skills and software proficiency.
-* Understanding of Bill of Quantities preparation and materials selection.
-* At least 1 year of professional experience (freshers encouraged to apply).
-* Excellent communication and presentation skills.
-* Ability to work independently and as part of a team.
-* Strong problem-solving and critical thinking skills.
-* Proficiency in Microsoft Office Suite.
-
-**Bonus Qualifications:**
-
-* Experience with sustainable design principles.
-* Knowledge of local building codes and regulations.
-* Familiarity with project management software.
-
-**Benefits:**
-
-* Competitive salary and benefits package.
-* Professional development and growth opportunities.
-* Challenging and rewarding work environment.
-* Contribution to exciting and innovative projects.
-
-**To Apply:**
-
-Send resume, portfolio, and cover letter to shiboricareer@gmail.com by June 10, 2024.
-
-**Equal Opportunity Statement:**
-
-Shibori Ltd. is an equal opportunity employer committed to fostering a diverse and inclusive workplace. All qualified candidates are encouraged to apply.
+* Bachelor's or Master's in Computer Science, AI, or related fields
+* Profound knowledge of AI, machine learning, and NLP
+* Expertise in Python and AI development frameworks like TensorFlow or PyTorch
+* Strong analytical, problem-solving, and creative thinking skills
+* Excellent communication and teamwork abilities

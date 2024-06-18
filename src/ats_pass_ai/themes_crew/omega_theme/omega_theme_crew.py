@@ -20,11 +20,6 @@ from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import SimpleSpanProcessor, ConsoleSpanExporter
 
-# trace.set_tracer_provider(TracerProvider())
-# trace.get_tracer_provider().add_span_processor(
-# 	SimpleSpanProcessor(ConsoleSpanExporter())
-# )
-
 os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
 os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 
@@ -73,9 +68,49 @@ class OmegaThemeCrew:
 	# large_token_limiter = large_limiter.record_token_usage
 
 	
-
 	# debugFlag = False
 	debugFlag = True
+
+	@crew
+	def crew(self) -> Crew:
+		"""Creates the applicant info organizer crew"""
+
+		tasks = [
+				# self.namesection(),
+				# self.concise_jd_task(),
+
+				# self.select_first_column_content(),
+				# self.split_content_of_select_first_column_content(),
+				# self.educationsection(),
+				# self.courseworksection(),
+				# self.volunteerworksection(),
+				# self.referencessection(), 
+
+				# self.skillsection(),
+				# self.careerobjectivesection(),
+				self.experiencesection()
+			]
+		# Return the crew
+		return Crew(
+			agents=self.agents,
+			tasks=tasks,
+			language="en",
+			# cache=True,
+			full_output=True,
+			process=Process.sequential,
+			verbose=2,
+			# memory=True,
+			# embedder={
+			# 	"provider": "google",
+			# 	"config":{
+			# 		"model": 'models/embedding-001',
+			# 		"task_type": "retrieval_document",
+			# 		"title": "Embeddings for Embedchain"
+			# 	}
+			# },
+			output_log_file='src/ats_pass_ai/themes_crew/omega_theme/output_log.txt',
+		)
+
 
 	@agent
 	def latex_maker_agent(self) -> Agent:
@@ -158,6 +193,9 @@ class OmegaThemeCrew:
 
 		applicant_information = self.load_file(PATHS["profile_builder_task"])
 		description = yaml[0].format(applicant_information = applicant_information)
+
+		if(os.path.exists(PATHS["coursework_extraction_task"])):
+			description = description + "\n\n Relevant Courses" + self.load_file(PATHS["coursework_extraction_task"])
 
 		if self.debugFlag:
 			jd_keyword_extraction = self.load_file(PATHS["concise_jd_task"])
@@ -246,9 +284,10 @@ class OmegaThemeCrew:
 
 	@task
 	def volunteerworksection(self):
-		yaml = self.yaml_loader("volunteersection", True)
+		yaml = self.yaml_loader("volunteersection", is_task=True)
 		description = yaml[0]
 		expected_output = yaml[1]
+
 		if(self.debugFlag):
 			description = description + "\n\n" + self.load_file(PATHS["split_content_of_select_first_column_content"])
 
@@ -298,7 +337,7 @@ class OmegaThemeCrew:
 		yaml = self.yaml_loader("experiencesection", True)
 		description = yaml[0]
 		expected_output = yaml[1]
-		description = description + "\n\n" + self.load_file(PATHS["work_experience_extraction_task"]) + "\n\n" + self.load_file(PATHS["project_experience_extraction_task"])
+		description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
 
 		return Task(
 			description=description,
@@ -307,46 +346,7 @@ class OmegaThemeCrew:
 			output_file=PATHS["experiencesection"],
 			callback=self.small_token_limiter
 		)
-		
-	@crew
-	def crew(self) -> Crew:
-		"""Creates the applicant info organizer crew"""
-
-		tasks = [
-				# self.namesection(),
-				# self.concise_jd_task(),
-				# self.select_first_column_content(),
-				# self.split_content_of_select_first_column_content(),
-				# self.educationsection(),
-				# self.courseworksection(),
-				self.skillsection(),
-				# self.volunteerworksection(),
-				# self.referencessection(),
-				# self.careerobjectivesection(),
-				# self.experiencesection()
-			]
-		# Return the crew
-		return Crew(
-			agents=self.agents,
-			tasks=tasks,
-			language="en",
-			# cache=True,
-			full_output=True,
-			process=Process.sequential,
-			verbose=2,
-			# memory=True,
-			# embedder={
-			# 	"provider": "google",
-			# 	"config":{
-			# 		"model": 'models/embedding-001',
-			# 		"task_type": "retrieval_document",
-			# 		"title": "Embeddings for Embedchain"
-			# 	}
-			# },
-			output_log_file='src/ats_pass_ai/themes_crew/omega_theme/output_log.txt',
-		)
-	
-
+			
 	def load_file(self, file_path):
 		"""Load text file"""
 		try:

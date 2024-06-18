@@ -48,7 +48,7 @@ select_first_column_content:
        - Target sections directly related to job skills and qualifications.
        - Emphasize Education and Awards for their impact.
        - Include broader sections like Personal Traits only if they offer significant advantages.
-    4. **Content Limitation**: Choose up to 2 sections and a total of 3 sub-sections, ensuring all fields are complete.
+    4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete.
 
     **Output Expectations**:
     Generate a JSON object detailing the selected and omitted sections.
@@ -175,13 +175,13 @@ skillsection:
     1. **Section Header**: Begin with the section title using \section{Skills}.
     2. **Skill Categories**: 
        - Use \subTitle{} to introduce each skill category.
-       - List skills in each category using \body{}, separating items with \textbullet{}, ensuring each item is concise (1-3 words).
-       - Limit the number of categories to five, focusing on both exact and partial match skills relevant to the job.
+       - List skills in each category using \body{}, separating items with \textbullet{}.
+       - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+       - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
     3. **Formatting**:
        - Use \skillsVSpace between each category to maintain visual separation.
        - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
-
-    The output should be crafted to fit seamlessly within a professional resume, reflecting the applicant's most pertinent skills in a concise and organized manner.
+    4. The expected output is only the category and items, not any explanation or additional text.
 
     Example:
     \section{Skills}
@@ -199,9 +199,10 @@ skillsection:
 
     **Conditions**:
     - Provide raw latex, not in a code block.
+    - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+      % \section{}
+      % \sectionsep.
   expected_output: >
-
-
 
 volunteersection:
   description: >
@@ -209,18 +210,12 @@ volunteersection:
 
     In your output, follow these guidelines:
 
-    - The first line should contain the section name "VOLUNTEER". Use the command `\section{VOLUNTEER}`.
-    - Each volunteer entry should be structured as follows:
-      - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries.
-      - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
-      - Use the `vitemize` environment to list the responsibilities and achievements of the volunteer role.
+    - In the first line Use the command `\section{Volunteer}`.
+    
+    - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries.
+    - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
+    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role.
     - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
-    - Convert special LaTeX characters to their escaped versions to prevent errors in LaTeX processing:
-      - `%` to `\%`
-      - `$` to `\$`
-      - `&` to `\&`
-      - `#` to `\#`
-      - `_` to `\_`
 
     Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
 
@@ -234,14 +229,13 @@ volunteersection:
     \sectionsep
 
     **Conditions**:
-    - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%'.
+    - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
       % \section{}
       % \sectionsep.
-    - Your output should be raw LaTeX code without any code block quotes.
 
     Here is the information you need and convert into LaTeX format:
   expected_output: >
-    No blockquote is needed for the output.
+    blockquote is not needed for the output.
 
 referencessection:
   description: >
@@ -250,6 +244,7 @@ referencessection:
     In the output,
     - The first line contains the section name "References". Use the command \section{References}.
     - The next lines contain the reference information in the following format:
+      - Start with the command \section{Reference} for the name of the reference.
       - Use the command \subsection{} for the name of the reference.
       - Use the command \subTitle{} for the position and company of the reference.
       - Use the command \body{} for the contact information of the reference.
@@ -301,52 +296,40 @@ careerobjectivesection:
 
 experiencesection:
   description: >
-    This function takes applicant data as input and extracts the experience information. This information is then formatted into a LaTeX representation.
-    Follow this structure for each experience entry:
+    Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
 
-    \betweenProjectsVSpace  % Use this at the beginning of each experience entry
-    \experienceTitle{Experience Title} % Replace 'Experience Title' with the actual title (e.g., 'ATS Pass AI', 'Software Developer'). Use this command for work experience, projects, academic work, etc.
-    \summaryPoints{| Point 1 | Point 2 | Point 3} % Choose up to 3 concise (1-2 words) points that represent the experience. Don't add a pipeline at the end. 
-    \subHeading{Role - Start Date - End Date} % Specify the role and timeframe of the experience.
-    \betweenSummaryPointsVSpace % Use this for spacing.
-    Write a brief summary of the experience in a sentence or two. 
-    \vspaceForFirstProject % Use this to add extra space for the first experience section entry. Otherwise, use \vspaceForOtherProject
+    In the output,
+    - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
 
-    \begin{tightemize}
-    \item Detail 1 about the experience.
-    \item Detail 2 about the experience.
-    ...  % Add more detail items as needed
-    \end{tightemize}
-
+    - The next lines contain the experience information in the following format:
+      - The first line contains the project title. Use the command \customTitle{Project Title}.
+      - The next line contains the summary points. \summaryPoints{item 1 | item 2 | etc}.
+      - The next line contains the role and timeline. \roleAndTimeline{Role | Timeline}. 
+      - The next line contains a short description. \shortDescription{Short Description}.
+      - Use the `tightemize` environment to list the responsibilities and achievements of the project. \begin{tightemize} 
+      - change special characters like % to \% where appropriate, double backslashes to single backslashes, double stars to \textbf{}, and double underscores to \_ etc.
+      - use \item to list each responsibility or achievement.
+      - the last \item line should be any links if available. Use \href for the and \ul for the text.
+      - Use \end{tightemize} to end the list of responsibilities and achievements.
+ 
     Example:
-    \betweenProjectsVSpace 
-    \experienceTitle{ATS Pass AI} 
-    \summaryPoints{| Python | Multiagent | AI} 
-    \subHeading{Resume Automation Tool - January 2024 - Present} 
-    \betweenSummaryPointsVSpace 
-    Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. 
-    \vspaceForFirstProject
-    \begin{tightemize}
-    \item Utilized advanced AI models to automate resume writing and tailoring processes, resulting in a 30% increase in interview callbacks.
-    \item Engineered a system to extract and analyze job descriptions, match keywords, and generate personalized resumes for various job applications.
-    \item Developed \textbf{scalable architecture} to handle multiple users concurrently, ensuring high performance and reliability.
-    \item Project repository available on \href{https://github.com/vmsaif/ats-pass-ai}{\underline{GitHub}}.
-    \end{tightemize}
+    \section{Experience}
+    \customTitle{ATS Pass AI}
+        \summaryPoints{Python | Multiagent | AI | RAG Search}
+        \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
 
-    \betweenProjectsVSpace 
-    \experienceTitle{Software Developer}
-    \summaryPoints{ | Python | Django | React} 
-    \subHeading{Software Developer - January 2023 - December 2023}
-    \betweenSummaryPointsVSpace
-    Developed and maintained web applications using Django and React, ensuring high-performance and user-friendly interfaces.
-    \vspaceForOtherProject
-    \begin{tightemize}
-    \item Collaborated with cross-functional teams to design and implement new features, enhancing user experience and functionality.
-    \end{tightemize} 
+        \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+        \begin{tightemize}
+            \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+            \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+            \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+        \end{tightemize}
 
     Important: 
-    - Output should be in valid LaTeX syntax.
-    - No code block quotes are necessary.
+    - Output should be in valid LaTeX syntax. 
+    - Do not output in any code block quotes.
+    
   expected_output: >
 
 awards_recognitions_extraction_task:

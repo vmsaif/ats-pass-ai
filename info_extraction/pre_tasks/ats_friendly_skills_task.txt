@@ -2,68 +2,63 @@
 {
   "applicant_skills": {
     "exact_match_with_job_description": {
-      "Software": [
-        "AutoCAD",
-        "Revit",
-        "SketchUp",
-        "Microsoft Office"
-      ],
-      "Hard Skills": [
-        "Construction Documents",
-        "3D Visualization",
-        "Presentation Skills",
-        "Time Management"
-      ],
-      "Soft Skills": [
-        "Teamwork",
-        "Communication Skills"
-      ]
+      "Programming Languages": ["Python", "Java"],
+      "Artificial Intelligence": ["AI", "Gemini"],
+      "Database Management": ["SQL", "MySQL", "noSQL"],
+      "Data Format": ["JSON"]
     },
     "partial_match_with_overlapping_skills": {
-      "Software": {
-        "Skill Name": "3ds Max",
-        "Relevance": "Related to 3D Visualization software mentioned in the job description."
+      "Programming Languages": {
+        "Skill Name": "JavaScript",
+        "Relevance": "Relevant to web development, but the job description emphasizes AI and Machine Learning."
       },
-      "Hard Skills": {
-        "Skill Name": "Creating computer-generated 3D models and rendering",
-        "Relevance": "This skill aligns with the '3D Visualization' requirement outlined in the job description."
+      "Artificial Intelligence": {
+        "Skill Name": "Multiagent",
+        "Relevance": "Relevant to AI, but the job description focuses on Generative AI and NLP."
       },
-      "Soft Skills": {
-        "Skill Name": "Possess an outgoing personality and good communication skills as well as the ability to work both independently and collaboratively.",
-        "Relevance": "This highlights 'Communication Skills' and 'Teamwork' which are required for the position."
+      "Information Retrieval": {
+        "Skill Name": "RAG Search",
+        "Relevance": "Relevant to AI and NLP, showing experience in advanced search technologies."
+      },
+      "Cloud Computing": {
+        "Skill Name": "Docker",
+        "Relevance": "Useful for AI development and deployment, aligns with DevOps practices."
+      },
+      "Database Management": {
+        "Skill Name": "MongoDB",
+        "Relevance": "Experience with NoSQL databases, complementing traditional SQL skills."
       }
     },
-    "missing_from_the_applicant_skills": {
-      "Hard Skills": [
-        "Bill of Quantities (BOQ)",
-        "Materials Selection"
-      ],
-      "Industry Terms": [
-        "Architecture",
-        "Interior Design",
-        "Construction",
-        "Design Solutions",
-        "Building Codes",
-        "Sustainable Design",
-        "Project Management",
-        "Project Implementation",
-        "Consultants",
-        "Contractors"
-      ],
-      "Company Values": [
-        "Creative",
-        "Innovative",
-        "Collaborative",
-        "Fast-Paced",
-        "Passion",
-        "Professional Development",
-        "Growth",
-        "Challenging",
-        "Rewarding",
-        "Diversity",
-        "Inclusion"
-      ]
-    }
+    "missing_from_the_applicant_skills": [
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "LangChain",
+      "Google Gen AI Studio",
+      "Data Analysis",
+      "Algorithm Development",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication",
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship",
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI",
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
   }
 }
 ```

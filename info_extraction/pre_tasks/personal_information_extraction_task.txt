@@ -1,16 +1,16 @@
 {
   "Personal Information": {
-    "Full Name": "TAHSIN RIDWAN PULOK",
-    "Phone Number": "+880 1785 051566",
-    "Email": "tahsin.pulok@gmail.com",
-    "LinkedIn": null,
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
     "Other Social Media Profiles": null,
-    "Personal Website": null,
-    "Portfolio": null,
-    "GitHub": null,
-    "Address": "Zigatola, Dhanmondi, Dhaka- 1209",
-    "City": "Dhaka",
-    "State": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": "https://github.com/vmsaif",
+    "Address": "Winnipeg, MB",
+    "City": "Winnipeg",
+    "State": "MB",
     "Zip Code": null,
     "Country": null
   }
