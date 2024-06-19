@@ -45,49 +45,49 @@ class OmegaThemeCrew:
 		},
 	)
 	
-	# genAILarge = GoogleGenerativeAI(
-	# 	model="gemini-1.5-pro-latest",
-	# 	temperature=0.5,
-	# 	safety_settings = {
-	# 		HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-	# 		HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-	# 		HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-	# 		HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-	# 	},
-	# )
+	genAILarge = GoogleGenerativeAI(
+		model="gemini-1.5-pro-latest",
+		temperature=0.5,
+		safety_settings = {
+			HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+			HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+			HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+			HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+		},
+	)
 
 	small_limiter = Limiter(llm_size='SMALL', llm = genAI, langchainMethods=True)
-	# large_limiter = Limiter(llm_size='LARGE', llm = genAILarge, langchainMethods=True)
+	large_limiter = Limiter(llm_size='LARGE', llm = genAILarge, langchainMethods=True)
 
 	# rpd, rpm limiter, these will be used on agents
 	small_llm_limiter = small_limiter.request_limiter
-	# large_llm_limiter = large_limiter.request_limiter
+	large_llm_limiter = large_limiter.request_limiter
 
 	# token limiter, these will be used on the tasks to limit the token usage.
 	small_token_limiter = small_limiter.record_token_usage
-	# large_token_limiter = large_limiter.record_token_usage
+	large_token_limiter = large_limiter.record_token_usage
 
 	
-	# debugFlag = False
-	debugFlag = True
+	debugFlag = False
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
 
 		tasks = [
-				# self.namesection(),
-				# self.concise_jd_task(),
+				self.namesection(),
+				self.concise_jd_task(),
 
-				# self.select_first_column_content(),
-				# self.split_content_of_select_first_column_content(),
-				# self.educationsection(),
-				# self.courseworksection(),
-				# self.volunteerworksection(),
-				# self.referencessection(), 
+				self.select_first_column_content(),
+				self.split_content_of_select_first_column_content(),
+				self.educationsection(),
+				self.courseworksection(),
+				self.volunteerworksection(),
+				self.referencessection(), 
 
-				# self.skillsection(),
-				# self.careerobjectivesection(),
+				self.skillsection(),
+				self.careerobjectivesection(),
 				self.experiencesection()
 			]
 		# Return the crew
@@ -111,7 +111,6 @@ class OmegaThemeCrew:
 			output_log_file='src/ats_pass_ai/themes_crew/omega_theme/output_log.txt',
 		)
 
-
 	@agent
 	def latex_maker_agent(self) -> Agent:
 		# load yaml
@@ -124,6 +123,24 @@ class OmegaThemeCrew:
 			verbose=True,
 			llm=self.genAI,
 			step_callback=self.small_llm_limiter,
+			# llm=self.genAILarge,
+			# step_callback=self.large_llm_limiter
+		)
+	
+	@agent
+	def latex_maker_large_agent(self) -> Agent:
+		# load yaml
+		yaml = self.yaml_loader("latex_maker_agent", False)
+		return Agent(
+			role=yaml[0],
+			goal=yaml[1],
+			backstory=yaml[2],
+			allow_delegation=False,
+			verbose=True,
+			# llm=self.genAI,
+			# step_callback=self.small_llm_limiter,
+			llm=self.genAILarge,
+			step_callback=self.large_llm_limiter
 		)
 
 	@agent
@@ -343,6 +360,7 @@ class OmegaThemeCrew:
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
+			# agent=self.latex_maker_large_agent(),
 			output_file=PATHS["experiencesection"],
 			callback=self.small_token_limiter
 		)
@@ -355,7 +373,6 @@ class OmegaThemeCrew:
 		except IOError as e:
 			print(f"Error opening or reading the file {file_path}: {e}")
 			return ""
-
 
 	def load_all_files(self, directory_path) -> str:
 		# Initialize the text

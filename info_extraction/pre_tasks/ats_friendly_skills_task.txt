@@ -2,63 +2,58 @@
 {
   "applicant_skills": {
     "exact_match_with_job_description": {
-      "Programming Languages": ["Python", "Java"],
-      "Artificial Intelligence": ["AI", "Gemini"],
-      "Database Management": ["SQL", "MySQL", "noSQL"],
-      "Data Format": ["JSON"]
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
     },
     "partial_match_with_overlapping_skills": {
       "Programming Languages": {
-        "Skill Name": "JavaScript",
-        "Relevance": "Relevant to web development, but the job description emphasizes AI and Machine Learning."
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
       },
-      "Artificial Intelligence": {
-        "Skill Name": "Multiagent",
-        "Relevance": "Relevant to AI, but the job description focuses on Generative AI and NLP."
-      },
-      "Information Retrieval": {
+      "AI and ML Skills": {
         "Skill Name": "RAG Search",
-        "Relevance": "Relevant to AI and NLP, showing experience in advanced search technologies."
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
       },
-      "Cloud Computing": {
+      "Cloud and DevOps": {
         "Skill Name": "Docker",
-        "Relevance": "Useful for AI development and deployment, aligns with DevOps practices."
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
       },
-      "Database Management": {
-        "Skill Name": "MongoDB",
-        "Relevance": "Experience with NoSQL databases, complementing traditional SQL skills."
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
       }
     },
-    "missing_from_the_applicant_skills": [
-      "TensorFlow",
-      "PyTorch",
-      "OpenAI API",
-      "Meta Llama 2",
-      "Google Gemini",
-      "LangChain",
-      "Google Gen AI Studio",
-      "Data Analysis",
-      "Algorithm Development",
-      "Problem-Solving",
-      "Collaboration",
-      "Communication",
-      "AI for Social Good",
-      "Responsible AI",
-      "Data Preprocessing",
-      "AI Models",
-      "Virtual Internship",
-      "Democratizing AI",
-      "Equitable Progress",
-      "Social Mobility",
-      "Ethics in AI",
-      "Design",
-      "Develop",
-      "Analyze",
-      "Collaborate",
-      "Enhance",
-      "Present",
-      "Contribute"
-    ]
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
   }
 }
 ```

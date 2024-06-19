@@ -145,6 +145,7 @@ courseworksection:
       - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
       - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
       - Use the command \sectionsep at the end to separate the coursework from other sections.
+
     
     Example:
     \section{Relevant Courses}
@@ -162,7 +163,8 @@ courseworksection:
     - If there is no Course information, each line of the output should be latex comments, starting with '%'. 
       % \section{Relevant Courses}
       % \sectionsep. 
-    - Your output should be raw LaTeX code and should not be in a code block.
+    - Your output should be raw LaTeX code. 
+    - Do not provide the output in a code block.
 
     Here is the information you need and convert into LaTeX format:
   expected_output: >
@@ -181,7 +183,7 @@ skillsection:
     3. **Formatting**:
        - Use \skillsVSpace between each category to maintain visual separation.
        - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
-    4. The expected output is only the category and items, not any explanation or additional text.
+    4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
 
     Example:
     \section{Skills}
@@ -206,21 +208,17 @@ skillsection:
 
 volunteersection:
   description: >
-    Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+    Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
 
-    In your output, follow these guidelines:
-
-    - In the first line Use the command `\section{Volunteer}`.
-    
-    - Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries.
-    - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability.
-    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role.
+    In your output:
+    - The first line use the command `\section{Volunteer}`.
+    - Use `\headingtwo{}` for organization name.
+    - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration exepct the last one.
+    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`.
     - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
 
-    Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
-
     \section{VOLUNTEER}
-      \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+      \headingtwo{.dev Programming Club}
       \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
       \begin{vitemize}
         \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
@@ -229,11 +227,12 @@ volunteersection:
     \sectionsep
 
     **Conditions**:
-    - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+    - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. 
+    - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
       % \section{}
       % \sectionsep.
+    - Do not provide the output in a code block, blockquote.
 
-    Here is the information you need and convert into LaTeX format:
   expected_output: >
     blockquote is not needed for the output.
 
@@ -301,16 +300,21 @@ experiencesection:
     In the output,
     - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
 
-    - The next lines contain the experience information in the following format:
-      - The first line contains the project title. Use the command \customTitle{Project Title}.
-      - The next line contains the summary points. \summaryPoints{item 1 | item 2 | etc}.
-      - The next line contains the role and timeline. \roleAndTimeline{Role | Timeline}. 
-      - The next line contains a short description. \shortDescription{Short Description}.
-      - Use the `tightemize` environment to list the responsibilities and achievements of the project. \begin{tightemize} 
-      - change special characters like % to \% where appropriate, double backslashes to single backslashes, double stars to \textbf{}, and double underscores to \_ etc.
-      - use \item to list each responsibility or achievement.
-      - the last \item line should be any links if available. Use \href for the and \ul for the text.
-      - Use \end{tightemize} to end the list of responsibilities and achievements.
+    - List the experience information as follows:
+      -- Project or Experience title: \customTitle{Project/Experience Title}
+      -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+      -- Role and timeline: \roleAndTimeline{Role | Timeline}
+      -- Short description: \shortDescription{Short Description}
+      -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+      -- Use \item to list each responsibility or achievement.
+      -- Last \item can have a link using \href{}{}, \ul, and text.
+      -- End the tightemize \end{tightemize}.
+      -- For special characters like %, use \%, for &, use \& etc.
+
+    Limitations:
+    - If you find in total 3 experiences, the number of \items highlights must be 3 or less for each experience.
+    - If you find in total 2 experiences, the number of \items highlights must be 5 or less for each experience.
+    - If a link is provided, the last \item should have the link maintaining the limit of \items.
  
     Example:
     \section{Experience}
@@ -332,139 +336,139 @@ experiencesection:
     
   expected_output: >
 
-awards_recognitions_extraction_task:
-  description: >
+# awards_recognitions_extraction_task:
+#   description: >
 
-  expected_output: >
-    In JSON format: 
-      {
-        "Awards and Recognitions": [
-          {
-            "Award Name": "",
-            "Awarding Organization": "",
-            "Date": "",
-            "Reason": "",
-            ...
-          }, 
-          ...
-        ]
-      }
+#   expected_output: >
+#     In JSON format: 
+#       {
+#         "Awards and Recognitions": [
+#           {
+#             "Award Name": "",
+#             "Awarding Organization": "",
+#             "Date": "",
+#             "Reason": "",
+#             ...
+#           }, 
+#           ...
+#         ]
+#       }
 
-references_extraction_task:
-  description: >
+# references_extraction_task:
+#   description: >
 
-  expected_output: >
-    {
-      "References": [
-        {
-          "Name": "",
-          "Position": "",
-          "Company": "",
-          "Contact Information": "",
-          "Relationship": "",
-          ...
-        }, 
-        ...
-      ]
-    }
+#   expected_output: >
+#     {
+#       "References": [
+#         {
+#           "Name": "",
+#           "Position": "",
+#           "Company": "",
+#           "Contact Information": "",
+#           "Relationship": "",
+#           ...
+#         }, 
+#         ...
+#       ]
+#     }
 
-personal_traits_interests_extraction_task:
-  description: >
+# personal_traits_interests_extraction_task:
+#   description: >
 
-  expected_output: >
-    {
-      "Personal Traits and Interests": {
-        "Strengths": "",
-        "Hobbies": "",
-        "Passions": "",
-        ...
-      }
-    }
+#   expected_output: >
+#     {
+#       "Personal Traits and Interests": {
+#         "Strengths": "",
+#         "Hobbies": "",
+#         "Passions": "",
+#         ...
+#       }
+#     }
 
-miscellaneous_extraction_task:
-  description: >
+# miscellaneous_extraction_task:
+#   description: >
 
-  expected_output: >
-      {
-        "Miscellaneous": {
-          "Languages Spoken": "",
-          "Certifications": "",
-          "Professional Affiliations": "",
-          "Other Relevant Details": "",
-          ...
-        }
-      }
+#   expected_output: >
+#       {
+#         "Miscellaneous": {
+#           "Languages Spoken": "",
+#           "Certifications": "",
+#           "Professional Affiliations": "",
+#           "Other Relevant Details": "",
+#           ...
+#         }
+#       }
 
-split_context_of_ats_friendly_keywords_into_experiences:
-  description: >
+# split_context_of_ats_friendly_keywords_into_experiences:
+#   description: >
 
 
-  expected_output: >
+#   expected_output: >
 
-career_objective_task:
-  description: >
+# career_objective_task:
+#   description: >
 
-  expected_output: >
-    A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the applicant's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
+#   expected_output: >
+#     A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the applicant's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
 
-    In JSON format:
-      {
-        "Career Objective": "..."
-      }
+#     In JSON format:
+#       {
+#         "Career Objective": "..."
+#       }
 
-split_context_of_ats_friendly_skills_task:
-  description: >
-    Split the context provided to you at the breaking point "No Match (from job description):" or "missing_from_the_applicant_skills" whichever comes first. In your output, you will provide everything before the "No Match (from the job description):" as the final output of the task.
+# split_context_of_ats_friendly_skills_task:
+#   description: >
+#     Split the context provided to you at the breaking point "No Match (from job description):" or "missing_from_the_applicant_skills" whichever comes first. In your output, you will provide everything before the "No Match (from the job description):" as the final output of the task.
 
-    Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
+#     Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
 
-  expected_output: >
-    {
-      "applicant_skills": {
-        "exact_match_with_job_description": {
-          "Programming Languages": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Frameworks": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Tools": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Soft Skills": [
-            "item 1",
-            "item 2",
-            ...
-          ]
-        },
+#   expected_output: >
+#     {
+#       "applicant_skills": {
+#         "exact_match_with_job_description": {
+#           "Programming Languages": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ],
+#           "Frameworks": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ],
+#           "Tools": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ],
+#           "Soft Skills": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ]
+#         },
 
-        "partial_match_with_job_description": {
-          "Programming Languages": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Frameworks": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Tools": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Soft Skills": [
-            "item 1",
-            "item 2",
-            ...
-          ]
-        }
-      }
-    }
+#         "partial_match_with_job_description": {
+#           "Programming Languages": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ],
+#           "Frameworks": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ],
+#           "Tools": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ],
+#           "Soft Skills": [
+#             "item 1",
+#             "item 2",
+#             ...
+#           ]
+#         }
+#       }
+#     }

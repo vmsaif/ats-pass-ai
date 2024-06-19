@@ -812,7 +812,7 @@ ats_friendly_skills_task:
     **Task Instructions**:
 
     1. **Sources for Comparison**:
-       - Source 1: Job Description Keywords: {src_1}
+       - Source 1: Job Description Keywords. Provided at the end.
        - Source 2: Applicant's Skills and Technologies, including Frameworks, Tools, and Soft Skills, provided in the context.
 
     2. **Use of Tool**:
@@ -837,9 +837,12 @@ ats_friendly_skills_task:
     - **'Exact Match'**: Direct correlations between job requirements and applicant's stated skills.
     - **'Partial Match'**: Skills related but not identical to job requirements. You need to explain the relevance. 
       It will contain two fields:
-        - 'Skill Name': The skill from the applicant's profile.
-        - 'Relevance': To explain the relevance, You need to mention with which keyword from the job description the skill is relevant to the applicant's skills.   
+        - 'Skill Name': The skill from the job description.
+        - 'Relevance': How it is related to the applicant's profile.
     - **'No Match'**: Skills absent in the applicant's profile but listed in the job description.
+
+    Job Description Keywords:
+    {src_1}
 
   expected_output: >
     A JSON structure with three sections: 'Exact Match', 'Partial Match', and 'No Match', detailing the applicant's skills and how they align with the job description.
@@ -1217,7 +1220,7 @@ ats_friendly_keywords_into_experiences:
       - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
       - **Conciseness and Clarity:** 
         -- Limit the short description to 10-15 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
-        -- Employ powerful action verbs and succinct phrases to convey significant achievements in 1-2 compelling sentences. That is, use approximately 12-15 words per key highlight.
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 12-15 words per key highlight.
       - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
 

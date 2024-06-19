@@ -49794,3 +49794,2849 @@ agent=LaTeX Code Generator
 \begin{tightemize}
     \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
 \end{tightemize}2024-06-18 18:33:55: status=completed
+agent=LaTeX Code Generator
+2024-06-18 21:10:50: task=Convert the applicant's experience information into LaTeX format. Use appropriate section headers and LaTeX commands based on the data's nature, such as "Experience", "Project Experience", etc.
+**Format Details**: - Start with the section header using \section{Experience} or other relevant titles. - List the experience information as follows:
+  - Project title: \customTitle{Project Title}
+  - Summary points: \summaryPoints{item 1 | item 2 | etc}
+  - Role and timeline: \roleAndTimeline{Role | Timeline}
+  - Short description: \shortDescription{Short Description}
+  - Responsibilities and achievements: Use the `tightemize` environment, list each item with \item, and include special character conversions (% to \%, etc.).
+  - End with links where available using \href and \ul for text formatting.
+  
+**LaTeX Environment**: - Use \begin{tightemize} to start the list of responsibilities and \end{tightemize} to end it. - Ensure the output adheres to LaTeX syntax without any coding block quotes.
+Example: \section{Experience} \customTitle{ATS Pass AI} \summaryPoints{Python | Multiagent | AI | RAG Search} \roleAndTimeline{Resume Automation Tool - January 2024 - Present} \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.} \begin{tightemize}
+    \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions.
+    \item Developed \textbf{scalable architecture} to accommodate future enhancements.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+```JSON
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search | CrewAI | LangChain | Gemini",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization,  Data Analysis, Algorithm Development, Model Design, Generative AI",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using **AI** and **Machine Learning**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed **scalable architecture** to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "A* Algorithm | Java | Git | CI/CD",
+        "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD, Problem-Solving",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies": "AI Decision-Making | Java",
+        "skills": "Java, AI, Game Development, UI/UX Design",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-18 21:10:50: status=started
+agent=LaTeX Code Generator
+2024-06-18 21:10:59: task=\section{Work Experience}
+
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | Multiagent | AI | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+\shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+\begin{tightemize}
+\item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions.
+\item Developed \textbf{scalable architecture} to accommodate future enhancements.
+\item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\hline
+
+\customTitle{AI Path Finding}
+\summaryPoints{A* Algorithm | Java | Git | CI/CD}
+\roleAndTimeline{Ant Path Finding - July 2023 - September 2023}
+\shortDescription{Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.}
+\begin{tightemize}
+\item Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+\item Utilized Git for version control, ensuring efficient team collaboration and code management.
+\item Utilized CI/CD practices, resulting in a 50\% reduction in deployment time.
+\item Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+\end{tightemize}
+
+\hline
+
+\customTitle{Connect 4 Game}
+\summaryPoints{AI Decision-Making | Java}
+\roleAndTimeline{February 2023 - April 2023}
+\shortDescription{Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.}
+\begin{tightemize}
+\item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+\end{tightemize}2024-06-18 21:10:59: status=completed
+agent=LaTeX Code Generator
+2024-06-18 21:15:47: task=Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+In the output, - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+- List the experience information as follows:
+  -- Project or Experience title: \customTitle{Project/Experience Title}
+  -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+  -- Role and timeline: \roleAndTimeline{Role | Timeline}
+  -- Short description: \shortDescription{Short Description}
+  -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+  -- Use \item to list each responsibility or achievement.
+  -- Last \item can have a link using \href{}{}, \ul, and text.
+  -- End the tightemize \end{tightemize}.
+
+Example: \section{Experience} \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+```JSON
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search | CrewAI | LangChain | Gemini",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization,  Data Analysis, Algorithm Development, Model Design, Generative AI",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using **AI** and **Machine Learning**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed **scalable architecture** to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "A* Algorithm | Java | Git | CI/CD",
+        "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD, Problem-Solving",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies": "AI Decision-Making | Java",
+        "skills": "Java, AI, Game Development, UI/UX Design",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-18 21:15:47: status=started
+agent=LaTeX Code Generator
+2024-06-18 21:15:57: task=\section{Project Experience}
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | Multiagent | AI | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+\shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+\begin{tightemize}
+    \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+    \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{A* Algorithm | Java | Git | CI/CD}
+\roleAndTimeline{Jul 2023 - Sep 2023}
+
+\shortDescription{Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing \textbf{Git} for version control and \textbf{CI/CD} practices.}
+
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+    \item Utilized Git for version control, ensuring efficient team collaboration and code management.
+    \item Utilized CI/CD practices, resulting in a 50% reduction in deployment time.
+    \item Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+\end{tightemize}
+
+\customTitle{Connect 4 Game}
+\summaryPoints{AI Decision-Making | Java}
+\roleAndTimeline{February 2023 - April 2023}
+
+\shortDescription{Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in \textbf{AI Decision-Making} and \textbf{Java programming}.}
+
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+\end{tightemize}2024-06-18 21:15:57: status=completed
+agent=LaTeX Code Generator
+2024-06-18 21:18:02: task=Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+In the output, - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+- List the experience information as follows:
+  -- Project or Experience title: \customTitle{Project/Experience Title}
+  -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+  -- Role and timeline: \roleAndTimeline{Role | Timeline}
+  -- Short description: \shortDescription{Short Description}
+  -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+  -- Use \item to list each responsibility or achievement.
+  -- Last \item can have a link using \href{}{}, \ul, and text.
+  -- End the tightemize \end{tightemize}.
+  -- For special characters like %, use \%, for &, use \& etc.
+
+Example: \section{Experience} \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+```JSON
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search | CrewAI | LangChain | Gemini",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization,  Data Analysis, Algorithm Development, Model Design, Generative AI",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using **AI** and **Machine Learning**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed **scalable architecture** to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "A* Algorithm | Java | Git | CI/CD",
+        "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD, Problem-Solving",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies": "AI Decision-Making | Java",
+        "skills": "Java, AI, Game Development, UI/UX Design",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-18 21:18:02: status=started
+agent=LaTeX Code Generator
+2024-06-18 21:18:13: task=\section{Experience}
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | Multiagent | AI | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+\shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+\begin{tightemize}
+    \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+    \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\vspace{20pt}
+\section{Project Experience}
+\customTitle{AI Path Finding}
+\summaryPoints{A* Algorithm | Java | Git | CI/CD}
+\roleAndTimeline{AI Game Development - July 2023 - September 2023}
+
+\shortDescription{Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.}
+
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+    \item Utilized Git for version control, ensuring efficient team collaboration and code management.
+    \item Utilized CI/CD practices, resulting in a 50% reduction in deployment time.
+    \item Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+\end{tightemize}
+
+\vspace{20pt}
+\customTitle{Connect 4 Game}
+\summaryPoints{AI Decision-Making | Java}
+\roleAndTimeline{Game Development - February 2023 - April 2023}
+
+\shortDescription{Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.}
+
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+\end{tightemize}2024-06-18 21:18:13: status=completed
+agent=LaTeX Code Generator
+2024-06-18 21:22:46: task=Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+In the output, - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+- List the experience information as follows:
+  -- Project or Experience title: \customTitle{Project/Experience Title}
+  -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+  -- Role and timeline: \roleAndTimeline{Role | Timeline}
+  -- Short description: \shortDescription{Short Description}
+  -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+  -- Use \item to list each responsibility or achievement.
+  -- Last \item can have a link using \href{}{}, \ul, and text.
+  -- End the tightemize \end{tightemize}.
+  -- For special characters like %, use \%, for &, use \& etc.
+
+Example: \section{Experience} \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+```JSON
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search | CrewAI | LangChain | Gemini",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization,  Data Analysis, Algorithm Development, Model Design, Generative AI",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using **AI** and **Machine Learning**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed **scalable architecture** to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "A* Algorithm | Java | Git | CI/CD",
+        "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD, Problem-Solving",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies": "AI Decision-Making | Java",
+        "skills": "Java, AI, Game Development, UI/UX Design",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-18 21:22:46: status=started
+agent=LaTeX Code Generator
+2024-06-18 21:23:03: task=\section{Project Experience}
+\customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using \textbf{AI} and \textbf{Machine Learning}.}
+
+    \begin{tightemize}
+        \item Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+        \item Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.
+        \item Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85\% keyword alignment and optimizing resumes for ATS.
+        \item Developed \textbf{scalable architecture} to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+\customTitle{AI Path Finding}
+    \summaryPoints{A* Algorithm | Java | Git | CI/CD}
+    \roleAndTimeline{Jul 2023 - Sep 2023}
+
+    \shortDescription{Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing \textbf{Git} for version control and \textbf{CI/CD} practices.}
+
+    \begin{tightemize}
+        \item Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+        \item Utilized Git for version control, ensuring efficient team collaboration and code management.
+        \item Utilized CI/CD practices, resulting in a 50\% reduction in deployment time.
+        \item Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+        \item Project repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+    \end{tightemize}
+\customTitle{Connect 4 Game}
+    \summaryPoints{AI Decision-Making | Java}
+    \roleAndTimeline{February 2023 - April 2023}
+
+    \shortDescription{Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in \textbf{AI Decision-Making} and \textbf{Java programming}.}
+
+    \begin{tightemize}
+        \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+        \item Project repository available here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{GitHub}}.
+    \end{tightemize}2024-06-18 21:23:03: status=completed
+agent=LaTeX Code Generator
+2024-06-18 21:24:09: task=Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+In the output, - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+- List the experience information as follows:
+  -- Project or Experience title: \customTitle{Project/Experience Title}
+  -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+  -- Role and timeline: \roleAndTimeline{Role | Timeline}
+  -- Short description: \shortDescription{Short Description}
+  -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+  -- Use \item to list each responsibility or achievement. Maximum 3 items.
+  -- Last \item can have a link using \href{}{}, \ul, and text.
+  -- End the tightemize \end{tightemize}.
+  -- For special characters like %, use \%, for &, use \& etc.
+
+Example: \section{Experience} \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+```JSON
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search | CrewAI | LangChain | Gemini",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization,  Data Analysis, Algorithm Development, Model Design, Generative AI",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using **AI** and **Machine Learning**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed **scalable architecture** to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "A* Algorithm | Java | Git | CI/CD",
+        "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD, Problem-Solving",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing **Git** for version control and **CI/CD** practices.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies": "AI Decision-Making | Java",
+        "skills": "Java, AI, Game Development, UI/UX Design",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in **AI Decision-Making** and **Java programming**.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-18 21:24:09: status=started
+agent=LaTeX Code Generator
+2024-06-18 21:24:21: task=\section{Project Experience}
+\customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency and demonstrating cutting-edge technical and analytical capabilities using \textbf{AI} and \textbf{Machine Learning}.}
+
+    \begin{tightemize}
+        \item Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+        \item Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.
+        \item Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85\% keyword alignment and optimizing resumes for ATS.
+    \end{tightemize}
+
+\customTitle{AI Path Finding}
+    \summaryPoints{A* Algorithm | Java | Git | CI/CD}
+    \roleAndTimeline{Jul 2023 - Sep 2023}
+
+    \shortDescription{Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, utilizing \textbf{Git} for version control and \textbf{CI/CD} practices.}
+
+    \begin{tightemize}
+        \item Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+        \item Utilized Git for version control, ensuring efficient team collaboration and code management.
+        \item Utilized CI/CD practices, resulting in a 50\% reduction in deployment time. 
+    \end{tightemize}
+
+\customTitle{Connect 4 Game}
+    \summaryPoints{AI Decision-Making | Java}
+    \roleAndTimeline{February 2023 - April 2023}
+
+    \shortDescription{Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, showcasing skills in \textbf{AI Decision-Making} and \textbf{Java programming}.}
+
+    \begin{tightemize}
+        \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+    \end{tightemize}2024-06-18 21:24:21: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:05:30: task=Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,  - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}. - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol. - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province. - Pipeline '|' should be used to separate the data and must not be the last character of the output. - The output should be raw latex code and should not be in a code block.
+Example: \namesection{Saif}{Mahmud} {
+  \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+  \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+}
+Here is the information you need and convert into LaTeX format:
+
+
+{
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": "https://github.com/vmsaif",
+    "Address": "Winnipeg, MB",
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-06-19 09:05:30: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:05:33: task=\namesection{Saif}{Mahmud} {
+  \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+  \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+}2024-06-19 09:05:33: status=completed
+agent=All Purpose Agent2024-06-19 09:05:33: task=Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+
+
+About the job
+Artificial Intelligence Engineer
+
+About Radical AI:
+
+Radical AI Principles
+We recognize that power is distributed unevenly, and People of Color, Black, Indigenous, Women, Queer, Trans, Gender Non-Conforming, Poor, Dis-abled, and other communities are pushed to the margins. We commit to resisting these interlocking systems of oppression, including Racism, Coloniality, Casteism, Heteropatriarchy, Capitalism, and Ableism. We commit to striving toward collective liberation.1
+We center radical work by communities at the margins.
+We recognize that all technologies rearrange power.
+We are critical of how AI shifts power. In particular, we recognize AI is frequently extractive, exploitative, surveilling, controlling, prescriptive, and reductionist. We recognize AI frequently prevents consent, deliberation, investigation, intervention, resistance, and agency.
+We recognize the privilege of being adjacent to institutions creating technologies. We use this privilege to step up to expose oppressive technologies and to center those harmed, and to step back, ceding power, listening, and co-conspiring when those voices speak.
+We value dreaming up and building human/AI systems that put power in the hands of the people. We recognize this is vulnerable and important work.
+We recognize that reforming harmful AI can reduce harm to some while legitimizing (“ethics-washing”) systems still harming others2. Only by understanding the root of the harm and centering those most impacted can we make these complex tactical decisions, deciding when to minimize harm done by AI and when to call for its abolition3. We recognize that no one has a ‘view from nowhere’4. We practice reflexivity, naming who we are, how who we are influences what we do, and whose perspectives are missing.
+
+At the Radical AI for Social Good Lab, we’re dedicated to leveraging AI responsibly. Our core mission is to democratize AI technology, making it a catalyst for education, social mobility, and equitable progress across global communities.
+Role Overview:
+
+Join our Virtual Internship as an Artificial Intelligence Engineer. This role is a deep dive into the realms of machine learning, deep learning, generative AI, and natural language processing. You will contribute to generative AI projects and enhance your skills in a dynamic, virtual environment.
+Key Responsibilities:
+
+Design and develop innovative AI models.
+Analyze and preprocess data for machine learning applications.
+Collaborate with AI teams to enhance algorithms and models.
+Present research findings and engage in critical team discussions.
+Contribute to the development of our AI virtual agents.
+Program Highlights:
+
+Duration: 3 months, with flexible start dates between March and July 2024.
+Access: Full use of the Radical AI Platform.
+Feedback: Direct feedback from the Radical AI Core Team.
+Technologies Engaged:
+OpenAI API
+Meta Llama 2
+Google Gemini
+LangChain
+Google Gen AI Studio
+Python
+Requirements:
+
+Bachelor’s or Master’s in Computer Science, AI, or related fields.
+Profound knowledge of AI, machine learning, and NLP.
+Expertise in Python and AI development frameworks like TensorFlow or PyTorch.
+Strong analytical, problem-solving, and creative thinking skills.
+Excellent communication and teamwork abilities.
+Additional Information:
+
+Unpaid position with remote work setup.
+Stable internet connection required.
+Radical AI is an equal opportunity organization, committed to diversity and inclusion.2024-06-19 09:05:33: status=started
+agent=All Purpose Agent2024-06-19 09:05:37: task=**Summary of Artificial Intelligence Engineer Job Description**
+
+**Essential Responsibilities:**
+
+* Design, develop, and innovate AI models
+* Analyze and prepare data for machine learning applications
+* Collaborate with AI teams to enhance algorithms and models
+* Present research findings and contribute to discussions
+* Contribute to the development of AI virtual agents
+
+**Essential Qualifications:**
+
+* Bachelor's or Master's degree in Computer Science, AI, or related field
+* Extensive knowledge of AI, machine learning, and NLP
+* Expertise in Python and AI development frameworks (TensorFlow, PyTorch)
+* Strong analytical, problem-solving, and creative thinking skills
+* Excellent communication and teamwork abilities2024-06-19 09:05:37: status=completed
+agent=Resume Content Selector2024-06-19 09:05:37: task=Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with job specifications provided.
+**Applicant's Data Includes**: - Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous
+**Procedure**: 1. **Assess Relevance**: Match each section's relevance to the job description. 2. **Prioritization**:
+   - Always include at **least one "Reference"** if available. Choose the most relevant ones.
+   - Prioritize recent and impactful achievements and qualifications.
+3. **Selection Strategy**:
+   - Target sections directly related to job skills and qualifications.
+   - Emphasize Education and Awards for their impact.
+   - Include broader sections like Personal Traits only if they offer significant advantages.
+4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete.
+**Output Expectations**: Generate a JSON object detailing the selected and omitted sections.
+# Provided data: ## Applicant's Information:  {
+"applicant Profile": {
+"Personal Details": {
+"Full Name": "Saif Mahmud",
+"Phone Number": "204 955 5064",
+"Email": "msaifofficial@gmail.com",
+"LinkedIn": "linkedin.com/in/vmsaif",
+"Other Social Media Profiles": null,
+"Personal Website": "saifmahmud.dev",
+"Portfolio": "https://saifmahmud.dev/",
+"GitHub": "https://github.com/vmsaif",
+"Address": "Winnipeg, MB",
+"City": "Winnipeg",
+"State": "MB",
+"Zip Code": null,
+"Country": null
+},
+"Education": {
+"Degree": "BSc",
+"Major": "Computer Science",
+"University": "University of Manitoba",
+"Location": null,
+"Graduation Date": "October 2023",
+"GPA": "3.07",
+"Honors/Distinctions": null
+},
+"Volunteer Work": [
+{
+"Organization Name": ".dev Programming Club",
+"Role": "Active Member",
+"Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
+"Timeline": "2019-2023"
+}
+],
+"Awards and Recognitions": [],
+"References": [
+{
+"Name": "Abu Kabir",
+"Position": "Director IT Service Management",
+"Company": "Microsoft",
+"Contact Information": "204-298-3693",
+"Relationship": null
+},
+{
+"Name": "Safiur Mahdi",
+"Position": "Java Developer",
+"Company": "Skip the Dishes",
+"Contact Information": "204-583-3432",
+"Relationship": null
+}
+],
+"Personal Traits and Interests": {
+"Strengths": null,
+"Weaknesses": null,
+"Hobbies": null,
+"Passions": null
+},
+"Miscellaneous": {
+"Languages Spoken": null,
+"Certifications": null,
+"Professional Affiliations": null,
+"Other Relevant Details": null
+}
+}
+}
+## Job Description Keywords:  Provided in the context.
+
+
+ Relevant Courses{
+  "Relevant Coursework (to the Job Description)": [
+    "AI and Game Development (Java | Python)",
+    "Software Engineering (Java | Unit Testing)",
+    "Database Implementation (SQL | Python)",
+    "Distributed Computing (Python | JavaScript)",
+    "Data Structures and Algorithms (Java)"
+  ]
+}2024-06-19 09:05:37: status=started
+agent=Resume Content Selector2024-06-19 09:05:46: task={
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "institution": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
+        }
+      ]
+    },
+    {
+      "section": "Volunteer Work",
+      "sub_sections": [
+        {
+          "organization": ".dev Programming Club",
+          "role": "Active Member",
+          "responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
+          "timeline": "2019-2023"
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
+        },
+        {
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432 | Winnipeg, MB"
+        }
+      ]
+    }
+  ],
+  "omitted_sections": [
+    {
+      "section": "Awards and Recognitions",
+      "reason": "No relevant awards or recognitions provided."
+    },
+    {
+      "section": "Personal Traits and Interests",
+      "reason": "Limited relevance to the job requirements."
+    }
+  ]
+}2024-06-19 09:05:46: status=completed
+agent=All Purpose Agent2024-06-19 09:05:46: task=You are provided with a JSON object from the previous context that contains the "selected_sections" and "omitted_sections". Split the context provided to you at the point "omitted_sections". In your output, you will provide everything before the "omitted_sections" as the final output of the task. Do not change the format of the JSON object.
+2024-06-19 09:05:46: status=started
+agent=All Purpose Agent2024-06-19 09:05:52: task={
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "institution": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
+        }
+      ]
+    },
+    {
+      "section": "Volunteer Work",
+      "sub_sections": [
+        {
+          "organization": ".dev Programming Club",
+          "role": "Active Member",
+          "responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
+          "timeline": "2019-2023"
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
+        },
+        {
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432 | Winnipeg, MB"
+        }
+      ]
+    }
+  ]
+}2024-06-19 09:05:52: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:05:52: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output, - The first line contains the section named "Education". Use the command \section{Education}. - The next lines contain the educational information in the following format:
+  - The first line contains the institution name. Use the command \customTitle{Institution Name}.
+  - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+  - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+  - The next line contains the command \newEntryVSpace to separate the education. Only use this command if there are multiple educations. Otherwise, do not use this command.
+  - Do not choose more than two educations. Choose the most recent ones.
+
+Example:
+\section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.   
+\sectionsep % use it at the end to separate the sections.
+Conditions: - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+  % No education information provided. 
+- Your output should be raw LaTeX code and should not be in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:05:52: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:06:59: task=\section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+\sectionsep % use it at the end to separate the sections.2024-06-19 09:06:59: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:06:59: task=Extract the coursework information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}. - The next lines contain the coursework information in the following format:
+  - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
+  - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
+  - Use the command \sectionsep at the end to separate the coursework from other sections.
+
+Example: \section{Relevant Courses} \body{
+    Operating Systems (Linux | C) \\
+    Distributed Computing (Python) \\
+    Database Implementation (Python | SQL) \\
+    Data Structures and Algorithms (Java) \\
+    Object Orientation (Java | C++) \\
+    Software Engineering (Java | Unit Testing)
+} \sectionsep
+Conditions: - If there is no Course information, each line of the output should be latex comments, starting with '%'. 
+  % \section{Relevant Courses}
+  % \sectionsep. 
+- Your output should be raw LaTeX code and should not be in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:06:59: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:07:01: task=\% \section{Relevant Courses}
+\% \sectionsep2024-06-19 09:07:01: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:07:01: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- In the first line Use the command `\section{Volunteer}`.
+- Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries. - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:07:01: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:07:04: task=\section{VOLUNTEER}
+\subsection{.dev Programming Club}
+\subTitle{Active Member | 2019-2023}
+\begin{vitemize}
+\item Engaged with the latest software development technologies and tools.
+\item Collaborated on team projects focused on Java and Cloud Technologies.
+\end{vitemize}
+\sectionsep2024-06-19 09:07:04: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:07:04: task=Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the reference information in the following format:
+  - Start with the command \section{Reference} for the name of the reference.
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference.
+  - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+  - Do not choose more than two references. Choose the most relevant ones.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+  Do Nothing else. Keep the output empty.
+- Your output should follow latex syntax, no need for any code block quotes.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:07:04: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:08:12: task=\section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Java Developer}
+    \subTitle{Skip the Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep2024-06-19 09:08:12: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:08:12: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 09:08:12: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:08:16: task=\section{Skills}
+\subTitle{Programming Languages:} 
+\body{Python \textbullet{} Java} \skillsVSpace
+\subTitle{AI and ML Skills:} 
+\body{AI \textbullet{} Gemini \textbullet{} Multiagent \textbullet{} RAG Search} \skillsVSpace
+\subTitle{Cloud and DevOps:} 
+\body{Docker} \skillsVSpace
+\subTitle{Data Skills:} 
+\body{SQL} \skillsVSpace
+\subTitle{Soft Skills:} 
+\body{Collaboration} \sectionsep2024-06-19 09:08:16: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:08:16: task=Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section named "Career Objective". Use the command \section{Career Objective}. - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+Example: \section{Career Goal}
+    \careerGoalBody{
+        Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+- Output should be raw LaTeX code and should not be in a code block.
+
+
+{
+"Career Objective": "Innovative and analytical AI Engineer with a proven track record in developing and optimizing AI models, seeking to contribute to Radical AI's mission of democratizing AI and driving social good. Seeking the Artificial Intelligence Engineer position at Radical AI where I can"
+}2024-06-19 09:08:16: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:09:57: task=Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,  - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}. - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol. - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province. - Pipeline '|' should be used to separate the data and must not be the last character of the output. - The output should be raw latex code and should not be in a code block.
+Example: \namesection{Saif}{Mahmud} {
+  \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+  \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+}
+Here is the information you need and convert into LaTeX format:
+
+
+{
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": "https://github.com/vmsaif",
+    "Address": "Winnipeg, MB",
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-06-19 09:09:57: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:00: task=\namesection{Saif}{Mahmud} {
+  \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+  \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+}2024-06-19 09:10:00: status=completed
+agent=All Purpose Agent2024-06-19 09:10:00: task=Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+
+
+About the job
+Artificial Intelligence Engineer
+
+About Radical AI:
+
+Radical AI Principles
+We recognize that power is distributed unevenly, and People of Color, Black, Indigenous, Women, Queer, Trans, Gender Non-Conforming, Poor, Dis-abled, and other communities are pushed to the margins. We commit to resisting these interlocking systems of oppression, including Racism, Coloniality, Casteism, Heteropatriarchy, Capitalism, and Ableism. We commit to striving toward collective liberation.1
+We center radical work by communities at the margins.
+We recognize that all technologies rearrange power.
+We are critical of how AI shifts power. In particular, we recognize AI is frequently extractive, exploitative, surveilling, controlling, prescriptive, and reductionist. We recognize AI frequently prevents consent, deliberation, investigation, intervention, resistance, and agency.
+We recognize the privilege of being adjacent to institutions creating technologies. We use this privilege to step up to expose oppressive technologies and to center those harmed, and to step back, ceding power, listening, and co-conspiring when those voices speak.
+We value dreaming up and building human/AI systems that put power in the hands of the people. We recognize this is vulnerable and important work.
+We recognize that reforming harmful AI can reduce harm to some while legitimizing (“ethics-washing”) systems still harming others2. Only by understanding the root of the harm and centering those most impacted can we make these complex tactical decisions, deciding when to minimize harm done by AI and when to call for its abolition3. We recognize that no one has a ‘view from nowhere’4. We practice reflexivity, naming who we are, how who we are influences what we do, and whose perspectives are missing.
+
+At the Radical AI for Social Good Lab, we’re dedicated to leveraging AI responsibly. Our core mission is to democratize AI technology, making it a catalyst for education, social mobility, and equitable progress across global communities.
+Role Overview:
+
+Join our Virtual Internship as an Artificial Intelligence Engineer. This role is a deep dive into the realms of machine learning, deep learning, generative AI, and natural language processing. You will contribute to generative AI projects and enhance your skills in a dynamic, virtual environment.
+Key Responsibilities:
+
+Design and develop innovative AI models.
+Analyze and preprocess data for machine learning applications.
+Collaborate with AI teams to enhance algorithms and models.
+Present research findings and engage in critical team discussions.
+Contribute to the development of our AI virtual agents.
+Program Highlights:
+
+Duration: 3 months, with flexible start dates between March and July 2024.
+Access: Full use of the Radical AI Platform.
+Feedback: Direct feedback from the Radical AI Core Team.
+Technologies Engaged:
+OpenAI API
+Meta Llama 2
+Google Gemini
+LangChain
+Google Gen AI Studio
+Python
+Requirements:
+
+Bachelor’s or Master’s in Computer Science, AI, or related fields.
+Profound knowledge of AI, machine learning, and NLP.
+Expertise in Python and AI development frameworks like TensorFlow or PyTorch.
+Strong analytical, problem-solving, and creative thinking skills.
+Excellent communication and teamwork abilities.
+Additional Information:
+
+Unpaid position with remote work setup.
+Stable internet connection required.
+Radical AI is an equal opportunity organization, committed to diversity and inclusion.2024-06-19 09:10:00: status=started
+agent=All Purpose Agent2024-06-19 09:10:05: task=**Artificial Intelligence Engineer**
+
+**Responsibilities:**
+
+* Design and develop innovative AI models
+* Analyze and preprocess data for machine learning applications
+* Collaborate with AI teams to enhance algorithms and models
+* Present research findings and engage in critical team discussions
+* Contribute to the development of AI virtual agents
+
+**Qualifications:**
+
+* Bachelor's or Master's in Computer Science, AI, or related fields
+* Profound knowledge of AI, machine learning, and NLP
+* Expertise in Python and AI development frameworks like TensorFlow or PyTorch
+* Strong analytical, problem-solving, and creative thinking skills
+* Excellent communication and teamwork abilities2024-06-19 09:10:05: status=completed
+agent=Resume Content Selector2024-06-19 09:10:05: task=Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with job specifications provided.
+**Applicant's Data Includes**: - Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous
+**Procedure**: 1. **Assess Relevance**: Match each section's relevance to the job description. 2. **Prioritization**:
+   - Always include at **least one "Reference"** if available. Choose the most relevant ones.
+   - Prioritize recent and impactful achievements and qualifications.
+3. **Selection Strategy**:
+   - Target sections directly related to job skills and qualifications.
+   - Emphasize Education and Awards for their impact.
+   - Include broader sections like Personal Traits only if they offer significant advantages.
+4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete.
+**Output Expectations**: Generate a JSON object detailing the selected and omitted sections.
+# Provided data: ## Applicant's Information:  {
+"applicant Profile": {
+"Personal Details": {
+"Full Name": "Saif Mahmud",
+"Phone Number": "204 955 5064",
+"Email": "msaifofficial@gmail.com",
+"LinkedIn": "linkedin.com/in/vmsaif",
+"Other Social Media Profiles": null,
+"Personal Website": "saifmahmud.dev",
+"Portfolio": "https://saifmahmud.dev/",
+"GitHub": "https://github.com/vmsaif",
+"Address": "Winnipeg, MB",
+"City": "Winnipeg",
+"State": "MB",
+"Zip Code": null,
+"Country": null
+},
+"Education": {
+"Degree": "BSc",
+"Major": "Computer Science",
+"University": "University of Manitoba",
+"Location": null,
+"Graduation Date": "October 2023",
+"GPA": "3.07",
+"Honors/Distinctions": null
+},
+"Volunteer Work": [
+{
+"Organization Name": ".dev Programming Club",
+"Role": "Active Member",
+"Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
+"Timeline": "2019-2023"
+}
+],
+"Awards and Recognitions": [],
+"References": [
+{
+"Name": "Abu Kabir",
+"Position": "Director IT Service Management",
+"Company": "Microsoft",
+"Contact Information": "204-298-3693",
+"Relationship": null
+},
+{
+"Name": "Safiur Mahdi",
+"Position": "Java Developer",
+"Company": "Skip the Dishes",
+"Contact Information": "204-583-3432",
+"Relationship": null
+}
+],
+"Personal Traits and Interests": {
+"Strengths": null,
+"Weaknesses": null,
+"Hobbies": null,
+"Passions": null
+},
+"Miscellaneous": {
+"Languages Spoken": null,
+"Certifications": null,
+"Professional Affiliations": null,
+"Other Relevant Details": null
+}
+}
+}
+## Job Description Keywords:  Provided in the context.
+
+
+ Relevant Courses{
+  "Relevant Coursework (to the Job Description)": [
+    "AI and Game Development (Java | Python)",
+    "Software Engineering (Java | Unit Testing)",
+    "Database Implementation (SQL | Python)",
+    "Distributed Computing (Python | JavaScript)",
+    "Data Structures and Algorithms (Java)"
+  ]
+}2024-06-19 09:10:05: status=started
+agent=Resume Content Selector2024-06-19 09:10:13: task={
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "institution": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
+        },
+        {
+          "institution": null,
+          "degree": "Relevant Coursework",
+          "graduation_status": null,
+          "graduation_date": null
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
+        },
+        {
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432 | Winnipeg, MB"
+        }
+      ]
+    }
+  ],
+  "omitted_sections": [
+    {
+      "section": "Volunteer Work",
+      "reason": "Limited relevance to the job requirements."
+    },
+    {
+      "section": "Awards and Recognitions",
+      "reason": "No awards or recognitions directly related to AI or machine learning."
+    },
+    {
+      "section": "Personal Traits and Interests",
+      "reason": "Limited relevance to the job requirements."
+    },
+    {
+      "section": "Miscellaneous",
+      "reason": "No relevant certifications or professional affiliations."
+    }
+  ]
+}2024-06-19 09:10:13: status=completed
+agent=All Purpose Agent2024-06-19 09:10:13: task=You are provided with a JSON object from the previous context that contains the "selected_sections" and "omitted_sections". Split the context provided to you at the point "omitted_sections". In your output, you will provide everything before the "omitted_sections" as the final output of the task. Do not change the format of the JSON object.
+2024-06-19 09:10:13: status=started
+agent=All Purpose Agent2024-06-19 09:10:18: task={
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "institution": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
+        },
+        {
+          "institution": null,
+          "degree": "Relevant Coursework",
+          "graduation_status": null,
+          "graduation_date": null
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
+        },
+        {
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432 | Winnipeg, MB"
+        }
+      ]
+    }
+  ]
+}2024-06-19 09:10:18: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:18: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output, - The first line contains the section named "Education". Use the command \section{Education}. - The next lines contain the educational information in the following format:
+  - The first line contains the institution name. Use the command \customTitle{Institution Name}.
+  - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+  - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+  - The next line contains the command \newEntryVSpace to separate the education. Only use this command if there are multiple educations. Otherwise, do not use this command.
+  - Do not choose more than two educations. Choose the most recent ones.
+
+Example:
+\section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.   
+\sectionsep % use it at the end to separate the sections.
+Conditions: - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+  % No education information provided. 
+- Your output should be raw LaTeX code and should not be in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:10:18: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:20: task=% \section{Education}
+\customTitle{University of Manitoba}
+\semiTitle{BSc Major in Computer Science}
+\subTitle{Graduated, October 2023}
+
+\newEntryVSpace
+\customTitle{Relevant Coursework}
+\semiTitle{Degree Not Provided}
+\subTitle{Graduation Status Not Provided, Graduation Date Not Provided}
+
+\sectionsep2024-06-19 09:10:20: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:20: task=Extract the coursework information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}. - The next lines contain the coursework information in the following format:
+  - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
+  - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
+  - Use the command \sectionsep at the end to separate the coursework from other sections.
+
+Example: \section{Relevant Courses} \body{
+    Operating Systems (Linux | C) \\
+    Distributed Computing (Python) \\
+    Database Implementation (Python | SQL) \\
+    Data Structures and Algorithms (Java) \\
+    Object Orientation (Java | C++) \\
+    Software Engineering (Java | Unit Testing)
+} \sectionsep
+Conditions: - If there is no Course information, each line of the output should be latex comments, starting with '%'. 
+  % \section{Relevant Courses}
+  % \sectionsep. 
+- Your output should be raw LaTeX code and should not be in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:10:20: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:22: task=```
+% \section{Relevant Courses}
+% \sectionsep
+```2024-06-19 09:10:22: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:22: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- In the first line Use the command `\section{Volunteer}`.
+- Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries. - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:10:22: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:24: task=```
+% \section{}
+% \sectionsep
+```2024-06-19 09:10:24: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:24: task=Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the reference information in the following format:
+  - Start with the command \section{Reference} for the name of the reference.
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference.
+  - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+  - Do not choose more than two references. Choose the most relevant ones.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+  Do Nothing else. Keep the output empty.
+- Your output should follow latex syntax, no need for any code block quotes.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 09:10:24: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:27: task=\section{References}
+\subsection{Abu Kabir}
+\subTitle{Director, IT Service Management}
+\subTitle{Microsoft Corporation}
+\body{204-298-3693 | Winnipeg, MB}
+
+\newEntryVSpace
+
+\subsection{Safiur Mahdi}
+\subTitle{Java Developer}
+\subTitle{Skip the Dishes}
+\body{204-583-3432 | Winnipeg, MB}2024-06-19 09:10:27: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:27: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 09:10:27: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:30: task=% \section{Skills}
+\subTitle{Programming Languages:} \body{Python \textbullet{} Java} \skillsVSpace
+\subTitle{AI and ML Skills:} \body{AI \textbullet{} Gemini \textbullet{} RAG Search} \skillsVSpace
+\subTitle{Cloud and DevOps:} \body{Docker} \skillsVSpace
+\subTitle{Data Skills:} \body{SQL} \skillsVSpace
+\subTitle{Soft Skills:} \body{Collaboration} \skillsVSpace
+\sectionsep2024-06-19 09:10:30: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:30: task=Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section named "Career Objective". Use the command \section{Career Objective}. - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+Example: \section{Career Goal}
+    \careerGoalBody{
+        Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+- Output should be raw LaTeX code and should not be in a code block.
+
+
+{
+"Career Objective": "Innovative and analytical AI Engineer with a proven track record in developing and optimizing AI models, seeking to contribute to Radical AI's mission of democratizing AI and driving social good. Seeking the Artificial Intelligence Engineer position at Radical AI where I can"
+}2024-06-19 09:10:30: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:32: task=\section{Career Objective}
+\careerGoalBody{
+Innovative and analytical AI Engineer with a proven track record in developing and optimizing AI models, seeking to contribute to Radical AI's mission of democratizing AI and driving social good. Seeking the Artificial Intelligence Engineer position at Radical AI where I can}2024-06-19 09:10:32: status=completed
+agent=LaTeX Code Generator
+2024-06-19 09:10:32: task=Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+In the output, - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+- List the experience information as follows:
+  -- Project or Experience title: \customTitle{Project/Experience Title}
+  -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+  -- Role and timeline: \roleAndTimeline{Role | Timeline}
+  -- Short description: \shortDescription{Short Description}
+  -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+  -- Use \item to list each responsibility or achievement. Maximum 3 items.
+  -- Last \item can have a link using \href{}{}, \ul, and text.
+  -- End the tightemize \end{tightemize}.
+  -- For special characters like %, use \%, for &, use \& etc.
+
+Example: \section{Experience} \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes for enhanced job search efficiency."
+    }
+  },
+  "Work Experience/Project Experience": {
+    "AI Path Finding": {
+      "Project Title": "AI Path Finding",
+      "Timeline": "Jul 2023 - Sep 2023",
+      "Duration": "3 months",
+      "Technologies": "A* Algorithm | Java | Git | CI/CD",
+      "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Short Description": "Developed a Java-based AI-driven game leveraging the A* algorithm for pathfinding."
+    },
+    "Reversible Learning APP": {
+      "Project Title": "Reversible Learning APP",
+      "Timeline": "January 2021 - April 2021",
+      "Duration": "4 months",
+      "Technologies": "SQL | Android Studio | Java",
+      "skills": "Android Studio, Java, SQL, UI/UX Design, Database Management",
+      "Link": "https://github.com/vmsaif/reversibleLearning",
+      "Short Description": "Collaborated on the development of 'Reversible Learning', an Android app for enhancing study habits."
+    }
+  }
+}2024-06-19 09:10:32: status=started
+agent=LaTeX Code Generator
+2024-06-19 09:10:41: task=\section{Experience}
+\customTitle{ATS Pass AI}
+\summaryPoints{Multiagent | AI | Python | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+\shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+\begin{tightemize}
+\item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+\item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+\item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{A* Algorithm | Java | Git | CI/CD}
+\roleAndTimeline{July 2023 - September 2023}
+
+\shortDescription{Developed a Java-based AI-driven game leveraging the A* algorithm for pathfinding.}
+
+\begin{tightemize}
+\item Implemented the A* pathfinding algorithm within a game environment, demonstrating strong understanding of AI techniques and game development principles.
+\item Streamlined game development workflow by integrating Git and implementing CI/CD, ensuring code quality and efficient collaboration.
+\item Project repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{Reversible Learning APP}
+\summaryPoints{SQL | Android Studio | Java}
+\roleAndTimeline{January 2021 - April 2021}
+
+\shortDescription{Collaborated on the development of 'Reversible Learning', an Android app for enhancing study habits.}
+
+\begin{tightemize}
+\item Designed and developed Android app modules, including UI/UX, database integration, and user interactions.
+\item Contributed to the implementation of features using Java and SQL, showcasing proficiency in Android development and database management.
+\item Assisted in app testing and debugging, ensuring app stability and high user experience.
+\item Project repository available here on \href{https://github.com/vmsaif/reversibleLearning}{\ul{GitHub}}.
+\end{tightemize}2024-06-19 09:10:41: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:13: task=Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,  - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}. - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol. - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province. - Pipeline '|' should be used to separate the data and must not be the last character of the output. - The output should be raw latex code and should not be in a code block.
+Example: \namesection{Saif}{Mahmud} {
+  \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+  \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+}
+Here is the information you need and convert into LaTeX format:
+
+
+{
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": null,
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": "https://github.com/vmsaif",
+    "Address": "Winnipeg, MB",
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-06-19 10:27:13: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:16: task=\namesection{Saif}{Mahmud} {
+  \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+  \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+}2024-06-19 10:27:16: status=completed
+agent=All Purpose Agent2024-06-19 10:27:16: task=Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+
+
+About the job
+Artificial Intelligence Engineer
+
+About Radical AI:
+
+Radical AI Principles
+We recognize that power is distributed unevenly, and People of Color, Black, Indigenous, Women, Queer, Trans, Gender Non-Conforming, Poor, Dis-abled, and other communities are pushed to the margins. We commit to resisting these interlocking systems of oppression, including Racism, Coloniality, Casteism, Heteropatriarchy, Capitalism, and Ableism. We commit to striving toward collective liberation.1
+We center radical work by communities at the margins.
+We recognize that all technologies rearrange power.
+We are critical of how AI shifts power. In particular, we recognize AI is frequently extractive, exploitative, surveilling, controlling, prescriptive, and reductionist. We recognize AI frequently prevents consent, deliberation, investigation, intervention, resistance, and agency.
+We recognize the privilege of being adjacent to institutions creating technologies. We use this privilege to step up to expose oppressive technologies and to center those harmed, and to step back, ceding power, listening, and co-conspiring when those voices speak.
+We value dreaming up and building human/AI systems that put power in the hands of the people. We recognize this is vulnerable and important work.
+We recognize that reforming harmful AI can reduce harm to some while legitimizing (“ethics-washing”) systems still harming others2. Only by understanding the root of the harm and centering those most impacted can we make these complex tactical decisions, deciding when to minimize harm done by AI and when to call for its abolition3. We recognize that no one has a ‘view from nowhere’4. We practice reflexivity, naming who we are, how who we are influences what we do, and whose perspectives are missing.
+
+At the Radical AI for Social Good Lab, we’re dedicated to leveraging AI responsibly. Our core mission is to democratize AI technology, making it a catalyst for education, social mobility, and equitable progress across global communities.
+Role Overview:
+
+Join our Virtual Internship as an Artificial Intelligence Engineer. This role is a deep dive into the realms of machine learning, deep learning, generative AI, and natural language processing. You will contribute to generative AI projects and enhance your skills in a dynamic, virtual environment.
+Key Responsibilities:
+
+Design and develop innovative AI models.
+Analyze and preprocess data for machine learning applications.
+Collaborate with AI teams to enhance algorithms and models.
+Present research findings and engage in critical team discussions.
+Contribute to the development of our AI virtual agents.
+Program Highlights:
+
+Duration: 3 months, with flexible start dates between March and July 2024.
+Access: Full use of the Radical AI Platform.
+Feedback: Direct feedback from the Radical AI Core Team.
+Technologies Engaged:
+OpenAI API
+Meta Llama 2
+Google Gemini
+LangChain
+Google Gen AI Studio
+Python
+Requirements:
+
+Bachelor’s or Master’s in Computer Science, AI, or related fields.
+Profound knowledge of AI, machine learning, and NLP.
+Expertise in Python and AI development frameworks like TensorFlow or PyTorch.
+Strong analytical, problem-solving, and creative thinking skills.
+Excellent communication and teamwork abilities.
+Additional Information:
+
+Unpaid position with remote work setup.
+Stable internet connection required.
+Radical AI is an equal opportunity organization, committed to diversity and inclusion.2024-06-19 10:27:16: status=started
+agent=All Purpose Agent2024-06-19 10:27:22: task=**Artificial Intelligence Engineer**
+
+**About the Role:**
+
+Join our Virtual Internship as an Artificial Intelligence Engineer. This role will immerse you in the realms of machine learning, deep learning, generative AI, and natural language processing. You will contribute to generative AI projects and enhance your skills in a dynamic, virtual environment.
+
+**Key Responsibilities:**
+
+* Design and develop innovative AI models
+* Analyze and preprocess data for machine learning applications
+* Collaborate with AI teams to enhance algorithms and models
+* Present research findings and engage in critical team discussions
+* Contribute to the development of our AI virtual agents
+
+**Essential Qualifications:**
+
+* Bachelor's or Master's degree in Computer Science, AI, or related fields
+* Profound knowledge of AI, machine learning, and NLP
+* Expertise in Python and AI development frameworks like TensorFlow or PyTorch
+* Strong analytical, problem-solving, and creative thinking skills
+* Excellent communication and teamwork abilities
+
+**Additional Information:**
+
+* Unpaid position with remote work setup
+* Stable internet connection required
+
+**Relevant Resume Sections:**
+
+* Education
+* Skills and Experience
+* Awards and Recognitions (AI-related)
+* Personal Projects (AI-related)
+* References (from AI professionals)2024-06-19 10:27:22: status=completed
+agent=Resume Content Selector2024-06-19 10:27:22: task=Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with job specifications provided.
+**Applicant's Data Includes**: - Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous
+**Procedure**: 1. **Assess Relevance**: Match each section's relevance to the job description. 2. **Prioritization**:
+   - Always include at **least one "Reference"** if available. Choose the most relevant ones.
+   - Prioritize recent and impactful achievements and qualifications.
+3. **Selection Strategy**:
+   - Target sections directly related to job skills and qualifications.
+   - Emphasize Education and Awards for their impact.
+   - Include broader sections like Personal Traits only if they offer significant advantages.
+4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete.
+**Output Expectations**: Generate a JSON object detailing the selected and omitted sections.
+# Provided data: ## Applicant's Information:  {
+"applicant Profile": {
+"Personal Details": {
+"Full Name": "Saif Mahmud",
+"Phone Number": "204 955 5064",
+"Email": "msaifofficial@gmail.com",
+"LinkedIn": "linkedin.com/in/vmsaif",
+"Other Social Media Profiles": null,
+"Personal Website": "saifmahmud.dev",
+"Portfolio": "https://saifmahmud.dev/",
+"GitHub": "https://github.com/vmsaif",
+"Address": "Winnipeg, MB",
+"City": "Winnipeg",
+"State": "MB",
+"Zip Code": null,
+"Country": null
+},
+"Education": {
+"Degree": "BSc",
+"Major": "Computer Science",
+"University": "University of Manitoba",
+"Location": null,
+"Graduation Date": "October 2023",
+"GPA": "3.07",
+"Honors/Distinctions": null
+},
+"Volunteer Work": [
+{
+"Organization Name": ".dev Programming Club",
+"Role": "Active Member",
+"Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
+"Timeline": "2019-2023"
+}
+],
+"Awards and Recognitions": [],
+"References": [
+{
+"Name": "Abu Kabir",
+"Position": "Director IT Service Management",
+"Company": "Microsoft",
+"Contact Information": "204-298-3693",
+"Relationship": null
+},
+{
+"Name": "Safiur Mahdi",
+"Position": "Java Developer",
+"Company": "Skip the Dishes",
+"Contact Information": "204-583-3432",
+"Relationship": null
+}
+],
+"Personal Traits and Interests": {
+"Strengths": null,
+"Weaknesses": null,
+"Hobbies": null,
+"Passions": null
+},
+"Miscellaneous": {
+"Languages Spoken": null,
+"Certifications": null,
+"Professional Affiliations": null,
+"Other Relevant Details": null
+}
+}
+}
+## Job Description Keywords:  Provided in the context.
+
+
+ Relevant Courses{
+  "Relevant Coursework (to the Job Description)": [
+    "AI and Game Development (Java | Python)",
+    "Software Engineering (Java | Unit Testing)",
+    "Database Implementation (SQL | Python)",
+    "Distributed Computing (Python | JavaScript)",
+    "Data Structures and Algorithms (Java)"
+  ]
+}2024-06-19 10:27:22: status=started
+agent=Resume Content Selector2024-06-19 10:27:30: task={
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
+        {
+          "institution": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
+        },
+        {
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432 | Winnipeg, MB"
+        }
+      ]
+    }
+  ],
+  "omitted_sections": [
+    {
+      "section": "Volunteer Work",
+      "reason": "Not directly relevant to job requirements."
+    },
+    {
+      "section": "Awards and Recognitions",
+      "reason": "No AI-related awards specified."
+    },
+    {
+      "section": "Personal Projects",
+      "reason": "No AI-related projects provided."
+    },
+    {
+      "section": "Personal Traits and Interests",
+      "reason": "Limited relevance to job requirements."
+    },
+    {
+      "section": "Miscellaneous",
+      "reason": "No relevant details for resume."
+    }
+  ]
+}2024-06-19 10:27:30: status=completed
+agent=All Purpose Agent2024-06-19 10:27:30: task=You are provided with a JSON object from the previous context that contains the "selected_sections" and "omitted_sections". Split the context provided to you at the point "omitted_sections". In your output, you will provide everything before the "omitted_sections" as the final output of the task. Do not change the format of the JSON object.
+2024-06-19 10:27:30: status=started
+agent=All Purpose Agent2024-06-19 10:27:35: task=**
+
+**Full name: ** Jane Doe
+
+**Contact information:** 123 Main Street, Winnipeg, MB, Canada | 204-123-4567 | jane.doe@email.com
+
+**Summary:**
+I am a recent graduate of the University of Manitoba with a BSc in Computer Science. I am proficient in various programming languages and technologies, including Java, Python, and C++. I am seeking an entry-level software development position where I can apply my skills and contribute to the team's success.
+
+**Education:**
+- University of Manitoba, Winnipeg, MB
+- BSc Major in Computer Science
+- Graduated: October 2023
+
+**Skills:**
+- Programming Languages: Java, Python, C++
+- Technologies: HTML, CSS, JavaScript, SQL
+- Software Development Tools: Eclipse, IntelliJ IDEA, Git
+
+**References:**
+- Abu Kabir
+- Director, IT Service Management
+- Microsoft Corporation
+- 204-298-3693 | Winnipeg, MB
+- Safiur Mahdi
+- Java Developer
+- Skip the Dishes
+- 204-583-3432 | Winnipeg, MB2024-06-19 10:27:35: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:35: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output, - The first line contains the section named "Education". Use the command \section{Education}. - The next lines contain the educational information in the following format:
+  - The first line contains the institution name. Use the command \customTitle{Institution Name}.
+  - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+  - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+  - The next line contains the command \newEntryVSpace to separate the education. Only use this command if there are multiple educations. Otherwise, do not use this command.
+  - Do not choose more than two educations. Choose the most recent ones.
+
+Example:
+\section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.   
+\sectionsep % use it at the end to separate the sections.
+Conditions: - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+  % No education information provided. 
+- Your output should be raw LaTeX code and should not be in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 10:27:35: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:37: task=\section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated: October 2023}
+
+\sectionsep2024-06-19 10:27:37: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:37: task=Extract the coursework information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}. - The next lines contain the coursework information in the following format:
+  - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
+  - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
+  - Use the command \sectionsep at the end to separate the coursework from other sections.
+
+
+Example: \section{Relevant Courses} \body{
+    Operating Systems (Linux | C) \\
+    Distributed Computing (Python) \\
+    Database Implementation (Python | SQL) \\
+    Data Structures and Algorithms (Java) \\
+    Object Orientation (Java | C++) \\
+    Software Engineering (Java | Unit Testing)
+} \sectionsep
+Conditions: - If there is no Course information, each line of the output should be latex comments, starting with '%'. 
+  % \section{Relevant Courses}
+  % \sectionsep. 
+- Your output should be raw LaTeX code.  - Do not provide the output in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 10:27:37: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:39: task=% \section{Relevant Courses}
+% \sectionsep2024-06-19 10:27:39: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:39: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- In the first line Use the command `\section{Volunteer}`.
+- Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries. - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. If no entries are provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+- Do not provide the output in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 10:27:39: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:43: task=\section{VOLUNTEER}
+  \smallSubSection{Lead Volunteer}
+  \subTitle{Winnipeg Harvest | 2021-2023}
+  \begin{vitemize}
+    \item Registered donors and answered inquiries.
+    \item Assisted with organizing and distributing food donations.
+    \item Participated in fundraising events and community outreach programs.
+  \end{vitemize}
+
+  \smallSubSection{Camp Councillor}
+  \subTitle{Camp Manitou | Summers 2019-2021}
+  \begin{vitemize}
+    \item Supervised and engaged with children in outdoor activities.
+    \item Assisted with meal preparation and cleanup.
+    \item Maintained a safe and fun environment for the campers.
+  \end{vitemize}
+\sectionsep2024-06-19 10:27:43: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:43: task=Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the reference information in the following format:
+  - Start with the command \section{Reference} for the name of the reference.
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference.
+  - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
+  - Do not choose more than two references. Choose the most relevant ones.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \newEntryVSpace
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+\sectionsep
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+  % \section{}
+  % \sectionsep.
+  Do Nothing else. Keep the output empty.
+- Your output should follow latex syntax, no need for any code block quotes.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 10:27:43: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:46: task=\section{References}
+\subsection{Abu Kabir}
+\subTitle{Director, IT Service Management}
+\subTitle{Microsoft Corporation}
+\body{204-298-3693 | Winnipeg, MB}
+
+\newEntryVSpace
+
+\subsection{Safiur Mahdi}
+\subTitle{Java Developer}
+\subTitle{Skip the Dishes}
+\body{204-583-3432 | Winnipeg, MB}
+\sectionsep2024-06-19 10:27:46: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:46: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 10:27:46: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:49: task=\section{Skills}
+
+\subTitle{Programming Languages:}
+\body{Python \textbullet{} Java}
+\skillsVSpace
+
+\subTitle{AI and ML Skills:}
+\body{AI \textbullet{} Gemini \textbullet{} RAG Search}
+\skillsVSpace
+
+\subTitle{Cloud and DevOps:}
+\body{Docker}
+\skillsVSpace
+
+\subTitle{Data Skills:}
+\body{SQL}
+\skillsVSpace
+
+\subTitle{Soft Skills:}
+\body{Collaboration}
+\sectionsep2024-06-19 10:27:49: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:49: task=Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section named "Career Objective". Use the command \section{Career Objective}. - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+Example: \section{Career Goal}
+    \careerGoalBody{
+        Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+- Output should be raw LaTeX code and should not be in a code block.
+
+
+{
+"Career Objective": "Innovative and analytical AI Engineer with a proven track record in developing and optimizing AI models, seeking to contribute to Radical AI's mission of democratizing AI and driving social good. Seeking the Artificial Intelligence Engineer position at Radical AI where I can"
+}2024-06-19 10:27:49: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:27:51: task=\section{Career Objective}
+    \careerGoalBody{
+        Innovative and analytical AI Engineer with a proven track record in developing and optimizing AI models, seeking to contribute to Radical AI's mission of democratizing AI and driving social good. Seeking the Artificial Intelligence Engineer position at Radical AI where I can.}2024-06-19 10:27:51: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:27:51: task=Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+In the output, - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+- List the experience information as follows:
+  -- Project or Experience title: \customTitle{Project/Experience Title}
+  -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
+  -- Role and timeline: \roleAndTimeline{Role | Timeline}
+  -- Short description: \shortDescription{Short Description}
+  -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
+  -- Use \item to list each responsibility or achievement.
+  -- Last \item can have a link using \href{}{}, \ul, and text.
+  -- End the tightemize \end{tightemize}.
+  -- For special characters like %, use \%, for &, use \& etc.
+
+Limitations: - If you find in total 3 experiences, the number of \items highlights must be 3 or less for each experience. - If you find in total 2 experiences, the number of \items highlights must be 5 or less for each experience. - If a link is provided, the last \item should have the link maintaining the limit of \items.
+Example: \section{Experience} \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+
+Important:  - Output should be in valid LaTeX syntax.  - Do not output in any code block quotes.
+
+
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Multiagent | AI | Python | RAG Search",
+      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes for enhanced job search efficiency."
+    }
+  },
+  "Work Experience/Project Experience": {
+    "AI Path Finding": {
+      "Project Title": "AI Path Finding",
+      "Timeline": "Jul 2023 - Sep 2023",
+      "Duration": "3 months",
+      "Technologies": "A* Algorithm | Java | Git | CI/CD",
+      "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Short Description": "Developed a Java-based AI-driven game leveraging the A* algorithm for pathfinding."
+    },
+    "Reversible Learning APP": {
+      "Project Title": "Reversible Learning APP",
+      "Timeline": "January 2021 - April 2021",
+      "Duration": "4 months",
+      "Technologies": "SQL | Android Studio | Java",
+      "skills": "Android Studio, Java, SQL, UI/UX Design, Database Management",
+      "Link": "https://github.com/vmsaif/reversibleLearning",
+      "Short Description": "Collaborated on the development of 'Reversible Learning', an Android app for enhancing study habits."
+    }
+  }
+}2024-06-19 10:27:51: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:28:01: task=\section{Project Experience}
+    \customTitle{ATS Pass AI}
+    \summaryPoints{Python | Multiagent | AI | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
+        \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+    \end{tightemize}
+    \customTitle{AI Path Finding}
+    \summaryPoints{A* Algorithm | Java | Git | CI/CD}
+    \roleAndTimeline{Game Developer Intern - July 2023 - September 2023}
+
+    \shortDescription{Developed a Java-based AI-driven game leveraging the A* algorithm for pathfinding.}
+
+    \begin{tightemize}
+        \item Implemented the A* algorithm to optimize agent navigation within the game environment, improving game performance.
+        \item Effectively managed project timeline and resources, collaborating with a team of developers using Git and CI/CD practices.
+        \item Game repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+    \end{tightemize}
+    \customTitle{Reversible Learning APP}
+    \summaryPoints{Android Studio | Java | SQL}
+    \roleAndTimeline{Android Developer Intern - January 2021 - April 2021}
+
+    \shortDescription{Collaborated on the development of 'Reversible Learning', an Android app for enhancing study habits.}
+
+    \begin{tightemize}
+        \item Developed the app's UI/UX and implemented database management using SQL, ensuring a user-friendly and data-driven experience.
+        \item Integrated gamification elements to enhance user engagement and motivation.
+        \item App repository available here on \href{https://github.com/vmsaif/reversibleLearning}{\ul{GitHub}}.
+    \end{tightemize}2024-06-19 10:28:01: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:30:27: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- In the first line Use the command `\section{Volunteer}`.
+- Use `\subsection{}` for organization names less than 20 characters. If any organization name exceeds 20 characters, use `\smallSubSection{}` to maintain visual consistency for all Organization name entries. - Present the role and the timeline of the volunteer activity in the format: `Role | Timeline`. Use `\subTitle{}` for this line to maintain visual hierarchy and readability. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry.  - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
+  % \section{}
+  % \sectionsep.
+- Do not provide the output in a code block.
+Here is the information you need and convert into LaTeX format:
+2024-06-19 10:30:27: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:30:31: task=\section{VOLUNTEER}
+  \smallSubSection{Youth Education Organization}
+  \subTitle{Volunteer | 2007-2019}
+  \begin{vitemize}
+    \item Mentored, tutored and provided guidance to underprivileged youth.
+    \item Prepared and conducted workshops on building self-confidence, leadership skills and goal setting.
+  \item Co-ordinated with other volunteers and community organizations to provide support and resources to youth.
+  \end{vitemize}
+  \smallSubSection{Habitat for Humanity}
+  \subTitle{Volunteer | 2010-2016}
+  \begin{vitemize}
+    \item Participated in building and renovating homes for low-income families.
+    \item Assisted with fundraising events and community outreach programs.
+    \end{vitemize}
+\sectionsep2024-06-19 10:30:31: status=completed
+agent=LaTeX Code Generator
+2024-06-19 10:30:31: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 10:30:31: status=started
+agent=LaTeX Code Generator
+2024-06-19 10:30:34: task=\section{Skills}
+\subTitle{Programming Languages:}
+\body{Python \textbullet{} Java}
+\skillsVSpace
+\subTitle{AI and ML Skills:}
+\body{AI \textbullet{} Gemini \textbullet{} RAG Search}
+\skillsVSpace
+\subTitle{Soft Skills:}
+\body{}
+\sectionsep2024-06-19 10:30:34: status=completed
+agent=LaTeX Code Generator
+2024-06-19 12:10:35: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- In the first line Use the command `\section{Volunteer}`.
+- Use `\subsection{}` for organization name. - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry.  - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
+  % \section{}
+  % \sectionsep.
+- Do not provide the output in a code block.
+2024-06-19 12:10:35: status=started
+agent=LaTeX Code Generator
+2024-06-19 12:10:42: task=```
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club}
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+  \subsection{Organization Name A}
+  \subTitle{Volunteer | N/A | 2019-2022}
+  \begin{vitemize}
+    \item Responsibility 1
+    \item Responsibility 2
+  \end{vitemize}
+  \subsection{Organization Name B}
+  \subTitle{Volunteer | Department B | 2021-2023}
+  \begin{vitemize}
+    \item Responsibility 1
+    \item Responsibility 2
+    \item Responsibility 3
+  \end{vitemize}
+\sectionsep
+```2024-06-19 12:10:42: status=completed
+agent=LaTeX Code Generator
+2024-06-19 12:10:42: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 12:10:42: status=started
+agent=LaTeX Code Generator
+2024-06-19 12:10:45: task=\section{Skills}
+\subTitle{Programming Languages:}
+\body{Python \textbullet{}}
+\skillsVSpace
+\subTitle{AI and ML Skills:}
+\body{AI \textbullet{} Gemini \textbullet{} Multiagent}
+\skillsVSpace
+\subTitle{Soft Skills:}
+\body{}
+\sectionsep2024-06-19 12:10:45: status=completed
+agent=LaTeX Code Generator
+2024-06-19 12:11:38: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format, focusing on organization, clarity, and adherence to LaTeX syntax conventions.
+In your output, follow these guidelines:
+- In the first line Use the command `\section{Volunteer}`.
+- Use `\subsection{}` for organization name. - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+Example: First Decide if to use `\subsection{}` or `\smallSubSection{}` based on the length of the organization name for all entries. The command should be the same for all entries.
+\section{VOLUNTEER}
+  \subsection{.dev Programming Club} or swap with \smallSubSection{.dev Programming Club} 
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry.  - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
+  % \section{}
+  % \sectionsep.
+- Do not provide the output in a code block, blockquote.
+2024-06-19 12:11:38: status=started
+agent=LaTeX Code Generator
+2024-06-19 12:11:45: task=\section{VOLUNTEER}
+  \subsection{Y.E.S. (Youth Employment Services)}
+  \subTitle{Community Ambassador | Highbury Community Centre | 2018-2021}
+  \begin{vitemize}
+    \item Developed a marketing plan and brand for Youth Facilities | Co-ordinated and executed community engagement events.
+    \item Facilitated summer programs and assisted in student mentorship.
+    \item Provided guidance to youth regarding education, career development, and life skills.
+  \end{vitemize}
+  \subsection{Canada Revenue Agency Volunteer Income Tax Program (VITP)}
+  \subTitle{Volunteer | Canada Revenue Agency | 2017-2022}
+  \begin{vitemize}
+    \item Provided free income tax preparation services to low-income individuals and families.
+    \item Completed the required training, passed the certification exam, and maintained up-to-date knowledge of tax laws and regulations.
+  \end{vitemize}
+\sectionsep2024-06-19 12:11:45: status=completed
+agent=LaTeX Code Generator
+2024-06-19 12:11:45: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 12:11:45: status=started
+agent=LaTeX Code Generator
+2024-06-19 12:11:49: task=\section{Skills}
+\subTitle{Programming Languages:}
+\body{Python \textbullet{} Java} 
+\skillsVSpace
+
+\subTitle{AI and ML Skills:}
+\body{AI \textbullet{} Gemini \textbullet{} RAG Search}
+\skillsVSpace
+
+\subTitle{Cloud and DevOps:}
+\body{Docker}
+\skillsVSpace
+
+\subTitle{Data Skills:}
+\body{SQL}
+\skillsVSpace
+
+\subTitle{Soft Skills:}
+\body{Collaboration}
+\sectionsep2024-06-19 12:11:49: status=completed
+agent=LaTeX Code Generator
+2024-06-19 12:14:08: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
+In your output: - The first line use the command `\section{Volunteer}`. - Use `\headingtwo{}` for organization name. - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration. - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
+\section{VOLUNTEER}
+  \headingtwo{.dev Programming Club}
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep
+**Conditions**: - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry.  - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
+  % \section{}
+  % \sectionsep.
+- Do not provide the output in a code block, blockquote.
+2024-06-19 12:14:08: status=started
+agent=LaTeX Code Generator
+2024-06-19 12:14:11: task=\section{VOLUNTEER}
+  \headingtwo{.dev Programming Club}
+  \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+  \begin{vitemize}
+    \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+    \item Designed the official logo, social media posts, receipts and other official document formats.
+  \end{vitemize}
+\sectionsep2024-06-19 12:14:11: status=completed
+agent=LaTeX Code Generator
+2024-06-19 12:14:12: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use \subTitle{} to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{}.
+   - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
+   - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
+3. **Formatting**:
+   - Use \skillsVSpace between each category to maintain visual separation.
+   - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
+4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
+Example: \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript} \skillsVSpace
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI} \skillsVSpace   
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} \sectionsep
+**Conditions**: - Provide raw latex, not in a code block. - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+  % \section{}
+  % \sectionsep.
+
+
+```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI and ML Skills": [
+        "AI",
+        "Gemini",
+        "Multiagent"
+      ],
+      "Soft Skills": []
+    },
+    "partial_match_with_overlapping_skills": {
+      "Programming Languages": {
+        "Skill Name": "Java",
+        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
+      },
+      "AI and ML Skills": {
+        "Skill Name": "RAG Search",
+        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
+      },
+      "Cloud and DevOps": {
+        "Skill Name": "Docker",
+        "Relevance": "Experience with containerization is valuable in AI development and deployment."
+      },
+      "Data Skills": {
+        "Skill Name": "SQL",
+        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+      },
+      "Soft Skills": {
+        "Skill Name": "Collaboration",
+        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+      }
+    },
+    "missing_from_the_applicant_skills": {
+      "Programming Languages": [
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "AI and ML Skills": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Generative AI", 
+        "OpenAI API", 
+        "Meta Llama 2",
+        "LangChain", 
+        "Google Gen AI Studio"
+      ],
+      "Soft Skills": [
+        "Problem-Solving",
+        "Communication", 
+        "Analytical Skills"
+      ]
+    }
+  }
+}
+```2024-06-19 12:14:12: status=started
+agent=LaTeX Code Generator
+2024-06-19 12:14:14: task=\section{Skills}
+\subTitle{Programming Languages}
+\body{Python \textbullet{} Java} \skillsVSpace
+
+\subTitle{AI and ML Skills}
+\body{AI \textbullet{} Gemini \textbullet{} RAG Search} \skillsVSpace
+
+\subTitle{Soft Skills}
+\body{Collaboration} \sectionsep2024-06-19 12:14:14: status=completed

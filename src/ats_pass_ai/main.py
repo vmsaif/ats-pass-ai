@@ -136,9 +136,9 @@ def run():
         with Timer() as t:         
             try:
                 # Delete the applicant profile files but not the folder To start fresh
-                # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+                RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
                 crew = ResumeCrew().crew()
-                # crew.kickoff()
+                crew.kickoff()
             except Exception as e:
                 print(f"Error: {e}")
                 # exit the program

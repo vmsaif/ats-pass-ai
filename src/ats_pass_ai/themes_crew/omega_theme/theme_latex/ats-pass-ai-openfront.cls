@@ -38,14 +38,6 @@
   ItalicFont=Lato-LigIta
 ]{Lato-Lig} % using Lato Light as the main font
 
-% \setsansfont[
-%   % Scale=MatchLowercase,
-%   % Mapping=tex-text, 
-%   Color=primary, 
-%   Path = fonts/raleway/,
-%   BoldFont=Raleway-Bold,
-% ]{Raleway-ExtraLight}
-
 \setsansfont[
   Scale=MatchLowercase,
   Mapping=tex-text,
@@ -108,6 +100,32 @@ Last Updated on \\
   {\normalfont\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{18pt}\selectfont\color{subheadings}\raggedright\uppercase}}
 \makeatother
 
+\newlength{\headingwidth}
+\newcommand{\setHeadingWidth}[1]{\settowidth{\headingwidth}{\uppercase{#1}}} % Measure the width of the heading
+
+\newcommand{\headingtwo}[1]{
+  \setHeadingWidth{#1} % Set the width of the heading
+  \vspace{5pt}
+  % \color{headings}
+  % Adjust font size based on the width of the heading
+  \ifdim\headingwidth<7.5cm
+  \color{headings}
+    \fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{14pt}\selectfont
+  % \else\ifdim\headingwidth>8cm
+  %   \color{primary}
+  %   \fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{12pt}{14pt}\selectfont
+  \else
+  \color{primary}
+    \fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{11pt}{13pt}\selectfont
+  \fi
+  \uppercase{#1} % Convert the heading to uppercase
+  \par
+  \normalfont
+  \vspace{3pt}
+}
+
+
+
 % Volunteer section itemize
 \newenvironment{vitemize}{  % Accepts one parameter
 \vspace{-5pt}  % Use the parameter to add vertical space
@@ -116,6 +134,7 @@ Last Updated on \\
 \begin{itemize}[leftmargin=*] \itemsep1pt \parskip0pt \parsep0pt  % Start itemize with fewer gaps
 }{  
 \end{itemize}
+\vspace{-10pt}
 }
 
 
@@ -178,9 +197,9 @@ Last Updated on \\
 \newcommand{\subTitle}[1]{
 {\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{14pt}\selectfont {#1\\}\par}}
 
-% SubTitle command
-\newcommand{\smallSubSection}[1]{
-{\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-SemiBold}\fontsize{12.5pt}{14pt}\selectfont\uppercase {#1}\vspace{3pt}\par}}
+% % SubTitle command
+% \newcommand{\smallSubSection}[1]{
+% {\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-SemiBold}\fontsize{12.5pt}{14pt}\selectfont\uppercase {#1}\vspace{3pt}\par}}
 
 \newcommand{\body}[1]{
   % \color{subheadings}

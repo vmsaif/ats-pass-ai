@@ -8,14 +8,6 @@
           "degree": "BSc Major in Computer Science",
           "graduation_status": "Graduated",
           "graduation_date": "October 2023"
-        },
-        {
-          "coursework": [
-            "Relevant Coursework (to the Job Description):",
-            "- Distributed Computing (Python | JavaScript)",
-            "- Data Structures and Algorithms (Java)",
-            "- AI and Game Development (Java | Python)"
-          ]
         }
       ]
     },
@@ -40,19 +32,23 @@
   "omitted_sections": [
     {
       "section": "Volunteer Work",
-      "reason": "Not directly relevant to the job requirements."
+      "reason": "Not directly relevant to job requirements."
     },
     {
       "section": "Awards and Recognitions",
-      "reason": "Limited relevance to the job requirements."
+      "reason": "No AI-related awards specified."
+    },
+    {
+      "section": "Personal Projects",
+      "reason": "No AI-related projects provided."
     },
     {
       "section": "Personal Traits and Interests",
-      "reason": "Limited relevance to the job requirements."
+      "reason": "Limited relevance to job requirements."
     },
     {
       "section": "Miscellaneous",
-      "reason": "No relevant information for this specific job."
+      "reason": "No relevant details for resume."
     }
   ]
 }

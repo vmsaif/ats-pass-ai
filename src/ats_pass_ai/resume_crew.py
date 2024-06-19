@@ -103,7 +103,7 @@ class ResumeCrew:
 		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
 		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task()) 
+		# my_tasks.append(self.career_objective_task()) 
 
 		# -------------------------------------
 		# my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm

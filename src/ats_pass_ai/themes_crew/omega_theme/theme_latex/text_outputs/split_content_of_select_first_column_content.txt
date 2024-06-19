@@ -1,40 +1,28 @@
-{
-  "selected_sections": [
-    {
-      "section": "Education",
-      "sub_sections": [
-        {
-          "institution": "University of Manitoba",
-          "degree": "BSc Major in Computer Science",
-          "graduation_status": "Graduated",
-          "graduation_date": "October 2023"
-        },
-        {
-          "coursework": [
-            "Relevant Coursework (to the Job Description):",
-            "- Distributed Computing (Python | JavaScript)",
-            "- Data Structures and Algorithms (Java)",
-            "- AI and Game Development (Java | Python)"
-          ]
-        }
-      ]
-    },
-    {
-      "section": "References",
-      "sub_sections": [
-        {
-          "name": "Abu Kabir",
-          "position": "Director, IT Service Management",
-          "company": "Microsoft Corporation",
-          "contact_information": "204-298-3693 | Winnipeg, MB"
-        },
-        {
-          "name": "Safiur Mahdi",
-          "position": "Java Developer",
-          "company": "Skip the Dishes",
-          "contact_information": "204-583-3432 | Winnipeg, MB"
-        }
-      ]
-    }
-  ]
-}
+**
+
+**Full name: ** Jane Doe
+
+**Contact information:** 123 Main Street, Winnipeg, MB, Canada | 204-123-4567 | jane.doe@email.com
+
+**Summary:**
+I am a recent graduate of the University of Manitoba with a BSc in Computer Science. I am proficient in various programming languages and technologies, including Java, Python, and C++. I am seeking an entry-level software development position where I can apply my skills and contribute to the team's success.
+
+**Education:**
+- University of Manitoba, Winnipeg, MB
+- BSc Major in Computer Science
+- Graduated: October 2023
+
+**Skills:**
+- Programming Languages: Java, Python, C++
+- Technologies: HTML, CSS, JavaScript, SQL
+- Software Development Tools: Eclipse, IntelliJ IDEA, Git
+
+**References:**
+- Abu Kabir
+- Director, IT Service Management
+- Microsoft Corporation
+- 204-298-3693 | Winnipeg, MB
+- Safiur Mahdi
+- Java Developer
+- Skip the Dishes
+- 204-583-3432 | Winnipeg, MB

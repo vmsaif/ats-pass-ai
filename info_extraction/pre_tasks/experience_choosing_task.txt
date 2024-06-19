@@ -3,48 +3,61 @@
   "selected_experiences": {
     "Most Recent Experience": [
       {
-        "Project Title": "ATS Pass AI",
-        "Timeline": "January 2024 - Present",
-        "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
-        "Skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
-        "Link": "https://github.com/vmsaif/ats-pass-ai",
-        "Key Highlights": [
-          "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
-          "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
-          "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-          "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
-        ],
-        "Team size": null,
-        "Outcomes": null
+        "type": "Project",
+        "title": "ATS Pass AI",
+        "content": {
+          "Project Title": "ATS Pass AI",
+          "Timeline": "January 2024 - Present",
+          "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
+          "Skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
+          "Link": "https://github.com/vmsaif/ats-pass-ai",
+          "Key Highlights": [
+            "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+            "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+            "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+            "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+          ],
+          "Team size": null,
+          "Outcomes": null
+        }
       }
     ],
     "Project Experience": [
       {
-        "Project Title": "AI Path Finding",
-        "Timeline": "Jul 2023 - Sep 2023",
-        "Technologies, frameworks, and tools Used": "A* Algorithm | Java | Git | CI/CD",
-        "Skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
-        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-        "Key Highlights": [
-          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
-          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
-          "Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.",
-          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
-        ],
-        "Team size": null,
-        "Outcomes": null
+        "type": "Project",
+        "title": "AI Path Finding",
+        "content": {
+          "Project Title": "AI Path Finding",
+          "Timeline": "Jul 2023 - Sep 2023",
+          "Technologies, frameworks, and tools Used": "A* Algorithm | Java | Git | CI/CD",
+          "Skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
+          "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+          "Key Highlights": [
+            "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+            "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+            "Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.",
+            "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+          ],
+          "Team size": null,
+          "Outcomes": null
+        }
       },
       {
-        "Project Title": "Connect 4 Game",
-        "Timeline": "February 2023 - April 2023",
-        "Technologies, frameworks, and tools Used": "AI Decision-Making | Java",
-        "Skills": "Java, AI, Game Development, UI/UX Design",
-        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
-        "Key Highlights": [
-          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid."
-        ],
-        "Team size": null,
-        "Outcomes": null
+        "type": "Project",
+        "title": "Reversible Learning APP",
+        "content": {
+          "Project Title": "Reversible Learning APP",
+          "Timeline": "January 2021 - April 2021",
+          "Technologies, frameworks, and tools Used": "SQL | Android Studio | Java",
+          "Skills": "Android Studio, Java, SQL, UI/UX Design, Database Management",
+          "Link": "https://github.com/vmsaif/reversibleLearning",
+          "Key Highlights": [
+            "Collaborated with a team to develop 'Reversible Learning', an Android app for enhancing study habits.",
+            "Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management."
+          ],
+          "Team size": null,
+          "Outcomes": null
+        }
       }
     ],
     "Work Experience": []
@@ -57,61 +70,61 @@
   "reason for choosing, How it is relevant to the job": [
     {
       "title": "ATS Pass AI",
-      "reason": "This project heavily uses AI keywords such as RAG Search, Gemini Pro, Multi-Agent system, directly aligning with the 'Artificial Intelligence Engineer' role. This project's focus on resume and ATS optimization showcases the applicant's understanding of the hiring process and their innovative approach to leveraging AI for practical solutions. This will resonate strongly with Radical AI. This project also demonstrates proficiency in Python, a high-priority skill mentioned in the job description."
+      "reason": "This project directly aligns with the AI Engineer role at Radical AI, showcasing the applicant's expertise in AI, Python, and resume optimization using advanced tools like LangChain, Gemini, and RAG Search. The project demonstrates a strong understanding of AI principles and practical application in a relevant domain. This is also the most recent project"
     },
     {
       "title": "AI Path Finding",
-      "reason": "Although a game development project, it showcases the applicant's understanding and practical application of AI algorithms, specifically the A* algorithm, directly relevant to the job description's emphasis on AI. Additionally, this project highlights experience with Git and CI/CD, indicating familiarity with collaborative development practices."
+      "reason": "This project highlights the applicant's experience with AI algorithms (A* Pathfinding), Java programming, and collaborative development using Git and CI/CD. These are valuable skills for an AI Engineer, demonstrating a strong foundation in AI concepts and software engineering practices."
     },
     {
-      "title": "Connect 4 Game",
-      "reason": "This project, while seemingly simple, demonstrates the applicant's ability to design and implement AI decision-making processes within a game context. It reinforces their grasp of AI concepts and showcases their problem-solving skills in a tangible way."
+      "title": "Reversible Learning APP",
+      "reason": "This project demonstrates the applicant's experience in Android app development using Java and SQL, showcasing their ability to work with databases and design user interfaces. While not directly related to AI, it highlights their technical versatility and ability to collaborate on software projects. This project was chosen over others because it better showcases the applicant's teamwork experience."
     }
   ],
   "rejected_experiences": [
     {
       "title": "Programming Mentor",
-      "reason": "While it showcases teaching and mentoring skills, it lacks direct relevance to the AI-focused requirements of the job description."
+      "reason": "While this experience demonstrates teaching and communication skills, it lacks direct relevance to AI engineering and the technologies specified in the job description."
     },
     {
       "title": "Blockchain Car Mileage Tracker",
-      "reason": "This project, while technically impressive, is not directly aligned with the AI focus of the job description."
+      "reason": "This project showcases the applicant's interest in blockchain technology, but it's not directly aligned with the core requirements of the AI Engineer role at Radical AI."
     },
     {
       "title": "Recursive Ray Tracing",
-      "reason": "This experience, though showcasing strong C++ and 3D graphics skills, is less relevant to the AI and machine learning focus of the job description compared to other selected experiences."
+      "reason": "This project demonstrates skills in C++ and OpenGL, which are relevant to computer graphics but not as directly applicable to the AI-focused role as other selected experiences."
     },
     {
       "title": "Bank Account System",
-      "reason": "This project demonstrates fundamental Java skills but lacks direct relevance to the AI/ML focus of the job description."
+      "reason": "This project showcases object-oriented programming skills in Java but lacks the AI and machine learning focus required for the job."
     },
     {
       "title": "Hosting a Resume on GitHub Pages",
-      "reason": "This experience showcases technical writing and web development skills but is not directly applicable to the AI Engineer role."
+      "reason": "This project demonstrates technical writing and version control skills but is less relevant to AI engineering compared to other experiences."
     },
     {
       "title": "ELF Binary Analysis",
-      "reason": "While showcasing debugging and system analysis skills, this experience is less relevant to the AI/ML focus compared to other selected projects."
+      "reason": "This project focuses on system-level programming and debugging, which are valuable but not as directly related to the AI Engineer role as other selected experiences."
     },
     {
       "title": "OpenGL Sphere Lighting",
-      "reason": "This experience, though visually impressive, is less directly applicable to the AI and machine learning focus of the job description compared to other selected experiences."
+      "reason": "Similar to 'Recursive Ray Tracing,' this project focuses on computer graphics, which is not a primary focus of the AI Engineer role."
     },
     {
-      "title": "Reversible Learning APP",
-      "reason": "Although it demonstrates teamwork and Android development skills, this project is not directly related to the AI/ML specialization required for the job."
+      "title": "Connect 4 Game",
+      "reason": "While this project involves AI decision-making, it's a simpler implementation compared to the 'AI Path Finding' project and less relevant to the job's requirements."
     },
     {
       "title": "TCP Chat Application",
-      "reason": "This experience highlights network programming skills but lacks direct relevance to the AI focus of the job description."
+      "reason": "This project showcases network programming skills but lacks the AI and machine learning components central to the job description."
     },
     {
       "title": "Data Visualization with R",
-      "reason": "While data analysis is relevant, this experience is less focused on AI/ML compared to the selected projects."
+      "reason": "While data visualization is relevant, the job description emphasizes AI and machine learning skills more prominently."
     },
     {
       "title": "Portfolio Website",
-      "reason": "While a portfolio is important, this experience itself doesn't directly demonstrate the required AI/ML skills."
+      "reason": "This project showcases web development skills but is not directly related to AI or the technologies specified in the job description."
     }
   ]
 }
