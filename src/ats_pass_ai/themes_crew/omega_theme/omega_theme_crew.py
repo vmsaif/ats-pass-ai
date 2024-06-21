@@ -16,12 +16,7 @@ from crewai.project import CrewBase, agent, crew, task
 from ats_pass_ai.limiter import Limiter
 from ats_pass_ai.output_file_paths import PATHS
 
-from opentelemetry import trace
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import SimpleSpanProcessor, ConsoleSpanExporter
-
-os.environ['OTEL_PYTHON_AUTO_INSTRUMENT'] = '0'  # Disable automatic instrumentation
-os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
+# os.environ["OTEL_SDK_DISABLED"] = "true"
 
 
 
@@ -69,13 +64,13 @@ class OmegaThemeCrew:
 
 	
 	debugFlag = False
+
+	
 	debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
-
-		
 
 		tasks = [
 				# self.namesection(),
@@ -90,6 +85,7 @@ class OmegaThemeCrew:
 
 				# self.skillsection(),
 				# self.careerobjectivesection(),
+				# self.expItemChooser(),
 				self.experiencesection()
 			]
 		# Return the crew
@@ -173,6 +169,22 @@ class OmegaThemeCrew:
 			step_callback=self.small_llm_limiter,
 		)
 	
+	@agent
+	def expItemSelectorAgent(self) -> Agent:
+		# load yaml
+		yaml = self.yaml_loader("expItemSelectorAgent", False)
+		return Agent(
+			role=yaml[0],
+			goal=yaml[1],
+			backstory=yaml[2],
+			allow_delegation=False,
+			verbose=True,
+			# llm=self.genAI,
+			# step_callback=self.small_llm_limiter,
+			llm=self.genAILarge,
+			step_callback=self.large_llm_limiter,
+		)
+
 	@task
 	def namesection(self):
 
@@ -350,8 +362,8 @@ class OmegaThemeCrew:
 		)
 	
 	@task
-	def experiencesection(self):
-		yaml = self.yaml_loader("experiencesection", True)
+	def expItemChooser(self):
+		yaml = self.yaml_loader("expItemChooser", True)
 		description = yaml[0]
 		expected_output = yaml[1]
 		description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
@@ -359,8 +371,26 @@ class OmegaThemeCrew:
 		return Task(
 			description=description,
 			expected_output=expected_output,
+			agent=self.expItemSelectorAgent(),
+			output_file=PATHS["expItemChooser"],
+			callback=self.small_token_limiter
+		)
+
+	@task
+	def experiencesection(self):
+		yaml = self.yaml_loader("experiencesection", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["expItemChooser"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
 			# agent=self.latex_maker_agent(),
 			# callback=self.small_token_limiter,
+			context=[self.expItemChooser()],
 			output_file=PATHS["experiencesection"],
 			agent=self.latex_maker_large_agent(),
 			callback=self.large_token_limiter

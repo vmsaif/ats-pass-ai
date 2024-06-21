@@ -65217,3 +65217,3104 @@ agent=LaTeX Code Generator
         \item Project repository available here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{GitHub}}.
     \end{tightemize}
 ```2024-06-21 08:49:02: status=completed
+agent=LaTeX Code Generator
+2024-06-21 08:52:16: task=Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+Organize the experiences as follows: - Title: Use \customTitle{Project/Experience Title}. - Summary points: List up to three key points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: Provide a brief overview using \shortDescription{Short Description}. - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+**Item Limitations:** - Total experiences: Check the provided field "total experiences count". Based on the number of experiences adjust the number of items in the custom-made `tightemize` environment for all experiences. Follow this guideline:
+
+  -- If "total experiences count" : 3, 
+    --- Make a maximum of 3 \items including any link if provided. Links must be prioritized over other highlights.
+  -- else If "total experiences count": 2 or less, 
+    --- Make a maximum of 5 \items including any link if provided. Links must be prioritized over other highlights.
+
+Special Character Handling: - Use textbf{} for bold text. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 08:52:16: status=started
+agent=LaTeX Code Generator
+2024-06-21 08:52:31: task=```latex
+\section{Experience}
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | AI | NLP | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+\shortDescription{Developed a multi-agent system to create tailored resumes using AI and natural language processing.}
+\begin{tightemize}
+    \item Developed a multi-agent system to create \textbf{personalized} resumes using \textbf{AI} and \textbf{natural language processing (NLP).}
+    \item Achieved over 85\% keyword alignment and \textbf{optimized resumes for ATS}.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}. 
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{Java | AI | A* Algorithm | CI/CD}
+\roleAndTimeline{Game Development Project - Jul 2023 - Sep 2023}
+\shortDescription{Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.}
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A\* algorithm to create an AI-driven game.
+    \item Utilized Git for version control and CI/CD practices, resulting in a 50\% reduction in deployment time.
+    \item Enhanced \textbf{problem-solving} and \textbf{analytical skills} through the implementation of the A* pathfinding algorithm.
+    \item Project repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{Connect 4 Game}
+\summaryPoints{Java | AI | Game Dev. | CI/CD}
+\roleAndTimeline{Game Development Project - February 2023 - April 2023}
+\shortDescription{Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.}
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+    \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+    \item Implemented efficient CI/CD workflows to streamline development and \textbf{deployment} processes. 
+    \item Project repository available here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{GitHub}}.
+\end{tightemize}
+```2024-06-21 08:52:31: status=completed
+agent=LaTeX Code Generator
+2024-06-21 08:59:53: task=Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+Organize the experiences as follows: - Title: Use \customTitle{Project/Experience Title}. - Summary points: List up to three summary points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: Provide a brief overview using \shortDescription{Short Description}. - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+**Item Limitations:** - Total experiences: Check the provided field "total experiences count". Based on the number of experiences adjust the number of items in the custom-made `tightemize` environment for all experiences. Follow this guideline:
+
+  -- If "total experiences count" : 3, 
+    --- including any link if provided, make a maximum of 3 \items. 
+  -- else If "total experiences count": 2 or less, 
+    --- including any link if provided, make a maximum of 5 \items.
+
+Special Character Handling: - Use textbf{} for bold text. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 08:59:53: status=started
+agent=LaTeX Code Generator
+2024-06-21 09:00:08: task=\section{Experience}
+\customTitle{ATS Pass AI}
+    \summaryPoints{Python | AI | NLP | RAG Search}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+    \shortDescription{Developed a multi-agent system to create tailored resumes using AI and natural language processing.}
+
+    \begin{tightemize}
+        \item Developed a multi-agent system to create \textbf{personalized} resumes using \textbf{AI} and \textbf{natural language processing (NLP).}
+        \item Utilized advanced \textbf{AI models} and multi-agent technologies to dynamically \textbf{personalize} resumes, demonstrating cutting-edge technical and \textbf{analytical} capabilities.
+        \item Achieved over 85\% keyword alignment and \textbf{optimized resumes for ATS}.
+        \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}. 
+    \end{tightemize}
+    
+\customTitle{AI Path Finding}
+    \summaryPoints{Java | AI | A* Algorithm | Git}
+    \roleAndTimeline{Game Development Project - Jul 2023 - Sep 2023}
+
+    \shortDescription{Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.}
+
+    \begin{tightemize}
+        \item Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+        \item Utilized Git for version control and CI/CD practices, resulting in a 50\% reduction in deployment time.
+        \item Enhanced \textbf{problem-solving} and \textbf{analytical skills} through the implementation of the A* pathfinding algorithm.
+        \item Project repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+    \end{tightemize}
+
+\customTitle{Connect 4 Game}
+    \summaryPoints{Java | AI | Game Dev. | CI/CD}
+    \roleAndTimeline{Game Development Project - February 2023 - April 2023}
+
+    \shortDescription{Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.}
+
+    \begin{tightemize}
+        \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+        \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+        \item Implemented efficient CI/CD workflows to streamline development and \textbf{deployment} processes.
+        \item Project repository available here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{GitHub}}.
+    \end{tightemize}2024-06-21 09:00:08: status=completed
+agent=LaTeX Code Generator
+2024-06-21 09:01:16: task=Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+Organize the experiences as follows: - Title: Use \customTitle{Project/Experience Title}. - Summary points: List up to three summary points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: Provide a brief overview using \shortDescription{Short Description}. - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+**Item Limitations:** - Total experiences: Check the provided field "total experiences count". Based on the number of experiences adjust the number of items in the custom-made `tightemize` environment for all experiences. Follow this guideline:
+
+  -- If "total experiences count" : 3, 
+    --- including any link if provided, make a maximum of 3 \items. Omitting other key highlights.
+  -- else If "total experiences count": 2 or less, 
+    --- including any link if provided, make a maximum of 5 \items. Omitting other key highlights.
+
+Special Character Handling: - Use textbf{} for bold text. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:01:16: status=started
+agent=LaTeX Code Generator
+2024-06-21 09:01:29: task=```latex
+\section{Experience}
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | Multiagent | AI | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+\shortDescription{Developed a multi-agent system to create tailored resumes using AI and natural language processing.}
+\begin{tightemize}
+    \item Developed a multi-agent system to create \textbf{personalized} resumes using \textbf{AI} and \textbf{natural language processing (NLP).}
+    \item Utilized advanced \textbf{AI models} and multi-agent technologies to dynamically \textbf{personalize} resumes, demonstrating cutting-edge technical and \textbf{analytical} capabilities.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{Java | A* Algorithm | Git | CI/CD}
+\roleAndTimeline{AI Game Development - Jul 2023 - Sep 2023}
+\shortDescription{Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.}
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A\* algorithm to create an AI-driven game.
+    \item Utilized Git for version control and CI/CD practices, resulting in a 50\% reduction in deployment time. 
+    \item Enhanced \textbf{problem-solving} and \textbf{analytical skills} through the implementation of the A\* pathfinding algorithm.
+\end{tightemize}
+
+\customTitle{Connect 4 Game}
+\summaryPoints{Java | AI | Game Dev. | CI/CD}
+\roleAndTimeline{Game Development - February 2023 - April 2023}
+\shortDescription{Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.}
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+    \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+    \item Implemented efficient CI/CD workflows to streamline development and \textbf{deployment} processes. 
+\end{tightemize}
+```2024-06-21 09:01:29: status=completed
+agent=Experience Item Selector2024-06-21 09:38:47: task=This task involves processing the experience data provided for an applicant and selecting key highlights for each experience. The selection process depends on the total count of experiences and includes any provided links as the last item in the list of key highlights.
+When selecting key highlights, consider the following guidelines: - Check which collection of key highlights represents the most impactful and relevant information for each experience. - For three total experiences, keep up to a maximum of three key highlights for each, including the link as the last item. - For two or fewer total experiences, keep up to a maximum of five key highlights for each, including the link as the last item. - If a link is included in the key highlights, it should be listed last, and the link field can be omitted from the original data.
+The output will be a JSON structure similar to the input but adjusted to meet these criteria.
+Example Output: {
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development, Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP)**.",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Project repository available here on https://github.com/vmsaif/ats-pass-ai
+        ]
+      },
+      ...
+    ]
+  }
+}
+Ensure that the JSON output is well-formatted and adheres to the guidelines set forth for the number of highlights based on the total experience count.
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:38:47: status=started
+agent=Experience Item Selector2024-06-21 09:39:00: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:39:00: status=completed
+agent=Experience Item Selector2024-06-21 09:43:04: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  - When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  - When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+Example:  ```json {
+  "total experiences count": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "title": "ATS Pass AI",
+        "Key Highlights": [
+          "Developed a multi-agent system to create personalized resumes using AI and natural language processing.",
+          "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+          "Project repository available here on https://github.com/vmsaif/ats-pass-ai"
+        ]
+      },
+      ...
+    ]
+  }
+} ```
+This output ensures each experience is succinctly presented with a focus on relevance and impact, aligning with the structured guidelines for key highlights and link placement.
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:43:04: status=started
+agent=Experience Item Selector2024-06-21 09:43:15: task={
+"total experiences count": "3",
+"applicant's Experiences with ATS Keywords": {
+"Most Recent Experience": [
+{
+"Work/Project": "Project",
+"title": "ATS Pass AI",
+"Timeline": "January 2024 - Present",
+"Duration": "7 months",
+"Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+"Skills": "AI, Machine Learning, Software Development, Natural Language Processing (NLP)",
+"Link": "https://github.com/vmsaif/ats-pass-ai",
+"Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+"Key Highlights": [
+"Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+"Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+"Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+]
+}
+],
+"Project Experience": [
+{
+"Work/Project": "Project",
+"title": "AI Path Finding",
+"Timeline": "Jul 2023 - Sep 2023",
+"Duration": "3 months",
+"Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+"Skills": "Game Development, AI, Software Engineering",
+"Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+"Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+"Key Highlights": [
+"Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+"Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+"Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+]
+},
+{
+"Work/Project": "Project",
+"title": "Connect 4 Game",
+"Timeline": "February 2023 - April 2023",
+"Duration": "3 months",
+"Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+"Skills": "Game Development, Software Engineering",
+"Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+"Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+"Key Highlights": [
+"Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+"Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+"Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+]
+}
+]
+}
+}2024-06-21 09:43:15: status=completed
+agent=Key Highlights Selector2024-06-21 09:46:22: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  - When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  - When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+Example:  ```json {
+  "total experiences count": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "title": "ATS Pass AI",
+        "Key Highlights": [
+          "Developed a multi-agent system to create personalized resumes using AI and natural language processing.",
+          "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+          "Project repository available here on https://github.com/vmsaif/ats-pass-ai"
+        ]
+      },
+      ...
+    ]
+  }
+} ```
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:46:22: status=started
+agent=Key Highlights Selector2024-06-21 09:46:37: task=```json
+{
+  "total experiences count:": "2",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**.",
+          "Reduced resume creation time by over 80%, enabling job seekers to apply to more opportunities with **greater efficiency**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes.",
+          "Optimized game performance through effective resource management and code refactoring."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes.",
+          "Introduced gameplay AI variations, allowing for different difficulty levels and engaging gameplay scenarios.",
+          "Leveraged modular design principles for ease of maintenance and future enhancements."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:46:37: status=completed
+agent=Key Highlights Selector2024-06-21 09:47:51: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  - When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  - When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:47:51: status=started
+agent=Key Highlights Selector2024-06-21 09:48:07: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS.**",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:48:07: status=completed
+agent=Key Highlights Selector2024-06-21 09:49:41: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  If a link is provided, it will be counted as a key highlight and should be moved to the last position in the list of key highlights.
+  -- When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  -- When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:49:41: status=started
+agent=Key Highlights Selector2024-06-21 09:49:56: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**, https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm, https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes, https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:49:56: status=completed
+agent=Key Highlights Selector2024-06-21 09:52:06: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  If a link is provided, it will be counted as a key highlight and should be moved to the last position in the list of key highlights.
+  -- When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  -- When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+Example: {
+    "Work/Project": "Project",
+    "title": "AI Path Finding",
+    "Timeline": "Jul 2023 - Sep 2023",
+    "Duration": "3 months",
+    "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+    "Skills": "Game Development, AI, Software Engineering",
+    "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+    "Key Highlights": [
+      "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+      "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+      "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+    ]
+  },
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:52:06: status=started
+agent=Key Highlights Selector2024-06-21 09:52:22: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:52:22: status=completed
+agent=Key Highlights Selector2024-06-21 09:53:57: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  If a link is provided, it will be counted as a key highlight and should be moved to the last position in the list of key highlights.
+  -- When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  -- When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+Example:
+Assuming the total experiences count is 3 and also a link is given, It must include up to three key highlights, with the link.
+{
+    "Work/Project": "Project",
+    "title": "AI Path Finding",
+    "Timeline": "Jul 2023 - Sep 2023",
+    "Duration": "3 months",
+    "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+    "Skills": "Game Development, AI, Software Engineering",
+    "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+    "Key Highlights": [
+      "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+      "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+      "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+    ]
+  },
+
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:53:57: status=started
+agent=Key Highlights Selector2024-06-21 09:54:13: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:54:13: status=completed
+agent=Key Highlights Selector2024-06-21 09:55:34: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  If a link is provided, it will be counted as a key highlight and should be moved to the last position in the list of key highlights.
+  -- When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  -- When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+Example:
+Assuming the total experiences count is 3 and also a link is given, It must include up to three key highlights, with the link.
+{
+    "Work/Project": "Project",
+    "title": "AI Path Finding",
+    "Timeline": "Jul 2023 - Sep 2023",
+    "Duration": "3 months",
+    "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+    "Skills": "Game Development, AI, Software Engineering",
+    "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+    "Key Highlights": [
+      "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+      "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+      "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+    ]
+  },
+
+If you notice, Now the "Key Highlights" field has only 3 items and the link is moved to the last position.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:55:34: status=started
+agent=Key Highlights Selector2024-06-21 09:55:49: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:55:49: status=completed
+agent=Key Highlights Selector2024-06-21 09:56:37: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  If a link is provided, it will be counted as a key highlight and should be moved to the last position in the list of key highlights.
+  -- When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  -- When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+Example:
+Assuming the total experiences count is 3 and also a link is given, It must include up to three key highlights, with the link.
+{
+  "Work/Project": "Project",
+  "title": "AI Path Finding",
+  "Timeline": "Jul 2023 - Sep 2023",
+  "Duration": "3 months",
+  "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+  "Skills": "Game Development, AI, Software Engineering",
+  "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+Notice, Now the "Key Highlights" field has only 3 items and the link is moved to the last position.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:56:37: status=started
+agent=Key Highlights Selector2024-06-21 09:56:53: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:56:53: status=completed
+agent=Key Highlights Selector2024-06-21 09:58:17: task=This task involves refining the key highlights for each experience provided for an applicant based on the total count of experiences. It should include any provided links as the last item in the list of key highlights.
+- For each experience:
+  If a link is provided, it will be counted as a key highlight and should be moved to the last position in the list of key highlights.
+  -- When the total number of experiences is three, include up to three key highlights, with the link (if provided) being the last highlight.
+  -- When the total number of experiences is two or less, include up to five key highlights, with the link (if provided) being the last highlight.
+
+- If a link is included in the list of key highlights and moved to be the last item, the original 'Link' field should be omitted from the output data.
+The output will adjust the structure of each experience to comply with these rules, ensuring that the highlights are impactful and the link is positioned correctly.
+This output ensures each experience is succinctly presented with a focus on relevance and impact but also priotize the links if provided, aligning with the structured guidelines for key highlights and link placement.
+Example:
+Assuming the total experiences count is 3 and also a link is given, It must include up to three key highlights, with the link.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+Notice, Now the "Key Highlights" field has only 3 items and the link is moved to the last position.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:58:17: status=started
+agent=Key Highlights Selector2024-06-21 09:58:34: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS.**",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 09:58:34: status=completed
+agent=Key Highlights Selector2024-06-21 10:01:58: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:01:58: status=started
+agent=Key Highlights Selector2024-06-21 10:02:15: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:02:15: status=completed
+agent=Key Highlights Selector2024-06-21 10:03:08: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:03:08: status=started
+agent=Key Highlights Selector2024-06-21 10:03:21: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **tailored** resumes using **AI** and **Natural Language Processing (NLP)**.",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **tailor** resumes, demonstrating cutting-edge **technical** and **analytical** capabilities."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:03:21: status=completed
+agent=Key Highlights Selector2024-06-21 10:03:43: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:03:43: status=started
+agent=Key Highlights Selector2024-06-21 10:03:56: task={
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and Natural Language Processing (NLP).",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating critical technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and analytical skills through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}2024-06-21 10:03:56: status=completed
+agent=Key Highlights Selector2024-06-21 10:04:24: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:04:24: status=started
+agent=Key Highlights Selector2024-06-21 10:04:38: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:04:38: status=completed
+agent=Key Highlights Selector2024-06-21 10:05:08: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include the two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:05:08: status=started
+agent=Key Highlights Selector2024-06-21 10:05:21: task={
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement."
+        ]
+      }
+    ]
+  }
+}2024-06-21 10:05:21: status=completed
+agent=Key Highlights Selector2024-06-21 10:05:43: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include the two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:05:43: status=started
+agent=Key Highlights Selector2024-06-21 10:05:56: task={
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}2024-06-21 10:05:56: status=completed
+agent=Key Highlights Selector2024-06-21 10:06:23: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include the two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:06:23: status=started
+agent=Key Highlights Selector2024-06-21 10:06:39: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:06:39: status=completed
+agent=Key Highlights Selector2024-06-21 10:07:25: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Example Input and Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include the two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations. - Do not change key highlights wording.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:07:25: status=started
+agent=Key Highlights Selector2024-06-21 10:07:40: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:07:40: status=completed
+agent=LaTeX Code Generator
+2024-06-21 10:10:06: task=Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+Organize the experiences as follows: - Title: Use \customTitle{Project/Experience Title}. - Summary points: List up to three summary points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: Provide a brief overview using \shortDescription{Short Description}. - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+Special Character Handling: - Use textbf{} for bold text. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:10:06: status=started
+agent=LaTeX Code Generator
+2024-06-21 10:10:20: task=```latex
+\section{Experience}
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | AI | NLP | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+\shortDescription{Developed a multi-agent system to create tailored resumes using AI and natural language processing.}
+\begin{tightemize}
+    \item Developed a multi-agent system to create \textbf{personalized} resumes using \textbf{AI} and \textbf{natural language processing (NLP).}
+    \item Utilized advanced \textbf{AI models} and multi-agent technologies to dynamically \textbf{personalize} resumes, demonstrating cutting-edge technical and \textbf{analytical} capabilities. 
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{Java | AI | A* Algorithm | CI/CD}
+\roleAndTimeline{Game Development Project - Jul 2023 - Sep 2023}
+\shortDescription{Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.}
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A\* algorithm to create an AI-driven game.
+    \item Utilized Git for version control and CI/CD practices, resulting in a 50\% reduction in deployment time.
+    \item Project repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{Connect 4 Game}
+\summaryPoints{Java | Game Dev. | AI | 6x7 Grid}
+\roleAndTimeline{Software Development Project - February 2023 - April 2023}
+\shortDescription{Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.}
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+    \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+    \item  Project repository available here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{GitHub}}.
+\end{tightemize}
+```2024-06-21 10:10:20: status=completed
+agent=Key Highlights Selector2024-06-21 10:55:23: task=This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+Procedure: - First, count the total number of experiences provided. - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total. - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total. - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+Expected Behavior: Given a total of three experiences, and each has a link, the process will: - Include the two most impactful highlights from the original list and the link as the third highlight for each experience. - Omit any additional highlights beyond the third item to comply with the limitations. - Do not change key highlights wording.
+{
+  ...,
+  "Key Highlights": [
+    "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+    "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+    "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+  ]
+},
+This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
+  
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:55:23: status=started
+agent=Key Highlights Selector2024-06-21 10:55:39: task=```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:55:39: status=completed
+agent=LaTeX Code Generator
+2024-06-21 10:57:05: task=Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+Organize the experiences as follows: - Title: Use \customTitle{Project/Experience Title}. - Summary points: List up to three summary points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: Provide a brief overview using \shortDescription{Short Description}. - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+Special Character Handling: - Use textbf{} for bold text. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:57:05: status=started
+agent=LaTeX Code Generator
+2024-06-21 10:57:18: task=```latex
+\section{Experience}
+
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | RAG Search | AI | NLP}
+\roleAndTimeline{Resume Automation Tool | January 2024 - Present}
+
+\shortDescription{Developed a multi-agent system to create tailored resumes using AI and natural language processing.}
+
+\begin{tightemize}
+    \item Developed a multi-agent system to create \textbf{personalized} resumes using \textbf{AI} and \textbf{natural language processing (NLP).}
+    \item Utilized advanced \textbf{AI models} and multi-agent technologies to dynamically \textbf{personalize} resumes, demonstrating cutting-edge technical and \textbf{analytical} capabilities.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{Java | A* Algorithm | Git | CI/CD}
+\roleAndTimeline{Game Development Project | Jul 2023 - Sep 2023}
+
+\shortDescription{Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.}
+
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A\* algorithm to create an AI-driven game. 
+    \item Utilized Git for version control and CI/CD practices, resulting in a 50\% reduction in deployment time.
+    \item Project repository available here on \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{Connect 4 Game}
+\summaryPoints{Java | AI | Game Dev. | 6x7 Grid}
+\roleAndTimeline{Game Development Project | February 2023 - April 2023}
+
+\shortDescription{Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.}
+
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+    \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+    \item Project repository available here on \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{GitHub}}. 
+\end{tightemize}
+```2024-06-21 10:57:18: status=completed
+agent=LaTeX Code Generator
+2024-06-21 10:58:03: task=Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+Organize the experiences as follows: - Title: Use \customTitle{Project/Experience Title}. - Summary points: List up to three summary points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: Provide a brief overview using \shortDescription{Short Description}. - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+Special Character Handling: - Use textbf{} for bold text. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+```json
+{
+  "total experiences count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "https://github.com/vmsaif/ats-pass-ai"
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
+        ]
+      }
+    ]
+  }
+}
+```2024-06-21 10:58:03: status=started
+agent=LaTeX Code Generator
+2024-06-21 10:58:17: task=\section{Experience}
+
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | Multiagent | AI | RAG Search}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+\shortDescription{Developed a multi-agent system to create tailored resumes using AI and natural language processing.}
+
+\begin{tightemize}
+    \item Developed a multi-agent system to create \textbf{personalized} resumes using \textbf{AI} and \textbf{natural language processing (NLP).}
+    \item Utilized advanced \textbf{AI models} and multi-agent technologies to dynamically \textbf{personalize} resumes, demonstrating cutting-edge technical and \textbf{analytical} capabilities. 
+    \item \href{https://github.com/vmsaif/ats-pass-ai}{\ul{https://github.com/vmsaif/ats-pass-ai}}
+\end{tightemize}
+
+\customTitle{AI Path Finding}
+\summaryPoints{Java | A* Algorithm | Git | CI/CD}
+\roleAndTimeline{Game Development Project - Jul 2023 - Sep 2023}
+
+\shortDescription{Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.}
+
+\begin{tightemize}
+    \item Developed a Java-based game development project that leveraged the A\* algorithm to create an AI-driven game.
+    \item Utilized Git for version control and CI/CD practices, resulting in a 50\% reduction in deployment time.
+    \item \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}}
+\end{tightemize}
+
+\customTitle{Connect 4 Game}
+\summaryPoints{Java | AI | Game Development |  Decision-Making}
+\roleAndTimeline{Game Development Project - February 2023 - April 2023}
+
+\shortDescription{Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.}
+
+\begin{tightemize}
+    \item Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.
+    \item Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+    \item \href{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}{\ul{https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java}}
+\end{tightemize}2024-06-21 10:58:17: status=completed

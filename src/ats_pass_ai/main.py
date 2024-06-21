@@ -15,6 +15,16 @@ from ats_pass_ai.timer import Timer
 from ats_pass_ai.latex_generator import compile_latex
 # First, Lets Organize the applicant Information provided by the applicant.
 
+from crewai.telemetry import Telemetry
+
+def noop(*args, **kwargs):
+    # print("Telemetry method called and noop'd\n")
+    pass
+
+for attr in dir(Telemetry):
+    if callable(getattr(Telemetry, attr)) and not attr.startswith("__"):
+        setattr(Telemetry, attr, noop)
+
 applicant_info_file_path = PATHS["applicant_info_file_path"]
 jd_file_path = PATHS["jd_file_path"]
 

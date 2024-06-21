@@ -1220,7 +1220,7 @@ ats_friendly_keywords_into_experiences:
     **Job Description Keywords:** 
     {jd_keywords}
 
-    After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
+    Count the total number of experiences. After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
 
     When you are done with listing the experiences with integrated keywords, provide a detailed report on changes in a new section ## Report on Changes:
 
@@ -1276,6 +1276,7 @@ ats_friendly_keywords_into_experiences:
     This should maintain the original structure as in the input context, with the addition of the integrated keywords.
     {
       "applicant's Experiences with ATS Keywords": {
+        "total experiences count:": "integer value",
         "Most Recent Experience": {},
         "Work Experience/Project Experience": {},
       }
