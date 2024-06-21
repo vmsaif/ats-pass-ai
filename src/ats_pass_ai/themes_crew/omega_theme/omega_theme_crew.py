@@ -47,7 +47,7 @@ class OmegaThemeCrew:
 	
 	genAILarge = GoogleGenerativeAI(
 		model="gemini-1.5-pro-latest",
-		temperature=0.5,
+		temperature=1.0,
 		safety_settings = {
 			HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
 			HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
@@ -85,12 +85,12 @@ class OmegaThemeCrew:
 				# self.split_content_of_select_first_column_content(),
 				# self.educationsection(),
 				# self.courseworksection(),
-				self.volunteerworksection(),
+				# self.volunteerworksection(),
 				# self.referencessection(), 
 
 				# self.skillsection(),
 				# self.careerobjectivesection(),
-				# self.experiencesection()
+				self.experiencesection()
 			]
 		# Return the crew
 		return Crew(
@@ -132,15 +132,13 @@ class OmegaThemeCrew:
 	@agent
 	def latex_maker_large_agent(self) -> Agent:
 		# load yaml
-		yaml = self.yaml_loader("latex_maker_agent", False)
+		yaml = self.yaml_loader("latex_maker_agent", is_task = False)
 		return Agent(
 			role=yaml[0],
 			goal=yaml[1],
 			backstory=yaml[2],
 			allow_delegation=False,
 			verbose=True,
-			# llm=self.genAI,
-			# step_callback=self.small_llm_limiter,
 			llm=self.genAILarge,
 			step_callback=self.large_llm_limiter
 		)
@@ -214,7 +212,7 @@ class OmegaThemeCrew:
 		description = yaml[0].format(applicant_information = applicant_information)
 
 		if(os.path.exists(PATHS["coursework_extraction_task"])):
-			description = description + "\n\n Relevant Courses" + self.load_file(PATHS["coursework_extraction_task"])
+			description = description + "\n\n Relevant Courses:" + self.load_file(PATHS["coursework_extraction_task"])
 
 		if self.debugFlag:
 			jd_keyword_extraction = self.load_file(PATHS["concise_jd_task"])
@@ -361,10 +359,11 @@ class OmegaThemeCrew:
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.latex_maker_agent(),
-			# agent=self.latex_maker_large_agent(),
+			# agent=self.latex_maker_agent(),
+			# callback=self.small_token_limiter,
 			output_file=PATHS["experiencesection"],
-			callback=self.small_token_limiter
+			agent=self.latex_maker_large_agent(),
+			callback=self.large_token_limiter
 		)
 
 	def load_file(self, file_path):

@@ -1,43 +1,32 @@
 {
-    "selected_sections": [
+  "selected_sections": [
+    {
+      "section": "Education",
+      "sub_sections": [
         {
-            "section": "Education",
-            "sub_sections": [
-                {
-                    "institution name": "University of Manitoba",
-                    "degree": "BSc Major in Computer Science",
-                    "graduation_status": "Graduated",
-                    "graduation_date": "October 2023",
-                    "relevant_coursework": [
-                        "Distributed Computing (Python | JavaScript)",
-                        "Data Structures and Algorithms (Java)",
-                        "AI and Game Development (Java | Python)"
-                    ],
-                    "reason": "The applicant's education directly aligns with the job requirements for a Computer Science degree and coursework in AI-related fields such as Distributed Computing, Data Structures and Algorithms, and AI and Game Development."
-                }
-            ]
+          "institution_name": "University of Manitoba",
+          "degree": "BSc Major in Computer Science",
+          "graduation_status": "Expected Graduation: October 2023",
+          "graduation_date": null
+        }
+      ]
+    },
+    {
+      "section": "References",
+      "sub_sections": [
+        {
+          "name": "Abu Kabir",
+          "position": "Director, IT Service Management",
+          "company": "Microsoft Corporation",
+          "contact_information": "204-298-3693 | Winnipeg, MB"
         },
         {
-            "section": "References",
-            "sub_sections": [
-                {
-                    "name": "Abu Kabir",
-                    "position": "Director, IT Service Management",
-                    "company": "Microsoft Corporation",
-                    "contact_information": "204-298-3693 | Winnipeg, MB",
-                    "relationship": null,
-                    "reason": "Abu Kabir holds a senior position at Microsoft in the field of IT Service Management, indicating their experience and credibility in the tech industry. Their professional relationship with the applicant further strengthens their suitability as a reference."
-                },
-                {
-                    "name": "Safiur Mahdi",
-                    "position": "Java Developer",
-                    "company": "Skip the Dishes",
-                    "contact_information": "204-583-3432",
-                    "relationship": null,
-                    "reason": "Safiur Mahdi's role as a Java Developer at Skip the Dishes demonstrates their technical expertise in Java, which is a key requirement for the AI-related position. Their professional connection with the applicant enhances the value of their reference."
-                }
-            ]
+          "name": "Safiur Mahdi",
+          "position": "Java Developer",
+          "company": "Skip the Dishes",
+          "contact_information": "204-583-3432"
         }
-    ],
-    "omitted_sections": []
+      ]
+    }
+  ]
 }

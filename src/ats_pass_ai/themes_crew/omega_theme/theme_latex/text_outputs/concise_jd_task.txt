@@ -1,15 +1,17 @@
-**Essential Responsibilities:**
+Artificial Intelligence Engineer at Radical AI for Social Good Lab
 
-* Design and develop innovative AI models using machine learning, deep learning, generative AI, and natural language processing.
-* Analyze and preprocess data for machine learning applications.
-* Collaborate with AI teams to enhance algorithms and models.
-* Present research findings and engage in critical team discussions.
-* Contribute to the development of AI virtual agents.
+**Key Responsibilities:**
+
+* Design and develop innovative AI models
+* Analyze and preprocess data for machine learning applications
+* Collaborate with AI teams to enhance algorithms and models
+* Present research findings and engage in critical team discussions
+* Contribute to the development of AI virtual agents
 
 **Essential Qualifications:**
 
-* Bachelor's or Master's degree in Computer Science, AI, or related fields.
-* Profound knowledge of AI, machine learning, and NLP.
-* Expertise in Python and AI development frameworks like TensorFlow or PyTorch.
-* Strong analytical, problem-solving, and creative thinking skills.
-* Excellent communication and teamwork abilities.
+* Bachelor's or Master's in Computer Science, AI, or related fields
+* Profound knowledge of AI, machine learning, and NLP
+* Expertise in Python and AI development frameworks like TensorFlow or PyTorch
+* Strong analytical, problem-solving, and creative thinking skills
+* Excellent communication and teamwork abilities

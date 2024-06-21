@@ -12,7 +12,6 @@ namesection:
     - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol.
     - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province.
     - Pipeline '|' should be used to separate the data and must not be the last character of the output.
-    - The output should be raw latex code and should not be in a code block.
 
     Example:
     \namesection{Saif}{Mahmud}
@@ -130,7 +129,6 @@ educationsection:
     Conditions:
     - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
       % No education information provided. 
-    - Your output should be raw LaTeX code and should not be in a code block.
 
     Here is the information you need and convert into LaTeX format:
   expected_output: >
@@ -160,11 +158,9 @@ courseworksection:
     \sectionsep
 
     Conditions:
-    - If there is no Course information, each line of the output should be latex comments, starting with '%'. 
-      % \section{Relevant Courses}
+    - If there is no Course information, each line of the output should be latex comments, starting with '%' like this:
+      % \section{}
       % \sectionsep. 
-    - Your output should be raw LaTeX code. 
-    - Do not provide the output in a code block.
 
     Here is the information you need and convert into LaTeX format:
   expected_output: >
@@ -183,7 +179,7 @@ skillsection:
     3. **Formatting**:
        - Use \skillsVSpace between each category to maintain visual separation.
        - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
-    4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
+    4. The expected output is only the category and items, not any explanation or additional text.
 
     Example:
 
@@ -201,12 +197,10 @@ skillsection:
     \sectionsep
 
     **Conditions**:
-    - Provide raw latex, not in a code block.
     - If there are no skills provided, the output should be latex comments, starting with '%', like this:
       % \section{}
       % \sectionsep.
 
-    Do not provide the output in a code block or blockquote.
   expected_output: >
 
 volunteersection:
@@ -231,12 +225,10 @@ volunteersection:
     \sectionsep
 
     **Conditions**:
-    - Only generate the `\section{Volunteer}` if there is at least one volunteer entry. 
+    - Only write the `\section{Volunteer}` if there is at least one volunteer entry. 
     - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
       % no volunteer work information provided.
-    - Do not provide the output in a code block, blockquote.
   expected_output: >
-    blockquote is not needed for the output.
 
 referencessection:
   description: >
@@ -271,12 +263,10 @@ referencessection:
     - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, each line starting with '%' like this:
       % \section{}
       % \sectionsep.
-    - Your output should follow latex syntax, no need for any code block quotes.
 
     Here is the information you need and convert into LaTeX format:
 
   expected_output: >
-    No blockquote is needed for the output.
 
 careerobjectivesection:
   description: >
@@ -291,50 +281,45 @@ careerobjectivesection:
         \careerGoalBody{
             Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
 
-    - Output should be raw LaTeX code and should not be in a code block.
   expected_output: >
 
 experiencesection:
   description: >
-    Extract the experience information of the applicant from the provided data. Then convert the extracted data into the LaTeX format.
+    Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
 
-    In the output,
-    - The first line contains the section named "Experience", or "Project Experience" or something else, based on the provided data. Use the command \section{Experience} or \section{Project Experience} etc.
+    Organize the experiences as follows:
+    - Title: Use \customTitle{Project/Experience Title}.
+    - Summary points: List up to three key points or up to 4 words using \summaryPoints{item 1 | item 2 | item 3}.
+    - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}.
+    - Short description: Provide a brief overview using \shortDescription{Short Description}.
+    - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
 
-    - List the experience information as follows:
-      -- Project or Experience title: \customTitle{Project/Experience Title}
-      -- Summary points: \summaryPoints{item 1 | item 2 | Item 3}
-      -- Role and timeline: \roleAndTimeline{Role | Timeline}
-      -- Short description: \shortDescription{Short Description}
-      -- Highlight the key responsibilities and achievements using the tightemize environment. \begin{tightemize} 
-      -- Use \item to list each responsibility or achievement.
-      -- Last \item can have a link using \href{}{}, \ul, and text.
-      -- End the tightemize \end{tightemize}.
+    **Item Limitations:**
+    - Total experiences: Check the provided field "total experiences count". Based on the number of experiences adjust the number of items in the custom-made `tightemize` environment for all experiences. Follow this guideline:
 
-    Limitations:
-    - If you find in total 3 experiences, the number of \items highlights must be 3 or less for each experience.
-    - If you find in total 2 experiences, the number of \items highlights must be 5 or less for each experience.
-    - If a link is provided, the last \item should have the link maintaining the limit of \items.
- 
-    Example:
+      -- If "total experiences count" : 3, 
+        --- Make a maximum of 3 \items including any link if provided. Links must be prioritized over other highlights.
+      -- else If "total experiences count": 2 or less, 
+        --- Make a maximum of 5 \items including any link if provided. Links must be prioritized over other highlights.
+    
+    Special Character Handling:
+    - Use textbf{} for bold text.
+    - Format links with \href{}{}, using \ul for underlining.
+    - Escape special characters appropriately (e.g., \%, \&, \#).
+   
+  expected_output: >
     \section{Experience}
     \customTitle{ATS Pass AI}
         \summaryPoints{Python | Multiagent | AI | RAG Search}
         \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
 
-        \shortDescription{Led the development of an AI driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+        \shortDescription{Led the development of an AI-driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
 
         \begin{tightemize}
             \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
             \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
             \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
         \end{tightemize}
-
-    Important: 
-    - Output should be in valid LaTeX syntax. 
-    - Do not output in any code block quotes.
-    
-  expected_output: >
 
 # awards_recognitions_extraction_task:
 #   description: >
