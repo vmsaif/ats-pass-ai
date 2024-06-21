@@ -1,33 +1,55 @@
+```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "Most Recent Experience": {
-      "Project Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present",
-      "Duration": "7 months",
-      "Technologies": "Multiagent | AI | Python | RAG Search",
-      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
-      "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Led the development of a multi-agent system to create tailored resumes for enhanced job search efficiency."
-    }
-  },
-  "Work Experience/Project Experience": {
-    "AI Path Finding": {
-      "Project Title": "AI Path Finding",
-      "Timeline": "Jul 2023 - Sep 2023",
-      "Duration": "3 months",
-      "Technologies": "A* Algorithm | Java | Git | CI/CD",
-      "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
-      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Short Description": "Developed a Java-based AI-driven game leveraging the A* algorithm for pathfinding."
-    },
-    "Reversible Learning APP": {
-      "Project Title": "Reversible Learning APP",
-      "Timeline": "January 2021 - April 2021",
-      "Duration": "4 months",
-      "Technologies": "SQL | Android Studio | Java",
-      "skills": "Android Studio, Java, SQL, UI/UX Design, Database Management",
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Short Description": "Collaborated on the development of 'Reversible Learning', an Android app for enhancing study habits."
-    }
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
   }
 }
+```

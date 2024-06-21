@@ -1,8 +1,8 @@
 import subprocess
 import os
-def compile_latex(tex_path, output_dir = None):
+def compile_latex(tex_path, sub_tex_files_dir, output_dir = None):
     
-    sanitized_file(tex_path)
+    sanitize_directory(sub_tex_files_dir)
     filename = os.path.basename(tex_path)
     class_path = os.path.dirname(tex_path)
 
@@ -33,7 +33,14 @@ def compile_latex(tex_path, output_dir = None):
         print("Standard Output:")
         print(e.output if e.output else "No output available.")
 
-def sanitized_file(tex_path):
+def sanitize_directory(directory):
+    for file in os.listdir(directory):
+        if file.endswith(".tex"):
+            sanitize_file(os.path.join(directory, file))
+        else:
+            print(f"Skipping {file} as it is not a .tex file. Not sanitizing it.")
+
+def sanitize_file(tex_path):
     # remove the lines that starts with quotes
     try:
         with open(tex_path, "r") as file:

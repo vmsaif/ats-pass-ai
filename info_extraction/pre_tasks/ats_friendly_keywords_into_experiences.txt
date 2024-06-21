@@ -1,125 +1,104 @@
 ```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "Most Recent Experience": {
-      "Project Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present",
-      "Duration": "7 months",
-      "Technologies": "Multiagent | AI | Python | RAG Search",
-      "skills": "Python, AI, Multi-agent, Resume Optimization, ATS Optimization",
-      "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Led the development of a multi-agent system to create tailored resumes for enhanced job search efficiency.",
-      "Key Highlights": [
-        "Led the development of a **multi-agent system** with CrewAI, LangChain, Gemini, and **RAG Search** to create tailored resumes, showcasing **problem-solving** skills in **AI for Social Good**.",
-        "Utilized advanced **AI models** and **multi-agent technologies** to dynamically personalize resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced **AI** tools like **Gemini Pro** and **RAG Search**, achieving over 85% keyword alignment and optimizing resumes for **ATS**."
-      ]
-    }
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain, Gemini",
+        "Skills": "AI, Machine Learning, Software Development,  Natural Language Processing (NLP)",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+          "Achieved over 85% keyword alignment and **optimized resumes for ATS**."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI, Software Engineering",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced **problem-solving** and **analytical skills** through the implementation of the A* pathfinding algorithm."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Technologies, frameworks, and tools Used": "Java, AI Decision-Making",
+        "Skills": "Game Development, Software Engineering",
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game featuring AI decision-making on a 6x7 grid.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
+          "Implemented efficient CI/CD workflows to streamline development and **deployment** processes."
+        ]
+      }
+    ]
   },
-  "Work Experience/Project Experience": {
-    "AI Path Finding": {
-      "Project Title": "AI Path Finding",
-      "Timeline": "Jul 2023 - Sep 2023",
-      "Duration": "3 months",
-      "Technologies": "A* Algorithm | Java | Git | CI/CD",
-      "skills": "Java, A* Pathfinding, AI, Game Development, Git, CI/CD",
-      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Short Description": "Developed a Java-based AI-driven game leveraging the A* algorithm for pathfinding.",
-      "Key Highlights": [
-        "Developed a Java-based game development project that leveraged the **A* algorithm** to create an **AI**-driven game, demonstrating **algorithm development** skills.",
-        "Utilized **Git** for version control, ensuring efficient team **collaboration** and code management.",
-        "Utilized **CI/CD** practices, resulting in a 50% reduction in deployment time, highlighting efficiency and technical proficiency."
-      ]
-    },
-    "Reversible Learning APP": {
-      "Project Title": "Reversible Learning APP",
-      "Timeline": "January 2021 - April 2021",
-      "Duration": "4 months",
-      "Technologies": "SQL | Android Studio | Java",
-      "skills": "Android Studio, Java, SQL, UI/UX Design, Database Management",
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Short Description": "Collaborated on the development of 'Reversible Learning', an Android app for enhancing study habits.",
-      "Key Highlights": [
-        "Collaborated with a team to develop 'Reversible Learning', an Android app for enhancing study habits, showcasing teamwork and **communication** skills.",
-        "Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management."
-      ]
-    }
-  }
-}
-```
-{
   "Report on Changes": {
     "ATS Pass AI": [
       {
-        "Original Sentence": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
-        "Revised Sentence": "Led the development of a **multi-agent system** with CrewAI, LangChain, Gemini, and **RAG Search** to create tailored resumes, showcasing **problem-solving** skills in **AI for Social Good**.",
-        "Keywords Added": [
-          "multi-agent system",
-          "RAG Search",
-          "problem-solving",
-          "AI for Social Good"
-        ],
-        "Rationale": "Incorporating these keywords directly aligns the experience with the job description's emphasis on AI for social impact, technical expertise in multi-agent systems and RAG search, and problem-solving abilities. "
-      },
-      {
         "Original Sentence": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
-        "Revised Sentence": "Utilized advanced **AI models** and **multi-agent technologies** to dynamically personalize resumes, demonstrating cutting-edge technical and **analytical** capabilities.",
+        "Revised Sentence": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
         "Keywords Added": [
-          "AI models",
-          "multi-agent technologies",
-          "analytical"
+          "AI Models",
+          "Personalize"
         ],
-        "Rationale": "Highlighting the use of 'AI models' and 'multi-agent technologies' directly addresses the technical skills outlined in the job description. The addition of 'analytical' further emphasizes the candidate's analytical skills, a key requirement for an AI engineer role."
+        "Rationale": "The keywords 'AI Models' and 'Personalize' are prominent in the job description, directly aligning with the use of AI for resume tailoring. Highlighting these keywords strengthens the relevance of the applicant's experience to the target role."
       },
       {
-        "Original Sentence": "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-        "Revised Sentence": "Engineered a system that extracts user data and analyzes job descriptions with advanced **AI** tools like **Gemini Pro** and **RAG Search**, achieving over 85% keyword alignment and optimizing resumes for **ATS**.",
+        "Original Sentence": "Developed a multi-agent system to create tailored resumes using AI and natural language processing.",
+        "Revised Sentence": "Developed a multi-agent system to create personalized resumes using AI and natural language processing (NLP).",
         "Keywords Added": [
-          "AI",
-          "Gemini Pro",
-          "RAG Search",
-          "ATS"
+          "Personalized",
+          "NLP"
         ],
-        "Rationale": "The inclusion of 'AI,' 'Gemini Pro,' and 'RAG Search' directly reflects the candidate's experience with the specific technologies mentioned in the job description. 'ATS' emphasizes the project's direct relevance to the target role."
+        "Rationale": "The job description emphasizes 'Personalized' experiences and 'NLP' as core skills. Integrating these keywords directly connects the candidate's project to the desired qualifications."
+      },
+      {
+        "Original Sentence": "Achieved over 85% keyword alignment and optimized resumes for ATS.",
+        "Revised Sentence": "Achieved over 85% keyword alignment and optimized resumes for ATS.",
+        "Keywords Added": [
+          "Optimized resumes for ATS"
+        ],
+        "Rationale": "This addition directly reflects the project's goal and aligns perfectly with the job description's emphasis on ATS optimization. This makes the applicant's achievement immediately recognizable and relevant to recruiters."
       }
     ],
     "AI Path Finding": [
       {
-        "Original Sentence": "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
-        "Revised Sentence": "Developed a Java-based game development project that leveraged the **A* algorithm** to create an **AI**-driven game, demonstrating **algorithm development** skills.",
+        "Original Sentence": "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Revised Sentence": "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
         "Keywords Added": [
-          "A* algorithm",
-          "AI",
-          "algorithm development"
+          "Problem-Solving",
+          "Analytical Skills"
         ],
-        "Rationale": "Explicitly mentioning 'A* algorithm' and 'AI' directly connects the project to relevant AI concepts. The phrase 'algorithm development' further strengthens this connection and highlights a crucial skill for the AI engineer position."
-      },
-      {
-        "Original Sentence": "Utilized Git for version control, ensuring efficient team collaboration and code management.",
-        "Revised Sentence": "Utilized **Git** for version control, ensuring efficient team **collaboration** and code management.",
-        "Keywords Added": [
-          "Git",
-          "collaboration"
-        ],
-        "Rationale": "Including 'Git' highlights experience with a widely used tool in AI development. 'Collaboration' emphasizes teamwork skills, often sought after in collaborative AI environments."
-      },
-      {
-        "Original Sentence": "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, highlighting efficiency and technical proficiency.",
-        "Revised Sentence": "Utilized **CI/CD** practices, resulting in a 50% reduction in deployment time, highlighting efficiency and technical proficiency.",
-        "Keywords Added": [
-          "CI/CD"
-        ],
-        "Rationale": "Explicitly mentioning 'CI/CD' showcases familiarity with modern software development practices often employed in AI-related roles."
+        "Rationale": "The job description lists 'Problem-Solving' and 'Analytical Skills' as essential. By explicitly mentioning these skills, the applicant's experience is better aligned with the required qualifications."
       }
     ],
-    "Reversible Learning APP": [
+    "Connect 4 Game": [
       {
-        "Original Sentence": "Collaborated with a team to develop 'Reversible Learning', an Android app for enhancing study habits.",
-        "Revised Sentence": "Collaborated with a team to develop 'Reversible Learning', an Android app for enhancing study habits, showcasing teamwork and **communication** skills.",
+        "Original Sentence": "Implemented efficient CI/CD workflows to streamline development and deployment processes.",
+        "Revised Sentence": "Implemented efficient CI/CD workflows to streamline development and deployment processes.",
         "Keywords Added": [
-          "communication"
+          "Deployment"
         ],
-        "Rationale": "Adding 'communication' emphasizes the collaborative aspects of the project and highlights a soft skill valued in AI development teams."
+        "Rationale": "While 'CI/CD' is present, 'Deployment' is explicitly mentioned in the job description. This specific addition reinforces the candidate's familiarity with the entire software development lifecycle."
       }
     ]
   }

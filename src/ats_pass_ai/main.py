@@ -134,13 +134,14 @@ def run():
         indexing_time = t.interval
 
         with Timer() as t:         
-            try:
+            # try:
                 # Delete the applicant profile files but not the folder To start fresh
-                RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+
+                # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
                 crew = ResumeCrew().crew()
-                crew.kickoff()
-            except Exception as e:
-                print(f"Error: {e}")
+                # crew.kickoff()
+            # except Exception as e:
+                # print(f"Error Here: {e}")
                 # exit the program
                 # print("Exiting the program due to error in crew kickoff")
                 # exit(1)
@@ -150,7 +151,7 @@ def run():
         with Timer() as t:
             omega_theme_crew = OmegaThemeCrew().crew()
             omega_theme_crew.kickoff()
-            compile_latex(PATHS["omega_theme_final_output_tex"], PATHS["omega_theme_final_output_pdf"])
+            compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
         latex_generation_time = t.interval
 
     program_run_time = total_time.interval

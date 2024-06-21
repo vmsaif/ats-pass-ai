@@ -159,13 +159,14 @@ Last Updated on \\
 
 
 \newcommand{\summaryPoints}[1]{
-  \color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Regular}\fontsize{11pt}{13pt}\selectfont
+  {\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Regular}\fontsize{11pt}{13pt}\selectfont
   % Check if the title width is greater than a specific length
   \ifdim\titlewidth>125pt
     \par\noindent{#1\\}\vspace{4pt} % Ensure no indentation at the start of a new paragraph
   \else
     { | #1\\} % Ensure space starts before the content if not on a new line
   \fi
+  }
 }
 
 \newcommand{\roleAndTimeline}[1]{
@@ -191,7 +192,8 @@ Last Updated on \\
 
 % Descriptors command
 \newcommand{\semiTitle}[1]{
-\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{13pt}\selectfont {\\#1}\par\vspace{2pt} \normalfont}
+{\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{13pt}\selectfont {\\#1}\par\vspace{2pt} \normalfont}
+}
 
 % SubTitle command
 \newcommand{\subTitle}[1]{

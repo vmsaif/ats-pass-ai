@@ -69,26 +69,28 @@ class OmegaThemeCrew:
 
 	
 	debugFlag = False
-	# debugFlag = True
+	debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
 
+		
+
 		tasks = [
-				self.namesection(),
-				self.concise_jd_task(),
+				# self.namesection(),
+				# self.concise_jd_task(),
 
-				self.select_first_column_content(),
-				self.split_content_of_select_first_column_content(),
-				self.educationsection(),
-				self.courseworksection(),
+				# self.select_first_column_content(),
+				# self.split_content_of_select_first_column_content(),
+				# self.educationsection(),
+				# self.courseworksection(),
 				self.volunteerworksection(),
-				self.referencessection(), 
+				# self.referencessection(), 
 
-				self.skillsection(),
-				self.careerobjectivesection(),
-				self.experiencesection()
+				# self.skillsection(),
+				# self.careerobjectivesection(),
+				# self.experiencesection()
 			]
 		# Return the crew
 		return Crew(
@@ -364,7 +366,7 @@ class OmegaThemeCrew:
 			output_file=PATHS["experiencesection"],
 			callback=self.small_token_limiter
 		)
-			
+
 	def load_file(self, file_path):
 		"""Load text file"""
 		try:

@@ -1,28 +1,43 @@
-**
-
-**Full name: ** Jane Doe
-
-**Contact information:** 123 Main Street, Winnipeg, MB, Canada | 204-123-4567 | jane.doe@email.com
-
-**Summary:**
-I am a recent graduate of the University of Manitoba with a BSc in Computer Science. I am proficient in various programming languages and technologies, including Java, Python, and C++. I am seeking an entry-level software development position where I can apply my skills and contribute to the team's success.
-
-**Education:**
-- University of Manitoba, Winnipeg, MB
-- BSc Major in Computer Science
-- Graduated: October 2023
-
-**Skills:**
-- Programming Languages: Java, Python, C++
-- Technologies: HTML, CSS, JavaScript, SQL
-- Software Development Tools: Eclipse, IntelliJ IDEA, Git
-
-**References:**
-- Abu Kabir
-- Director, IT Service Management
-- Microsoft Corporation
-- 204-298-3693 | Winnipeg, MB
-- Safiur Mahdi
-- Java Developer
-- Skip the Dishes
-- 204-583-3432 | Winnipeg, MB
+{
+    "selected_sections": [
+        {
+            "section": "Education",
+            "sub_sections": [
+                {
+                    "institution name": "University of Manitoba",
+                    "degree": "BSc Major in Computer Science",
+                    "graduation_status": "Graduated",
+                    "graduation_date": "October 2023",
+                    "relevant_coursework": [
+                        "Distributed Computing (Python | JavaScript)",
+                        "Data Structures and Algorithms (Java)",
+                        "AI and Game Development (Java | Python)"
+                    ],
+                    "reason": "The applicant's education directly aligns with the job requirements for a Computer Science degree and coursework in AI-related fields such as Distributed Computing, Data Structures and Algorithms, and AI and Game Development."
+                }
+            ]
+        },
+        {
+            "section": "References",
+            "sub_sections": [
+                {
+                    "name": "Abu Kabir",
+                    "position": "Director, IT Service Management",
+                    "company": "Microsoft Corporation",
+                    "contact_information": "204-298-3693 | Winnipeg, MB",
+                    "relationship": null,
+                    "reason": "Abu Kabir holds a senior position at Microsoft in the field of IT Service Management, indicating their experience and credibility in the tech industry. Their professional relationship with the applicant further strengthens their suitability as a reference."
+                },
+                {
+                    "name": "Safiur Mahdi",
+                    "position": "Java Developer",
+                    "company": "Skip the Dishes",
+                    "contact_information": "204-583-3432",
+                    "relationship": null,
+                    "reason": "Safiur Mahdi's role as a Java Developer at Skip the Dishes demonstrates their technical expertise in Java, which is a key requirement for the AI-related position. Their professional connection with the applicant enhances the value of their reference."
+                }
+            ]
+        }
+    ],
+    "omitted_sections": []
+}

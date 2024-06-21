@@ -29,7 +29,7 @@ class ResumeCrew:
 	os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 	# agentops.init(tags=["resume-crew"])
 
-	debugFlag = False
+	
 
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
@@ -69,15 +69,17 @@ class ResumeCrew:
 	large_token_limiter = large_limiter.record_token_usage
 
 	debugFlag = False
-	# debugFlag = True
+	
 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
 
+		# debugFlag = True
 		my_tasks = []
 	
 		# if needs to change here, remember to change in the resume_in_json_task as well.
+		
 		if(not self.profile_already_created()):
 			my_tasks.append(self.personal_information_extraction_task())
 			my_tasks.append(self.education_extraction_task())
@@ -91,7 +93,7 @@ class ResumeCrew:
 			my_tasks.append(self.skills_extraction_task())
 			my_tasks.append(self.profile_builder_task())
 
-		# # Either way, these tasks will be executed.
+		# Either way, these tasks will be executed.
 		my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
 		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
@@ -103,7 +105,7 @@ class ResumeCrew:
 		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
 		my_tasks.append(self.coursework_extraction_task())
-		# my_tasks.append(self.career_objective_task()) 
+		my_tasks.append(self.career_objective_task()) 
 
 		# -------------------------------------
 		# my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
@@ -114,14 +116,12 @@ class ResumeCrew:
 				
 		# Return the crew
 		return Crew(
-			# max_rpm=10,
 			agents=self.agents,
 			tasks=my_tasks,
 			language="en",
 			# cache=True,
 			full_output=True,
 			process=Process.sequential,
-			# process=Process.hierarchical,
 			verbose=2,
 			# memory=True,
 			# embedder={
@@ -807,7 +807,7 @@ class ResumeCrew:
 		"""Load text from multiple files"""
 		all_text = ""
 		for path in paths:
-			file_content = self.load_file(PATHS[paths])
+			file_content = self.load_file(PATHS[path])
 			if isinstance(file_content, str):  # Ensure the content is a string	
 				all_text += file_content + "\n"
 			else:

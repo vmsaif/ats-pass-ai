@@ -2,57 +2,32 @@
 {
   "applicant_skills": {
     "exact_match_with_job_description": {
-      "Programming Languages": [
-        "Python"
-      ],
-      "AI and ML Skills": [
-        "AI",
-        "Gemini",
-        "Multiagent"
-      ],
-      "Soft Skills": []
+      "Programming Languages": ["Python"],
+      "AI and Machine Learning": ["AI", "Machine Learning", "LangChain"],
+      "Soft Skills": ["Collaboration", "Communication"],
+      "Other Skills": ["Data Analysis"]
     },
     "partial_match_with_overlapping_skills": {
+      "AI and Machine Learning": {
+        "Skill Name": "RAG Search",
+        "Relevance": "RAG Search is directly related to NLP and AI, involving retrieval and generation of information, which are relevant to the job's focus on AI and NLP."
+      },
+      "AI and Machine Learning": {
+        "Skill Name": "CrewAI",
+        "Relevance": "CrewAI, being a framework for building AI agent teams, aligns with the job's requirement for expertise in AI, potentially involving collaborative AI development."
+      },
+      "AI and Machine Learning": {
+        "Skill Name": "Gemini",
+        "Relevance": "Gemini, being an AI model by Google, is relevant to the job's need for expertise in AI, particularly with its mention of Google AI technologies."
+      },
       "Programming Languages": {
         "Skill Name": "Java",
-        "Relevance": "While not directly listed, Java is commonly used in AI development and could be relevant."
-      },
-      "AI and ML Skills": {
-        "Skill Name": "RAG Search",
-        "Relevance": "This indicates familiarity with information retrieval, which is related to NLP and AI."
-      },
-      "Cloud and DevOps": {
-        "Skill Name": "Docker",
-        "Relevance": "Experience with containerization is valuable in AI development and deployment."
-      },
-      "Data Skills": {
-        "Skill Name": "SQL",
-        "Relevance": "Understanding SQL is beneficial for data analysis in AI projects."
+        "Relevance": "While not explicitly mentioned, Java is a strong general-purpose programming language often used in AI and backend development, which are relevant to the job description."
       },
       "Soft Skills": {
-        "Skill Name": "Collaboration",
-        "Relevance": "The applicant's experience with 'Multiagent' systems suggests potential collaboration skills."
+        "Skill Name": "Mentoring & Teaching",
+        "Relevance": "These skills indicate strong communication and knowledge transfer abilities, which are valuable for collaboration and potentially contributing to the ethical and social impact aspects of AI development."
       }
-    },
-    "missing_from_the_applicant_skills": {
-      "Programming Languages": [
-        "TensorFlow",
-        "PyTorch"
-      ],
-      "AI and ML Skills": [
-        "Deep Learning",
-        "Natural Language Processing (NLP)",
-        "Generative AI",
-        "OpenAI API", 
-        "Meta Llama 2",
-        "LangChain", 
-        "Google Gen AI Studio"
-      ],
-      "Soft Skills": [
-        "Problem-Solving",
-        "Communication", 
-        "Analytical Skills"
-      ]
     }
   }
 }

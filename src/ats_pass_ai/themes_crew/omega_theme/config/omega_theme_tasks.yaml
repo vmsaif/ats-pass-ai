@@ -69,7 +69,7 @@ select_first_column_content:
           "section": "Education",
           "sub_sections": [
             {
-              "institution": "University of Manitoba",
+              "institution name": "University of Manitoba",
               "degree": "BSc Major in Computer Science",
               "graduation_status": "Graduated",
               "graduation_date": "October 2023"
@@ -142,7 +142,7 @@ courseworksection:
     In the output,
     - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}.
     - The next lines contain the coursework information in the following format:
-      - use the command \body{} to list the courses. Each course should be on a new line with a double backslash '\\' at the end of each line.
+      - use the command \body{} to list the courses. Each course should be on a new line without bullet points. The line should end with a double backslash '\\' as a line break on latex.
       - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
       - Use the command \sectionsep at the end to separate the coursework from other sections.
 
@@ -186,6 +186,7 @@ skillsection:
     4. The expected output is only the category and items, not any explanation or additional text. No need for any block quotes.
 
     Example:
+
     \section{Skills}
     \subTitle{Programming Languages:}
     \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
@@ -201,9 +202,11 @@ skillsection:
 
     **Conditions**:
     - Provide raw latex, not in a code block.
-    - If there are no skills provided, the output should be latex comments, starting with '%', with no need for any block quotes, like this:
+    - If there are no skills provided, the output should be latex comments, starting with '%', like this:
       % \section{}
       % \sectionsep.
+
+    Do not provide the output in a code block or blockquote.
   expected_output: >
 
 volunteersection:
@@ -211,12 +214,13 @@ volunteersection:
     Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
 
     In your output:
-    - The first line use the command `\section{Volunteer}`.
+    - In the first line, use the command `\section{Volunteer}`.
     - Use `\headingtwo{}` for organization name.
-    - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration exepct the last one.
+    - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
     - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`.
     - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
 
+    Example:
     \section{VOLUNTEER}
       \headingtwo{.dev Programming Club}
       \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
@@ -227,12 +231,10 @@ volunteersection:
     \sectionsep
 
     **Conditions**:
-    - Only generate the `\section{VOLUNTEER}` if there is at least one volunteer entry. 
+    - Only generate the `\section{Volunteer}` if there is at least one volunteer entry. 
     - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
-      % \section{}
-      % \sectionsep.
+      % no volunteer work information provided.
     - Do not provide the output in a code block, blockquote.
-
   expected_output: >
     blockquote is not needed for the output.
 
@@ -266,10 +268,9 @@ referencessection:
     \sectionsep
 
     Conditions:
-    - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, starting with '%'.
+    - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, each line starting with '%' like this:
       % \section{}
       % \sectionsep.
-      Do Nothing else. Keep the output empty.
     - Your output should follow latex syntax, no need for any code block quotes.
 
     Here is the information you need and convert into LaTeX format:
@@ -309,7 +310,6 @@ experiencesection:
       -- Use \item to list each responsibility or achievement.
       -- Last \item can have a link using \href{}{}, \ul, and text.
       -- End the tightemize \end{tightemize}.
-      -- For special characters like %, use \%, for &, use \& etc.
 
     Limitations:
     - If you find in total 3 experiences, the number of \items highlights must be 3 or less for each experience.

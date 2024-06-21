@@ -10,6 +10,11 @@ themes_crew_dir = f'{src_root}/themes_crew'
 limiter_db_dir = 'custom_db'
 rag_db_perist_dir = "./chroma_db"
 
+# Omega theme paths
+omega_theme_dir = f"{themes_crew_dir}/omega_theme"
+omega_theme_latex_dir = f"{themes_crew_dir}/omega_theme/theme_latex"
+sub_tex_files_dir = f"{omega_theme_latex_dir}/sub_tex_files_dir" # if needs to change this, also change in the actual tex file. 
+
 # Config dictionary with all paths
 
 PATHS = {
@@ -61,21 +66,24 @@ PATHS = {
     "latex_resume_generation_task": f"{src_root}/latex_class/resume_generation_task.tex", 
     "cover_letter_generation_task": f"{draft_output_dir}/cover_letter_generation_task.txt",
 
-    "omega_theme_final_output_tex": f"{themes_crew_dir}/omega_theme/theme_latex/omega_theme_final_output.tex",
-    "omega_theme_final_output_pdf": f"../../../../../{themes_crew_dir}/omega_theme/theme_latex/", # need to go back to project root from class path
+    # Omega theme paths
+
+    "omega_theme_final_output_tex": f"{omega_theme_latex_dir}/omega_theme_final_output.tex",
+    
+    "omega_theme_final_output_pdf": f"../../../../../{omega_theme_latex_dir}", # need to go back to project root from class path
     "omega_theme_agents": f"{themes_crew_dir}/omega_theme/config/omega_theme_agents.yaml",
     "omega_theme_tasks": f"{themes_crew_dir}/omega_theme/config/omega_theme_tasks.yaml",
-    "concise_jd_task": f"{themes_crew_dir}/omega_theme/theme_latex/text_outputs/concise_jd_task.txt",
-    
-    "namesection": f"{themes_crew_dir}/omega_theme/theme_latex/namesection.tex",
-    "educationsection": f"{themes_crew_dir}/omega_theme/theme_latex/educationsection.tex",
-    "skillsection": f"{themes_crew_dir}/omega_theme/theme_latex/skillsection.tex",
-    "courseworksection": f"{themes_crew_dir}/omega_theme/theme_latex/courseworksection.tex",
-    "volunteersection": f"{themes_crew_dir}/omega_theme/theme_latex/volunteersection.tex",
-    "referencessection": f"{themes_crew_dir}/omega_theme/theme_latex/referencessection.tex",
-    "careerobjectivesection": f"{themes_crew_dir}/omega_theme/theme_latex/careerobjectivesection.tex",
-    "experiencesection": f"{themes_crew_dir}/omega_theme/theme_latex/experiencesection.tex",
-    "select_first_column_content": f"{themes_crew_dir}/omega_theme/theme_latex/text_outputs/select_first_column_content.txt",
-    "split_content_of_select_first_column_content": f"{themes_crew_dir}/omega_theme/theme_latex/text_outputs/split_content_of_select_first_column_content.txt",
+    "concise_jd_task": f"{omega_theme_latex_dir}/text_outputs/concise_jd_task.txt",
+    "sub_tex_files_dir": sub_tex_files_dir,
+    "namesection": f"{sub_tex_files_dir}/namesection.tex",
+    "educationsection": f"{sub_tex_files_dir}/educationsection.tex",
+    "skillsection": f"{sub_tex_files_dir}/skillsection.tex",
+    "courseworksection": f"{sub_tex_files_dir}/courseworksection.tex",
+    "volunteersection": f"{sub_tex_files_dir}/volunteersection.tex",
+    "referencessection": f"{sub_tex_files_dir}/referencessection.tex",
+    "careerobjectivesection": f"{sub_tex_files_dir}/careerobjectivesection.tex",
+    "experiencesection": f"{sub_tex_files_dir}/experiencesection.tex",
+    "select_first_column_content": f"{omega_theme_latex_dir}/text_outputs/select_first_column_content.txt",
+    "split_content_of_select_first_column_content": f"{omega_theme_latex_dir}/text_outputs/split_content_of_select_first_column_content.txt",
     
 }

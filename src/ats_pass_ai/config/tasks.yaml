@@ -764,7 +764,9 @@ gather_info_of_chosen_experiences:
 
 split_context_of_ats_friendly_keywords_into_experiences:
   description: >
-    Split the context provided to you at the breaking point "## reason for choosing, How it is relevant to the job". In your output, you will provide everything before the "reason for choosing, How it is relevant to the job" as the final output of the task. Ensure you maintain the order of experiences as they are given. The structure should be the same as the input context. Do not remove any words from the "Technologies", "Key Highlights", "Skills", "Outcomes", "Link", "Team size", "Duration", "Timeline", or "Title".
+    Split the context provided to you at the breaking point "Report on Changes". 
+    
+    In your output, you will provide everything before the "Report on Changes" as the final output of the task. Ensure you maintain the order of experiences as they are given. The structure should be the same as the input context.
 
     The context you need to split is provided to you from the previous task.
 
@@ -775,32 +777,23 @@ split_context_of_ats_friendly_keywords_into_experiences:
 
 career_objective_task:
   description: >
-    Craft a **captivating** and **actionable** career objective statement for the applicant's resume, designed to immediately capture the attention of recruiters and hiring managers. 
+    Write a compelling career objective statement for the applicant’s resume, tailored to catch the attention of recruiters and align with the specific job and company goals.
 
-    This objective should:
-    - **Highlight the applicant's unique value proposition:**  Emphasize the applicant's skills, experiences, and achievements that set them apart from other candidates.
-    - **Align with the company's mission and the job description:**  Demonstrate the applicant's understanding of the company's goals and how their skills can contribute to them.
-    - **Be concise and impactful:**  Use strong verbs and compelling language to create a memorable statement that leaves a lasting impression.
+    **Key Elements**:
+    - **Unique Value Proposition:** Focus on skills, experiences, and achievements that distinguish the applicant.
+    - **Alignment with Company Goals:** Ensure the statement reflects the applicant’s fit with the company’s mission as described in the job description.
+    - **Conciseness and Impact:** Use strong, persuasive language to craft a memorable statement within 30 words, incorporating the Job Title and Company Name.
 
-    **Provided to you:**
-    - **Skills of the applicant:** 
-      Check the context provided to you from the previous task.
+    **Context Provided**:
+    - **Skills of the Applicant:** Refer to the previously provided context.
+    - **Tool Access:** Use the tool to query relevant applicant information, considering their philosophy and software development approach if available.
     - **Job Description:** 
     {job_description}
 
-    - **Tool:** This tool is directly connected to the applicant's information. You will use the provided tool to ask questions and gather the necessary information to create the career objective statement. So prepare the questions accordingly. Also, consider(not mandatory) the applicant's philosophy and approach to software development when crafting the career objective statement if available.
-
-    Make the career objective statement concise and impactful, focusing on the applicant's unique value proposition and how it aligns with the job description and the company's mission. 
-    
-    Restriction:
-    - Do not make more than around 30-36 words. It must include the Job Title and the Company Name. 
-
   expected_output: >
-    A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the applicant's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
-
-    In JSON format:
+    A concise, compelling career objective statement in JSON format:
       {
-        "Career Objective": "..."
+        "Career Objective": "Skilled [Job Title] eager to contribute to [Company Name] with proven expertise in [Key Skills], aligning with company goals of [Company Mission]."
       }
 
 # ------------- cross_match_evaluator_with_job_description_agent -> -------------
@@ -868,7 +861,7 @@ ats_friendly_skills_task:
 
 split_context_of_ats_friendly_skills_task:
   description: >
-    Split the context provided to you at the breaking point "No Match (from job description):" or "missing_from_the_applicant_skills" whichever comes first. In your output, you will provide everything before the "No Match (from the job description):" as the final output of the task.
+    Split the context provided to you at the breaking point "missing_from_the_applicant_skills". In your output, you will provide everything before the "missing_from_the_applicant_skills".
 
     Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
 

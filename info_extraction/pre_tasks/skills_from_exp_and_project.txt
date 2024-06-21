@@ -1,395 +1,263 @@
 {
-    "Skills List": {
-      "Technologies": [
-        {
-          "Name": "Java",
-          "field": [
-            "Programming Language",
-            "Android Development",
-            "Game Development", 
-            "Backend Development"
-          ]
-        },
-        {
-          "Name": "Python",
-          "field": [
-            "Programming Language",
-            "Machine Learning",
-            "Data Analysis",
-            "Backend Development"
-          ]
-        },
-        {
-          "Name": "C++",
-          "field": [
-            "Programming Language",
-            "Game Development",
-            "Graphics",
-            "Low-level Programming"
-          ]
-        },
-        {
-          "Name": "C Programming",
-          "field": [
-            "Programming Language",
-            "Systems Programming",
-            "Operating Systems"
-          ]
-        },
-        {
-          "Name": "OpenGL",
-          "field": [
-            "Graphics Library",
-            "3D Graphics",
-            "Game Development"
-          ]
-        },
-        {
-          "Name": "Docker",
-          "field": [
-            "Containerization",
-            "Cloud Computing",
-            "DevOps"
-          ]
-        },
-        {
-          "Name": "Vue.js",
-          "field": [
-            "Front End Framework",
-            "JavaScript",
-            "Web Development"
-          ]
-        },
-        {
-          "Name": "Git",
-          "field": [
-            "Version Control",
-            "Software Development",
-            "Collaboration"
-          ]
-        },
-        {
-          "Name": "SQL",
-          "field": [
-            "Database Management",
-            "Data Analysis",
-            "Android Development"
-          ]
-        },
-        {
-          "Name": "HSQLDB",
-          "field": [
-            "Database Management",
-            "Embedded Databases",
-            "Android Development"
-          ]
-        },
-        {
-          "Name": "React",
-          "field": [
-            "Front End Framework",
-            "JavaScript",
-            "Web Development"
-          ]
-        },
-        {
-          "Name": "Multiagent",
-          "field": [
-            "Artificial Intelligence",
-            "Autonomous Systems",
-            "Distributed Systems"
-          ]
-        },
-        {
-          "Name": "AI",
-          "field": [
-            "Artificial Intelligence",
-            "Machine Learning",
-            "Game Development"
-          ]
-        },
-        {
-          "Name": "RAG Search",
-          "field": [
-            "Information Retrieval",
-            "Machine Learning",
-            "Search Engines"
-          ]
-        },
-        {
-          "Name": "Gemini",
-          "field": [
-            "Natural Language Processing",
-            "Machine Learning",
-            "Artificial Intelligence"
-          ]
-        },
-        {
-          "Name": "Node.js",
-          "field": [
-            "JavaScript",
-            "Backend Development",
-            "Web Development"
-          ]
-        },
-        {
-          "Name": "MongoDB",
-          "field": [
-            "Database Management",
-            "NoSQL",
-            "Document Databases"
-          ]
-        },
-        {
-          "Name": "Firebase",
-          "field": [
-            "Backend Development",
-            "Mobile Development",
-            "Cloud Computing"
-          ]
-        },
-        {
-          "Name": "TensorFlow",
-          "field": [
-            "Machine Learning",
-            "Artificial Intelligence",
-            "Deep Learning"
-          ]
-        },
-        {
-          "Name": "Docker",
-          "field": [
-            "Containerization",
-            "DevOps",
-            "Cloud Computing"
-          ]
-        },
-        {
-          "Name": "Angular",
-          "field": [
-            "Front End Framework",
-            "JavaScript",
-            "Web Development"
-          ]
-        },
-        {
-          "Name": "TCP/IP",
-          "field": [
-            "Networking",
-            "Internet Protocols",
-            "Data Communication"
-          ]
-        },
-        {
-          "Name": "Multithreading",
-          "field": [
-            "Concurrency",
-            "Parallel Programming",
-            "Software Development"
-          ]
-        },
-        {
-          "Name": "Network",
-          "field": [
-            "Networking",
-            "Data Communication",
-            "Internet Technologies"
-          ]
-        },
-        {
-          "Name": "A* Algorithm",
-          "field": [
-            "Artificial Intelligence",
-            "Pathfinding",
-            "Game Development"
-          ]
-        },
-        {
-          "Name": "Ray Tracing",
-          "field": [
-            "Graphics",
-            "Computer Vision",
-            "Artificial Intelligence"
-          ]
-        }
-      ],
-      "Frameworks": [
-        {
-          "Name": "Android Studio",
-          "field": [
-            "Android Development",
-            "Mobile Development",
-            "Java"
-          ]
-        }
-      ],
-      "Skills": [
-        {
-          "Name": "Programming",
-          "field": [
-            "Software Development",
-            "Computer Science"
-          ]
-        },
-        {
-          "Name": "Tutoring",
-          "field": [
-            "Education",
-            "Teaching",
-            "Mentoring"
-          ]
-        },
-        {
-          "Name": "Mentoring",
-          "field": [
-            "Education",
-            "Leadership",
-            "Training"
-          ]
-        },
-        {
-          "Name": "Python Systems Engineering",
-          "field": [
-            "Engineering",
-            "Python",
-            "Systems Engineering"
-          ]
-        },
-        {
-          "Name": "Resume Optimization",
-          "field": [
-            "Career Development",
-            "Job Search"
-          ]
-        },
-        {
-          "Name": "ATS Optimization",
-          "field": [
-            "Career Development",
-            "Job Search"
-          ]
-        },
-        {
-          "Name": "Blockchain",
-          "field": [
-            "Cryptocurrency",
-            "Data Security",
-            "Distributed Systems"
-          ]
-        },
-        {
-          "Name": "Smart Contracts",
-          "field": [
-            "Blockchain",
-            "Ethereum",
-            "Distributed Systems"
-          ]
-        },
-        {
-          "Name": "Mileage Tracking",
-          "field": [
-            "Logistics",
-            "Transportation",
-            "Data Management"
-          ]
-        },
-        {
-          "Name": "Game Development",
-          "field": [
-            "Software Development",
-            "Artificial Intelligence",
-            "Graphics"
-          ]
-        },
-        {
-          "Name": "Object-Oriented Programming",
-          "field": [
-            "Software Development",
-            "Computer Science",
-            "Java"
-          ]
-        },
-        {
-          "Name": "Polymorphism",
-          "field": [
-            "Software Development",
-            "Computer Science"
-          ]
-        },
-        {
-          "Name": "Account Management",
-          "field": [
-            "Finance",
-            "Business",
-            "Customer Service"
-          ]
-        },
-        {
-          "Name": "Markdown",
-          "field": [
-            "Documentation",
-            "Technical Writing",
-            "Content Creation"
-          ]
-        },
-        {
-          "Name": "Jekyll",
-          "field": [
-            "Static Site Generator",
-            "Web Development",
-            "Content Creation"
-          ]
-        },
-        {
-          "Name": "Version Control",
-          "field": [
-            "Software Development",
-            "Collaboration",
-            "Git"
-          ]
-        },
-        {
-          "Name": "Debugging",
-          "field": [
-            "Software Development",
-            "Problem Solving",
-            "Programming"
-          ]
-        },
-        {
-          "Name": "Linux OS",
-          "field": [
-            "Operating Systems",
-            "Computer Science",
-            "Software Development"
-          ]
-        },
-        {
-          "Name": "Lighting",
-          "field": [
-            "Graphics",
-            "Game Development",
-            "3D Animation"
-          ]
-        },
-        {
-          "Name": "UI/UX Design",
-          "field": [
-            "User Experience",
-            "Web Development",
-            "Mobile Development"
-          ]
-        },
-        {
-          "Name": "Database Management",
-          "field": [
-            "Data Analysis",
-            "Information Technology",
-            "Software Development"
-          ]
-        },
-        {
-          "Name": "AI Decision-Making",
-          "field": [
-            "Artificial Intelligence",
-            "Machine Learning
+"Skills List": {
+"Technologies": [
+{
+"Name": "Python",
+"field": [
+"Programming Language",
+"Backend Development",
+"Machine Learning"
+]
+},
+{
+"Name": "Java",
+"field": [
+"Programming Language",
+"Backend Development",
+"OOP",
+"Game Development"
+]
+},
+{
+"Name": "RAG Search",
+"field": [
+"Information Retrieval",
+"Search Engine"
+]
+},
+{
+"Name": "CrewAI",
+"field": [
+"Natural Language Processing",
+"AI"
+]
+},
+{
+"Name": "LangChain",
+"field": [
+"Natural Language Processing",
+"AI"
+]
+},
+{
+"Name": "Gemini",
+"field": [
+"Natural Language Processing",
+"AI"
+]
+},
+{
+"Name": "Blockchain",
+"field": [
+"Distributed Ledger Technology",
+"Cryptography"
+]
+},
+{
+"Name": "Docker",
+"field": [
+"Containerization",
+"Cloud Computing"
+]
+},
+{
+"Name": "Vue.js",
+"field": [
+"JavaScript Framework",
+"Frontend Development"
+]
+},
+{
+"Name": "Git",
+"field": [
+"Version Control"
+]
+},
+{
+"Name": "CI/CD",
+"field": [
+"Continuous Integration and Continuous Delivery"
+]
+},
+{
+"Name": "OpenGL",
+"field": [
+"Graphics Programming",
+"3D Graphics"
+]
+},
+{
+"Name": "C++",
+"field": [
+"Programming Language",
+"Game Development",
+"Graphics Programming"
+]
+},
+{
+"Name": "SQL",
+"field": [
+"Database Management",
+"Data Analysis"
+]
+},
+{
+"Name": "Android Studio",
+"field": [
+"Mobile App Development",
+"Java Development"
+]
+},
+{
+"Name": "TCP/IP",
+"field": [
+"Networking",
+"Network Programming"
+]
+},
+{
+"Name": "Multithreading",
+"field": [
+"Concurrency",
+"Network Programming"
+]
+},
+{
+"Name": "Socket Programming",
+"field": [
+"Networking",
+"Network Programming"
+]
+},
+{
+"Name": "Markdown",
+"field": [
+"Technical Documentation"
+]
+},
+{
+"Name": "Jekyll",
+"field": [
+"Static Site Generator"
+]
+],
+"Frameworks": [],
+"Skills": [
+{
+"Name": "Mentoring",
+"field": [
+"Education",
+"Training"
+]
+},
+{
+"Name": "Teaching",
+"field": [
+"Education",
+"Training"
+]
+},
+{
+"Name": "AI",
+"field": [
+"Artificial Intelligence",
+"Machine Learning"
+]
+},
+{
+"Name": "Machine Learning",
+"field": [
+"Artificial Intelligence",
+"Data Science"
+]
+},
+{
+"Name": "Software Development",
+"field": [
+"Software Engineering",
+"Programming"
+]
+},
+{
+"Name": "Blockchain Development",
+"field": [
+"Distributed Ledger Technology",
+"Cryptography"
+]
+},
+{
+"Name": "Software Engineering",
+"field": [
+"Software Development",
+"Design Patterns"
+]
+},
+{
+"Name": "Game Development",
+"field": [
+"Game Design",
+"Programming"
+]
+},
+{
+"Name": "Graphics Programming",
+"field": [
+"3D Graphics"
+]
+},
+{
+"Name": "Object-Oriented Programming",
+"field": [
+"Software Development",
+"Design Patterns"
+]
+},
+{
+"Name": "Technical Documentation",
+"field": [
+"Writing"
+]
+},
+{
+"Name": "Web Development",
+"field": [
+"Frontend Development",
+"Backend Development"
+]
+},
+{
+"Name": "System Analysis",
+"field": [
+"Software Engineering"
+]
+},
+{
+"Name": "Debugging",
+"field": [
+"Software Engineering"
+]
+},
+{
+"Name": "Mobile App Development",
+"field": [
+"Software Development",
+"Programming"
+]
+},
+{
+"Name": "Network Programming",
+"field": [
+"Software Development"
+]
+},
+{
+"Name": "AI Decision-Making",
+"field": [
+"Artificial Intelligence",
+"Machine Learning"
+]
+}
+],
+"Soft Skills": []
+}
+}
