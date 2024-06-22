@@ -1,7 +1,7 @@
 import os
 import google.generativeai as genai
 
-from ats_pass_ai.request_limiter import RequestLimiter
+from ats_pass_ai.limiter import Limiter
 
 class LLMTask:
 
@@ -9,10 +9,10 @@ class LLMTask:
 
 		# if user_info_orgainzed_file_path does not exist then proceed
 		if(self._shouldRun()):
-			self._set_model()
 			content = self._read_file(self.user_info_file_path)
 			response = self.model.generate_content(content, request_options={"timeout": 600})
-			self.large_llm_limiter.run(output=None)
+			self.large_llm_limiter.request_limiter(output=None)
+			self.large_llm_limiter.record_token_usage(response.text)
 			self._write_to_file(response.text)
 	
 	def _set_model(self):
@@ -26,10 +26,11 @@ class LLMTask:
 		# Note: Safaty settings is at the initialization of this class, see __init__ method
 
 		self.model = genai.GenerativeModel(
-				model_name="gemini-1.5-pro-latest",
-				generation_config=self.generation_config,
-				system_instruction=self.system_instruction,
-				safety_settings=self.safety_settings
+			model_name="gemini-1.5-pro-latest",
+			# name="gemini-pro",
+			system_instruction=self.system_instruction, # it will not work with gemini-pro, comment it out if gemini-pro is needed
+			generation_config=self.generation_config,
+			safety_settings=self.safety_settings
 		)
 
 	def _shouldRun(self):
@@ -38,7 +39,7 @@ class LLMTask:
 			return True
 		
 		try:
-			with open(self.user_info_orgainzed_file_path, 'r') as f:
+			with open(self.user_info_orgainzed_file_path, 'r', encoding='utf-8') as f:
 				content = f.read()
 			if len(content) < 50:
 				print(f"{self.task_name} output file found but it is most likely empty.")
@@ -68,29 +69,33 @@ class LLMTask:
 
 
 	def __init__(self, task_name: str, user_info_file_path: str, user_info_orgainzed_file_path: str, system_instruction: str, override: bool):
-		self.large_llm_limiter = RequestLimiter(llm_size='large')
 		self.task_name = task_name
 		self.user_info_file_path = user_info_file_path
 		self.user_info_orgainzed_file_path = user_info_orgainzed_file_path
 		self.system_instruction = system_instruction
-		self.override = override	
+		self.override = override
 			# Set up the model
 		self.safety_settings = [
 			{
 				"category": "HARM_CATEGORY_HARASSMENT",
-				"threshold": "BLOCK_ONLY_HIGH"
+				"threshold": "BLOCK_NONE"
 			},
 			{
 				"category": "HARM_CATEGORY_HATE_SPEECH",
-				"threshold": "BLOCK_ONLY_HIGH"
+				"threshold": "BLOCK_NONE"
 			},
 			{
 				"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-				"threshold": "BLOCK_MEDIUM_AND_ABOVE"
+				"threshold": "BLOCK_NONE"
 			},
 			{
 				"category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-				"threshold": "BLOCK_ONLY_HIGH"
+				"threshold": "BLOCK_NONE"
 			},
 		]
+		self._set_model()
+		self.large_llm_limiter = Limiter(llm_size='LARGE', llm = self.model, langchainMethods=False)
 		genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+
+
+	

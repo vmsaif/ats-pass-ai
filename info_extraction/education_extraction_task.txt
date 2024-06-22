@@ -1,0 +1,11 @@
+{
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "University Location": "Winnipeg, MB",
+    "Graduation Date": "Graduated, October 2023",
+    "GPA": "3.07",
+    "Honors/Distinctions": "Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)"
+  }
+}

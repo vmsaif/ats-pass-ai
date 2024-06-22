@@ -1,0 +1,263 @@
+{
+"Skills List": {
+"Technologies": [
+{
+"Name": "Python",
+"field": [
+"Programming Language",
+"Backend Development",
+"Machine Learning"
+]
+},
+{
+"Name": "Java",
+"field": [
+"Programming Language",
+"Backend Development",
+"OOP",
+"Game Development"
+]
+},
+{
+"Name": "RAG Search",
+"field": [
+"Information Retrieval",
+"Search Engine"
+]
+},
+{
+"Name": "CrewAI",
+"field": [
+"Natural Language Processing",
+"AI"
+]
+},
+{
+"Name": "LangChain",
+"field": [
+"Natural Language Processing",
+"AI"
+]
+},
+{
+"Name": "Gemini",
+"field": [
+"Natural Language Processing",
+"AI"
+]
+},
+{
+"Name": "Blockchain",
+"field": [
+"Distributed Ledger Technology",
+"Cryptography"
+]
+},
+{
+"Name": "Docker",
+"field": [
+"Containerization",
+"Cloud Computing"
+]
+},
+{
+"Name": "Vue.js",
+"field": [
+"JavaScript Framework",
+"Frontend Development"
+]
+},
+{
+"Name": "Git",
+"field": [
+"Version Control"
+]
+},
+{
+"Name": "CI/CD",
+"field": [
+"Continuous Integration and Continuous Delivery"
+]
+},
+{
+"Name": "OpenGL",
+"field": [
+"Graphics Programming",
+"3D Graphics"
+]
+},
+{
+"Name": "C++",
+"field": [
+"Programming Language",
+"Game Development",
+"Graphics Programming"
+]
+},
+{
+"Name": "SQL",
+"field": [
+"Database Management",
+"Data Analysis"
+]
+},
+{
+"Name": "Android Studio",
+"field": [
+"Mobile App Development",
+"Java Development"
+]
+},
+{
+"Name": "TCP/IP",
+"field": [
+"Networking",
+"Network Programming"
+]
+},
+{
+"Name": "Multithreading",
+"field": [
+"Concurrency",
+"Network Programming"
+]
+},
+{
+"Name": "Socket Programming",
+"field": [
+"Networking",
+"Network Programming"
+]
+},
+{
+"Name": "Markdown",
+"field": [
+"Technical Documentation"
+]
+},
+{
+"Name": "Jekyll",
+"field": [
+"Static Site Generator"
+]
+],
+"Frameworks": [],
+"Skills": [
+{
+"Name": "Mentoring",
+"field": [
+"Education",
+"Training"
+]
+},
+{
+"Name": "Teaching",
+"field": [
+"Education",
+"Training"
+]
+},
+{
+"Name": "AI",
+"field": [
+"Artificial Intelligence",
+"Machine Learning"
+]
+},
+{
+"Name": "Machine Learning",
+"field": [
+"Artificial Intelligence",
+"Data Science"
+]
+},
+{
+"Name": "Software Development",
+"field": [
+"Software Engineering",
+"Programming"
+]
+},
+{
+"Name": "Blockchain Development",
+"field": [
+"Distributed Ledger Technology",
+"Cryptography"
+]
+},
+{
+"Name": "Software Engineering",
+"field": [
+"Software Development",
+"Design Patterns"
+]
+},
+{
+"Name": "Game Development",
+"field": [
+"Game Design",
+"Programming"
+]
+},
+{
+"Name": "Graphics Programming",
+"field": [
+"3D Graphics"
+]
+},
+{
+"Name": "Object-Oriented Programming",
+"field": [
+"Software Development",
+"Design Patterns"
+]
+},
+{
+"Name": "Technical Documentation",
+"field": [
+"Writing"
+]
+},
+{
+"Name": "Web Development",
+"field": [
+"Frontend Development",
+"Backend Development"
+]
+},
+{
+"Name": "System Analysis",
+"field": [
+"Software Engineering"
+]
+},
+{
+"Name": "Debugging",
+"field": [
+"Software Engineering"
+]
+},
+{
+"Name": "Mobile App Development",
+"field": [
+"Software Development",
+"Programming"
+]
+},
+{
+"Name": "Network Programming",
+"field": [
+"Software Development"
+]
+},
+{
+"Name": "AI Decision-Making",
+"field": [
+"Artificial Intelligence",
+"Machine Learning"
+]
+}
+],
+"Soft Skills": []
+}
+}
