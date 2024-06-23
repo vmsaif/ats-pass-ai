@@ -1,0 +1,53 @@
+```json
+{
+  "total object count:": "3",
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "7 months",
+        "Summary Points": [
+          "Python",
+          "AI"
+        ],
+        "Key Highlights": [
+          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
+          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities."
+        ]
+      }
+    ],
+    "Project Experience": [
+      {
+        "Work/Project": "Project",
+        "title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Summary Points": [
+          "Java",
+          "A* Algorithm"
+        ],
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time."
+        ]
+      },
+      {
+        "Work/Project": "Project",
+        "title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Summary Points": [
+          "Java",
+          "AI"
+        ],
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
+          "Implemented strategic AI decision-making, enhancing game complexity and player engagement."
+        ]
+      }
+    ]
+  }
+}
+```

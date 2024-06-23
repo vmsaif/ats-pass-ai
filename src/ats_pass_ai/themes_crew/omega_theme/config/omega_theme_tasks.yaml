@@ -14,11 +14,13 @@ namesection:
     - Pipeline '|' should be used to separate the data and must not be the last character of the output.
 
     Example:
-    \namesection{Saif}{Mahmud}
-    {
-      \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
-      \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
-    }
+    ```latex
+      \namesection{Saif}{Mahmud}
+      {
+        \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+        \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+      }
+    ```
 
     Here is the information you need and convert into LaTeX format:
   expected_output: >
@@ -33,7 +35,7 @@ concise_jd_task:
 
 select_first_column_content:
   description: >
-    Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with job specifications provided.
+    Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with the job specifications provided.
 
     **Applicant's Data Includes**:
     - Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous
@@ -47,7 +49,9 @@ select_first_column_content:
        - Target sections directly related to job skills and qualifications.
        - Emphasize Education and Awards for their impact.
        - Include broader sections like Personal Traits only if they offer significant advantages.
-    4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete.
+    4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete. 
+    
+      - If there are fewer than 4 sub-sections, try including 1 other relevant section like "Relevant Courses", "Volunteer Work", "Awards and Achievements" even if they are less relevant.
 
     **Output Expectations**:
     Generate a JSON object detailing the selected and omitted sections.
@@ -108,13 +112,17 @@ educationsection:
     Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
 
     In the output,
+
+    If there is no educational information, write % \section{}, Like this:
+      % \section{Education} 
+
+    If there is educational information,
     - The first line contains the section named "Education". Use the command \section{Education}.
-    - The next lines contain the educational information in the following format:
-      - The first line contains the institution name. Use the command \customTitle{Institution Name}.
-      - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
-      - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
-      - The next line contains the command \newEntryVSpace to separate the education. Only use this command if there are multiple educations. Otherwise, do not use this command.
-      - Do not choose more than two educations. Choose the most recent ones.
+    - The next line contains the institution name. Use the command \customTitle{Institution Name}.
+    - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+    - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+    - If there are multiple education entries, the next line contains the command \newEntryVSpace to separate the education.
+    - Do not choose more than two educations. Choose the most recent ones.
 
     Example:
 
@@ -123,13 +131,16 @@ educationsection:
       \semiTitle{BSc Major in Computer Science}
       \subTitle{Graduated, October 2023}
 
-      \newEntryVSpace % use it if there are multiple educations to separate them.   
-    \sectionsep % use it at the end to separate the sections.
+      \newEntryVSpace % use it if there are multiple educations to separate them.
+      \customTitle{Second Institution}
+      ...
+
+    \sectionsep
 
     Conditions:
     - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
-      % No education information provided. 
-
+      % \section{}
+      % \sectionsep.
     Here is the information you need and convert into LaTeX format:
   expected_output: >
 
@@ -142,9 +153,7 @@ courseworksection:
     - The next lines contain the coursework information in the following format:
       - use the command \body{} to list the courses. Each course should be on a new line without bullet points. The line should end with a double backslash '\\' as a line break on latex.
       - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
-      - Use the command \sectionsep at the end to separate the coursework from other sections.
 
-    
     Example:
     \section{Relevant Courses}
     \body{
@@ -155,7 +164,6 @@ courseworksection:
         Object Orientation (Java | C++) \\
         Software Engineering (Java | Unit Testing)
     }
-    \sectionsep
 
     Conditions:
     - If there is no Course information, each line of the output should be latex comments, starting with '%' like this:
@@ -173,28 +181,22 @@ skillsection:
     1. **Section Header**: Begin with the section title using \section{Skills}.
     2. **Skill Categories**: 
        - Use \subTitle{} to introduce each skill category.
-       - List skills in each category using \body{}, separating items with \textbullet{}.
-       - Limit the number of categories to 5, focusing on both exact and partial match skills relevant to the job.
-       - Include both exact and partial matches in the appropriate categories. Limit each category to a maximum of 5 skills.
-    3. **Formatting**:
-       - Use \skillsVSpace between each category to maintain visual separation.
-       - Conclude the skills section with \sectionsep to neatly transition to the next section of the resume.
-    4. The expected output is only the category and items, not any explanation or additional text.
+       - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
+       - Limit the number of categories to 5, try including both exact and partial match skills relevant to the job.
+       - Include both exact and partial matches in the appropriate categories. Limit each category to a minimum of 3 to a maximum of 5 skills. The intention is to provide a balanced representation number of the applicant's skills.
+    3. The expected output is only the category and items, not any explanation or additional text.
 
     Example:
 
     \section{Skills}
     \subTitle{Programming Languages:}
     \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
-    \skillsVSpace
 
     \subTitle{AI and Machine Learning:}
     \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI}
-    \skillsVSpace   
 
     \subTitle{Soft Skills:}
     \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork}
-    \sectionsep
 
     **Conditions**:
     - If there are no skills provided, the output should be latex comments, starting with '%', like this:
@@ -208,13 +210,18 @@ volunteersection:
     Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
 
     In your output:
+    If there is no volunteer information, write % \section{}, Like this:
+      % \section{Volunteer} 
+      % \sectionsep.
+
+    If there is volunteer information:
     - In the first line, use the command `\section{Volunteer}`.
     - Use `\headingtwo{}` for organization name.
     - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
     - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`.
-    - Conclude the volunteer section with `\sectionsep` to maintain consistent spacing between sections.
 
     Example:
+    '''latex
     \section{VOLUNTEER}
       \headingtwo{.dev Programming Club}
       \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
@@ -222,12 +229,10 @@ volunteersection:
         \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
         \item Designed the official logo, social media posts, receipts and other official document formats.
       \end{vitemize}
-    \sectionsep
+    '''
 
-    **Conditions**:
-    - Only write the `\section{Volunteer}` if there is at least one volunteer entry. 
-    - If no entries are provided, the output should be latex comments, starting with '%' for each line, like this:
-      % no volunteer work information provided.
+
+    
   expected_output: >
 
 referencessection:
@@ -237,12 +242,10 @@ referencessection:
     In the output,
     - The first line contains the section name "References". Use the command \section{References}.
     - The next lines contain the reference information in the following format:
-      - Start with the command \section{Reference} for the name of the reference.
+      - Start with the command \section{Reference} if there is at least one reference.
       - Use the command \subsection{} for the name of the reference.
       - Use the command \subTitle{} for the position and company of the reference.
-      - Use the command \body{} for the contact information of the reference.
-      - Use the command \newEntryVSpace to separate the references. Only use this command if there are multiple references. Otherwise, do not use this command.
-      - Do not choose more than two references. Choose the most relevant ones.
+      - Use the command \body{} for the contact information of the reference in the format of phone number and location, email if available.
 
     Example:
     \section{References}
@@ -251,13 +254,10 @@ referencessection:
         \subTitle{Microsoft Corporation}
         \body{204-298-3693 | Winnipeg, MB}
 
-        \newEntryVSpace
-
         \subsection{Safiur Mahdi}
         \subTitle{Software Developer}
         \subTitle{Skip The Dishes}
         \body{204-583-3432 | Winnipeg, MB}
-    \sectionsep
 
     Conditions:
     - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, each line starting with '%' like this:
@@ -285,36 +285,42 @@ careerobjectivesection:
 
 expItemChooser:
   description: >
-    This task is designed to refine the key highlights for each applicant's experience by adhering to specific constraints based on the total number of experiences provided. Links, if included, should be considered as one of the key highlights and must be positioned last in the list.
+    This task modifies the key highlights of each experience based on the total number of experiences.
 
-    Procedure:
-    - First, count the total number of experiences provided.
-    - For three experiences, select up to two other key highlights plus the link, ensuring there are no more than three highlights total.
-    - For two or fewer experiences, select up to four other key highlights plus the link, ensuring there are no more than five highlights total.
-    - Ensure the link, if provided, is always the last item in the list of highlights for each experience. If the link is moved to the key highlights, omit the 'Link' field from the original data to avoid redundancy.
+    **Procedure**:
+    First, check what is the value of "total object count:"
+    - If "total object count:" is 3; keep 3 key highlights per experience's "key highlights" array, removing the other ones. 
+    -- If a link is present, allow 2 highlights for that experience's "key highlights" array and remove the other ones.
 
-    This structured approach will ensure that the output is concise and relevant, with each experience's highlights adjusted according to the specified rules. The placement of links as the final highlight aims to provide a clear call to action without exceeding the set limit of total highlights.
+    When Selecting Key Highlights:
+    - Do not prioritize the highlights that have similar wordings to the short description.
 
-    Expected Behavior:
-    Given a total of three experiences, and each has a link, the process will:
-    - Include the two most impactful highlights from the original list and the link as the third highlight for each experience.
-    - Omit any additional highlights beyond the third item to comply with the limitations.
-    - Do not change key highlights wording.
-    
-    {
-      ...,
-      "Key Highlights": [
-        "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
-        "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time.",
-        "Repository is available here https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      ]
-    },
-
-    This output correctly implements the rule by having only three highlights per experience with the link included as one of them, ensuring the guidelines are strictly followed.
-      
+    Do not change any wording of any key highlights. 
   expected_output: >
 
+summeryPointSelector:
+  description: >
+    You are provided with multiple experiences in JSON format. 
+    **Select Summary Points**: 
+      Take a look at the "Technologies, frameworks, and tools Used" and "Skills" fields. Choose 3 summary points for each experience where each summary point is a maximum of 1-2 words. 
+      
+      If there are more than 3 summary points, select the most relevant ones that represent that experience. Try to prioritize tech names or skill names. 
+      
+      A the end, Then remove the "Technologies, frameworks, and tools Used" and "Skills" fields from the JSON object. Create a new field named "Summary Points" and add the selected summary points there. 
 
+    
+  expected_output: >
+
+linkHandler:
+  description: >
+    You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array.
+    
+    If a Link is present in the experience:
+    - Append the "Link" inside the "Key Highlights" array.
+    - Remove only the "Link" field from the experience. Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description" etc.
+    - Do not replace any key highlights.
+
+  expected_output: >
 
 experiencesection:
   description: >
@@ -322,29 +328,36 @@ experiencesection:
 
     Organize the experiences as follows:
     - Title: Use \customTitle{Project/Experience Title}.
-    - Summary points: List up to three summary points and up to four words in total using \summaryPoints{item 1 | item 2 | item 3}. 
-    - Role and timeline: Detail the role and its duration using \roleAndTimeline{Role | Timeline}.
-    - Short description: Provide a brief overview using \shortDescription{Short Description}.
-    - Key responsibilities and achievements: List these within the \begin{tightemize} environment using \item for each entry. End the environment with \end{tightemize}.
+    - Summary points: use \summaryPoints{item 1 | item 2 | item 3}. 
+    - Role and timeline: The provided role and its duration using \roleAndTimeline{Role | Timeline}.
+    - Short description: use \shortDescription{Short Description}.
+    - Key responsibilities and achievements: 
+      -- start 'tightemize' environment with \begin{tightemize} 
+      -- Each entry of "Key Highlights" will be each \item.
+      -- End the environment with \end{tightemize}.
     
     Special Character Handling:
     - Use textbf{} for bold text.
     - Format links with \href{}{}, using \ul for underlining.
     - Escape special characters appropriately (e.g., \%, \&, \#).
-   
-  expected_output: >
+
+    Example:
     \section{Experience}
     \customTitle{ATS Pass AI}
-        \summaryPoints{Python | Multiagent | AI | RAG Search}
+        \summaryPoints{Python | Multiagent | AI}
         \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
 
-        \shortDescription{Led the development of an AI-driven project, integrating CrewAI, LangChain, Gemini, and RAG Search to automate tailored resume creation for enhanced job search efficiency.}
+        \shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
 
         \begin{tightemize}
-            \item Engineered a system that personalizes resumes using AI, achieving over \textbf{85\% keyword alignment} with job descriptions for optimal ATS optimization.
-            \item Developed \textbf{scalable architecture} to accommodate future enhancements, demonstrating foresight and innovation.
+            \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
             \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
         \end{tightemize}
+
+    \customTitle{Another Experience}
+        ... so on.
+  expected_output: >
+    
 
 # awards_recognitions_extraction_task:
 #   description: >

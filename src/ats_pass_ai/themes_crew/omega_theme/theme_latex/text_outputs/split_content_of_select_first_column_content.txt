@@ -4,10 +4,10 @@
       "section": "Education",
       "sub_sections": [
         {
-          "institution_name": "University of Manitoba",
+          "institution name": "University of Manitoba",
           "degree": "BSc Major in Computer Science",
-          "graduation_status": "Expected Graduation: October 2023",
-          "graduation_date": null
+          "graduation_status": "Graduated",
+          "graduation_date": "October 2023"
         }
       ]
     },
@@ -19,12 +19,6 @@
           "position": "Director, IT Service Management",
           "company": "Microsoft Corporation",
           "contact_information": "204-298-3693 | Winnipeg, MB"
-        },
-        {
-          "name": "Safiur Mahdi",
-          "position": "Java Developer",
-          "company": "Skip the Dishes",
-          "contact_information": "204-583-3432"
         }
       ]
     }

@@ -210,5 +210,6 @@ Last Updated on \\
   \fontsize{12pt}{15pt}\selectfont  % Adjusted line spacing here
   {#1\par}  % Added specific spacing after the command
   \normalfont
+  \skillsVSpace
   }
 }

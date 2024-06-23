@@ -5,26 +5,31 @@
       "sub_sections": [
         {
           "institution_name": "University of Manitoba",
-          "degree": "BSc Major in Computer Science",
-          "graduation_status": "Expected Graduation: October 2023",
-          "graduation_date": null
+          "degree": "BSc, Computer Science",
+          "graduation_status": "Expected Graduation",
+          "graduation_date": "October 2023",
+          "gpa": "3.07",
+          "honors_distinctions": "Gaming Achievements: FIFA Champion (UMBSA 2017 and CBA 2018), Intel PC Guru - 3rd Place (2007)"
         }
       ]
     },
     {
-      "section": "References",
+      "section": "Relevant Coursework",
       "sub_sections": [
         {
-          "name": "Abu Kabir",
-          "position": "Director, IT Service Management",
-          "company": "Microsoft Corporation",
-          "contact_information": "204-298-3693 | Winnipeg, MB"
+          "coursework": "Distributed Computing (Python | JavaScript)",
         },
         {
-          "name": "Safiur Mahdi",
-          "position": "Java Developer",
-          "company": "Skip the Dishes",
-          "contact_information": "204-583-3432"
+          "coursework": "Data Structures and Algorithms (Java)"
+        },
+        {
+          "coursework": "Object Orientation (Java | C++)",
+        },
+        {
+          "coursework": "Software Engineering (Java | Unit Testing)"
+        },
+        {
+          "coursework": "AI and Game Development (Java | Python)"
         }
       ]
     }
@@ -32,19 +37,19 @@
   "omitted_sections": [
     {
       "section": "Volunteer Work",
-      "reason": "Limited relevance to the job requirements."
+      "reason": "Limited relevance to the job requirements"
     },
     {
       "section": "Awards and Recognitions",
-      "reason": "Lack of significant impact or relevance to the job requirements."
+      "reason": "No relevant awards or recognitions mentioned"
     },
     {
       "section": "Personal Traits and Interests",
-      "reason": "Limited relevance to the job requirements."
+      "reason": "Limited relevance to the job requirements"
     },
     {
       "section": "Miscellaneous",
-      "reason": "Absence of pertinent information related to the job requirements."
+      "reason": "No relevant information mentioned"
     }
   ]
 }

@@ -47,7 +47,7 @@ def sanitize_file(tex_path):
             lines = file.readlines()
             with open(tex_path, "w") as file:
                 for line in lines:
-                    if not line.startswith("`"):
+                    if not line.startswith("`") and not line.startswith("*"):
                         file.write(line)
     except IOError as e:
         print(e)

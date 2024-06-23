@@ -39,33 +39,32 @@ class OmegaThemeCrew:
 			HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
 		},
 	)
-	
-	genAILarge = GoogleGenerativeAI(
-		model="gemini-1.5-pro-latest",
-		temperature=1.0,
-		safety_settings = {
-			HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-			HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-			HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-			HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-		},
-	)
 
 	small_limiter = Limiter(llm_size='SMALL', llm = genAI, langchainMethods=True)
-	large_limiter = Limiter(llm_size='LARGE', llm = genAILarge, langchainMethods=True)
-
+	
 	# rpd, rpm limiter, these will be used on agents
 	small_llm_limiter = small_limiter.request_limiter
-	large_llm_limiter = large_limiter.request_limiter
 
 	# token limiter, these will be used on the tasks to limit the token usage.
 	small_token_limiter = small_limiter.record_token_usage
-	large_token_limiter = large_limiter.record_token_usage
 
 	
+	# genAILarge = GoogleGenerativeAI(
+	# 	model="gemini-1.5-pro-latest",
+	# 	temperature=1.0,
+	# 	safety_settings = {
+	# 		HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+	# 		HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+	# 		HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+	# 		HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+	# 	},
+	# )
+	# large_limiter = Limiter(llm_size='LARGE', llm = genAILarge, langchainMethods=True)
+	# large_llm_limiter = large_limiter.request_limiter
+	# large_token_limiter = large_limiter.record_token_usage
+
 	debugFlag = False
 
-	
 	debugFlag = True
 
 	@crew
@@ -76,7 +75,7 @@ class OmegaThemeCrew:
 				# self.namesection(),
 				# self.concise_jd_task(),
 
-				# self.select_first_column_content(),
+				self.select_first_column_content(),
 				# self.split_content_of_select_first_column_content(),
 				# self.educationsection(),
 				# self.courseworksection(),
@@ -85,8 +84,11 @@ class OmegaThemeCrew:
 
 				# self.skillsection(),
 				# self.careerobjectivesection(),
+
 				# self.expItemChooser(),
-				self.experiencesection()
+				# self.summeryPointSelector(),
+				# self.linkHandler(),
+				# self.experiencesection()
 			]
 		# Return the crew
 		return Crew(
@@ -179,10 +181,10 @@ class OmegaThemeCrew:
 			backstory=yaml[2],
 			allow_delegation=False,
 			verbose=True,
-			# llm=self.genAI,
-			# step_callback=self.small_llm_limiter,
-			llm=self.genAILarge,
-			step_callback=self.large_llm_limiter,
+			llm=self.genAI,
+			step_callback=self.small_llm_limiter,
+			# llm=self.genAILarge,
+			# step_callback=self.large_llm_limiter,
 		)
 
 	@task
@@ -227,8 +229,7 @@ class OmegaThemeCrew:
 			description = description + "\n\n Relevant Courses:" + self.load_file(PATHS["coursework_extraction_task"])
 
 		if self.debugFlag:
-			jd_keyword_extraction = self.load_file(PATHS["concise_jd_task"])
-			description = description + "\n\n" + jd_keyword_extraction
+			description = description + "\n\n" + self.load_file(PATHS["concise_jd_task"])
 
 		expected_output = yaml[1]
 
@@ -377,8 +378,8 @@ class OmegaThemeCrew:
 		)
 
 	@task
-	def experiencesection(self):
-		yaml = self.yaml_loader("experiencesection", True)
+	def summeryPointSelector(self):
+		yaml = self.yaml_loader("summeryPointSelector", True)
 		description = yaml[0]
 		expected_output = yaml[1]
 
@@ -388,12 +389,48 @@ class OmegaThemeCrew:
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			# agent=self.latex_maker_agent(),
-			# callback=self.small_token_limiter,
+			agent=self.basic_agent(),
 			context=[self.expItemChooser()],
+			output_file=PATHS["summeryPointSelector"],
+			callback=self.small_token_limiter
+		)
+	
+	@task
+	def linkHandler(self):
+		yaml = self.yaml_loader("linkHandler", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["summeryPointSelector"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.basic_agent(),
+			context=[self.summeryPointSelector()],
+			output_file=PATHS["linkHandler"],
+			callback=self.small_token_limiter
+		)
+	
+	@task
+	def experiencesection(self):
+		yaml = self.yaml_loader("experiencesection", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["linkHandler"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.latex_maker_agent(),
+			callback=self.small_token_limiter,
+			context=[self.linkHandler()],
 			output_file=PATHS["experiencesection"],
-			agent=self.latex_maker_large_agent(),
-			callback=self.large_token_limiter
+			# agent=self.latex_maker_large_agent(),
+			# callback=self.large_token_limiter
 		)
 
 	def load_file(self, file_path):

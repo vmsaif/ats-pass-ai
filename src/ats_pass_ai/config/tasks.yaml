@@ -1276,7 +1276,7 @@ ats_friendly_keywords_into_experiences:
     This should maintain the original structure as in the input context, with the addition of the integrated keywords.
     {
       "applicant's Experiences with ATS Keywords": {
-        "total experiences count:": "integer value",
+        "total object count:": "integer value",
         "Most Recent Experience": {},
         "Work Experience/Project Experience": {},
       }

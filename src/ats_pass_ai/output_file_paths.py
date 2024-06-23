@@ -83,6 +83,8 @@ PATHS = {
     "referencessection": f"{sub_tex_files_dir}/referencessection.tex",
     "careerobjectivesection": f"{sub_tex_files_dir}/careerobjectivesection.tex",
     "expItemChooser": f"{omega_theme_latex_dir}/text_outputs/expItemChooser.txt",
+    "summeryPointSelector": f"{omega_theme_latex_dir}/text_outputs/summeryPointSelector.txt",
+    "linkHandler": f"{omega_theme_latex_dir}/text_outputs/linkHandler.txt",
     "experiencesection": f"{sub_tex_files_dir}/experiencesection.tex",
     "select_first_column_content": f"{omega_theme_latex_dir}/text_outputs/select_first_column_content.txt",
     "split_content_of_select_first_column_content": f"{omega_theme_latex_dir}/text_outputs/split_content_of_select_first_column_content.txt",
