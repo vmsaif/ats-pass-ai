@@ -1,0 +1,30 @@
+agent=LaTeX Code Generator
+2024-06-25 15:56:22: task=Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,  - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}. - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol. - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province. - Pipeline '|' should be used to separate the data and must not be the last character of the output.
+Example: ```latex
+  \namesection{Saif}{Mahmud}
+  {
+    \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+    \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+  }
+```
+Here is the information you need and convert into LaTeX format:
+
+
+{
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "LinkedIn": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": "",
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": null,
+    "GitHub": null,
+    "Address": "",
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": null,
+    "Country": null
+  }
+}2024-06-25 15:56:22: status=started

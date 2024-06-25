@@ -4,12 +4,12 @@
       "Full Name": "Saif Mahmud",
       "Phone Number": "204 955 5064",
       "Email": "msaifofficial@gmail.com",
-      "LinkedIn": "https://www.linkedin.com/in/vmsaif/",
+      "LinkedIn": "linkedin.com/in/vmsaif",
       "Other Social Media Profiles": null,
-      "Personal Website": "https://saifmahmud.dev",
+      "Personal Website": "saifmahmud.dev",
       "Portfolio": null,
-      "GitHub": "https://github.com/vmsaif/",
-      "Address": "Winnipeg, MB",
+      "GitHub": null,
+      "Address": null,
       "City": "Winnipeg",
       "State": "MB",
       "Zip Code": null,
@@ -27,7 +27,7 @@
       {
         "Organization Name": ".dev Programming Club",
         "Role": "Active Member",
-        "Responsibilities": "- Engaged with the latest software development technologies and tools.\n- Collaborated on team projects focused on Java and Cloud Technologies.",
+        "Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
         "Timeline": "2019-2023"
       }
     ],
@@ -38,17 +38,28 @@
         "Position": "Director IT Service Management",
         "Company": "Microsoft",
         "Contact Information": "204-298-3693",
-        "Relationship": "Colleague, possibly manager"
+        "Relationship": "Colleague",
       },
       {
         "Name": "Safiur Mahdi",
         "Position": "Java Developer",
         "Company": "Skip the Dishes",
         "Contact Information": "204-583-3432",
-        "Relationship": "Colleague"
+        "Relationship": "Colleague",
       }
     ],
-    "Personal Traits and Interests": {},
-    "Miscellaneous": {}
+    "Personal Traits and Interests": {
+      "Strengths": "commitment to innovation",
+      "Weaknesses": null,
+      "Hobbies": null,
+      "Passions": null,
+      "Other Relevant Details": null
+    },
+    "Miscellaneous": {
+      "Languages Spoken": null,
+      "Certifications": null,
+      "Professional Affiliations": null,
+      "Other Relevant Details": null
+    }
   }
 }

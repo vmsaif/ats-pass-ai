@@ -29,8 +29,6 @@ class ResumeCrew:
 	os.environ["OTEL_PYTHON_DISABLED"] = "1"  # Disable OpenTelemetry tracing for the crew
 	# agentops.init(tags=["resume-crew"])
 
-	
-
 	# Define the tools
 	queryTool = SearchInChromaDB().search # passing the function reference, not calling the function
 
@@ -75,8 +73,6 @@ class ResumeCrew:
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
-
-		# debugFlag = True
 		my_tasks = []
 	
 		# if needs to change here, remember to change in the resume_in_json_task as well.
@@ -94,22 +90,27 @@ class ResumeCrew:
 			my_tasks.append(self.skills_extraction_task())
 			my_tasks.append(self.profile_builder_task())
 
-		# # Either way, these tasks will be executed.
-		my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
-		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# Either way, these tasks will be executed.
+		# // SKILLS MATCHING //
 
-		# my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
-		# my_tasks.append(self.split_context_of_experience_choosing_task())
-		# my_tasks.append(self.gather_info_of_chosen_experiences())
+		my_tasks.append(self.ats_friendly_skills_task()) # --------- uses large llm
+		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		my_tasks.append(self.split_missing_skills_task())
+		
+		#### my_tasks.append(self.reduce_missing_skills_task())
 
-		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------- uses large llm
-		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		# // EXPERIENCE MATCHING //
+		my_tasks.append(self.experience_choosing_task()) 
+		my_tasks.append(self.split_context_of_experience_choosing_task())
+		my_tasks.append(self.gather_info_of_chosen_experiences())
 
-		# my_tasks.append(self.coursework_extraction_task())
-		# my_tasks.append(self.career_objective_task()) 
+		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # ---uses large llm
+		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+
+		my_tasks.append(self.coursework_extraction_task())
+		my_tasks.append(self.career_objective_task()) 
 
 		# -------------------------------------
-		# my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
 		# my_tasks.append(self.resume_compilation_task())
 		# my_tasks.append(self.latex_resume_generation_task())
 		# my_tasks.append(self.cover_letter_generation_task()) # --------------------------- uses large llm
@@ -137,16 +138,16 @@ class ResumeCrew:
 		)
 
 	@agent
-	def skills_compatibility_analyst_agent(self) -> Agent:
+	def experience_selector_agent(self) -> Agent:
 		return Agent(
-			config=self.agents_config["skills_compatibility_analyst_agent"],
+			config=self.agents_config["experience_selector_agent"],
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
 			llm=self.genAI,
-			# function_calling_llm = self.genAI,
-			# step_callback=self.large_llm_limiter
 			step_callback=self.small_llm_limiter
+			# llm=self.genAILarge,
+			# step_callback=self.large_llm_limiter
 		)
 
 	@agent
@@ -213,19 +214,6 @@ class ResumeCrew:
 		)
 	
 	@agent
-	def resume_in_json_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["resume_in_json_agent"],
-			allow_delegation=False,
-			# max_rpm=1,
-			# step_callback=self.large_llm_limiter,
-			llm=self.genAILarge,
-			step_callback = self.small_llm_limiter,
-			function_calling_llm=self.genAI,
-			verbose=True,
-		)
-	
-	@agent
 	def resume_compilation_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config["resume_compilation_agent"],
@@ -236,19 +224,6 @@ class ResumeCrew:
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
-		)
-	
-	@agent
-	def latex_resume_agent(self) -> Agent:
-		return Agent(
-			config=self.agents_config["latex_resume_agent"],
-			allow_delegation=False,
-			verbose=True,
-			# cache=True,
-			llm=self.genAILarge,
-			step_callback=self.large_llm_limiter
-			# step_callback=self.small_llm_limiter,
-			# llm=self.genAI
 		)
 	
 	@agent
@@ -264,6 +239,18 @@ class ResumeCrew:
 			# step_callback=self.small_llm_limiter,
 			# llm=self.genAI
 		)
+
+	# @agent
+	# def skill_match_researcher_agent(self) -> Agent:
+	# 	return Agent(
+	# 		config=self.agents_config["skill_match_researcher_agent"],
+	# 		allow_delegation=False,
+	# 		verbose=True,
+	# 		tools=[self.webSearchTool],
+	# 		# cache=True,
+	# 		llm=self.genAI,
+	# 		step_callback=self.small_llm_limiter
+	# 	)
 
 	# ---------------------- Define the tasks ----------------------
 
@@ -319,26 +306,6 @@ class ResumeCrew:
 			output_file=PATHS["cover_letter_generation_task"],
 			callback = self.large_token_limiter
 		)
-
-	# @task
-	# def latex_resume_generation_task(self):
-
-	# 	# Note the the output of this task gets sanitized by latex_generator.py file.
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('latex_resume_generation_task')
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
-
-	# 	if(self.debugFlag):
-	# 		description = description + "\n" + self.load_file(PATHS["resume_in_json_task"])
-			
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.latex_resume_agent(),
-	# 		output_file=PATHS["latex_resume_generation_task"],
-	# 		callback = self.large_token_limiter
-	# 	)
 
 	@task
 	def personal_information_extraction_task(self):
@@ -545,9 +512,32 @@ class ResumeCrew:
 			callback=self.small_token_limiter			
 		)
 	
+	@task 
+	def split_missing_skills_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('split_missing_skills_task')
+		task_description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["ats_friendly_skills_task"])
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.generalist_agent(),
+			context=[self.ats_friendly_skills_task()],
+			output_file=PATHS["split_missing_skills_task"],
+			callback=self.small_token_limiter
+		)
+	
+	
+
 	# ----------------- End of Skills Match Identification -----------------
 
-	# ----------------- Choose Work/Project Experience -----------------
+
+	# ----------------- Include ATS Keywords into Experiences -----------------
+
 	@task
 	def experience_choosing_task(self):
 		# Load YAML file
@@ -567,8 +557,8 @@ class ResumeCrew:
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
-			agent=self.cross_match_evaluator_with_job_description_agent(),
-			callback=self.large_token_limiter,
+			agent=self.experience_selector_agent(),
+			callback=self.small_token_limiter,
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
 			output_file=PATHS["experience_choosing_task"],
 		)
@@ -593,10 +583,6 @@ class ResumeCrew:
 			callback=self.small_token_limiter
 		)
 
-	# ----------------- End of Choose Work/Project Experience -----------------
-
-	# ----------------- Include ATS Keywords into Experiences -----------------
-
 	@task
 	def gather_info_of_chosen_experiences(self):
 		# Load YAML file
@@ -605,7 +591,7 @@ class ResumeCrew:
 		# Load the applicant info organized data
 		applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"])
 		
-		task_description = yaml[0].format(applicant_info_organized_data = applicant_info_organized_data)
+		task_description = yaml[0] + "\nApplicant Info Organized Data:\n" + applicant_info_organized_data
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
@@ -624,22 +610,24 @@ class ResumeCrew:
 	def ats_friendly_keywords_into_experiences_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
+		
 		jd_keywords = self.load_file(PATHS["jd_keyword_extraction"])
-
+		missing_from_the_applicant_skills = self.load_file(PATHS["split_missing_skills_task"])
 		today_date = datetime.date.today().strftime("%B %d, %Y")
-		task_description = yaml[0].format(jd_keywords = jd_keywords, today_date = today_date)
+		
+		task_description = yaml[0].format(jd_keywords = jd_keywords, missing_from_the_applicant_skills = missing_from_the_applicant_skills, today_date = today_date)
 		expected_output = yaml[1]
 
 		# add gathered info of chosen experiences
 		if(self.debugFlag):
-			task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_file(PATHS["gather_info_of_chosen_experiences"])
+			task_description = task_description + "\nChosen Experiences for the resume:\n" + self.load_file(PATHS["gather_info_of_chosen_experiences"]) + "\n" + self.load_file(PATHS["split_missing_skills_task"])
 
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.ats_keyword_integration_agent(),
 			callback=self.large_token_limiter,
-			context=[self.gather_info_of_chosen_experiences()],
+			context=[self.gather_info_of_chosen_experiences(), self.split_missing_skills_task()],
 			output_file=PATHS["ats_friendly_keywords_into_experiences"],
 		)
 
@@ -683,66 +671,6 @@ class ResumeCrew:
 			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
 			output_file=PATHS["career_objective_task"],
 		)
-
-	# @task
-	# def resume_in_json_task(self):
-
-	# 	context = []
-
-	# 	# Either way these context is needed to complete the task.
-
-	# 	context.append(self.split_context_of_ats_friendly_skills_task())
-	# 	context.append(self.coursework_extraction_task())
-	# 	context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
-	# 	context.append(self.career_objective_task())
-
-	# 	# Load YAML file
-	# 	yaml = self.yaml_loader('resume_in_json_task')
-		
-	# 	# append data to the yaml[0] in new paragraph
-	# 	description = yaml[0]
-	# 	description = description.format(today_date = datetime.date.today().strftime("%B %d, %Y"))
-	# 	expected_output = yaml[1]
-
-	# 	if(self.profile_already_created()):
-
-	# 		print("Profile already found. Simply loading the output txt files in the context.")
-	# 		# load the output txt files and append to the yaml[0] in new paragraph, No need to build profile from scratch.
-	# 		description = description + "\n" + self.load_file(PATHS["profile_builder_task"])
-	# 	else :	
-	# 		# need to build profile from scratch
-	# 		# insert the profile_builder_task at the beginning of the context
-	# 		print("Profile not found. Will wait for the profile to be built.")
-	# 		context.insert(0, self.profile_builder_task()) 
-
-	# 	return Task(
-	# 		description = description,
-	# 		expected_output = expected_output,
-	# 		agent = self.resume_in_json_agent(),
-	# 		callback=self.large_token_limiter,
-	# 		context = context,
-	# 		output_file = PATHS["resume_in_json_task"],
-	# 	)
-	
-	# @task
-	# def resume_compilation_task(self):
-	# 	# load the yaml file
-	# 	yaml = self.yaml_loader('resume_compilation_task')
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
-
-	# 	if(self.debugFlag):
-	# 		description = yaml[0] + '\n' + self.load_file(PATHS["resume_in_json_task"])
-
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.resume_compilation_agent(),
-	# 		callback=self.small_token_limiter,
-	# 		# agent=self.generalist_agent(),
-	# 		context=[self.resume_in_json_task()],
-	# 		output_file=PATHS["resume_compilation_task"],
-	# 	)
 	
 	def load_file(self, file_path):
 		"""Load text file"""

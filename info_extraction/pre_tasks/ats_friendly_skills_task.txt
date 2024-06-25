@@ -1,69 +1,47 @@
+```json
 {
   "applicant_skills": {
     "exact_match_with_job_description": {
       "Programming Languages": ["Python"],
-      "AI Frameworks": ["LangChain", "Gemini"],
+      "AI Frameworks": [],
       "Soft Skills": ["Communication"]
     },
     "partial_match": {
       "Programming Languages": [
         {
           "Skill Name": "Java",
-          "Relevance": "The applicant has experience in C++, which is similar to Java in terms of being an object-oriented programming language often used in backend development."
+          "Relevance": "The applicant has experience in C++, which shares similarities with Java in terms of object-oriented programming principles and can be considered a partial match."
         }
       ],
       "AI Frameworks": [
         {
-          "Skill Name": "TensorFlow",
-          "Relevance": "While the applicant doesn't list TensorFlow, they do have experience with PyTorch, which is a comparable deep learning framework often used for similar tasks like developing and deploying machine learning models."
-        },
-        {
-          "Skill Name": "Crew AI",
-          "Relevance": "Although not an exact match to listed frameworks, Crew AI's focus on AI agent collaboration and integration with tools like LangChain demonstrates relevant experience in building and managing AI systems."
-        },
-        {
-          "Skill Name": "RAG Search",
-          "Relevance": "The applicant's inclusion of RAG Search, a modern approach to information retrieval using AI, demonstrates their engagement with advanced search technologies and potentially aligns with the company's AI focus."
-        }
-      ],
-      "Data Skills": [
-        {
-          "Skill Name": "Data Analysis",
-          "Relevance": "The applicant lists 'Data Analysis' as a skill and has experience with 'R' and 'SQL', indicating practical experience in data handling and analysis which are relevant to the job."
+          "Skill Name": "LangChain",
+          "Relevance": "The applicant is experienced in AI, RAG Search, and Multiagent technologies. Considering Langchain's role in developing applications powered by large language models,  the applicant's background in AI-related technologies, particularly RAG Search which aligns with Langchain's capabilities, suggests a functional relevance and can be considered a partial match. "
         }
       ],
       "Soft Skills": [
         {
-          "Skill Name": "Collaboration",
-          "Relevance": "The applicant lists 'Git' experience, a version control system that implies collaborative coding and project work, demonstrating some level of collaboration skills."
+          "Skill Name": "Problem-Solving",
+          "Relevance": "The applicant lists 'Problem-solving' as a skill. This directly matches the job description's requirement for problem-solving abilities."
         },
         {
-          "Skill Name": "Problem-Solving",
-          "Relevance": "While not explicitly stated, the applicant's proficiency in 'Programming' and 'Debugging' suggests strong problem-solving abilities, essential for an AI Engineer role."
+          "Skill Name": "Collaboration",
+          "Relevance": "The applicant mentions 'Team collaboration' as a skill, indicating experience and proficiency in collaborative environments, which aligns with the job description's emphasis on teamwork and can be considered a partial match."
         }
       ]
     },
     "missing_from_the_applicant_skills": [
       "Deep Learning",
       "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
       "Algorithm Development",
+      "TensorFlow",
+      "PyTorch",
       "OpenAI API",
       "Meta Llama 2",
-      "AI for Social Good",
-      "Responsible AI", 
-      "Data Preprocessing",
-      "AI Models",
-      "Virtual Internship",
-      "Democratizing AI",
-      "Equitable Progress",
-      "Social Mobility",
-      "Ethics in AI",
-      "Design",
-      "Develop",
-      "Analyze",
-      "Enhance",
-      "Present",
-      "Contribute"
+      "Google Gemini"
     ]
   }
 }
+```

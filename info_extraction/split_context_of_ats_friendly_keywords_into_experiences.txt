@@ -1,48 +1,60 @@
 ```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "total object count:": 3,
+    "total object count:": 4,
     "Most Recent Experience": {
-      "Project Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present",
-      "Duration": "7 months",
-      "Technologies": "Python, CrewAI, LangChain, Gemini, RAG Search",
-      "skills": "Python, AI, Machine Learning",
-      "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Developed a multi-agent system to create tailored resumes, enhancing job search efficiency using **AI**.",
+      "Job Title": "Programming Mentor - Online and In-Person",
+      "Company": "Private Tutoring",
+      "Location": "N/A (Online and In-Person)",
+      "Timeline": "February 2023 - December 2023",
+      "Duration": "11 months",
+      "Technologies": "Python, Java",
+      "skills": "Mentoring, Teaching, Communication, Programming",
+      "Link": "",
+      "Short Description": "Provided programming mentorship, focusing on **Python** and **Java**, to enhance student's technical skills.",
       "Key Highlights": [
-        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create **AI**-powered resumes, improving job search efficiency.",
-        "Utilized advanced **AI models** and **Natural Language Processing (NLP)** techniques to dynamically personalize resumes, demonstrating cutting-edge technical and **analytical skills**.",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**."
+        "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.",
+        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role."
       ]
     },
     "Work Experience/Project Experience": [
       {
-        "Project Title": "AI Path Finding",
-        "Timeline": "July 2023 - September 2023",
-        "Duration": "3 months",
-        "Technologies": "A* Algorithm, Java, Git, CI/CD",
-        "skills": "A* Algorithm, Java, Git, CI/CD",
-        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-        "Short Description": "Developed a Java-based game leveraging the A* algorithm to create an **AI**-driven game.",
+        "Project Title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Duration": "6 months",
+        "Technologies": "Python, CrewAI, LangChain, Gemini, RAG Search",
+        "skills": "AI, Machine Learning, Natural Language Processing, Software Development",
+        "Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "Led the development of a **Generative AI** multi-agent system to create tailored resumes, enhancing job search efficiency.",
         "Key Highlights": [
-          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing **problem-solving skills**.",
-          "Utilized Git for version control, ensuring efficient **collaboration** and code management within a team environment.",
-          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time, highlighting efficiency and technical proficiency."
+          "Utilized advanced **AI models**, **machine learning**, and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+          "Engineered a system that extracts user data and analyzes job descriptions with advanced **NLP** tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**."
         ]
       },
       {
-        "Project Title": "Connect 4 Game",
-        "Timeline": "February 2023 - April 2023",
+        "Project Title": "Blockchain Car Mileage Tracker",
+        "Timeline": "January 2023 - Mar 2023",
         "Duration": "3 months",
-        "Technologies": "Java",
-        "skills": "Java, AI, Game Development",
-        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
-        "Short Description": "Developed a digital Connect 4 game with strategic **AI** for user vs. AI gameplay.",
+        "Technologies": "Docker, Vue.js, Blockchain technology",
+        "skills": "Blockchain Development, Smart Contracts, Software Development",
+        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+        "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **Data Analysis** techniques.",
         "Key Highlights": [
-          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, emphasizing **AI** development skills.",
-          "Implemented strategic **AI** decision-making, enhancing game complexity and player engagement, demonstrating creativity and technical expertise.",
-          "Implemented efficient CI/CD workflows to streamline development and deployment processes, showcasing adaptability and a commitment to best practices."
+          "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
+          "Enhanced data integrity and transparency, showcasing strong **analytical skills** and attention to detail."
+        ]
+      },
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "A* Algorithm, Java, Git, CI/CD",
+        "skills": "Game Development, AI, Software Development",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based **AI** game leveraging the A* **algorithm** for AI-driven pathfinding, improving game experience.",
+        "Key Highlights": [
+          "Utilized Git for version control, ensuring efficient team **collaboration** and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time."
         ]
       }
     ]

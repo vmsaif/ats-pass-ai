@@ -3,309 +3,301 @@
     "Technologies": [
       {
         "Name": "Python",
-        "field": [ 
+        "field": [
           "Programming Language",
-          "Backend Development"
+          "Backend Development",
+          "Database"
+        ]
+      },
+      {
+        "Name": "JavaScript",
+        "field": [
+          "Programming Language",
+          "Distributed Computing"
         ]
       },
       {
         "Name": "Java",
         "field": [ 
           "Programming Language",
-          "Backend Development"
+          "Backend Development",
+          "Object Oriented Programming",
+          "Data Structures and Algorithms",
+          "Database Implementation",
+          "AI and Game Development"
         ]
       },
       {
-        "Name": "C",
-        "field": [ 
+        "Name": "C++",
+        "field": [
+          "Programming Language",
+          "Object Orientation",
+          "Game Development"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [
+          "Database",
+          "Database Implementation"
+        ]
+      },
+      {
+        "Name": "Multiagent",
+        "field": [
+          "Artificial Intelligence",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "AI",
+        "field": [
+          "Artificial Intelligence",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "RAG Search",
+        "field": [
+          "Information Retrieval",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [
+          "Containerization"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "Front End Development",
+          "JavaScript Frameworks"
+        ]
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Git",
+        "field": [
+          "Version Control"
+        ]
+      },
+      {
+        "Name": "CI/CD",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "3D Graphics",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [
+          "Computer Graphics",
+          "Graphics Programming"
+        ]
+      },
+      {
+        "Name": "C Programming",
+        "field": [
           "Programming Language",
           "System Programming"
         ]
       },
       {
-        "Name": "Docker",
-        "field": [ 
-          "Containerization",
-          "DevOps"
-        ]
-      },
-      {
-        "Name": "Vue.js",
-        "field": [ 
-          "JavaScript Framework",
-          "Frontend Development"
-        ]
-      },
-      {
-        "Name": "A* Algorithm",
-        "field": [ 
-          "Artificial Intelligence",
-          "Pathfinding"
-        ]
-      },
-      {
-        "Name": "OpenGL",
-        "field": [ 
-          "Graphics Programming",
-          "Game Development"
-        ]
-      },
-      {
-        "Name": "TCP/IP",
-        "field": [ 
-          "Networking",
-          "Communication Protocols"
-        ]
-      },
-      {
-        "Name": "R",
-        "field": [ 
-          "Data Analysis",
-          "Statistical Analysis"
-        ]
-      },
-      {
-        "Name": "Android Studio",
-        "field": [ 
-          "Mobile Development",
-          "Java Development"
-        ]
-      },
-      {
-        "Name": "SQL",
-        "field": [ 
-          "Database Management",
-          "Data Analysis"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [ 
-          "Artificial Intelligence",
-          "Search Engine"
-        ]
-      },
-      {
-        "Name": "Gemini",
-        "field": [ 
-          "Artificial Intelligence",
-          "Search Engine"
-        ]
-      },
-      {
-        "Name": "Crew AI",
-        "field": [ 
-          "Artificial Intelligence",
-          "Natural Language Processing"
-        ]
-      },
-      {
-        "Name": "LangChain",
-        "field": [ 
-          "Artificial Intelligence",
-          "Natural Language Processing"
-        ]
-      }
-    ],
-    "Frameworks": [
-      {
-        "Name": "RAG Search",
-        "field": [ 
-          "Artificial Intelligence",
-          "Search Engine"
-        ]
-      },
-      {
-        "Name": "Gemini",
-        "field": [ 
-          "Artificial Intelligence",
-          "Search Engine"
-        ]
-      },
-      {
-        "Name": "Crew AI",
-        "field": [ 
-          "Artificial Intelligence",
-          "Natural Language Processing"
-        ]
-      },
-      {
-        "Name": "LangChain",
-        "field": [ 
-          "Artificial Intelligence",
-          "Natural Language Processing"
-        ]
-      }
-    ],
-    "Skills": [
-      {
-        "Name": "Programming",
-        "field": [ 
-          "Software Development",
-          "Algorithm Design"
-        ]
-      },
-      {
-        "Name": "Mentoring",
-        "field": [ 
-          "Education",
-          "Training"
-        ]
-      },
-      {
-        "Name": "Teaching",
-        "field": [ 
-          "Education",
-          "Instruction"
-        ]
-      },
-      {
         "Name": "Debugging",
-        "field": [ 
-          "Software Development",
-          "Problem Solving"
+        "field": [
+          "Software Development"
         ]
       },
       {
-        "Name": "System Analysis",
-        "field": [ 
-          "Software Engineering",
-          "Requirements Analysis"
-        ]
-      },
-      {
-        "Name": "AI",
-        "field": [ 
-          "Artificial Intelligence",
-          "Machine Learning"
-        ]
-      },
-      {
-        "Name": "Machine Learning",
-        "field": [ 
-          "Artificial Intelligence",
-          "Data Analysis"
-        ]
-      },
-      {
-        "Name": "Blockchain",
-        "field": [ 
-          "Distributed Ledger Technology",
-          "Cryptography"
-        ]
-      },
-      {
-        "Name": "Git",
-        "field": [ 
-          "Version Control",
-          "Collaboration"
-        ]
-      },
-      {
-        "Name": "CI/CD",
-        "field": [ 
-          "Software Development",
-          "Automation"
-        ]
-      },
-      {
-        "Name": "Game Development",
-        "field": [ 
-          "Software Development",
-          "Entertainment"
-        ]
-      },
-      {
-        "Name": "Networking",
-        "field": [ 
-          "Computer Science",
-          "Communication Protocols"
-        ]
-      },
-      {
-        "Name": "Data Analysis",
-        "field": [ 
-          "Statistics",
-          "Data Science"
-        ]
-      },
-      {
-        "Name": "Data Visualization",
-        "field": [ 
-          "Data Analysis",
-          "Communication"
-        ]
-      },
-      {
-        "Name": "JavaScript",
-        "field": [ 
-          "Programming Language",
-          "Frontend Development"
-        ]
-      },
-      {
-        "Name": "C++",
-        "field": [ 
-          "Programming Language",
-          "Systems Programming"
-        ]
-      },
-      {
-        "Name": "JSON",
-        "field": [ 
-          "Data Format",
-          "Data Interchange"
-        ]
-      },
-      {
-        "Name": "NoSQL",
-        "field": [ 
-          "Database Management",
-          "Data Storage"
-        ]
-      },
-      {
-        "Name": "Schema",
-        "field": [ 
-          "Database Management",
-          "Data Structure"
-        ]
-      },
-      {
-        "Name": "GitHub Action",
-        "field": [ 
-          "Continuous Integration",
-          "DevOps"
+        "Name": "Linux OS",
+        "field": [
+          "Operating Systems"
         ]
       },
       {
         "Name": "AWS",
-        "field": [ 
-          "Cloud Computing",
-          "Web Services"
+        "field": [
+          "Cloud & DevOps"
         ]
       },
       {
-        "Name": "Unit Testing",
-        "field": [ 
-          "Software Development",
-          "Quality Assurance"
+        "Name": "Github Action",
+        "field": [
+          "Cloud & DevOps"
+        ]
+      }
+    ],
+    "Frameworks": [],
+    "Skills": [
+      {
+        "Name": "Tailored teaching methods",
+        "field": [
+          "Education"
         ]
       },
       {
-        "Name": "MySQL",
-        "field": [ 
-          "Database Management",
-          "Relational Database"
+        "Name": "Computer systems",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Programming concepts",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Advanced AI models",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Multi-agent technologies",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Data Analysis",
+        "field": [
+          "Data Science",
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Blockchain",
+        "field": [
+          "Distributed Ledger Technology"
+        ]
+      },
+      {
+        "Name": "Smart contracts",
+        "field": [
+          "Blockchain Development"
+        ]
+      },
+      {
+        "Name": "Problem-solving",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Analytical skills",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Attention to detail",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Code management",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Team collaboration",
+        "field": [
+          "Communication Skills"
+        ]
+      },
+      {
+        "Name": "Pathfinding",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "3D graphics rendering",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Geometry",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Generic math",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Object-oriented programming",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Polymorphism",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Hosting",
+        "field": [
+          "Web Development"
+        ]
+      },
+      {
+        "Name": "ELF header analysis",
+        "field": [
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "System analysis",
+        "field": [
+          "System Analysis"
+        ]
+      },
+      {
+        "Name": "ELF binary parsing",
+        "field": [
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "Lighting techniques",
+        "field": [
+          "Computer Graphics"
         ]
       }
     ],
     "Soft Skills": [
       {
         "Name": "Communication",
-        "field": [ 
-          "Interpersonal Skills",
-          "Public Speaking"
+        "field": [
+          "Communication Skills"
+        ]
+      },
+      {
+        "Name": "Interpersonal Skills",
+        "field": [
+          "Interpersonal Skills"
         ]
       }
     ]

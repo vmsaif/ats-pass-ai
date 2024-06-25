@@ -145,9 +145,11 @@ def run():
 
         with Timer() as t:         
             try:
-                # Delete the applicant profile files but not the folder To start fresh
+                # ----- Delete the applicant profile files 
+                # ------But not the folder To start fresh
 
                 # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+
                 crew = ResumeCrew().crew()
                 crew.kickoff()
             except Exception as e:
@@ -162,6 +164,7 @@ def run():
                  traceback.print_exc()
 
             # compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
+        
         latex_generation_time = t.interval
 
     program_run_time = total_time.interval
@@ -196,3 +199,63 @@ def convert_seconds(total_seconds):
     formatted_seconds = f"{seconds:.2f}"
     
     return formatted_days, formatted_hours, formatted_minutes, formatted_seconds
+
+
+# @task
+	# def reduce_missing_skills_task(self):
+	# 	# Load YAML file
+	# 	yaml = self.yaml_loader('reduce_missing_skills_task')
+	# 	task_description = yaml[0]
+	# 	expected_output = yaml[1]
+
+	# 	task_description = task_description + "\nSkills of the applicant\n" + self.load_file(PATHS["skills_extraction_task"])
+
+	# 	if(self.debugFlag):
+	# 		task_description = task_description + "\nSkills Required in the Job Description but not available in the applicant's list.\n" + self.load_file(PATHS["split_missing_skills_task"])
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.generalist_agent(),
+	# 		context=[self.split_missing_skills_task()],
+	# 		tools=[self.webSearchTool],
+	# 		output_file=PATHS["reduce_missing_skills_task"],
+	# 		callback=self.small_token_limiter
+	# 	)
+
+
+    # reduce_missing_skills_task:
+#   description: >
+#     Minimize the "missing_from_the_applicant_skills" list by identifying potential partial matches between the job description's required skills and the applicant's existing skills using research.
+#     **Procedure**:
+#     1. **Review Missing Skills**: Examine each skill listed under "missing_from_the_applicant_skills".
+#     2. **Web Search Tool Usage**: Employ the web search tool to find similarities or related skills, tools, or fields that could serve as alternatives. Query about alternative tools, technologies, or related fields that can bridge the gap between missing and existing skills.
+#       - Example query: `What are alternatives or related fields to [Missing Skill]?`
+
+#     You can use the tool multiple times with multiple queries to find the relevant information.
+#     3. **Assess Relevance**: Analyze the information obtained to determine if any existing skills of the applicant can partially match the missing skills based on similar functionalities, applications, or related fields.
+#     4. **Reclassify Skills**: Shift skills from "missing_from_the_applicant_skills" to "partial_match_with_overlapping_skills" based on the discovered relevance and connections.
+
+#     **Expected Output**:
+#     - Update the JSON object to reflect fewer skills under "missing_from_the_applicant_skills" and more under "partial_match_with_overlapping_skills", clearly documenting each reclassified skill's relevance and the basis for partial matching.
+
+#     ```json
+#     {
+#       "reclassified_skills": {
+#         "partial_match_with_overlapping_skills": [
+#           {
+#             "Skill Name": "Missing Skill 1",
+#             "Relevance": "Similar tool used in Applicant's Skill X"
+#           },
+#           {
+#             "Skill Name": "Missing Skill 2",
+#             "Relevance": "Falls under the same field as Applicant's Skill Y"
+#           }
+#         ],
+#         "missing_from_the_applicant_skills": [
+#           "Still Missing Skill 1",
+#           "Still Missing Skill 2"
+#         ]
+#       }
+#     }
+#   expected_output: >

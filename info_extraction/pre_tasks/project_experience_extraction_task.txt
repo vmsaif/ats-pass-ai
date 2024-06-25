@@ -1,145 +1,146 @@
+```json
 {
+  "Work Experience": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": "Private Tutoring",
+      "Timeline": "February 2023 - December 2023",
+      "Technologies, frameworks, and tools Used": "Python, Java",
+      "Skills": "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.",
+      "Link": null,
+      "Key Highlights": [],
+      "Team size": null,
+      "Outcomes": null
+    }
+  ],
   "Project Experience": [
-    {
-      "Project Title": "ELF Binary Analysis",
-      "Timeline": "November 2022 - December 2022",
-      "Technologies, frameworks, and tools Used": "C, Linux OS",
-      "Skills": "C Programming, Debugging, Linux OS",
-      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
-      "Key Highlights": [
-        "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.",
-        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
-        "Actively contributed to technical documentation for product and knowledge base improvement.",
-        "Developed a C program to extract key information from ELF headers of binary files."
-      ],
-      "Team size": null,
-      "Outcomes": "Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges."
-    },
-    {
-      "Project Title": "ELF Binary Analysis",
-      "Timeline": "November 2022 - December 2022",
-      "Technologies, frameworks, and tools Used": "C, Storage System, OS",
-      "Skills": "C Programming, Debugging, Linux OS",
-      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
-      "Key Highlights": [
-        "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.",
-        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
-        "Actively contributed to technical documentation for product and knowledge base improvement.",
-        "Developed a C program to extract key information from ELF headers of binary files."
-      ],
-      "Team size": null,
-      "Outcomes": "Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges."
-    },
     {
       "Project Title": "ATS Pass AI",
       "Timeline": "January 2024 - Present",
-      "Technologies, frameworks, and tools Used": "Python, CrewAI, LangChain, Gemini, RAG Search",
-      "Skills": "Python, AI, Machine Learning",
+      "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
+      "Skills": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Key Highlights": [
         "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
-        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
         "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
         "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
       ],
       "Team size": null,
-      "Outcomes": "Improved job search efficiency by creating tailored resumes using AI and machine learning."
+      "Outcomes": null
     },
     {
       "Project Title": "Blockchain Car Mileage Tracker",
       "Timeline": "January 2023 - March 2023",
-      "Technologies, frameworks, and tools Used": "Blockchain, Docker, Vue.js",
-      "Skills": "Blockchain, Docker, Vue.js",
+      "Technologies, frameworks, and tools Used": "Docker | Vue.js",
+      "Skills": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
       "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
       "Key Highlights": [
-        "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
         "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
-        "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail."
+        "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+        "Solving a real-world problem by crafting a **smart contract** for tamper-proof mileage recording, enhancing trust in vehicle history.",
+        "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
       ],
       "Team size": null,
-      "Outcomes": "Increased data integrity and transparency in vehicle mileage tracking for insurance purposes."
+      "Outcomes": null
     },
     {
       "Project Title": "AI Path Finding",
       "Timeline": "July 2023 - September 2023",
-      "Technologies, frameworks, and tools Used": "A* Algorithm, Java, Git, CI/CD",
-      "Skills": "A* Algorithm, Java, Git, CI/CD",
+      "Technologies, frameworks, and tools Used": "A* Algorithm | Java | Git | CI/CD",
+      "Skills": "Utilized Git for version control, ensuring efficient team collaboration and code management.",
       "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
       "Key Highlights": [
-        "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
         "Utilized Git for version control, ensuring efficient team collaboration and code management.",
-        "Utilized CI/CD practices, resulting in a 50% reduction in deployment time."
+        "Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
       ],
       "Team size": null,
-      "Outcomes": "Reduced deployment time by 50% and created an AI-driven game using the A* algorithm."
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Recursive Ray Tracing",
+      "Timeline": "May 2023 - July 2023",
+      "Technologies, frameworks, and tools Used": "3D Graphics | OpenGL | C++",
+      "Skills": "Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating a deep understanding of C++ and 3D graphics principles.",
+      "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
+      "Key Highlights": [
+        "Applied geometry and generic math skills to calculate light paths and surface interactions."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Bank Account System",
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Java | File I/O",
+      "Skills": "Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.",
+      "Link": "https://github.com/vmsaif/bankAccountSystem",
+      "Key Highlights": [
+        "Developed scalable Java applications, showcasing a deep understanding of object-oriented programming **optimizing process efficiency by 30%**.",
+        "Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Hosting a Resume on GitHub Pages",
+      "Timeline": "April 2023 - April 2023",
+      "Technologies, frameworks, and tools Used": "Documentation",
+      "Skills": "A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.",
+      "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
+      "Key Highlights": [
+        "Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.",
+        "Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.",
+        "Emphasized beginner-friendly methods for web hosting and documentation."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "ELF Binary Analysis",
+      "Timeline": "November 2022 - December 2022",
+      "Technologies, frameworks, and tools Used": "C Programming | Debugging | Linux OS",
+      "Skills": "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.",
+      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+      "Key Highlights": [
+        "Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.",
+        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
+        "Actively contributed to technical documentation for product and knowledge base improvement."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "ELF Binary Analysis",
+      "Timeline": "November 2022 - December 2022",
+      "Technologies, frameworks, and tools Used": "C | Storage System | OS",
+      "Skills": "Developed a C program to extract key information from ELF headers of binary files.",
+      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+      "Key Highlights": [
+        "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.",
+        "Utilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.",
+        "Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.",
+        "Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties."
+      ],
+      "Team size": null,
+      "Outcomes": null
     },
     {
       "Project Title": "OpenGL Sphere Lighting",
       "Timeline": "April 2023 - June 2023",
-      "Technologies, frameworks, and tools Used": "OpenGL, C++",
-      "Skills": "OpenGL, C++",
+      "Technologies, frameworks, and tools Used": "OpenGL | C++",
+      "Skills": "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.",
       "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
       "Key Highlights": [
-        "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.",
-        "Developed an application with three distinct light sources, offering comprehensive insights into lighting effects."
+        "Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.",
+        "Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.",
+        "Utilized `glutSolidSphere` for accurate sphere rendering, showcasing the effects of different lighting conditions."
       ],
       "Team size": null,
-      "Outcomes": "Gained insights into advanced lighting techniques in OpenGL."
+      "Outcomes": null
     },
     {
-      "Project Title": "Reversible Learning App",
-      "Timeline": "January 2021 - April 2021",
-      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java",
-      "Skills": "SQL, Android Studio, Java",
-      "Link": "https://github.com/vmsaif/reversibleLearning",
-      "Key Highlights": [
-        "Collaborated with a team to develop \"Reversible Learning\", an Android app for enhancing study habits.",
-        "Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.",
-        "Developed an intuitive user interface (UI) for note organization and question archiving.",
-        "Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs."
-      ],
-      "Team size": null,
-      "Outcomes": "Created an Android app to enhance study habits with improved UI/UX design and reduced post-release bugs."
-    },
-    {
-      "Project Title": "Connect 4 Game",
-      "Timeline": "February 2023 - April 2023",
-      "Technologies, frameworks, and tools Used": "Java",
-      "Skills": "Java, AI, Game Development",
-      "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
-      "Key Highlights": [
-        "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
-        "Implemented strategic AI decision-making, enhancing game complexity and player engagement.",
-        "Implemented efficient CI/CD workflows to streamline development and deployment processes.",
-        "Engaged in performance tuning and stability testing to ensure a seamless gaming experience."
-      ],
-      "Team size": null,
-      "Outcomes": "Created a user-friendly and engaging Connect 4 game with strategic AI and optimized performance."
-    },
-    {
-      "Project Title": "TCP Chat Application",
-      "Timeline": "October 2022 - December 2022",
-      "Technologies, frameworks, and tools Used": "TCP/IP, Java",
-      "Skills": "TCP/IP, Java, Networking",
-      "Link": "https://github.com/vmsaif/tcpChatJava",
-      "Key Highlights": [
-        "Developed a Java chat application for real-time client-server communication using TCP.",
-        "Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling.",
-        "Implemented socket programming for robust client-server communication.",
-        "Enabled features like room creation, joining/leaving rooms, and viewing room details."
-      ],
-      "Team size": null,
-      "Outcomes": "Developed a TCP chat application with multithreading capabilities, robust client-server communication, and enhanced features."
-    },
-    {
-      "Project Title": "Data Visualization with R",
-      "Timeline": null,
-      "Technologies, frameworks, and tools Used": "R",
-      "Skills": "R, Data Analysis",
-      "Link": null,
-      "Key Highlights": [
-        "Utilized R for statistical analysis and data visualization, akin to Power BI tasks.",
-        "Demonstrated ability to translate complex data into actionable insights.",
-        "Learned to create interactive visualizations, enhancing data-driven decision-making."
-      ],
-      "Team size
+      "Project Title": "Reversible Learning APP",
+      "Timeline": "
