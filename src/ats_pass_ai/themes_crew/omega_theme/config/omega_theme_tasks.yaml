@@ -33,79 +33,78 @@ concise_jd_task:
   expected_output: >
     A concise summary of the job description, no more than 2000 characters, effectively outlining the main responsibilities and essential qualifications required for the role. This summary should provide enough information to facilitate effective decision-making regarding the inclusion of relevant sections in the applicant's resume.
 
-select_first_column_content:
+assess_and_prioritize:
   description: >
-    Prioritize and select key sections from an applicant's profile for inclusion in the resume, ensuring alignment with the job specifications provided.
+    Assess the relevance of each section in the applicant's profile and prioritize them based on their alignment with the provided job specifications. 
 
-    **Applicant's Data Includes**:
-    - Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous
+    **Input Data Might Include**:
+    - Education, Relevant Courses, Volunteer Work, Awards, References, Traits, Miscellaneous
 
     **Procedure**:
-    1. **Assess Relevance**: Match each section's relevance to the job description.
+    1. **Relevance Assessment**: Evaluate each section's relevance to the job's requirements.
     2. **Prioritization**:
-       - Always include at **least one "Reference"** if available. Choose the most relevant ones.
-       - Prioritize recent and impactful achievements and qualifications.
-    3. **Selection Strategy**:
-       - Target sections directly related to job skills and qualifications.
-       - Emphasize Education and Awards for their impact.
-       - Include broader sections like Personal Traits only if they offer significant advantages.
-    4. **Content Limitation**: Choose up to 2 sections and a total of 4 sub-sections, ensuring all fields are complete. 
-    
-      - If there are fewer than 4 sub-sections, try including 1 other relevant section like "Relevant Courses", "Volunteer Work", "Awards and Achievements" even if they are less relevant.
+       - You can safely ignore the "Skills" section.
+       - Ignore empty sections.
+       - If available, "Relevant Coursework" is a section of its own. Do not make it a sub-section of Education. 
+       - Always prioritize at least one "Reference" sub-section if available.
+       - Focus on recent and impactful achievements and qualifications.
+       - Highlight Education and Awards for their impact.
+       - Consider broader sections like Personal Traits if they offer significant benefits.
 
-    **Output Expectations**:
-    Generate a JSON object detailing the selected and omitted sections.
-
-    # Provided data:
-    ## Applicant's Information: 
-    {applicant_information}
-
-    ## Job Description Keywords: 
-    Provided in the context.
-    
-  expected_output: >
-    Produce a concise JSON object outlining the chosen sections for the resume's first column. The output should detail the rationale behind each selection, reflecting strategic decisions made based on job relevance.
-
+    **Output**:
+    - A JSON object listing sections and sub-sections prioritized by their relevance and impact, ready for final selection in the next task. No need for explanations, reasons or justifications in the output. The output will be in order of priority and their respective sub-sections. Do not remove sub-section fields.
+    Example:
+    ```json
     {
-      "selected_sections": [
-        {
-          "section": "Education",
-          "sub_sections": [
-            {
-              "institution name": "University of Manitoba",
-              "degree": "BSc Major in Computer Science",
-              "graduation_status": "Graduated",
-              "graduation_date": "October 2023"
-            },
-            ...
+      "Prioritized Section": {
+        "Education": [{Sub-section 1}, {Sub-section 2}],
+        "Volunteer Work": [{Sub-section 1},...],
+        "Awards": [{Sub-section 1},...],
+        "References": [{Sub-section 1},...],
+        "Traits": [{Sub-section 1},...],
+      }
+    }
+    ```
+  expected_output: >
+    JSON object detailing sections and sub-sections prioritized for inclusion based on relevance to the job description and impact.
+
+select_first_column_content:
+  description: >
+    Select the final sections and sub-sections and omit the rest. You are given a JSON object which is prioritized based on relevance and impact of an applicant's profile.
+
+    **Procedure**:
+    - If the "Relevant Courses" section is provided, consider the list of courses as one sub-section, Include all courses provided.
+    - Always include at least one "Reference" sub-section if provided. 
+    - Opt for up to 2-3 sections and a total of up to 4 sub-sections across all sections.
+
+    **Output**:
+    - A JSON object of the final selection of sections and sub-sections.
+
+    Example:
+    ```json
+    {
+      "selected_sections": {
+        "Section": {
+          "Section Name": "Education",
+          "Sub-sections": [
+            {Sub-section 1}, 
+            {Sub-section 2}
           ]
         },
-        {
-          "section": "References",
-          "sub_sections": [
-            {
-              "name": "Abu Kabir",
-              "position": "Director, IT Service Management",
-              "company": "Microsoft Corporation",
-              "contact_information": "204-298-3693 | Winnipeg, MB"
-            },
+        "Section": {
+          "Section Name": "another section name",
+          "Sub-sections": [
+            {Sub-section 3}, 
+            {Sub-section 4},
             ...
           ]
         }
-      ],
-      "omitted_sections": [
-        {
-          "section": "Personal Traits and Interests",
-          "reason": "Limited relevance to the job requirements."
-        }
-      ]
+      }
     }
+    ```      
 
-split_content_of_select_first_column_content:
-  description: >
-    You are provided with a JSON object from the previous context that contains the "selected_sections" and "omitted_sections". Split the context provided to you at the point "omitted_sections". In your output, you will provide everything before the "omitted_sections" as the final output of the task. Do not change the format of the JSON object.
   expected_output: >
-    Everything before the "omitted_sections" will be the final output of the task.
+    Final JSON object showing the sections and sub-sections selected.
 
 educationsection:
   description: >
@@ -240,6 +239,11 @@ referencessection:
     Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
     In the output,
+    If there is no reference information, write % \section{}, Like this:
+      % \section{References} 
+      % \sectionsep.
+
+    Otherwise,
     - The first line contains the section name "References". Use the command \section{References}.
     - The next lines contain the reference information in the following format:
       - Start with the command \section{Reference} if there is at least one reference.
@@ -288,17 +292,16 @@ expItemChooser:
     This task modifies the key highlights of each experience based on the total number of experiences.
 
     **Procedure**:
-    First, check what is the value of "total object count:"
-    - If "total object count:" is 3; keep 3 key highlights per experience's "key highlights" array, removing the other ones. 
-    -- If a link is present, allow 2 highlights for that experience's "key highlights" array and remove the other ones.
-
+    - First, check what is the value of "total object count:"
+    
     When Selecting Key Highlights:
-    - Do not prioritize the highlights that have similar wordings to the short description.
-
-    Do not change any wording of any key highlights. 
+    - Do not prioritize the highlights that have similar wordings to the short description. For the other key highlights:
+      -- If "total object count:" is 3; keep 3 key highlights per experience's "key highlights" array, removing the other ones. 
+        --- If a link is present, allow 2 highlights for that experience's "key highlights" array and remove the other ones.
+      -- Do not change any wording of any key highlights. 
   expected_output: >
 
-summeryPointSelector:
+summaryPointSelector:
   description: >
     You are provided with multiple experiences in JSON format. 
     **Select Summary Points**: 
@@ -322,6 +325,20 @@ linkHandler:
 
   expected_output: >
 
+linkLatex:
+  description: >
+    You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array. 
+
+    **Procedure**:
+    - If a link is present in the "Key Highlights" array, format it in LaTeX using the \href{}{} command. 
+    - Write the link in as a sentence in the format. Understand what the link is about and write the sentence accordingly.
+      -- Example:
+      Assume the hyperlink is "profile" and the link is "https://www.linkedin.com/in/vmsaif/".
+
+    - "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}."
+    - Do not change or remove any other content of the json object.
+  expected_output: >
+
 experiencesection:
   description: >
     Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
@@ -337,7 +354,7 @@ experiencesection:
       -- End the environment with \end{tightemize}.
     
     Special Character Handling:
-    - Use textbf{} for bold text.
+    - Use textbf{} for texts surrounded by double asterisks (**text**) in the "Key Highlights" array.
     - Format links with \href{}{}, using \ul for underlining.
     - Escape special characters appropriately (e.g., \%, \&, \#).
 
@@ -358,140 +375,3 @@ experiencesection:
         ... so on.
   expected_output: >
     
-
-# awards_recognitions_extraction_task:
-#   description: >
-
-#   expected_output: >
-#     In JSON format: 
-#       {
-#         "Awards and Recognitions": [
-#           {
-#             "Award Name": "",
-#             "Awarding Organization": "",
-#             "Date": "",
-#             "Reason": "",
-#             ...
-#           }, 
-#           ...
-#         ]
-#       }
-
-# references_extraction_task:
-#   description: >
-
-#   expected_output: >
-#     {
-#       "References": [
-#         {
-#           "Name": "",
-#           "Position": "",
-#           "Company": "",
-#           "Contact Information": "",
-#           "Relationship": "",
-#           ...
-#         }, 
-#         ...
-#       ]
-#     }
-
-# personal_traits_interests_extraction_task:
-#   description: >
-
-#   expected_output: >
-#     {
-#       "Personal Traits and Interests": {
-#         "Strengths": "",
-#         "Hobbies": "",
-#         "Passions": "",
-#         ...
-#       }
-#     }
-
-# miscellaneous_extraction_task:
-#   description: >
-
-#   expected_output: >
-#       {
-#         "Miscellaneous": {
-#           "Languages Spoken": "",
-#           "Certifications": "",
-#           "Professional Affiliations": "",
-#           "Other Relevant Details": "",
-#           ...
-#         }
-#       }
-
-# split_context_of_ats_friendly_keywords_into_experiences:
-#   description: >
-
-
-#   expected_output: >
-
-# career_objective_task:
-#   description: >
-
-#   expected_output: >
-#     A concise and impactful career objective statement that immediately captures the attention of recruiters and hiring managers, highlighting the applicant's unique value proposition, aligning with the company's mission and the job description, and leaving a lasting impression. 
-
-#     In JSON format:
-#       {
-#         "Career Objective": "..."
-#       }
-
-# split_context_of_ats_friendly_skills_task:
-#   description: >
-#     Split the context provided to you at the breaking point "No Match (from job description):" or "missing_from_the_applicant_skills" whichever comes first. In your output, you will provide everything before the "No Match (from the job description):" as the final output of the task.
-
-#     Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
-
-#   expected_output: >
-#     {
-#       "applicant_skills": {
-#         "exact_match_with_job_description": {
-#           "Programming Languages": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ],
-#           "Frameworks": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ],
-#           "Tools": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ],
-#           "Soft Skills": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ]
-#         },
-
-#         "partial_match_with_job_description": {
-#           "Programming Languages": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ],
-#           "Frameworks": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ],
-#           "Tools": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ],
-#           "Soft Skills": [
-#             "item 1",
-#             "item 2",
-#             ...
-#           ]
-#         }
-#       }
-#     }

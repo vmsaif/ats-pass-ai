@@ -94,8 +94,8 @@ This job description emphasizes a strong ethical and social justice framework al
 
 ```json
 {
-  "list of skills": {
-    "Essential Skills": [
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
       {
         "Name": "Machine Learning",
         "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]

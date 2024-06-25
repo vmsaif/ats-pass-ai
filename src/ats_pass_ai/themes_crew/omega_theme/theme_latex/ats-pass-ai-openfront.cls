@@ -15,6 +15,7 @@
 \usepackage{calc} % for simple arithmetic
 \usepackage{ifthen} % for if else statements
 \usepackage{afterpage}
+
 % Publications
 \usepackage{cite}
 \usepackage{enumitem} % for tight lists
@@ -111,9 +112,6 @@ Last Updated on \\
   \ifdim\headingwidth<7.5cm
   \color{headings}
     \fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{14pt}\selectfont
-  % \else\ifdim\headingwidth>8cm
-  %   \color{primary}
-  %   \fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{12pt}{14pt}\selectfont
   \else
   \color{primary}
     \fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{11pt}{13pt}\selectfont
@@ -134,7 +132,6 @@ Last Updated on \\
 \begin{itemize}[leftmargin=*] \itemsep1pt \parskip0pt \parsep0pt  % Start itemize with fewer gaps
 }{  
 \end{itemize}
-\vspace{-10pt}
 }
 
 
@@ -149,24 +146,34 @@ Last Updated on \\
 
 % -------------- Experience section -------
 
-\newlength{\titlewidth}
-\newcommand{\setTitleWidth}[1]{\settowidth{\titlewidth}{\uppercase{#1}}} % Count and then set the width of the title
+\newlength{\titleWidth}
+\newcommand{\setTitleWidth}[1]{\settowidth{\titleWidth}{\uppercase{#1}}} % Count and then set the width of the title
+
+\newlength{\summaryPointsWidth}
+\newcommand{\setSummaryPointsWidth}[1]{\settowidth{\summaryPointsWidth}{#1}} 
+
+\newlength{\myTotalWidth}
 
 \newcommand{\customTitle}[1]{
   \setTitleWidth{#1} % Set the width of the title
+  \setlength{\myTotalWidth}{\titleWidth}
   \vspace{5pt}
 \color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{13pt}{12pt}\selectfont\uppercase {#1} \normalfont\vspace{3pt}}
 
 
 \newcommand{\summaryPoints}[1]{
-  {\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Regular}\fontsize{11pt}{13pt}\selectfont
+  \setSummaryPointsWidth{#1} % Set the width of the summary points
+  \addtolength{\myTotalWidth}{\summaryPointsWidth} 
+  \hspace{-5pt} % Adjust the horizontal space
+  \color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Regular}\fontsize{11pt}{13pt}\selectfont
   % Check if the title width is greater than a specific length
-  \ifdim\titlewidth>125pt
+  \typeout{-----: \the\myTotalWidth}
+  \ifdim\myTotalWidth>296pt
     \par\noindent{#1\\}\vspace{4pt} % Ensure no indentation at the start of a new paragraph
   \else
+  \hspace{-6pt}
     { | #1\\} % Ensure space starts before the content if not on a new line
   \fi
-  }
 }
 
 \newcommand{\roleAndTimeline}[1]{
@@ -192,16 +199,12 @@ Last Updated on \\
 
 % Descriptors command
 \newcommand{\semiTitle}[1]{
-{\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{13pt}\selectfont {\\#1}\par\vspace{2pt} \normalfont}
-}
+\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{13pt}\selectfont {\\#1}\par\vspace{2pt} \normalfont}
 
 % SubTitle command
 \newcommand{\subTitle}[1]{
 {\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{12pt}{14pt}\selectfont {#1\\}\par}}
 
-% % SubTitle command
-% \newcommand{\smallSubSection}[1]{
-% {\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-SemiBold}\fontsize{12.5pt}{14pt}\selectfont\uppercase {#1}\vspace{3pt}\par}}
 
 \newcommand{\body}[1]{
   % \color{subheadings}

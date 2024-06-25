@@ -70,6 +70,7 @@ class ResumeCrew:
 
 	debugFlag = False
 	
+	debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -93,19 +94,19 @@ class ResumeCrew:
 			my_tasks.append(self.skills_extraction_task())
 			my_tasks.append(self.profile_builder_task())
 
-		# Either way, these tasks will be executed.
+		# # Either way, these tasks will be executed.
 		my_tasks.append(self.ats_friendly_skills_task()) # --------------------------- uses large llm
-		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 
-		my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
-		my_tasks.append(self.split_context_of_experience_choosing_task())
-		my_tasks.append(self.gather_info_of_chosen_experiences())
+		# my_tasks.append(self.experience_choosing_task()) # --------------------------- uses large llm
+		# my_tasks.append(self.split_context_of_experience_choosing_task())
+		# my_tasks.append(self.gather_info_of_chosen_experiences())
 
-		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------- uses large llm
-		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # --------------- uses large llm
+		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
-		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task()) 
+		# my_tasks.append(self.coursework_extraction_task())
+		# my_tasks.append(self.career_objective_task()) 
 
 		# -------------------------------------
 		# my_tasks.append(self.resume_in_json_task()) # --------------------------- uses large llm
@@ -319,25 +320,25 @@ class ResumeCrew:
 			callback = self.large_token_limiter
 		)
 
-	@task
-	def latex_resume_generation_task(self):
+	# @task
+	# def latex_resume_generation_task(self):
 
-		# Note the the output of this task gets sanitized by latex_generator.py file.
-		# Load YAML file
-		yaml = self.yaml_loader('latex_resume_generation_task')
-		description = yaml[0]
-		expected_output = yaml[1]
+	# 	# Note the the output of this task gets sanitized by latex_generator.py file.
+	# 	# Load YAML file
+	# 	yaml = self.yaml_loader('latex_resume_generation_task')
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = description + "\n" + self.load_file(PATHS["resume_in_json_task"])
+	# 	if(self.debugFlag):
+	# 		description = description + "\n" + self.load_file(PATHS["resume_in_json_task"])
 			
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.latex_resume_agent(),
-			output_file=PATHS["latex_resume_generation_task"],
-			callback = self.large_token_limiter
-		)
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.latex_resume_agent(),
+	# 		output_file=PATHS["latex_resume_generation_task"],
+	# 		callback = self.large_token_limiter
+	# 	)
 
 	@task
 	def personal_information_extraction_task(self):
@@ -508,9 +509,8 @@ class ResumeCrew:
 	def ats_friendly_skills_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('ats_friendly_skills_task')
-		src_1 = self.load_file(PATHS["jd_keyword_extraction"])
-		task_description = yaml[0].format(src_1 = src_1)
 		
+		task_description = yaml[0] + "\nJob Description Starts:\n" + self.load_file(PATHS["jd_keyword_extraction"]) + "\nJob Description Ends."
 		expected_output = yaml[1]
 		
 		if(self.profile_already_created() or self.debugFlag):

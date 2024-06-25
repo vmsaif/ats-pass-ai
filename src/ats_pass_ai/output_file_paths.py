@@ -13,7 +13,8 @@ rag_db_perist_dir = "./chroma_db"
 # Omega theme paths
 omega_theme_dir = f"{themes_crew_dir}/omega_theme"
 omega_theme_latex_dir = f"{themes_crew_dir}/omega_theme/theme_latex"
-sub_tex_files_dir = f"{omega_theme_latex_dir}/sub_tex_files_dir" # if needs to change this, also change in the actual tex file. 
+sub_tex_files_dir = f"{omega_theme_latex_dir}/sub_tex_files_dir" # if needs to  change this, also change in the actual tex file. 
+omega_theme_pre_tasks_dir = f"{omega_theme_latex_dir}/text_outputs"
 
 # Config dictionary with all paths
 
@@ -73,7 +74,7 @@ PATHS = {
     "omega_theme_final_output_pdf": f"../../../../../{omega_theme_latex_dir}", # need to go back to project root from class path
     "omega_theme_agents": f"{themes_crew_dir}/omega_theme/config/omega_theme_agents.yaml",
     "omega_theme_tasks": f"{themes_crew_dir}/omega_theme/config/omega_theme_tasks.yaml",
-    "concise_jd_task": f"{omega_theme_latex_dir}/text_outputs/concise_jd_task.txt",
+    "concise_jd_task": f"{omega_theme_pre_tasks_dir}/concise_jd_task.txt",
     "sub_tex_files_dir": sub_tex_files_dir,
     "namesection": f"{sub_tex_files_dir}/namesection.tex",
     "educationsection": f"{sub_tex_files_dir}/educationsection.tex",
@@ -82,11 +83,11 @@ PATHS = {
     "volunteersection": f"{sub_tex_files_dir}/volunteersection.tex",
     "referencessection": f"{sub_tex_files_dir}/referencessection.tex",
     "careerobjectivesection": f"{sub_tex_files_dir}/careerobjectivesection.tex",
-    "expItemChooser": f"{omega_theme_latex_dir}/text_outputs/expItemChooser.txt",
-    "summeryPointSelector": f"{omega_theme_latex_dir}/text_outputs/summeryPointSelector.txt",
-    "linkHandler": f"{omega_theme_latex_dir}/text_outputs/linkHandler.txt",
+    "expItemChooser": f"{omega_theme_pre_tasks_dir}/expItemChooser.txt",
+    "summaryPointSelector": f"{omega_theme_pre_tasks_dir}/summaryPointSelector.txt",
+    "linkHandler": f"{omega_theme_pre_tasks_dir}/linkHandler.txt",
+    "linkLatex": f"{omega_theme_pre_tasks_dir}/linkLatex.txt",
     "experiencesection": f"{sub_tex_files_dir}/experiencesection.tex",
-    "select_first_column_content": f"{omega_theme_latex_dir}/text_outputs/select_first_column_content.txt",
-    "split_content_of_select_first_column_content": f"{omega_theme_latex_dir}/text_outputs/split_content_of_select_first_column_content.txt",
-    
+    "assess_and_prioritize": f"{omega_theme_pre_tasks_dir}/assess_and_prioritize.txt",
+    "select_first_column_content": f"{omega_theme_pre_tasks_dir}/select_first_column_content.txt",
 }

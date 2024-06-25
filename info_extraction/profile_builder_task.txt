@@ -4,12 +4,12 @@
       "Full Name": "Saif Mahmud",
       "Phone Number": "204 955 5064",
       "Email": "msaifofficial@gmail.com",
-      "LinkedIn": "https://www.linkedin.com/in/vmsaif",
+      "LinkedIn": "https://www.linkedin.com/in/vmsaif/",
       "Other Social Media Profiles": null,
-      "Personal Website": "saifmahmud.dev",
+      "Personal Website": "https://saifmahmud.dev",
       "Portfolio": null,
-      "GitHub": null,
-      "Address": null,
+      "GitHub": "https://github.com/vmsaif/",
+      "Address": "Winnipeg, MB",
       "City": "Winnipeg",
       "State": "MB",
       "Zip Code": null,
@@ -19,10 +19,9 @@
       "Degree": "BSc",
       "Major": "Computer Science",
       "University": "University of Manitoba",
-      "Location": "Winnipeg, MB",
+      "Location": null,
       "Graduation Date": "October 2023",
-      "GPA": "3.07",
-      "Honors/Distinctions": "Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)"
+      "GPA": "3.07"
     },
     "Volunteer Work": [
       {
@@ -39,22 +38,17 @@
         "Position": "Director IT Service Management",
         "Company": "Microsoft",
         "Contact Information": "204-298-3693",
-        "Relationship": null
+        "Relationship": "Colleague, possibly manager"
       },
       {
         "Name": "Safiur Mahdi",
         "Position": "Java Developer",
         "Company": "Skip the Dishes",
         "Contact Information": "204-583-3432",
-        "Relationship": null
+        "Relationship": "Colleague"
       }
     ],
-    "Personal Traits and Interests": {
-      "Strengths": null,
-      "Hobbies": null,
-      "Passions": null,
-      "Weaknesses": null
-    },
+    "Personal Traits and Interests": {},
     "Miscellaneous": {}
   }
 }

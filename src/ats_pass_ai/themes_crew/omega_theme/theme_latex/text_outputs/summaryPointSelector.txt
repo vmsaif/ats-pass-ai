@@ -1,0 +1,53 @@
+{
+  "applicant's Experiences with ATS Keywords": {
+    "total object count:": 3,
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Summary Points": [
+        "Python",
+        "AI",
+        "NLP"
+      ],
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Developed a multi-agent system to create tailored resumes, enhancing job search efficiency using **AI**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create **AI**-powered resumes, improving job search efficiency.",
+        "Utilized advanced **AI models** and **Natural Language Processing (NLP)** techniques to dynamically personalize resumes, demonstrating cutting-edge technical and **analytical skills**."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "July 2023 - September 2023",
+        "Duration": "3 months",
+        "Summary Points": [
+          "A* Algorithm",
+          "Java",
+          "Git"
+        ],
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm to create an **AI**-driven game.",
+        "Key Highlights": [
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing **problem-solving skills**.",
+          "Utilized Git for version control, ensuring efficient **collaboration** and code management within a team environment."
+        ]
+      },
+      {
+        "Project Title": "Connect 4 Game",
+        "Timeline": "February 2023 - April 2023",
+        "Duration": "3 months",
+        "Summary Points": [
+          "Java",
+          "AI"
+        ],
+        "Link": "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java",
+        "Short Description": "Developed a digital Connect 4 game with strategic **AI** for user vs. AI gameplay.",
+        "Key Highlights": [
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, emphasizing **AI** development skills."
+        ]
+      }
+    ]
+  }
+}

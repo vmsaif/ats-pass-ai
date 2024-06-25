@@ -1,6 +1,6 @@
-**Artificial Intelligence Engineer**
+**Summary of Artificial Intelligence Engineer Role**
 
-**Key Responsibilities:**
+**Responsibilities:**
 
 * Design and develop innovative AI models
 * Analyze and preprocess data for machine learning applications
@@ -8,9 +8,9 @@
 * Present research findings and engage in critical team discussions
 * Contribute to the development of AI virtual agents
 
-**Essential Qualifications:**
+**Requirements:**
 
-* Bachelor's or Master's in Computer Science, AI, or related fields
+* Bachelor's or Master's degree in Computer Science, AI, or related field
 * Profound knowledge of AI, machine learning, and NLP
 * Expertise in Python and AI development frameworks like TensorFlow or PyTorch
 * Strong analytical, problem-solving, and creative thinking skills

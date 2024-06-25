@@ -16,10 +16,6 @@ from crewai.project import CrewBase, agent, crew, task
 from ats_pass_ai.limiter import Limiter
 from ats_pass_ai.output_file_paths import PATHS
 
-# os.environ["OTEL_SDK_DISABLED"] = "true"
-
-
-
 @CrewBase
 class OmegaThemeCrew:
 	"""Resume Maker Crew"""
@@ -48,7 +44,6 @@ class OmegaThemeCrew:
 	# token limiter, these will be used on the tasks to limit the token usage.
 	small_token_limiter = small_limiter.record_token_usage
 
-	
 	# genAILarge = GoogleGenerativeAI(
 	# 	model="gemini-1.5-pro-latest",
 	# 	temperature=1.0,
@@ -72,23 +67,25 @@ class OmegaThemeCrew:
 		"""Creates the applicant info organizer crew"""
 
 		tasks = [
-				# self.namesection(),
-				# self.concise_jd_task(),
+				self.namesection(),
+				self.concise_jd_task(),
 
+				self.assess_and_prioritize(),
 				self.select_first_column_content(),
-				# self.split_content_of_select_first_column_content(),
-				# self.educationsection(),
-				# self.courseworksection(),
-				# self.volunteerworksection(),
-				# self.referencessection(), 
 
-				# self.skillsection(),
-				# self.careerobjectivesection(),
+				self.educationsection(),
+				self.courseworksection(),
+				self.volunteerworksection(),
+				self.referencessection(), 
 
-				# self.expItemChooser(),
-				# self.summeryPointSelector(),
-				# self.linkHandler(),
-				# self.experiencesection()
+				self.skillsection(),
+				self.careerobjectivesection(),
+
+				self.expItemChooser(),
+				self.summaryPointSelector(),
+				self.linkHandler(),
+				self.linkLatex(),
+				self.experiencesection()
 			]
 		# Return the crew
 		return Crew(
@@ -120,26 +117,26 @@ class OmegaThemeCrew:
 			goal=yaml[1],
 			backstory=yaml[2],
 			allow_delegation=False,
-			verbose=True,
+			# verbose=True,
 			llm=self.genAI,
 			step_callback=self.small_llm_limiter,
 			# llm=self.genAILarge,
 			# step_callback=self.large_llm_limiter
 		)
 	
-	@agent
-	def latex_maker_large_agent(self) -> Agent:
-		# load yaml
-		yaml = self.yaml_loader("latex_maker_agent", is_task = False)
-		return Agent(
-			role=yaml[0],
-			goal=yaml[1],
-			backstory=yaml[2],
-			allow_delegation=False,
-			verbose=True,
-			llm=self.genAILarge,
-			step_callback=self.large_llm_limiter
-		)
+	# @agent
+	# def latex_maker_large_agent(self) -> Agent:
+	# 	# load yaml
+	# 	yaml = self.yaml_loader("latex_maker_agent", is_task = False)
+	# 	return Agent(
+	# 		role=yaml[0],
+	# 		goal=yaml[1],
+	# 		backstory=yaml[2],
+	# 		allow_delegation=False,
+	# 		verbose=True,
+	# 		llm=self.genAILarge,
+	# 		step_callback=self.large_llm_limiter
+	# 	)
 
 	@agent
 	def basic_agent(self) -> Agent:
@@ -150,7 +147,7 @@ class OmegaThemeCrew:
 			goal=yaml[1],
 			backstory=yaml[2],
 			allow_delegation=False,
-			verbose=True,
+			# verbose=True,
 			llm=self.genAI,
 			step_callback=self.small_llm_limiter,
 		)
@@ -164,7 +161,7 @@ class OmegaThemeCrew:
 			goal=yaml[1],
 			backstory=yaml[2],
 			allow_delegation=False,
-			verbose=True,
+			# verbose=True,
 			# llm=self.genAILarge,
 			# step_callback=self.large_llm_limiter,
 			llm=self.genAI,
@@ -180,7 +177,7 @@ class OmegaThemeCrew:
 			goal=yaml[1],
 			backstory=yaml[2],
 			allow_delegation=False,
-			verbose=True,
+			# verbose=True,
 			llm=self.genAI,
 			step_callback=self.small_llm_limiter,
 			# llm=self.genAILarge,
@@ -219,47 +216,62 @@ class OmegaThemeCrew:
 		)
 
 	@task
-	def select_first_column_content(self):
-		yaml = self.yaml_loader("select_first_column_content", True)
-
-		applicant_information = self.load_file(PATHS["profile_builder_task"])
-		description = yaml[0].format(applicant_information = applicant_information)
-
-		if(os.path.exists(PATHS["coursework_extraction_task"])):
-			description = description + "\n\n Relevant Courses:" + self.load_file(PATHS["coursework_extraction_task"])
-
-		if self.debugFlag:
-			description = description + "\n\n" + self.load_file(PATHS["concise_jd_task"])
-
+	def assess_and_prioritize(self):
+		yaml = self.yaml_loader("assess_and_prioritize", True)
+		description = yaml[0]
 		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["concise_jd_task"])
+	
+		description = description + "\n\n" + self.load_file(PATHS["profile_builder_task"])
+		description = description + "\n\n" + self.load_file(PATHS["coursework_extraction_task"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.content_selector_agent(),
 			context=[self.concise_jd_task()],
-			output_file=PATHS["select_first_column_content"],
+			output_file=PATHS["assess_and_prioritize"],
 			callback=self.small_token_limiter
 		)
 
 	@task
-	def split_content_of_select_first_column_content(self):
-		yaml = self.yaml_loader("split_content_of_select_first_column_content", True)
-		
-		description = yaml[0]
+	def select_first_column_content(self):
+		yaml = self.yaml_loader("select_first_column_content", True)
 		expected_output = yaml[1]
-		
+		description = yaml[0]
+
 		if self.debugFlag:
-			description += "\n\n" + self.load_file(PATHS["select_first_column_content"])
+			description = description + "\n\n" + self.load_file(PATHS["assess_and_prioritize"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.basic_agent(),
-			context=[self.select_first_column_content()],
-			output_file=PATHS["split_content_of_select_first_column_content"],
+			agent=self.content_selector_agent(),
+			context=[self.assess_and_prioritize()],
+			output_file=PATHS["select_first_column_content"],
 			callback=self.small_token_limiter
 		)
+
+	# @task
+	# def split_content_of_select_first_column_content(self):
+	# 	yaml = self.yaml_loader("split_content_of_select_first_column_content", True)
+		
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
+		
+	# 	if self.debugFlag:
+	# 		description += "\n\n" + self.load_file(PATHS["select_first_column_content"])
+
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.basic_agent(),
+	# 		context=[self.select_first_column_content()],
+	# 		output_file=PATHS["split_content_of_select_first_column_content"],
+	# 		callback=self.small_token_limiter
+	# 	)
 
 	@task
 	def educationsection(self):
@@ -268,13 +280,13 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 		
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(PATHS["split_content_of_select_first_column_content"])
+			description = description + "\n\n" + self.load_file(PATHS["select_first_column_content"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.split_content_of_select_first_column_content()],
+			context=[self.select_first_column_content()],
 			output_file=PATHS["educationsection"],
 			callback=self.small_token_limiter
 		)
@@ -301,13 +313,13 @@ class OmegaThemeCrew:
 		description = yaml[0]
 		expected_output = yaml[1]
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(PATHS["split_content_of_select_first_column_content"])
+			description = description + "\n\n" + self.load_file(PATHS["select_first_column_content"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.split_content_of_select_first_column_content()],
+			context=[self.select_first_column_content()],
 			output_file=PATHS["courseworksection"],
 			callback=self.small_token_limiter
 		)
@@ -319,13 +331,13 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(PATHS["split_content_of_select_first_column_content"])
+			description = description + "\n\n" + self.load_file(PATHS["select_first_column_content"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.split_content_of_select_first_column_content()],
+			context=[self.select_first_column_content()],
 			output_file=PATHS["volunteersection"],
 			callback=self.small_token_limiter
 		)
@@ -336,13 +348,13 @@ class OmegaThemeCrew:
 		description = yaml[0]
 		expected_output = yaml[1]
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(PATHS["split_content_of_select_first_column_content"])
+			description = description + "\n\n" + self.load_file(PATHS["select_first_column_content"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.split_content_of_select_first_column_content()],
+			context=[self.select_first_column_content()],
 			output_file=PATHS["referencessection"],
 			callback=self.small_token_limiter
 		)
@@ -378,8 +390,8 @@ class OmegaThemeCrew:
 		)
 
 	@task
-	def summeryPointSelector(self):
-		yaml = self.yaml_loader("summeryPointSelector", True)
+	def summaryPointSelector(self):
+		yaml = self.yaml_loader("summaryPointSelector", True)
 		description = yaml[0]
 		expected_output = yaml[1]
 
@@ -391,7 +403,7 @@ class OmegaThemeCrew:
 			expected_output=expected_output,
 			agent=self.basic_agent(),
 			context=[self.expItemChooser()],
-			output_file=PATHS["summeryPointSelector"],
+			output_file=PATHS["summaryPointSelector"],
 			callback=self.small_token_limiter
 		)
 	
@@ -402,20 +414,20 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(PATHS["summeryPointSelector"])
+			description = description + "\n\n" + self.load_file(PATHS["summaryPointSelector"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.basic_agent(),
-			context=[self.summeryPointSelector()],
+			context=[self.summaryPointSelector()],
 			output_file=PATHS["linkHandler"],
 			callback=self.small_token_limiter
 		)
 	
 	@task
-	def experiencesection(self):
-		yaml = self.yaml_loader("experiencesection", True)
+	def linkLatex(self):
+		yaml = self.yaml_loader("linkLatex", True)
 		description = yaml[0]
 		expected_output = yaml[1]
 
@@ -426,8 +438,26 @@ class OmegaThemeCrew:
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			callback=self.small_token_limiter,
 			context=[self.linkHandler()],
+			output_file=PATHS["linkLatex"],
+			callback=self.small_token_limiter
+		)
+
+	@task
+	def experiencesection(self):
+		yaml = self.yaml_loader("experiencesection", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["linkLatex"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.latex_maker_agent(),
+			callback=self.small_token_limiter,
+			context=[self.linkLatex()],
 			output_file=PATHS["experiencesection"],
 			# agent=self.latex_maker_large_agent(),
 			# callback=self.large_token_limiter

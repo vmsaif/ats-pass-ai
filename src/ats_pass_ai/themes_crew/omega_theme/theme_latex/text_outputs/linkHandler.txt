@@ -1,49 +1,51 @@
 {
-  "total object count:": "3",
   "applicant's Experiences with ATS Keywords": {
-    "Most Recent Experience": [
+    "total object count:": 3,
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Summary Points": [
+        "Python",
+        "AI",
+        "NLP"
+      ],
+      "Short Description": "Developed a multi-agent system to create tailored resumes, enhancing job search efficiency using **AI**.",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create **AI**-powered resumes, improving job search efficiency.",
+        "Utilized advanced **AI models** and **Natural Language Processing (NLP)** techniques to dynamically personalize resumes, demonstrating cutting-edge technical and **analytical skills**.",
+        "https://github.com/vmsaif/ats-pass-ai"
+      ]
+    },
+    "Work Experience/Project Experience": [
       {
-        "Work/Project": "Project",
-        "title": "ATS Pass AI",
-        "Timeline": "January 2024 - Present",
-        "Duration": "7 months",
-        "Summary Points": [
-          "Python",
-          "AI"
-        ],
-        "Key Highlights": [
-          "Developed a multi-agent system to create **personalized** resumes using **AI** and **natural language processing (NLP).**",
-          "Utilized advanced **AI models** and multi-agent technologies to dynamically **personalize** resumes, demonstrating cutting-edge technical and **analytical** capabilities."
-        ]
-      }
-    ],
-    "Project Experience": [
-      {
-        "Work/Project": "Project",
-        "title": "AI Path Finding",
-        "Timeline": "Jul 2023 - Sep 2023",
+        "Project Title": "AI Path Finding",
+        "Timeline": "July 2023 - September 2023",
         "Duration": "3 months",
         "Summary Points": [
+          "A* Algorithm",
           "Java",
-          "A* Algorithm"
+          "Git"
         ],
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm to create an **AI**-driven game.",
         "Key Highlights": [
-          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
-          "Utilized Git for version control and CI/CD practices, resulting in a 50% reduction in deployment time."
+          "Developed a Java-based game development project that leveraged the A* algorithm to create an AI-driven game, showcasing **problem-solving skills**.",
+          "Utilized Git for version control, ensuring efficient **collaboration** and code management within a team environment.",
+          "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm"
         ]
       },
       {
-        "Work/Project": "Project",
-        "title": "Connect 4 Game",
+        "Project Title": "Connect 4 Game",
         "Timeline": "February 2023 - April 2023",
         "Duration": "3 months",
         "Summary Points": [
           "Java",
           "AI"
         ],
+        "Short Description": "Developed a digital Connect 4 game with strategic **AI** for user vs. AI gameplay.",
         "Key Highlights": [
-          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.",
-          "Implemented strategic AI decision-making, enhancing game complexity and player engagement."
+          "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid, emphasizing **AI** development skills.",
+          "https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java"
         ]
       }
     ]

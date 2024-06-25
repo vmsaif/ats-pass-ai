@@ -4,6 +4,7 @@
 	Description: This file contains the main function to run the ATS-PASS-AI
 """
 from datetime import timedelta
+import traceback
 from textwrap import dedent
 from ats_pass_ai.limiter import printRemainingRequestsPerDay
 from ats_pass_ai.resume_crew import ResumeCrew
@@ -16,7 +17,6 @@ from ats_pass_ai.latex_generator import compile_latex
 # First, Lets Organize the applicant Information provided by the applicant.
 
 from crewai.telemetry import Telemetry
-
 def noop(*args, **kwargs):
     # print("Telemetry method called and noop'd\n")
     pass
@@ -144,24 +144,24 @@ def run():
         indexing_time = t.interval
 
         with Timer() as t:         
-            # try:
+            try:
                 # Delete the applicant profile files but not the folder To start fresh
 
                 # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
                 crew = ResumeCrew().crew()
-                # crew.kickoff()
-            # except Exception as e:
-                # print(f"Error Here: {e}")
-                # exit the program
-                # print("Exiting the program due to error in crew kickoff")
-                # exit(1)
-                # crew.kickoff() # Retry once
+                crew.kickoff()
+            except Exception as e:
+                traceback.print_exc()
         crew_run_time = t.interval
     
         with Timer() as t:
-            omega_theme_crew = OmegaThemeCrew().crew()
-            omega_theme_crew.kickoff()
-            compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
+            try:
+                 omega_theme_crew = OmegaThemeCrew().crew()
+                #  omega_theme_crew.kickoff()
+            except Exception as e:
+                 traceback.print_exc()
+
+            # compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
         latex_generation_time = t.interval
 
     program_run_time = total_time.interval

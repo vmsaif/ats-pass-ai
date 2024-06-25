@@ -1,0 +1,41 @@
+```json
+{
+  "Prioritized Sections": {
+    "Education": [{
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "University of Manitoba",
+      "Graduation Date": "October 2023",
+      "GPA": "3.07"
+    }],
+    "Relevant Coursework": [
+      "AI and Game Development (Java | Python)",
+      "Distributed Computing (Python | JavaScript)",
+      "Data Structures and Algorithms (Java)",
+      "Software Engineering (Java | Unit Testing)"
+    ],
+    "Volunteer Work": [
+      {
+        "Organization Name": ".dev Programming Club",
+        "Role": "Active Member",
+        "Responsibilities": "- Engaged with the latest software development technologies and tools.\n- Collaborated on team projects focused on Java and Cloud Technologies.",
+        "Timeline": "2019-2023"
+      }
+    ],
+    "References": [
+      {
+        "Name": "Abu Kabir",
+        "Position": "Director IT Service Management",
+        "Company": "Microsoft",
+        "Relationship": "Colleague, possibly manager"
+      },
+      {
+        "Name": "Safiur Mahdi",
+        "Position": "Java Developer",
+        "Company": "Skip the Dishes",
+        "Relationship": "Colleague"
+      }
+    ]
+  }
+}
+```
