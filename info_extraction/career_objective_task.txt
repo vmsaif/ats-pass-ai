@@ -1,5 +1,3 @@
-```json
 {
-  "Career Objective": "Ambitious and innovative Artificial Intelligence Engineer eager to join Radical AI and contribute to your mission of democratizing AI for social good. My proven expertise in generative AI, NLP, and social justice framework alignment will enable me to make a significant impact on your team."
+"Career Objective": "Seasoned Software Developer seeking to leverage expertise in AI, NLP, and Python at Radical AI. Passionate about aligning technology with social good and ethical AI principles."
 }
-```

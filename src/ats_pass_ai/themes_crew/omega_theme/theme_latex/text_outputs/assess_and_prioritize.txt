@@ -1,24 +1,30 @@
 ```json
 {
   "Prioritized Sections": {
-    "Education": [{
-      "Degree": "BSc",
-      "Major": "Computer Science",
-      "University": "University of Manitoba",
-      "Graduation Date": "October 2023",
-      "GPA": "3.07"
-    }],
     "Relevant Coursework": [
       "AI and Game Development (Java | Python)",
       "Distributed Computing (Python | JavaScript)",
       "Data Structures and Algorithms (Java)",
-      "Software Engineering (Java | Unit Testing)"
+      "Object Orientation (Java | C++)",
+      "Software Engineering (Java | Unit Testing)",
+      "Database Implementation (SQL | Python)",
+      "Technical Communication in CS"
+    ],
+    "Education": [
+      {
+        "Degree": "BSc",
+        "Major": "Computer Science",
+        "University": "University of Manitoba",
+        "Location": null,
+        "Graduation Date": "October 2023",
+        "GPA": "3.07"
+      }
     ],
     "Volunteer Work": [
       {
         "Organization Name": ".dev Programming Club",
         "Role": "Active Member",
-        "Responsibilities": "- Engaged with the latest software development technologies and tools.\n- Collaborated on team projects focused on Java and Cloud Technologies.",
+        "Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
         "Timeline": "2019-2023"
       }
     ],
@@ -27,13 +33,20 @@
         "Name": "Abu Kabir",
         "Position": "Director IT Service Management",
         "Company": "Microsoft",
-        "Relationship": "Colleague, possibly manager"
+        "Contact Information": "204-298-3693",
+        "Relationship": "Colleague",
       },
       {
         "Name": "Safiur Mahdi",
         "Position": "Java Developer",
         "Company": "Skip the Dishes",
-        "Relationship": "Colleague"
+        "Contact Information": "204-583-3432",
+        "Relationship": "Colleague",
+      }
+    ],
+    "Personal Traits and Interests": [
+      {
+        "Strengths": "commitment to innovation"
       }
     ]
   }

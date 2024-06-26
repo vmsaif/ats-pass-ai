@@ -43,7 +43,7 @@ assess_and_prioritize:
     **Procedure**:
     1. **Relevance Assessment**: Evaluate each section's relevance to the job's requirements.
     2. **Prioritization**:
-       - You can safely ignore the "Skills" section.
+       - You can safely ignore the "Skills" section. Do not include it in the output.
        - Ignore empty sections.
        - If available, "Relevant Coursework" is a section of its own. Do not make it a sub-section of Education. 
        - Always prioritize at least one "Reference" sub-section if available.
@@ -184,6 +184,7 @@ skillsection:
        - Limit the number of categories to 5, try including both exact and partial match skills relevant to the job.
        - Include both exact and partial matches in the appropriate categories. Limit each category to a minimum of 3 to a maximum of 5 skills. The intention is to provide a balanced representation number of the applicant's skills.
     3. The expected output is only the category and items, not any explanation or additional text.
+    4. No need to mention whether the skills are a partial or exact match.
 
     Example:
 
@@ -295,23 +296,25 @@ expItemChooser:
     - First, check what is the value of "total object count:"
     
     When Selecting Key Highlights:
-    - Do not prioritize the highlights that have similar wordings to the short description. For the other key highlights:
-      -- If "total object count:" is 3; keep 3 key highlights per experience's "key highlights" array, removing the other ones. 
-        --- If a link is present, allow 2 highlights for that experience's "key highlights" array and remove the other ones.
-      -- Do not change any wording of any key highlights. 
+      - If "total object count:" is 3; keep 3 key highlights per experience's "key highlights" array, removing the other ones. 
+        -- However, If a link is present, allow 2 highlights (not 3) for that experience's "key highlights" array and remove the other ones.
+      - Do not change any wording of any key highlights. 
+      - If the condition is not met, keep the output as the same as the input.
+
   expected_output: >
 
 summaryPointSelector:
   description: >
     You are provided with multiple experiences in JSON format. 
     **Select Summary Points**: 
-      Take a look at the "Technologies, frameworks, and tools Used" and "Skills" fields. Choose 3 summary points for each experience where each summary point is a maximum of 1-2 words. 
+      Take a look at the "Technologies, frameworks, and tools Used" and "Skills" fields. Choose 3-4 summary points for each experience where each summary point is a maximum of 1-2 words or all together summary points are 4-5 words. 
       
-      If there are more than 3 summary points, select the most relevant ones that represent that experience. Try to prioritize tech names or skill names. 
+      If there are more than 3-4 summary points, select the most relevant ones that represent that experience. Try to prioritize tech names or skill names. 
       
       A the end, Then remove the "Technologies, frameworks, and tools Used" and "Skills" fields from the JSON object. Create a new field named "Summary Points" and add the selected summary points there. 
 
-    
+      Do not change any wording or other fields of the JSON object. This is important.
+
   expected_output: >
 
 linkHandler:

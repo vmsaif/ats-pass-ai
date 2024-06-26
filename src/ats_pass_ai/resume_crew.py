@@ -68,7 +68,7 @@ class ResumeCrew:
 
 	debugFlag = False
 	
-	debugFlag = True
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -109,6 +109,10 @@ class ResumeCrew:
 
 		my_tasks.append(self.coursework_extraction_task())
 		my_tasks.append(self.career_objective_task()) 
+
+
+
+
 
 		# -------------------------------------
 		# my_tasks.append(self.resume_compilation_task())

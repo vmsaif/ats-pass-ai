@@ -466,22 +466,21 @@ ats_friendly_skills_task:
       
       query: str = Field(description="What is Langchain, what is it's comparable tools, technology?")
       
-      The comparable tools and technology will help you understand the relevance of partial matches.
-      
     3. **Evaluation Criteria**:
         - **Exact Match**: Direct correspondence between the job description and the applicant’s qualifications. 
         
         - **Partial Match**: Skills that are not exactly the same but share similar applications or functionalities as those required by the job. The Job Description Section contains a "Partial_Match" field. Try to match the applicant's skills with the job description's Partial_Match field 
         
-        - **missing_from_the_applicant_skills**: Skills that do not align with the job description. Your goal should be to move as many skills as possible from this section to the "Partial Match" after researching their relevance. 
+        - **missing_from_the_applicant_skills**: Skills that do not align with the job description. Your goal should be to move as many skills as possible from this section to the "Partial Match" after researching their relevance by using the tool. 
 
        The partial match section has 2 fields per object: 
         - "Skill Name": The skill mentioned in the job description.
         - "Relevance": The relevance of the applicant's with the job description's skill.
 
     4. **Categorization**:
-       - Organize skills into categories such as Programming Languages and Soft Skills.
-       - Aim for a balanced overview by listing 3-5 skills combining exact and partial matches for all categories. That should make approximately 10-15 items in total for the output before the "missing_from_the_applicant_skills" section.
+       - Organize skills into categories such as Programming Languages, Soft Skills, AI Frameworks, etc., based on the job description's requirements. Feel free to create category names as you see fit.
+
+       - Aim for a balanced overview by listing 3-5 skills combining exact and partial matches for all categories.
 
     5. **Structured Report**:
        - Generate a JSON report with 'Exact Match' and 'Partial Match' sections, specifying the job-related skill and its relevance to the applicant's skills.
@@ -489,39 +488,53 @@ ats_friendly_skills_task:
   expected_output: >
     A JSON structure that accurately reflects matches based on the refined definition of partial matches:
     {
-      "applicant_skills": {
+      "applicant_accepted_skills": {
+        "applicant_accepted_skills_count": "integer value", (aim for 12-15 skills in total for a balanced overview)
         "exact_match_with_job_description": {
-          "Programming Languages": ["Python"],
-          "AI Frameworks": ["LangChain", "Gemini"],
-          "Soft Skills": ["Communication"]
+          "Programming Languages": [
+          "Python",
+          "Java",
+          ],
+          "AI Frameworks": ["LangChain"],
+          "Soft Skills": [
+            "Communication",
+            "Problem-Solving",
+          ]
         },
         "partial_match": {
           "Programming Languages": [
             {
-              "Skill Name": "Java",
-              "Relevance": "The applicant has experience in C++, which is similar to Java."
+              "Name_mentioned_in_the_job_description": "Go",
+              "Relevance": "The applicant has experience in Python, which is similar to Go."
             },
-            ...
+            {
+              "Name_mentioned_in_the_job_description": "C++",
+              "Relevance": "The applicant has experience in C#, which is similar to C++."
+            },
+            (As exact match has 3 in this category, Try fetching 2 in this category from the applicant's available skills)
           ],
           "AI Frameworks": [
             {
-              "Skill Name": "TensorFlow",
+              "Name_mentioned_in_the_job_description": "TensorFlow",
               "Relevance": "The applicant has experience in PyTorch, which is similar to TensorFlow."
             },
             {
-              "Skill Name": "LangChain",
-              "Relevance": "The applicant has experience in Hugging Face, which is similar to LangChain."
+              "Name_mentioned_in_the_job_description": "HuggingFace",
+              "Relevance": "The applicant has experience in Langchain, which is similar to HuggingFace."
             }
+            (As exact match has 1 in this category, Try getting 3-4 in this category from the applicant's available skills)
           ],
           "Soft Skills": [
             {
-              "Skill Name": "Problem-Solving",
+              "Name_mentioned_in_the_job_description": "Problem-Solving",
               "Relevance": "The applicant has experience in Critical Thinking, which is similar to Problem-Solving."
             },
+            (As exact match has 2 in this category, Try getting 2-3 in this category from the applicant's available skills)
             ...
           ]
-        },
-        "missing_from_the_applicant_skills": [
+        }
+      },
+      "missing_from_the_applicant_skills": [
           "Skill 1",
           "Skill 2",
           ...
@@ -829,123 +842,6 @@ ats_friendly_keywords_into_experiences:
       }
     }
 
-ats_friendly_keywords_into_experiences:
-  description: >
-    Enhance the descriptions of the applicant's experiences by integrating key job description keywords to make them more appealing to Applicant Tracking Systems (ATS) while ensuring they remain readable and relevant.
-
-      - **Relevance:** Prioritize keywords directly related to the described experience.
-      - **Seamless Integration:** Weave keywords naturally into the narrative, enhancing flow rather than disrupting it.
-      - **Conciseness:** 
-        * Limit Short Descriptions to 10-13 words, providing a succinct summary distinct from Key Highlights.
-        * Use impactful action verbs and concise phrases for Key Highlights (approximately 10-13 words each).
-      - **Contextual Accuracy:** Ensure keywords accurately represent the applicant's role and contributions, avoiding misrepresentation.
-      - **Address Missing Skills:** Incorporate relevant keywords from the "missing_from_the_applicant_skills" list where they fit naturally.
-      - **Avoid Keyword Stuffing:** Maintain a balanced keyword density for readability and effectiveness.
-
-    **Input Data:**
-
-    * **Job Description Keywords:**
-      {jd_keywords}
-
-    * **Missing from the Applicant's Skills:**
-      {missing_from_the_applicant_skills}
-
-    * **Today's Date (for duration calculation):** {today_date}
-
-    Count the total number of experiences and set it to "total object count". After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
-
-    When you are done with listing the experiences with integrated keywords, provide a detailed report on changes in a new section ## Report on Changes:
-
-    ## Report on Changes in structure in JSON:
-      - **Original Sentence**: Present the sentence before any updates.
-      - **Revised Sentence**: Display the sentence after keywords have been integrated.
-      - **Keywords Added**: List each keyword that was newly added, ensuring they were not present before.
-      - **Rationale**: Provide a detailed explanation for each keyword addition, linking the choice to specific requirements or phrases in the job description.
-
-    To determine the duration of the most recent experience, the present date is {today_date}.
-  expected_output: >
-    Produce a detailed listing for each experience, categorized under 'Most Recent Experience', 'Work Experience' and 'Project Experience', with ATS-optimized descriptions. 
-    
-    For any project experiences, Follow this structure:
-    ```json
-    {
-      "Project Title": "",
-      "Timeline": "",
-      "Duration": "",
-      "Technologies": "",
-      "skills": "",
-      "Link": "",
-      "Short Description": "(About 10-13 words)",
-      "Key Highlights": [
-        (Up to 4 key highlights but not required to be 4),
-        "",
-        "",
-        "",
-        ""
-      ],
-    }
-    ```
-
-    For any work experiences, Follow this structure:
-    ```json
-    {
-      "Job Title": "",
-      "Company": "",
-      "Location": "",
-      "Timeline": "",
-      "Duration": "",
-      "Technologies": "",
-      "skills": "",
-      "Link": "",
-      "Short Description": "(About 15 words)",
-      "Key Highlights": [
-        (Up to 4 key highlights but not required to be 4),
-        "",
-        "",
-        "",
-        ""
-      ],
-    }
-    ```
-
-    Final Output:
-
-    This should maintain the original structure as in the input context, with the addition of the integrated keywords.
-    ```json
-    {
-      "applicant's Experiences with ATS Keywords": {
-        "total object count:": "integer value",
-        "Most Recent Experience": {},
-        "Work Experience/Project Experience": {},
-      }
-      "Report on Changes": {
-        "ATS Pass AI": [
-          {
-            "Original Sentence": "Original Sentence: Developed a machine learning algorithm for image recognition using Python and TensorFlow.",
-            "Revised Sentence": "Developed a **Python**-based machine learning algorithm for image recognition, utilizing **data analysis** and **data visualization** techniques.",
-            "Keywords Added": ["Data Analysis", "Data Visualization"],
-            "Rationale": "The job description emphasized these technical skills as critical for the role, making their inclusion essential for aligning the applicant’s experiences with the job requirements."
-          },
-          {
-            "Original Sentence": "...",
-            "Revised Sentence": "...",
-            "Keywords Added": ["..."],
-            "Rationale": "..."
-          },
-          ...
-        ],
-        "Experience Title": [
-          {
-            "Original Sentence": "Original Sentence: ...",
-            "Revised Sentence": "Revised Sentence: ...",
-            "Keywords Added": ["..."],
-            "Rationale": "..."
-          },
-          ...
-        ]
-      }
-    }
-    ```
 
 split_context_of_ats_friendly_keywords_into_experiences:
   description: >
@@ -969,7 +865,9 @@ coursework_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
 
-    After extracting the coursework, prioritize the courses from top to bottom that are relevant to the job description as the first 3-5 courses in the list, ignoring others. 
+    After extracting the coursework, order them based on relevance to the job description. Relevant courses should be prioritized. Keep 4-6 courses in the final output, ignore the rest.
+
+    If you did not find any coursework, simply provide an empty list.
 
     Here are the Job Description Keywords:
     {jd_keyword_extraction}

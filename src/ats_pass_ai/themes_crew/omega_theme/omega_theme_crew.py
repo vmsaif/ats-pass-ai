@@ -60,7 +60,7 @@ class OmegaThemeCrew:
 
 	debugFlag = False
 
-	debugFlag = True
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -312,6 +312,7 @@ class OmegaThemeCrew:
 		yaml = self.yaml_loader("courseworksection", True)
 		description = yaml[0]
 		expected_output = yaml[1]
+		
 		if(self.debugFlag):
 			description = description + "\n\n" + self.load_file(PATHS["select_first_column_content"])
 

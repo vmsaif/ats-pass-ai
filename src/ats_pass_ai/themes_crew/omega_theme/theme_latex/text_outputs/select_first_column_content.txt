@@ -3,43 +3,68 @@
   "selected_sections": {
     "Section": {
       "Section Name": "Education",
-      "Sub-sections": [{
-        "Degree": "BSc",
-        "Major": "Computer Science",
-        "University": "University of Manitoba",
-        "Graduation Date": "October 2023",
-        "GPA": "3.07"
-      }]
+      "Sub-sections": [
+        {
+          "Degree": "BSc",
+          "Major": "Computer Science",
+          "University": "University of Manitoba",
+          "Location": null,
+          "Graduation Date": "October 2023",
+          "GPA": "3.07"
+        }
+      ]
     },
     "Section": {
       "Section Name": "Relevant Coursework",
-      "Sub-sections": [{
-        "Relevant Courses": [
-          "AI and Game Development (Java | Python)",
-          "Distributed Computing (Python | JavaScript)",
-          "Data Structures and Algorithms (Java)",
-          "Software Engineering (Java | Unit Testing)"
-        ]
-      }]
+      "Sub-sections": [
+        {
+          "Coursework": "AI and Game Development (Java | Python)",
+          "": null
+        },
+        {
+          "Coursework": "Distributed Computing (Python | JavaScript)",
+          "": null
+        },
+        {
+          "Coursework": "Data Structures and Algorithms (Java)",
+          "": null
+        },
+        {
+          "Coursework": "Object Orientation (Java | C++)",
+          "": null
+        },
+        {
+          "Coursework": "Software Engineering (Java | Unit Testing)",
+          "": null
+        },
+        {
+          "Coursework": "Database Implementation (SQL | Python)",
+          "": null
+        },
+        {
+          "Coursework": "Technical Communication in CS",
+          "": null
+        }
+      ]
     },
     "Section": {
       "Section Name": "References",
-      "Sub-sections": [{
-        "References": [
-          {
-            "Name": "Abu Kabir",
-            "Position": "Director IT Service Management",
-            "Company": "Microsoft",
-            "Relationship": "Colleague, possibly manager"
-          },
-          {
-            "Name": "Safiur Mahdi",
-            "Position": "Java Developer",
-            "Company": "Skip the Dishes",
-            "Relationship": "Colleague"
-          }
-        ]
-      }]
+      "Sub-sections": [
+        {
+          "Name": "Abu Kabir",
+          "Position": "Director IT Service Management",
+          "Company": "Microsoft",
+          "Contact Information": "204-298-3693",
+          "Relationship": "Colleague"
+        },
+        {
+          "Name": "Safiur Mahdi",
+          "Position": "Java Developer",
+          "Company": "Skip the Dishes",
+          "Contact Information": "204-583-3432",
+          "Relationship": "Colleague"
+        }
+      ]
     }
   }
 }

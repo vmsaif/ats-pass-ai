@@ -1,17 +1,40 @@
-**Summary of Artificial Intelligence Engineer Role**
+**Job Description Summary**
 
-**Responsibilities:**
+**Role Title:** Artificial Intelligence Engineer
 
-* Design and develop innovative AI models
+**Organization:** Radical AI for Social Good Lab (Radical AI)
+
+**Key Responsibilities:**
+
+* Design, develop, and enhance innovative AI models using machine learning, deep learning, generative AI, and natural language processing techniques
 * Analyze and preprocess data for machine learning applications
-* Collaborate with AI teams to enhance algorithms and models
-* Present research findings and engage in critical team discussions
+* Collaborate with AI teams to optimize algorithms and models
+* Present research findings and engage in critical discussions to advance AI capabilities
 * Contribute to the development of AI virtual agents
 
-**Requirements:**
+**Essential Qualifications:**
 
-* Bachelor's or Master's degree in Computer Science, AI, or related field
-* Profound knowledge of AI, machine learning, and NLP
-* Expertise in Python and AI development frameworks like TensorFlow or PyTorch
-* Strong analytical, problem-solving, and creative thinking skills
-* Excellent communication and teamwork abilities
+* Bachelor's or Master's degree in Computer Science, AI, or a related field
+* Deep understanding of AI principles, machine learning algorithms, and natural language processing
+* Proficiency in Python and AI development frameworks (e.g., TensorFlow, PyTorch)
+* Strong analytical, problem-solving, and creative thinking abilities
+* Excellent communication and teamwork skills
+
+**Additional Information:**
+
+* Unpaid virtual internship with a duration of 3 months, starting between March and July 2024
+* Access to the Radical AI Platform and direct feedback from the Radical AI Core Team
+* Technologies utilized include OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, and Python
+* Applicants with diverse backgrounds and experiences are encouraged to apply
+* Radical AI is committed to diversity, inclusion, and equal opportunity
+
+**Resume Section Relevance:**
+
+To determine which sections of an applicant's resume are most relevant to the role, recruiters should consider the following criteria:
+
+* **Education:** Bachelor's or Master's degree in Computer Science, AI, or a related field
+* **Skills:** Proficiency in Python, AI development frameworks, machine learning, deep learning, generative AI, natural language processing, and data analysis
+* **Experience:** Experience in designing, developing, and enhancing AI models and collaborating on AI projects
+* **Awards and Recognitions:** Awards or recognition for achievements in AI research or development
+* **Personal Traits and Interests:** Analytical mindset, problem-solving abilities, and passion for AI
+* **Miscellaneous:** Participation in AI-related hackathons, conferences, or open-source projects

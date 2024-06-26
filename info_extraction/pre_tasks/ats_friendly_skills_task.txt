@@ -1,47 +1,68 @@
 ```json
 {
-  "applicant_skills": {
+  "applicant_accepted_skills": {
+    "applicant_accepted_skills_count": 8,
     "exact_match_with_job_description": {
-      "Programming Languages": ["Python"],
+      "Programming Languages": [
+        "Python"
+      ],
       "AI Frameworks": [],
-      "Soft Skills": ["Communication"]
+      "Soft Skills": [
+        "Communication",
+        "Problem-solving"
+      ],
+      "AI Skills": [
+        "AI",
+        "Data Analysis"
+      ]
     },
     "partial_match": {
       "Programming Languages": [
         {
-          "Skill Name": "Java",
-          "Relevance": "The applicant has experience in C++, which shares similarities with Java in terms of object-oriented programming principles and can be considered a partial match."
+          "Name_mentioned_in_the_job_description": "TensorFlow",
+          "Relevance": "The applicant has experience in Python, which is commonly used with TensorFlow."
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Pytorch",
+          "Relevance": "The applicant has experience in Python, which is commonly used with PyTorch"
         }
       ],
       "AI Frameworks": [
         {
-          "Skill Name": "LangChain",
-          "Relevance": "The applicant is experienced in AI, RAG Search, and Multiagent technologies. Considering Langchain's role in developing applications powered by large language models,  the applicant's background in AI-related technologies, particularly RAG Search which aligns with Langchain's capabilities, suggests a functional relevance and can be considered a partial match. "
+          "Name_mentioned_in_the_job_description": "LangChain",
+          "Relevance": "The applicant has experience in AI and RAG Search, indicating familiarity with AI tools and techniques used in LangChain."
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Google Gemini",
+          "Relevance": "The applicant's experience with AI, particularly in Multi-agent technologies, suggests a foundation relevant to Google Gemini's capabilities."
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Meta Llama 2",
+          "Relevance": "The applicant's proficiency in AI and Multi-agent technologies implies exposure to concepts and techniques related to large language models like Meta Llama 2."
         }
       ],
       "Soft Skills": [
         {
-          "Skill Name": "Problem-Solving",
-          "Relevance": "The applicant lists 'Problem-solving' as a skill. This directly matches the job description's requirement for problem-solving abilities."
+          "Name_mentioned_in_the_job_description": "Collaboration",
+          "Relevance": "The applicant lists 'Team collaboration' as a skill, directly aligning with the requirement for effective teamwork."
+        }
+      ],
+      "AI Skills":[
+        {
+          "Name_mentioned_in_the_job_description": "Machine Learning",
+          "Relevance": "The applicant's expertise in 'Advanced AI models' and 'Multi-agent technologies' suggests exposure to Machine Learning concepts."
         },
         {
-          "Skill Name": "Collaboration",
-          "Relevance": "The applicant mentions 'Team collaboration' as a skill, indicating experience and proficiency in collaborative environments, which aligns with the job description's emphasis on teamwork and can be considered a partial match."
+          "Name_mentioned_in_the_job_description": "Deep Learning",
+          "Relevance": "The applicant's work with 'Advanced AI models' implies potential experience or understanding of Deep Learning principles."
         }
       ]
-    },
-    "missing_from_the_applicant_skills": [
-      "Deep Learning",
-      "Natural Language Processing (NLP)",
-      "Generative AI",
-      "Data Analysis",
-      "Algorithm Development",
-      "TensorFlow",
-      "PyTorch",
-      "OpenAI API",
-      "Meta Llama 2",
-      "Google Gemini"
-    ]
-  }
+    }
+  },
+  "missing_from_the_applicant_skills": [
+    "OpenAI API",
+    "Natural Language Processing (NLP)",
+    "Generative AI"
+  ]
 }
 ```

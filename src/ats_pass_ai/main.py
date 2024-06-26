@@ -151,7 +151,7 @@ def run():
                 # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
 
                 crew = ResumeCrew().crew()
-                crew.kickoff()
+                # crew.kickoff()
             except Exception as e:
                 traceback.print_exc()
         crew_run_time = t.interval
@@ -159,11 +159,11 @@ def run():
         with Timer() as t:
             try:
                  omega_theme_crew = OmegaThemeCrew().crew()
-                #  omega_theme_crew.kickoff()
+                 omega_theme_crew.kickoff()
             except Exception as e:
                  traceback.print_exc()
 
-            # compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
+            compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
         
         latex_generation_time = t.interval
 
