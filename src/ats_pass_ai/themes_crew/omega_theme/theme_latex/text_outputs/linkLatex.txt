@@ -3,39 +3,54 @@
     "total object count:": 3,
     "Most Recent Experience": {
       "Title": "ATS Pass AI",
-      "Experience Type": "Project Experience",
       "Timeline": "January 2024 - Present",
       "Duration": "7 months",
-      "Summary Points": "AI, Python, RAG Search",
+      "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
+      "skills": "Multiagent and AI concepts, Technical and Analytical, Expertise",
+      "Short Description": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
+      "Summary Points": "Python, AI concepts",
       "Key Highlights": [
-        "Utilized advanced **AI models** and multi-agent technologies to dynamically personalize resumes, analyzing job descriptions with **Deep Learning** techniques to align candidate skills, demonstrating cutting-edge technical and **analytical skills**.",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like **Google Gemini** Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for **ATS**."
-      ]
+        "Extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "See my \href{https://github.com/vmsaif/ats-pass-ai}{\ul{Github}}."
+      ],
+      "Link found": true,
+      "Allow Item Count": 2
     },
     "Work Experience/Project Experience": [
       {
-        "Title": "Blockchain Car Mileage Tracker",
-        "Experience Type": "Project Experience",
+        "Job Title": "Blockchain Car Mileage Tracker",
+        "Company": null,
+        "Location": null,
         "Timeline": "January 2023 - Mar 2023",
         "Duration": "3 months",
-        "Summary Points": "Blockchain, Vue.js",
+        "Technologies": "Blockchain, Docker, Vue.js",
+        "skills": "Blockchain, Transparency, Data Security, Team Collaboration",
+        "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
+        "Summary Points": "Blockchain, Data Security",
         "Key Highlights": [
           "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
-          "Enhanced data integrity and transparency, showcasing strong **analytical skills** and attention to detail.",
-          "See more about the project in my \href{https://example.com/blockchain-car-mileage-tracker/}{\ul{Blockchain Car Mileage Tracker}}."
-        ]
+          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+          "See my \href{https://github.com/vmsaif/blockChainCarMilageTracker}{\ul{Github}}."
+        ],
+        "Link found": true,
+        "Allow Item Count": 2
       },
       {
-        "Title": "AI Path Finding",
-        "Experience Type": "Project Experience",
+        "Project Title": "AI Path Finding",
         "Timeline": "Jul 2023 - Sep 2023",
         "Duration": "3 months",
-        "Summary Points": "Java, Git, CI/CD",
+        "Technologies": "Java, Git, CI/CD, A* Algorithm",
+        "skills": "Game Development, AI Implementation, Optimization, Teamwork",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
+        "Summary Points": "Java, AI Implementation",
         "Key Highlights": [
-          "Utilized Git for version control, ensuring efficient team **collaboration** and code management.",
-          "Enhanced problem-solving and **analytical skills** through the implementation of the A* pathfinding **algorithm**.",
-          "Check out the program I wrote in my \href{https://example.com/ai-path-finding/}{\ul{AI Path Finding}}."
-        ]
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+          "See my \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{Github}}."
+        ],
+        "Link found": true,
+        "Allow Item Count": 2
       }
     ]
   }

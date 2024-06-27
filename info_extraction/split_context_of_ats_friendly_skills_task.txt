@@ -2,31 +2,50 @@
 {
   "applicant_skills": {
     "exact_match_with_job_description": {
-      "Programming Languages": ["Python"],
-      "AI Frameworks": [],
-      "Soft Skills": ["Communication"]
+      "Programming Languages": [
+        "Python"
+      ],
+      "Frameworks": [],
+      "Tools": [],
+      "Soft Skills": [
+        "Communication",
+        "Problem-solving"
+      ]
     },
-    "partial_match": {
+
+    "partial_match_with_job_description": {
       "Programming Languages": [
         {
-          "Skill Name": "Java",
-          "Relevance": "The applicant has experience in C++, which shares similarities with Java in terms of object-oriented programming principles and can be considered a partial match."
+          "Name_mentioned_in_the_job_description": "TensorFlow",
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with TensorFlow"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Pytorch",
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with PyTorch"
         }
       ],
       "AI Frameworks": [
         {
-          "Skill Name": "LangChain",
-          "Relevance": "The applicant is experienced in AI, RAG Search, and Multiagent technologies. Considering Langchain's role in developing applications powered by large language models,  the applicant's background in AI-related technologies, particularly RAG Search which aligns with Langchain's capabilities, suggests a functional relevance and can be considered a partial match. "
+          "Name_mentioned_in_the_job_description": "Machine Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Machine Learning"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Deep Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Deep Learning"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Natural Language Processing (NLP)",
+          "Relevance": "Applicant has 'RAG Search' listed as a skill, showing experience in Natural Language Processing"
         }
       ],
       "Soft Skills": [
         {
-          "Skill Name": "Problem-Solving",
-          "Relevance": "The applicant lists 'Problem-solving' as a skill. This directly matches the job description's requirement for problem-solving abilities."
+          "Name_mentioned_in_the_job_description": "Collaboration",
+          "Relevance": "Applicant lists 'Team collaboration' as a skill"
         },
         {
-          "Skill Name": "Collaboration",
-          "Relevance": "The applicant mentions 'Team collaboration' as a skill, indicating experience and proficiency in collaborative environments, which aligns with the job description's emphasis on teamwork and can be considered a partial match."
+          "Name_mentioned_in_the_job_description": "Analytical Skills",
+          "Relevance": "Applicant lists 'Data Analysis' and 'Analytical skills' as skills"
         }
       ]
     }

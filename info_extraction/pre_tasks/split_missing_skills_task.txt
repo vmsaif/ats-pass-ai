@@ -1,16 +1,11 @@
 ```json
 {
   "missing_from_the_applicant_skills": [
-    "Deep Learning",
-    "Natural Language Processing (NLP)",
-    "Generative AI",
-    "Data Analysis",
-    "Algorithm Development",
-    "TensorFlow",
-    "PyTorch",
     "OpenAI API",
     "Meta Llama 2",
-    "Google Gemini"
+    "Google Gemini",
+    "LangChain",
+    "Google Gen AI Studio"
   ]
 }
 ```

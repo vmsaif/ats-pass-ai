@@ -288,20 +288,39 @@ careerobjectivesection:
 
   expected_output: >
 
-expItemChooser:
+exp_item_count_chooser:
   description: >
-    This task modifies the key highlights of each experience based on the total number of experiences.
+    Evaluate and determine the number of allowable key highlights for each experience entry, adjusting based on link presence and total experience count.
 
     **Procedure**:
-    - First, check what is the value of "total object count:"
-    
-    When Selecting Key Highlights:
-      - If "total object count:" is 3; keep 3 key highlights per experience's "key highlights" array, removing the other ones. 
-        -- However, If a link is present, allow 2 highlights (not 3) for that experience's "key highlights" array and remove the other ones.
-      - Do not change any wording of any key highlights. 
-      - If the condition is not met, keep the output as the same as the input.
+      - For each experience entry, determine if a link is included.
+      - Create a field "Link found" either "True" or "False" based on the presence of a link within that entry.
+      - Create a field "Allow Item Count" with the determined value based on the rules below.
+
+      Rules:
+      - If a link is present, "Allow Item Count": "2". No need to actually remove anything.
+      - If no link is present, "Allow Item Count": "3". No need to actually remove anything.
+      - Do not change or remove any other content of the JSON object in the output.
+
+    **Output**:
+    - A JSON object with the same entries as the input but with the "Link found" and "Allow Item Count" fields added.
+  expected_output: >
+
+expItemChooser:
+  description: >
+    Trim the "Key Highlights" for each entry based on the "Allow Item Count," ensuring that the highlights retained are most relevant to the job description.
+
+    **Procedure**:
+    - Retrieve "Allow Item Count" for each entry and assess the key highlights.
+    - Prioritize highlights that:
+      - Demonstrate measurable achievements or skills critical to the job.
+      - Highlight significant contributions or use of key technologies.
+
+    **Output**:
+    - A JSON object that mirrors the structure of the input but includes only the prioritized key highlights for each entry.
 
   expected_output: >
+    A JSON object with adjusted "Key Highlights" for each entry, reflecting prioritization based on relevance and impact relative to the job description.
 
 summaryPointSelector:
   description: >
@@ -323,7 +342,9 @@ linkHandler:
     
     If a Link is present in the experience:
     - Append the "Link" inside the "Key Highlights" array.
-    - Remove only the "Link" field from the experience. Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description" etc.
+    - Remove only the "Link" field from the experience. 
+    - Remove the "Allow Count" and "Count Reason" fields if present.
+    Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description" etc.
     - Do not replace any key highlights.
 
   expected_output: >
@@ -377,4 +398,19 @@ experiencesection:
     \customTitle{Another Experience}
         ... so on.
   expected_output: >
+
+exp_latex_verified:
+  description: >
+    You are provided a latex document containing the experience section. You need to verify the latex code and its syntax.
+
+    **Instructions**:
+    - Check the latex code for any syntax errors.
+    - Ensure the curly braces are correctly opened and closed.
+    - do not change the command names.
+    - Check for special characters and escape them properly.
+  expected_output: >
+    A latex document with the experience section that is verified for syntax and correctness.
+
+
+    
     

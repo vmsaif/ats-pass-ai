@@ -10,9 +10,9 @@
       "skills": "Multiagent and AI concepts, Technical and Analytical, Expertise",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Short Description": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
-      "Summary Points": "Python, AI concepts",
       "Key Highlights": [
         "Extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS",
+        "Scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
         "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities."
       ],
       "Link found": true,
@@ -29,10 +29,11 @@
         "skills": "Blockchain, Transparency, Data Security, Team Collaboration",
         "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
         "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
-        "Summary Points": "Blockchain, Data Security",
         "Key Highlights": [
           "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
-          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail."
+          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+          "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, enhancing trust in vehicle history.",
+          "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
         ],
         "Link found": true,
         "Allow Item Count": 2
@@ -45,10 +46,11 @@
         "skills": "Game Development, AI Implementation, Optimization, Teamwork",
         "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
         "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
-        "Summary Points": "Java, AI Implementation",
         "Key Highlights": [
           "Utilized Git for version control, ensuring efficient team collaboration and code management.",
-          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm."
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+          "Applied fundamental software development and testing processes to ensure robust application performance."
         ],
         "Link found": true,
         "Allow Item Count": 2

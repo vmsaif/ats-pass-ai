@@ -1,4 +1,3 @@
-```json
 {
   "selected_experiences": {
     "Total Object Count": 3,
@@ -12,27 +11,42 @@
     "reasons_for_choice": [
       {
         "title": "ATS Pass AI",
-        "reason": "\"Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.\" directly aligns with the job's requirement for expertise in AI, machine learning, and NLP, including familiarity with OpenAI API, Meta Llama 2, and Google Gemini."
+        "reason": "\"Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.\" This experience directly aligns with the job description's emphasis on AI and technical expertise."
       },
       {
         "title": "Blockchain Car Mileage Tracker",
-        "reason": "\"Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.\" showcases proficiency in a highly relevant technology (blockchain) and demonstrates the ability to apply AI/ML techniques to solve real-world problems, as emphasized in the job description."
+        "reason": "Developed using blockchain technology, emphasizing [my] adaptability and enthusiasm for learning new technologies\" and \"Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.\" These qualities are highly relevant to the job's requirement for adaptability, analytical thinking, and data management skills."
       },
       {
         "title": "AI Path Finding",
-        "reason": "\"A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.\" highlights expertise in AI algorithms and game development, both of which are mentioned as desirable skills in the job description."
+        "reason": "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.\" This experience showcases [my] proficiency in AI algorithms, game development, and Java programming, all of which are essential for the role."
       }
     ],
     "rejected_experiences": [
       {
+        "title": "Recursive Ray Tracing",
+        "reason": "While demonstrating [my] skills in 3D graphics and C++, this experience is less relevant to the job's focus on AI, machine learning, and data analysis."
+      },
+      {
         "title": "Bank Account System",
-        "reason": "While demonstrating proficiency in Java and object-oriented programming, this experience lacks direct relevance to the job's focus on AI, machine learning, and NLP."
+        "reason": "Although it showcases [my] Java programming skills, this experience is not directly related to AI, machine learning, or data analysis, which are key requirements for the role."
       },
       {
         "title": "Hosting a Resume on GitHub Pages",
-        "reason": "Although showcasing skills in documentation and Markdown, this experience does not align with the technical requirements of the job description."
+        "reason": "This experience is not relevant to the job's technical requirements and is more focused on documentation and web hosting."
+      },
+      {
+        "title": "ELF Binary Analysis",
+        "reason": "This experience is not directly related to AI, machine learning, or data analysis, which are the primary requirements for the role."
+      },
+      {
+        "title": "OpenGL Sphere Lighting",
+        "reason": "While it showcases [my] skills in OpenGL and C++, this experience is not directly relevant to the job's focus on AI, machine learning, and data analysis."
+      },
+      {
+        "title": "Reversible Learning APP",
+        "reason": "This experience is not directly related to AI, machine learning, or data analysis, which are the primary requirements for the role."
       }
     ]
   }
 }
-```

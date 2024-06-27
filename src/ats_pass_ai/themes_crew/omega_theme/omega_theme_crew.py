@@ -80,13 +80,15 @@ class OmegaThemeCrew:
 
 				self.skillsection(),
 				self.careerobjectivesection(),
-
+				self.exp_item_count_chooser(),
 				self.expItemChooser(),
 				self.summaryPointSelector(),
 				self.linkHandler(),
 				self.linkLatex(),
-				self.experiencesection()
+				self.experiencesection(),
+				self.exp_latex_verified()
 			]
+		
 		# Return the crew
 		return Crew(
 			agents=self.agents,
@@ -376,8 +378,8 @@ class OmegaThemeCrew:
 		)
 	
 	@task
-	def expItemChooser(self):
-		yaml = self.yaml_loader("expItemChooser", True)
+	def exp_item_count_chooser(self):
+		yaml = self.yaml_loader("exp_item_count_chooser", True)
 		description = yaml[0]
 		expected_output = yaml[1]
 		description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
@@ -386,6 +388,24 @@ class OmegaThemeCrew:
 			description=description,
 			expected_output=expected_output,
 			agent=self.expItemSelectorAgent(),
+			output_file=PATHS["exp_item_count_chooser"],
+			callback=self.small_token_limiter
+		)
+
+	@task
+	def expItemChooser(self):
+		yaml = self.yaml_loader("expItemChooser", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["exp_item_count_chooser"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.expItemSelectorAgent(),
+			context=[self.exp_item_count_chooser()],
 			output_file=PATHS["expItemChooser"],
 			callback=self.small_token_limiter
 		)
@@ -462,6 +482,24 @@ class OmegaThemeCrew:
 			output_file=PATHS["experiencesection"],
 			# agent=self.latex_maker_large_agent(),
 			# callback=self.large_token_limiter
+		)
+	
+	@task
+	def exp_latex_verified(self):
+		yaml = self.yaml_loader("exp_latex_verified", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["experiencesection"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.latex_maker_agent(),
+			context=[self.experiencesection()],
+			output_file=PATHS["exp_latex_verified"],
+			callback=self.small_token_limiter
 		)
 
 	def load_file(self, file_path):

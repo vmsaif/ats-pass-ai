@@ -1,3 +1,3 @@
 {
-"Career Objective": "Seasoned Software Developer seeking to leverage expertise in AI, NLP, and Python at Radical AI. Passionate about aligning technology with social good and ethical AI principles."
+  "Career Objective": "Skilled Artificial Intelligence Engineer eager to contribute to Radical AI with proven expertise in Machine Learning, Natural Language Processing, and Python, aligning with company goals of democratizing AI for social good and ethical considerations."
 }

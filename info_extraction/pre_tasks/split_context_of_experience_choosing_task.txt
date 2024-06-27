@@ -1,4 +1,3 @@
-```json
 {
   "selected_experiences": {
     "Total Object Count": 3,
@@ -9,4 +8,3 @@
     ]
   }
 }
-```

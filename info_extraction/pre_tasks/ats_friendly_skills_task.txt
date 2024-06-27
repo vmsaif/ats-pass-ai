@@ -1,7 +1,7 @@
 ```json
 {
   "applicant_accepted_skills": {
-    "applicant_accepted_skills_count": 8,
+    "applicant_accepted_skills_count": 14,
     "exact_match_with_job_description": {
       "Programming Languages": [
         "Python"
@@ -10,59 +10,51 @@
       "Soft Skills": [
         "Communication",
         "Problem-solving"
-      ],
-      "AI Skills": [
-        "AI",
-        "Data Analysis"
       ]
     },
     "partial_match": {
       "Programming Languages": [
         {
           "Name_mentioned_in_the_job_description": "TensorFlow",
-          "Relevance": "The applicant has experience in Python, which is commonly used with TensorFlow."
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with TensorFlow"
         },
         {
           "Name_mentioned_in_the_job_description": "Pytorch",
-          "Relevance": "The applicant has experience in Python, which is commonly used with PyTorch"
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with PyTorch"
         }
       ],
       "AI Frameworks": [
         {
-          "Name_mentioned_in_the_job_description": "LangChain",
-          "Relevance": "The applicant has experience in AI and RAG Search, indicating familiarity with AI tools and techniques used in LangChain."
+          "Name_mentioned_in_the_job_description": "Machine Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Machine Learning"
         },
         {
-          "Name_mentioned_in_the_job_description": "Google Gemini",
-          "Relevance": "The applicant's experience with AI, particularly in Multi-agent technologies, suggests a foundation relevant to Google Gemini's capabilities."
+          "Name_mentioned_in_the_job_description": "Deep Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Deep Learning"
         },
         {
-          "Name_mentioned_in_the_job_description": "Meta Llama 2",
-          "Relevance": "The applicant's proficiency in AI and Multi-agent technologies implies exposure to concepts and techniques related to large language models like Meta Llama 2."
+          "Name_mentioned_in_the_job_description": "Natural Language Processing (NLP)",
+          "Relevance": "Applicant has 'RAG Search' listed as a skill, showing experience in Natural Language Processing"
         }
       ],
       "Soft Skills": [
         {
           "Name_mentioned_in_the_job_description": "Collaboration",
-          "Relevance": "The applicant lists 'Team collaboration' as a skill, directly aligning with the requirement for effective teamwork."
-        }
-      ],
-      "AI Skills":[
-        {
-          "Name_mentioned_in_the_job_description": "Machine Learning",
-          "Relevance": "The applicant's expertise in 'Advanced AI models' and 'Multi-agent technologies' suggests exposure to Machine Learning concepts."
+          "Relevance": "Applicant lists 'Team collaboration' as a skill"
         },
         {
-          "Name_mentioned_in_the_job_description": "Deep Learning",
-          "Relevance": "The applicant's work with 'Advanced AI models' implies potential experience or understanding of Deep Learning principles."
+          "Name_mentioned_in_the_job_description": "Analytical Skills",
+          "Relevance": "Applicant lists 'Data Analysis' and 'Analytical skills' as skills"
         }
       ]
     }
   },
   "missing_from_the_applicant_skills": [
     "OpenAI API",
-    "Natural Language Processing (NLP)",
-    "Generative AI"
+    "Meta Llama 2",
+    "Google Gemini",
+    "LangChain",
+    "Google Gen AI Studio"
   ]
 }
 ```

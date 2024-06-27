@@ -1,33 +1,28 @@
 ```json
 {
-  "Prioritized Sections": {
+  "Prioritized Section": {
+    "Education": [],
     "Relevant Coursework": [
-      "AI and Game Development (Java | Python)",
-      "Distributed Computing (Python | JavaScript)",
-      "Data Structures and Algorithms (Java)",
-      "Object Orientation (Java | C++)",
-      "Software Engineering (Java | Unit Testing)",
-      "Database Implementation (SQL | Python)",
-      "Technical Communication in CS"
-    ],
-    "Education": [
       {
-        "Degree": "BSc",
-        "Major": "Computer Science",
-        "University": "University of Manitoba",
-        "Location": null,
-        "Graduation Date": "October 2023",
-        "GPA": "3.07"
+        "Distributed Computing": ["Python | JavaScript"]
+      },
+      {
+        "Data Structures and Algorithms": ["Java"]
+      },
+      {
+        "Object Orientation": ["Java | C++"]
+      },
+      {
+        "Software Engineering": ["Java | Unit Testing"]
+      },
+      {
+        "Database Implementation": ["SQL | Python"]
+      },
+      {
+        "AI and Game Development": ["Java | Python"]
       }
     ],
-    "Volunteer Work": [
-      {
-        "Organization Name": ".dev Programming Club",
-        "Role": "Active Member",
-        "Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
-        "Timeline": "2019-2023"
-      }
-    ],
+    "Awards": [],
     "References": [
       {
         "Name": "Abu Kabir",
@@ -44,11 +39,7 @@
         "Relationship": "Colleague",
       }
     ],
-    "Personal Traits and Interests": [
-      {
-        "Strengths": "commitment to innovation"
-      }
-    ]
+    "Traits": []
   }
 }
 ```

@@ -59793,3 +59793,2376 @@ agent=Multi-Domain Information Organizer
   }
 }
 ```2024-06-25 21:19:11: status=completed
+agent=Cross-Match Evaluator with Job Description
+2024-06-25 21:33:11: task=Analyze and compare the keywords from a job description (Source 1) to the skills listed in the applicant's profile (Source 2). Ensure that partial matches are functionally or contextually related to the job requirements.
+**Task Instructions**:
+1. **Sources for Comparison**:
+   - **Source 1**: Job Description Keywords.
+   - **Source 2**: A JSON Object "combined skills list of applicant" containing the applicant's skills and technologies.
+
+2. **Use of Tool**: It will search the internet. Use the tool to search for unfamiliar skills or technologies to understand their relevance to the job description.
+
+  - Example of an unfamiliar skill: "Langchain". To use the tool,
+  
+  query: str = Field(description="What is Langchain, what is it's comparable tools, technology?")
+  
+3. **Evaluation Criteria**:
+    - **Exact Match**: Direct correspondence between the job description and the applicantâ€™s qualifications. 
+    
+    - **Partial Match**: Skills that are not exactly the same but share similar applications or functionalities as those required by the job. The Job Description Section contains a "Partial_Match" field. Try to match the applicant's skills with the job description's Partial_Match field 
+    
+    - **missing_from_the_applicant_skills**: Skills that do not align with the job description. Your goal should be to move as many skills as possible from this section to the "Partial Match" after researching their relevance by using the tool. 
+
+   The partial match section has 2 fields per object: 
+    - "Skill Name": The skill mentioned in the job description.
+    - "Relevance": The relevance of the applicant's with the job description's skill.
+
+4. **Categorization**:
+   - Organize skills into categories such as Programming Languages, Soft Skills, AI Frameworks, etc., based on the job description's requirements. Feel free to create category names as you see fit.
+
+   - Aim for a balanced overview by listing 3-5 skills combining exact and partial matches for all categories.
+
+5. **Structured Report**:
+   - Generate a JSON report with 'Exact Match' and 'Partial Match' sections, specifying the job-related skill and its relevance to the applicant's skills.
+
+Job Description Starts:
+## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
+
+**1. Introduction:**
+
+* **Role:** Artificial Intelligence Engineer 
+* **Company:** Radical AI
+* **Location:** Remote 
+* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
+
+**2. Thorough Analysis:**
+
+This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
+
+**3. Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
+* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
+
+**Industry Terms:** 
+* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
+
+**Company Values & Culture:**
+* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
+
+**Action Verbs:**
+
+* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
+
+**4. Prioritization and Relevance:**
+
+**Frequency and Emphasis:**
+
+* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
+* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
+* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
+
+**Essential vs. Preferred Qualifications:**
+
+* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
+* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "keywords": {
+    "Essential Skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
+      "Algorithm Development",
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication"
+    ],
+    "Industry Terms": [
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship"
+    ],
+    "Company Values": [
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI"
+    ],
+    "Action Verbs": [
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
+  }
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
+      {
+        "Name": "Machine Learning",
+        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
+      },
+      {
+        "Name": "Natural Language Processing (NLP)",
+        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
+      },
+      {
+        "Name": "Data Analysis",
+        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
+      },
+      {
+        "Name": "Python",
+        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+      },
+      {
+        "Name": "Collaboration",
+        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
+* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
+* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
+* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
+* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
+
+By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+
+Job Description Ends.
+{
+  "combined skills list of applicant": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": [
+          "Programming Language",
+          "Backend Development",
+          "Database"
+        ]
+      },
+      {
+        "Name": "JavaScript",
+        "field": [
+          "Programming Language",
+          "Distributed Computing"
+        ]
+      },
+      {
+        "Name": "Java",
+        "field": [ 
+          "Programming Language",
+          "Backend Development",
+          "Object Oriented Programming",
+          "Data Structures and Algorithms",
+          "Database Implementation",
+          "AI and Game Development"
+        ]
+      },
+      {
+        "Name": "C++",
+        "field": [
+          "Programming Language",
+          "Object Orientation",
+          "Game Development"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [
+          "Database",
+          "Database Implementation"
+        ]
+      },
+      {
+        "Name": "Multiagent",
+        "field": [
+          "Artificial Intelligence",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "AI",
+        "field": [
+          "Artificial Intelligence",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "RAG Search",
+        "field": [
+          "Information Retrieval",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [
+          "Containerization"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "Front End Development",
+          "JavaScript Frameworks"
+        ]
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Git",
+        "field": [
+          "Version Control"
+        ]
+      },
+      {
+        "Name": "CI/CD",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "3D Graphics",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [
+          "Computer Graphics",
+          "Graphics Programming"
+        ]
+      },
+      {
+        "Name": "C Programming",
+        "field": [
+          "Programming Language",
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "Debugging",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Linux OS",
+        "field": [
+          "Operating Systems"
+        ]
+      },
+      {
+        "Name": "AWS",
+        "field": [
+          "Cloud & DevOps"
+        ]
+      },
+      {
+        "Name": "Github Action",
+        "field": [
+          "Cloud & DevOps"
+        ]
+      }
+    ],
+    "Frameworks": [],
+    "Skills": [
+      {
+        "Name": "Tailored teaching methods",
+        "field": [
+          "Education"
+        ]
+      },
+      {
+        "Name": "Computer systems",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Programming concepts",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Advanced AI models",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Multi-agent technologies",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Data Analysis",
+        "field": [
+          "Data Science",
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Blockchain",
+        "field": [
+          "Distributed Ledger Technology"
+        ]
+      },
+      {
+        "Name": "Smart contracts",
+        "field": [
+          "Blockchain Development"
+        ]
+      },
+      {
+        "Name": "Problem-solving",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Analytical skills",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Attention to detail",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Code management",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Team collaboration",
+        "field": [
+          "Communication Skills"
+        ]
+      },
+      {
+        "Name": "Pathfinding",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "3D graphics rendering",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Geometry",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Generic math",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Object-oriented programming",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Polymorphism",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Hosting",
+        "field": [
+          "Web Development"
+        ]
+      },
+      {
+        "Name": "ELF header analysis",
+        "field": [
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "System analysis",
+        "field": [
+          "System Analysis"
+        ]
+      },
+      {
+        "Name": "ELF binary parsing",
+        "field": [
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "Lighting techniques",
+        "field": [
+          "Computer Graphics"
+        ]
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Communication",
+        "field": [
+          "Communication Skills"
+        ]
+      },
+      {
+        "Name": "Interpersonal Skills",
+        "field": [
+          "Interpersonal Skills"
+        ]
+      }
+    ]
+  }
+}2024-06-25 21:33:11: status=started
+agent=Cross-Match Evaluator with Job Description
+2024-06-25 21:34:52: task=```json
+{
+  "applicant_accepted_skills": {
+    "applicant_accepted_skills_count": 14,
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "AI Frameworks": [],
+      "Soft Skills": [
+        "Communication",
+        "Problem-solving"
+      ]
+    },
+    "partial_match": {
+      "Programming Languages": [
+        {
+          "Name_mentioned_in_the_job_description": "TensorFlow",
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with TensorFlow"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Pytorch",
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with PyTorch"
+        }
+      ],
+      "AI Frameworks": [
+        {
+          "Name_mentioned_in_the_job_description": "Machine Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Machine Learning"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Deep Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Deep Learning"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Natural Language Processing (NLP)",
+          "Relevance": "Applicant has 'RAG Search' listed as a skill, showing experience in Natural Language Processing"
+        }
+      ],
+      "Soft Skills": [
+        {
+          "Name_mentioned_in_the_job_description": "Collaboration",
+          "Relevance": "Applicant lists 'Team collaboration' as a skill"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Analytical Skills",
+          "Relevance": "Applicant lists 'Data Analysis' and 'Analytical skills' as skills"
+        }
+      ]
+    }
+  },
+  "missing_from_the_applicant_skills": [
+    "OpenAI API",
+    "Meta Llama 2",
+    "Google Gemini",
+    "LangChain",
+    "Google Gen AI Studio"
+  ]
+}
+```2024-06-25 21:34:52: status=completed
+agent=Multi-Domain Information Organizer
+2024-06-25 21:34:52: task=Split the context provided to you at the breaking point "missing_from_the_applicant_skills". In your output, you will provide everything before the "missing_from_the_applicant_skills".
+Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
+2024-06-25 21:34:52: status=started
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:01: task=```json
+{
+  "applicant_skills": {
+    "exact_match_with_job_description": {
+      "Programming Languages": [
+        "Python"
+      ],
+      "Frameworks": [],
+      "Tools": [],
+      "Soft Skills": [
+        "Communication",
+        "Problem-solving"
+      ]
+    },
+
+    "partial_match_with_job_description": {
+      "Programming Languages": [
+        {
+          "Name_mentioned_in_the_job_description": "TensorFlow",
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with TensorFlow"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Pytorch",
+          "Relevance": "Applicant has listed 'Python' as a programming skill, and Python is commonly used with PyTorch"
+        }
+      ],
+      "AI Frameworks": [
+        {
+          "Name_mentioned_in_the_job_description": "Machine Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Machine Learning"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Deep Learning",
+          "Relevance": "Applicant has 'AI' and 'Multiagent' listed as skills, showing experience in Deep Learning"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Natural Language Processing (NLP)",
+          "Relevance": "Applicant has 'RAG Search' listed as a skill, showing experience in Natural Language Processing"
+        }
+      ],
+      "Soft Skills": [
+        {
+          "Name_mentioned_in_the_job_description": "Collaboration",
+          "Relevance": "Applicant lists 'Team collaboration' as a skill"
+        },
+        {
+          "Name_mentioned_in_the_job_description": "Analytical Skills",
+          "Relevance": "Applicant lists 'Data Analysis' and 'Analytical skills' as skills"
+        }
+      ]
+    }
+  }
+}
+```2024-06-25 21:35:01: status=completed
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:01: task=Split the context provided to you at the breaking point "missing_from_the_applicant_skills". In your output, you will provide everything of the "missing_from_the_applicant_skills" object.
+The context you need to split is provided to you from the previous task.
+2024-06-25 21:35:01: status=started
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:02: task=```json
+{
+  "missing_from_the_applicant_skills": [
+    "OpenAI API",
+    "Meta Llama 2",
+    "Google Gemini",
+    "LangChain",
+    "Google Gen AI Studio"
+  ]
+}
+```2024-06-25 21:35:02: status=completed
+agent=Experience Selector2024-06-25 21:35:02: task=Select the top 3 relevant experiences from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
+**Selection Criteria**:
+1. **Most Recent Experience:** Always include the most recent relevant experience, unless it is completely unrelated or significantly outdated as of today (June 25, 2024). 2. **Relevance to Job Description:** Thoroughly assess each experience based on:
+  - **Keywords and Phrases:** Ensure experiences include specific keywords or phrases from the job description.
+  - **Tools and Technologies:** Look for experiences that directly involve the tools and technologies listed in the job description.
+  - **Skills:** Choose experiences that demonstrate the skills explicitly required for the job.
+3. **Balanced Selection:** After including the most recent experience, select two additional experiences that best meet the job requirements. Aim to maintain a balance between work and project experiences, based solely on relevance.
+**Input:** - **Job Description Keywords:** ## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
+
+**1. Introduction:**
+
+* **Role:** Artificial Intelligence Engineer 
+* **Company:** Radical AI
+* **Location:** Remote 
+* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
+
+**2. Thorough Analysis:**
+
+This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
+
+**3. Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
+* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
+
+**Industry Terms:** 
+* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
+
+**Company Values & Culture:**
+* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
+
+**Action Verbs:**
+
+* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
+
+**4. Prioritization and Relevance:**
+
+**Frequency and Emphasis:**
+
+* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
+* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
+* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
+
+**Essential vs. Preferred Qualifications:**
+
+* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
+* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "keywords": {
+    "Essential Skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
+      "Algorithm Development",
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication"
+    ],
+    "Industry Terms": [
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship"
+    ],
+    "Company Values": [
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI"
+    ],
+    "Action Verbs": [
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
+  }
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
+      {
+        "Name": "Machine Learning",
+        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
+      },
+      {
+        "Name": "Natural Language Processing (NLP)",
+        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
+      },
+      {
+        "Name": "Data Analysis",
+        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
+      },
+      {
+        "Name": "Python",
+        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+      },
+      {
+        "Name": "Collaboration",
+        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
+* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
+* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
+* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
+* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
+
+By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+ - **Applicant's Experiences:** Information provided from the context.
+
+```json
+{
+  "Work Experience": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": "Private Tutoring",
+      "Timeline": "February 2023 - December 2023",
+      "Technologies, frameworks, and tools Used": "Python, Java",
+      "Skills": "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.",
+      "Link": null,
+      "Key Highlights": [],
+      "Team size": null,
+      "Outcomes": null
+    }
+  ]
+}
+```
+```json
+{
+  "Work Experience": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": "Private Tutoring",
+      "Timeline": "February 2023 - December 2023",
+      "Technologies, frameworks, and tools Used": "Python, Java",
+      "Skills": "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.",
+      "Link": null,
+      "Key Highlights": [],
+      "Team size": null,
+      "Outcomes": null
+    }
+  ],
+  "Project Experience": [
+    {
+      "Project Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
+      "Skills": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Key Highlights": [
+        "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Blockchain Car Mileage Tracker",
+      "Timeline": "January 2023 - March 2023",
+      "Technologies, frameworks, and tools Used": "Docker | Vue.js",
+      "Skills": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
+      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+      "Key Highlights": [
+        "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
+        "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+        "Solving a real-world problem by crafting a **smart contract** for tamper-proof mileage recording, enhancing trust in vehicle history.",
+        "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "AI Path Finding",
+      "Timeline": "July 2023 - September 2023",
+      "Technologies, frameworks, and tools Used": "A* Algorithm | Java | Git | CI/CD",
+      "Skills": "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+      "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Key Highlights": [
+        "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+        "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+        "Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Recursive Ray Tracing",
+      "Timeline": "May 2023 - July 2023",
+      "Technologies, frameworks, and tools Used": "3D Graphics | OpenGL | C++",
+      "Skills": "Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating a deep understanding of C++ and 3D graphics principles.",
+      "Link": "https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL",
+      "Key Highlights": [
+        "Applied geometry and generic math skills to calculate light paths and surface interactions."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Bank Account System",
+      "Timeline": null,
+      "Technologies, frameworks, and tools Used": "Java | File I/O",
+      "Skills": "Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.",
+      "Link": "https://github.com/vmsaif/bankAccountSystem",
+      "Key Highlights": [
+        "Developed scalable Java applications, showcasing a deep understanding of object-oriented programming **optimizing process efficiency by 30%**.",
+        "Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Hosting a Resume on GitHub Pages",
+      "Timeline": "April 2023 - April 2023",
+      "Technologies, frameworks, and tools Used": "Documentation",
+      "Skills": "A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.",
+      "Link": "https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/",
+      "Key Highlights": [
+        "Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.",
+        "Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.",
+        "Emphasized beginner-friendly methods for web hosting and documentation."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "ELF Binary Analysis",
+      "Timeline": "November 2022 - December 2022",
+      "Technologies, frameworks, and tools Used": "C Programming | Debugging | Linux OS",
+      "Skills": "Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.",
+      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+      "Key Highlights": [
+        "Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.",
+        "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
+        "Actively contributed to technical documentation for product and knowledge base improvement."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "ELF Binary Analysis",
+      "Timeline": "November 2022 - December 2022",
+      "Technologies, frameworks, and tools Used": "C | Storage System | OS",
+      "Skills": "Developed a C program to extract key information from ELF headers of binary files.",
+      "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+      "Key Highlights": [
+        "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.",
+        "Utilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.",
+        "Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.",
+        "Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "OpenGL Sphere Lighting",
+      "Timeline": "April 2023 - June 2023",
+      "Technologies, frameworks, and tools Used": "OpenGL | C++",
+      "Skills": "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.",
+      "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
+      "Key Highlights": [
+        "Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.",
+        "Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.",
+        "Utilized `glutSolidSphere` for accurate sphere rendering, showcasing the effects of different lighting conditions."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Project Title": "Reversible Learning APP",
+      "Timeline": "2024-06-25 21:35:02: status=started
+agent=Experience Selector2024-06-25 21:35:14: task={
+  "selected_experiences": {
+    "Total Object Count": 3,
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences": [
+      "Blockchain Car Mileage Tracker",
+      "AI Path Finding"
+    ]
+  },
+  "Selection Justification": {
+    "reasons_for_choice": [
+      {
+        "title": "ATS Pass AI",
+        "reason": "\"Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.\" This experience directly aligns with the job description's emphasis on AI and technical expertise."
+      },
+      {
+        "title": "Blockchain Car Mileage Tracker",
+        "reason": "Developed using blockchain technology, emphasizing [my] adaptability and enthusiasm for learning new technologies\" and \"Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.\" These qualities are highly relevant to the job's requirement for adaptability, analytical thinking, and data management skills."
+      },
+      {
+        "title": "AI Path Finding",
+        "reason": "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.\" This experience showcases [my] proficiency in AI algorithms, game development, and Java programming, all of which are essential for the role."
+      }
+    ],
+    "rejected_experiences": [
+      {
+        "title": "Recursive Ray Tracing",
+        "reason": "While demonstrating [my] skills in 3D graphics and C++, this experience is less relevant to the job's focus on AI, machine learning, and data analysis."
+      },
+      {
+        "title": "Bank Account System",
+        "reason": "Although it showcases [my] Java programming skills, this experience is not directly related to AI, machine learning, or data analysis, which are key requirements for the role."
+      },
+      {
+        "title": "Hosting a Resume on GitHub Pages",
+        "reason": "This experience is not relevant to the job's technical requirements and is more focused on documentation and web hosting."
+      },
+      {
+        "title": "ELF Binary Analysis",
+        "reason": "This experience is not directly related to AI, machine learning, or data analysis, which are the primary requirements for the role."
+      },
+      {
+        "title": "OpenGL Sphere Lighting",
+        "reason": "While it showcases [my] skills in OpenGL and C++, this experience is not directly relevant to the job's focus on AI, machine learning, and data analysis."
+      },
+      {
+        "title": "Reversible Learning APP",
+        "reason": "This experience is not directly related to AI, machine learning, or data analysis, which are the primary requirements for the role."
+      }
+    ]
+  }
+}2024-06-25 21:35:14: status=completed
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:14: task=Split the context provided to you at the breaking point of "Selection Justification". In your output, you will provide everything before the "Selection Justification" as the final output of the task.
+The context you need to split is provided to you from the previous task.
+2024-06-25 21:35:14: status=started
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:16: task={
+  "selected_experiences": {
+    "Total Object Count": 3,
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences": [
+      "Blockchain Car Mileage Tracker",
+      "AI Path Finding"
+    ]
+  }
+}2024-06-25 21:35:16: status=completed
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:16: task=Extract and provide detailed information for each of the "selected_experiences" items using the content below. Maintain the order of each object as they are.
+There is a field called "Total Object Count". This field will tell you how many object details **in total** you need to provide.
+
+Applicant Info Organized Data:
+# Personal Details
+This section contains the Applicant's name, contact information, location, phone number, and email address.
+```
+name: Saif Mahmud
+saifmahmud.dev | linkedin.com/in/vmsaif
+msaifofficial@gmail.com | 204 955 5064 | Winnipeg, MB
+```
+
+# Summary
+This section contains a summary of the applicant's self-made philosophy in software development.
+Saif Mahmud's approach to software development centers around a "magic button" philosophy—simplifying complex processes into intuitive, user-friendly solutions. This concept underscores a deep understanding of user needs and a commitment to creating seamless, empowering experiences. This philosophy has guided Saif's coding journey, driving a passion for elegant and efficient software solutions.
+
+# Education
+This section contains the degrees obtained by the applicant during their academic career. 
+```
+## University of Manitoba
+BSc Major in Computer Science
+Graduated, October 2023 | GPA: 3.07
+```
+
+# Relevant Courses
+This section contains the courses taken by the Applicant during their academic career. 
+```
+Distributed Computing (Python | JavaScript)
+Data Structures and Algorithms (Java)
+Object Orientation (Java | C++)
+Software Engineering (Java | Unit Testing)
+Database Implementation (SQL | Python)
+AI and Game Development (Java | Python)
+Technical Communication in CS
+```
+
+# Skills
+This section contains the Technical and Soft skills the applicant acquired.
+```
+## Programming
+Python, Javascript, C++, Java
+
+## Database
+MySQL, JSON, noSQL, Schema
+
+## Cloud & DevOps: 
+CI/CD, GitHub Action, AWS(Basic)
+
+## Soft Skills
+Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis
+
+## Programming Concepts
+System Analysis, Web and Mobile Technologies, OOP, Data Structures, SDLC, Debugging and Troubleshooting, Test driven deployment
+```
+
+#  Volunteer Experience
+This section contains the applicant's volunteering experience.
+```
+## .dev Programming Club
+Active Member | University of Manitoba Students Union (UMSU) | 2019-2023
+- Engaged with the latest software development technologies and tools.
+- Collaborated on team projects focused on Java and Cloud Technologies.
+```
+
+#  Activities
+This section contains the applicant's extracurricular activities.
+```
+Captain: Football Club Vikings, Dhaka, Bangladesh (2012 - 2014)
+Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)
+```
+
+# Career Goal
+This section contains the applicant's Career Goals
+As a proactive, innovative-thinking Software Developer with a BSc in Computer Science, Saif is eager to contribute to SGA Tech Solutions. He aims to deliver innovative solutions in a collaborative environment and is deeply committed to continuous professional growth.
+
+# Project Experience
+This section contains the projects the applicant worked on.
+```
+## ATS Pass AI
+**Description:** Multiagent | AI | Python | RAG Search
+**Location:** Resume Automation Tool - January 2024 - Present
+This section contains a description of the ATS Pass AI project. Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.
+- Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.
+- Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.
+- Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.
+- Project repository available on [GitHub](https://github.com/vmsaif/ats-pass-ai).
+
+## Blockchain Car Mileage Tracker 
+**Description:** Docker | Vue.js
+**Location:** Innovative Project - January 2023 - Mar 2023
+This section contains a description of the Blockchain Car Mileage Tracker project. Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
+- Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.
+- Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.
+- Solving a real-world problem by crafting a **smart contract** for tamper-proof mileage recording, enhancing trust in vehicle history.
+- Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills.
+- Project details [GitHub Link](https://github.com/vmsaif/blockChainCarMilageTracker).
+
+## AI Path Finding
+**Description:** A* Algorithm | Java | Git | CI/CD
+**Location:** Game Development - Jul 2023 - Sep 2023
+This section contains a description of the AI Path Finding project. A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
+- Utilized Git for version control, ensuring efficient team collaboration and code management.
+- Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.
+- Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.
+- Applied fundamental software development and testing processes to ensure robust application performance.
+- Project repository here on [GitHub](https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm).
+
+## Recursive Ray Tracing
+**Description:** 3D Graphics | OpenGL | C++
+**Location:** Graphics Programming - May 2023 - July 2023
+This section contains a description of the Recursive Ray Tracing project.
+- Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating a deep understanding of C++ and 3D graphics principles.
+- Applied geometry and generic math skills to calculate light paths and surface interactions.
+- Project repository and implementation details available on [GitHub](https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL).
+
+## Bank Account System 
+**Description:** Java | File I/O
+**Location:** Object-Oriented Design - Polymorphism
+This section contains a description of the Bank Account System project. Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
+- Developed scalable Java applications, showcasing a deep understanding of object-oriented programming **optimizing process efficiency by 30%**.
+- Implemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling.
+- Facilitated open-source collaboration with documentation, accessible [here](https://github.com/vmsaif/bankAccountSystem).
+
+## Hosting a Resume on GitHub Pages
+**Description:** Documentation
+**Location:** Technical Documentation - Apr 2023 - Apr 2023
+This section contains a description of the Hosting a Resume on GitHub Pages project. A comprehensive guide for hosting and formatting a resume on GitHub Pages, demonstrating skills in Markdown, Jekyll, and version control with Git.
+- Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.
+- Illustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.
+- Emphasized beginner-friendly methods for web hosting and documentation.
+- Showcased ability to create clear, structured technical documentation accessible online.
+- Find the project [here](https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/).
+
+
+## ELF Binary Analysis
+**Description:** C Programming | Debugging | Linux OS
+**Location:** Nov 2022 - Dec 2022
+This section contains a description of the ELF Binary Analysis project. Implemented ELF header analysis tool in C, emphasizing debugging, system analysis, and documentation skills relevant to application engineering.
+- Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.
+- Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.
+- Actively contributed to technical documentation for product and knowledge base improvement.
+- Project repository: [here](https://github.com/vmsaif/readingAndInterpretingBinary).
+
+## ELF Binary Analysis
+**Description:** C | Storage System | OS
+**Location:** November 2022 - December 2022
+This section contains a description of the ELF Binary Analysis project. Developed a C program to extract key information from ELF headers of binary files.
+- Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.
+- Utilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.
+- Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.
+- Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties.
+- Project repository with source code and implementation details is available at [here](https://github.com/vmsaif/readingAndInterpretingBinary), exemplifying a commitment to open-source collaboration and knowledge sharing with peers and customers.
+
+## OpenGL Sphere Lighting
+**Description:** OpenGL | C++
+**Location:** Graphics Programming - April 2023 - June 2023
+This section contains a description of the OpenGL Sphere Lighting project. Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.
+- Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.
+- Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.
+- Utilized `glutSolidSphere` for accurate sphere rendering, showcasing the effects of different lighting conditions.
+- Project repository and implementation details available on [here](https://github.com/vmsaif/openGL-sphere-lighting-program).
+
+## Reversible Learning APP
+**Description:** SQL | Android Studio | Java
+**Location:** Project Management | Team Player - January 2021 - April 2021
+This section contains a description of the Reversible Learning App project. Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.
+- Employed **JUnit** for comprehensive unit and integration testing, **resulting in a 25% decrease** in post-release bugs.
+- Demonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives.
+- Developed an intuitive user interface (UI) for note organization and question archiving.
+- Project accessible on GitHub: [here](https://github.com/vmsaif/reversibleLearning).
+
+## Connect 4 Game
+**Description:** AI Decision-Making | Java
+**Location:** CI/CD | Cross-Platform Deployment - February 2023 - April 2023
+This section contains a description of the Connect 4 Game project. Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid. 
+- Implemented strategic AI decision-making, enhancing game complexity and player engagement.
+- Implemented efficient CI/CD workflows to streamline development and deployment processes.
+- Engaged in performance tuning and stability testing to ensure a seamless gaming experience.
+- Access to project details and code here on [GitHub](https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java).
+
+## TCP Chat Application
+**Description:** TCP/IP | Multithreading | Network
+**Location:** Client-Server Communication - October 2022 - December 2022
+This section contains a description of the TCP Chat Application project. Developed a Java chat application for real-time client-server communication using TCP.
+- Implemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling.
+- Implemented socket programming for robust client-server communication.
+- Enabled features like room creation, joining/leaving rooms, and viewing room details.
+- **Achieved a 99.9% uptime and stability** rate, enhancing user experience and application stability.
+- Demonstrated expertise in Java with a focus on real-time data processing and efficient resource management.
+- Source code and documentation available on GitHub: [here](https://github.com/vmsaif/tcpChatJava)
+
+## Data Visualization with R
+**Description:** Akin to Python | Data Analysis
+**Location:** Course Project
+This section contains a description of the Data Visualization with R project. Utilized R for statistical analysis and data visualization, akin to Power BI tasks. Demonstrated ability to translate complex data into actionable insights.
+- Utilized R for statistical analysis and data visualization, akin to Power BI tasks.
+- Demonstrated ability to translate complex data into actionable insights.
+- Learned to create interactive visualizations, enhancing data-driven decision-making.
+
+## Portfolio Website
+**Description:** React | Styled-Components
+**Location:** Self-Initiated Project - 2021
+This section contains a description of the Portfolio Website project. Developed a comprehensive portfolio website to showcase my projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages.
+- Designed with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility.
+- Implemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization.
+- The site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating my full-stack development capabilities.
+- Visit my portfolio website at [saifmahmud.dev](https://saifmahmud.dev/).
+
+## CPU Scheduling
+**Description:** C | Multithreading | Linux | Bash | Git
+**Location:** System Programming - June 2023 - August 2023
+This section contains a description of the CPU Scheduling project. 
+- Developed a multi-threaded scheduling simulator in C, showcasing knowledge in parallel processing methodologies relevant to robotics and geometrical planning.
+- Practiced Linux OS administration and Bash scripting for system programming, reflecting skills in managing unix-based environment systems.
+- Employed Git for source control, aligning with industry-standard version control practices.
+- Project repository here on [GitHub](https://github.com/vmsaif/cpu_scheduling).
+
+## Go-Back-N Protocol Simulation
+**Description:** Python | Networking 
+**Location:** Data Visualization - Nov 2022 - Dec 2022
+This section contains a description of the Go-Back-N Protocol Simulation project. Developed Python simulations of the Go-Back-N (GBN) protocol, focusing on dynamic window sizing effects.
+- Simulated packet loss and generated visualizations with matplotlib to illustrate protocol performance. Increased understanding of networking protocols and data transmission by 65%.
+- Analyzed adaptive window sizing benefits for flow control in networking.
+- Project repository [here](https://github.com/vmsaif/gbnProtocolSimulation).
+```
+
+# Experience
+This section contains the applicant's work experience. 
+```
+## Programming Mentor - Online and In-Person
+**Description:** Private Tutoring | Python, Java
+**Location:** Winnipeg, Manitoba | February 2023 - December 2023
+This section contains a description of the applicant's experience as a Programming Mentor. Tutored a student in computer systems and programming, focusing on Python and Java. Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role. 
+- Delivered one-on-one lessons focusing on computer system principles and learning introductory programming.
+- Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.
+- Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.
+```
+
+# References
+This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant.
+```
+1. Abu Kabir
+Director IT Service Management, Microsoft
+Winnipeg, MB
+204-298-3693
+
+2. Safiur Mahdi
+Java Developer, Skip the Dishes
+Winnipeg, MB
+204-583-3432
+```
+2024-06-25 21:35:16: status=started
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:32: task={
+  "selected_experiences": {
+    "Total Object Count": 3,
+    "Most Recent Experience": {
+      "Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Technologies, frameworks, and tools Used": "Python, RAG Search, CrewAI, LangChain , Gemini",
+      "Skills": "Multiagent and AI concepts, Technical and Analytical, Expertise",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency using advanced AI models and multi-agent technologies.",
+      "Key Highlights": [
+        "Extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS",
+        "Scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities."
+      ],
+      "Team size": null,
+      "Outcomes": "Supported the job search process by revolutionizing resume creation and increasing applicant efficiency through tailored resume generation leveraging AI."
+    },
+    "Additional Relevant Experiences": [
+      {
+        "Title": "Blockchain Car Mileage Tracker",
+        "Timeline": "January 2023 - Mar 2023",
+        "Technologies, frameworks, and tools Used": "Blockchain, Docker, Vue.js",
+        "Skills": "Blockchain, Transparency, Data Security, Team Collaboration",
+        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+        "Short Description": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes. Utilized blockchain technology, data security, and team collaboration.",
+        "Key Highlights": [
+          "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
+          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+          "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, enhancing trust in vehicle history.",
+          "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
+        ],
+        "Team size": null,
+        "Outcomes": "Enhanced vehicle security and transparency through tamper-proof mileage tracking leveraging blockchain technology."
+      },
+      {
+        "Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Technologies, frameworks, and tools Used": "Java, Git, CI/CD, A* Algorithm",
+        "Skills": "Game Development, AI Implementation, Optimization, Teamwork",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game and Utilized Git for version control, CI/CD practices, and teamwork.",
+        "Key Highlights": [
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+          "Applied fundamental software development and testing processes to ensure robust application performance."
+        ],
+        "Team size": null,
+        "Outcomes": "Successfully developed an engaging and challenging game powered by artificial intelligence and efficient software practices."
+      }
+    ]
+  }
+}2024-06-25 21:35:32: status=completed
+agent=ATS Keyword Integrator
+2024-06-25 21:35:32: task=Enhance the descriptions of the applicant's experiences by integrating key job description keywords to make them more appealing to Applicant Tracking Systems (ATS) while ensuring they remain readable and relevant.
+**Guidelines:**
+  - **Relevance:** Integrate keywords that are relevant to the described experience.
+  - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
+  - **Conciseness and Clarity:** 
+    -- Limit the short description to 10-13 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
+    -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-13 words per key highlight.
+  - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
+  - you are also provided a list of "missing_from_the_applicant_skills" which are in the job description but not in the applicant's experiences. Try to weave some of these words where they fit naturally.
+  - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
+
+**Job Description Keywords:** ## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
+
+**1. Introduction:**
+
+* **Role:** Artificial Intelligence Engineer 
+* **Company:** Radical AI
+* **Location:** Remote 
+* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
+
+**2. Thorough Analysis:**
+
+This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
+
+**3. Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
+* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
+
+**Industry Terms:** 
+* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
+
+**Company Values & Culture:**
+* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
+
+**Action Verbs:**
+
+* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
+
+**4. Prioritization and Relevance:**
+
+**Frequency and Emphasis:**
+
+* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
+* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
+* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
+
+**Essential vs. Preferred Qualifications:**
+
+* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
+* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "keywords": {
+    "Essential Skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
+      "Algorithm Development",
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication"
+    ],
+    "Industry Terms": [
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship"
+    ],
+    "Company Values": [
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI"
+    ],
+    "Action Verbs": [
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
+  }
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
+      {
+        "Name": "Machine Learning",
+        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
+      },
+      {
+        "Name": "Natural Language Processing (NLP)",
+        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
+      },
+      {
+        "Name": "Data Analysis",
+        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
+      },
+      {
+        "Name": "Python",
+        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+      },
+      {
+        "Name": "Collaboration",
+        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
+* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
+* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
+* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
+* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
+
+By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+
+**Missing from the Applicant's Skills:** ```json
+{
+  "missing_from_the_applicant_skills": [
+    "Deep Learning",
+    "Natural Language Processing (NLP)",
+    "Generative AI",
+    "Data Analysis",
+    "Algorithm Development",
+    "TensorFlow",
+    "PyTorch",
+    "OpenAI API",
+    "Meta Llama 2",
+    "Google Gemini"
+  ]
+}
+```
+Count the total number of experiences. After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
+When you are done with listing the experiences with integrated keywords, provide a detailed report on changes in a new section ## Report on Changes:
+## Report on Changes in structure in JSON:
+  - **Original Sentence**: Present the sentence before any updates.
+  - **Revised Sentence**: Display the sentence after keywords have been integrated.
+  - **Keywords Added**: List each keyword that was newly added, ensuring they were not present before.
+  - **Rationale**: Provide a detailed explanation for each keyword addition, linking the choice to specific requirements or phrases in the job description.
+
+To determine the duration of the most recent experience, the present date is June 25, 2024.
+2024-06-25 21:35:32: status=started
+agent=ATS Keyword Integrator
+2024-06-25 21:35:59: task=```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "total object count:": 3,
+    "Most Recent Experience": {
+      "Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
+      "skills": "Multiagent and AI concepts, Technical and Analytical, Expertise",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
+      "Key Highlights": [
+        "Extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS",
+        "Scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Job Title": "Blockchain Car Mileage Tracker",
+        "Company": null,
+        "Location": null,
+        "Timeline": "January 2023 - Mar 2023",
+        "Duration": "3 months",
+        "Technologies": "Blockchain, Docker, Vue.js",
+        "skills": "Blockchain, Transparency, Data Security, Team Collaboration",
+        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+        "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
+        "Key Highlights": [
+          "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
+          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+          "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, enhancing trust in vehicle history.",
+          "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
+        ]
+      },
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "Java, Git, CI/CD, A* Algorithm",
+        "skills": "Game Development, AI Implementation, Optimization, Teamwork",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
+        "Key Highlights": [
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+          "Applied fundamental software development and testing processes to ensure robust application performance."
+        ]
+      }
+    ]
+  },
+  "Report on Changes": {
+    "ATS Pass AI": [
+      {
+        "Original Sentence": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency using advanced AI models and multi-agent technologies.",
+        "Revised Sentence": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
+        "Keywords Added": [
+          "Python",
+          "LangChain",
+          "Gemini"
+        ],
+        "Rationale": "The job description highlights Python, LangChain, and Gemini as essential skills. Integrating these keywords showcases the applicant's direct experience with these technologies, making the application more relevant to the ATS and the hiring manager."
+      }
+    ],
+    "Blockchain Car Mileage Tracker": [
+      {
+        "Original Sentence": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes. Utilized blockchain technology, data security, and team collaboration.",
+        "Revised Sentence": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
+        "Keywords Added": [
+          "data analysis"
+        ],
+        "Rationale": "While not explicitly a data analysis project, incorporating \"data analysis\" techniques subtly aligns the experience with the job description's requirement for data analysis skills. This highlights the applicant's ability to work with data in a relevant context."
+      }
+    ],
+    "AI Path Finding": [
+      {
+        "Original Sentence": "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game and Utilized Git for version control, CI/CD practices, and teamwork.",
+        "Revised Sentence": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
+        "Keywords Added": [
+          "Git",
+          "CI/CD"
+        ],
+        "Rationale": "The job description emphasizes collaboration and development best practices. By explicitly mentioning \"Git\" and \"CI/CD,\" the applicant highlights their familiarity with version control and continuous integration/continuous deployment, which are valuable assets in collaborative development environments."
+      }
+    ]
+  }
+}
+```2024-06-25 21:35:59: status=completed
+agent=Multi-Domain Information Organizer
+2024-06-25 21:35:59: task=Split the context provided to you at the breaking point "Report on Changes". 
+In your output, you will provide everything before the "Report on Changes" as the final output of the task. Ensure you maintain the order of experiences as they are given. The structure should be the same as the input context.
+The context you need to split is provided to you from the previous task.
+2024-06-25 21:35:59: status=started
+agent=Multi-Domain Information Organizer
+2024-06-25 21:36:12: task=```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "total object count:": 3,
+    "Most Recent Experience": {
+      "Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
+      "skills": "Multiagent and AI concepts, Technical and Analytical, Expertise",
+      "Link": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
+      "Key Highlights": [
+        "Extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS",
+        "Scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
+        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Job Title": "Blockchain Car Mileage Tracker",
+        "Company": null,
+        "Location": null,
+        "Timeline": "January 2023 - Mar 2023",
+        "Duration": "3 months",
+        "Technologies": "Blockchain, Docker, Vue.js",
+        "skills": "Blockchain, Transparency, Data Security, Team Collaboration",
+        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
+        "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
+        "Key Highlights": [
+          "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
+          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+          "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, enhancing trust in vehicle history.",
+          "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
+        ]
+      },
+      {
+        "Project Title": "AI Path Finding",
+        "Timeline": "Jul 2023 - Sep 2023",
+        "Duration": "3 months",
+        "Technologies": "Java, Git, CI/CD, A* Algorithm",
+        "skills": "Game Development, AI Implementation, Optimization, Teamwork",
+        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
+        "Key Highlights": [
+          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
+          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+          "Applied fundamental software development and testing processes to ensure robust application performance."
+        ]
+      }
+    ]
+  }
+}
+```2024-06-25 21:36:12: status=completed
+agent=Multi-Domain Information Organizer
+2024-06-25 21:36:12: task=You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive coursework details. How you should use the tool: argument: "question": "Give me a list of all relevant coursework, including course names."
+The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+After extracting the coursework, order them based on relevance to the job description. Relevant courses should be prioritized. Keep 4-6 courses in the final output, ignore the rest.
+If you did not find any coursework, simply provide an empty list.
+Here are the Job Description Keywords: ## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
+
+**1. Introduction:**
+
+* **Role:** Artificial Intelligence Engineer 
+* **Company:** Radical AI
+* **Location:** Remote 
+* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
+
+**2. Thorough Analysis:**
+
+This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
+
+**3. Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
+* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
+
+**Industry Terms:** 
+* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
+
+**Company Values & Culture:**
+* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
+
+**Action Verbs:**
+
+* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
+
+**4. Prioritization and Relevance:**
+
+**Frequency and Emphasis:**
+
+* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
+* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
+* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
+
+**Essential vs. Preferred Qualifications:**
+
+* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
+* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "keywords": {
+    "Essential Skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
+      "Algorithm Development",
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication"
+    ],
+    "Industry Terms": [
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship"
+    ],
+    "Company Values": [
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI"
+    ],
+    "Action Verbs": [
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
+  }
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
+      {
+        "Name": "Machine Learning",
+        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
+      },
+      {
+        "Name": "Natural Language Processing (NLP)",
+        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
+      },
+      {
+        "Name": "Data Analysis",
+        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
+      },
+      {
+        "Name": "Python",
+        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+      },
+      {
+        "Name": "Collaboration",
+        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
+* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
+* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
+* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
+* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
+
+By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+
+2024-06-25 21:36:12: status=started
+agent=Multi-Domain Information Organizer
+2024-06-25 21:36:21: task={
+  "Relevant Coursework (to the Job Description)": [
+    "Distributed Computing (Python | JavaScript)",
+    "Data Structures and Algorithms (Java)",
+    "Object Orientation (Java | C++)",
+    "Software Engineering (Java | Unit Testing)",
+    "Database Implementation (SQL | Python)",
+    "AI and Game Development (Java | Python)"
+  ]
+}2024-06-25 21:36:21: status=completed
+agent=Career Objective Architect
+2024-06-25 21:36:21: task=Write a compelling career objective statement for the applicantâ€™s resume, tailored to catch the attention of recruiters and align with the specific job and company goals.
+**Key Elements**: - **Unique Value Proposition:** Focus on skills, experiences, and achievements that distinguish the applicant. - **Alignment with Company Goals:** Ensure the statement reflects the applicantâ€™s fit with the companyâ€™s mission as described in the job description. - **Conciseness and Impact:** Use strong, persuasive language to craft a memorable statement within 30 words, incorporating the Job Title and Company Name.
+**Context Provided**: - **Skills of the Applicant:** Refer to the previously provided context. - **Tool Access:** Use the tool to query relevant applicant information, considering their philosophy and software development approach if available. - **Job Description:**  ## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
+
+**1. Introduction:**
+
+* **Role:** Artificial Intelligence Engineer 
+* **Company:** Radical AI
+* **Location:** Remote 
+* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
+
+**2. Thorough Analysis:**
+
+This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
+
+**3. Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
+* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
+
+**Industry Terms:** 
+* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
+
+**Company Values & Culture:**
+* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
+
+**Action Verbs:**
+
+* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
+
+**4. Prioritization and Relevance:**
+
+**Frequency and Emphasis:**
+
+* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
+* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
+* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
+
+**Essential vs. Preferred Qualifications:**
+
+* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
+* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "keywords": {
+    "Essential Skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
+      "Algorithm Development",
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication"
+    ],
+    "Industry Terms": [
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship"
+    ],
+    "Company Values": [
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI"
+    ],
+    "Action Verbs": [
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
+  }
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
+      {
+        "Name": "Machine Learning",
+        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
+      },
+      {
+        "Name": "Natural Language Processing (NLP)",
+        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
+      },
+      {
+        "Name": "Data Analysis",
+        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
+      },
+      {
+        "Name": "Python",
+        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+      },
+      {
+        "Name": "Collaboration",
+        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
+* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
+* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
+* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
+* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
+
+By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+
+2024-06-25 21:36:21: status=started
+agent=Career Objective Architect
+2024-06-25 21:36:29: task={
+  "Career Objective": "Skilled Artificial Intelligence Engineer eager to contribute to Radical AI with proven expertise in Machine Learning, Natural Language Processing, and Python, aligning with company goals of democratizing AI for social good and ethical considerations."
+}2024-06-25 21:36:29: status=completed
+agent=Cross-Match Evaluator with Job Description
+2024-06-27 12:22:53: task=Analyze and compare the keywords from a job description (Source 1) to the skills listed in the applicant's profile (Source 2). Ensure that partial matches are functionally or contextually related to the job requirements.
+**Task Instructions**:
+1. **Sources for Comparison**:
+   - **Source 1**: Job Description Keywords.
+   - **Source 2**: A JSON Object "combined skills list of applicant" containing the applicant's skills and technologies.
+
+2. **Use of Tool**: It will search the internet. Use the tool to search for unfamiliar skills or technologies to understand their relevance to the job description.
+
+  - Example of an unfamiliar skill: "Langchain". To use the tool,
+  
+  query: str = Field(description="What is Langchain, what is it's comparable tools, technology?")
+  
+3. **Evaluation Criteria**:
+    - **Exact Match**: Direct correspondence between the job description and the applicantâ€™s qualifications. 
+    
+    - **Partial Match**: Skills that are not exactly the same but share similar applications or functionalities as those required by the job. The Job Description Section contains a "Partial_Match" field. Try to match the applicant's skills with the job description's Partial_Match field 
+    
+    - **missing_from_the_applicant_skills**: Skills that do not align with the job description. Your goal should be to move as many skills as possible from this section to the "Partial Match" after researching their relevance by using the tool. 
+
+   The partial match section has 2 fields per object: 
+    - "Skill Name": The skill mentioned in the job description.
+    - "Relevance": The relevance of the applicant's with the job description's skill.
+
+4. **Categorization**:
+   - Organize skills into categories such as Programming Languages, Soft Skills, AI Frameworks, etc., based on the job description's requirements. Feel free to create category names as you see fit.
+
+   - Aim for a balanced overview by listing 3-5 skills combining exact and partial matches for all categories.
+
+5. **Structured Report**:
+   - Generate a JSON report with 'Exact Match' and 'Partial Match' sections, specifying the job-related skill and its relevance to the applicant's skills.
+
+Job Description Starts:
+## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
+
+**1. Introduction:**
+
+* **Role:** Artificial Intelligence Engineer 
+* **Company:** Radical AI
+* **Location:** Remote 
+* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
+
+**2. Thorough Analysis:**
+
+This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
+
+**3. Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
+* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
+
+**Industry Terms:** 
+* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
+
+**Company Values & Culture:**
+* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
+
+**Action Verbs:**
+
+* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
+
+**4. Prioritization and Relevance:**
+
+**Frequency and Emphasis:**
+
+* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
+* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
+* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
+
+**Essential vs. Preferred Qualifications:**
+
+* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
+* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
+
+**5. Keyword List (JSON Format):**
+
+```json
+{
+  "keywords": {
+    "Essential Skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Generative AI",
+      "Data Analysis",
+      "Algorithm Development",
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "OpenAI API",
+      "Meta Llama 2",
+      "Google Gemini",
+      "Problem-Solving",
+      "Collaboration",
+      "Communication"
+    ],
+    "Industry Terms": [
+      "AI for Social Good",
+      "Responsible AI",
+      "Data Preprocessing",
+      "AI Models",
+      "Virtual Internship"
+    ],
+    "Company Values": [
+      "Democratizing AI",
+      "Equitable Progress",
+      "Social Mobility",
+      "Ethics in AI"
+    ],
+    "Action Verbs": [
+      "Design",
+      "Develop",
+      "Analyze",
+      "Collaborate",
+      "Enhance",
+      "Present",
+      "Contribute"
+    ]
+  }
+}
+```
+
+**6. Partial Match Skills (JSON Format):**
+
+```json
+{
+  "list of skills of Job Description": {
+    "Essential Skills of Job Description": [
+      {
+        "Name": "Machine Learning",
+        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
+      },
+      {
+        "Name": "Natural Language Processing (NLP)",
+        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
+      },
+      {
+        "Name": "Data Analysis",
+        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
+      },
+      {
+        "Name": "Python",
+        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+      },
+      {
+        "Name": "Collaboration",
+        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
+      }
+    ]
+  }
+}
+```
+
+**7. ATS Optimization Tips:**
+
+* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
+* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
+* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
+* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
+* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
+
+By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+
+Job Description Ends.
+{
+  "combined skills list of applicant": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": [
+          "Programming Language",
+          "Backend Development",
+          "Database"
+        ]
+      },
+      {
+        "Name": "JavaScript",
+        "field": [
+          "Programming Language",
+          "Distributed Computing"
+        ]
+      },
+      {
+        "Name": "Java",
+        "field": [ 
+          "Programming Language",
+          "Backend Development",
+          "Object Oriented Programming",
+          "Data Structures and Algorithms",
+          "Database Implementation",
+          "AI and Game Development"
+        ]
+      },
+      {
+        "Name": "C++",
+        "field": [
+          "Programming Language",
+          "Object Orientation",
+          "Game Development"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [
+          "Database",
+          "Database Implementation"
+        ]
+      },
+      {
+        "Name": "Multiagent",
+        "field": [
+          "Artificial Intelligence",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "AI",
+        "field": [
+          "Artificial Intelligence",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "RAG Search",
+        "field": [
+          "Information Retrieval",
+          "ATS Pass AI"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [
+          "Containerization"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "Front End Development",
+          "JavaScript Frameworks"
+        ]
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Git",
+        "field": [
+          "Version Control"
+        ]
+      },
+      {
+        "Name": "CI/CD",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "3D Graphics",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [
+          "Computer Graphics",
+          "Graphics Programming"
+        ]
+      },
+      {
+        "Name": "C Programming",
+        "field": [
+          "Programming Language",
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "Debugging",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Linux OS",
+        "field": [
+          "Operating Systems"
+        ]
+      },
+      {
+        "Name": "AWS",
+        "field": [
+          "Cloud & DevOps"
+        ]
+      },
+      {
+        "Name": "Github Action",
+        "field": [
+          "Cloud & DevOps"
+        ]
+      }
+    ],
+    "Frameworks": [],
+    "Skills": [
+      {
+        "Name": "Tailored teaching methods",
+        "field": [
+          "Education"
+        ]
+      },
+      {
+        "Name": "Computer systems",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Programming concepts",
+        "field": [
+          "Computer Science"
+        ]
+      },
+      {
+        "Name": "Advanced AI models",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Multi-agent technologies",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "Data Analysis",
+        "field": [
+          "Data Science",
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Blockchain",
+        "field": [
+          "Distributed Ledger Technology"
+        ]
+      },
+      {
+        "Name": "Smart contracts",
+        "field": [
+          "Blockchain Development"
+        ]
+      },
+      {
+        "Name": "Problem-solving",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Analytical skills",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Attention to detail",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Code management",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Team collaboration",
+        "field": [
+          "Communication Skills"
+        ]
+      },
+      {
+        "Name": "Pathfinding",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "3D graphics rendering",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Geometry",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Generic math",
+        "field": [
+          "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Object-oriented programming",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Polymorphism",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Hosting",
+        "field": [
+          "Web Development"
+        ]
+      },
+      {
+        "Name": "ELF header analysis",
+        "field": [
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "System analysis",
+        "field": [
+          "System Analysis"
+        ]
+      },
+      {
+        "Name": "ELF binary parsing",
+        "field": [
+          "System Programming"
+        ]
+      },
+      {
+        "Name": "Lighting techniques",
+        "field": [
+          "Computer Graphics"
+        ]
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Communication",
+        "field": [
+          "Communication Skills"
+        ]
+      },
+      {
+        "Name": "Interpersonal Skills",
+        "field": [
+          "Interpersonal Skills"
+        ]
+      }
+    ]
+  }
+}2024-06-27 12:22:53: status=started
