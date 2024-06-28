@@ -30,6 +30,6 @@
 
     \begin{tightemize}
         \item Developed an application featuring three distinct light sources to provide comprehensive insights into lighting effects.
-        \item Enhanced user interactivity by 50\% through an interactive menu system, allowing for real-time modifications of light and material properties.
+        \item Enhanced user interactivity by 50% through an interactive menu system, allowing for real-time modifications of light and material properties.
         \item See my GitHub profile for more info on program \href{https://github.com/vmsaif/openGL-sphere-lighting-program}{\ul{here}}.
     \end{tightemize}

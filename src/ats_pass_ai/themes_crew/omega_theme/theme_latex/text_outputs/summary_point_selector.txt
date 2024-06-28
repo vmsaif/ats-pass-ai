@@ -8,12 +8,12 @@
       "Duration": "7 Months",
       "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search | CrewAI, LangChain, Gemini",
       "Skills": "Artificial Intelligence | Machine Learning |  Natural Language Processing (NLP) | Python | Data Analysis | Algorithm Development | OpenAI API | Meta Llama 2 | Google Gemini",
+      "Summary Points": "Multiagent | AI | Python",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
       "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency.",
       "Key Highlights": [
         "Utilized advanced AI models, including **OpenAI API**, **Meta Llama 2**, and **Google Gemini**, to dynamically personalize resumes for **ATS optimization**.",
-        "Engineered a system to extract user data and analyze job descriptions with **RAG Search**, achieving over 85% keyword alignment.",
-        "Developed **algorithms** and a scalable architecture to anticipate future needs, demonstrating foresight and innovation in **AI development**."
+        "Engineered a system to extract user data and analyze job descriptions with **RAG Search**, achieving over 85% keyword alignment."
       ],
       "Team size": null,
       "Outcomes": null,
@@ -29,12 +29,12 @@
         "Duration": "2 Months",
         "Technologies, frameworks, and tools Used": "C | Storage System | OS",
         "Skills": "C Programming | Debugging | Linux OS | Data Analysis",
+        "Summary Points": "C | Debugging",
         "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
         "Short Description": "Developed a C program to analyze and extract key information from ELF headers of binary files.",
         "Key Highlights": [
           "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries.",
-          "Utilized debugging methods to identify and resolve parsing errors, showcasing strong analytical and problem-solving abilities.",
-          "Enhanced system analysis efficiency by 20% through optimized **data analysis** techniques and a systematic approach to technical challenges."
+          "Utilized debugging methods to identify and resolve parsing errors, showcasing strong analytical and problem-solving abilities."
         ],
         "Team size": null,
         "Outcomes": null,
@@ -49,12 +49,12 @@
         "Duration": "3 Months",
         "Technologies, frameworks, and tools Used": "OpenGL | C++",
         "Skills": "OpenGL | C++ |  Data Visualization",
+        "Summary Points": "OpenGL | C++",
         "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
         "Short Description": "Created an interactive OpenGL application to demonstrate and explore advanced lighting techniques on a 3D sphere.",
         "Key Highlights": [
           "Developed an application featuring three distinct light sources to provide comprehensive insights into lighting effects.",
-          "Enhanced user interactivity by 50% through an interactive menu system, allowing for real-time modifications of light and material properties.",
-          "Utilized `glutSolidSphere` for accurate sphere rendering, effectively showcasing the visual impact of different lighting conditions and **data visualization**."
+          "Enhanced user interactivity by 50% through an interactive menu system, allowing for real-time modifications of light and material properties."
         ],
         "Team size": null,
         "Outcomes": null,

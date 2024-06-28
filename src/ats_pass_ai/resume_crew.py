@@ -96,6 +96,8 @@ class ResumeCrew:
 		my_tasks.append(self.ats_friendly_skills_task()) # --------- uses large llm
 		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
 		my_tasks.append(self.split_missing_skills_task())
+
+		my_tasks.append(self.correct_categorization_of_skills_task())
 		
 		#### my_tasks.append(self.reduce_missing_skills_task())
 
@@ -108,9 +110,7 @@ class ResumeCrew:
 		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
 		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task()) 
-
-
+		my_tasks.append(self.career_objective_task())  # --------------------------- uses large llm
 
 
 
@@ -244,17 +244,17 @@ class ResumeCrew:
 			# llm=self.genAI
 		)
 
-	# @agent
-	# def skill_match_researcher_agent(self) -> Agent:
-	# 	return Agent(
-	# 		config=self.agents_config["skill_match_researcher_agent"],
-	# 		allow_delegation=False,
-	# 		verbose=True,
-	# 		tools=[self.webSearchTool],
-	# 		# cache=True,
-	# 		llm=self.genAI,
-	# 		step_callback=self.small_llm_limiter
-	# 	)
+	@agent
+	def skill_match_researcher_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config["skill_match_researcher_agent"],
+			allow_delegation=False,
+			verbose=True,
+			tools=[self.webSearchTool],
+			# cache=True,
+			llm=self.genAI,
+			step_callback=self.small_llm_limiter
+		)
 
 	# ---------------------- Define the tasks ----------------------
 
@@ -275,7 +275,7 @@ class ResumeCrew:
 
 		# Either way these context is needed to complete the task.
 
-		context.append(self.split_context_of_ats_friendly_skills_task())
+		context.append(self.correct_categorization_of_skills_task())
 		context.append(self.coursework_extraction_task())
 		context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 		context.append(self.career_objective_task())
@@ -293,7 +293,7 @@ class ResumeCrew:
 
 		if(self.debugFlag):
 			paths = [
-				"split_context_of_ats_friendly_skills_task",
+				"correct_categorization_of_skills_task",
 				"coursework_extraction_task",
 				"split_context_of_ats_friendly_keywords_into_experiences",
 				"career_objective_task",
@@ -535,7 +535,24 @@ class ResumeCrew:
 			callback=self.small_token_limiter
 		)
 	
-	
+	@task 
+	def correct_categorization_of_skills_task(self):
+		# Load YAML file
+		yaml = self.yaml_loader('correct_categorization_of_skills_task')
+		task_description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			task_description = task_description + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_skills_task"])
+
+		return Task(
+			description=task_description,
+			expected_output=expected_output,
+			agent=self.skill_match_researcher_agent(),
+			context=[self.split_context_of_ats_friendly_skills_task()],
+			output_file=PATHS["correct_categorization_of_skills_task"],
+			callback=self.small_token_limiter
+		)
 
 	# ----------------- End of Skills Match Identification -----------------
 
@@ -665,14 +682,14 @@ class ResumeCrew:
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
-			task_description = task_description + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_skills_task"]) + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
+			task_description = task_description + "\n" + self.load_file(PATHS["correct_categorization_of_skills_task"]) + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
 
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.career_objective_agent(),
 			callback=self.small_token_limiter,
-			context=[self.split_context_of_ats_friendly_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
+			context=[self.correct_categorization_of_skills_task(), self.split_context_of_ats_friendly_keywords_into_experiences()],
 			output_file=PATHS["career_objective_task"],
 		)
 	

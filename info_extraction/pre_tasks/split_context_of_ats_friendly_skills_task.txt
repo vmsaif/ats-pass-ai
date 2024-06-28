@@ -1,7 +1,5 @@
-```json
 {
-  "applicant_accepted_skills": {
-    "applicant_accepted_skills_count": 14,
+  "applicant_skills": {
     "exact_match_with_job_description": {
       "Programming Languages": [
         "Python"
@@ -47,15 +45,5 @@
         }
       ]
     }
-  },
-  "missing_from_the_applicant_skills": [
-    "OpenAI API",
-    "Meta Llama 2",
-    "Google Gemini",
-    "LangChain",
-    "Google Gen AI Studio",
-    "Data Analysis",
-    "Algorithm Development"
-  ]
+  }
 }
-```

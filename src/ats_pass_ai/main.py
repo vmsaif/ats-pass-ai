@@ -3,6 +3,7 @@
 	Date: 04-23-2024
 	Description: This file contains the main function to run the ATS-PASS-AI
 """
+import time
 from datetime import timedelta
 import traceback
 from textwrap import dedent
@@ -152,8 +153,14 @@ def run():
 
                 crew = ResumeCrew().crew()
                 # crew.kickoff()
+
+                # sleep 10 secs
+                time.sleep(10)
+                
+
             except Exception as e:
                 traceback.print_exc()
+                exit(1)
         crew_run_time = t.interval
     
         with Timer() as t:

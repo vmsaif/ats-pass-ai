@@ -5,84 +5,160 @@
     "Most Recent Experience": {
       "Title": "ATS Pass AI",
       "Timeline": "January 2024 - Present",
-      "Duration": "7 months",
-      "Technologies": "Python, RAG Search, CrewAI, LangChain, Gemini",
-      "skills": "Multiagent and AI concepts, Technical and Analytical, Expertise",
+      "Duration": "7 Months",
+      "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search | CrewAI, LangChain, Gemini",
+      "Skills": "Artificial Intelligence | Machine Learning |  Natural Language Processing (NLP) | Python | Data Analysis | Algorithm Development | OpenAI API | Meta Llama 2 | Google Gemini",
       "Link": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
+      "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency.",
       "Key Highlights": [
-        "Extracts user data and analyzes job descriptions with advanced AI tools like **Gemini Pro** and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS",
-        "Scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
-        "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities."
-      ]
+        "Utilized advanced AI models, including **OpenAI API**, **Meta Llama 2**, and **Google Gemini**, to dynamically personalize resumes for **ATS optimization**.",
+        "Engineered a system to extract user data and analyze job descriptions with **RAG Search**, achieving over 85% keyword alignment.",
+        "Developed **algorithms** and a scalable architecture to anticipate future needs, demonstrating foresight and innovation in **AI development**."
+      ],
+      "Team size": null,
+      "Outcomes": null
     },
     "Work Experience/Project Experience": [
       {
-        "Job Title": "Blockchain Car Mileage Tracker",
+        "Job Title": "ELF Binary Analysis",
         "Company": null,
         "Location": null,
-        "Timeline": "January 2023 - Mar 2023",
-        "Duration": "3 months",
-        "Technologies": "Blockchain, Docker, Vue.js",
-        "skills": "Blockchain, Transparency, Data Security, Team Collaboration",
-        "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-        "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
+        "Timeline": "November 2022 - December 2022",
+        "Duration": "2 Months",
+        "Technologies, frameworks, and tools Used": "C | Storage System | OS",
+        "Skills": "C Programming | Debugging | Linux OS | Data Analysis",
+        "Link": "https://github.com/vmsaif/readingAndInterpretingBinary",
+        "Short Description": "Developed a C program to analyze and extract key information from ELF headers of binary files.",
         "Key Highlights": [
-          "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
-          "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
-          "Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording, enhancing trust in vehicle history.",
-          "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
-        ]
+          "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries.",
+          "Utilized debugging methods to identify and resolve parsing errors, showcasing strong analytical and problem-solving abilities.",
+          "Enhanced system analysis efficiency by 20% through optimized **data analysis** techniques and a systematic approach to technical challenges."
+        ],
+        "Team size": null,
+        "Outcomes": null
       },
       {
-        "Project Title": "AI Path Finding",
-        "Timeline": "Jul 2023 - Sep 2023",
-        "Duration": "3 months",
-        "Technologies": "Java, Git, CI/CD, A* Algorithm",
-        "skills": "Game Development, AI Implementation, Optimization, Teamwork",
-        "Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-        "Short Description": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
+        "Job Title": "OpenGL Sphere Lighting",
+        "Company": null,
+        "Location": null,
+        "Timeline": "April 2023 - June 2023",
+        "Duration": "3 Months",
+        "Technologies, frameworks, and tools Used": "OpenGL | C++",
+        "Skills": "OpenGL | C++ |  Data Visualization",
+        "Link": "https://github.com/vmsaif/openGL-sphere-lighting-program",
+        "Short Description": "Created an interactive OpenGL application to demonstrate and explore advanced lighting techniques on a 3D sphere.",
         "Key Highlights": [
-          "Utilized Git for version control, ensuring efficient team collaboration and code management.",
-          "Utilized CI/CD practices, resulting in a 50% reduction in deployment time.",
-          "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
-          "Applied fundamental software development and testing processes to ensure robust application performance."
-        ]
+          "Developed an application featuring three distinct light sources to provide comprehensive insights into lighting effects.",
+          "Enhanced user interactivity by 50% through an interactive menu system, allowing for real-time modifications of light and material properties.",
+          "Utilized `glutSolidSphere` for accurate sphere rendering, effectively showcasing the visual impact of different lighting conditions and **data visualization**."
+        ],
+        "Team size": null,
+        "Outcomes": null
       }
     ]
   },
   "Report on Changes": {
     "ATS Pass AI": [
       {
-        "Original Sentence": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency using advanced AI models and multi-agent technologies.",
-        "Revised Sentence": "Led the development of a multi-agent system using **Python**, **LangChain**, and **Gemini** to create tailored resumes, enhancing job search efficiency.",
+        "Original Sentence": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+        "Revised Sentence": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency.",
+        "Keywords Added": [],
+        "Rationale": "Shortened the description to make it more concise while keeping the key information."
+      },
+      {
+        "Original Sentence": "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+        "Revised Sentence": "Utilized advanced AI models, including OpenAI API, Meta Llama 2, and Google Gemini, to dynamically personalize resumes for ATS optimization.",
         "Keywords Added": [
-          "Python",
-          "LangChain",
-          "Gemini"
+          "OpenAI API",
+          "Meta Llama 2",
+          "Google Gemini",
+          "ATS optimization"
         ],
-        "Rationale": "The job description highlights Python, LangChain, and Gemini as essential skills. Integrating these keywords showcases the applicant's direct experience with these technologies, making the application more relevant to the ATS and the hiring manager."
+        "Rationale": "Incorporated relevant keywords from the job description, such as \"OpenAI API,\" \"Meta Llama 2,\" and \"Google Gemini,\" to highlight the applicant's experience with these specific technologies. The addition of \"ATS optimization\" emphasizes the direct relevance of the project to the targeted job."
+      },
+      {
+        "Original Sentence": "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Revised Sentence": "Engineered a system to extract user data and analyze job descriptions with RAG Search, achieving over 85% keyword alignment.",
+        "Keywords Added": [],
+        "Rationale": "Removed repetitive information and made it more concise while keeping the key achievements."
+      },
+      {
+        "Original Sentence": "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
+        "Revised Sentence": "Developed algorithms and a scalable architecture to anticipate future needs, demonstrating foresight and innovation in AI development.",
+        "Keywords Added": [
+          "algorithms",
+          "AI development"
+        ],
+        "Rationale": "Integrated the keywords \"algorithms\" and \"AI development\" to align the applicant's experience with the job description's emphasis on these specific technical skills."
       }
     ],
-    "Blockchain Car Mileage Tracker": [
+    "ELF Binary Analysis": [
       {
-        "Original Sentence": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes. Utilized blockchain technology, data security, and team collaboration.",
-        "Revised Sentence": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes using **data analysis** techniques.",
+        "Original Sentence": "Developed a C program to extract key information from ELF headers of binary files.",
+        "Revised Sentence": "Developed a C program to analyze and extract key information from ELF headers of binary files.",
+        "Keywords Added": [
+          "analyze"
+        ],
+        "Rationale": "Added action verb 'analyze'."
+      },
+      {
+        "Original Sentence": "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.",
+        "Revised Sentence": "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries.",
+        "Keywords Added": [],
+        "Rationale": "Shortened for conciseness."
+      },
+      {
+        "Original Sentence": "Utilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.",
+        "Revised Sentence": "Utilized debugging methods to identify and resolve parsing errors, showcasing strong analytical and problem-solving abilities.",
+        "Keywords Added": [
+          "analytical",
+          "problem-solving"
+        ],
+        "Rationale": "The job description emphasizes analytical skills and problem-solving, making their inclusion essential for aligning the applicant’s experiences with the job requirements."
+      },
+      {
+        "Original Sentence": "Enhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.",
+        "Revised Sentence": "Enhanced system analysis efficiency by 20% through optimized data analysis techniques and a systematic approach to technical challenges.",
         "Keywords Added": [
           "data analysis"
         ],
-        "Rationale": "While not explicitly a data analysis project, incorporating \"data analysis\" techniques subtly aligns the experience with the job description's requirement for data analysis skills. This highlights the applicant's ability to work with data in a relevant context."
+        "Rationale": "The job description emphasizes these technical skills as critical for the role, making their inclusion essential for aligning the applicant’s experiences with the job requirements."
+      },
+      {
+        "Original Sentence": "Prepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties.",
+        "Revised Sentence": null,
+        "Keywords Added": [],
+        "Rationale": "Removed because it was not directly relevant."
       }
     ],
-    "AI Path Finding": [
+    "OpenGL Sphere Lighting": [
       {
-        "Original Sentence": "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game and Utilized Git for version control, CI/CD practices, and teamwork.",
-        "Revised Sentence": "Developed a Java-based game leveraging the A* algorithm for AI-driven gameplay, utilizing **Git** and **CI/CD** for efficient development.",
+        "Original Sentence": "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.",
+        "Revised Sentence": "Created an interactive OpenGL application to demonstrate and explore advanced lighting techniques on a 3D sphere.",
         "Keywords Added": [
-          "Git",
-          "CI/CD"
+          "demonstrate"
         ],
-        "Rationale": "The job description emphasizes collaboration and development best practices. By explicitly mentioning \"Git\" and \"CI/CD,\" the applicant highlights their familiarity with version control and continuous integration/continuous deployment, which are valuable assets in collaborative development environments."
+        "Rationale": "Added action verb."
+      },
+      {
+        "Original Sentence": "Developed an application with three distinct light sources, offering comprehensive insights into lighting effects.",
+        "Revised Sentence": "Developed an application featuring three distinct light sources to provide comprehensive insights into lighting effects.",
+        "Keywords Added": [],
+        "Rationale": "Rephrased for clarity."
+      },
+      {
+        "Original Sentence": "Enhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material.",
+        "Revised Sentence": "Enhanced user interactivity by 50% through an interactive menu system, allowing for real-time modifications of light and material properties.",
+        "Keywords Added": [],
+        "Rationale": "Rephrased for clarity."
+      },
+      {
+        "Original Sentence": "Utilized `glutSolidSphere` for accurate sphere rendering, showcasing the effects of different lighting conditions.",
+        "Revised Sentence": "Utilized `glutSolidSphere` for accurate sphere rendering, effectively showcasing the visual impact of different lighting conditions and data visualization.",
+        "Keywords Added": [
+          "data visualization"
+        ],
+        "Rationale": "The job description emphasizes these technical skills as critical for the role, making their inclusion essential for aligning the applicant’s experiences with the job requirements."
       }
     ]
   }

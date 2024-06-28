@@ -1,45 +1,40 @@
-```json
+``` JSON
 {
-  "Prioritized Section": {
-    "Education": [],
-    "Relevant Coursework": [
-      {
-        "Distributed Computing": ["Python | JavaScript"]
-      },
-      {
-        "Data Structures and Algorithms": ["Java"]
-      },
-      {
-        "Object Orientation": ["Java | C++"]
-      },
-      {
-        "Software Engineering": ["Java | Unit Testing"]
-      },
-      {
-        "Database Implementation": ["SQL | Python"]
-      },
-      {
-        "AI and Game Development": ["Java | Python"]
-      }
-    ],
-    "Awards": [],
-    "References": [
-      {
+  "Prioritized Sections": {
+    "Education": [{
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "University of Manitoba",
+      "Graduation Date": "October 2023",
+      "GPA": "3.07"
+    }],
+    "Relevant Coursework": [{
+        "Distributed Computing (Python | JavaScript)",
+        "Data Structures and Algorithms (Java)",
+        "Object Orientation (Java | C++)",
+        "Software Engineering (Java | Unit Testing)",
+        "Database Implementation (SQL | Python)",
+        "AI and Game Development (Java | Python)"
+      }],
+    "Volunteer Work": [{
+      "Organization Name": ".dev Programming Club",
+      "Role": "Active Member",
+      "Responsibilities": "- Engaged with the latest software development technologies and tools.\n- Collaborated on team projects focused on Java and Cloud Technologies.",
+      "Timeline": "2019-2023"
+    }],
+    "References": [{
         "Name": "Abu Kabir",
         "Position": "Director IT Service Management",
         "Company": "Microsoft",
-        "Contact Information": "204-298-3693",
-        "Relationship": "Colleague",
+        "Contact Information": "204-298-3693"
       },
       {
         "Name": "Safiur Mahdi",
         "Position": "Java Developer",
         "Company": "Skip the Dishes",
-        "Contact Information": "204-583-3432",
-        "Relationship": "Colleague",
+        "Contact Information": "204-583-3432"
       }
-    ],
-    "Traits": []
+    ]
   }
 }
 ```

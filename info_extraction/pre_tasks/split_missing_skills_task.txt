@@ -5,7 +5,9 @@
     "Meta Llama 2",
     "Google Gemini",
     "LangChain",
-    "Google Gen AI Studio"
+    "Google Gen AI Studio",
+    "Data Analysis",
+    "Algorithm Development"
   ]
 }
 ```

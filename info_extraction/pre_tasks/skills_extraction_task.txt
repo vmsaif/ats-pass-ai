@@ -5,81 +5,112 @@
         "Name": "Python",
         "field": [
           "Programming Language",
-          "Backend Development",
-          "Database"
-        ]
-      },
-      {
-        "Name": "JavaScript",
-        "field": [
-          "Programming Language",
-          "Distributed Computing"
+          "Multiagent"
         ]
       },
       {
         "Name": "Java",
-        "field": [ 
+        "field": [
           "Programming Language",
-          "Backend Development",
-          "Object Oriented Programming",
-          "Data Structures and Algorithms",
-          "Database Implementation",
-          "AI and Game Development"
+          "Backend Development"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [
+          "Web Development",
+          "Database"
+        ]
+      },
+      {
+        "Name": "MySQL",
+        "field": [
+          "Database"
+        ]
+      },
+      {
+        "Name": "JSON",
+        "field": [
+          "Database"
+        ]
+      },
+      {
+        "Name": "noSQL",
+        "field": [
+          "Database"
+        ]
+      },
+      {
+        "Name": "Schema",
+        "field": [
+          "Database"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [
+          "Web Development",
+          "Containerization"
+        ]
+      },
+      {
+        "Name": "AWS",
+        "field": [
+          "Cloud Computing"
+        ]
+      },
+      {
+        "Name": "CI/CD",
+        "field": [
+          "DevOps"
+        ]
+      },
+      {
+        "Name": "GitHub Action",
+        "field": [
+          "DevOps"
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [
+          "3D Graphics",
+          "Game Development"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "JavaScript Framework",
+          "Frontend Development"
         ]
       },
       {
         "Name": "C++",
         "field": [
           "Programming Language",
-          "Object Orientation",
           "Game Development"
-        ]
-      },
-      {
-        "Name": "SQL",
-        "field": [
-          "Database",
-          "Database Implementation"
-        ]
-      },
-      {
-        "Name": "Multiagent",
-        "field": [
-          "Artificial Intelligence",
-          "ATS Pass AI"
-        ]
-      },
-      {
-        "Name": "AI",
-        "field": [
-          "Artificial Intelligence",
-          "ATS Pass AI"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [
-          "Information Retrieval",
-          "ATS Pass AI"
-        ]
-      },
-      {
-        "Name": "Docker",
-        "field": [
-          "Containerization"
-        ]
-      },
-      {
-        "Name": "Vue.js",
-        "field": [
-          "Front End Development",
-          "JavaScript Frameworks"
         ]
       },
       {
         "Name": "A* Algorithm",
         "field": [
-          "Artificial Intelligence"
+          "Artificial Intelligence",
+          "Algorithm"
+        ]
+      },
+      {
+        "Name": "Jekyll",
+        "field": [
+          "Static Site Generator",
+          "Documentation"
+        ]
+      },
+      {
+        "Name": "Markdown",
+        "field": [
+          "Technical Writing",
+          "Documentation"
         ]
       },
       {
@@ -87,216 +118,167 @@
         "field": [
           "Version Control"
         ]
+      }
+    ],
+    "Frameworks": [],
+    "Skills": [
+      {
+        "Name": "AI",
+        "field": [
+          "Artificial Intelligence",
+          "Machine Learning"
+        ]
       },
       {
-        "Name": "CI/CD",
+        "Name": "Blockchain",
         "field": [
+          "Security",
+          "Distributed Systems"
+        ]
+      },
+      {
+        "Name": "Natural Language Processing",
+        "field": [
+          "Artificial Intelligence",
+          "Natural Language Understanding"
+        ]
+      },
+      {
+        "Name": "Game Development",
+        "field": [
+          "Game Design",
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Full Stack Development",
+        "field": [
+          "Web Development",
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Mobile Development",
+        "field": [
+          "Mobile Application Development",
           "Software Development"
         ]
       },
       {
         "Name": "3D Graphics",
         "field": [
+          "3D Animation",
+          "3D Modeling"
+        ]
+      },
+      {
+        "Name": "Ray Tracing",
+        "field": [
+          "3D Graphics",
           "Computer Graphics"
         ]
       },
       {
-        "Name": "OpenGL",
+        "Name": "System Analysis",
         "field": [
-          "Computer Graphics",
-          "Graphics Programming"
+          "Business Analysis",
+          "Software Development"
         ]
       },
       {
-        "Name": "C Programming",
+        "Name": "Technical Writing",
         "field": [
-          "Programming Language",
-          "System Programming"
+          "Documentation",
+          "Technical Communication"
+        ]
+      },
+      {
+        "Name": "Project Management",
+        "field": [
+          "Project Planning",
+          "Software Development"
         ]
       },
       {
         "Name": "Debugging",
         "field": [
+          "Software Development",
+          "Error Resolution"
+        ]
+      },
+      {
+        "Name": "Computer Systems",
+        "field": [
+          "Hardware",
+          "Software"
+        ]
+      },
+      {
+        "Name": "Data Structures",
+        "field": [
+          "Algorithm",
           "Software Development"
         ]
       },
       {
-        "Name": "Linux OS",
+        "Name": "Object-Oriented Programming",
         "field": [
-          "Operating Systems"
+          "Programming Paradigm",
+          "Software Development"
         ]
       },
       {
-        "Name": "AWS",
+        "Name": "Data Security",
         "field": [
-          "Cloud & DevOps"
+          "Information Security",
+          "Cryptography"
         ]
       },
       {
-        "Name": "Github Action",
-        "field": [
-          "Cloud & DevOps"
-        ]
-      }
-    ],
-    "Frameworks": [],
-    "Skills": [
-      {
-        "Name": "Tailored teaching methods",
-        "field": [
-          "Education"
-        ]
-      },
-      {
-        "Name": "Computer systems",
-        "field": [
-          "Computer Science"
-        ]
-      },
-      {
-        "Name": "Programming concepts",
-        "field": [
-          "Computer Science"
-        ]
-      },
-      {
-        "Name": "Advanced AI models",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Multi-agent technologies",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Data Analysis",
-        "field": [
-          "Data Science",
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Blockchain",
-        "field": [
-          "Distributed Ledger Technology"
-        ]
-      },
-      {
-        "Name": "Smart contracts",
-        "field": [
-          "Blockchain Development"
-        ]
-      },
-      {
-        "Name": "Problem-solving",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Analytical skills",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Attention to detail",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Code management",
+        "Name": "Programming",
         "field": [
           "Software Development"
         ]
       },
       {
-        "Name": "Team collaboration",
-        "field": [
-          "Communication Skills"
-        ]
-      },
-      {
-        "Name": "Pathfinding",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "3D graphics rendering",
-        "field": [
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Geometry",
-        "field": [
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Generic math",
-        "field": [
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Object-oriented programming",
+        "Name": "Database",
         "field": [
           "Software Development"
         ]
       },
       {
-        "Name": "Polymorphism",
+        "Name": "Cloud & DevOps",
         "field": [
           "Software Development"
-        ]
-      },
-      {
-        "Name": "Hosting",
-        "field": [
-          "Web Development"
-        ]
-      },
-      {
-        "Name": "ELF header analysis",
-        "field": [
-          "System Programming"
-        ]
-      },
-      {
-        "Name": "System analysis",
-        "field": [
-          "System Analysis"
-        ]
-      },
-      {
-        "Name": "ELF binary parsing",
-        "field": [
-          "System Programming"
-        ]
-      },
-      {
-        "Name": "Lighting techniques",
-        "field": [
-          "Computer Graphics"
         ]
       }
     ],
     "Soft Skills": [
       {
-        "Name": "Communication",
+        "Name": "Teaching",
         "field": [
-          "Communication Skills"
+          "Education",
+          "Interpersonal Skills"
         ]
       },
       {
-        "Name": "Interpersonal Skills",
+        "Name": "Mentoring",
         "field": [
+          "Education",
+          "Interpersonal Skills"
+        ]
+      },
+      {
+        "Name": "Communication",
+        "field": [
+          "Interpersonal Skills",
+          "Teamwork"
+        ]
+      },
+      {
+        "Name": "Teamwork",
+        "field": [
+          "Collaboration",
           "Interpersonal Skills"
         ]
       }

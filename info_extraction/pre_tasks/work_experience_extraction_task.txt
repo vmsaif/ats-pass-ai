@@ -1,17 +1,20 @@
-```json
 {
-  "Work Experience": [
-    {
-      "Job Title": "Programming Mentor",
-      "Company Name": "Private Tutoring",
-      "Timeline": "February 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts. Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding.",
-      "Link": null,
-      "Key Highlights": [],
-      "Team size": null,
-      "Outcomes": null
-    }
-  ]
-}
-```
+    "Work Experience": [
+      {
+        "Job Title": "Programming Mentor",
+        "Company Name": "Private Tutoring",
+        "Timeline": "February 2023 - December 2023",
+        "Technologies, frameworks, and tools Used": "Python, Java",
+        "Skills": "Teaching, Mentoring, Computer Systems, Programming",
+        "Link": null,
+        "Key Highlights": [
+          "Tutored a student in computer systems and programming, focusing on Python and Java.",
+          "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.",
+          "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding aspects of the systems engineering role.",
+          "Delivered one-on-one lessons focusing on computer system principles and learning introductory programming."
+        ],
+        "Team size": null,
+        "Outcomes": "Improved the student's understanding and application of computer systems and programming concepts, as well as their system understanding."
+      }
+    ]
+  }

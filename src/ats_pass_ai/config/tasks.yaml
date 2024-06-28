@@ -617,6 +617,57 @@ split_missing_skills_task:
     
     }
 
+correct_categorization_of_skills_task:
+  description: >
+    You are provided with a list of skills categorized into different categories. Your task is to correct the categorization of these skills.
+
+    **Instructions**:
+    - Use the provided web search tool to search for the skills that you are not familiar with to know in which field or category they belong.
+    - Ensure that each skill is correctly categorized based on its relevance and application.
+    - If a skill is misclassified, move it to the appropriate category.
+    - If a skill is not relevant to any category, create a new category and place it there.
+    - You can merge "exact_match_with_job_description" and "partial_match_with_job_description" into one list for each category.
+
+    **Output**:
+    - Upto 6 categories with the corrected skills list in each category.
+    - Each category should have 3-5 skills listed for a balanced overview.
+
+  expected_output: >
+    {
+      "corrected_skills_categorization": {
+        "Programming Languages": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Frameworks": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Tools": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Soft Skills": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "New Category": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Another New Category": [
+          "item 1",
+          "item 2",
+          ...
+        ]
+      }
+    }
+
 # Now Integrating ATS-Friendly Keywords into Experiences
 
 experience_choosing_task:
@@ -682,10 +733,11 @@ gather_info_of_chosen_experiences:
 
     There is a field called "Total Object Count". This field will tell you how many object details **in total** you need to provide.
 
-  expected_output: >
+    **Output**:
+    - Make sure no information is missing from the provided context.
     [Preserve the order and priority of experiences. First, maintain the order and then group them by their experience type accordingly. Provide the following details for each experience.]
-    
-    In JSON format:
+        
+    Example:
     {
       "Total Object Count": integer value,
       "Most Recent Experience": {},
@@ -695,7 +747,7 @@ gather_info_of_chosen_experiences:
         ...
       ]
 
-      If it is a work Experience, Follow this format:
+      If it is a work experience, Follow this format:
       "Example Work Experience": [
         {
           "Title": "",
@@ -717,7 +769,7 @@ gather_info_of_chosen_experiences:
       ]
 
       If it is a Project Experience, Follow this format:
-      "Example Project Experience": [
+      "Example Project Experience, academic Experience": [
         {
           "Title": "",
           "Timeline": "",
@@ -736,7 +788,8 @@ gather_info_of_chosen_experiences:
         }
       ]
     }
-
+  expected_output: >
+    
 ats_friendly_keywords_into_experiences:
   description: >
     Enhance the descriptions of the applicant's experiences by integrating key job description keywords to make them more appealing to Applicant Tracking Systems (ATS) while ensuring they remain readable and relevant.
@@ -746,7 +799,7 @@ ats_friendly_keywords_into_experiences:
       - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
       - **Conciseness and Clarity:** 
         -- Limit the short description to 10-13 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
-        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-13 words per key highlight.
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-12 words per key highlight.
       - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - you are also provided a list of "missing_from_the_applicant_skills" which are in the job description but not in the applicant's experiences. Try to weave some of these words where they fit naturally.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
@@ -781,7 +834,7 @@ ats_friendly_keywords_into_experiences:
       "skills": "",
       "Link": "",
       "Short Description": "(About 10-13 words)",
-      "Key Highlights": [(Up to 4 key highlights but not required to be 4),
+      "Key Highlights": [(Up to 4 key highlights but not required to be 4), upto 10-12 words each
         "",
         "",
         "",
@@ -800,7 +853,7 @@ ats_friendly_keywords_into_experiences:
       "skills": "",
       "Link": "",
       "Short Description": "(About 15 words)",
-      "Key Highlights": [(Up to 4 key highlights but not required to be 4)
+      "Key Highlights": [(Up to 4 key highlights but not required to be 4), upto 10-12 words each
         "",
         "",
         "",
@@ -841,7 +894,6 @@ ats_friendly_keywords_into_experiences:
         }
       }
     }
-
 
 split_context_of_ats_friendly_keywords_into_experiences:
   description: >

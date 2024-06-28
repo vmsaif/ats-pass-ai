@@ -5,77 +5,42 @@
         "Name": "Python",
         "field": [
           "Programming Language",
-          "Backend Development"
+          "Multiagent"
         ]
       },
       {
         "Name": "Java",
-        "field": [ 
+        "field": [
           "Programming Language",
-          "Backend Development",
-          "Object Oriented Programming"
+          "Backend Development"
         ]
       },
       {
-        "Name": "Multiagent",
+        "Name": "SQL",
         "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "AI",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [
-          "Information Retrieval"
+          "Web Development",
+          "Database"
         ]
       },
       {
         "Name": "Docker",
         "field": [
+          "Web Development",
           "Containerization"
-        ]
-      },
-      {
-        "Name": "Vue.js",
-        "field": [
-          "Front End Development",
-          "JavaScript Frameworks"
-        ]
-      },
-      {
-        "Name": "A* Algorithm",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Git",
-        "field": [
-          "Version Control"
-        ]
-      },
-      {
-        "Name": "CI/CD",
-        "field": [
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "3D Graphics",
-        "field": [
-          "Computer Graphics"
         ]
       },
       {
         "Name": "OpenGL",
         "field": [
-          "Computer Graphics",
-          "Graphics Programming"
+          "3D Graphics",
+          "Game Development"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "JavaScript Framework",
+          "Frontend Development"
         ]
       },
       {
@@ -86,208 +51,174 @@
         ]
       },
       {
-        "Name": "File I/O",
+        "Name": "A* Algorithm",
         "field": [
-          "Data Management"
-        ]
-      },
-      {
-        "Name": "Documentation",
-        "field": [
-          "Technical Writing"
-        ]
-      },
-      {
-        "Name": "Markdown",
-        "field": [
-          "Technical Writing"
+          "Artificial Intelligence",
+          "Algorithm"
         ]
       },
       {
         "Name": "Jekyll",
         "field": [
-          "Static Site Generators"
+          "Static Site Generator",
+          "Documentation"
         ]
       },
       {
-        "Name": "C Programming",
+        "Name": "Markdown",
         "field": [
-          "Programming Language",
-          "System Programming"
+          "Technical Writing",
+          "Documentation"
         ]
       },
       {
-        "Name": "Debugging",
+        "Name": "Git",
         "field": [
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Linux OS",
-        "field": [
-          "Operating Systems"
+          "Version Control"
         ]
       }
-      
     ],
     "Frameworks": [],
     "Skills": [
       {
-        "Name": "Tailored teaching methods",
+        "Name": "AI",
         "field": [
-          "Education"
-        ]
-      },
-      {
-        "Name": "Computer systems",
-        "field": [
-          "Computer Science"
-        ]
-      },
-      {
-        "Name": "Programming concepts",
-        "field": [
-          "Computer Science"
-        ]
-      },
-      {
-        "Name": "Advanced AI models",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Multi-agent technologies",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Data Analysis",
-        "field": [
-          "Data Science",
-          "Analytical Skills"
+          "Artificial Intelligence",
+          "Machine Learning"
         ]
       },
       {
         "Name": "Blockchain",
         "field": [
-          "Distributed Ledger Technology"
+          "Security",
+          "Distributed Systems"
         ]
       },
       {
-        "Name": "Smart contracts",
+        "Name": "Natural Language Processing",
         "field": [
-          "Blockchain Development"
+          "Artificial Intelligence",
+          "Natural Language Understanding"
         ]
       },
       {
-        "Name": "Problem-solving",
+        "Name": "Game Development",
         "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Analytical skills",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Attention to detail",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Code management",
-        "field": [
+          "Game Design",
           "Software Development"
         ]
       },
       {
-        "Name": "Team collaboration",
+        "Name": "Full Stack Development",
         "field": [
-          "Communication Skills"
-        ]
-      },
-      {
-        "Name": "Pathfinding",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "3D graphics rendering",
-        "field": [
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Geometry",
-        "field": [
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Generic math",
-        "field": [
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Object-oriented programming",
-        "field": [
+          "Web Development",
           "Software Development"
         ]
       },
       {
-        "Name": "Polymorphism",
+        "Name": "Mobile Development",
         "field": [
+          "Mobile Application Development",
           "Software Development"
         ]
       },
       {
-        "Name": "Hosting",
+        "Name": "3D Graphics",
         "field": [
-          "Web Development"
+          "3D Animation",
+          "3D Modeling"
         ]
       },
       {
-        "Name": "ELF header analysis",
+        "Name": "System Analysis",
         "field": [
-          "System Programming"
+          "Business Analysis",
+          "Software Development"
         ]
       },
       {
-        "Name": "System analysis",
+        "Name": "Technical Writing",
         "field": [
-          "System Analysis"
+          "Documentation",
+          "Technical Communication"
         ]
       },
       {
-        "Name": "ELF binary parsing",
+        "Name": "Project Management",
         "field": [
-          "System Programming"
+          "Project Planning",
+          "Software Development"
         ]
       },
       {
-        "Name": "Lighting techniques",
+        "Name": "Debugging",
         "field": [
+          "Software Development",
+          "Error Resolution"
+        ]
+      },
+      {
+        "Name": "Computer Systems",
+        "field": [
+          "Hardware",
+          "Software"
+        ]
+      },
+      {
+        "Name": "Data Structures",
+        "field": [
+          "Algorithm",
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Object-Oriented Programming",
+        "field": [
+          "Programming Paradigm",
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Ray Tracing",
+        "field": [
+          "3D Graphics",
           "Computer Graphics"
+        ]
+      },
+      {
+        "Name": "Data Security",
+        "field": [
+          "Information Security",
+          "Cryptography"
         ]
       }
     ],
     "Soft Skills": [
       {
-        "Name": "Communication",
+        "Name": "Teaching",
         "field": [
-          "Communication Skills"
+          "Education",
+          "Interpersonal Skills"
         ]
       },
       {
-        "Name": "Interpersonal Skills",
+        "Name": "Mentoring",
         "field": [
+          "Education",
+          "Interpersonal Skills"
+        ]
+      },
+      {
+        "Name": "Communication",
+        "field": [
+          "Interpersonal Skills",
+          "Teamwork"
+        ]
+      },
+      {
+        "Name": "Teamwork",
+        "field": [
+          "Collaboration",
           "Interpersonal Skills"
         ]
       }

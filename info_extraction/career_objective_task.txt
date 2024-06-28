@@ -1,3 +1,3 @@
 {
-  "Career Objective": "Skilled Artificial Intelligence Engineer eager to contribute to Radical AI with proven expertise in Machine Learning, Natural Language Processing, and Python, aligning with company goals of democratizing AI for social good and ethical considerations."
+  "Career Objective": "I seek to contribute my expertise in AI and ML to Radical AI. I am passionate about using technology for good, and I believe my experience in developing AI models for social impact would be a valuable asset to your team."
 }

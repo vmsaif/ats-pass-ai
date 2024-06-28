@@ -3,7 +3,7 @@
 # Description: This file generates the latex code tasks for the Omega Theme.
 # Version: 1.0
 
-namesection:
+name_section:
   description: >
     Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
 
@@ -106,7 +106,7 @@ select_first_column_content:
   expected_output: >
     Final JSON object showing the sections and sub-sections selected.
 
-educationsection:
+education_section:
   description: >
     Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
 
@@ -143,36 +143,33 @@ educationsection:
     Here is the information you need and convert into LaTeX format:
   expected_output: >
 
-courseworksection:
+coursework_section:
   description: >
-    Extract the coursework information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+    Format the applicant's coursework information into LaTeX under the "Relevant Courses" section.
 
-    In the output,
-    - The first line contains the section name "Relevant Courses". Use the command \section{Relevant Courses}.
-    - The next lines contain the coursework information in the following format:
-      - use the command \body{} to list the courses. Each course should be on a new line without bullet points. The line should end with a double backslash '\\' as a line break on latex.
-      - Each course should be in the format "Course Name (Language | Framework)". Use the pipe '|' to separate the language and framework. If there is no language or framework, leave it blank.
+    **Instructions**:
+    - Start with the section title using \section{Relevant Courses} if there are courses available.
+    - List each course in \body{}, formatted as "Course Name (tool | tool) \\"
+    - A line ending with '\\' is necessary except for the last line.
 
-    Example:
+    **Example Output**:
     \section{Relevant Courses}
     \body{
-        Operating Systems (Linux | C) \\
-        Distributed Computing (Python) \\
-        Database Implementation (Python | SQL) \\
-        Data Structures and Algorithms (Java) \\
-        Object Orientation (Java | C++) \\
-        Software Engineering (Java | Unit Testing)
+      Operating Systems (Linux | C) \\
+      Distributed Computing (Python) \\
+      Database Implementation (Python | SQL)
     }
 
-    Conditions:
-    - If there is no Course information, each line of the output should be latex comments, starting with '%' like this:
+    **Conditions**:
+    - Absence of course data should be marked with:
       % \section{}
-      % \sectionsep. 
+      % \sectionsep
 
-    Here is the information you need and convert into LaTeX format:
   expected_output: >
+    A LaTeX section for "Relevant Courses" formatted according to the instructions, or LaTeX comments if no courses are available.
 
-skillsection:
+
+skill_section:
   description: >
     Convert the applicant's skills data into LaTeX format.
 
@@ -181,10 +178,7 @@ skillsection:
     2. **Skill Categories**: 
        - Use \subTitle{} to introduce each skill category.
        - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
-       - Limit the number of categories to 5, try including both exact and partial match skills relevant to the job.
-       - Include both exact and partial matches in the appropriate categories. Limit each category to a minimum of 3 to a maximum of 5 skills. The intention is to provide a balanced representation number of the applicant's skills.
     3. The expected output is only the category and items, not any explanation or additional text.
-    4. No need to mention whether the skills are a partial or exact match.
 
     Example:
 
@@ -205,7 +199,7 @@ skillsection:
 
   expected_output: >
 
-volunteersection:
+volunteer_section:
   description: >
     Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
 
@@ -235,7 +229,7 @@ volunteersection:
     
   expected_output: >
 
-referencessection:
+references_section:
   description: >
     Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
@@ -273,7 +267,7 @@ referencessection:
 
   expected_output: >
 
-careerobjectivesection:
+career_objective_section:
   description: >
     Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
 
@@ -295,34 +289,38 @@ exp_item_count_chooser:
     **Procedure**:
       - For each experience entry, determine if a link is included.
       - Create a field "Link found" either "True" or "False" based on the presence of a link within that entry.
-      - Create a field "Allow Item Count" with the determined value based on the rules below.
+      - Create a field "Allow Key Highlights Count" with the determined value based on the rules below.
 
       Rules:
-      - If a link is present, "Allow Item Count": "2". No need to actually remove anything.
-      - If no link is present, "Allow Item Count": "3". No need to actually remove anything.
+      - If a link is present, "Allow Key Highlights Count": "2". No need to actually remove anything.
+      - If no link is present, "Allow Key Highlights Count": "3". No need to actually remove anything.
       - Do not change or remove any other content of the JSON object in the output.
 
     **Output**:
-    - A JSON object with the same entries as the input but with the "Link found" and "Allow Item Count" fields added.
+    - A JSON object with the same entries as the input and the "Link found" and "Allow Key Highlights Count" fields added.
   expected_output: >
+    A JSON object with the same entries as the input and the "Link found" and "Allow Key Highlights Count" fields added.
 
-expItemChooser:
+exp_item_chooser:
   description: >
-    Trim the "Key Highlights" for each entry based on the "Allow Item Count," ensuring that the highlights retained are most relevant to the job description.
+    Trim the "Key Highlights" for each entry based on the "Allow Key Highlights Count," ensuring that the highlights retained are most relevant to the job description.
 
     **Procedure**:
-    - Retrieve "Allow Item Count" for each entry and assess the key highlights.
-    - Prioritize highlights that:
-      - Demonstrate measurable achievements or skills critical to the job.
-      - Highlight significant contributions or use of key technologies.
+    - Check what is the value of "Allow Key Highlights Count" for that entry.
+    - You need to keep only the "Allow Key Highlights Count" number of key highlights for that entry. In case there are more key highlights, keep them based on the: 
+      -- priority of relevance and impact.
+      -- Demonstrate measurable achievements or skills critical to the job.
+      -- Highlight significant contributions or use of key technologies.
 
     **Output**:
     - A JSON object that mirrors the structure of the input but includes only the prioritized key highlights for each entry.
+    - For Example, if "Allow Key Highlights Count" is "2", the "Key Highlights" array should contain only the best 2 highlights based on relevance and impact for that entry. 
+    - Similar steps should be followed for all entries.
 
   expected_output: >
     A JSON object with adjusted "Key Highlights" for each entry, reflecting prioritization based on relevance and impact relative to the job description.
 
-summaryPointSelector:
+summary_point_selector:
   description: >
     You are provided with multiple experiences in JSON format. 
     **Select Summary Points**: 
@@ -336,7 +334,7 @@ summaryPointSelector:
 
   expected_output: >
 
-linkHandler:
+link_handler:
   description: >
     You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array.
     
@@ -349,7 +347,7 @@ linkHandler:
 
   expected_output: >
 
-linkLatex:
+link_latex:
   description: >
     You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array. 
 
@@ -363,7 +361,7 @@ linkLatex:
     - Do not change or remove any other content of the json object.
   expected_output: >
 
-experiencesection:
+experience_section:
   description: >
     Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
 
@@ -408,6 +406,7 @@ exp_latex_verified:
     - Ensure the curly braces are correctly opened and closed.
     - do not change the command names.
     - Check for special characters and escape them properly.
+    - Check for double asterisks and format them with \textbf{}.
   expected_output: >
     A latex document with the experience section that is verified for syntax and correctness.
 
