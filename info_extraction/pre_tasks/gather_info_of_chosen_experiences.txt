@@ -1,0 +1,52 @@
+{
+  "Total Object Count": 3,
+  "Most Recent Experience": {
+    "Title": "ATS Pass AI",
+    "Timeline": "January 2024 - Present",
+    "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
+    "Skills": "Research, Data Analysis, Python, JavaScript",
+    "Link": null,
+    "Short Description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
+    "Key Highlights": [
+      "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities.",
+      "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+      "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and commitment to innovation."
+    ],
+    "Team size": null,
+    "Outcomes": null
+  },
+  "Additional Relevant Experiences": [
+    {
+      "Title": "Blockchain Car Mileage Tracker",
+      "Timeline": "January 2023 - Mar 2023",
+      "Technologies, frameworks, and tools Used": "Docker | Vue.js",
+      "Skills": "Blockchain Development, Solidity, Web Development",
+      "Link": "[GitHub Link.](https://github.com/vmsaif/blockChainCarMilageTracker)",
+      "Short Description": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
+      "Key Highlights": [
+        "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
+        "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
+        "Solving a real-world problem by crafting a **smart contract** for tamper-proof mileage recording, enhancing trust in vehicle history.",
+        "Collaborated closely as a team to design, develop, and test the application, demonstrating strong team collaboration and problem-solving skills."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    },
+    {
+      "Title": "AI Path Finding",
+      "Timeline": "Jul 2023 - Sep 2023",
+      "Technologies, frameworks, and tools Used": "A* Algorithm | Java | Git | CI/CD",
+      "Skills": "AI, Machine Learning, Java, Game Development",
+      "Link": "[GitHub](https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm)",
+      "Short Description": "A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.",
+      "Key Highlights": [
+        "Utilized Git for version control, ensuring efficient team collaboration and code management.",
+        "Utilized CI/CD practices, **resulting in a 50% reduction** in deployment time.",
+        "Enhanced problem-solving and analytical skills through the implementation of the A* pathfinding algorithm.",
+        "Applied fundamental software development and testing processes to ensure robust application performance."
+      ],
+      "Team size": null,
+      "Outcomes": null
+    }
+  ]
+}

@@ -403,7 +403,7 @@ exp_latex_verified:
     - Ensure the curly braces are correctly opened and closed.
     - do not change the command names.
     - Check for special characters and escape them properly.
-    - Check for double asterisks and format them with \textbf{}.
+    - Check for double asterisks (**word**) and format them with \textbf{word}.
   expected_output: >
     A latex document with the experience section that is verified for syntax and correctness.
 

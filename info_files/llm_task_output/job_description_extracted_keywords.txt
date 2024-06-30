@@ -1,51 +1,47 @@
 ```json
 {
-  "Role": "Software Developer",
-  "Company": "Robinhood Markets",
-  "Location": "Not specified, see job posting for details",
-  "Industry": "Fintech, Financial Services, Technology",
+  "Role": "Software Developer - Reliability",
+  "Company": "Robinhood",
+  "Location": "Not Specified", 
+  "Industry": "FinTech, Software Development, Distributed Systems", 
 
   "Essential Skills": [
     "Software Development",
     "Distributed Systems",
+    "Scalability",
     "High Availability",
     "Low Latency",
-    "Scalability",
     "Cloud Computing (AWS)",
-    "Microservices",
-    "CI/CD",
-    "Automation",
-    "Observability",
     "Python",
     "Go",
-    "Kubernetes",
-    "Kafka",
-    "Celery",
-    "RabbitMQ",
-    "nginx",
-    "Redis",
-    "Postgres",
-    "Airflow",
-    "Consul"
+    "Container Orchestration (Kubernetes)",
+    "Microservices",
+    "CI/CD",
+    "Observability",
+    "Problem Solving",
+    "Collaboration",
+    "Communication"
   ],
 
   "Industry Terms": [
-    "Fintech",
-    "Financial Markets",
-    "Democratizing Finance",
     "Reliability Engineering",
-    "Outages",
-    "SEVs (Severity Events)",
-    "Workflows",
-    "Container Orchestration"
+    "SEV (Severity Event)",
+    "Outage Tracking",
+    "Workflow Monitoring",
+    "Fault Tolerance",
+    "Container Orchestration",
+    "Microservice Architecture", 
+    "Public Cloud",
+    "Infrastructure as Code" 
   ],
 
   "Company Values & Culture": [
+    "Inclusive",
+    "Welcoming",
     "Growth-minded",
     "Collaborative",
+    "Democratizing Finance",
     "Mission-driven",
-    "Customer-focused",
-    "Inclusive",
     "Diversity",
     "Equal Opportunity"
   ],
@@ -53,41 +49,34 @@
   "Action Verbs": [
     "Design",
     "Implement",
-    "Optimize",
-    "Lead",
-    "Ensure",
+    "Evolve",
+    "Maintain",
     "Collaborate",
+    "Build",
+    "Ensure",
     "Track",
     "Monitor",
     "Identify",
     "Remediate",
+    "Engineer",
+    "Optimize",
     "Improve",
-    "Build",
-    "Evolve",
-    "Maintain"
+    "Automate",
+    "Lead",
+    "Own"
   ],
 
-  "Frequency and Emphasis": [
-    "Reliability",
-    "Scalability",
-    "High Availability",
-    "Distributed Systems",
-    "AWS",
-    "Python",
+  "Prioritized Keywords": [
+    "Python", 
     "Go",
-    "Growth",
-    "Collaboration"
-  ],
-
-  "Essential vs. Preferred Qualifications": {
-    "Essential": [
-      "Fluent in one or more programming languages (e.g., Go, Python, Java)",
-      "Experience authoring and operating high-scale services",
-      "Experience with scalable distributed systems"
-    ],
-    "Preferred": [
-      "Experience with Python/Django/Go and AWS"
-    ]
-  }
+    "AWS",
+    "Distributed Systems",
+    "Scalability",
+    "High Availability", 
+    "Reliability Engineering",
+    "Microservices",
+    "Kubernetes", 
+    "CI/CD"
+  ]
 }
 ``` 

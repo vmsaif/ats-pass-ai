@@ -1,38 +1,29 @@
-Join a leading fintech company that’s democratizing finance for all.
+**Job Application for Software Developer - Reliability at Robinhood**
 
-Robinhood Markets was founded on a simple idea: that our financial markets should be accessible to all. With customers at the heart of our decisions, Robinhood and its subsidiaries and affiliates are lowering barriers and providing greater access to financial information. Together, we are building products and services that help create a financial system everyone can participate in.
-With growth as the top priority...
-
-The business is seeking curious, growth-minded thinkers to help shape our vision, structures and systems; playing a key-role as we launch into our ambitious future. If you’re invigorated by our mission, values, and drive to change the world — we’d love to have you apply.
-
-About the team + role
-
+**About the team + role**
 Join our Reliability Engineering team, focused on designing, evolving, and maintaining large-scale distributed systems. As a Software Developer, you'll collaborate across teams to build robust, scalable systems that ensure high availability and low latency.
 
-The Reliability team currently has two significant areas of focus
-
-Building our company wide software system that tracks all outages/SEVs for the organization. A sophisticated tool where all product/infra teams collaborate to identify, remediate, and track significant outages.
-Track and monitor our most critical workflows for the business, identifying issues early and being a critical component of long term reliable performance of these core workflows.
+The Reliability team currently has two significant areas of focus:
+* Building our company wide software system that tracks all outages/SEVs for the organization. A sophisticated tool where all product/infra teams collaborate to identify, remediate, and track significant outages.
+* Track and monitor our most critical workflows for the business, identifying issues early and being a critical component of long term reliable performance of these core workflows.
 
 As Software Developer, you will combine your software and systems knowledge to engineer distributed systems that are reliable, scaleable and fault-tolerant for Robinhood. You will be part of the larger infrastructure organization where you will work cross functionally with other infra teams to make that a reality.
 
 Our technology stack is primarily built using Python/Go and implemented using container orchestration technologies such as Kubernetes. We also build our systems using microservice-oriented architectures and related OSS technologies (e.g Kafka, Celery/RabbitMQ, nginx, Redis, Postgres, Airflow, Consul, etc.). Our systems are primarily built within AWS.
 
-What you’ll do
+**What you’ll do**
+* Design and Implement new features and services with a focus on high availability, low latency, and scalability.
+* Continually optimize systems and workflows by improving architecture, infrastructure, automation, CI/CD and observability.
+* Act as an owner and leader of Robinhood's infrastructure by ensuring project infrastructure needs are met and working proactively with customer teams to help them improve reliability.
 
-Design and Implement new features and services with a focus on high availability, low latency, and scalability.
-Continually optimize systems and workflows by improving architecture, infrastructure, automation, CI/CD and observability.
-Act as an owner and leader of Robinhood's infrastructure by ensuring project infrastructure needs are met and working proactively with customer teams to help them improve reliability.
+**What you bring**
+* Fluent in one or more programming languages (e.g. Go, Python, Java).
+* Experience authoring and operating high-scale services.
+* Experience with scalable distributed systems, either built from scratch or on public Cloud (e.g. AWS) primitives.
+* Pluses if you have experience with Python/Django/Go and AWS
 
-What you bring
+**Our team is here to enable an inclusive and welcoming interview experience for all candidates.** If you need additional assistance throughout the interview process related to a physical or mental condition, or if there is something our team can do to enable a more accessible experience at any time, please notify our team by completing this Applicant Accommodation Form.
 
-Fluent in one or more programming languages (e.g. Go, Python, Java).
-Experience authoring and operating high-scale services.
-Experience with scalable distributed systems, either built from scratch or on public Cloud (e.g. AWS) primitives.
-Pluses if you have experience with Python/Django/Go and AWS
+**We’re looking for more growth-minded and collaborative people to be a part of our journey in democratizing finance for all.** If you’re ready to give 100% in helping us achieve our mission—we’d love to have you apply even if you feel unsure about whether you meet every single requirement in this posting. At Robinhood, we're looking for people invigorated by our mission, values, and drive to change the world, not just those who simply check off all the boxes.
 
-Our team is here to enable an inclusive and welcoming interview experience for all candidates. If you need additional assistance throughout the interview process related to a physical or mental condition, or if there is something our team can do to enable a more accessible experience at any time, please notify our team by completing this Applicant Accommodation Form.
-
-We’re looking for more growth-minded and collaborative people to be a part of our journey in democratizing finance for all. If you’re ready to give 100% in helping us achieve our mission—we’d love to have you apply even if you feel unsure about whether you meet every single requirement in this posting. At Robinhood, we're looking for people invigorated by our mission, values, and drive to change the world, not just those who simply check off all the boxes.
-
-Robinhood embraces a diversity of backgrounds and experiences and provides equal opportunity for all applicants and employees. We are dedicated to building a company that represents a variety of backgrounds, perspectives, and skills. We believe that the more inclusive we are, the better our work (and work environment) will be for everyone. Additionally, Robinhood provides reasonable accommodations for candidates on request and respects applicants' privacy rights. Please review the specific Robinhood Privacy Policy applicable to the country where you are applying.
+**Robinhood embraces a diversity of backgrounds and experiences and provides equal opportunity for all applicants and employees.** We are dedicated to building a company that represents a variety of backgrounds, perspectives, and skills. We believe that the more inclusive we are, the better our work (and work environment) will be for everyone. Additionally, Robinhood provides reasonable accommodations for candidates on request and respects applicants' privacy rights. Please review the specific Robinhood Privacy Policy applicable to the country where you are applying.

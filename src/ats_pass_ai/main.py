@@ -7,15 +7,15 @@ import time
 from datetime import timedelta
 import traceback
 from textwrap import dedent
-from ats_pass_ai.limiter import printRemainingRequestsPerDay
-from ats_pass_ai.resume_crew import ResumeCrew
+from ats_pass_ai.resume_crew.tools.limiter import printRemainingRequestsPerDay
+from ats_pass_ai.resume_crew.resume_crew import ResumeCrew
 from ats_pass_ai.themes_crew.omega_theme.omega_theme_crew import OmegaThemeCrew
-from ats_pass_ai.tools.rag_search_tool import RagSearchTool
-from ats_pass_ai.tools.llm_task import LLMTask
-from ats_pass_ai.tools.web_scraper import WebScraper
+from ats_pass_ai.resume_crew.tools.rag_search_tool import RagSearchTool
+from ats_pass_ai.resume_crew.tools.llm_task import LLMTask
+from ats_pass_ai.resume_crew.tools.web_scraper import WebScraper
 from ats_pass_ai.output_file_paths import PATHS
 from ats_pass_ai.timer import Timer
-from ats_pass_ai.latex_generator import compile_latex
+from ats_pass_ai.themes_crew.omega_theme.latex_generator import compile_latex
 # First, Lets Organize the applicant Information provided by the applicant.
 
 from crewai.telemetry import Telemetry
@@ -110,13 +110,13 @@ def run():
 
         with Timer() as t:
             # Change the override to True to force the extraction, ie, new job description
-            job_description_extractor = LLMTask("Job desc keyword extraction", 
+            jd_keywords_extractor = LLMTask("Job desc keyword extraction", 
                                                 PATHS["jd_file_path"], 
                                                 jd_extracted_keywords_file_path, 
                                                 jd_extraction_system_instruction, 
                                                 override=True
                                         )
-            # job_description_extractor.run()
+            # jd_keywords_extractor.run()
         jd_extraction_time = t.interval
 
         with Timer() as t:
@@ -135,18 +135,19 @@ def run():
                 crew.kickoff()
 
                 # sleep 10 secs
-                # time.sleep(10)
+                time.sleep(10)
                 
-
             except Exception as e:
                 traceback.print_exc()
-                exit(1)
+                time.sleep(20)
+                crew.kickoff()
+
         crew_run_time = t.interval
     
         with Timer() as t:
             try:
                  omega_theme_crew = OmegaThemeCrew().crew()
-                 omega_theme_crew.kickoff()
+                #  omega_theme_crew.kickoff()
             except Exception as e:
                  traceback.print_exc()
 

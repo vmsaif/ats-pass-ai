@@ -1,0 +1,298 @@
+{
+  "combined skills list of applicant": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": [ 
+          "Programming Language",
+          "Backend Development",
+          "etc..."
+        ]
+        
+      },
+      {
+        "Name": "Java",
+        "field": [ 
+          "Programming Language",
+          "Backend Development",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "JavaScript",
+        "field": [ 
+          "Programming Language",
+          "Frontend Development",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "MySQL",
+        "field": [ 
+          "Database",
+          "Data Analysis",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "noSQL",
+        "field": [ 
+          "Database",
+          "Data Analysis",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "C++",
+        "field": [ 
+          "Programming Language",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Schema",
+        "field": [ 
+          "Database",
+          "Data Analysis",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "RAG Search",
+        "field": [ 
+          "Data Mining",
+          "Search and Retrieval",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [ 
+          "Development Environment",
+          "Virtualization",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "CI/CD",
+        "field": [ 
+          "Cloud & DevOps",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "GitHub Action",
+        "field": [ 
+          "Cloud & DevOps",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "AWS",
+        "field": [ 
+          "Cloud & DevOps",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [ 
+          "JavaScript Framework",
+          "Frontend Development",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": [ 
+          "Artificial Intelligence",
+          "Computer Science",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "3D Graphics",
+        "field": [ 
+          "Computer Graphics",
+          "Virtual Reality",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [ 
+          "Computer Graphics",
+          "Virtual Reality",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "ELF",
+        "field": [ 
+          "Computer Science",
+          "Operating Systems",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [ 
+          "Database",
+          "Data Analysis",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Android Studio",
+        "field": [ 
+          "Development Environment",
+          "Mobile Development",
+          "etc..."
+        ]
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "Angular",
+        "field": [ 
+          "JavaScript Framework",
+          "Frontend Development",
+          "etc..."
+        ]
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Adaptability",
+        "field": [ 
+          "Soft Skills",
+          "Interpersonal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Communication",
+        "field": [ 
+          "Soft Skills",
+          "Interpersonal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Problem Solving",
+        "field": [ 
+          "Soft Skills",
+          "Analytical Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Critical Thinking",
+        "field": [ 
+          "Soft Skills",
+          "Analytical Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Complexity Analysis",
+        "field": [ 
+          "Soft Skills",
+          "Analytical Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Teamwork",
+        "field": [ 
+          "Soft Skills",
+          "Interpersonal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Time Management",
+        "field": [ 
+          "Soft Skills",
+          "Personal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "System Analysis",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      },
+      {
+        "Name": "Web and Mobile Technologies",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      },
+      {
+        "Name": "OOP",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      },
+      {
+        "Name": "Data Structures",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      },
+      {
+        "Name": "SDLC",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      },
+      {
+        "Name": "Debugging and Troubleshooting",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      },
+      {
+        "Name": "Test driven deployment",
+        "field": [ 
+          "Programming Concepts",
+          "Software Engineering"
+        ]
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Interpersonal Skills",
+        "field": [ 
+          "Soft Skills",
+          "Communication",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Analytical Skills",
+        "field": [ 
+          "Soft Skills",
+          "Problem Solving",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Personal Skills",
+        "field": [ 
+          "Soft Skills",
+          "Time Management",
+          "etc..."
+        ]
+      }
+    ]
+  }
+}

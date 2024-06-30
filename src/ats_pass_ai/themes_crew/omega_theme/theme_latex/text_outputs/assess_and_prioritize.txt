@@ -1,12 +1,30 @@
 ```json
 {
-  "Prioritized Section": {
-    "Education": [],
-    "Relevant Coursework": [],
-    "Volunteer Work": [],
-    "Awards": [],
-    "References": [],
-    "Traits": []
+  "Prioritized Sections": {
+    "Relevant Coursework": [
+      {
+        "Sub-section 1": "Distributed Computing (Python | JavaScript)"
+      },
+      {
+        "Sub-section 2": "Data Structures and Algorithms (Java)"
+      },
+      {
+        "Sub-section 3": "Software Engineering (Java | Unit Testing)"
+      }
+    ],
+    "Education": [
+      {
+        "Sub-section 1": "BSc, Computer Science, University of Manitoba, October 2023, GPA: 3.07"
+      }
+    ],
+    "References": [
+      {
+        "Sub-section 1": "Abu Kabir, Director IT Service Management, Microsoft, Contact: 204-298-3693"
+      },
+      {
+        "Sub-section 2": "Safiur Mahdi, Java Developer, Skip the Dishes, Contact: 204-583-3432"
+      }
+    ]
   }
 }
 ```

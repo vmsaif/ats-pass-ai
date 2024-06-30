@@ -1,36 +1,58 @@
+```json
 {
-    "careerGoalBody": {
-        "Link found": "False",
-        "Allow Key Highlights Count": "3"
+  "applicant's Experiences with ATS Keywords": {
+    "total object count:": 3,
+    "Most Recent Experience": {
+      "Title": "ATS Pass AI",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search",
+      "Skills": "Machine Learning, NLP, Python, AI Algorithms, Data Analysis",
+      "Short Description": "Led the development of a multi-agent AI system to create tailored resumes, enhancing job search efficiency.",
+      "Key Highlights": [
+        "Utilized Python and advanced AI models for dynamic resume personalization, demonstrating strong data analysis skills.",
+        "Developed innovative algorithms to optimize resume relevance, significantly improving candidate matching success rates."
+      ],
+      "Team size": null,
+      "Outcomes": null,
+      "Link Found": "False",
+      "Allow Key Highlights Count": "3",
+      "Summary Points": "AI, Python, Data Analysis"
     },
-    "experiences": [
-        {
-            "position": "DevOps Engineer",
-            "company": "XYZ Company",
-            "location": "San Francisco, California",
-            "duration": "2 years",
-            "startDate": "2020-06-01",
-            "endDate": "2022-06-01",
-            "Summary Points": []
-        },
-        {
-            "position": "Software Engineer",
-            "company": "ABC Company",
-            "location": "New York, New York",
-            "duration": "5 years",
-            "startDate": "2015-06-01",
-            "endDate": "2020-06-01",
-            "Summary Points": []
-        }
-    ],
-    "skills": [
-        {
-            "skillName": "Java",
-            "yearsOfExperience": "5"
-        },
-        {
-            "skillName": "Python",
-            "yearsOfExperience": "3"
-        }
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "ELF Binary Analysis Tool",
+        "Department/Domain": "Software Engineering",
+        "Timeline": "November 2022 - December 2022",
+        "Duration": "2 Months",
+        "Technologies": "C Programming | Debugging | Linux OS",
+        "skills": "C Programming, Debugging, System Analysis, Linux OS",
+        "Short Description": "Developed a C-based ELF header analysis tool, emphasizing debugging and system analysis skills.",
+        "Key Highlights": [
+          "Demonstrated expertise in C for ELF binary parsing, showcasing proficiency in low-latency system operations.",
+          "Introduced automated testing and debugging frameworks, improving code stability and reducing development time."
+        ],
+        "Link Found": "False",
+        "Allow Key Highlights Count": "3",
+        "Summary Points": "C Programming, Debugging, Linux OS"
+      },
+      {
+        "Project Title": "Blockchain Car Mileage Tracker",
+        "Department/Domain": "Blockchain Development",
+        "Timeline": "January 2023 - Mar 2023",
+        "Duration": "3 Months",
+        "Technologies": "Docker | Vue.js | Blockchain | Smart Contracts | Solidity",
+        "skills": "Blockchain Development, Vue.js, Docker, Smart Contracts, Solidity",
+        "Short Description": "Developed a blockchain application for secure vehicle mileage tracking and verification.",
+        "Key Highlights": [
+          "Leveraged blockchain technology and smart contracts, demonstrating adaptability and a commitment to learning.",
+          "Enhanced data integrity and transparency for secure mileage recording, showcasing strong data analysis skills."
+        ],
+        "Link Found": "False",
+        "Allow Key Highlights Count": "3",
+        "Summary Points": "Blockchain, Solidity, Data Analysis"
+      }
     ]
+  }
 }
+```

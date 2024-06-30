@@ -8,7 +8,7 @@
     "Personal Website": "saifmahmud.dev",
     "Portfolio": null,
     "GitHub": null,
-    "Address": "Winnipeg, MB",
+    "Address": null,
     "City": "Winnipeg",
     "State": "MB",
     "Zip Code": null,

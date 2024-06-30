@@ -1,0 +1,189 @@
+{
+  "Skills List": {
+    "Technologies": [
+      {
+        "Name": "Python",
+        "field": [ 
+          "Programming Language",
+          "Backend Development",
+          "etc..."
+        ]
+        
+      },
+      {
+        "Name": "Java",
+        "field": [ 
+          "Programming Language",
+          "Backend Development",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "RAG Search",
+        "field": [ 
+          "Data Mining",
+          "Search and Retrieval",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [ 
+          "Development Environment",
+          "Virtualization",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [ 
+          "JavaScript Framework",
+          "Frontend Development",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "A* Algorithm",
+        "field": [ 
+          "Artificial Intelligence",
+          "Computer Science",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "3D Graphics",
+        "field": [ 
+          "Computer Graphics",
+          "Virtual Reality",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [ 
+          "Computer Graphics",
+          "Virtual Reality",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "ELF",
+        "field": [ 
+          "Computer Science",
+          "Operating Systems",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [ 
+          "Database",
+          "Data Analysis",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Android Studio",
+        "field": [ 
+          "Development Environment",
+          "Mobile Development",
+          "etc..."
+        ]
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "Angular",
+        "field": [ 
+          "JavaScript Framework",
+          "Frontend Development",
+          "etc..."
+        ]
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Adaptability",
+        "field": [ 
+          "Soft Skills",
+          "Interpersonal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Communication",
+        "field": [ 
+          "Soft Skills",
+          "Interpersonal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Problem Solving",
+        "field": [ 
+          "Soft Skills",
+          "Analytical Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Critical Thinking",
+        "field": [ 
+          "Soft Skills",
+          "Analytical Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Complexity Analysis",
+        "field": [ 
+          "Soft Skills",
+          "Analytical Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Teamwork",
+        "field": [ 
+          "Soft Skills",
+          "Interpersonal Skills",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Time Management",
+        "field": [ 
+          "Soft Skills",
+          "Personal Skills",
+          "etc..."
+        ]
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Interpersonal Skills",
+        "field": [ 
+          "Soft Skills",
+          "Communication",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Analytical Skills",
+        "field": [ 
+          "Soft Skills",
+          "Problem Solving",
+          "etc..."
+        ]
+      },
+      {
+        "Name": "Personal Skills",
+        "field": [ 
+          "Soft Skills",
+          "Time Management",
+          "etc..."
+        ]
+      }
+    ]
+  }
+}

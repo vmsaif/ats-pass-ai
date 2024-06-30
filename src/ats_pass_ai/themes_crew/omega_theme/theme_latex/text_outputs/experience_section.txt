@@ -1,23 +1,35 @@
-\section{Experience}
+\section{Project Experience}
 
-\customTitle{DevOps Engineer}
- \roleAndTimeline{XYZ Company, San Francisco, California | June 2020 - June 2022}
+\customTitle{ATS Pass AI}
+\summaryPoints{Python | Multiagent | AI}
+\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
 
-\shortDescription{...}
-
-\begin{tightemize}
-    \item ...
-    \item ...
-    \item ...
-\end{tightemize} 
-
-\customTitle{Software Engineer}
- \roleAndTimeline{ABC Company, New York, New York | June 2015 - June 2020}
-
-\shortDescription{...}
+\shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
 
 \begin{tightemize}
-    \item ...
-    \item ...
-    \item ...
+    \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization}.
+    \item Utilized Multiagent AI to enhance the system's adaptability.
+    \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+\end{tightemize}
+
+\customTitle{ELF Binary Analysis Tool}
+\summaryPoints{C Programming | Debugging | Linux OS}
+\roleAndTimeline{Software Engineering - November 2022 - December 2022}
+
+\shortDescription{Developed a C-based ELF header analysis tool, emphasizing debugging and system analysis skills.}
+
+\begin{tightemize}
+    \item Demonstrated expertise in C for ELF binary parsing, showcasing proficiency in low-latency system operations.
+    \item Introduced automated testing and debugging frameworks, improving code stability and reducing development time.
+\end{tightemize}
+
+\customTitle{Blockchain Car Mileage Tracker}
+\summaryPoints{Blockchain | Solidity | Data Analysis}
+\roleAndTimeline{Blockchain Development - January 2023 - March 2023}
+
+\shortDescription{Developed a blockchain application for secure vehicle mileage tracking and verification.}
+
+\begin{tightemize}
+    \item Leveraged blockchain technology and smart contracts, demonstrating adaptability and a commitment to learning.
+    \item Enhanced data integrity and transparency for secure mileage recording, showcasing strong data analysis skills.
 \end{tightemize}

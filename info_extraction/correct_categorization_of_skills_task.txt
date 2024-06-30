@@ -1,0 +1,29 @@
+{
+  "Programming Languages": [
+    "Python",
+    "Java",
+    "Go",
+    "C++"
+  ],
+  "Cloud & DevOps": [
+    "AWS",
+    "CI/CD",
+    "Kubernetes",
+    "Microservices",
+    "Docker"
+  ],
+  "Databases": [
+    "noSQL",
+    "MySQL"
+  ],
+  "Data Analysis": [
+    "Jupyter Notebook"
+  ],
+  "Soft Skills": [
+    "Communication",
+    "Problem Solving",
+    "Teamwork",
+    "Critical Thinking",
+    "Collaboration"
+  ]
+}
