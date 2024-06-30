@@ -1,17 +1,1 @@
-**Artificial Intelligence Engineer**
-
-**Essential Responsibilities:**
-
-* Design and develop innovative AI models
-* Analyze and preprocess data for machine learning applications
-* Collaborate with AI teams to enhance algorithms and models
-* Present research findings and engage in critical team discussions
-* Contribute to the development of AI virtual agents
-
-**Essential Qualifications:**
-
-* Bachelor's or Master's in Computer Science, AI, or related fields
-* Profound knowledge of AI, machine learning, and NLP
-* Expertise in Python and AI development frameworks like TensorFlow or PyTorch
-* Strong analytical, problem-solving, and creative thinking skills
-* Excellent communication and teamwork abilities
+The Software Developer at Robinhood Markets joins the Reliability Engineering team to design, evolve, and maintain large-scale, distributed systems. As part of the larger infrastructure organization, the ideal candidate collaborates across teams to build robust, scalable systems that ensure high availability and low latency while optimizing systems and workflows by improving architecture, infrastructure, automation, CI/CD, and observability. Acting as an owner and leader of Robinhood's infrastructure, this individual ensures that project infrastructure needs are met and works proactively with customer teams to help them improve reliability. The qualified applicant is fluent in one or more programming languages like Go, Python, or Java, and has experience authoring and operating high-scale services with scalable distributed systems, either built from scratch or on public Cloud primitives. Experience with Python/Django/Go and AWS is a plus.

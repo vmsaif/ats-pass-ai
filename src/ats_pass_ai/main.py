@@ -12,6 +12,7 @@ from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.themes_crew.omega_theme.omega_theme_crew import OmegaThemeCrew
 from ats_pass_ai.tools.rag_search_tool import RagSearchTool
 from ats_pass_ai.tools.llm_task import LLMTask
+from ats_pass_ai.tools.web_scraper import WebScraper
 from ats_pass_ai.output_file_paths import PATHS
 from ats_pass_ai.timer import Timer
 from ats_pass_ai.latex_generator import compile_latex
@@ -26,9 +27,6 @@ for attr in dir(Telemetry):
     if callable(getattr(Telemetry, attr)) and not attr.startswith("__"):
         setattr(Telemetry, attr, noop)
 
-applicant_info_file_path = PATHS["applicant_info_file_path"]
-jd_file_path = PATHS["jd_file_path"]
-
 # After organizing the applicant information, we will extract the keywords from the job description 
 applicant_info_orgainzed_file_path = PATHS["applicant_info_organized"]
 jd_extracted_keywords_file_path = PATHS["jd_keyword_extraction"]
@@ -37,31 +35,31 @@ def run():
     with Timer() as total_time:
         # This will not run if there is already an organized file,
         organize_system_instruction = dedent("""
-                    Task: Content Organization and Structuring
-                    Objective: Reorganize provided unstructured content into a clear, structured format without missing any details. Every detail in the content is important and should be included in the final output.
-                    
-                    Instructions:
-                    1. Comprehension: Read the content to understand the themes and details. Each section should have a description of more than 2 lines on what it contains as it will help doing symanctic search on this document later.
-                                             
-                    2. Identification:
-                        - Begin with identifying and documenting key personal identification details such as the applicant's name, contact information, location, phone number, and email address etc.
-                        - Use the heading '# Personal Details' for this section.
-                    3. Structure Development: 
-                        - Write a description of each Category of more than 2 lines of what it contains. For example, if you have a section called "References", write, "This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant."
-                                             
-                        For Coursework, you can write, "This section contains the courses taken by the Applicant during their academic career."
-                                             
-                        - Main Categories: Identify and label key themes with '#'.
-                        - Subcategories: Create necessary subcategories under each main category with '##'.
-                    4. Content Handling:
-                        - Preservation: Ensure all original information (links, dates, names) is included.
-                        - Clarity and Readability: Use clear headings, subheadings, and bullet points to enhance readability.
-                    5. Personal Content Handling:
-                        - Summarize personal narratives or self-descriptions in third-person, without categorization.
-                    6. Final Review: Check the structured content for completeness, accuracy, and coherence. Make any necessary adjustments, ensuring that related information is grouped together. Also ensure that each section has a description of more than 2 lines on what it contains.
-                                            
-                    Outcome: Deliver a well-organized document that maintains all original details in an accessible format.
-                    """)
+    Task: Content Organization and Structuring
+    Objective: Reorganize provided unstructured content into a clear, structured format without missing any details. Every detail in the content is important and should be included in the final output.
+    
+    Instructions:
+    1. Comprehension: Read the content to understand the themes and details. Each section should have a description of more than 2 lines on what it contains as it will help doing symanctic search on this document later.
+                                
+    2. Identification:
+        - Begin with identifying and documenting key personal identification details such as the applicant's name, contact information, location, phone number, and email address etc.
+        - Use the heading '# Personal Details' for this section.
+    3. Structure Development: 
+        - Write a description of each Category of more than 2 lines of what it contains. For example, if you have a section called "References", write, "This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant."
+                                
+        For Coursework, you can write, "This section contains the courses taken by the Applicant during their academic career."
+                                
+        - Main Categories: Identify and label key themes with '#'.
+        - Subcategories: Create necessary subcategories under each main category with '##'.
+    4. Content Handling:
+        - Preservation: Ensure all original information (links, dates, names) is included.
+        - Clarity and Readability: Use clear headings, subheadings, and bullet points to enhance readability.
+    5. Personal Content Handling:
+        - Summarize personal narratives or self-descriptions in third-person, without categorization.
+    6. Final Review: Check the structured content for completeness, accuracy, and coherence. Make any necessary adjustments, ensuring that related information is grouped together. Also ensure that each section has a description of more than 2 lines on what it contains.
+                            
+    Outcome: Deliver a well-organized document that maintains all original details in an accessible format.
+    """)
 
         # Now, lets extract the keywords from the job description
         jd_extraction_system_instruction = dedent("""
@@ -90,37 +88,11 @@ def run():
         * **Essential vs. Preferred Qualifications:** Distinguish between mandatory and preferred skills.
 
     5. Keyword List Creation: Compile the extracted keywords into a structured json format, categorized for easy reference.
-    
-    6. Partial Match Skills:
-        * Create a list of "partial match" skills, categorizing skills that correspond to broader skills mentioned in the job description.
-        * Format as JSON:
-        {
-            "list of skills": {
-                "Essential Skills": [
-                    {
-                        "Name": "Skill 1", 
-                        "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
-                    },
-                    {
-                        "Name": "Skill 2", 
-                        "Partial_Match": ["Partial Match 1", "Partial Match 2, upto 5"]
-                    }
-                ]
-            }
-        }
-        
-    
-    7. ATS Optimization Tips:
-        * **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume.
-        * **Keyword Density:** Use keywords thoughtfully without "keyword stuffing."
-        * **Tailoring and Customization:** Adapt keywords and content for each job application.
-
-    Outcome: A comprehensive list of relevant keywords and actionable tips to optimize resume for ATS algorithms and human reviewers, enhancing interview prospects.
     """)
 
         with Timer() as t:
             organizer = LLMTask("Applicant Info Organize", 
-                            applicant_info_file_path, 
+                            PATHS["applicant_info_file_path"], 
                             applicant_info_orgainzed_file_path, 
                             organize_system_instruction, 
                             override=True
@@ -128,10 +100,18 @@ def run():
             # organizer.run()
         info_organizing_time = t.interval
 
+        # Fetch the job description from the webpage link
+        with Timer() as t:
+            web_scraper_tool = WebScraper('https://boards.greenhouse.io/robinhood/jobs/6022269?gh_src=NaN&gh_jid=6022269')
+            
+            # web_scraper_tool.run()
+
+        jd_fetch_time = t.interval
+
         with Timer() as t:
             # Change the override to True to force the extraction, ie, new job description
             job_description_extractor = LLMTask("Job desc keyword extraction", 
-                                                jd_file_path, 
+                                                PATHS["jd_file_path"], 
                                                 jd_extracted_keywords_file_path, 
                                                 jd_extraction_system_instruction, 
                                                 override=True
@@ -149,13 +129,13 @@ def run():
                 # ----- Delete the applicant profile files 
                 # ------But not the folder To start fresh
 
-                # RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
+                RagSearchTool.delete_applicant_profile_files(delete_pretasks = True)
 
                 crew = ResumeCrew().crew()
-                # crew.kickoff()
+                crew.kickoff()
 
                 # sleep 10 secs
-                time.sleep(10)
+                # time.sleep(10)
                 
 
             except Exception as e:
@@ -170,7 +150,7 @@ def run():
             except Exception as e:
                  traceback.print_exc()
 
-            compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
+            # compile_latex(tex_path = PATHS["omega_theme_final_output_tex"], sub_tex_files_dir = PATHS['sub_tex_files_dir'], output_dir = PATHS["omega_theme_final_output_pdf"])
         
         latex_generation_time = t.interval
 
@@ -180,6 +160,7 @@ def run():
     print("---- Time Statistics -----")
 
     print_task_time("applicant Info Organizing", info_organizing_time)
+    print_task_time("JD Fetch", jd_fetch_time)
     print_task_time("JD Extraction", jd_extraction_time)
     print_task_time("Indexing", indexing_time)
     print_task_time("Crew Run", crew_run_time)

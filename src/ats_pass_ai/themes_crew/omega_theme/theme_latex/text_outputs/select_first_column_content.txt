@@ -2,28 +2,9 @@
 {
   "selected_sections": {
     "Section": {
-      "Section Name": "Education",
+      "Section Name": "References",
       "Sub-sections": [
-        {
-          "Degree": "BSc",
-          "Major": "Computer Science",
-          "University": "University of Manitoba",
-          "Graduation Date": "October 2023",
-          "GPA": "3.07"
-        }
-      ]
-    },
-    "Section": {
-      "Section Name": "Relevant Coursework",
-      "Sub-sections": [
-        {
-          "Distributed Computing (Python | JavaScript)",
-          "Data Structures and Algorithms (Java)",
-          "Object Orientation (Java | C++)",
-          "Software Engineering (Java | Unit Testing)",
-          "Database Implementation (SQL | Python)",
-          "AI and Game Development (Java | Python)"
-        }
+        {"References": }
       ]
     }
   }

@@ -79,38 +79,38 @@ class ResumeCrew:
 		
 		if(not self.profile_already_created()):
 			my_tasks.append(self.personal_information_extraction_task())
-			my_tasks.append(self.education_extraction_task())
-			my_tasks.append(self.volunteer_work_extraction_task())
-			my_tasks.append(self.awards_recognitions_extraction_task())
-			my_tasks.append(self.references_extraction_task())
-			my_tasks.append(self.personal_traits_interests_extraction_task())
-			my_tasks.append(self.work_experience_extraction_task())
-			my_tasks.append(self.project_experience_extraction_task())
-			my_tasks.append(self.skills_from_exp_and_project_task())
-			my_tasks.append(self.skills_extraction_task())
-			my_tasks.append(self.profile_builder_task())
+			# my_tasks.append(self.education_extraction_task())
+			# my_tasks.append(self.volunteer_work_extraction_task())
+			# my_tasks.append(self.awards_recognitions_extraction_task())
+			# my_tasks.append(self.references_extraction_task())
+			# my_tasks.append(self.personal_traits_interests_extraction_task())
+			# my_tasks.append(self.work_experience_extraction_task())
+			# my_tasks.append(self.project_experience_extraction_task())
+			# my_tasks.append(self.skills_from_exp_and_project_task())
+			# my_tasks.append(self.skills_extraction_task())
+			# my_tasks.append(self.profile_builder_task())
 
 		# Either way, these tasks will be executed.
 		# // SKILLS MATCHING //
 
-		my_tasks.append(self.ats_friendly_skills_task()) # --------- uses large llm
-		my_tasks.append(self.split_context_of_ats_friendly_skills_task())
-		my_tasks.append(self.split_missing_skills_task())
+		# my_tasks.append(self.ats_friendly_skills_task()) # --------- uses large llm
+		# my_tasks.append(self.split_context_of_ats_friendly_skills_task())
+		# my_tasks.append(self.split_missing_skills_task())
 
-		my_tasks.append(self.correct_categorization_of_skills_task())
+		# my_tasks.append(self.correct_categorization_of_skills_task())
 		
-		#### my_tasks.append(self.reduce_missing_skills_task())
+		# #### my_tasks.append(self.reduce_missing_skills_task())
 
-		# // EXPERIENCE MATCHING //
-		my_tasks.append(self.experience_choosing_task()) 
-		my_tasks.append(self.split_context_of_experience_choosing_task())
-		my_tasks.append(self.gather_info_of_chosen_experiences())
+		# # // EXPERIENCE MATCHING //
+		# my_tasks.append(self.experience_choosing_task()) 
+		# my_tasks.append(self.split_context_of_experience_choosing_task())
+		# my_tasks.append(self.gather_info_of_chosen_experiences())
 
-		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # ---uses large llm
-		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
+		# my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) # ---uses large llm
+		# my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
-		my_tasks.append(self.coursework_extraction_task())
-		my_tasks.append(self.career_objective_task())  # --------------------------- uses large llm
+		# my_tasks.append(self.coursework_extraction_task())
+		# my_tasks.append(self.career_objective_task())  # --------------------------- uses large llm
 
 
 
@@ -276,7 +276,6 @@ class ResumeCrew:
 		# Either way these context is needed to complete the task.
 
 		context.append(self.correct_categorization_of_skills_task())
-		context.append(self.coursework_extraction_task())
 		context.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 		context.append(self.career_objective_task())
 
@@ -292,16 +291,14 @@ class ResumeCrew:
 			context.insert(0, self.profile_builder_task()) 
 
 		if(self.debugFlag):
-			paths = [
+			pathsArr = [
 				"correct_categorization_of_skills_task",
-				"coursework_extraction_task",
 				"split_context_of_ats_friendly_keywords_into_experiences",
 				"career_objective_task",
 				"profile_builder_task"
 			]
-			description = description + "\n" + self.load_paths(paths)
+			description = description + "\n" + self.load_paths(pathsArr)
 
-		print
 		return Task(
 			description=description,
 			expected_output=expected_output,
@@ -633,10 +630,9 @@ class ResumeCrew:
 		yaml = self.yaml_loader('ats_friendly_keywords_into_experiences')
 		
 		jd_keywords = self.load_file(PATHS["jd_keyword_extraction"])
-		missing_from_the_applicant_skills = self.load_file(PATHS["split_missing_skills_task"])
 		today_date = datetime.date.today().strftime("%B %d, %Y")
 		
-		task_description = yaml[0].format(jd_keywords = jd_keywords, missing_from_the_applicant_skills = missing_from_the_applicant_skills, today_date = today_date)
+		task_description = yaml[0].format(jd_keywords = jd_keywords, today_date = today_date)
 		expected_output = yaml[1]
 
 		# add gathered info of chosen experiences
@@ -702,22 +698,22 @@ class ResumeCrew:
 			print(f"Error opening or reading the file {file_path}: {e}")
 			return ""
 
-	def load_all_files(self, directory_path) -> str:
-		# Initialize the text
-		all_text = ""
-		entries = os.listdir(directory_path)
-		for entry in entries:
-			# Construct full file path
-			full_path = os.path.join(directory_path, entry)
-			# Open the file and read its contents
-			if(os.path.isfile(full_path)):
-				try:
-					with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
-						all_text += file.read() + "\n"  # Append text with a newline to separate files
-				except IOError as e:
-					print(f"Error opening or reading the file {full_path}: {e}")
+	# def load_all_files(self, directory_path) -> str:
+	# 	# Initialize the text
+	# 	all_text = ""
+	# 	entries = os.listdir(directory_path)
+	# 	for entry in entries:
+	# 		# Construct full file path
+	# 		full_path = os.path.join(directory_path, entry)
+	# 		# Open the file and read its contents
+	# 		if(os.path.isfile(full_path)):
+	# 			try:
+	# 				with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
+	# 					all_text += file.read() + "\n"  # Append text with a newline to separate files
+	# 			except IOError as e:
+	# 				print(f"Error opening or reading the file {full_path}: {e}")
 
-		return all_text
+	# 	return all_text
 
 	def yaml_loader(self, task_name):
 		# load the yaml file

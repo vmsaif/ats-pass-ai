@@ -12,7 +12,7 @@ import agentops
 from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmCategory
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-
+from ats_pass_ai.resume_crew import ResumeCrew
 from ats_pass_ai.limiter import Limiter
 from ats_pass_ai.output_file_paths import PATHS
 
@@ -46,7 +46,7 @@ class OmegaThemeCrew:
 
 	debugFlag = False
 
-	debugFlag = True
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -54,26 +54,26 @@ class OmegaThemeCrew:
 
 		tasks = [
 				self.name_section(),
-				self.concise_jd_task(),
+				# self.concise_jd_task(),
 
-				self.assess_and_prioritize(),
-				self.select_first_column_content(),
+				# self.assess_and_prioritize(),
+				# self.select_first_column_content(),
 
-				self.education_section(),
-				self.coursework_section(),
-				self.volunteer_section(),
-				self.references_section(), 
+				# self.education_section(),
+				# self.coursework_section(),
+				# self.volunteer_section(),
+				# self.references_section(), 
 
-				self.skill_section(),
-				self.career_objective_section(),
+				# self.skill_section(),
+				# self.career_objective_section(),
 
-				self.exp_item_count_chooser(),
-				self.exp_item_chooser(),
-				self.summary_point_selector(),
-				self.link_handler(),
-				self.link_latex(),
-				self.experience_section(),
-				self.exp_latex_verified()
+				# self.exp_item_count_chooser(),
+				# self.exp_item_chooser(),
+				# self.summary_point_selector(),
+				# self.link_handler(),
+				# self.link_latex(),
+				# self.experience_section(),
+				# self.exp_latex_verified()
 			]
 		
 		# Return the crew
@@ -165,12 +165,15 @@ class OmegaThemeCrew:
 		yaml = self.yaml_loader("name_section", True)
 		description = yaml[0]
 		expected_output = yaml[1]
-		description = description + "\n\n" + self.load_file(PATHS["personal_information_extraction_task"])
+		
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(PATHS["personal_information_extraction_task"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
+			context=[ResumeCrew().personal_information_extraction_task()],
 			output_file=PATHS["name_section"],
 			callback=self.small_token_limiter
 		)
@@ -481,24 +484,24 @@ class OmegaThemeCrew:
 			with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
 				return file.read()
 		except IOError as e:
-			print(f"Error opening or reading the file {file_path}: {e}")
+			print(f"Omega Theme: Error opening or reading the file {file_path}: {e}")
 			return ""
 
-	def load_all_files(self, directory_path) -> str:
-		# Initialize the text
-		all_text = ""
-		entries = os.listdir(directory_path)
-		for entry in entries:
-			# Construct full file path
-			full_path = os.path.join(directory_path, entry)
-			# Open the file and read its contents
-			if(os.path.isfile(full_path)):
-				try:
-					with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
-						all_text += file.read() + "\n"  # Append text with a newline to separate files
-				except IOError as e:
-					print(f"Error opening or reading the file {full_path}: {e}")
-		return all_text
+	# def load_all_files(self, directory_path) -> str:
+	# 	# Initialize the text
+	# 	all_text = ""
+	# 	entries = os.listdir(directory_path)
+	# 	for entry in entries:
+	# 		# Construct full file path
+	# 		full_path = os.path.join(directory_path, entry)
+	# 		# Open the file and read its contents
+	# 		if(os.path.isfile(full_path)):
+	# 			try:
+	# 				with open(full_path, 'r', encoding='utf-8', errors='ignore') as file:
+	# 					all_text += file.read() + "\n"  # Append text with a newline to separate files
+	# 			except IOError as e:
+	# 				print(f"Error opening or reading the file {full_path}: {e}")
+	# 	return all_text
 
 	def yaml_loader(self, item_name, is_task):
 		# load the yaml file

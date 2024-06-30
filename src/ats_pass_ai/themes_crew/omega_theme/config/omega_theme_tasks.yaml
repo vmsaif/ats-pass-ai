@@ -168,7 +168,6 @@ coursework_section:
   expected_output: >
     A LaTeX section for "Relevant Courses" formatted according to the instructions, or LaTeX comments if no courses are available.
 
-
 skill_section:
   description: >
     Convert the applicant's skills data into LaTeX format.
@@ -176,7 +175,7 @@ skill_section:
     **Instructions**:
     1. **Section Header**: Begin with the section title using \section{Skills}.
     2. **Skill Categories**: 
-       - Use \subTitle{} to introduce each skill category.
+       - Use `\subTitle{}` to introduce each skill category.
        - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
     3. The expected output is only the category and items, not any explanation or additional text.
 
@@ -212,7 +211,8 @@ volunteer_section:
     - In the first line, use the command `\section{Volunteer}`.
     - Use `\headingtwo{}` for organization name.
     - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
-    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`.
+    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+    - Do not make more than 2 items.
 
     Example:
     '''latex
@@ -224,9 +224,6 @@ volunteer_section:
         \item Designed the official logo, social media posts, receipts and other official document formats.
       \end{vitemize}
     '''
-
-
-    
   expected_output: >
 
 references_section:
@@ -322,16 +319,15 @@ exp_item_chooser:
 
 summary_point_selector:
   description: >
-    You are provided with multiple experiences in JSON format. 
-    **Select Summary Points**: 
-      Take a look at the "Technologies, frameworks, and tools Used" and "Skills" fields. Choose 3-4 summary points for each experience where each summary point is a maximum of 1-2 words or all together summary points are 4-5 words. 
-      
-      If there are more than 3-4 summary points, select the most relevant ones that represent that experience. Try to prioritize tech names or skill names. 
-      
-      A the end, Then remove the "Technologies, frameworks, and tools Used" and "Skills" fields from the JSON object. Create a new field named "Summary Points" and add the selected summary points there. 
+    **Procedure**:
+    - Review the "Technologies, frameworks, and tools Used" and "Skills" for each experience.
+    - Select 3-4 summary points from these fields, ensuring each point consists of 1-2 words. The combined length of all summary points must not exceed 4 words.
+    - Prioritize the inclusion of specific technologies and skill names that best represent the experience.
+    - Remove the original "Technologies, frameworks, and tools Used" and "Skills" fields from each entry.
+    - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
 
-      Do not change any wording or other fields of the JSON object. This is important.
-
+    **Output**:
+    - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, reflecting the concise highlights of each experience.
   expected_output: >
 
 link_handler:
@@ -390,6 +386,7 @@ experience_section:
 
         \begin{tightemize}
             \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
+            \item Utilized Multiagent AI to enhance the system's adaptability.
             \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
         \end{tightemize}
 

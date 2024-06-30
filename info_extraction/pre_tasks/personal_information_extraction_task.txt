@@ -7,7 +7,7 @@
     "Other Social Media Profiles": null,
     "Personal Website": "saifmahmud.dev",
     "Portfolio": null,
-    "GitHub": "https://github.com/vmsaif",
+    "GitHub": null,
     "Address": "Winnipeg, MB",
     "City": "Winnipeg",
     "State": "MB",

@@ -1,132 +1,93 @@
-## Job Description Keyword and Phrase Extraction for Resume Optimization: Artificial Intelligence Engineer at Radical AI
-
-**1. Introduction:**
-
-* **Role:** Artificial Intelligence Engineer 
-* **Company:** Radical AI
-* **Location:** Remote 
-* **Industry:** Artificial Intelligence, Social Good, Technology, Education 
-
-**2. Thorough Analysis:**
-
-This job description emphasizes a strong ethical and social justice framework alongside technical AI skills. Candidates should highlight their alignment with Radical AI's mission and values, demonstrating their commitment to responsible AI development and social impact.  Technical expertise in generative AI, machine learning, and NLP is crucial, along with experience using specific tools like OpenAI API, Meta Llama 2, and Google Gemini.  
-
-**3. Keyword Categorization:**
-
-**Essential Skills:**
-
-* **Hard Skills:**  Artificial Intelligence (AI), Machine Learning, Deep Learning, Natural Language Processing (NLP), Generative AI, Data Analysis, Algorithm Development, Model Design, Python, TensorFlow, PyTorch, OpenAI API, Meta Llama 2, Google Gemini, LangChain, Google Gen AI Studio, Virtual Agent Development
-* **Soft Skills:** Analytical Skills, Problem-Solving, Creative Thinking, Collaboration, Teamwork, Communication, Research Presentation
-
-**Industry Terms:** 
-* AI for Social Good, Responsible AI,  Data Preprocessing, AI Models, Algorithm Enhancement, Virtual Internship
-
-**Company Values & Culture:**
-* Democratizing AI, Equitable Progress, Social Mobility,  Resisting Oppression, Collective Liberation,  Power Dynamics in Technology, Radical Work,  Ethics in AI,  Reflexivity
-
-**Action Verbs:**
-
-* Design, Develop, Analyze, Preprocess, Collaborate, Enhance, Present, Contribute,  Program 
-
-**4. Prioritization and Relevance:**
-
-**Frequency and Emphasis:**
-
-* **High Priority:** AI, Machine Learning, Deep Learning, NLP,  Generative AI,  Python,  OpenAI API,  Meta Llama 2,  Google Gemini,   Social Good, Responsible AI, Ethical AI
-* **Medium Priority:** TensorFlow, PyTorch,  LangChain, Google Gen AI Studio, Data Analysis, Algorithm Development, Collaboration, Communication 
-* **Lower Priority:** (Still relevant) Virtual Agent Development, Research Presentation 
-
-**Essential vs. Preferred Qualifications:**
-
-* **Essential:** Bachelor’s or Master's in Computer Science, AI, or related fields, Proven knowledge of AI, Machine Learning, and NLP,  Expertise in Python and AI development frameworks
-* **Preferred:**  Experience with Virtual Agent Development, Strong research and presentation skills
-
-**5. Keyword List (JSON Format):**
-
 ```json
 {
-  "keywords": {
-    "Essential Skills": [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Deep Learning",
-      "Natural Language Processing (NLP)",
-      "Generative AI",
-      "Data Analysis",
-      "Algorithm Development",
-      "Python",
-      "TensorFlow",
-      "PyTorch",
-      "OpenAI API",
-      "Meta Llama 2",
-      "Google Gemini",
-      "Problem-Solving",
-      "Collaboration",
-      "Communication"
+  "Role": "Software Developer",
+  "Company": "Robinhood Markets",
+  "Location": "Not specified, see job posting for details",
+  "Industry": "Fintech, Financial Services, Technology",
+
+  "Essential Skills": [
+    "Software Development",
+    "Distributed Systems",
+    "High Availability",
+    "Low Latency",
+    "Scalability",
+    "Cloud Computing (AWS)",
+    "Microservices",
+    "CI/CD",
+    "Automation",
+    "Observability",
+    "Python",
+    "Go",
+    "Kubernetes",
+    "Kafka",
+    "Celery",
+    "RabbitMQ",
+    "nginx",
+    "Redis",
+    "Postgres",
+    "Airflow",
+    "Consul"
+  ],
+
+  "Industry Terms": [
+    "Fintech",
+    "Financial Markets",
+    "Democratizing Finance",
+    "Reliability Engineering",
+    "Outages",
+    "SEVs (Severity Events)",
+    "Workflows",
+    "Container Orchestration"
+  ],
+
+  "Company Values & Culture": [
+    "Growth-minded",
+    "Collaborative",
+    "Mission-driven",
+    "Customer-focused",
+    "Inclusive",
+    "Diversity",
+    "Equal Opportunity"
+  ],
+
+  "Action Verbs": [
+    "Design",
+    "Implement",
+    "Optimize",
+    "Lead",
+    "Ensure",
+    "Collaborate",
+    "Track",
+    "Monitor",
+    "Identify",
+    "Remediate",
+    "Improve",
+    "Build",
+    "Evolve",
+    "Maintain"
+  ],
+
+  "Frequency and Emphasis": [
+    "Reliability",
+    "Scalability",
+    "High Availability",
+    "Distributed Systems",
+    "AWS",
+    "Python",
+    "Go",
+    "Growth",
+    "Collaboration"
+  ],
+
+  "Essential vs. Preferred Qualifications": {
+    "Essential": [
+      "Fluent in one or more programming languages (e.g., Go, Python, Java)",
+      "Experience authoring and operating high-scale services",
+      "Experience with scalable distributed systems"
     ],
-    "Industry Terms": [
-      "AI for Social Good",
-      "Responsible AI",
-      "Data Preprocessing",
-      "AI Models",
-      "Virtual Internship"
-    ],
-    "Company Values": [
-      "Democratizing AI",
-      "Equitable Progress",
-      "Social Mobility",
-      "Ethics in AI"
-    ],
-    "Action Verbs": [
-      "Design",
-      "Develop",
-      "Analyze",
-      "Collaborate",
-      "Enhance",
-      "Present",
-      "Contribute"
+    "Preferred": [
+      "Experience with Python/Django/Go and AWS"
     ]
   }
 }
-```
-
-**6. Partial Match Skills (JSON Format):**
-
-```json
-{
-  "list of skills of Job Description": {
-    "Essential Skills of Job Description": [
-      {
-        "Name": "Machine Learning",
-        "Partial_Match": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Deep Learning Architectures", "Model Evaluation Metrics"]
-      },
-      {
-        "Name": "Natural Language Processing (NLP)",
-        "Partial_Match": ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Modeling", "Text Generation"]
-      },
-      {
-        "Name": "Data Analysis",
-        "Partial_Match": ["Data Cleaning", "Data Visualization", "Statistical Analysis", "Data Interpretation", "Exploratory Data Analysis (EDA)"]
-      },
-      {
-        "Name": "Python",
-        "Partial_Match": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
-      },
-      {
-        "Name": "Collaboration",
-        "Partial_Match": ["Teamwork", "Cross-functional Communication", "Agile Methodologies", "Project Management", "Version Control (e.g., Git)"]
-      }
-    ]
-  }
-}
-```
-
-**7. ATS Optimization Tips:**
-
-* **Strategic Keyword Placement:** Integrate keywords naturally throughout your resume, especially in the "Skills" and "Experience" sections. Use complete phrases whenever possible.
-* **Keyword Density:**  Use keywords thoughtfully without "keyword stuffing." Focus on relevance and clarity.
-* **Tailoring and Customization:**  Adapt keywords and content for each job application, aligning your experience with the specific requirements outlined in the job description.
-* **Quantify Achievements:**  Whenever possible, use numbers and metrics to demonstrate the impact of your work, especially aligning with Radical AI's focus on social good.
-* **Company Values Alignment:** In your cover letter and resume summary, articulate how your values and experiences resonate with Radical AI's mission of democratizing AI for social good and ethical considerations.
-
-By following these tips and leveraging the extracted keywords, you can significantly optimize your resume for both ATS algorithms and human reviewers, increasing your chances of securing an interview with Radical AI. 
+``` 

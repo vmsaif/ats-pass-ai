@@ -174,17 +174,26 @@ class RagSearchTool:
 
     def _delete_files_in_directory(directory_path):
         """Helper function to delete all files in the specified directory and print the operation results."""
+        
         print(f"Deleting files in directory: {directory_path}")
-        entries = os.listdir(directory_path)
-        for entry in entries:
-            full_path = os.path.join(directory_path, entry)
-            if os.path.isfile(full_path):
-                try:
-                    os.remove(full_path)
-                    print(f"Deleted file: {full_path}")
-                except PermissionError as e:
-                    print(f"Could not delete {full_path}. Permission denied: {e}")
-                except Exception as e:
-                    print(f"Error while deleting {full_path}: {e}")
-            else:
-                print(f"Skipped: {full_path} (not a file)")
+        try:
+            if not os.path.exists(directory_path):
+                print(f"Directory does not exist: {directory_path}")
+                return
+            
+            entries = os.listdir(directory_path)
+            for entry in entries:
+                full_path = os.path.join(directory_path, entry)
+                if os.path.isfile(full_path):
+                    try:
+                        os.remove(full_path)
+                        print(f"Deleted file: {full_path}")
+                    except PermissionError as e:
+                        print(f"Could not delete {full_path}. Permission denied: {e}")
+                    except Exception as e:
+                        print(f"Error while deleting {full_path}: {e}")
+                else:
+                    print(f"Skipped: {full_path} (not a file)")
+        except Exception as e:
+            print(f"Error while deleting files in directory: {e}")
+        

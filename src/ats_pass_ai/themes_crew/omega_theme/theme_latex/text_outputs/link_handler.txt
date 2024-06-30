@@ -1,64 +1,36 @@
-```json
 {
-  "applicant's Experiences with ATS Keywords": {
-    "total object count:": 3,
-    "Most Recent Experience": {
-      "Title": "ATS Pass AI",
-      "Timeline": "January 2024 - Present",
-      "Duration": "7 Months",
-      "Technologies, frameworks, and tools Used": "Multiagent | AI | Python | RAG Search | CrewAI, LangChain, Gemini",
-      "Skills": "Artificial Intelligence | Machine Learning |  Natural Language Processing (NLP) | Python | Data Analysis | Algorithm Development | OpenAI API | Meta Llama 2 | Google Gemini",
-      "Summary Points": "Multiagent | AI | Python",
-      "Key Highlights": [
-        "Utilized advanced AI models, including OpenAI API, Meta Llama 2, and Google Gemini, to dynamically personalize resumes for ATS optimization.",
-        "Engineered a system to extract user data and analyze job descriptions with RAG Search, achieving over 85% keyword alignment.",
-        "https://github.com/vmsaif/ats-pass-ai"
-      ],
-      "Team size": null,
-      "Outcomes": null,
-      "Link found": true,
-      "Allow Key Highlights Count": 3
+    "careerGoalBody": {
+        "Link found": "False",
+        "Allow Key Highlights Count": "3"
     },
-    "Work Experience/Project Experience": [
-      {
-        "Job Title": "ELF Binary Analysis",
-        "Company": null,
-        "Location": null,
-        "Timeline": "November 2022 - December 2022",
-        "Duration": "2 Months",
-        "Technologies, frameworks, and tools Used": "C | Storage System | OS",
-        "Skills": "C Programming | Debugging | Linux OS | Data Analysis",
-        "Summary Points": "C | Debugging",
-        "Key Highlights": [
-          "Implemented advanced C programming techniques to navigate and interpret ELF formatted binaries.",
-          "Utilized debugging methods to identify and resolve parsing errors, showcasing strong analytical and problem-solving abilities.",
-          "https://github.com/vmsaif/readingAndInterpretingBinary"
-        ],
-        "Team size": null,
-        "Outcomes": null,
-        "Link found": true,
-        "Allow Key Highlights Count": 3
-      },
-      {
-        "Job Title": "OpenGL Sphere Lighting",
-        "Company": null,
-        "Location": null,
-        "Timeline": "April 2023 - June 2023",
-        "Duration": "3 Months",
-        "Technologies, frameworks, and tools Used": "OpenGL | C++",
-        "Skills": "OpenGL | C++ |  Data Visualization",
-        "Summary Points": "OpenGL | C++",
-        "Key Highlights": [
-          "Developed an application featuring three distinct light sources to provide comprehensive insights into lighting effects.",
-          "Enhanced user interactivity by 50% through an interactive menu system, allowing for real-time modifications of light and material properties.",
-          "https://github.com/vmsaif/openGL-sphere-lighting-program"
-        ],
-        "Team size": null,
-        "Outcomes": null,
-        "Link found": true,
-        "Allow Key Highlights Count": 3
-      }
+    "experiences": [
+        {
+            "position": "DevOps Engineer",
+            "company": "XYZ Company",
+            "location": "San Francisco, California",
+            "duration": "2 years",
+            "startDate": "2020-06-01",
+            "endDate": "2022-06-01",
+            "Summary Points": []
+        },
+        {
+            "position": "Software Engineer",
+            "company": "ABC Company",
+            "location": "New York, New York",
+            "duration": "5 years",
+            "startDate": "2015-06-01",
+            "endDate": "2020-06-01",
+            "Summary Points": []
+        }
+    ],
+    "skills": [
+        {
+            "skillName": "Java",
+            "yearsOfExperience": "5"
+        },
+        {
+            "skillName": "Python",
+            "yearsOfExperience": "3"
+        }
     ]
-  }
 }
-```

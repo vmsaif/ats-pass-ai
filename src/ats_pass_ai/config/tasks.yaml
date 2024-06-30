@@ -86,7 +86,7 @@ volunteer_work_extraction_task:
             "Organization Name": "",
             "Name length in characters": "",
             "Role": "",
-            "Responsibilities": "",
+            "Responsibilities": "(upto 2 sentences, each sentence should not exceed 60 characters)",
             "Timeline": "",
             ...
           },
@@ -623,6 +623,9 @@ correct_categorization_of_skills_task:
 
     **Instructions**:
     - Use the provided web search tool to search for the skills that you are not familiar with to know in which field or category they belong.
+      -- To use the tool,
+        query: str = Field(description="What is {skill name}, what is it's comparable tools, technology?")
+
     - Ensure that each skill is correctly categorized based on its relevance and application.
     - If a skill is misclassified, move it to the appropriate category.
     - If a skill is not relevant to any category, create a new category and place it there.
@@ -808,7 +811,7 @@ ats_friendly_keywords_into_experiences:
     {jd_keywords}
 
     **Missing from the Applicant's Skills:**
-    {missing_from_the_applicant_skills}
+    Provided in the context.
 
     Count the total number of experiences. After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
 
@@ -917,7 +920,7 @@ coursework_extraction_task:
     
     The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
 
-    After extracting the coursework, order them based on relevance to the job description. Relevant courses should be prioritized. Keep 4-6 courses in the final output, ignore the rest.
+    After extracting the coursework, order them based on relevance to the job description. Relevant courses should be prioritized. Keep 4-6 courses in the final output, ignore the rest. Hint: Look for course names that match the job description keywords.
 
     If you did not find any coursework, simply provide an empty list.
 
@@ -1211,7 +1214,6 @@ resume_in_json_task:
         "..."
       ]
     }
-
 
 # professional_affiliations_task:
 #   description: >
