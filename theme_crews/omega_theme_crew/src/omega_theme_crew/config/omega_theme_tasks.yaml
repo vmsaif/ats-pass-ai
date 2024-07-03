@@ -1,0 +1,412 @@
+# Author: Saif Mahmud
+# Date: 2024-06-01
+# Description: This file generates the latex code tasks for the Omega Theme.
+# Version: 1.0
+
+name_section:
+  description: >
+    Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+
+    In the output, 
+    - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}.
+    - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol.
+    - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province.
+    - Pipeline '|' should be used to separate the data and must not be the last character of the output.
+
+    Example:
+    ```latex
+      \namesection{Saif}{Mahmud}
+      {
+        \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+        \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+      }
+    ```
+
+    Here is the information you need and convert into LaTeX format:
+  expected_output: >
+
+concise_jd_task:
+  description: >
+    Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+
+    The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+  expected_output: >
+    A concise summary of the job description, no more than 2000 characters, effectively outlining the main responsibilities and essential qualifications required for the role. This summary should provide enough information to facilitate effective decision-making regarding the inclusion of relevant sections in the applicant's resume.
+
+assess_and_prioritize:
+  description: >
+    Assess the relevance of each section in the applicant's profile and prioritize them based on their alignment with the provided job specifications. 
+
+    **Input Data Might Include**:
+    - Education, Relevant Courses, Volunteer Work, Awards, References, Traits, Miscellaneous
+
+    **Procedure**:
+    1. **Relevance Assessment**: Evaluate each section's relevance to the job's requirements.
+    2. **Prioritization**:
+       - You can safely ignore the "Skills" section. Do not include it in the output.
+       - Ignore empty sections.
+       - If available, "Relevant Coursework" is a section of its own. Do not make it a sub-section of Education. 
+       - Always prioritize at least one "Reference" sub-section if available.
+       - Focus on recent and impactful achievements and qualifications.
+       - Highlight Education and Awards for their impact.
+       - Consider broader sections like Personal Traits if they offer significant benefits.
+
+    **Output**:
+    - A JSON object listing sections and sub-sections prioritized by their relevance and impact, ready for final selection in the next task. No need for explanations, reasons or justifications in the output. The output will be in order of priority and their respective sub-sections. Do not remove sub-section fields.
+    Example:
+    ```json
+    {
+      "Prioritized Section": {
+        "Education": [{Sub-section 1}, {Sub-section 2}],
+        "Volunteer Work": [{Sub-section 1},...],
+        "Awards": [{Sub-section 1},...],
+        "References": [{Sub-section 1},...],
+        "Traits": [{Sub-section 1},...],
+      }
+    }
+    ```
+  expected_output: >
+    JSON object detailing sections and sub-sections prioritized for inclusion based on relevance to the job description and impact.
+
+select_first_column_content:
+  description: >
+    Select the final sections and sub-sections and omit the rest. You are given a JSON object which is prioritized based on relevance and impact of an applicant's profile.
+
+    **Procedure**:
+    - If the "Relevant Courses" section is provided, consider the list of courses as one sub-section, Include all courses provided.
+    - Always include at least one "Reference" sub-section if provided. 
+    - Opt for up to 2-3 sections and a total of up to 4 sub-sections across all sections.
+
+    **Output**:
+    - A JSON object of the final selection of sections and sub-sections.
+
+    Example:
+    ```json
+    {
+      "selected_sections": {
+        "Section": {
+          "Section Name": "Education",
+          "Sub-sections": [
+            {Sub-section 1}, 
+            {Sub-section 2}
+          ]
+        },
+        "Section": {
+          "Section Name": "another section name",
+          "Sub-sections": [
+            {Sub-section 3}, 
+            {Sub-section 4},
+            ...
+          ]
+        }
+      }
+    }
+    ```      
+
+  expected_output: >
+    Final JSON object showing the sections and sub-sections selected.
+
+education_section:
+  description: >
+    Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+
+    In the output,
+
+    If there is no educational information, write % \section{}, Like this:
+      % \section{Education} 
+
+    If there is educational information,
+    - The first line contains the section named "Education". Use the command \section{Education}.
+    - The next line contains the institution name. Use the command \customTitle{Institution Name}.
+    - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}.
+    - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}.
+    - If there are multiple education entries, the next line contains the command \newEntryVSpace to separate the education.
+    - Do not choose more than two educations. Choose the most recent ones.
+
+    Example:
+
+    \section{Education}
+      \customTitle{University of Manitoba}
+      \semiTitle{BSc Major in Computer Science}
+      \subTitle{Graduated, October 2023}
+
+      \newEntryVSpace % use it if there are multiple educations to separate them.
+      \customTitle{Second Institution}
+      ...
+
+    \sectionsep
+
+    Conditions:
+    - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+      % \section{}
+      % \sectionsep.
+    Here is the information you need and convert into LaTeX format:
+  expected_output: >
+
+coursework_section:
+  description: >
+    Format the applicant's coursework information into LaTeX under the "Relevant Courses" section.
+
+    **Instructions**:
+    - Start with the section title using \section{Relevant Courses} if there are courses available.
+    - List each course in \body{}, formatted as "Course Name (tool | tool) \\"
+    - A line ending with '\\' is necessary except for the last line.
+
+    **Example Output**:
+    \section{Relevant Courses}
+    \body{
+      Operating Systems (Linux | C) \\
+      Distributed Computing (Python) \\
+      Database Implementation (Python | SQL)
+    }
+
+    **Conditions**:
+    - Absence of course data should be marked with:
+      % \section{}
+      % \sectionsep
+
+  expected_output: >
+    A LaTeX section for "Relevant Courses" formatted according to the instructions, or LaTeX comments if no courses are available.
+
+skill_section:
+  description: >
+    Convert the applicant's skills data into LaTeX format.
+
+    **Instructions**:
+    1. **Section Header**: Begin with the section title using \section{Skills}.
+    2. **Skill Categories**: 
+       - Use `\subTitle{}` to introduce each skill category.
+       - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
+    3. The expected output is only the category and items, not any explanation or additional text.
+
+    Example:
+
+    \section{Skills}
+    \subTitle{Programming Languages:}
+    \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
+
+    \subTitle{AI and Machine Learning:}
+    \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI}
+
+    \subTitle{Soft Skills:}
+    \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork}
+
+    **Conditions**:
+    - If there are no skills provided, the output should be latex comments, starting with '%', like this:
+      % \section{}
+      % \sectionsep.
+
+  expected_output: >
+
+volunteer_section:
+  description: >
+    Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
+
+    In your output:
+    If there is no volunteer information, write % \section{}, Like this:
+      % \section{Volunteer} 
+      % \sectionsep.
+
+    If there is volunteer information:
+    - In the first line, use the command `\section{Volunteer}`.
+    - Use `\headingtwo{}` for organization name.
+    - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
+    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+    - Do not make more than 2 items.
+
+    Example:
+    '''latex
+    \section{VOLUNTEER}
+      \headingtwo{.dev Programming Club}
+      \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+      \begin{vitemize}
+        \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+        \item Designed the official logo, social media posts, receipts and other official document formats.
+      \end{vitemize}
+    '''
+  expected_output: >
+
+references_section:
+  description: >
+    Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+
+    In the output,
+    If there is no reference information, write % \section{}, Like this:
+      % \section{References} 
+      % \sectionsep.
+
+    Otherwise,
+    - The first line contains the section name "References". Use the command \section{References}.
+    - The next lines contain the reference information in the following format:
+      - Start with the command \section{Reference} if there is at least one reference.
+      - Use the command \subsection{} for the name of the reference.
+      - Use the command \subTitle{} for the position and company of the reference.
+      - Use the command \body{} for the contact information of the reference in the format of phone number and location, email if available.
+
+    Example:
+    \section{References}
+        \subsection{Abu Kabir}
+        \subTitle{Director, IT Service Management}
+        \subTitle{Microsoft Corporation}
+        \body{204-298-3693 | Winnipeg, MB}
+
+        \subsection{Safiur Mahdi}
+        \subTitle{Software Developer}
+        \subTitle{Skip The Dishes}
+        \body{204-583-3432 | Winnipeg, MB}
+
+    Conditions:
+    - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, each line starting with '%' like this:
+      % \section{}
+      % \sectionsep.
+
+    Here is the information you need and convert into LaTeX format:
+
+  expected_output: >
+
+career_objective_section:
+  description: >
+    Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+
+    In the output,
+    - The first line contains the section named "Career Objective". Use the command \section{Career Objective}.
+    - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+    
+    Example:
+    \section{Career Goal}
+        \careerGoalBody{
+            Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+  expected_output: >
+
+exp_item_count_chooser:
+  description: >
+    Evaluate and determine the number of allowable key highlights for each experience entry, adjusting based on link presence and total experience count.
+
+    **Procedure**:
+      - For each experience entry, determine if a link is included.
+      - Create a field "Link found" either "True" or "False" based on the presence of a link within that entry.
+      - Create a field "Allow Key Highlights Count" with the determined value based on the rules below.
+
+      Rules:
+      - If a link is present, "Allow Key Highlights Count": "2". No need to actually remove anything.
+      - If no link is present, "Allow Key Highlights Count": "3". No need to actually remove anything.
+      - Do not change or remove any other content of the JSON object in the output.
+
+    **Output**:
+    - A JSON object with the same entries as the input and the "Link found" and "Allow Key Highlights Count" fields added.
+  expected_output: >
+    A JSON object with the same entries as the input and the "Link found" and "Allow Key Highlights Count" fields added.
+
+exp_item_chooser:
+  description: >
+    Trim the "Key Highlights" for each entry based on the "Allow Key Highlights Count," ensuring that the highlights retained are most relevant to the job description.
+
+    **Procedure**:
+    - Check what is the value of "Allow Key Highlights Count" for that entry.
+    - You need to keep only the "Allow Key Highlights Count" number of key highlights for that entry. In case there are more key highlights, keep them based on the: 
+      -- priority of relevance and impact.
+      -- Demonstrate measurable achievements or skills critical to the job.
+      -- Highlight significant contributions or use of key technologies.
+
+    **Output**:
+    - A JSON object that mirrors the structure of the input but includes only the prioritized key highlights for each entry.
+    - For Example, if "Allow Key Highlights Count" is "2", the "Key Highlights" array should contain only the best 2 highlights based on relevance and impact for that entry. 
+    - Similar steps should be followed for all entries.
+
+  expected_output: >
+    A JSON object with adjusted "Key Highlights" for each entry, reflecting prioritization based on relevance and impact relative to the job description.
+
+summary_point_selector:
+  description: >
+    **Procedure**:
+    - Review the "Technologies, frameworks, and tools Used" and "Skills" for each experience.
+    - Select 3-4 summary points from these fields, ensuring each point consists of 1-2 words. The combined length of all summary points must not exceed 4 words.
+    - Prioritize the inclusion of specific technologies and skill names that best represent the experience.
+    - Remove the original "Technologies, frameworks, and tools Used" and "Skills" fields from each entry.
+    - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
+
+    **Output**:
+    - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, reflecting the concise highlights of each experience.
+  expected_output: >
+
+link_handler:
+  description: >
+    You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array.
+    
+    If a Link is present in the experience:
+    - Append the "Link" inside the "Key Highlights" array.
+    - Remove only the "Link" field from the experience. 
+    - Remove the "Allow Count" and "Count Reason" fields if present.
+    Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description" etc.
+    - Do not replace any key highlights.
+
+  expected_output: >
+
+link_latex:
+  description: >
+    You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array. 
+
+    **Procedure**:
+    - If a link is present in the "Key Highlights" array, format it in LaTeX using the \href{}{} command. 
+    - Write the link in as a sentence in the format. Understand what the link is about and write the sentence accordingly.
+      -- Example:
+      Assume the hyperlink is "profile" and the link is "https://www.linkedin.com/in/vmsaif/".
+
+    - "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}."
+    - Do not change or remove any other content of the json object.
+  expected_output: >
+
+experience_section:
+  description: >
+    Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+
+    Organize the experiences as follows:
+    - Title: Use \customTitle{Project/Experience Title}.
+    - Summary points: use \summaryPoints{item 1 | item 2 | item 3}. 
+    - Role and timeline: The provided role and its duration using \roleAndTimeline{Role | Timeline}.
+    - Short description: use \shortDescription{Short Description}.
+    - Key responsibilities and achievements: 
+      -- start 'tightemize' environment with \begin{tightemize} 
+      -- Each entry of "Key Highlights" will be each \item.
+      -- End the environment with \end{tightemize}.
+    
+    Special Character Handling:
+    - Use textbf{} for texts surrounded by double asterisks (**text**) in the "Key Highlights" array.
+    - Format links with \href{}{}, using \ul for underlining.
+    - Escape special characters appropriately (e.g., \%, \&, \#).
+
+    Example:
+    \section{Experience}
+    \customTitle{ATS Pass AI}
+        \summaryPoints{Python | Multiagent | AI}
+        \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+
+        \shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
+
+        \begin{tightemize}
+            \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
+            \item Utilized Multiagent AI to enhance the system's adaptability.
+            \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+        \end{tightemize}
+
+    \customTitle{Another Experience}
+        ... so on.
+  expected_output: >
+
+exp_latex_verified:
+  description: >
+    You are provided a latex document containing the experience section. You need to verify the latex code and its syntax.
+
+    **Instructions**:
+    - Check the latex code for any syntax errors.
+    - Ensure the curly braces are correctly opened and closed.
+    - do not change the command names.
+    - Check for special characters and escape them properly.
+    - Check for double asterisks (**word**) and format them with \textbf{word}.
+  expected_output: >
+    A latex document with the experience section that is verified for syntax and correctness.
+
+
+    
+    

@@ -1,0 +1,20 @@
+{
+  "Programming Languages": [
+    "Python",
+    "Java",
+    "Go",
+    "Django"
+  ],
+  "AI Frameworks": [
+    "LangChain",
+    "TensorFlow",
+    "HuggingFace",
+    "CrewAI"
+  ],
+  "Soft Skills": [
+    "Problem-solving",
+    "Communication",
+    "Collaboration",
+    "Ownership"
+  ]
+}

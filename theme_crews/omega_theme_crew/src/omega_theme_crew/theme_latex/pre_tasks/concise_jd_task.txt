@@ -1,0 +1,12 @@
+**Software Developer - Reliability (Robinhood)**
+
+**Responsibilities:**
+* Design and implement features and services prioritizing high availability, low latency, and scalability.
+* Optimize systems and workflows by refining architecture, infrastructure, automation, and observability.
+* Lead and maintain Robinhood's infrastructure, ensuring project needs are met and collaborating with teams to enhance reliability.
+
+**Qualifications:**
+* Proficiency in programming languages like Go, Python, or Java.
+* Experience developing and operating high-scale services.
+* Familiarity with scalable distributed systems built from scratch or using Cloud primitives (e.g., AWS).
+* Experience with Python/Django/Go and AWS is advantageous.

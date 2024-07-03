@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "resume_crew"
+version = "0.1.0"
+description = "A highly tailored resume maker tool powered by AI to pass the ats system." 
+authors = ["Saif Mahmud <msaifofficial@gmail.com>"]
+
+packages = [
+    { include = "resume_crew", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+langchain-google-genai = "^1.0.2"
+google-generativeai = "^0.5.2"
+agentops = "^0.1.9"
+duckduckgo-search = "^6.1.0"
+crewai = {extras = ["tools"], version = "^0.32.2"}
+sentence-transformers = "^3.0.1"
+shared = {path = "../shared"}
+
+[tool.poetry.scripts]
+resume_crew = "resume_crew.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

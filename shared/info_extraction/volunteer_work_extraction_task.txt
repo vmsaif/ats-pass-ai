@@ -1,0 +1,11 @@
+{
+  "Volunteer Work": [
+    {
+      "Organization Name": ".dev Programming Club",
+      "Name length in characters": 18,
+      "Role": "Active Member",
+      "Responsibilities": "Engaged with the latest software development technologies and tools. Collaborated on team projects focused on Java and Cloud Technologies.",
+      "Timeline": "2019-2023"
+    }
+  ]
+}

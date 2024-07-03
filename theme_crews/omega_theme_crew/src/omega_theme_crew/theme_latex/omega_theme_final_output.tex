@@ -1,0 +1,53 @@
+\documentclass[]{ats-pass-ai-openfront}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+  % Global Variables
+  \newcommand{\skillsVSpace}{\vspace{10pt}}
+  \newcommand{\newEntryVSpace}{\vspace{10pt}}
+  \newcommand{\betweenSummaryPointsVSpace}{\vspace{5pt}}
+  \newcommand{\betweenDescriptionVSpace}{5pt}
+  \newcommand{\sectionsep}{\vspace{10pt}}
+  \newcommand{\titemizeVSpaceAdjustment}{-7pt}
+
+  % Define lengths
+  \newlength{\leftcolwidth}
+  \newlength{\rightcolwidth}
+  \newlength{\hspacewidth}
+
+  % Set lengths
+
+  \setlength{\leftcolwidth}{0.40\textwidth}
+  \setlength{\rightcolwidth}{0.56\textwidth}
+  \setlength{\hspacewidth}{\textwidth - \leftcolwidth - \rightcolwidth-0.12cm}
+
+  % LAST UPDATED DATE
+
+  \lastupdated
+
+  \input{sub_tex_files_dir/name_section.tex}
+
+  \begin{minipage}[t]{\leftcolwidth}\raggedright
+      
+    \input{sub_tex_files_dir/education_section.tex}
+    \input{sub_tex_files_dir/coursework_section.tex}
+    
+    \input{sub_tex_files_dir/skill_section.tex}
+
+    \input{sub_tex_files_dir/volunteer_section.tex}
+    \input{sub_tex_files_dir/references_section.tex} 
+
+
+  \end{minipage}\hspace{\hspacewidth} 
+  \begin{minipage}[t]{\rightcolwidth}\raggedright
+
+    \input{sub_tex_files_dir/career_objective_section.tex}
+    \input{sub_tex_files_dir/exp_latex_verified.tex}
+
+    \afterpage{\clearpage}
+    
+  \end{minipage}
+\end{document}

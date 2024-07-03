@@ -1,8 +1,0 @@
-{
-  "Personal Traits and Interests": {
-    "Strengths": null,
-    "Hobbies": null,
-    "Passions": null,
-    "Weaknesses": null
-  }
-}

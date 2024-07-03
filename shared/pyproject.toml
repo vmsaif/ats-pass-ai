@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "shared"
+version = "0.1.6"
+description = ""
+authors = ["Saif Mahmud <msaifofficial@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "util", from = "src" },
+    { include = "path", from = "src" }
+]
+[tool.poetry.dependencies]
+python = "^3.10"
+prettytable = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

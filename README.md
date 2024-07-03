@@ -6,6 +6,14 @@
 
 The idea is to craft a unique resume for each job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 
 
+## We can use chatGPT to generate a resume for a job description. How is this different?
+
+### Problem With ChatGPT and Similar Chatbots: 
+The chatGPT model is a powerful tool for generating text based on a prompt. ChatGPT does somewhat well in generating resumes per the provided job description. However, to highly tailor a resume to a job description, is a multi-step process. Thus, a user needs to chat back and forth with the model to tailor the resume appropriately. This process is time-consuming and inefficient.
+
+There are so many things that need to be considered to achieve a high match rate with the job description. There comes the need for this project.
+
+### Solution:
 This program is your ultimate tool for creating highly personalized resumes efficiently, saving you time and increasing your chances of catching an employer's eye.
 
 ATS Pass AI is an innovative tool designed to automate the creation of personalized resumes. It utilizes several AI agents, each specializing in different aspects of the resume creation process. They collaborate to make the best possible resume for the user. The system is designed to help job seekers create resumes that are highly tailored to specific job descriptions, increasing their chances of passing through Applicant Tracking Systems (ATS) and landing interviews.

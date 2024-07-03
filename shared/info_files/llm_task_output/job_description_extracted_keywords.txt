@@ -1,0 +1,53 @@
+## Robinhood Software Developer - Reliability: Keyword and Phrase Extraction
+
+**Introduction:** This analysis extracts keywords and phrases from the Robinhood Software Developer - Reliability job description to optimize your resume for ATS and human reviewers.
+
+**Company Culture and Values:** 
+Robinhood emphasizes **democratizing finance**, **accessibility**, and **inclusivity**. They seek **growth-minded**, **collaborative** individuals driven by their mission. Robinhood values **diversity**, **varied perspectives**, and creating a welcoming environment for all. 
+
+**What Robinhood is looking for:**
+Robinhood seeks a Software Developer passionate about building **robust, scalable systems** for high availability and low latency. The ideal candidate has experience with **large-scale distributed systems**, cloud platforms like **AWS**, and programming languages like **Go, Python, and Java.** They value ownership, proactive problem-solving, and a commitment to continuous improvement.
+
+**What you can expect at Robinhood:** 
+Robinhood offers a collaborative and inclusive environment focused on growth and impactful work. They are dedicated to providing a welcoming interview experience and offer resources for accommodation requests. Robinhood provides a comprehensive benefits package, varying by region.
+
+**Keyword Categorization:**
+
+**Essential Skills:**
+
+* **Hard Skills:**  Software Development, Reliability Engineering, Distributed Systems, High Availability, Low Latency, Scalability, Cloud Computing (AWS), Automation, CI/CD, Observability, Infrastructure Management, Go, Python, Java, Django
+* **Soft Skills:** Collaboration, Ownership, Problem-Solving, Communication, Proactive, Continuous Improvement
+
+**Industry Terms:**
+
+* Fintech, Distributed Systems, High Availability, Low Latency, Scalability, Cloud Computing, AWS, CI/CD, Observability, Infrastructure as Code
+
+**Company Values & Culture:**
+
+* Democratizing Finance, Accessibility, Inclusivity, Growth-Minded, Collaborative, Diversity, Mission-Driven
+
+**Action Verbs:**
+
+* Design, Implement, Optimize, Improve, Ensure, Act, Lead, Collaborate, Author, Operate
+
+**Prioritization and Relevance:**
+
+**High Priority:**
+
+* **Frequently Mentioned:**  Reliability, Scalability, High Availability, Low Latency, Distributed Systems, AWS, Go, Python 
+* **Essential Qualifications:**  Fluent in one or more programming languages (Go, Python, Java), Experience with high-scale services, Experience with scalable distributed systems, Experience with Cloud platforms (AWS).
+
+**Medium Priority:**
+
+* Automation, CI/CD, Observability, Infrastructure Management, Django, Python/Django/Go and AWS
+
+**Preferred Qualifications:**
+
+* Experience with Python/Django/Go and AWS
+
+**Resume Optimization Tips:**
+
+* Mirror the language and keywords used in the job description.
+* Quantify your experience with specific metrics and achievements.
+* Highlight your skills and experience related to building and maintaining highly reliable and scalable systems.
+* Showcase your passion for Robinhood’s mission and values in your cover letter and resume summary. 

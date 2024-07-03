@@ -1,0 +1,10 @@
+{
+  "selected_experiences": {
+    "Total Object Count": 3,
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences": [
+      "Blockchain Car Mileage Tracker",
+      "ELF Binary Analysis"
+    ]
+  }
+}

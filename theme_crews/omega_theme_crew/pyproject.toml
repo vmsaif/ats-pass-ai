@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "omega_theme_crew"
+version = "0.1.0"
+description = "Theme named Omega for ats_pass_ai"
+authors = ["Saif Mahmud <msaifofficial@gmail.com>"]
+
+packages = [
+    { include = "omega_theme_crew", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+langchain-google-genai = "^1.0.2"
+google-generativeai = "^0.5.2"
+agentops = "^0.1.9"
+crewai = {extras = ["tools"], version = "^0.32.2"}
+shared = {path = "../../shared"}
+
+
+[tool.poetry.scripts]
+omega_theme_crew = "omega_theme_crew.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
