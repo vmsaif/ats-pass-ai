@@ -11,7 +11,6 @@ jd_extracted_keywords_file_path = PATHS["jd_keyword_extraction"]
 company_value_extraction_file_path = PATHS["company_value_extraction"]
 
 
-
 def run():
    
     job_description_link = 'https://boards.greenhouse.io/robinhood/jobs/6022269?gh_src=NaN&gh_jid=6022269'

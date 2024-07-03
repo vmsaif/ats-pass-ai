@@ -4,9 +4,9 @@
 
 ## Project Description
 
-The idea is to craft a unique resume for each job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 
+The idea is to craft one unique resume for one job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 
 
-## We can use chatGPT to generate a resume for a job description. How is this different?
+## We can use ChatGPT to generate a resume for a job description. How is this different?
 
 ### Problem With ChatGPT and Similar Chatbots: 
 The chatGPT model is a powerful tool for generating text based on a prompt. ChatGPT does somewhat well in generating resumes per the provided job description. However, to highly tailor a resume to a job description, is a multi-step process. Thus, a user needs to chat back and forth with the model to tailor the resume appropriately. This process is time-consuming and inefficient.
@@ -34,7 +34,7 @@ The project is currently in the **active development stage**. The following feat
    - The system can integrate user information with job description analysis to draft resumes. *(Completed)* ✅
 
 4. **LaTeX Resume Generation** 🛠️
-   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(In Progress)* ⏳
+   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(95%)* ⏳
 
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 
@@ -64,48 +64,43 @@ git clone https://github.com/vmsaif/ats-pass-ai
 pip install poetry
 ```
 
-### 3: Set the virtual environment to be in the project directory (This is optional but recommended):
-This will make it easier to set IDE's Python interpreter to the virtual environment. Run the following command in the project directory:
+### 3: Install the Required Libraries
 
 ```bash
-poetry config virtualenvs.in-project true
+python poetry_command.py lock
+
 ```
-
-Also, install the required libraries:
-
+   
 ```bash
-poetry install
-
+python poetry_command.py install
 ```
 
 ### 4: Configure API Key
 - Obtain a GOOGLE_API_KEY by following the instructions at [Google Cloud Console](https://console.cloud.google.com/apis/credentials). Ensure the API key has appropriate permissions enabled.
 
-- Obtain a GROQ_API_KEY by following the instructions at [GROQ](https://console.groq.com/keys). 
-
 - `Create` a .env file in the root directory and add:
 
 ```plaintext
 GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY_HERE
-GROQ_API_KEY=YOUR_GROQ_API_KEY_HERE
 ```
 
-Note: Replace `YOUR_GOOGLE_API_KEY_HERE ` and `YOUR_GROQ_API_KEY ` with your actual API keys. No need to include quotes.
+Note: Replace `YOUR_GOOGLE_API_KEY_HERE` with your actual API keys. No need to include quotes.
 
 ### 5: Prepare Your Data
 
-- Add your information or resume to `user_info.txt`.
-- Add job descriptions to `job_description.txt`.
+- Add your information or resume to `shared/info_files/applicant_info.txt`.
+- Place the job description link in `info_collection\src\info_collection\main.py` in the job_description_link variable. (easier way to do this will be added soon)
 
 ### 6: Run the Application
-   
 From the root directory, run the following command:
 
 ```bash
-poetry run ats_pass_ai
+python main.py
 
 ```
 
+Wait for the program to finish processing. The approximate time is 7-12 minutes.
+
 ### 7. Retrieve Your Resumes
-- Find the generated resumes in the output directory, available in both LaTeX and plain text formats. (Coming soon)
+- Find the generated resumes in the output/ directory.
 
