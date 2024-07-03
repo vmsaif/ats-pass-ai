@@ -1,0 +1,36 @@
+**Job Title:** Software Developer - Reliability
+
+**Company:** Robinhood
+
+**Location:** Toronto, ON
+
+**About Robinhood**
+
+Robinhood Markets is a leading fintech company that's democratizing finance for all. Founded on the belief that our financial markets should be accessible to all, Robinhood and its subsidiaries and affiliates are lowering barriers and providing greater access to financial information. Together, we are building products and services that help create a financial system everyone can participate in.
+
+**About the Team + Role**
+
+Join our Reliability Engineering team, focused on designing, evolving, and maintaining large-scale distributed systems. As a Software Developer, you'll collaborate across teams to build robust, scalable systems that ensure high availability and low latency.
+
+**Responsibilities**
+
+* Design and Implement new features and services with a focus on high availability, low latency, and scalability.
+* Continually optimize systems and workflows by improving architecture, infrastructure, automation, CI/CD and observability.
+* Act as an owner and leader of Robinhood's infrastructure by ensuring project infrastructure needs are met and working proactively with customer teams to help them improve reliability.
+
+**Qualifications**
+
+* Fluent in one or more programming languages (e.g. Go, Python, Java).
+* Experience authoring and operating high-scale services.
+* Experience with scalable distributed systems, either built from scratch or on public Cloud (e.g. AWS) primitives.
+* Pluses if you have experience with Python/Django/Go and AWS
+
+**Additional Information**
+
+Our team is here to enable an inclusive and welcoming interview experience for all candidates. If you need additional assistance throughout the interview process related to a physical or mental condition, or if there is something our team can do to enable a more accessible experience at any time, please notify our team by completing this Applicant Accommodation Form.
+
+Click here to learn more about available Benefits, which vary by region and Robinhood entity.
+
+We’re looking for more growth-minded and collaborative people to be a part of our journey in democratizing finance for all. If you’re ready to give 100% in helping us achieve our mission—we’d love to have you apply even if you feel unsure about whether you meet every single requirement in this posting. At Robinhood, we're looking for people invigorated by our mission, values, and drive to change the world, not just those who simply check off all the boxes.
+
+Robinhood embraces a diversity of backgrounds and experiences and provides equal opportunity for all applicants and employees. We are dedicated to building a company that represents a variety of backgrounds, perspectives, and skills. We believe that the more inclusive we are, the better our work (and work environment) will be for everyone. Additionally, Robinhood provides reasonable accommodations for candidates on request and respects applicants' privacy rights. Please review the specific Robinhood Privacy Policy applicable to the country where you are applying.

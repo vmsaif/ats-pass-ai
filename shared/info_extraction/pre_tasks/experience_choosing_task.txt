@@ -1,0 +1,27 @@
+{
+  "selected_experiences": {
+    "Total Object Count": 3,
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences": [
+      "Blockchain Car Mileage Tracker",
+      "ELF Binary Analysis"
+    ]
+  },
+  "Selection Justification": {
+    "reasons_for_choice": [
+      {
+        "title": "ATS Pass AI",
+        "reason": "Directly matches job requirements for building and maintaining highly reliable and scalable systems, as evidenced by the development of a multi-agent system to create tailored resumes, enhancing job search efficiency by over 85% keyword alignment, utilizing advanced AI models like Gemini Pro and RAG Search for personalized resume analysis and optimization, and designing a scalable architecture for future growth and adaptation."
+      },
+      {
+        "title": "Blockchain Car Mileage Tracker",
+        "reason": "Demonstrates experience with high-scale services and scalable distributed systems, as evidenced by the development of a blockchain application to securely track and verify vehicle mileage for insurance purposes, enhancing data reliability and transparency, implementing a smart contract for tamper-proof mileage recording, fostering trust in vehicle history, and collaborating closely as a team to design, develop, and test the application."
+      },
+      {
+        "title": "ELF Binary Analysis",
+        "reason": "Showcases expertise in system analysis and debugging, which are essential for building and maintaining highly reliable systems, as evidenced by the implementation of an ELF header analysis tool in C, enhancing debugging efficiency by 20%, actively contributing to technical documentation for product and knowledge base improvement, and demonstrating problem-solving abilities through customer technical assistance."
+      }
+    ],
+    "rejected_experiences": []
+  }
+}

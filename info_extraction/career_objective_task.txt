@@ -1,3 +1,0 @@
-{
-  "Career Objective": "Skilled Software Developer - Reliability eager to contribute to Robinhood with proven expertise in Scalability, High Availability, and Microservices, aligning with the company's mission of democratizing finance through innovation and reliability."
-}

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "info-collection"
+version = "0.1.0"
+description = ""
+authors = ["Saif Mahmud <msaifofficial@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "info_collection", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+shared = {path = "../shared"}
+google-generativeai = "^0.7.1"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.scripts]
+info_collection = "info_collection.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

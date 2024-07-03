@@ -1,0 +1,63 @@
+{
+  "applicant Profile": {
+    "Personal Details": {
+      "Full Name": "Saif Mahmud",
+      "Phone Number": "204 955 5064",
+      "Email": "msaifofficial@gmail.com",
+      "LinkedIn": "linkedin.com/in/vmsaif",
+      "Other Social Media Profiles": null,
+      "Personal Website": "saifmahmud.dev",
+      "Portfolio": null,
+      "GitHub": null,
+      "Address": null,
+      "City": "Winnipeg",
+      "State": "MB",
+      "Zip Code": null,
+      "Country": null
+    },
+    "Education": {
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "University of Manitoba",
+      "University Location": null,
+      "Graduation Date": "October 2023",
+      "GPA": "3.07",
+      "Honors/Distinctions": null
+    },
+    "Volunteer Work": [
+      {
+        "Organization Name": ".dev Programming Club",
+        "Name length in characters": 18,
+        "Role": "Active Member",
+        "Responsibilities": "Engaged with the latest software development technologies and tools. Collaborated on team projects focused on Java and Cloud Technologies.",
+        "Timeline": "2019-2023"
+      }
+    ],
+    "Awards and Recognitions": [
+      {
+        "Award Name": "FIFA Champion",
+        "Awarding Organization": "UMBSA",
+        "Date": "2017",
+        "Reason": "Gaming achievement"
+      },
+      {
+        "Award Name": "FIFA Champion",
+        "Awarding Organization": "CBA",
+        "Date": "2018",
+        "Reason": "Gaming achievement"
+      },
+      {
+        "Award Name": "Intel PC Guru",
+        "Awarding Organization": "N/A",
+        "Date": "2007",
+        "Reason": "3rd Place"
+      }
+    ],
+    "References": [],
+    "Personal Traits and Interests": {
+      "Strengths": "Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis",
+      "Hobbies": null,
+      "Passions": null
+    }
+  }
+}

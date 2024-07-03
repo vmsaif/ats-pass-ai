@@ -1,9 +1,0 @@
-{
-  "Personal Traits and Interests": {
-    "Strengths": null,
-    "Hobbies": "* Captain: Football Club Vikings, Dhaka, Bangladesh (2012 - 2014)\n* Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)",
-    "Passions": null,
-    "Skills": "Python, Javascript, C++, Java, MySQL, JSON, noSQL, Schema, CI/CD, GitHub Action, AWS(Basic)",
-    "Soft skills": null
-  }
-}
