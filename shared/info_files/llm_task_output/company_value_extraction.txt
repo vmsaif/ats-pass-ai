@@ -1,0 +1,31 @@
+**Job Title:** Software Developer - Reliability
+
+**Company Name:** Robinhood
+
+**Location:** Toronto, ON
+
+**Job Description:**
+
+Robinhood, a leading fintech company, seeks a Software Developer - Reliability to join its team in Toronto. The ideal candidate will possess expertise in designing, developing, and maintaining large-scale distributed systems with a focus on high availability, low latency, and scalability.
+
+**Responsibilities:**
+
+* Design and implement new features and services with an emphasis on reliability, scalability, and performance
+* Optimize systems and workflows by improving architecture, infrastructure, automation, CI/CD, and observability
+* Assume ownership and leadership of Robinhood's infrastructure, ensuring project needs are met
+* Collaborate with customer teams to enhance system reliability
+
+**Qualifications:**
+
+* Fluency in a programming language such as Go, Python, or Java
+* Proven experience in authoring and operating high-scale services
+* Expertise in scalable distributed systems, with experience in either building from scratch or using public cloud primitives
+* Knowledge of Python/Django/Go and AWS is a plus
+
+**Benefits:**
+
+* Comprehensive benefits package tailored to region and Robinhood entity
+
+**Diversity and Inclusion:**
+
+Robinhood values diversity and inclusion in its workforce and encourages applications from candidates with diverse backgrounds and perspectives. The company is committed to providing equal opportunities and reasonable accommodations for all applicants.

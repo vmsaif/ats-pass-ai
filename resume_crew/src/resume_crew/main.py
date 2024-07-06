@@ -31,12 +31,11 @@ def run():
 
             except Exception as e:
                 traceback.print_exc()
-                # time.sleep(20)
-                # crew.kickoff()
+                exit(1)
         crew_run_time = t.interval
 
     program_run_time = total_time.interval
 
     print_task_time("Crew Run", crew_run_time)
     print_task_time("Total", program_run_time)
-    
+

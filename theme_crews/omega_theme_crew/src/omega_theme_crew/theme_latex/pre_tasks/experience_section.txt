@@ -1,37 +1,33 @@
-\section{Project Experience}
+\section{Experience}
+\customTitle{Software Engineer at Google}
+    \summaryPoints{Python | Flask | React | AWS}
+    \roleAndTimeline{Software Engineer | 2020 - 2022}
+    \shortDescription{Versatile experience building and maintaining software applications using Python, Flask, React, and AWS.}
 
-\customTitle{ATS Pass AI - Enhancing Job Search Efficiency}
-    \summaryPoints{RAG Search | Python | Multiagent | AI}
-    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
-
-    \shortDescription{Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency.}
-
-    \begin{tightemize}
-        \item Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating data analysis and data visualization capabilities.
-        \item Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools, achieving over 85\% keyword alignment and optimizing resumes for ATS.
-        \item Check out my Github project \href{https://github.com/vmsaif/ats-pass-ai}{\ul{here}}.
+\begin{tightemize}
+        \item Developed and deployed RESTful APIs using Flask.
+        \item Created interactive user interfaces using React.
+        \item Managed and optimized AWS cloud infrastructure for high availability and scalability.
     \end{tightemize}
 
-\customTitle{Blockchain Car Mileage Tracker for Secure Data Management}
-    \summaryPoints{Docker | Vue.js | Blockchain}
-    \roleAndTimeline{Blockchain Application - January 2023 - Mar 2023}
+\customTitle{Software Development Engineer at Amazon}
+    \summaryPoints{Node | Express | MongoDB | Docker}
+    \roleAndTimeline{Software Development Engineer | 2018 - 2020}
+    \shortDescription{Designed and implemented scalable microservices using Node, Express, and MongoDB.}
 
-    \shortDescription{Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.}
-
-    \begin{tightemize}
-        \item Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.
-        \item Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.
-        \item Have a look at it on Github:\href{https://github.com/vmsaif/blockChainCarMilageTracker}{\ul{here}}.
+\begin{tightemize}
+        \item Designed and developed cloud-native applications using Docker.
+        \item Implemented continuous integration and continuous deployment pipelines.
+        \item Collaborated in a fast-paced, agile development environment.
     \end{tightemize}
 
-\customTitle{ELF Binary Analysis for Enhanced Debugging and System Analysis}
-    \summaryPoints{C Programming | Debugging | Linux OS}
-    \roleAndTimeline{ELF Header Analysis Tool - November 2022 - December 2022}
+\customTitle{Software Engineer at Microsoft}
+    \summaryPoints{Java | Spring | JUnit}
+    \roleAndTimeline{Software Engineer | 2016 - 2018}
+    \shortDescription{Developed and tested enterprise-grade Java applications using Spring framework and JUnit.}
 
-    \shortDescription{Implemented ELF header analysis tool in C, emphasizing debugging and system analysis skills.}
-
-    \begin{tightemize}
-        \item Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.
-        \item Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.
-        \item See my work on \href{https://github.com/vmsaif/readingAndInterpretingBinary}{\ul{Github}}.
+\begin{tightemize}
+        \item Designed and implemented data processing pipelines for big data applications.
+        \item Wrote and maintained unit and integration tests using JUnit.
+        \item Contributed to the development of a proprietary software product.
     \end{tightemize}

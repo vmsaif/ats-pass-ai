@@ -1,19 +1,33 @@
 {
-  "Work Experience": [
-    {
-      "Job Title": "Programming Mentor",
-      "Company Name": "Private Tutoring",
-      "Timeline": "February 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "Python, Java",
-      "Skills": "Problem-solving, communication, adapting to different learning styles",
-      "Link": null,
-      "Key Highlights": [
-        "Tutored a student in computer systems and programming, focusing on Python and Java.",
-        "Tailored teaching methods to accommodate the student's learning style, resulting in a noticeable improvement in their understanding and application of computer systems and programming concepts.",
-        "Facilitated hands-on sessions for installing software, debugging, and understanding computer operations, enhancing system understanding"
-      ],
-      "Team size": "1",
-      "Outcomes": null
-    }
-  ]
+"Work Experience": [
+{
+"Job Title": "Programming Mentor",
+"Company Name": "Private Tutoring",
+"Timeline": "Feb, 2023 - December 2023",
+"Technologies, frameworks, and tools Used": "Python and Java",
+"Skills": "Tutoring",
+"Link": "",
+"Key Highlights": [
+"Provided one-on-one instruction in computer systems and programming.",
+"Tailored teaching methods to accommodate the student's learning style.",
+"Facilitated hands-on sessions for installing software, debugging, and understanding computer operations."
+],
+"Team size": "1",
+"Outcomes": "Tutored a student in computer systems and programming, focusing on Python and Java."
+},
+{
+"Job Title": "Active Member",
+"Company Name": ".dev Programming Club",
+"Timeline": "2019-2023",
+"Technologies, frameworks, and tools Used": "Java, Cloud Technologies",
+"Skills": "Club member, collaboration",
+"Link": "",
+"Key Highlights": [
+"Engaged with the latest software development technologies and tools.",
+"Collaborated on team projects."
+],
+"Team size": "team",
+"Outcomes": "Engaged with the latest software development technologies and tools."
+}
+]
 }

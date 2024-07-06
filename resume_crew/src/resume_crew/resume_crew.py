@@ -193,12 +193,13 @@ class ResumeCrew:
 	def cross_match_evaluator_with_job_description_agent (self) -> Agent:
 		return Agent(
 			config=self.agents_config["cross_match_evaluator_with_job_description_agent"],
-			step_callback=self.large_llm_limiter,
+
 			allow_delegation=False,
 			verbose=True,
 			function_calling_llm=self.genAI,
 			# cache=True,
 			llm=self.genAILarge,
+			step_callback=self.large_llm_limiter,
 		)
 	
 	@agent

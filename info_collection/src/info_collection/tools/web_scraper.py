@@ -11,12 +11,20 @@ from dotenv import load_dotenv
 class WebScraper:
     load_dotenv()
     system_instruction = dedent("""
-    You are given an extracted texts of a job description web page.
+    You are given an extracted texts of a job description from a web page.
                                 
-    Give me everything as is. I want to know all the details about the job and the company. I want the full context in the exactly provided words.
+    Give me everything as is. 
+                                
+    Expertec Output:
+    - Full context in the exactly provided words without any changes.
+    - Start the output with:
+        Job Role:
+        Company Name:
+        Location: (if available)
+        Rest of the content as is.
                                 
     You can remove:
-    - any unnecessary white spaces or blank lines.
+    - any unnecessary white spaces or blank lines. 
     - How to Apply section.
     - Benefits section like "Dental, Vision, Medical, 401k, etc." 
                           
@@ -52,9 +60,16 @@ class WebScraper:
         return llm_response.text
 
     def delete_previous_jd_llm_output(self):
-        if os.path.exists(PATHS['jd_keyword_extraction']):
+        try:           
             os.remove(PATHS['jd_keyword_extraction'])
-            print("Deleted previous JD LLM output file.")
+            print("Deleted previous jd_keyword_extraction.")
+        except FileNotFoundError:
+            print("No previous jd_keyword_extraction to delete.")
+        try:
+            os.remove(PATHS['company_value_extraction'])
+            print("Deleted previous company_value_extraction.")
+        except FileNotFoundError:
+            print("No previous company_value_extraction to delete.")
 
     def fetch_page(self):
         response = requests.get(self.url)

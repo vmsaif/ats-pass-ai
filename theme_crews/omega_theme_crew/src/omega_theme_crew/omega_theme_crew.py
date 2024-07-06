@@ -46,34 +46,32 @@ class OmegaThemeCrew:
 
 	debugFlag = False
 
-	# debugFlag = True
+	debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
 
 		tasks = [
-				self.name_section(),
-				self.concise_jd_task(),
+				# self.name_section(),
+				# self.concise_jd_task(),
 
-				self.assess_and_prioritize(),
-				self.select_first_column_content(),
+				# self.assess_and_prioritize(),
+				# self.select_first_column_content(),
 
 				self.education_section(),
-				self.coursework_section(),
-				self.volunteer_section(),
-				self.references_section(), 
+				# self.coursework_section(),
+				# self.volunteer_section(),
+				# self.references_section(), 
 
-				self.skill_section(),
-				self.career_objective_section(),
+				# self.skill_section(),
+				# self.career_objective_section(),
 
-				self.exp_item_count_chooser(),
-				self.exp_item_chooser(),
-				self.summary_point_selector(),
-				self.link_handler(),
-				self.link_latex(),
-				self.experience_section(),
-				self.exp_latex_verified()
+				# self.summary_point_selector(),
+				# self.link_handler(),
+				# self.link_latex(),
+				# self.experience_section(),
+				# self.exp_latex_verified()
 			]
 		
 		# Return the crew
@@ -351,38 +349,38 @@ class OmegaThemeCrew:
 			callback=self.small_token_limiter
 		)
 	
-	@task
-	def exp_item_count_chooser(self):
-		yaml = self.yaml_loader("exp_item_count_chooser", True)
-		description = yaml[0]
-		expected_output = yaml[1]
-		description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
+	# @task
+	# def exp_item_count_chooser(self):
+	# 	yaml = self.yaml_loader("exp_item_count_chooser", True)
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
+	# 	description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
 
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.expItemSelectorAgent(),
-			output_file=OMEGA_PATHS["exp_item_count_chooser"],
-			callback=self.small_token_limiter
-		)
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.expItemSelectorAgent(),
+	# 		output_file=OMEGA_PATHS["exp_item_count_chooser"],
+	# 		callback=self.small_token_limiter
+	# 	)
 
-	@task
-	def exp_item_chooser(self):
-		yaml = self.yaml_loader("exp_item_chooser", True)
-		description = yaml[0]
-		expected_output = yaml[1]
+	# @task
+	# def exp_item_chooser(self):
+	# 	yaml = self.yaml_loader("exp_item_chooser", True)
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["exp_item_count_chooser"])
+	# 	if(self.debugFlag):
+	# 		description = description + "\n\n" + self.load_file(OMEGA_PATHS["exp_item_count_chooser"])
 
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.expItemSelectorAgent(),
-			context=[self.exp_item_count_chooser()],
-			output_file=OMEGA_PATHS["exp_item_chooser"],
-			callback=self.small_token_limiter
-		)
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.expItemSelectorAgent(),
+	# 		context=[self.exp_item_count_chooser()],
+	# 		output_file=OMEGA_PATHS["exp_item_chooser"],
+	# 		callback=self.small_token_limiter
+	# 	)
 
 	@task
 	def summary_point_selector(self):
@@ -391,13 +389,12 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["exp_item_chooser"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.basic_agent(),
-			context=[self.exp_item_chooser()],
 			output_file=OMEGA_PATHS["summary_point_selector"],
 			callback=self.small_token_limiter
 		)
@@ -507,7 +504,3 @@ class OmegaThemeCrew:
 			print(f"YAML LOADER: Error opening or reading the file {path}: {e}")
 		
 		return output
-
-#  C:\Users\vmsai\Desktop\ats_pass_ai\theme_crews\omega_theme_crew
-# YAML LOADER: Loading name_section from src/omega_theme_crew/config/omega_theme_tasks.yaml
-# Omega Theme: Error opening or reading the file C:\Users\vmsai\Desktop\ats_pass_ai\theme_crews\shared/info_extraction/pre_tasks/personal_information_extraction_task.txt: [Errno 2] No such file or directory: 'C:\\Users\\vmsai\\Desktop\\ats_pass_ai\\theme_crews\\shared/info_extraction/pre_tasks/personal_information_extraction_task.txt'

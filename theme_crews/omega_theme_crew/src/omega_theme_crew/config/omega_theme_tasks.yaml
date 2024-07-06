@@ -73,7 +73,7 @@ select_first_column_content:
     Select the final sections and sub-sections and omit the rest. You are given a JSON object which is prioritized based on relevance and impact of an applicant's profile.
 
     **Procedure**:
-    - If the "Relevant Courses" section is provided, consider the list of courses as one sub-section, Include all courses provided.
+    - If the "Relevant Courses" section is provided, consider the list of courses as one seperate section, Include all courses provided. Do not include it as a sub-section of Education.
     - Always include at least one "Reference" sub-section if provided. 
     - Opt for up to 2-3 sections and a total of up to 4 sub-sections across all sections.
 
@@ -124,7 +124,7 @@ education_section:
     - Do not choose more than two educations. Choose the most recent ones.
 
     Example:
-
+    ```latex
     \section{Education}
       \customTitle{University of Manitoba}
       \semiTitle{BSc Major in Computer Science}
@@ -135,6 +135,7 @@ education_section:
       ...
 
     \sectionsep
+    ```
 
     Conditions:
     - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
@@ -178,6 +179,7 @@ skill_section:
        - Use `\subTitle{}` to introduce each skill category.
        - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
     3. The expected output is only the category and items, not any explanation or additional text.
+    4. If You are confused about any skill, put it in the "Others" category.
 
     Example:
 

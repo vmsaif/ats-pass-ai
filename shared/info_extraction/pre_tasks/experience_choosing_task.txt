@@ -1,27 +1,30 @@
 {
   "selected_experiences": {
-    "Total Object Count": 3,
+    "Total Object Count": 2,
     "Most Recent Experience": "ATS Pass AI",
-    "Additional Relevant Experiences": [
-      "Blockchain Car Mileage Tracker",
-      "ELF Binary Analysis"
-    ]
+    "Additional Relevant Experiences": "Blockchain Car Mileage Tracker"
+    }
   },
   "Selection Justification": {
     "reasons_for_choice": [
       {
         "title": "ATS Pass AI",
-        "reason": "Directly matches job requirements for building and maintaining highly reliable and scalable systems, as evidenced by the development of a multi-agent system to create tailored resumes, enhancing job search efficiency by over 85% keyword alignment, utilizing advanced AI models like Gemini Pro and RAG Search for personalized resume analysis and optimization, and designing a scalable architecture for future growth and adaptation."
+        "reason": "This project closely aligns with the job's emphasis on **large-scale distributed systems**, **high availability**, and **low latency**. The experience demonstrates proficiency in developing **Python** applications, utilizing **AI models**, and working with cloud technologies like **AWS**, as specified in the job description."
       },
       {
         "title": "Blockchain Car Mileage Tracker",
-        "reason": "Demonstrates experience with high-scale services and scalable distributed systems, as evidenced by the development of a blockchain application to securely track and verify vehicle mileage for insurance purposes, enhancing data reliability and transparency, implementing a smart contract for tamper-proof mileage recording, fostering trust in vehicle history, and collaborating closely as a team to design, develop, and test the application."
-      },
-      {
-        "title": "ELF Binary Analysis",
-        "reason": "Showcases expertise in system analysis and debugging, which are essential for building and maintaining highly reliable systems, as evidenced by the implementation of an ELF header analysis tool in C, enhancing debugging efficiency by 20%, actively contributing to technical documentation for product and knowledge base improvement, and demonstrating problem-solving abilities through customer technical assistance."
+        "reason": "This project showcases experience in blockchain technology, a domain mentioned in the job description. It highlights skills in **data integrity** and **transparency**, which are essential for ensuring reliability in distributed systems."
       }
     ],
-    "rejected_experiences": []
+    "rejected_experiences": [
+      {
+        "title": "AI Path Finding",
+        "reason": "While this project demonstrates programming and AI skills, it does not directly align with the specific requirements for **large-scale distributed systems**, which is a key focus of the job description."
+      },
+      {
+        "title": "Recursive Ray Tracing",
+        "reason": "This project highlights expertise in 3D graphics programming, which is not explicitly mentioned in the job description. While it showcases strong technical skills, the relevance to the job requirements is limited."
+      }
+    ]
   }
 }

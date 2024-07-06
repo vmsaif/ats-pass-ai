@@ -1,381 +1,402 @@
 {
-  "combined skills list of applicant": {
-    "Technologies": [
-      {
-        "Name": "Python",
-        "field": [ 
-          "Programming Language",
-          "Backend Development",
-          "Machine Learning",
-          "Natural language processing"
-        ]
-      },
-      {
-        "Name": "Java",
-        "field": [ 
-          "Programming Language",
-          "Backend Development",
-          "Game Development"
-        ]
-      },
-      {
-        "Name": "CrewAI",
-        "field": [ 
-          "Machine Learning",
-          "Natural language processing"
-        ]
-      },
-      {
-        "Name": "LangChain",
-        "field": [ 
-          "Machine Learning",
-          "Natural language processing"
-        ]
-      },
-      {
-        "Name": "Gemini",
-        "field": [ 
-          "Machine Learning",
-          "Natural language processing"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [ 
-          "Machine Learning",
-          "Natural language processing"
-        ]
-      },
-      {
-        "Name": "Docker",
-        "field": [ 
-          "Application Containerization"
-        ]
-      },
-      {
-        "Name": "Vue.js",
-        "field": [ 
-          "JavaScript Framework",
-          "Frontend Development"
-        ]
-      },
-      {
-        "Name": "Git",
-        "field": [ 
-          "Version Control"
-        ]
-      },
-      {
-        "Name": "CI/CD",
-        "field": [ 
-          "Continuous Integration / Continuous Delivery"
-        ]
-      },
-      {
-        "Name": "3D Graphics",
-        "field": [ 
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "OpenGL",
-        "field": [ 
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "C++",
-        "field": [ 
-          "Programming Language",
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "File I/O",
-        "field": [ 
-          "Low-Level Programming"
-        ]
-      },
-      {
-        "Name": "Documentation",
-        "field": [ 
-          "Technical Writing"
-        ]
-      },
-      {
-        "Name": "Markdown",
-        "field": [ 
-          "Markup Language"
-        ]
-      },
-      {
-        "Name": "Jekyll",
-        "field": [ 
-          "Static Website Generator"
-        ]
-      },
-      {
-        "Name": "ELF Binary Analysis",
-        "field": [ 
-          "System Analysis"
-        ]
-      },
-      {
-        "Name": "C Programming",
-        "field": [ 
-          "Programming Language"
-        ]
-      },
-      {
-        "Name": "Debugging",
-        "field": [ 
-          "Development Tools"
-        ]
-      },
-      {
-        "Name": "Linux OS",
-        "field": [ 
-          "Operating Systems"
-        ]
-      },
-      {
-        "Name": "glutSolidSphere",
-        "field": [ 
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "SQL",
-        "field": [ 
-          "Database Management"
-        ]
-      },
-      {
-        "Name": "Android Studio",
-        "field": [ 
-          "Android Development"
-        ]
-      },
-      {
-        "Name": "HSQLDB",
-        "field": [ 
-          "Database Management"
-        ]
-      },
-      {
-        "Name": "JUnit",
-        "field": [ 
-          "Testing Framework"
-        ]
-      },
-      {
-        "Name": "AI Decision-Making",
-        "field": [ 
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "MySQL",
-        "field": [ 
-          "Database Management"
-        ]
-      },
-      {
-        "Name": "JSON",
-        "field": [ 
-          "Database Management"
-        ]
-      },
-      {
-        "Name": "noSQL",
-        "field": [ 
-          "Database Management"
-        ]
-      },
-      {
-        "Name": "Schema",
-        "field": [ 
-          "Database Management"
-        ]
-      },
-      {
-        "Name": "GitHub Action",
-        "field": [ 
-          "Cloud & DevOps"
-        ]
-      },
-      {
-        "Name": "AWS",
-        "field": [ 
-          "Cloud & DevOps"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [ 
-          "Machine Learning",
-          "Natural language processing"
-        ]
-      }
-    ],
-    "Frameworks": [],
-    "Skills": [
-      {
-        "Name": "Problem-solving",
-        "field": [ 
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Communication",
-        "field": [ 
-          "Interpersonal Skills"
-        ]
-      },
-      {
-        "Name": "Adapting to different learning styles",
-        "field": [ 
-          "Teaching Skills"
-        ]
-      },
-      {
-        "Name": "Machine Learning",
-        "field": [ 
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Natural language processing",
-        "field": [ 
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Applicant Tracking System (ATS) optimization",
-        "field": [ 
-          "Software Optimization"
-        ]
-      },
-      {
-        "Name": "Blockchain development",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Data security and integrity",
-        "field": [ 
-          "Security Skills"
-        ]
-      },
-      {
-        "Name": "Smart contract implementation",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Game development",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "AI pathfinding algorithms",
-        "field": [ 
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "Agile development practices",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Computer graphics",
-        "field": [ 
-          "Computer Science"
-        ]
-      },
-      {
-        "Name": "3D rendering",
-        "field": [ 
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Lighting techniques",
-        "field": [ 
-          "Computer Graphics"
-        ]
-      },
-      {
-        "Name": "Java programming",
-        "field": [ 
-          "Programming Language"
-        ]
-      },
-      {
-        "Name": "Object-oriented design",
-        "field": [ 
-          "Software Design"
-        ]
-      },
-      {
-        "Name": "Polymorphism",
-        "field": [ 
-          "Object-Oriented Programming"
-        ]
-      },
-      {
-        "Name": "Technical writing",
-        "field": [ 
-          "Writing Skills"
-        ]
-      },
-      {
-        "Name": "Web development",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Version control",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "System analysis",
-        "field": [ 
-          "Software Analysis"
-        ]
-      },
-      {
-        "Name": "Documentation",
-        "field": [ 
-          "Software Documentation"
-        ]
-      },
-      {
-        "Name": "User interactivity",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Android development",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Database management",
-        "field": [ 
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Project management",
-        "field": [
+"combined skills list of applicant": {
+  "Technologies": [
+    {
+      "Name": "Python",
+      "field": [
+        "Programming Language",
+        "Machine Learning",
+        "Cloud Technologies",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "Name": "RAG Search",
+      "field": [
+        "Cloud Technologies",
+        "Information Retrieval"
+      ]
+    },
+    {
+      "Name": "CrewAI",
+      "field": [
+        "Artificial Intelligence",
+        "Machine Learning"
+      ]
+    },
+    {
+      "Name": "LangChain",
+      "field": [
+        "Natural Language Processing",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "Name": "Gemini",
+      "field": [
+        "Cloud Technologies",
+        "Information Retrieval"
+      ]
+    },
+    {
+      "Name": "Blockchain",
+      "field": [
+        "Security",
+        "Data Management"
+      ]
+    },
+    {
+      "Name": "Vue.js",
+      "field": [
+        "Frontend Development",
+        "JavaScript Framework"
+      ]
+    },
+    {
+      "Name": "A* Algorithm",
+      "field": [
+        "Artificial Intelligence",
+        "Game Development"
+      ]
+    },
+    {
+      "Name": "Git",
+      "field": [
+        "Version Control",
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "3D Graphics",
+      "field": [
+        "Computer Graphics",
+        "Game Development"
+      ]
+    },
+    {
+      "Name": "OpenGL",
+      "field": [
+        "Computer Graphics",
+        "Game Development"
+      ]
+    },
+    {
+      "Name": "File I/O",
+      "field": [
+        "Data Management",
+        "Programming"
+      ]
+    },
+    {
+      "Name": "Markdown",
+      "field": [
+        "Documentation",
+        "Technical Writing"
+      ]
+    },
+    {
+      "Name": "Jekyll",
+      "field": [
+        "Web Development",
+        "Static Site Generator"
+      ]
+    },
+    {
+      "Name": "C Programming",
+      "field": [
+        "Programming Language",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "Name": "SQL",
+      "field": [
+        "Database Management",
+        "Data Analysis"
+      ]
+    },
+    {
+      "Name": "Android Studio",
+      "field": [
+        "Mobile Development",
+        "Java Development"
+      ]
+    },
+    {
+      "Name": "JavaScript",
+      "field": [
+        "Programming Language",
+        "Frontend Development"
+      ]
+    },
+    {
+      "Name": "CI/CD",
+      "field": [
+        "Cloud & DevOps"
+      ]
+    },
+    {
+      "Name": "GitHub Action",
+      "field": [
+        "Cloud & DevOps"
+      ]
+    },
+    {
+      "Name": "AWS",
+      "field": [
+        "Cloud & DevOps"
+      ]
+    },
+    {
+      "Name": "MySQL",
+      "field": [
+        "Database"
+      ]
+    },
+    {
+      "Name": "JSON",
+      "field": [
+        "Database"
+      ]
+    },
+    {
+      "Name": "noSQL",
+      "field": [
+        "Database"
+      ]
+    },
+    {
+      "Name": "Schema",
+      "field": [
+        "Database"
+      ]
+    }
+  ],
+  "Frameworks": [],
+  "Skills": [
+    {
+      "Name": "Club member",
+      "field": [
+        "Teamwork",
+        "Collaboration"
+      ]
+    },
+    {
+      "Name": "Tutoring",
+      "field": [
+        "Education",
+        "Communication"
+      ]
+    },
+    {
+      "Name": "Machine learning",
+      "field": [
+        "Artificial Intelligence",
+        "Data Analysis"
+      ]
+    },
+    {
+      "Name": "Blockchain",
+      "field": [
+        "Security",
+        "Data Management"
+      ]
+    },
+    {
+      "Name": "Game development",
+      "field": [
+        "Computer Graphics",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "Name": "Graphics programming",
+      "field": [
+        "Computer Graphics",
+        "Game Development"
+      ]
+    },
+    {
+      "Name": "Programming",
+      "field": [
+        "Software Development",
+        "Algorithms"
+      ]
+    },
+    {
+      "Name": "Object-oriented programming",
+      "field": [
+        "Software Development",
+        "Object-Oriented Design"
+      ]
+    },
+    {
+      "Name": "Documentation",
+      "field": [
+        "Technical Writing",
+        "Communication"
+      ]
+    },
+    {
+      "Name": "Technical writing",
+      "field": [
+        "Documentation",
+        "Communication"
+      ]
+    },
+    {
+      "Name": "Debugging",
+      "field": [
+        "Software Development",
+        "Problem Solving"
+      ]
+    },
+    {
+      "Name": "System analysis",
+      "field": [
+        "Software Development",
+        "Problem Solving"
+      ]
+    },
+    {
+      "Name": "Project management",
+      "field": [
+        "Leadership",
+        "Organization"
+      ]
+    },
+    {
+      "Name": "Teamwork",
+      "field": [
+        "Collaboration",
+        "Communication"
+      ]
+    },
+    {
+      "Name": "Artificial intelligence",
+      "field": [
+        "Machine Learning",
+        "Natural Language Processing"
+      ]
+    },
+    {
+      "Name": "Programming Concepts",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "System Analysis",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "Web and Mobile Technologies",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "OOP",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "Data Structures",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "SDLC",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "Debugging and Troubleshooting",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "Test driven deployment",
+      "field": [
+        "Software Development"
+      ]
+    },
+    {
+      "Name": "Distributed Computing",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "Data Structures and Algorithms",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "Object Orientation",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "Software Engineering",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "Database Implementation",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "AI and Game Development",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "Technical Communication in CS",
+      "field": [
+        "Programming Language"
+      ]
+    },
+    {
+      "Name": "Good Interpersonal Skills",
+      "field": [
+        "Interpersonal Skills"
+      ]
+    },
+    {
+      "Name": "Communication",
+      "field": [
+        "Interpersonal Skills"
+      ]
+    },
+    {
+      "Name": "Teamwork",
+      "field": [
+        "Collaboration"
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "field": [
+        "Critical Thinking"
+      ]
+    },
+    {
+      "Name": "Adaptability",
+      "field": [
+        "Critical Thinking"
+      ]
+    },
+    {

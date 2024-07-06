@@ -649,7 +649,7 @@ correct_categorization_of_skills_task:
 
 experience_choosing_task:
   description: >
-    Select the top 3 relevant experiences from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
+    Select the top 2 relevant experiences from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
 
     **Selection Criteria**:
 
@@ -665,14 +665,12 @@ experience_choosing_task:
     - **Applicant's Experiences:** Information provided from the context.
 
   expected_output: >
-    Output a combination of 3 total experiences (work, projects, or a mix), selected based on their relevance to the job description. Each selection must be justified with respect to the job's description's requirements: Quote the sentence from the job description that the experience aligns with.
+    Output a combination of 2 total experiences (work, projects, or a mix), selected based on their relevance to the job description. Each selection must be justified with respect to the job's description's requirements: Quote the sentence from the job description that the experience aligns with.
     {
       "selected_experiences": {
-        "Total Object Count": 3,
+        "Total Object Count": 2,
         "Most Recent Experience": "Experience Name 1",
-        "Additional Relevant Experiences": [
-          "Experience Name 2",
-          "Experience Name 3"
+        "Additional Relevant Experiences": "Experience Name 2",
         ]
       },
       "Selection Justification": {
@@ -775,8 +773,8 @@ ats_friendly_keywords_into_experiences:
       - **Relevance:** Integrate keywords that are relevant to the described experience.
       - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
       - **Conciseness and Clarity:** 
-        -- Limit the short description to 10-13 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
-        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-12 words per key highlight. If possible, split one entry into multiple key highlights to keep them concise.
+        -- Limit the short description to 10-15 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-20 words per key highlight. If possible, split one entry into multiple key highlights to keep them concise.
       - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - you are also provided a list of "missing_from_the_applicant_skills" which are in the job description but not in the applicant's experiences. Try to weave some of these words where they fit naturally.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
@@ -812,7 +810,8 @@ ats_friendly_keywords_into_experiences:
       "skills": "",
       "Link": "",
       "Short Description": "(About 10-13 words)",
-      "Key Highlights": [(Up to 4 key highlights but not required to be 4), upto 10-12 words each
+      "Key Highlights": [(Up to 5 key highlights but not required to be 5), upto 10-20 words each
+        "",
         "",
         "",
         "",
@@ -832,7 +831,8 @@ ats_friendly_keywords_into_experiences:
       "skills": "",
       "Link": "",
       "Short Description": "(About 15 words)",
-      "Key Highlights": [(Up to 4 key highlights but not required to be 4), upto 10-12 words each
+      "Key Highlights": [(Up to 5 key highlights but not required to be 5), upto 10-20 words each
+        "",
         "",
         "",
         "",
@@ -917,23 +917,23 @@ coursework_extraction_task:
 # Career Objective Section
 applicant_philosophy_extraction_task:
   description: >
-    Utilize a tool to retrieve detailed information about the applicant's career goals, personal philosophy, and approach to software development.
+    Utilize a tool to retrieve detailed information about the applicant's personal philosophy, and approach to career development.
 
     **Instructions**:
-    - **Query the Tool**: Use the query tool with the specific question: "What are the applicant's career goals, philosophy, and software development approach?" 
-    - **Data Extraction**: Review the information provided by the tool to extract relevant data about the applicant's career objectives, personal philosophy, and their approach to software development.
+    - **Query the Tool**: Use the query tool with the specific question: "What are the applicant's career goals, philosophy, and career development approach?" 
+    - **Data Extraction**: Review the information provided by the tool to extract relevant data about the applicant's personal philosophy, personality and their approach to career development.
     - **Filtering Irrelevant Information**: Carefully sift through the data to remove any irrelevant details such as mentions of other companies, job titles, or unrelated personal information.
     - **Re-query if Necessary**: If essential information is missing or unclear, re-query the tool with a more specific question to fill in the gaps.
 
     **Expected Output**:
-    - A structured JSON object containing concise and relevant information about the applicant’s career goals, philosophy, and approach to software development. Ensure that the output is devoid of irrelevant data and clearly categorizes each aspect of the applicant's professional outlook.
+    - A structured JSON object containing concise and relevant information about the applicant’s philosophy, personality and approach to career development. Ensure that the output is devoid of irrelevant data and clearly categorizes each aspect of the applicant's professional outlook.
 
     This task is crucial for tailoring the career objective section of a resume or cover letter to reflect the applicant’s professional ethos and align with potential employer expectations.
   expected_output: >
     {
       "Applicant's Philosophy and Goals": {
-        "Career Goals": "To lead software development projects that drive innovation in fintech.",
         "Philosophy": "Believes in democratizing financial tools to empower individuals.",
+        "Personality Traits": "Persistent, innovative, go-getter.",
         "Software Development Approach": "Adopts agile methodologies to enhance team productivity and adapt quickly to changing market needs."
       }
     }
@@ -960,8 +960,6 @@ career_objective_task:
     }
 
     This task requires a detailed understanding of the applicant's qualifications and how they can be effectively communicated to meet the specific needs of the job at Robinhood, ensuring the objective is tailored, impactful, and accurate.
-
-
 
 # --------------------------------------------------------
 

@@ -66,7 +66,7 @@ PATHS = {
     "coursework_extraction_task": f"{info_extraction_dir}/coursework_extraction_task.txt",
     "ats_friendly_skills_task": f"{pre_tasks_dir}/ats_friendly_skills_task.txt",
     "reduce_missing_skills_task": f"{pre_tasks_dir}/reduce_missing_skills_task.txt",
-    "split_context_of_ats_friendly_skills_task": f"{pre_tasks_dir}/split_context_of_ats_friendly_skills_task.txt",
+    "split_context_of_ats_friendly_skills_task": f"{info_extraction_dir}/split_context_of_ats_friendly_skills_task.txt",
     "split_missing_skills_task": f"{pre_tasks_dir}/split_missing_skills_task.txt",
 
     "correct_categorization_of_skills_task": f"{info_extraction_dir}/correct_categorization_of_skills_task.txt",

@@ -1,4 +1,5 @@
 import os
+import sys
 from info_collection.tools.llm_task import LLMTask
 from info_collection.llm_tasks_instructions import organize_system_instruction, jd_extraction_system_instruction, company_value_extraction_system_instruction
 
@@ -12,8 +13,13 @@ company_value_extraction_file_path = PATHS["company_value_extraction"]
 
 
 def run():
-   
-    job_description_link = 'https://boards.greenhouse.io/robinhood/jobs/6022269?gh_src=NaN&gh_jid=6022269'
+    
+    if len(sys.argv) != 2:
+        print(f"Please provide the job description link as an argument in \"DOUBLE\" quotes.\nExample: python main.py \"https://www.indeed.com/viewjob?jk=1234567890abcde\"")
+        exit(1)
+
+    args = sys.argv[1:]
+    job_description_link = args[0]
 
     # Prepare and Organize Applicant's Info
     with Timer() as t:

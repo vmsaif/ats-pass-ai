@@ -1,10 +1,8 @@
 {
   "selected_experiences": {
-    "Total Object Count": 3,
+    "Total Object Count": 2,
     "Most Recent Experience": "ATS Pass AI",
-    "Additional Relevant Experiences": [
-      "Blockchain Car Mileage Tracker",
-      "ELF Binary Analysis"
-    ]
+    "Additional Relevant Experiences": "Blockchain Car Mileage Tracker"
+    }
   }
 }

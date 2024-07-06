@@ -2,6 +2,21 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "info_collection"
+		},
+		{
+			"path": "resume_crew"
+		},
+		{
+			"path": "shared"
+		},
+		{
+			"path": "theme_crews/omega_theme_crew"
+		},
+		{
+			"path": "output"
 		}
 	],
 	"settings": {

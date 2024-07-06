@@ -1,7 +1,7 @@
 {
   "Applicant's Philosophy and Goals": {
-    "Career Goals": "To lead software development projects that drive innovation in fintech.",
     "Philosophy": "Believes in democratizing financial tools to empower individuals.",
+    "Personality Traits": "Persistent, innovative, go-getter.",
     "Software Development Approach": "Adopts agile methodologies to enhance team productivity and adapt quickly to changing market needs."
   }
 }

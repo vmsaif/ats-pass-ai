@@ -1,8 +1,1 @@
-{
-  "Personal Traits and Interests": {
-    "Strengths": "Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis",
-    "Hobbies": null,
-    "Passions": null,
-    ...
-  }
-}
+{"Personal Traits and Interests": {}}
