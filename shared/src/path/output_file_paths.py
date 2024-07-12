@@ -35,6 +35,7 @@ limiter_db_dir = 'custom_db'
 PATHS = {
     "applicant_info_file_path": f"{info_files_dir}/applicant_info.txt",
     "applicant_info_organized": f"{llm_task_output_dir}/applicant_info_organized.txt",
+    "jd_text_file": f"{info_files_dir}/jd_text_file.txt",
     "jd_file_path": f"{info_files_dir}/job_description.txt",
     "jd_keyword_extraction": f"{llm_task_output_dir}/job_description_extracted_keywords.txt",
     "company_value_extraction": f"{llm_task_output_dir}/company_value_extraction.txt",
@@ -66,7 +67,7 @@ PATHS = {
     "coursework_extraction_task": f"{info_extraction_dir}/coursework_extraction_task.txt",
     "ats_friendly_skills_task": f"{pre_tasks_dir}/ats_friendly_skills_task.txt",
     "reduce_missing_skills_task": f"{pre_tasks_dir}/reduce_missing_skills_task.txt",
-    "split_context_of_ats_friendly_skills_task": f"{info_extraction_dir}/split_context_of_ats_friendly_skills_task.txt",
+    "split_context_of_ats_friendly_skills_task": f"{pre_tasks_dir}/split_context_of_ats_friendly_skills_task.txt",
     "split_missing_skills_task": f"{pre_tasks_dir}/split_missing_skills_task.txt",
 
     "correct_categorization_of_skills_task": f"{info_extraction_dir}/correct_categorization_of_skills_task.txt",

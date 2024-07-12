@@ -1,279 +1,208 @@
+```json
 {
-"Skills List": {
-  "Technologies": [
-    {
-      "Name": "Python",
-      "field": [
-        "Programming Language",
-        "Machine Learning",
-        "Cloud Technologies",
-        "Artificial Intelligence"
-      ]
-    },
-    {
-      "Name": "RAG Search",
-      "field": [
-        "Cloud Technologies",
-        "Information Retrieval"
-      ]
-    },
-    {
-      "Name": "CrewAI",
-      "field": [
-        "Artificial Intelligence",
-        "Machine Learning"
-      ]
-    },
-    {
-      "Name": "LangChain",
-      "field": [
-        "Natural Language Processing",
-        "Artificial Intelligence"
-      ]
-    },
-    {
-      "Name": "Gemini",
-      "field": [
-        "Cloud Technologies",
-        "Information Retrieval"
-      ]
-    },
-    {
-      "Name": "Blockchain",
-      "field": [
-        "Security",
-        "Data Management"
-      ]
-    },
-    {
-      "Name": "Vue.js",
-      "field": [
-        "Frontend Development",
-        "JavaScript Framework"
-      ]
-    },
-    {
-      "Name": "A* Algorithm",
-      "field": [
-        "Artificial Intelligence",
-        "Game Development"
-      ]
-    },
-    {
-      "Name": "Git",
-      "field": [
-        "Version Control",
-        "Software Development"
-      ]
-    },
-    {
-      "Name": "3D Graphics",
-      "field": [
-        "Computer Graphics",
-        "Game Development"
-      ]
-    },
-    {
-      "Name": "OpenGL",
-      "field": [
-        "Computer Graphics",
-        "Game Development"
-      ]
-    },
-    {
-      "Name": "File I/O",
-      "field": [
-        "Data Management",
-        "Programming"
-      ]
-    },
-    {
-      "Name": "Markdown",
-      "field": [
-        "Documentation",
-        "Technical Writing"
-      ]
-    },
-    {
-      "Name": "Jekyll",
-      "field": [
-        "Web Development",
-        "Static Site Generator"
-      ]
-    },
-    {
-      "Name": "C Programming",
-      "field": [
-        "Programming Language",
-        "Embedded Systems"
-      ]
-    },
-    {
-      "Name": "SQL",
-      "field": [
-        "Database Management",
-        "Data Analysis"
-      ]
-    },
-    {
-      "Name": "Android Studio",
-      "field": [
-        "Mobile Development",
-        "Java Development"
-      ]
-    }
-  ],
-  "Frameworks": [],
-  "Skills": [
-    {
-      "Name": "Club member",
-      "field": [
-        "Teamwork",
-        "Collaboration"
-      ]
-    },
-    {
-      "Name": "Tutoring",
-      "field": [
-        "Education",
-        "Communication"
-      ]
-    },
-    {
-      "Name": "Machine learning",
-      "field": [
-        "Artificial Intelligence",
-        "Data Analysis"
-      ]
-    },
-    {
-      "Name": "Blockchain",
-      "field": [
-        "Security",
-        "Data Management"
-      ]
-    },
-    {
-      "Name": "Game development",
-      "field": [
-        "Computer Graphics",
-        "Artificial Intelligence"
-      ]
-    },
-    {
-      "Name": "Graphics programming",
-      "field": [
-        "Computer Graphics",
-        "Game Development"
-      ]
-    },
-    {
-      "Name": "Programming",
-      "field": [
-        "Software Development",
-        "Algorithms"
-      ]
-    },
-    {
-      "Name": "Object-oriented programming",
-      "field": [
-        "Software Development",
-        "Object-Oriented Design"
-      ]
-    },
-    {
-      "Name": "Documentation",
-      "field": [
-        "Technical Writing",
-        "Communication"
-      ]
-    },
-    {
-      "Name": "Technical writing",
-      "field": [
-        "Documentation",
-        "Communication"
-      ]
-    },
-    {
-      "Name": "Debugging",
-      "field": [
-        "Software Development",
-        "Problem Solving"
-      ]
-    },
-    {
-      "Name": "System analysis",
-      "field": [
-        "Software Development",
-        "Problem Solving"
-      ]
-    },
-    {
-      "Name": "Project management",
-      "field": [
-        "Leadership",
-        "Organization"
-      ]
-    },
-    {
-      "Name": "Teamwork",
-      "field": [
-        "Collaboration",
-        "Communication"
-      ]
-    },
-    {
-      "Name": "Artificial intelligence",
-      "field": [
-        "Machine Learning",
-        "Natural Language Processing"
-      ]
-    }
-  ],
-  "Soft Skills": [
-    {
-      "Name": "Collaboration",
-      "field": [
-        "Teamwork",
-        "Communication"
-      ]
-    },
-    {
-      "Name": "Communication",
-      "field": [
-        "Interpersonal Skills",
-        "Presentation Skills"
-      ]
-    },
-    {
-      "Name": "Problem Solving",
-      "field": [
-        "Critical Thinking",
-        "Analytical Skills"
-      ]
-    },
-    {
-      "Name": "Analytical Skills",
-      "field": [
-        "Critical Thinking",
-        "Information Analysis"
-      ]
-    },
-    {
-      "Name": "Leadership",
-      "field": [
-        "Motivation",
-        "Team management"
-      ]
-    },
-    {
-      "Name": "Organization",
-      "field": [
-        "Time Management",
-        "Planning"
-      ]
-    }
-  ]
+  "Skills List": {
+    "Technologies": [
+      {
+        "Name": "Java",
+        "field": [
+          "Programming Language",
+          "Backend Development"
+        ]
+      },
+      {
+        "Name": "Python",
+        "field": [
+          "Programming Language"
+        ]
+      },
+      {
+        "Name": "SQL",
+        "field": [
+          "Database"
+        ]
+      },
+      {
+        "Name": "OpenGL",
+        "field": [
+          "Graphics Programming"
+        ]
+      },
+      {
+        "Name": "C++",
+        "field": [
+          "Programming Language"
+        ]
+      },
+      {
+        "Name": "C",
+        "field": [
+          "Programming Language"
+        ]
+      },
+      {
+        "Name": "Docker",
+        "field": [
+          "Containerization"
+        ]
+      },
+      {
+        "Name": "Vue.js",
+        "field": [
+          "JavaScript Framework",
+          "Frontend Development"
+        ]
+      },
+      {
+        "Name": "Git",
+        "field": [
+          "Version Control"
+        ]
+      },
+      {
+        "Name": "Android Studio",
+        "field": [
+          "Android Development"
+        ]
+      }
+    ],
+    "Frameworks": [
+      {
+        "Name": "AI",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "RAG Search",
+        "field": [
+          "Search Technology"
+        ]
+      },
+      {
+        "Name": "Multiagent",
+        "field": [
+          "Artificial Intelligence"
+        ]
+      },
+      {
+        "Name": "JUnit",
+        "field": [
+          "Testing Framework"
+        ]
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Data Analysis",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Mentorship",
+        "field": [
+          "Training and Development"
+        ]
+      },
+      {
+        "Name": "Instruction Skills",
+        "field": [
+          "Training and Development"
+        ]
+      },
+      {
+        "Name": "Problem Solving",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Software Debugging",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Object-Oriented Programming",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Polymorphism",
+        "field": [
+          "Software Development"
+        ]
+      },
+      {
+        "Name": "Teamwork",
+        "field": [
+          "Collaboration"
+        ]
+      },
+      {
+        "Name": "Project Management",
+        "field": [
+          "Project Management"
+        ]
+      },
+      {
+        "Name": "Public Speaking",
+        "field": [
+          "Communication"
+        ]
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Name": "Communication",
+        "field": [
+          "Interpersonal Skills"
+        ]
+      },
+      {
+        "Name": "Interpersonal Skills",
+        "field": [
+          "Interpersonal Skills"
+        ]
+      },
+      {
+        "Name": "Adaptability",
+        "field": [
+          "Personal Attributes"
+        ]
+      },
+      {
+        "Name": "Analytical Skills",
+        "field": [
+          "Analytical Skills"
+        ]
+      },
+      {
+        "Name": "Attention to Detail",
+        "field": [
+          "Personal Attributes"
+        ]
+      },
+      {
+        "Name": "Leadership",
+        "field": [
+          "Leadership"
+        ]
+      },
+      {
+        "Name": "Time Management",
+        "field": [
+          "Personal Attributes"
+        ]
+      },
+      {
+        "Name": "Critical Thinking",
+        "field": [
+          "Analytical Skills"
+        ]
+      }
+    ]
+  }
 }
-}
+```

@@ -1,31 +1,41 @@
+```json
 {
- "experienceEntries": [
-  {
-   "company": "Google",
-   "position": "Software Engineer",
-   "duration": "2020 - 2022",
-   "location": "Mountain View, CA",
-   "technologiesFrameworksToolsUsed": "Python, Flask, React, AWS",
-   "skills": "Python, Flask, React, AWS",
-   "Summary Points": "Python AWS"
-  },
-  {
-   "company": "Amazon",
-   "position": "Software Development Engineer",
-   "duration": "2018 - 2020",
-   "location": "Seattle, WA",
-   "technologiesFrameworksToolsUsed": "Node, Express, MongoDB, Docker",
-   "skills": "Node, Express, MongoDB, Docker",
-   "Summary Points": "Node Docker"
-  },
-  {
-   "company": "Microsoft",
-   "position": "Software Engineer",
-   "duration": "2016 - 2018",
-   "location": "Redmond, WA",
-   "technologiesFrameworksToolsUsed": "Java, Spring, JUnit",
-   "skills": "Java, Spring, JUnit",
-   "Summary Points": "Java Spring"
+  "applicant's Experiences with ATS Keywords": {
+    "total object count:": 2,
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Department/Domain": "Software Development",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "CrewAI, LangChain, Gemini, RAG Search",
+      "skills": "AI, Machine Learning, Resume Optimization, Natural Language Processing, Data Analysis, System Design",
+      "Link": "",
+      "Short Description": "Developed a multi-agent AI system to create tailored resumes, enhancing job search efficiency.",
+      "Key Highlights": [
+        "Led the development of a system utilizing AI models and multi-agent technologies to dynamically personalize resumes, aligning them with specific job descriptions.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and commitment to innovation."
+      ],
+      "Summary Points": "AI, NLP, Resume, ATS"
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Department/Domain": "AI, Game Development",
+        "Timeline": "September 2023 - December 2023",
+        "Duration": "4 months",
+        "Technologies": "A* Algorithm, CI/CD",
+        "skills": "AI,  Problem Solving,  Algorithm Design,  Game Development,  CI/CD",
+        "Link": "",
+        "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.",
+        "Key Highlights": [
+          "Successfully balanced rapid development and deployment of AI components within the project, ensuring seamless integration and optimal performance.",
+          "Applied CI/CD practices for efficient development cycles, enabling rapid iteration and continuous improvement of the game's AI features.",
+          "Utilized prompt engineering techniques to guide AI responses and enhance the game's overall user experience."
+        ],
+        "Summary Points": "AI, A*, GameDev, CI/CD"
+      }
+    ]
   }
- ]
 }
+```

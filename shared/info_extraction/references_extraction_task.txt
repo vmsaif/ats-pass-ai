@@ -1,17 +1,17 @@
 {
   "References": [
     {
-      "Name": "Abu Kabir",
-      "Position": "Director IT Service Management",
-      "Company": "Microsoft",
-      "Contact Information": "204-298-3693",
+      "Name": "ABU KABIR",
+      "Position": "Director, IT Service Management",
+      "Company": "Microsoft Corporation",
+      "Contact Information": "204-298-3693 | Winnipeg, MB",
       "Relationship": null
     },
     {
-      "Name": "Safiur Mahdi",
-      "Position": "Java Developer",
-      "Company": "Skip the Dishes",
-      "Contact Information": "204-583-3432",
+      "Name": "SAFIUR MAHDI",
+      "Position": "Software Developer",
+      "Company": "Skip The Dishes",
+      "Contact Information": "204-583-3432 | Winnipeg, MB",
       "Relationship": null
     }
   ]

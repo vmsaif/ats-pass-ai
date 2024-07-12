@@ -1,7 +1,5 @@
+```json
 {
-  "Relevant Coursework (to the Job Description)": [
-    "Distributed Computing (Python | JavaScript)",
-    "Data Structures and Algorithms (Java)",
-    "Software Engineering (Java | Unit Testing)"
-  ]
+  "Relevant Coursework (to the Job Description)": []
 }
+```

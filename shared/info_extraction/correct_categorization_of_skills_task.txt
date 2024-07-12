@@ -1,35 +1,25 @@
 {
   "Programming Languages": [
     "Python",
-    "Go",
-    "C++"
+    "Java",
+    "C++",
+    "SQL"
   ],
-  "Cloud & DevOps": [
-    "CI/CD",
-    "AWS",
-    "GitHub Action",
-    "Kubernetes"
+  "AI Frameworks": [
+    "LangChain",
+    "OpenAI",
+    "RAG Search",
+    "Gemini Pro"
   ],
   "Soft Skills": [
     "Communication",
-    "Teamwork",
     "Problem Solving",
-    "Collaboration",
-    "Growth Mindset"
+    "Teamwork",
+    "Adaptability"
   ],
-  "AI Frameworks": [
-    "Kafka",
-    "TensorFlow",
-    "PyTorch",
-    "Microservices"
-  ],
-  "Design & Creativity": [
-    "Adobe Photoshop",
-    "UI/UX Design"
-  ],
-  "Marketing": [
-    "Digital Marketing",
-    "SEO",
-    "Content Creation"
+  "Cloud & DevOps (Previously System & Technology Integration)": [
+    "CI/CD",
+    "Docker",
+    "System & Technology Integration"
   ]
 }

@@ -13,6 +13,7 @@ python = "^3.11"
 shared = {path = "../shared"}
 google-generativeai = "^0.7.1"
 python-dotenv = "^1.0.1"
+bs4 = "^0.0.2"
 
 
 [tool.poetry.scripts]

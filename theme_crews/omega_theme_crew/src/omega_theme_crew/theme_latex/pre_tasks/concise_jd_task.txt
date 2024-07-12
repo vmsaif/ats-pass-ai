@@ -1,15 +1,44 @@
-**Software Developer - Reliability (Robinhood, Toronto, ON)**
+## Job Description Summary
 
-**Essential Responsibilities:**
+**Essential Responsibilities**
 
-* Design and implement features and services prioritizing high availability, low latency, and scalability.
-* Optimize systems and workflows by enhancing architecture, infrastructure, automation, CI/CD, and observability.
-* Collaborate across teams to build robust, scalable systems ensuring high availability and low latency.
-* Assume ownership of Robinhood's infrastructure needs and work with customer teams to improve reliability.
+* Translating user requirements into technical specifications
+* Developing, testing, implementing, and documenting software programs
+* Performing maintenance, troubleshooting, and fault rectification of software systems
+* Ensuring code/configurations adhere to security, performance, and non-functional standards
+* Evaluating new technologies and their impact on systems
+* Following release management processes and applying version controls
+* Assisting in interpreting and documenting client requirements
+* Solving problems and making decisions within given rules
+* Collaborating with functional teams and managing development processes
 
-**Essential Qualifications:**
+**Essential Qualifications**
 
-* Proficiency in one or more programming languages (e.g., Go, Python, Java).
-* Experience in designing and operating high-scale services.
-* Experience with scalable distributed systems built from scratch or on public cloud primitives (e.g., AWS).
-* Familiarity with Python/Django/Go and AWS is advantageous.
+**Foundational Proficiency**
+
+* Creative thinking
+* Building and managing relationships
+* Emotional agility
+* Quality Assurance and Testing
+* Cloud computing
+* Microservices
+* Adaptability
+* Learning Agility
+
+**Intermediate Proficiency**
+
+* Programming
+* Applications Integration
+* Test Driven Development
+* System Development Lifecycle
+* Troubleshooting
+* System and Technology Integration
+* Verbal & written communication skills
+* Collaboration & team skills
+* Analytical and problem solving skills
+* Data driven decision making
+
+**Additional Requirements**
+
+* Typically 4-6 years of relevant experience
+* Post-secondary degree in related field of study (or equivalent combination of education and experience)

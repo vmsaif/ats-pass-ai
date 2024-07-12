@@ -160,12 +160,10 @@ personal_traits_interests_extraction_task:
 
 work_experience_extraction_task:
   description: >
-    The task involves extracting detailed information about the applicant's work experiences, including work titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the applicant's input.
-
-    {applicant_info_organized_data}
+    The task involves extracting summarized information about the applicant's work experiences, including work titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the applicant's input.
     
-  expected_output: >
-    in JSON format:
+    output should be in JSON format:
+    ```json
       {
         "Work Experience": [
           {
@@ -173,20 +171,14 @@ work_experience_extraction_task:
             "Company Name": "",
             "Timeline": "",
             "Technologies, frameworks, and tools Used": "",
-            "Skills": "",
-            "Link": "",
-            "Key Highlights": [
-              "",
-              "",
-              "",
-              ""
-            ],
-            "Team size": "",
-            "Outcomes": ""
-          }
+            "Short Description": "",
+          },
+          ...as many as available
         ]
       }
-    
+    ```
+  expected_output: >
+     
 project_experience_extraction_task:
   description: >
     The task involves extracting detailed information about the applicant's project experiences, including project titles, durations, team sizes, roles, technologies used, and outcomes. Use the tool to extract this information from the applicant's input.
@@ -194,8 +186,8 @@ project_experience_extraction_task:
     Here is the structured data you need to extract the project experiences from:
     {applicant_info_organized_data}
 
-  expected_output: >
-    in JSON format:
+    output should be in JSON format:
+    ```json
       {
         "Project Experience": [
           {
@@ -203,18 +195,13 @@ project_experience_extraction_task:
             "Timeline": "",
             "Technologies, frameworks, and tools Used": "",
             "Skills": "",
-            "Link": "",
-            "Key Highlights": [
-              "",
-              "",
-              "",
-              ""
-            ],
-            "Team size": "",
-            "Outcomes": ""
-          }
+            "Short Description": "",
+          },
+          ...as many as available
         ]
       }
+    ```
+  expected_output: >
 
 skills_from_exp_and_project_task:
   description: >
@@ -633,6 +620,7 @@ correct_categorization_of_skills_task:
     - Provide a revised list with skills accurately placed in categories that reflect their industry and functional relevance. Each category should have 3-5 skills for balance. Keep upto 6 categories in the final output.
     
     Example of a Skills List of tech industry:
+    ```json
     {
       "Programming Languages": ["Python", "Java", "Go"],
       "Project Management": ["Agile Methodologies", "Team Leadership"],
@@ -643,9 +631,12 @@ correct_categorization_of_skills_task:
       "AI Frameworks": ["TensorFlow", "PyTorch"], 
       "Data Science": ["Data Analysis", "Machine Learning"]
     }
+    ```
   expected_output: >
 
-# Now Integrating ATS-Friendly Keywords into Experiences
+
+
+# -------------------------------------------------------- 
 
 experience_choosing_task:
   description: >
@@ -774,8 +765,9 @@ ats_friendly_keywords_into_experiences:
       - **Natural Language:** Weave keywords into the narrative seamlessly; they should enhance rather than disrupt the flow.
       - **Conciseness and Clarity:** 
         -- Limit the short description to 10-15 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
-        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-20 words per key highlight. If possible, split one entry into multiple key highlights to keep them concise.
-      - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
+        -- Keep or make 3 best key highlights for each experience, focusing on the most impactful achievements or skills.
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-20 words per key highlight. 
+        - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - you are also provided a list of "missing_from_the_applicant_skills" which are in the job description but not in the applicant's experiences. Try to weave some of these words where they fit naturally.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
 
@@ -810,9 +802,7 @@ ats_friendly_keywords_into_experiences:
       "skills": "",
       "Link": "",
       "Short Description": "(About 10-13 words)",
-      "Key Highlights": [(Up to 5 key highlights but not required to be 5), upto 10-20 words each
-        "",
-        "",
+      "Key Highlights": [(Up to 3 key highlights but not required to be 3), upto 10-20 words each
         "",
         "",
         ""
@@ -831,9 +821,7 @@ ats_friendly_keywords_into_experiences:
       "skills": "",
       "Link": "",
       "Short Description": "(About 15 words)",
-      "Key Highlights": [(Up to 5 key highlights but not required to be 5), upto 10-20 words each
-        "",
-        "",
+      "Key Highlights": [(Up to 3 key highlights but not required to be 3), upto 10-20 words each
         "",
         "",
         ""
@@ -940,26 +928,22 @@ applicant_philosophy_extraction_task:
 
 career_objective_task:
   description: >
-    Craft a concise and compelling career objective statement for the applicant's resume, tailored to catch the attention of recruiters and align with the specific job and company goals at Robinhood. This statement should reflect the applicant's true experience level if provided, and how it aligns with the role of Software Developer - Reliability.
+    Craft a concise and compelling career objective statement for the applicant's resume, tailored to catch the attention of recruiters and align with the specific job and company goals. This statement should reflect the applicant's true experience level if provided, and how it aligns with the job role and company culture.
 
     **Key Elements**:
     - **Unique Value Proposition:** Highlight the applicant's specific skills, experiences, and achievements relevant to high-scale services, cloud technologies, and reliability engineering.
-    - **Alignment with Company Goals:** Integrate details that demonstrate how the applicant’s career goals and technical skills align with Robinhood’s mission to democratize finance and the specifics of the Reliability Engineering team.
+    - **Alignment with Company Goals:** Integrate details that demonstrate how the applicant’s career goals and technical skills align with the company's mission to democratize finance and the specifics of the Reliability Engineering team.
     - **Conciseness and Impact:** Limit the statement to 30 words, incorporating the job title and company name, and ensuring it uses strong, persuasive language to create a memorable impact.
 
-    **Context Provided**:
-    - **Skills of the Applicant:** Utilize the detailed list provided, including programming languages like Python, Java, and cloud computing skills such as AWS.
-    - **Job Description**: Key details from the job description should be used to precisely tailor the career objective to the role and responsibilities at Robinhood.
+    In the final output, do not say "Seasoned Role" such as "Seasoned Software Developer". It should feel passionate and enthusiastic about the role.
 
   expected_output: >
-    A career objective statement that is specifically tailored to the job at Robinhood, accurately reflecting the applicant’s qualifications and seamlessly integrating them with the company’s mission. The statement should be precise, impactful, and within a 30-word limit.
+    A career objective statement that is specifically tailored to the job, accurately reflecting the applicant’s qualifications and seamlessly integrating them with the company’s mission. The statement should be precise, impactful, and within a 30-word limit. It must contain the job title and company name.
 
     Example Output:
     {
       "Career Objective": "Aspiring Software Developer eager to join Robinhood's Reliability Engineering team, leveraging skills in Python and AWS to support scalable, high-availability systems and advance financial inclusivity."
     }
-
-    This task requires a detailed understanding of the applicant's qualifications and how they can be effectively communicated to meet the specific needs of the job at Robinhood, ensuring the objective is tailored, impactful, and accurate.
 
 # --------------------------------------------------------
 

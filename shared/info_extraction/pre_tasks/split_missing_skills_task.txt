@@ -1,9 +1,7 @@
 {
   "missing_from_the_applicant_skills": [
-    "High Availability",
-    "Low Latency",
-    "Scalability",
-    "Observability",
-    "Distributed Systems"
+    "Troubleshooting",
+    "Quality Assurance",
+    "Testing"
   ]
 }

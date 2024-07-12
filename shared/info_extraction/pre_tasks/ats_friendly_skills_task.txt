@@ -3,61 +3,67 @@
     "applicant_accepted_skills_count": 14,
     "exact_match_with_job_description": {
       "Programming Languages": [
-        "Python"
+        "Python",
+        "Java"
       ],
-      "Cloud & DevOps": [
-        "CI/CD",
-        "AWS",
-        "GitHub Action"
+      "AI Frameworks": [
+        "LangChain"
       ],
       "Soft Skills": [
         "Communication",
-        "Teamwork",
         "Problem Solving"
+      ],
+      "Cloud, DevOps": [
+        "CI/CD",
+        "Docker"
       ]
     },
     "partial_match": {
       "Programming Languages": [
         {
-          "Name_mentioned_in_the_job_description": "Go",
-          "Relevance": "While the applicant doesn't list Go specifically, their proficiency in Python and experience with backend development suggest they could adapt to Go relatively quickly, given its similar features and use cases in backend development."
+          "Name_mentioned_in_the_job_description": "C++",
+          "Relevance": "The applicant has experience in C++, directly aligning with the job description's requirement"
         },
         {
-          "Name_mentioned_in_the_job_description": "C++",
-          "Relevance": "Although the applicant doesn't mention C++, their experience with 'C Programming' demonstrates a foundational understanding of systems programming, which is transferable to C++ with some focused learning."
+          "Name_mentioned_in_the_job_description": "SQL",
+          "Relevance": "Applicant's proficiency in SQL is a valuable asset as it's often used in software development, particularly for data management"
         }
       ],
       "AI Frameworks": [
         {
-          "Name_mentioned_in_the_job_description": "Kafka",
-          "Relevance": "While the applicant doesn't have Kafka experience listed, their proficiency in 'Data Structures and Algorithms', 'Database Implementation', and handling large datasets through Python suggests a strong foundation to quickly learn and apply Kafka."
+          "Name_mentioned_in_the_job_description": "OpenAI",
+          "Relevance": "Applicant lists experience with OpenAI, demonstrating familiarity with a key player in AI development"
         },
         {
-          "Name_mentioned_in_the_job_description": "Kubernetes",
-          "Relevance": " Although not explicitly listed, the applicant's understanding of 'Cloud & DevOps' principles, 'CI/CD' pipelines (GitHub Actions), and experience with cloud platforms (AWS) provide a solid basis for acquiring Kubernetes skills."
+          "Name_mentioned_in_the_job_description": "RAG Search",
+          "Relevance": "Their experience with RAG Search aligns well with the growing importance of advanced search technologies in software applications"
         },
         {
-          "Name_mentioned_in_the_job_description": "Microservices",
-          "Relevance": "The applicant's skills in 'Software Engineering', 'OOP', 'SDLC', and their understanding of backend technologies (Python) suggest a solid foundation for understanding and working with microservice architectures. "
+          "Name_mentioned_in_the_job_description": "Gemini Pro",
+          "Relevance": "Experience with Gemini Pro showcases the applicant's awareness and potential proficiency in using cutting-edge AI models"
         }
       ],
       "Soft Skills": [
         {
-          "Name_mentioned_in_the_job_description": "Collaboration",
-          "Relevance": "The applicant's 'Teamwork' skills and experience as a 'Club member' highlight their collaborative abilities and comfort in team settings. "
+          "Name_mentioned_in_the_job_description": "Teamwork",
+          "Relevance": "The applicant lists 'Teamwork' as a skill, indicating their ability to collaborate effectively in a team environment"
         },
         {
-          "Name_mentioned_in_the_job_description": "Growth Mindset",
-          "Relevance": "Although not explicitly stated, the applicant's consistent pursuit of new technologies and diverse skillset ('AI and Game Development', 'Web and Mobile Technologies', 'Blockchain') indicate an eagerness to learn and adapt, reflecting a growth mindset. "
+          "Name_mentioned_in_the_job_description": "Adaptability",
+          "Relevance": "Applicant's self-professed 'Adaptability' is crucial in a fast-paced, ever-evolving field like software development"
+        }
+      ],
+      "System & Technology Integration": [
+        {
+          "Name_mentioned_in_the_job_description": "System & Technology Integration",
+          "Relevance": "Applicant's experience with diverse technologies, including AI, Cloud, and Frontend/Backend development, suggests a strong foundation in system integration principles"
         }
       ]
     }
   },
   "missing_from_the_applicant_skills": [
-    "High Availability",
-    "Low Latency",
-    "Scalability",
-    "Observability",
-    "Distributed Systems"
+    "Troubleshooting",
+    "Quality Assurance",
+    "Testing"
   ]
 }

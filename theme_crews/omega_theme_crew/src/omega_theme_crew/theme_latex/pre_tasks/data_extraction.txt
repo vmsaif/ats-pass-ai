@@ -1,0 +1,46 @@
+{
+    "Section": {
+        "Section Name": "Education",
+        "Sub Section": [
+            {
+                "Degree": "BSc",
+                "Major": "Computer Science",
+                "University": "UNIVERSITY OF MANITOBA",
+                "Graduation Date": "October 2023"
+            }
+        ]
+    },
+    "Section": {
+        "Section Name": "Relevant Courses",
+        "Sub Section 1": []
+    },
+    "Section": {
+        "Section Name": "Volunteer Work",
+        "Sub Section": []
+    },
+    "Section": {
+        "Section Name": "Awards and Recognitions",
+        "Sub Section": []
+    },
+    "Section": {
+        "Section Name": "References",
+        "Sub Section": [
+            {
+                "Name": "ABU KABIR",
+                "Position": "Director, IT Service Management",
+                "Company": "Microsoft Corporation",
+                "Contact Information": "204-298-3693 | Winnipeg, MB"
+            },
+            {
+                "Name": "SAFIUR MAHDI",
+                "Position": "Software Developer",
+                "Company": "Skip The Dishes",
+                "Contact Information": "204-583-3432 | Winnipeg, MB"
+            }
+        ]
+    },
+    "Section": {
+        "Section Name": "Miscellaneous",
+        "Sub Section": []
+    }
+}

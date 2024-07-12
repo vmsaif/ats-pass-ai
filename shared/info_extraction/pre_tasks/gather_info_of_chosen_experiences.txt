@@ -1,35 +1,17 @@
 {
   "Total Object Count": 2,
   "Most Recent Experience": {
-    "Title": "ATS Pass AI",
-    "Timeline": "January 2024 - Present",
-    "Technologies, frameworks, and tools Used": "Python | RAG Search | CrewAI | LangChain | Gemini",
-    "Skills": "AI | Multiagent",
-    "Link": "https://github.com/vmsaif/ats-pass-ai",
-    "Short Description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency.",
-    "Key Highlights": [
-      "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes.",
-      "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search.",
-      "Developed scalable architecture to anticipate future needs and adaptations."
-    ],
-    "Team size": null,
-    "Outcomes": null
+    "title": "ATS Pass AI",
+    "type": "Project",
+    "timeline": "January 2024 - Present",
+    "description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
   },
   "Additional Relevant Experiences": [
     {
-      "Title": "Blockchain Car Mileage Tracker",
-      "Timeline": "January 2023 - Mar 2023",
-      "Technologies, frameworks, and tools Used": "Docker | Vue.js",
-      "Skills": "Innovative Project",
-      "Link": "https://github.com/vmsaif/blockChainCarMilageTracker",
-      "Short Description": "Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
-      "Key Highlights": [
-        "Enhanced data integrity and transparency.",
-        "Solving a real-world problem by crafting a **smart contract** for tamper-proof mileage recording.",
-        "Collaborated closely as a team to design, develop, and test the application.",
-      ],
-      "Team size": null,
-      "Outcomes": null
+      "title": "AI Path Finding",
+      "type": "Project",
+      "timeline": "September 2023 - December 2023",
+      "description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project."
     }
   ]
 }

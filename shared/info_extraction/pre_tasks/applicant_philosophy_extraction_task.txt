@@ -1,3 +1,4 @@
+```json
 {
   "Applicant's Philosophy and Goals": {
     "Philosophy": "Believes in democratizing financial tools to empower individuals.",
@@ -5,3 +6,4 @@
     "Software Development Approach": "Adopts agile methodologies to enhance team productivity and adapt quickly to changing market needs."
   }
 }
+```

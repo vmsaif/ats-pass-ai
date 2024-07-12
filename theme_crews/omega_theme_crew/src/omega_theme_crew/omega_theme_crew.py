@@ -4,7 +4,6 @@
 	Date: 04-23-2024
 	Description: This file contains the crew class for the applicant info organizer crew.
 """
-
 import os
 import yaml
 import agentops
@@ -46,33 +45,39 @@ class OmegaThemeCrew:
 
 	debugFlag = False
 
-	debugFlag = True
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the applicant info organizer crew"""
 
 		tasks = [
-				# self.name_section(),
-				# self.concise_jd_task(),
+			self.name_section(),
+			self.concise_jd_task(),
 
-				# self.assess_and_prioritize(),
-				# self.select_first_column_content(),
+			# ---- set Column 1 content -----
+			self.remove_data(),
+			self.data_extraction(),
+			self.relevance_assessment(),
+			self.final_selection(),
 
-				self.education_section(),
-				# self.coursework_section(),
-				# self.volunteer_section(),
-				# self.references_section(), 
 
-				# self.skill_section(),
-				# self.career_objective_section(),
+			# --- latex of column 1 ---
+			self.education_section(),
+			self.coursework_section(),
+			self.volunteer_section(),
+			self.references_section(), 
+			self.skill_section(),
 
-				# self.summary_point_selector(),
-				# self.link_handler(),
-				# self.link_latex(),
-				# self.experience_section(),
-				# self.exp_latex_verified()
-			]
+			# Column 2 content
+			self.career_objective_section(),
+
+			self.summary_point_selector(),
+			self.link_handler(),
+			self.link_latex(),
+			self.experience_section(),
+			self.exp_latex_verified()
+		]
 		
 		# Return the crew
 		return Crew(
@@ -126,25 +131,23 @@ class OmegaThemeCrew:
 		)
 
 	@agent
-	def content_selector_agent (self) -> Agent:
+	def profile_data_extractor_agent(self) -> Agent:
 		# load yaml
-		yaml = self.yaml_loader("content_selector_agent", False)
+		yaml = self.yaml_loader("profile_data_extractor_agent", False)
 		return Agent(
 			role=yaml[0],
 			goal=yaml[1],
 			backstory=yaml[2],
 			allow_delegation=False,
 			# verbose=True,
-			# llm=self.genAILarge,
-			# step_callback=self.large_llm_limiter,
 			llm=self.genAI,
 			step_callback=self.small_llm_limiter,
 		)
 	
 	@agent
-	def expItemSelectorAgent(self) -> Agent:
+	def relevance_and_prioritization_agent(self) -> Agent:
 		# load yaml
-		yaml = self.yaml_loader("expItemSelectorAgent", False)
+		yaml = self.yaml_loader("relevance_and_prioritization_agent", False)
 		return Agent(
 			role=yaml[0],
 			goal=yaml[1],
@@ -153,8 +156,6 @@ class OmegaThemeCrew:
 			# verbose=True,
 			llm=self.genAI,
 			step_callback=self.small_llm_limiter,
-			# llm=self.genAILarge,
-			# step_callback=self.large_llm_limiter,
 		)
 
 	@task
@@ -190,43 +191,101 @@ class OmegaThemeCrew:
 		)
 
 	@task
-	def assess_and_prioritize(self):
-		yaml = self.yaml_loader("assess_and_prioritize", True)
+	def remove_data(self):
+		yaml = self.yaml_loader("remove_data", True)
 		description = yaml[0]
 		expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["concise_jd_task"])
-	
 		description = description + "\n\n" + self.load_file(PATHS["profile_builder_task"])
-		description = description + "\n\n" + self.load_file(PATHS["coursework_extraction_task"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.content_selector_agent(),
-			context=[self.concise_jd_task()],
-			output_file=OMEGA_PATHS["assess_and_prioritize"],
+			agent=self.profile_data_extractor_agent(),
+			output_file=OMEGA_PATHS["remove_data"],
 			callback=self.small_token_limiter
 		)
 
 	@task
-	def select_first_column_content(self):
-		yaml = self.yaml_loader("select_first_column_content", True)
-		expected_output = yaml[1]
+	def data_extraction(self):
+		yaml = self.yaml_loader("data_extraction", True)
 		description = yaml[0]
+		expected_output = yaml[1]
+
+		description = description + "\nRelevant Courses:\n" + self.load_file(PATHS["coursework_extraction_task"])
 
 		if self.debugFlag:
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["assess_and_prioritize"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["remove_data"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.content_selector_agent(),
-			context=[self.assess_and_prioritize()],
-			output_file=OMEGA_PATHS["select_first_column_content"],
+			agent=self.profile_data_extractor_agent(),
+			context=[self.remove_data()],
+			output_file=OMEGA_PATHS["data_extraction"],
 			callback=self.small_token_limiter
 		)
+
+	@task
+	def relevance_assessment(self):
+		yaml = self.yaml_loader("relevance_assessment", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		description = description + "\n\n" + self.load_file(OMEGA_PATHS["concise_jd_task"])
+
+		if self.debugFlag:
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["data_extraction"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.relevance_and_prioritization_agent(),
+			context=[self.data_extraction()],
+			output_file=OMEGA_PATHS["relevance_assessment"],
+			callback=self.small_token_limiter
+		)
+		
+	@task
+	def final_selection(self):
+		yaml = self.yaml_loader("final_selection", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if self.debugFlag:
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["relevance_assessment"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.relevance_and_prioritization_agent(),
+			context=[self.relevance_assessment()],
+			output_file=OMEGA_PATHS["final_selection"],
+			callback=self.small_token_limiter
+		)
+
+	# @task
+	# def assess_and_prioritize(self):
+	# 	yaml = self.yaml_loader("assess_and_prioritize", True)
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
+
+	# 	if(self.debugFlag):
+	# 		description = description + "\n\n" + self.load_file(OMEGA_PATHS["concise_jd_task"])
+	
+	# 	description = description + "\n\n" + self.load_file(PATHS["profile_builder_task"])
+	# 	description = description + "\n\n" + self.load_file(PATHS["coursework_extraction_task"])
+
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.content_selector_agent(),
+	# 		context=[self.concise_jd_task()],
+	# 		output_file=OMEGA_PATHS["assess_and_prioritize"],
+	# 		callback=self.small_token_limiter
+	# 	)
+
+
 
 	# @task
 	# def split_content_of_select_first_column_content(self):
@@ -254,13 +313,13 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 		
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["select_first_column_content"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["final_selection"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.select_first_column_content()],
+			context=[self.final_selection()],
 			output_file=OMEGA_PATHS["education_section"],
 			callback=self.small_token_limiter
 		)
@@ -288,13 +347,13 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 		
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["select_first_column_content"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["final_selection"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.select_first_column_content()],
+			context=[self.final_selection()],
 			output_file=OMEGA_PATHS["coursework_section"],
 			callback=self.small_token_limiter
 		)
@@ -306,13 +365,13 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["select_first_column_content"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["final_selection"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.select_first_column_content()],
+			context=[self.final_selection()],
 			output_file=OMEGA_PATHS["volunteer_section"],
 			callback=self.small_token_limiter
 		)
@@ -322,14 +381,15 @@ class OmegaThemeCrew:
 		yaml = self.yaml_loader("references_section", True)
 		description = yaml[0]
 		expected_output = yaml[1]
+
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["select_first_column_content"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["final_selection"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.latex_maker_agent(),
-			context=[self.select_first_column_content()],
+			context=[self.final_selection()],
 			output_file=OMEGA_PATHS["references_section"],
 			callback=self.small_token_limiter
 		)
@@ -388,8 +448,7 @@ class OmegaThemeCrew:
 		description = yaml[0]
 		expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
+		description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
 
 		return Task(
 			description=description,

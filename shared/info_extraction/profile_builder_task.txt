@@ -1,50 +1,46 @@
 {
-  "applicant Profile": {
+  "Applicant Profile": {
     "Personal Details": {
       "Full Name": "Saif Mahmud",
       "Phone Number": "204 955 5064",
       "Email": "msaifofficial@gmail.com",
-      "LinkedIn": "https://www.linkedin.com/in/vmsaif",
+      "LinkedIn": "linkedin.com/in/vmsaif",
       "Other Social Media Profiles": null,
       "Personal Website": "saifmahmud.dev",
       "Portfolio": null,
-      "GitHub": null,
-      "Address": "Winnipeg, MB",
+      "GitHub": "https://github.com/vmsaif/",
+      "Address": null,
       "City": "Winnipeg",
       "State": "MB",
       "Zip Code": null,
       "Country": null
     },
-    "Education": {
-      "Degree": "BSc",
-      "Major": "Computer Science",
-      "University": "University of Manitoba",
-      "Location": null,
-      "Graduation Date": "October 2023",
-      "GPA": "3.07"
-    },
-    "Volunteer Work": [
+    "Education": [
       {
-        "Organization Name": ".dev Programming Club",
-        "Role": "Active Member",
-        "Responsibilities": "Engaged with the latest software development technologies and tools.\nCollaborated on team projects focused on Java and Cloud Technologies.",
-        "Timeline": "2019-2023"
+        "Degree": "BSc",
+        "Major": "Computer Science",
+        "University": "UNIVERSITY OF MANITOBA",
+        "University Location": null,
+        "Graduation Date": "October 2023",
+        "GPA": null,
+        "Honors/Distinctions": null
       }
     ],
+    "Volunteer Work": [],
     "Awards and Recognitions": [],
     "References": [
       {
-        "Name": "Abu Kabir",
-        "Position": "Director IT Service Management",
-        "Company": "Microsoft",
-        "Contact Information": "204-298-3693",
+        "Name": "ABU KABIR",
+        "Position": "Director, IT Service Management",
+        "Company": "Microsoft Corporation",
+        "Contact Information": "204-298-3693 | Winnipeg, MB",
         "Relationship": null
       },
       {
-        "Name": "Safiur Mahdi",
-        "Position": "Java Developer",
-        "Company": "Skip the Dishes",
-        "Contact Information": "204-583-3432",
+        "Name": "SAFIUR MAHDI",
+        "Position": "Software Developer",
+        "Company": "Skip The Dishes",
+        "Contact Information": "204-583-3432 | Winnipeg, MB",
         "Relationship": null
       }
     ],

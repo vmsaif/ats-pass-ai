@@ -10,40 +10,38 @@ from dotenv import load_dotenv
 # URL of the webpage
 class WebScraper:
     load_dotenv()
-    system_instruction = dedent("""
-    You are given an extracted texts of a job description from a web page.
-                                
-    Give me everything as is. 
-                                
-    Expertec Output:
-    - Full context in the exactly provided words without any changes.
-    - Start the output with:
-        Job Role:
-        Company Name:
-        Location: (if available)
-        Rest of the content as is.
-                                
-    You can remove:
-    - any unnecessary white spaces or blank lines. 
-    - How to Apply section.
-    - Benefits section like "Dental, Vision, Medical, 401k, etc." 
-                          
-    Here is the extracted texts of the job description web page:
-    """)
 
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, job_description: str, system_instruction: str):
+        self.system_instruction = system_instruction
+
+        if(job_description.startswith("http")):
+            self.url = job_description
+            self.job_description_file_path = None
+        else:
+            self.job_description_file_path = job_description
+            self.url = None
+        
         self.initLLM()
 
     def run(self):
         print("Running Web Scraper Task...")
-        self.delete_previous_jd_llm_output()
+        self._delete_previous_jd_llm_output()
+        
         try:
-            response = self.fetch_page()
-            soup = self.parse_html(response)
-            text = self.extract_text(soup)
-            prompt = WebScraper.system_instruction + '\n' + text
-            print("Job Description has been fetched")
+            if self.url:
+                response = self.fetch_page()
+                soup = self.parse_html(response)
+                text = self.extract_text(soup)
+                print("Job Description has been fetched")
+                prompt = f'{self.system_instruction} \n {text}'
+            elif self.job_description_file_path:
+                text = self._read_file(self.job_description_file_path)
+                self.write_to_file(text)
+                return True
+            else:
+                print("Error: No Job Description provided")
+                exit(1)
+
         except Exception as e:
             print("Error fetching Job Description")
             traceback.print_exc()
@@ -59,7 +57,16 @@ class WebScraper:
             exit(1)
         return llm_response.text
 
-    def delete_previous_jd_llm_output(self):
+    def _read_file(self, file_path):
+        try:
+            print(f'Started reading {file_path}')
+            with open(file_path, 'r', encoding='utf-8') as file:
+                return file.read()
+        except FileNotFoundError:
+            print(f"File not found at the specified path: {file_path}")
+
+
+    def _delete_previous_jd_llm_output(self):
         try:           
             os.remove(PATHS['jd_keyword_extraction'])
             print("Deleted previous jd_keyword_extraction.")
@@ -79,7 +86,7 @@ class WebScraper:
         soup = BeautifulSoup(response.text, 'html.parser')
         return soup
 
-    def extract_text(self, soup):
+    def extract_text(self, soup: BeautifulSoup):
         text = soup.get_text()
         return text
 

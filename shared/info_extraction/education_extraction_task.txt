@@ -1,12 +1,14 @@
 {
-  "Education": {
-    "Degree": "BSc",
-    "Major": "Computer Science",
-    "University": "University of Manitoba",
-    "University Location": null,
-    "Graduation Date": "October 2023",
-    "GPA": "3.07",
-    "Honors/Distinctions": null
-  },
+  "Education": [
+    {
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "UNIVERSITY OF MANITOBA",
+      "University Location": null,
+      "Graduation Date": "October 2023",
+      "GPA": null,
+      "Honors/Distinctions": null
+    }
+  ],
   ...
 }

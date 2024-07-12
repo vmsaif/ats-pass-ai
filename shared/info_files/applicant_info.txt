@@ -8,86 +8,83 @@ vanish behind a single, seamless action. One button that will do everything the 
 at the moment. Though this is not possible yet, I have written every single code line while
 keeping this philosophy in my mind.
 
-name: Saif Mahmud
+Last Updated on
+25th June 2024 Saif Mahmud
 saifmahmud.dev | linkedin.com/in/vmsaif
 msaifofficial@gmail.com | 204 955 5064 | Winnipeg, MB
-
-Education
-University of Manitoba
+EDUCATION
+UNIVERSITY OF MANITOBA
 BSc Major in Computer Science
-Graduated, October 2023 | GPA: 3.07
-
-Relevant Courses
-Distributed Computing (Python | JavaScript)
-Data Structures and Algorithms (Java)
-Object Orientation (Java | C++)
-Software Engineering (Java | Unit Testing)
-Database Implementation (SQL | Python)
+Graduated, October 2023
+RELEVANT COURSES
+Artificial Intelligence (Python)
 AI and Game Development (Java | Python)
-Technical Communication in CS
-
-Skills
-Programming: Python, Javascript, C++, Java
-Database: MySQL, JSON, noSQL, Schema
-Cloud & DevOps: CI/CD, GitHub Action, AWS(Basic)
-Soft Skills: Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis
-Programming Concepts: System Analysis, Web and Mobile Technologies, OOP, Data Structures, SDLC, Debugging and Troubleshooting, Test driven deployment
-
-VOLUNTEER
-.dev Programming Club
-Active Member | University of Manitoba Students Union (UMSU) | 2019-2023
-- Engaged with the latest software development technologies and tools.
-- Collaborated on team projects focused on Java and Cloud Technologies.
-
-ACTIVITIES
-Captain: Football Club Vikings, Dhaka, Bangladesh (2012 - 2014)
-Gaming Achievements: FIFA Champion (UMBSA 2017 and also CBA 2018), Intel PC Guru - 3rd Place (2007)
-
-Career Goal
-As a Proactive, innovative-thinking Software Developer with a BSc in Computer Science, I am passionate about giving it all at SGA Tech Solutions. I aim to contribute innovative solutions in a collaborative environment and am committed to professional growth.
-
-Project Experience
-
-AI Path Finding | CI/CD | A* Algorithm | Java | Git
-Game Development - Sep 2023 - Dec 2023
-A Java-based game development project that leveraged the A* algorithm to create an AI-driven game.
-- Utilized concurrent programming to enhance game performance.
-- Employed CI/CD practices to enhance project efficiency, reducing deployment time by 50%.
-- Project repository here on GitHub: https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm
-
-Blockchain Car Mileage Tracker | Docker | Vue.js
-Innovative Project - January 2023 - Mar 2023
-Initiated and developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.
-- Solving a real-world problem by crafting a smart contract for tamper-proof mileage recording.
-- Collaborated closely as a team to design, develop, and test the application.
-- Project details available here on GitHub: https://github.com/vmsaif/blockChainCarMilageTracker
-
-Reversible Learning APP | SQL | UI | Android | Java
-Project Management | Team Player - January 2021 - April 2021
-Collaborated with a team to develop "Reversible Learning", an Android app for enhancing study habits.
-- Employed JUnit for comprehensive unit and integration testing, resulting in a 25% decrease in post-release bugs.
-- Demonstrated adaptability and effective communication by working in a team environment.
-- Project accessible on GitHub: https://github.com/vmsaif/reversibleLearning
-
-Bank Account System | Java | File I/O
-Object-Oriented Design - Polymorphism
-Developed a Java application to simulate a bank account system, showcasing object-oriented programming and polymorphism.
-- Developed scalable Java applications, optimizing process efficiency by 30%.
-- Implemented an intricate class hierarchy, demonstrating polymorphism.
-- Facilitated open-source collaboration with documentation, accessible here: https://github.com/vmsaif/bankAccountSystem
-
-
-References:
-1. Abu Kabir
-Director IT Service Management, Microsoft
-Winnipeg, MB
-204-298-3693
-
-2. Safiur Mahdi
-Java Developer, Skip the Dishes
-Winnipeg, MB
-204-583-3432
-
+Statistics and Computing (R | Charts)
+Distributed Computing (Python)
+Database Implementation (Python | SQL)
+Data Structures and Algorithms (Java)
+Software Engineering (Java | Unit Testing)
+SKILLS
+Programming Languages:
+Python • Java • C++ • C • JavaScript
+AI Development:
+LangChain • OpenAI • Gemini Pro • RAG
+Search • CrewAI • GPT • LLaMa 3
+Cloud, DevOps:
+Google Vertex • AWS Bedrock • CI/CD •
+GitHub Actions • Docker
+Front End Development:
+React • CSS • JavaScript • HTML
+Soft Skills:
+Adaptability • Critical Thinking •
+Teamwork • Communication • Time
+Management • Problem Solving
+REFERENCES
+ABU KABIR
+Director, IT Service Management
+Microsoft Corporation
+204-298-3693 | Winnipeg, MB
+SAFIUR MAHDI
+Software Developer
+Skip The Dishes
+204-583-3432 | Winnipeg, MB
+CAREER GOAL
+Proactive Computer Science graduate with a focus on AI
+and software development, aiming to apply my skills to the
+tech industry to drive innovation and efficiency. I seek to
+contribute to teams where continuous improvement and
+robust software solutions meet real-world demands.
+PROJECT EXPERIENCE
+ATS PASS AI | Python | SQL | Multiagent | AI | RAG Search
+AI Developer - January 2024 - Present
+Led the development of a generative AI-driven system to
+automate tailored resume creation, enhancing job search
+efficiency with state-of-the-art AI technologies.
+• Engineered an AI solution that personalizes resumes,
+achieving over 85% keyword alignment with job
+descriptions, optimizing for applicant tracking systems.
+• Developed scalable architecture to accommodate
+future enhancements, demonstrating forward-thinking
+and adaptability.
+• Project repository available here on GitHub.
+AI PATHFINDING | CI/CD | A* Algorithm | Java | Git
+AI Developer - September 2023 - December 2023
+Developed an AI-driven game utilizing the A* algorithm to
+enhance user engagement and optimize system efficiency.
+• Applied CI/CD practices for efficient development
+cycles and prompt engineering to guide AI responses.
+• Successfully balanced rapid development and
+deployment of the AI components within the project.
+• For detailed insights visit my GitHub Repository.
+EXPERIENCE
+PROGRAMMING MENTOR | Java | Computer Systems
+Winnipeg, Manitoba | February 2023 - December 2023
+• Enhanced a student's Java and computer systems skills
+through personalized tutoring, demonstrating adaptive
+teaching techniques.
+• Improved student proficiency in software operation and
+debugging, showcasing my mentorship and
+instructional skills.
 
 \vspace{5pt}
 \runsubsection{ATS Pass AI}

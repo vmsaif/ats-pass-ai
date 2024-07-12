@@ -410,7 +410,7 @@ class ResumeCrew:
 		yaml = self.yaml_loader('work_experience_extraction_task')
 		applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"])
 
-		task_description = yaml[0].format(applicant_info_organized_data = applicant_info_organized_data)
+		task_description = yaml[0] + "\nApplicant Info Organized Data:\n" + applicant_info_organized_data
 		expected_output = yaml[1]
 
 		return Task(
@@ -428,7 +428,7 @@ class ResumeCrew:
 		yaml = self.yaml_loader('project_experience_extraction_task')
 		applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"])
 
-		task_description = yaml[0].format(applicant_info_organized_data = applicant_info_organized_data)
+		task_description = yaml[0] + "\nApplicant Info Organized Data:\n" + applicant_info_organized_data
 		expected_output = yaml[1]
 
 		return Task(
@@ -546,6 +546,7 @@ class ResumeCrew:
 			agent=self.skill_match_researcher_agent(),
 			context=[self.split_context_of_ats_friendly_skills_task()],
 			output_file=PATHS["correct_categorization_of_skills_task"],
+			tools=[self.webSearchTool],
 			callback=self.small_token_limiter
 		)
 

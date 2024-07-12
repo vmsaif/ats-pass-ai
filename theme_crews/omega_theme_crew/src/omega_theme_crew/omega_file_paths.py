@@ -20,8 +20,13 @@ OMEGA_PATHS = {
     "omega_theme_tasks": f"{omega_theme_crew_src_dir}/config/omega_theme_tasks.yaml",
 
     "concise_jd_task": f"{omega_theme_pre_tasks_dir}/concise_jd_task.txt",
-    "assess_and_prioritize": f"{omega_theme_pre_tasks_dir}/assess_and_prioritize.txt",
-    "select_first_column_content": f"{omega_theme_pre_tasks_dir}/select_first_column_content.txt",
+
+    "remove_data": f"{omega_theme_pre_tasks_dir}/remove_data.txt",
+    "data_extraction": f"{omega_theme_pre_tasks_dir}/data_extraction.txt",
+    "relevance_assessment": f"{omega_theme_pre_tasks_dir}/relevance_assessment.txt",
+    "prioritization_logic": f"{omega_theme_pre_tasks_dir}/prioritization_logic.txt",
+    "final_selection": f"{omega_theme_pre_tasks_dir}/final_selection.txt",
+
 
     "sub_tex_files_dir": sub_tex_files_dir,
     "omega_theme_pre_tasks_dir" : omega_theme_pre_tasks_dir,
