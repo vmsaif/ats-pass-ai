@@ -9,8 +9,8 @@ class LLMTask:
 
 		# if applicant_info_orgainzed_file_path does not exist then proceed
 		if(self._shouldRun()):
-			content = self._read_file(self.applicant_info_file_path)
-			response = self.model.generate_content(content, request_options={"timeout": 600})
+			self.content = self.content + '\n' + self._read_file(self.applicant_info_file_path)
+			response = self.model.generate_content(self.content, request_options={"timeout": 600})
 			self.llm_limiter.request_limiter(output=None)
 			self.llm_limiter.record_token_usage(response.text)
 			self._write_to_file(response.text)
@@ -40,9 +40,9 @@ class LLMTask:
 			# system_instruction=self.system_instruction, # it will not work with gemini-pro, comment it out if gemini-pro is needed
 			generation_config=self.generation_config,
 			safety_settings=self.safety_settings
-		)
+			)
+			self.content = self.content + '\n' + self.system_instruction 
 		
-
 	def _shouldRun(self):
 		if self.override:
 			print(f"Starting {self.task_name} task...")
@@ -86,6 +86,7 @@ class LLMTask:
 		self.task_name = task_name
 		self.applicant_info_file_path = applicant_info_file_path
 		self.applicant_info_orgainzed_file_path = applicant_info_orgainzed_file_path
+		self.content = ""
 		self.system_instruction = system_instruction
 		self.override = override
 		self.islargeLLM = islargeLLM

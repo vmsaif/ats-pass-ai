@@ -1,52 +1,39 @@
+```
 {
-    "applicant's Experiences with ATS Keywords": {
-        "total object count:": 3,
-        "Most Recent Experience": {
-            "Title": "ATS Pass AI - Enhancing Job Search Efficiency",
-            "Department/Domain": "Software Development, Artificial Intelligence",
-            "Timeline": "January 2024 - Present",
-            "Duration": "7 months",
-            "Technologies": "| Multiagent | AI | Python | RAG Search",
-            "skills": "Advanced AI models and multi-agent technologies",
-            "Short Description": "Led the development of a multi-agent system to create tailored resumes, enhancing job search efficiency.",
-            "Key Highlights": [
-                "Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating data analysis and data visualization capabilities.",
-                "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-                "Check out my Github project \href{https://github.com/vmsaif/ats-pass-ai}{\ul{here}}"
-            ],
-            "Summary Points": "AI, RAG, Python"
-        },
-        "Work Experience/Project Experience": [
-            {
-                "Project Title": "Blockchain Car Mileage Tracker for Secure Data Management",
-                "Department/Domain": "Blockchain, Data Integrity",
-                "Timeline": "January 2023 - Mar 2023",
-                "Duration": "3 months",
-                "Technologies": "| Docker | Vue.js",
-                "skills": "Blockchain technology, data integrity and transparency",
-                "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.",
-                "Key Highlights": [
-                    "Developed using blockchain technology, emphasizing my adaptability and enthusiasm for learning new technologies.",
-                    "Enhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.",
-                    "Have a look at it on Github:\href{https://github.com/vmsaif/blockChainCarMilageTracker}{\ul{here}}"
-                ],
-                "Summary Points": "Blockchain, Docker"
-            },
-            {
-                "Project Title": "ELF Binary Analysis for Enhanced Debugging and System Analysis",
-                "Department/Domain": "C Programming, System Analysis",
-                "Timeline": "Nov 2022 - Dec 2022",
-                "Duration": "2 months",
-                "Technologies": "| C Programming | Debugging | Linux OS",
-                "skills": "C programming, debugging, system analysis, documentation",
-                "Short Description": "Implemented ELF header analysis tool in C, emphasizing debugging and system analysis skills.",
-                "Key Highlights": [
-                    "Demonstrated expertise in C for ELF binary parsing and system operations, vital for product support and development.",
-                    "Enhanced debugging efficiency by 20%, showcasing problem-solving abilities essential for customer technical assistance.",
-                    "See my work on \href{https://github.com/vmsaif/readingAndInterpretingBinary}{\ul{Github}}"
-                ],
-                "Summary Points": "C, Debugging"
-            }
-        ]
-    }
+  "applicant's Experiences with ATS Keywords": {
+    "total object count:": 2,
+    "Most Recent Experience": {
+      "Project Title": "ATS Pass AI",
+      "Department/Domain": "Software Development",
+      "Timeline": "January 2024 - Present",
+      "Duration": "7 months",
+      "Technologies": "CrewAI, LangChain, Gemini, RAG Search",
+      "skills": "AI, Machine Learning, Resume Optimization, Natural Language Processing, Data Analysis, System Design",
+      "Short Description": "Developed a multi-agent AI system to create tailored resumes, enhancing job search efficiency.",
+      "Key Highlights": [
+        "Led the development of a system utilizing AI models and multi-agent technologies to dynamically personalize resumes, aligning them with specific job descriptions.",
+        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools, achieving over 85% keyword alignment and optimizing resumes for ATS.",
+        "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and commitment to innovation."
+      ],
+      "Summary Points": "AI, NLP, Resume, ATS"
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Project Title": "AI Path Finding",
+        "Department/Domain": "AI, Game Development",
+        "Timeline": "September 2023 - December 2023",
+        "Duration": "4 months",
+        "Technologies": "A* Algorithm, CI/CD",
+        "skills": "AI, Problem Solving, Algorithm Design, Game Development, CI/CD",
+        "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.",
+        "Key Highlights": [
+          "Successfully balanced rapid development and deployment of AI components within the project, ensuring seamless integration and optimal performance.",
+          "Applied CI/CD practices for efficient development cycles, enabling rapid iteration and continuous improvement of the game's AI features.",
+          "Utilized prompt engineering techniques to guide AI responses and enhance the game's overall user experience."
+        ],
+        "Summary Points": "AI, A*, GameDev, CI/CD"
+      }
+    ]
+  }
 }
+```

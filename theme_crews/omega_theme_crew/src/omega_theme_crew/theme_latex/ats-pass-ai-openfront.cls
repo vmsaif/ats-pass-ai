@@ -10,6 +10,7 @@
 
 % Package Imports
 \usepackage[hmargin=1.25cm, top=0.45cm, bottom=0.4cm]{geometry}
+
 \usepackage[hidelinks]{hyperref}
 \usepackage{soul} % underlining links
 \usepackage{calc} % for simple arithmetic
@@ -138,10 +139,6 @@ Last Updated on \\
 % career goal body
 \newcommand{\careerGoalBody}[1]{
 {\color{headings}\raggedright\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{12pt}{14pt}\selectfont {#1\\}\par\vspace{3pt}}
-
-% raleway font
-% {\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Light}\fontsize{12pt}{15pt}\selectfont {#1\\}\par}}
-
 }
 
 % -------------- Experience section -------
@@ -169,7 +166,7 @@ Last Updated on \\
   % Check if the title width is greater than a specific length
   \typeout{-----: \the\myTotalWidth}
   \ifdim\myTotalWidth>296pt
-    \par\noindent{#1\\}\vspace{4pt} % Ensure no indentation at the start of a new paragraph
+    \par\noindent{#1\\}\vspace{5pt} % Ensure no indentation at the start of a new paragraph
   \else
   \hspace{-6pt}
     { | #1\\} % Ensure space starts before the content if not on a new line
@@ -182,6 +179,7 @@ Last Updated on \\
 \newcommand{\shortDescription}[1]{
   \vspace{\betweenDescriptionVSpace} % Add vertical space before the description
   {\color{headings}\raggedright\itemFont\fontsize{11pt}{13pt}\selectfont {#1\\}\par} % Corrected to use #2
+  \vspace{\betweenDescriptionVSpace}
 }
 
 % Bullet Lists with fewer gaps command

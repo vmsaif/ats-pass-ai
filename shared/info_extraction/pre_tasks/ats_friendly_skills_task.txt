@@ -1,4 +1,3 @@
-```json
 {
   "applicant_accepted_skills": {
     "applicant_accepted_skills_count": 14,
@@ -11,54 +10,60 @@
         "LangChain"
       ],
       "Soft Skills": [
-        "Problem-solving",
-        "Communication"
+        "Communication",
+        "Problem Solving"
+      ],
+      "Cloud, DevOps": [
+        "CI/CD",
+        "Docker"
       ]
     },
     "partial_match": {
       "Programming Languages": [
         {
-          "Name_mentioned_in_the_job_description": "Go",
-          "Relevance": "The applicant has experience in Python, which shares similar applications and is often used in system scripting and automation, aligning with the requirements for building scalable systems."
+          "Name_mentioned_in_the_job_description": "C++",
+          "Relevance": "The applicant has experience in C++, directly aligning with the job description's requirement"
         },
         {
-          "Name_mentioned_in_the_job_description": "Django",
-          "Relevance": "While not a direct match, the applicant's proficiency in Python, often used with Django framework, demonstrates potential for backend development tasks."
+          "Name_mentioned_in_the_job_description": "SQL",
+          "Relevance": "Applicant's proficiency in SQL is a valuable asset as it's often used in software development, particularly for data management"
         }
       ],
       "AI Frameworks": [
         {
-          "Name_mentioned_in_the_job_description": "TensorFlow",
-          "Relevance": "The applicant has experience in Langchain, which can integrate with various machine learning frameworks, including TensorFlow, for building AI applications."
+          "Name_mentioned_in_the_job_description": "OpenAI",
+          "Relevance": "Applicant lists experience with OpenAI, demonstrating familiarity with a key player in AI development"
         },
         {
-          "Name_mentioned_in_the_job_description": "HuggingFace",
-          "Relevance": "Although not a direct match, the applicant's familiarity with Langchain, which, like Hugging Face, deals with LLMs, showcases their understanding of natural language processing concepts."
+          "Name_mentioned_in_the_job_description": "RAG Search",
+          "Relevance": "Their experience with RAG Search aligns well with the growing importance of advanced search technologies in software applications"
         },
         {
-          "Name_mentioned_in_the_job_description": "CrewAI",
-          "Relevance": " While not directly comparable, the applicant's experience with CrewAI showcases exposure to AI principles and potentially transferable skills to other AI frameworks."
+          "Name_mentioned_in_the_job_description": "Gemini Pro",
+          "Relevance": "Experience with Gemini Pro showcases the applicant's awareness and potential proficiency in using cutting-edge AI models"
         }
       ],
       "Soft Skills": [
         {
-          "Name_mentioned_in_the_job_description": "Collaboration",
-          "Relevance": "The applicant's background in teaching, particularly \"Adapting to different learning styles,\" suggests strong communication and collaboration skills necessary for a team environment."
+          "Name_mentioned_in_the_job_description": "Teamwork",
+          "Relevance": "The applicant lists 'Teamwork' as a skill, indicating their ability to collaborate effectively in a team environment"
         },
         {
-          "Name_mentioned_in_the_job_description": "Ownership",
-          "Relevance": "The applicant's experience in project management, often requiring taking ownership of tasks and driving them to completion, aligns with the desired trait of taking responsibility."
+          "Name_mentioned_in_the_job_description": "Adaptability",
+          "Relevance": "Applicant's self-professed 'Adaptability' is crucial in a fast-paced, ever-evolving field like software development"
+        }
+      ],
+      "System & Technology Integration": [
+        {
+          "Name_mentioned_in_the_job_description": "System & Technology Integration",
+          "Relevance": "Applicant's experience with diverse technologies, including AI, Cloud, and Frontend/Backend development, suggests a strong foundation in system integration principles"
         }
       ]
     }
   },
   "missing_from_the_applicant_skills": [
-    "AWS",
-    "CI/CD",
-    "Scalability",
-    "High Availability",
-    "Low Latency",
-    "Distributed Systems"
+    "Troubleshooting",
+    "Quality Assurance",
+    "Testing"
   ]
 }
-```

@@ -13,7 +13,7 @@ python = ">=3.10,<3.13"
 langchain-google-genai = "^1.0.2"
 google-generativeai = "^0.5.2"
 agentops = "^0.1.9"
-duckduckgo-search = "^6.1.0"
+duckduckgo-search = "5.3.1b1"
 crewai = {extras = ["tools"], version = "^0.32.2"}
 sentence-transformers = "^3.0.1"
 shared = {path = "../shared"}

@@ -28,6 +28,24 @@ organize_system_instruction = dedent("""
     Outcome: Deliver a well-organized document that maintains all original details in an accessible format.
     """)
 
+job_description_fetch_system_instruction = dedent("""
+    You are given an extracted texts of a job description from a web page.
+                                
+    Give me everything as is. 
+                                
+    Expertec Output:
+    - Full context in the exactly provided words without any changes.
+    - Start the output with:
+        Job Role: 
+        Company Name:
+        Location: (if available)
+        Rest of the content as is.
+                                
+    - Remove any unnecessary white spaces or blank lines. 
+                          
+    Here is the extracted texts of the job description web page:
+    """)           
+
 # Now, lets extract the keywords from the job description
 jd_extraction_system_instruction = dedent("""
     Task: Job Description Keyword and Phrase Extraction for Resume Optimization
@@ -58,32 +76,25 @@ jd_extraction_system_instruction = dedent("""
     """)
 
 company_value_extraction_system_instruction = dedent("""
-company_value_extraction_task:
-  description: >
-    Extract key information from a provided job description that highlights the company's mission, values, and goals. This information will be used to align the applicant's career objective with the company's culture and expectations.
-
-    **Procedure**:
-    - **Introduction**: Mention the company name and job title.
-    - **Identify Keywords and Phrases**: Scan the job description for explicit mentions of the company's mission, core values, strategic goals, and cultural elements.
-    - **Contextual Relevance**: Ensure that the extracted keywords and phrases are directly related to what the company emphasizes as its priorities and ideals.
-    - **Summarization**: Summarize the extracted information into concise phrases that can be seamlessly integrated into the applicant's career objective to demonstrate alignment with the company.
-
-    **Expected Output**:
-    - A list of key phrases and sentences extracted from the job description that clearly reflect the company's values and goals. These should be presented in a way that they can be directly used or slightly modified for inclusion in the career objective section of a resume.
+You are provided a job description for a position at a company. Your task is to extract the company's values and culture from the job description. This information will be used to create a compelling career objective or summary for the applicant's resume.
                                                      
-    This task will help ensure that the applicant's career objectives are not only aligned with the company's current objectives but also resonate with the company's broader vision and cultural ethos.
-
-  expected_output: >
-    In JSON format, 
-      {
-        "Company Values and Goals": [
-          "Company Mission: []",
-          "Core Values: []",
-          "Strategic Goals: []",
-          "Cultural Elements: []",
-          "Company Vision: []",
-          "Company Culture: []",
-          ...etc
-        ]
-      }
-    """)
+Instructions:
+1. Read the job description carefully to identify any mentions of the company's values, mission, culture, or work environment.
+2. Extract keywords and phrases related to the company's values and culture.
+3. Summarize the company's values and culture in a concise paragraph.
+4. Ensure that the extracted information accurately reflects the company's ethos and culture. Use direct quotes or paraphrasing from the job description where necessary.
+                                                     
+Outcome:
+A well-crafted paragraph that captures the essence of the company's values and culture, based on the information provided in the job description.
+                                                     
+In JSON format, the output should look like this:
+{
+    "company_name": "Company Name",
+    "Job_title": "Job Title",
+    "Information needed to create a compelling career objective or summary": [
+      "Paragraph 1",
+      "Paragraph 2",
+      "Paragraph 3", ...so on
+    ]                                     
+}
+""")

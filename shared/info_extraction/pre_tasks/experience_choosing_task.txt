@@ -1,27 +1,34 @@
+```json
 {
   "selected_experiences": {
-    "Total Object Count": 3,
-    "Most Recent Experience": "ATS Pass AI",
+    "Total Object Count": 2,
+    "Most Recent Experience": {
+      "title": "ATS Pass AI",
+      "type": "Project",
+      "timeline": "January 2024 - Present",
+      "description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
+    },
     "Additional Relevant Experiences": [
-      "Blockchain Car Mileage Tracker",
-      "ELF Binary Analysis"
+      {
+        "title": "AI Path Finding",
+        "type": "Project",
+        "timeline": "September 2023 - December 2023",
+        "description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project."
+      }
     ]
   },
   "Selection Justification": {
     "reasons_for_choice": [
       {
         "title": "ATS Pass AI",
-        "reason": "Directly matches job requirements for building and maintaining highly reliable and scalable systems, as evidenced by the development of a multi-agent system to create tailored resumes, enhancing job search efficiency by over 85% keyword alignment, utilizing advanced AI models like Gemini Pro and RAG Search for personalized resume analysis and optimization, and designing a scalable architecture for future growth and adaptation."
+        "reason": "This project directly aligns with the job description's emphasis on 'Technical Skills' and 'Software Development Lifecycle (SDLC)', as it demonstrates proficiency in advanced AI technologies, multi-agent systems, and resume optimization techniques."
       },
       {
-        "title": "Blockchain Car Mileage Tracker",
-        "reason": "Demonstrates experience with high-scale services and scalable distributed systems, as evidenced by the development of a blockchain application to securely track and verify vehicle mileage for insurance purposes, enhancing data reliability and transparency, implementing a smart contract for tamper-proof mileage recording, fostering trust in vehicle history, and collaborating closely as a team to design, develop, and test the application."
-      },
-      {
-        "title": "ELF Binary Analysis",
-        "reason": "Showcases expertise in system analysis and debugging, which are essential for building and maintaining highly reliable systems, as evidenced by the implementation of an ELF header analysis tool in C, enhancing debugging efficiency by 20%, actively contributing to technical documentation for product and knowledge base improvement, and demonstrating problem-solving abilities through customer technical assistance."
+        "title": "AI Path Finding",
+        "reason": "This project showcases the candidate's expertise in 'Cloud Computing', 'Microservices', and 'Testing' through the development and deployment of an AI-driven game using the A* algorithm and CI/CD practices."
       }
     ],
     "rejected_experiences": []
   }
 }
+```

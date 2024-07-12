@@ -4,9 +4,9 @@
 
 ## Project Description
 
-The idea is to craft a unique resume for each job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 
+The idea is to craft one unique resume for one job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 
 
-## We can use chatGPT to generate a resume for a job description. How is this different?
+## We can use ChatGPT to generate a resume for a job description. How is this different?
 
 ### Problem With ChatGPT and Similar Chatbots: 
 The chatGPT model is a powerful tool for generating text based on a prompt. ChatGPT does somewhat well in generating resumes per the provided job description. However, to highly tailor a resume to a job description, is a multi-step process. Thus, a user needs to chat back and forth with the model to tailor the resume appropriately. This process is time-consuming and inefficient.
@@ -34,7 +34,7 @@ The project is currently in the **active development stage**. The following feat
    - The system can integrate user information with job description analysis to draft resumes. *(Completed)* ✅
 
 4. **LaTeX Resume Generation** 🛠️
-   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(In Progress)* ⏳
+   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(95%)* ⏳
 
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 

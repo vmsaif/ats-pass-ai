@@ -1,12 +1,44 @@
-**Software Developer - Reliability (Robinhood)**
+## Job Description Summary
 
-**Responsibilities:**
-* Design and implement features and services prioritizing high availability, low latency, and scalability.
-* Optimize systems and workflows by refining architecture, infrastructure, automation, and observability.
-* Lead and maintain Robinhood's infrastructure, ensuring project needs are met and collaborating with teams to enhance reliability.
+**Essential Responsibilities**
 
-**Qualifications:**
-* Proficiency in programming languages like Go, Python, or Java.
-* Experience developing and operating high-scale services.
-* Familiarity with scalable distributed systems built from scratch or using Cloud primitives (e.g., AWS).
-* Experience with Python/Django/Go and AWS is advantageous.
+* Translating user requirements into technical specifications
+* Developing, testing, implementing, and documenting software programs
+* Performing maintenance, troubleshooting, and fault rectification of software systems
+* Ensuring code/configurations adhere to security, performance, and non-functional standards
+* Evaluating new technologies and their impact on systems
+* Following release management processes and applying version controls
+* Assisting in interpreting and documenting client requirements
+* Solving problems and making decisions within given rules
+* Collaborating with functional teams and managing development processes
+
+**Essential Qualifications**
+
+**Foundational Proficiency**
+
+* Creative thinking
+* Building and managing relationships
+* Emotional agility
+* Quality Assurance and Testing
+* Cloud computing
+* Microservices
+* Adaptability
+* Learning Agility
+
+**Intermediate Proficiency**
+
+* Programming
+* Applications Integration
+* Test Driven Development
+* System Development Lifecycle
+* Troubleshooting
+* System and Technology Integration
+* Verbal & written communication skills
+* Collaboration & team skills
+* Analytical and problem solving skills
+* Data driven decision making
+
+**Additional Requirements**
+
+* Typically 4-6 years of relevant experience
+* Post-secondary degree in related field of study (or equivalent combination of education and experience)

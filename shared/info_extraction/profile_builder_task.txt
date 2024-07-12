@@ -1,5 +1,5 @@
 {
-  "applicant Profile": {
+  "Applicant Profile": {
     "Personal Details": {
       "Full Name": "Saif Mahmud",
       "Phone Number": "204 955 5064",
@@ -8,56 +8,43 @@
       "Other Social Media Profiles": null,
       "Personal Website": "saifmahmud.dev",
       "Portfolio": null,
-      "GitHub": null,
+      "GitHub": "https://github.com/vmsaif/",
       "Address": null,
       "City": "Winnipeg",
       "State": "MB",
       "Zip Code": null,
       "Country": null
     },
-    "Education": {
-      "Degree": "BSc",
-      "Major": "Computer Science",
-      "University": "University of Manitoba",
-      "University Location": null,
-      "Graduation Date": "October 2023",
-      "GPA": "3.07",
-      "Honors/Distinctions": null
-    },
-    "Volunteer Work": [
+    "Education": [
       {
-        "Organization Name": ".dev Programming Club",
-        "Name length in characters": 18,
-        "Role": "Active Member",
-        "Responsibilities": "Engaged with the latest software development technologies and tools. Collaborated on team projects focused on Java and Cloud Technologies.",
-        "Timeline": "2019-2023"
+        "Degree": "BSc",
+        "Major": "Computer Science",
+        "University": "UNIVERSITY OF MANITOBA",
+        "University Location": null,
+        "Graduation Date": "October 2023",
+        "GPA": null,
+        "Honors/Distinctions": null
       }
     ],
-    "Awards and Recognitions": [
+    "Volunteer Work": [],
+    "Awards and Recognitions": [],
+    "References": [
       {
-        "Award Name": "FIFA Champion",
-        "Awarding Organization": "UMBSA",
-        "Date": "2017",
-        "Reason": "Gaming achievement"
+        "Name": "ABU KABIR",
+        "Position": "Director, IT Service Management",
+        "Company": "Microsoft Corporation",
+        "Contact Information": "204-298-3693 | Winnipeg, MB",
+        "Relationship": null
       },
       {
-        "Award Name": "FIFA Champion",
-        "Awarding Organization": "CBA",
-        "Date": "2018",
-        "Reason": "Gaming achievement"
-      },
-      {
-        "Award Name": "Intel PC Guru",
-        "Awarding Organization": "N/A",
-        "Date": "2007",
-        "Reason": "3rd Place"
+        "Name": "SAFIUR MAHDI",
+        "Position": "Software Developer",
+        "Company": "Skip The Dishes",
+        "Contact Information": "204-583-3432 | Winnipeg, MB",
+        "Relationship": null
       }
     ],
-    "References": [],
-    "Personal Traits and Interests": {
-      "Strengths": "Good Interpersonal Skills, Communication, Teamwork, Problem Solving, Adaptability, Time Management, Critical Thinking, Complexity Analysis",
-      "Hobbies": null,
-      "Passions": null
-    }
+    "Personal Traits and Interests": {},
+    "Miscellaneous": {}
   }
 }

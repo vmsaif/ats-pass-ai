@@ -1,0 +1,15 @@
+{
+  "References": {
+    "Section Name": "References",
+    "Sub Section 1": [
+      {
+        "Name": "ABU KABIR",
+        "Position": "Director, IT Service Management",
+        "Company": "Microsoft Corporation",
+        "Contact Information": "204-298-3693 | Winnipeg, MB",
+        "Relationship": null
+      }
+    ],
+    "Sub Section 1 Relevance Score": 4
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "company_name": "BMO",
+    "Job_title": "Software Developer",
+    "Information needed to create a compelling career objective or summary": []
+}
+
+The provided job description for a Software Developer position at BMO does not contain any information about the company's values or culture, so the information requested cannot be extracted from the given text.

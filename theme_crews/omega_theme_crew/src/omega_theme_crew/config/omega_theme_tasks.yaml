@@ -33,49 +33,163 @@ concise_jd_task:
   expected_output: >
     A concise summary of the job description, no more than 2000 characters, effectively outlining the main responsibilities and essential qualifications required for the role. This summary should provide enough information to facilitate effective decision-making regarding the inclusion of relevant sections in the applicant's resume.
 
-assess_and_prioritize:
+remove_data:
   description: >
-    Assess the relevance of each section in the applicant's profile and prioritize them based on their alignment with the provided job specifications. 
-
-    **Input Data Might Include**:
-    - Education, Relevant Courses, Volunteer Work, Awards, References, Traits, Miscellaneous
+    Parse the JSON object and remove elements following the conditions below.
 
     **Procedure**:
-    1. **Relevance Assessment**: Evaluate each section's relevance to the job's requirements.
-    2. **Prioritization**:
-       - You can safely ignore the "Skills" section. Do not include it in the output.
-       - Ignore empty sections.
-       - If available, "Relevant Coursework" is a section of its own. Do not make it a sub-section of Education. 
-       - Always prioritize at least one "Reference" sub-section if available.
-       - Focus on recent and impactful achievements and qualifications.
-       - Highlight Education and Awards for their impact.
-       - Consider broader sections like Personal Traits if they offer significant benefits.
+      - Remove any fields that are empty (e.g., empty arrays [], objects {}, keys "", or values "").
+      Example of empty fields:
+      {
+        ...,
+        "Key": "",
+        "Key": [],
+        "Key": {},
+        ...
+      }
+      - Specifically remove the "Personal Details" and "Personal Traits and Interests" sections.
 
     **Output**:
-    - A JSON object listing sections and sub-sections prioritized by their relevance and impact, ready for final selection in the next task. No need for explanations, reasons or justifications in the output. The output will be in order of priority and their respective sub-sections. Do not remove sub-section fields.
-    Example:
-    ```json
+    - A cleaned JSON object retaining the same structure without the removed sections and empty items.
+  expected_output: >
+    A cleaned JSON object with empty sections and sub-sections, Personal Details, and Personal Traits and Interests removed.
+
+data_extraction:
+  description: >
+    Extract relevant data from the applicant's profile.
+  
+    **Input Data**:
+    - A JSON object containing the applicant's profile data.
+
+    **Procedure**:
+    - If Education and Relevant Courses are provided, separate them into distinct sections.
+    - All the courses (if provided) should be considered as one sub-section of Relevant Courses section.
+    - Make sure all other sections are included as they are.
+  
+    **Output**:
+    - A structured and cleaned JSON object ready for further processing.
+  expected_output: >
+    A structured JSON object containing the extracted and validated data from the applicant's profile, with empty sections removed and data normalized where necessary.
     {
-      "Prioritized Section": {
-        "Education": [{Sub-section 1}, {Sub-section 2}],
-        "Volunteer Work": [{Sub-section 1},...],
-        "Awards": [{Sub-section 1},...],
-        "References": [{Sub-section 1},...],
-        "Traits": [{Sub-section 1},...],
+      "Section": {
+        "Section Name": "Education",
+        "Sub Section": [
+          {Education Sub Section 1},
+          {Education Sub Section 2},
+        ]
+      },
+      "Section": {
+        "Section Name": "Relevant Courses",
+        "Sub Section 1": [
+          "Course 1",
+          "Course 2",
+          ...
+        ]
+      },
+      "Section": {
+        ...
       }
     }
-    ```
+
+relevance_assessment:
+  description: >
+    Evaluate each major section of the applicant's profile for relevance to the job, based on criteria provided in the job description. Assign a prioritization score to each section '{}' reflecting its overall importance to the job.
+  
+    **Input Data**:
+    - Extracted and structured profile data.
+    - Job description criteria.
+  
+    **Procedure**:
+    - Score the relevance of each section based on the provided job information. If a section has an array of elements, set the relevance of each element.
+    - Assign a relevance score to each section reflecting its overall importance in enhancing the applicant's candidacy for the specific job. The score should be between 0 and 10.
+    - Score empty sections or sub-sections as 0.
+
   expected_output: >
-    JSON object detailing sections and sub-sections prioritized for inclusion based on relevance to the job description and impact.
+    JSON object containing each major section with detailed content and an associated relevance score.
+    {
+      "Relevant Courses": {
+        "Section Name": "Relevant Courses",
+        "Sub Section 1": [
+          {
+            "Artificial Intelligence (Python)",
+            "AI and Game Development (Java | Python)",
+            "Distributed Computing (Python)",
+            "Data Structures and Algorithms (Java)",
+            "Software Engineering (Java | Unit Testing)"
+          },       
+          "Sub Section 1 Relevance Score": 9,
+        ]
+      },
+      "References": {
+        "Section Name": "References",
+        "Sub Section 1": [
+          {
+            "Name": "ABU KABIR",
+            "Position": "Director, IT Service Management",
+            "Company": "Microsoft Corporation",
+            "Contact Information": "204-298-3693",
+            "Location": "Winnipeg, MB",
+            "Relationship": null,
+          },
+          "Sub Section 1 Relevance Score": 4,
+        ],
+        "Sub Section 2": [
+          {
+            "Name": "SAFIUR MAHDI",
+            "Position": "Software Developer",
+            "Company": "Skip The Dishes",
+            "Contact Information": "204-583-3432",
+            "Location": "Winnipeg, MB",
+            "Relationship": null,
+          },
+          "Sub Section 2 Relevance Score": 2,
+        ]
+      },
+      ...
+    }
+
+final_selection:
+  description: >
+    Select and format the final prioritized sections.
+  
+    **Input Data**:
+    - Structured and cleaned JSON object containing the extracted data with relevance scores.
+  
+    Definition of Sections in the JSON object:
+    {
+      "Section": {
+        "sub-section 1": {},
+        "Sub Section 1 Relevance Score: int,
+      },
+      "Section": [
+        {Sub-section 1},
+        "Sub Section 1 Relevance Score: int,
+        {Sub-section 2},
+        "Sub Section 2 Relevance Score: int,
+        ...
+      ],
+      ...
+    }
+
+    **Procedure**:
+    - If References are provided, include at least one sub-section.
+    - In total include up to 4 sub-sections across all sections. Aim for 4 sub-sections if provided and has good relevance scores between 2-10.
+    - If there are more than 4 sub-sections, prioritize based on relevance scores to limit to 4 sub-sections.
+  
+    **Output**:
+    - A formatted JSON ready for use.
+  expected_output: >
+    Formatted JSON object with the final selection of sections and sub-sections.
 
 select_first_column_content:
   description: >
     Select the final sections and sub-sections and omit the rest. You are given a JSON object which is prioritized based on relevance and impact of an applicant's profile.
 
     **Procedure**:
-    - If the "Relevant Courses" section is provided, consider the list of courses as one sub-section, Include all courses provided.
+    - If the "Relevant Courses" section is provided, consider the list of courses as one seperate section, Include all courses provided. Do not include it as a sub-section of Education.
     - Always include at least one "Reference" sub-section if provided. 
-    - Opt for up to 2-3 sections and a total of up to 4 sub-sections across all sections.
+    - Opt for up to 2-3 sections and a total of up to 4 sub-sections across all sections. 
+    - Follow the prioritization order while selecting the sections after following the above rules.
 
     **Output**:
     - A JSON object of the final selection of sections and sub-sections.
@@ -124,7 +238,7 @@ education_section:
     - Do not choose more than two educations. Choose the most recent ones.
 
     Example:
-
+    ```latex
     \section{Education}
       \customTitle{University of Manitoba}
       \semiTitle{BSc Major in Computer Science}
@@ -135,6 +249,7 @@ education_section:
       ...
 
     \sectionsep
+    ```
 
     Conditions:
     - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
@@ -178,9 +293,10 @@ skill_section:
        - Use `\subTitle{}` to introduce each skill category.
        - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
     3. The expected output is only the category and items, not any explanation or additional text.
+    4. If You are confused about any skill, put it in the "Others" category.
 
     Example:
-
+    ```latex
     \section{Skills}
     \subTitle{Programming Languages:}
     \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
@@ -190,12 +306,7 @@ skill_section:
 
     \subTitle{Soft Skills:}
     \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork}
-
-    **Conditions**:
-    - If there are no skills provided, the output should be latex comments, starting with '%', like this:
-      % \section{}
-      % \sectionsep.
-
+    ```
   expected_output: >
 
 volunteer_section:
@@ -359,16 +470,18 @@ link_latex:
 
 experience_section:
   description: >
-    Format the applicant's experiences from the provided data into LaTeX format. Start with a suitable section title like \section{Experience} or \section{Project Experience}.
+    Format the applicant's experiences from the provided data into LaTeX format. 
+    
+    - Start with a suitable section title like \section{Experience} It will be only 1 time for all experiences.
 
     Organize the experiences as follows:
-    - Title: Use \customTitle{Project/Experience Title}.
+    - Title: Use \customTitle{Title}. It is simply the title of the experience. No need to add any additional text. 
     - Summary points: use \summaryPoints{item 1 | item 2 | item 3}. 
     - Role and timeline: The provided role and its duration using \roleAndTimeline{Role | Timeline}.
     - Short description: use \shortDescription{Short Description}.
     - Key responsibilities and achievements: 
       -- start 'tightemize' environment with \begin{tightemize} 
-      -- Each entry of "Key Highlights" will be each \item.
+      -- Each entry of "Key Highlights" will be each \item. Do not remove any key highlights.
       -- End the environment with \end{tightemize}.
     
     Special Character Handling:
@@ -377,6 +490,7 @@ experience_section:
     - Escape special characters appropriately (e.g., \%, \&, \#).
 
     Example:
+
     \section{Experience}
     \customTitle{ATS Pass AI}
         \summaryPoints{Python | Multiagent | AI}
@@ -386,8 +500,7 @@ experience_section:
 
         \begin{tightemize}
             \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
-            \item Utilized Multiagent AI to enhance the system's adaptability.
-            \item Project repository available here on \href{https://github.com/vmsaif/ats-pass-ai}{\ul{GitHub}}.
+            \item ... so on from the "Key Highlights" array.
         \end{tightemize}
 
     \customTitle{Another Experience}
@@ -403,10 +516,19 @@ exp_latex_verified:
     - Ensure the curly braces are correctly opened and closed.
     - do not change the command names.
     - Check for special characters and escape them properly.
-    - Check for double asterisks (**word**) and format them with \textbf{word}.
+    - Check for double asterisks (**word**) and format them with \textbf{word}. Final output should not contain double asterisks.
+
+    Latex Syntax Example:
+    ```latex
+    \customTitle{Title}
+        \summaryPoints{item 1 | item 2 | item 3}
+        \roleAndTimeline{Role | Timeline}
+        \shortDescription{Short Description}
+        \begin{tightemize}
+            \item (Key Highlights)
+        \end{tightemize}
+    ```
+
   expected_output: >
     A latex document with the experience section that is verified for syntax and correctness.
 
-
-    
-    

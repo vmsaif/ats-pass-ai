@@ -1,12 +1,7 @@
-```json
 {
   "missing_from_the_applicant_skills": [
-    "AWS",
-    "CI/CD",
-    "Scalability",
-    "High Availability",
-    "Low Latency",
-    "Distributed Systems"
+    "Troubleshooting",
+    "Quality Assurance",
+    "Testing"
   ]
 }
-```
