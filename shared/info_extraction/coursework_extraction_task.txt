@@ -1,5 +1,8 @@
-```json
 {
-  "Relevant Coursework (to the Job Description)": []
+  "Relevant Coursework (to the Job Description)": [
+    "Artificial Intelligence (Python)",
+    "AI and Game Development (Java | Python)",
+    "Statistics and Computing (R | Charts)",
+    "Distributed Computing (Python)"
+  ]
 }
-```

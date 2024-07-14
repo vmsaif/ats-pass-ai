@@ -1,26 +1,28 @@
 ```
 \section{Experience}
 \customTitle{ATS Pass AI}
-\summaryPoints{Python | Multiagent | AI}
-\roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+    \summaryPoints{Python | Multiagent | AI}
+    \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
 
-\shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
+    \shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
 
-\begin{tightemize}
-\item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
-\item Integrated \href{https://www.crew.ai/}{CrewAI} for advanced resume optimization techniques, improving candidate profiles for ATS compatibility.
-\item Developed a scalable architecture to accommodate future enhancements and meet evolving industry demands, showcasing foresight and commitment to innovation.
-\end{tightemize}
+    \begin{tightemize}
+        \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
+        \item Developed a \textbf{multiagent} system for collaborative resume writing, fostering teamwork and enhancing resume quality.
+        \item Implemented \textbf{Python} scripts to automate resume generation, streamline processes, and improve efficiency.
+        \item See my \href{https://github.com/vmsaif/ats-pass-ai}{\ul{work}} on the development of a generative AI-driven system.
+    \end{tightemize}
 
-\customTitle{AI Path Finding}
-\summaryPoints{AI | A* | GameDev | CI/CD}
-\roleAndTimeline{AI-driven Game Development - September 2023 - December 2023}
+\customTitle{AI Pathfinding}
+    \summaryPoints{Java | CI/CD | A* Algorithm}
+    \roleAndTimeline{AI-Driven Game - September 2023 - December 2023}
 
-\shortDescription{Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.}
+    \shortDescription{Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and problem-solving skills.}
 
-\begin{tightemize}
-\item Implemented the A* algorithm within the game's AI to dynamically calculate the most efficient paths, improving gameplay and user experience.
-\item Streamlined development cycles using CI/CD practices, enabling rapid iteration and continuous improvement of the game's AI features.
-\item Applied prompt engineering techniques to guide AI responses and enhance the game's overall user experience, fostering a more engaging and immersive environment.
-\end{tightemize}
+    \begin{tightemize}
+        \item Designed and implemented an \textbf{A* algorithm} for efficient pathfinding, showcasing expertise in AI techniques.
+        \item Utilized **Java** for game development, demonstrating proficiency in a programming language widely used in AI applications.
+        \item Implemented **CI/CD** practices, ensuring continuous integration and delivery of game updates.
+        \item See my \href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\ul{project}} on the development of an AI-driven game utilizing the A* algorithm to enhance user engagement.
+    \end{tightemize}
 ```

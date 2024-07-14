@@ -72,7 +72,7 @@ jd_extraction_system_instruction = dedent("""
         * **Frequency and Emphasis:** Note frequently mentioned or emphasized keywords.
         * **Essential vs. Preferred Qualifications:** Distinguish between mandatory and preferred skills.
                                           
-    There should be a paragraph for company culture and values, what the company is looking for in a candidate, and what the candidate can expect from the company. This will help in creating a better resume for the candidate. Keep the keywords and phrases same as in the job description.
+    Keep the keywords and phrases same as in the job description.
     """)
 
 company_value_extraction_system_instruction = dedent("""
@@ -95,6 +95,7 @@ In JSON format, the output should look like this:
       "Paragraph 1",
       "Paragraph 2",
       "Paragraph 3", ...so on
-    ]                                     
+    ],
+    "Phases used in the job description that reflect the company's values and culture": [ "Phase 1", "Phase 2", "Phase 3", ...so on ]
 }
 """)

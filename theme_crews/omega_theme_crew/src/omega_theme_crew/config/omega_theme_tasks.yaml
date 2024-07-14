@@ -438,8 +438,9 @@ summary_point_selector:
     - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
 
     **Output**:
-    - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, reflecting the concise highlights of each experience.
+    - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry.
   expected_output: >
+    A JSON object that retains the original structure but includes the new "Summary Points" field in each entry.
 
 link_handler:
   description: >
@@ -459,12 +460,11 @@ link_latex:
     You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array. 
 
     **Procedure**:
-    - If a link is present in the "Key Highlights" array, format it in LaTeX using the \href{}{} command. 
+    - If a link is present in the "Key Highlights" array, format it in LaTeX using the \href{url}{\ul{text}} command.
     - Write the link in as a sentence in the format. Understand what the link is about and write the sentence accordingly.
       -- Example:
-      Assume the hyperlink is "profile" and the link is "https://www.linkedin.com/in/vmsaif/".
-
-    - "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}."
+      Assume the hyperlink is "profile" and the link is "https://www.linkedin.com/in/vmsaif/"; the sentence should be
+      "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}."
     - Do not change or remove any other content of the json object.
   expected_output: >
 

@@ -31,8 +31,8 @@ def main():
     # Define the command to run in each project
     # run_poetry_project(project_a_path, info_collection, job_description)
     # time.sleep(10)
-    run_poetry_project(project_b_path, resume_crew)
-    time.sleep(10)
+    # run_poetry_project(project_b_path, resume_crew)
+    # time.sleep(10)
     run_poetry_project(project_c_path, omega_theme_crew)
 
 def delete_files_recursively_from_directory(directory_path):

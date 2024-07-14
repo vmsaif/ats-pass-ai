@@ -1,44 +1,16 @@
-## Job Description Summary
+**Applied AI Developer**
 
-**Essential Responsibilities**
+**Key Responsibilities:**
 
-* Translating user requirements into technical specifications
-* Developing, testing, implementing, and documenting software programs
-* Performing maintenance, troubleshooting, and fault rectification of software systems
-* Ensuring code/configurations adhere to security, performance, and non-functional standards
-* Evaluating new technologies and their impact on systems
-* Following release management processes and applying version controls
-* Assisting in interpreting and documenting client requirements
-* Solving problems and making decisions within given rules
-* Collaborating with functional teams and managing development processes
+* Develop AI solutions aligned with stakeholder needs and organizational goals
+* Utilize Python and APIs to integrate AI services and create cohesive AI systems
+* Assess project feasibility and create actionable plans
+* Collaborate with stakeholders and effectively communicate generative AI concepts
+* Implement defensive design strategies to ensure robust and secure AI systems
 
-**Essential Qualifications**
+**Essential Qualifications:**
 
-**Foundational Proficiency**
-
-* Creative thinking
-* Building and managing relationships
-* Emotional agility
-* Quality Assurance and Testing
-* Cloud computing
-* Microservices
-* Adaptability
-* Learning Agility
-
-**Intermediate Proficiency**
-
-* Programming
-* Applications Integration
-* Test Driven Development
-* System Development Lifecycle
-* Troubleshooting
-* System and Technology Integration
-* Verbal & written communication skills
-* Collaboration & team skills
-* Analytical and problem solving skills
-* Data driven decision making
-
-**Additional Requirements**
-
-* Typically 4-6 years of relevant experience
-* Post-secondary degree in related field of study (or equivalent combination of education and experience)
+* Demonstrated expertise in applying generative AI, particularly LLMs
+* Proficiency in Python and APIs (OpenAI, Azure AI, Amazon Bedrock, Google Vertex)
+* Experience developing Generative AI solutions
+* Excellent communication skills, especially in explaining technical concepts to non-technical audiences

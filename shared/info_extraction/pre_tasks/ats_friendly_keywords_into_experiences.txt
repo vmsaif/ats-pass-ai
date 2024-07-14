@@ -1,90 +1,64 @@
-```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "total object count:": 2,
+    "total object count": 2,
     "Most Recent Experience": {
-      "Project Title": "ATS Pass AI",
-      "Department/Domain": "Software Development",
+      "Title": "ATS Pass AI",
+      "Department/Domain": "Software Development, Artificial Intelligence",
       "Timeline": "January 2024 - Present",
       "Duration": "7 months",
-      "Technologies": "CrewAI, LangChain, Gemini, RAG Search",
-      "skills": "AI, Machine Learning, Resume Optimization, Natural Language Processing, Data Analysis, System Design",
-      "Link": "",
-      "Short Description": "Developed a multi-agent AI system to create tailored resumes, enhancing job search efficiency.",
+      "Technologies": "Python, SQL, Multiagent, AI, RAG Search",
+      "skills": "Python, SQL, AI, RAG Search, Generative AI, LLM, Prompt Engineering,  Problem-Solving, Communication Skills",
+      "URL": "https://github.com/vmsaif/ats-pass-ai",
+      "Short Description": "Led the development of a generative AI-driven system to automate **prompt-engineered** resume creation.",
       "Key Highlights": [
-        "Led the development of a system utilizing AI models and multi-agent technologies to dynamically personalize resumes, aligning them with specific job descriptions.",
-        "Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools, achieving over 85% keyword alignment and optimizing resumes for ATS.",
-        "Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and commitment to innovation."
+        "Led the development of a generative AI-driven system leveraging **Python** and **LLMs**, aligning with the role's focus on applied AI and Python proficiency.",
+        "Engineered an AI solution that personalizes resumes, directly reflecting expertise in **prompt engineering** and **LLM** applications.",
+        "Utilized RAG Search for enhanced resume tailoring, demonstrating familiarity with cutting-edge information retrieval techniques relevant to **Generative AI**."
       ]
     },
-    "Work Experience/Project Experience": [
-      {
-        "Project Title": "AI Path Finding",
-        "Department/Domain": "AI, Game Development",
-        "Timeline": "September 2023 - December 2023",
-        "Duration": "4 months",
-        "Technologies": "A* Algorithm, CI/CD",
-        "skills": "AI,  Problem Solving,  Algorithm Design,  Game Development,  CI/CD",
-        "Link": "",
-        "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.",
-        "Key Highlights": [
-          "Successfully balanced rapid development and deployment of AI components within the project, ensuring seamless integration and optimal performance.",
-          "Applied CI/CD practices for efficient development cycles, enabling rapid iteration and continuous improvement of the game's AI features.",
-          "Utilized prompt engineering techniques to guide AI responses and enhance the game's overall user experience."
-        ]
-      }
-    ]
+    "Work Experience/Project Experience": {
+      "Project Title": "AI Pathfinding",
+      "Department/Domain": "Artificial Intelligence, Game Development",
+      "Timeline": "September 2023 - December 2023",
+      "Duration": "4 months",
+      "Technologies": "CI/CD, A* Algorithm, Java, Git",
+      "skills": "Java, AI, CI/CD,  Problem-Solving",
+      "URL": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement.",
+      "Key Highlights": [
+        "Developed an AI-driven game, demonstrating practical experience in applying AI concepts and algorithms.",
+        "Utilized **Java** for game development, showcasing proficiency in a programming language often used alongside **Python** in AI projects.",
+        "Implemented **CI/CD** practices, highlighting an understanding of development workflows essential for deploying AI solutions."
+      ]
+    }
   },
   "Report on Changes": {
-    "ATS Pass AI": {
-      "Experience Title": [
-        {
-          "Original Sentence": "ATS Pass AI",
-          "Revised Sentence": "ATS Pass AI - Software Development Project",
-          "Keywords Added": [
-            "Software Development",
-            "Project"
-          ],
-          "Rationale": "Adding 'Software Development' and 'Project' to the title provides better context for ATS and clarifies the nature of the experience. This directly aligns with the targeted job title, 'Software Developer,' and emphasizes the relevance of the experience."
-        }
-      ],
-      "Short Description": [
-        {
-          "Original Sentence": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation.",
-          "Revised Sentence": "Developed a multi-agent AI system to create tailored resumes, enhancing job search efficiency.",
-          "Keywords Added": [
-            "Developed"
-          ],
-          "Rationale": "The original description was too long for a concise summary. The revised sentence focuses on the key achievement (developing the AI system) and its impact (enhancing job search efficiency). The use of the action verb 'Developed' aligns with ATS preferences and adds impact."
-        }
-      ],
-      "Key Highlights": []
-    },
-    "AI Path Finding": {
-      "Experience Title": [
-        {
-          "Original Sentence": "AI Path Finding",
-          "Revised Sentence": "AI Path Finding - AI Game Development Project",
-          "Keywords Added": [
-            "AI",
-            "Game Development",
-            "Project"
-          ],
-          "Rationale": "Similar to the previous title change, adding 'AI,' 'Game Development,' and 'Project' provides context and aligns the experience with the target role.  The inclusion of 'AI' reinforces the applicant's skills in this area."
-        }
-      ],
-      "Short Description": [
-        {
-          "Original Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project.",
-          "Revised Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.",
-          "Keywords Added": [
-            "Developed"
-          ],
-          "Rationale": "The revised sentence condenses the information, highlighting the key achievement (developing the AI-driven game) and its impact (enhancing engagement and efficiency).  The action verb 'Developed' strengthens the sentence and aligns with ATS preferences."
-        }
-      ],
-      "Key Highlights": []
-    }
+    "ATS Pass AI": [
+      {
+        "Original Sentence": "Led the development of a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies. Engineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems. Developed scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability.",
+        "Revised Sentence": "Led the development of a generative AI-driven system to automate prompt-engineered resume creation.",
+        "Keywords Added": [
+          "prompt-engineered"
+        ],
+        "Rationale": "The job description emphasizes \"Prompt Engineering\" as a critical skill. Highlighting its application in the project strengthens the applicant's profile. "
+      },
+      {
+        "Original Sentence": "Led the development of a generative AI-driven system leveraging Python and AI, aligning with the role's focus on applied AI and Python proficiency.",
+        "Revised Sentence": "Led the development of a generative AI-driven system leveraging Python and LLMs, aligning with the role's focus on applied AI and Python proficiency.",
+        "Keywords Added": [
+          "LLMs"
+        ],
+        "Rationale": "The job description frequently mentions \"LLMs,\" indicating its significance. Incorporating it reinforces the applicant's experience with this specific technology."
+      }
+    ],
+    "AI Pathfinding": [
+      {
+        "Original Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project.",
+        "Revised Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement.",
+        "Keywords Added": [],
+        "Rationale": "The original sentence was too long and contained redundant info. Shortened the sentence."
+      }
+    ],
+    "Experience Title": []
   }
 }
-```

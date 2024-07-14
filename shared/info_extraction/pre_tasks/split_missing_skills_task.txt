@@ -1,7 +1,6 @@
 {
   "missing_from_the_applicant_skills": [
-    "Troubleshooting",
-    "Quality Assurance",
-    "Testing"
+    "Prompt Engineering",
+    "Defensive Design Strategy"
   ]
 }

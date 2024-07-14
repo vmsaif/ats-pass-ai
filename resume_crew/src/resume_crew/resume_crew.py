@@ -146,10 +146,10 @@ class ResumeCrew:
 			allow_delegation=False,
 			verbose=True,
 			# cache=True,
-			llm=self.genAI,
-			step_callback=self.small_llm_limiter
-			# llm=self.genAILarge,
-			# step_callback=self.large_llm_limiter
+			# llm=self.genAI,
+			# step_callback=self.small_llm_limiter
+			llm=self.genAILarge,
+			step_callback=self.large_llm_limiter
 		)
 
 	@agent
@@ -575,7 +575,8 @@ class ResumeCrew:
 			description=task_description,
 			expected_output=expected_output,
 			agent=self.experience_selector_agent(),
-			callback=self.small_token_limiter,
+			# callback=self.small_token_limiter,
+			callback=self.large_token_limiter,
 			context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
 			output_file=PATHS["experience_choosing_task"],
 		)

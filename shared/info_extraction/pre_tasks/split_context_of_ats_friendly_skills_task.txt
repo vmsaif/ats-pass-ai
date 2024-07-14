@@ -1,63 +1,31 @@
 {
-  "applicant_skills": {
-    "exact_match_with_job_description": {
-      "Programming Languages": [
-        "Python",
-        "Java"
-      ],
-      "AI Frameworks": [
-        "LangChain"
-      ],
-      "Soft Skills": [
-        "Communication",
-        "Problem Solving"
-      ],
-      "Cloud, DevOps": [
-        "CI/CD",
-        "Docker"
-      ]
+  "applicant_accepted_skills_count": 14,
+  "exact_match_with_job_description": [
+    "Python",
+    "Java",
+    "GPT",
+    "Google Vertex",
+    "AWS Bedrock",
+    "Communication Skills",
+    "Collaboration",
+    "Problem-Solving"
+  ],
+  "partial_match": [
+    {
+      "Name_mentioned_in_the_job_description": "Generative AI",
+      "Relevance": "The applicant lists 'LangChain', 'OpenAI', 'Gemini Pro', and 'CrewAI' under 'Technologies', all of which are tools and frameworks used in Generative AI development. This suggests familiarity and experience with Generative AI concepts."
     },
-    "partial_match": {
-      "Programming Languages": [
-        {
-          "Name_mentioned_in_the_job_description": "C++",
-          "Relevance": "The applicant has experience in C++, directly aligning with the job description's requirement"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "SQL",
-          "Relevance": "Applicant's proficiency in SQL is a valuable asset as it's often used in software development, particularly for data management"
-        }
-      ],
-      "AI Frameworks": [
-        {
-          "Name_mentioned_in_the_job_description": "OpenAI",
-          "Relevance": "Applicant lists experience with OpenAI, demonstrating familiarity with a key player in AI development"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "RAG Search",
-          "Relevance": "Their experience with RAG Search aligns well with the growing importance of advanced search technologies in software applications"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "Gemini Pro",
-          "Relevance": "Experience with Gemini Pro showcases the applicant's awareness and potential proficiency in using cutting-edge AI models"
-        }
-      ],
-      "Soft Skills": [
-        {
-          "Name_mentioned_in_the_job_description": "Teamwork",
-          "Relevance": "The applicant lists 'Teamwork' as a skill, indicating their ability to collaborate effectively in a team environment"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "Adaptability",
-          "Relevance": "Applicant's self-professed 'Adaptability' is crucial in a fast-paced, ever-evolving field like software development"
-        }
-      ],
-      "System & Technology Integration": [
-        {
-          "Name_mentioned_in_the_job_description": "System & Technology Integration",
-          "Relevance": "Applicant's experience with diverse technologies, including AI, Cloud, and Frontend/Backend development, suggests a strong foundation in system integration principles"
-        }
-      ]
+    {
+      "Name_mentioned_in_the_job_description": "Large Language Models (LLMs)",
+      "Relevance": "The applicant mentions 'LLaMa 3' in their 'Technologies', indicating hands-on experience with a specific Large Language Model."
+    },
+    {
+      "Name_mentioned_in_the_job_description": "APIs (OpenAI, Azure AI, Amazon Bedrock, Google Vertex)",
+      "Relevance": "While not explicitly listing all APIs, the applicant's proficiency with 'OpenAI', 'Google Vertex', and 'AWS Bedrock' strongly suggests familiarity with utilizing APIs for AI development."
+    },
+    {
+      "Name_mentioned_in_the_job_description": "Full-stack deployment",
+      "Relevance": "The applicant's experience with 'CI/CD' and 'GitHub Actions', listed under 'Technologies', suggests a strong understanding and practical experience with full-stack deployment processes."
     }
-  }
+  ]
 }

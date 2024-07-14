@@ -6,15 +6,26 @@
         "Degree": "BSc",
         "Major": "Computer Science",
         "University": "UNIVERSITY OF MANITOBA",
-        "Graduation Date": "October 2023"
+        "University Location": null,
+        "Graduation Date": "October 2023",
+        "GPA": null,
+        "Honors/Distinctions": null
       }
     ],
-    "Sub Section 1 Relevance Score": 0,
+    "Sub Section 1 Relevance Score": 6,
   },
   "Relevant Courses": {
     "Section Name": "Relevant Courses",
-    "Sub Section 1": [],
-    "Sub Section 1 Relevance Score": 0,
+    "Sub Section 1": [
+      {
+        "Artificial Intelligence (Python)",
+        "AI and Game Development (Java | Python)",
+        "Distributed Computing (Python)",
+        "Data Structures and Algorithms (Java)",
+        "Software Engineering (Java | Unit Testing)"
+      },       
+      "Sub Section 1 Relevance Score": 9,
+    ]
   },
   "Volunteer Work": {
     "Section Name": "Volunteer Work",
@@ -33,8 +44,9 @@
         "Name": "ABU KABIR",
         "Position": "Director, IT Service Management",
         "Company": "Microsoft Corporation",
-        "Contact Information": "204-298-3693 | Winnipeg, MB",
-        "Relationship": null
+        "Contact Information": "204-298-3693",
+        "Location": "Winnipeg, MB",
+        "Relationship": null,
       },
       "Sub Section 1 Relevance Score": 4,
     ],
@@ -43,15 +55,16 @@
         "Name": "SAFIUR MAHDI",
         "Position": "Software Developer",
         "Company": "Skip The Dishes",
-        "Contact Information": "204-583-3432 | Winnipeg, MB",
-        "Relationship": null
+        "Contact Information": "204-583-3432",
+        "Location": "Winnipeg, MB",
+        "Relationship": null,
       },
       "Sub Section 2 Relevance Score": 2,
-    ]
+    ],
   },
   "Miscellaneous": {
     "Section Name": "Miscellaneous",
     "Sub Section 1": [],
     "Sub Section 1 Relevance Score": 0,
-  }
+  },
 }

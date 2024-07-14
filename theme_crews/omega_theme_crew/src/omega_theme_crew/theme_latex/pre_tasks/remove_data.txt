@@ -1,29 +1,34 @@
 {
-    "Applicant Profile": {
-        "Education": [
-            {
-                "Degree": "BSc",
-                "Major": "Computer Science",
-                "University": "UNIVERSITY OF MANITOBA",
-                "Graduation Date": "October 2023"
-            }
-        ],
-        "Volunteer Work": [],
-        "Awards and Recognitions": [],
-        "References": [
-            {
-                "Name": "ABU KABIR",
-                "Position": "Director, IT Service Management",
-                "Company": "Microsoft Corporation",
-                "Contact Information": "204-298-3693 | Winnipeg, MB"
-            },
-            {
-                "Name": "SAFIUR MAHDI",
-                "Position": "Software Developer",
-                "Company": "Skip The Dishes",
-                "Contact Information": "204-583-3432 | Winnipeg, MB"
-            }
-        ],
-        "Miscellaneous": {}
-    }
+  "Applicant Profile": {
+    "Education": [
+      {
+        "Degree": "BSc",
+        "Major": "Computer Science",
+        "University": "UNIVERSITY OF MANITOBA",
+        "University Location": null,
+        "Graduation Date": "October 2023",
+        "GPA": null,
+        "Honors/Distinctions": null
+      }
+    ],
+    "Volunteer Work": [],
+    "Awards and Recognitions": [],
+    "References": [
+      {
+        "Name": "ABU KABIR",
+        "Position": "Director, IT Service Management",
+        "Company": "Microsoft Corporation",
+        "Contact Information": "204-298-3693 | Winnipeg, MB",
+        "Relationship": null
+      },
+      {
+        "Name": "SAFIUR MAHDI",
+        "Position": "Software Developer",
+        "Company": "Skip The Dishes",
+        "Contact Information": "204-583-3432 | Winnipeg, MB",
+        "Relationship": null
+      }
+    ],
+    "Miscellaneous": {}
+  }
 }
