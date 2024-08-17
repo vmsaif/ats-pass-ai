@@ -1,3 +1,10 @@
+
+"""
+
+    This tool is planned to be removed. It is used to search for relevant content based on a question. The content is indexed in Chroma DB and then searched for relevant content based on the question. The content is then returned as a chunk of relevant content based on the question. The user needs to understand the content and extract the information they need within the chunk without any further calling of this tool.
+
+"""
+
 import os
 import hashlib
 import shutil

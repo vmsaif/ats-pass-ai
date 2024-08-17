@@ -1,35 +1,35 @@
-**
-
 ```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "total object count:": 2,
+    "total object count": 2,
     "Most Recent Experience": {
       "Title": "ATS PASS AI",
-      "Timeline": "January 2024 - Present (9 months)",
-      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search | LangChain | Gemini Pro",
-      "Skills": "Generative AI | LLMs |  Python | SQL | APIs",
-      "URL": "https://github.com/vmsaif/ATS-PASS-Resume-Builder",
-      "Short Description": "Developed a Generative AI-powered system to customize resumes, showcasing problem-solving skills and expertise in LLMs like Gemini Pro and RAG search.",
+      "Department/Domain": "AI Development",
+      "Timeline": "January 2024 - Present",
+      "Duration": "8 months",
+      "Technologies": "Python | SQL | Multiagent | AI | RAG Search",
+      "skills": "AI Development",
+      "URL": null,
+      "Short Description": "Developed a **Generative AI**-driven system to automate tailored resume creation, enhancing job search efficiency.",
       "Key Highlights": [
-        "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development, data management, and ensuring project feasibility.",
-        "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs for practical applications.",
-        "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs through a functional solution."
+        "Utilized **Python** and SQL for developing and implementing the AI-driven system, directly aligning with the job description's requirement for these **programming languages**.",
+        "Applied expertise in **Generative AI** and RAG Search, showcasing a strong understanding of **LLMs**.",
+        "Engineered a solution that optimizes for **applicant tracking systems**, highlighting experience relevant to the job's focus on practical AI applications."
       ]
     },
     "Work Experience/Project Experience": {
       "Project Title": "AI PATHFINDING",
-      "Department/Domain": "AI, Pathfinding, Game Development",
+      "Department/Domain": "AI Development",
       "Timeline": "September 2023 - December 2023",
-      "Duration": "4 Months",
-      "Technologies": "CI/CD | A* Algorithm | Java | Git | Prompt Engineering",
-      "skills": "AI Development | Java | Prompt Engineering | CI/CD",
-      "URL": "https://github.com/vmsaif/pathFindingVisualizer",
-      "Short Description": "Developed an AI-driven game utilizing the A* algorithm, prompt engineering, and CI/CD practices, enhancing user engagement and system efficiency.",
+      "Duration": "4 months",
+      "Technologies": "CI/CD | A* Algorithm | Java | Git",
+      "skills": "AI Development",
+      "URL": null,
+      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.",
       "Key Highlights": [
-        "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions to assess project feasibility.",
-        "Utilized the A* algorithm and prompt engineering, showcasing knowledge of AI algorithms, their practical applications, and aligning with the role's key skills.",
-        "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices for delivering solutions."
+        "Applied **AI development** skills, aligning with the primary focus of the **Applied AI Developer** role.",
+        "Utilized **CI/CD** practices, demonstrating experience with efficient development cycles relevant to building and deploying AI solutions.",
+        "Employed **prompt engineering**, showcasing direct experience with a key technique used in **Generative AI** development."
       ]
     }
   }

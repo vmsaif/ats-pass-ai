@@ -66,9 +66,9 @@ class ResumeCrew:
 	small_token_limiter = small_limiter.record_token_usage
 	large_token_limiter = large_limiter.record_token_usage
 
-	# debugFlag = False
+	debugFlag = False
 	
-	debugFlag = True
+	# debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -90,7 +90,7 @@ class ResumeCrew:
 
 		my_tasks.append(self.correct_categorization_of_skills_task()) 
 
-		# # // EXPERIENCE MATCHING //
+		# // EXPERIENCE MATCHING //
 		my_tasks.append(self.experience_choosing_task()) 
 		my_tasks.append(self.split_context_of_experience_choosing_task())
 		my_tasks.append(self.gather_info_of_chosen_experiences())
@@ -301,65 +301,6 @@ class ResumeCrew:
 			callback = self.large_token_limiter
 		)
 
-	# @task
-	# def personal_information_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["personal_information_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["personal_information_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 		callback=self.small_token_limiter	
-	# 	)
-
-	# @task
-	# def education_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["education_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["education_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 		callback=self.small_token_limiter
-	# 	)
- 
-	# @task
-	# def volunteer_work_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["volunteer_work_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["volunteer_work_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 		callback=self.small_token_limiter
-	# 	)
-
-	# @task
-	# def awards_recognitions_extraction_task (self):
-	# 	return Task(
-	# 		config=self.tasks_config["awards_recognitions_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["awards_recognitions_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 		callback=self.small_token_limiter
-	# 	)
- 
-	# @task
-	# def references_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["references_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["references_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 		callback=self.small_token_limiter
-	# 	)
-	
-	# @task
-	# def personal_traits_interests_extraction_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["personal_traits_interests_extraction_task"],
-	# 		agent=self.generalist_agent(),
-	# 		output_file=PATHS["personal_traits_interests_extraction_task"],
-	# 		tools=[self.queryTool],
-	# 		callback=self.small_token_limiter
-	# 	)
 
 	@task
 	def comprehensive_applicant_information_extraction(self):
@@ -377,26 +318,6 @@ class ResumeCrew:
 			output_file=PATHS["profile_builder_task"],
 			callback=self.large_token_limiter
 		)
-
-	# @task
-	# def profile_builder_task(self):
-		
-	# 	context = []
-		
-	# 	context.append(self.personal_information_extraction_task())
-	# 	context.append(self.education_extraction_task())
-	# 	context.append(self.volunteer_work_extraction_task())
-	# 	context.append(self.awards_recognitions_extraction_task())
-	# 	context.append(self.references_extraction_task())
-	# 	context.append(self.personal_traits_interests_extraction_task())
-		
-	# 	return Task(
-	# 		config=self.tasks_config["profile_builder_task"],
-	# 		agent=self.generalist_agent(),
-	# 		context=context,
-	# 		output_file=PATHS["profile_builder_task"],
-	# 		callback=self.small_token_limiter
-	# 	)
 
 	@task
 	def coursework_extraction_task(self):
@@ -450,15 +371,6 @@ class ResumeCrew:
 			callback=self.small_token_limiter
 		)
 	
-	# @task
-	# def skills_from_exp_and_project_task(self):
-	# 	return Task(
-	# 		config=self.tasks_config["skills_from_exp_and_project_task"],
-	# 		agent=self.technical_details_agent(),
-	# 		context=[self.work_experience_extraction_task(), self.project_experience_extraction_task()],
-	# 		output_file=PATHS["skills_from_exp_and_project"],
-	# 		callback=self.small_token_limiter
-	# 	)
 
 	@task
 	def skills_extraction_task(self):
@@ -468,11 +380,6 @@ class ResumeCrew:
 		expected_output = yaml[1]
 
 		description = description.format(applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"]))
-
-
-
-		# if(self.debugFlag):
-		# 	description = description + "\n" + self.load_file(PATHS["skills_from_exp_and_project"])
 
 		return Task(
 			description=description,
@@ -552,8 +459,12 @@ class ResumeCrew:
 		task_description = yaml[0]
 		expected_output = yaml[1]
 
+		task_description = task_description + "\n" + self.load_file(PATHS["skills_extraction_task"])
+
 		if(self.debugFlag):
 			task_description = task_description + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_skills_task"])
+
+		
 
 		return Task(
 			description=task_description,
@@ -562,7 +473,7 @@ class ResumeCrew:
 			context=[self.split_context_of_ats_friendly_skills_task()],
 			output_file=PATHS["correct_categorization_of_skills_task"],
 			tools=[self.webSearchTool],
-			callback=self.small_token_limiter
+			callback=self.large_token_limiter
 		)
 
 	# ----------------- End of Skills Match Identification -----------------

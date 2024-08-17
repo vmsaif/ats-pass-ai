@@ -20,8 +20,8 @@ def run():
 
     # Index Applicant's info DB to make it searchable
     # this will not run if the file is already indexed
-    ragSearchTool = RagSearchTool()
-    ragSearchTool.process_and_index(applicant_info_orgainzed_file_path)
+    # ragSearchTool = RagSearchTool()
+    # ragSearchTool.process_and_index(applicant_info_orgainzed_file_path)
 
     # Run the Resume Crew
     try:

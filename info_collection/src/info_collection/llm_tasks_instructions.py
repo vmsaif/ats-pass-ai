@@ -1,3 +1,18 @@
+"""
+    Author: Saif Mahmud
+    Date: March 2024
+    Project: ATS Pass AI
+    Version: 1.0
+
+    Description:
+
+    This script contains the instructions for the three tasks in the ATS Pass AI pipeline:
+    
+    1. Organize System: Reorganizes unstructured content into a clear, structured format.
+    2. Job Description Fetch System: Extracts job description from a web page.
+    3. JD Extraction System: Extracts keywords and phrases from a job description for resume optimization.
+
+"""
 
 from textwrap import dedent
 

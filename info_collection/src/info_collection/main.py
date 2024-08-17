@@ -1,3 +1,21 @@
+"""
+    Author: Saif Mahmud
+    Date: March 2024
+    Project: ATS Pass AI
+    Version: 1.0
+
+    Description:
+
+    This script is used to organize the information collection of the applicant. The information is collected and then organized properly in a file. 
+
+    It currently runs 3 tasks.
+    1. Organize System: Reorganizes unstructured content into a clear, structured format.
+    2. Job Description Fetch System: Extracts job description from a web page.
+    3. JD Extraction System: Extracts keywords and phrases from a job description for resume optimization.
+
+"""
+
+
 import os
 import sys
 from info_collection.tools.llm_task import LLMTask
@@ -9,6 +27,16 @@ from path.output_file_paths import PATHS
 
 def run():
     
+    """
+    Run the three tasks in the ATS Pass AI pipeline
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+
     # Check if the user provided the job description link as an argument
     if len(sys.argv) != 2:
         print(f"len(sys.argv): {len(sys.argv)}")

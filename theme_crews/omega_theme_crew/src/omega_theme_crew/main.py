@@ -1,11 +1,12 @@
 """
-Author:  Saif Mahmud
-Date:     August 2024
-Project:  ATS Pass AI
+    Author:  Saif Mahmud
+    Date:     April 2024
+    Project:  ATS Pass AI
 
-Description:
+    Description:
 
-This runs the omega theme crew. First it runs the omega theme crew to filter the resume contents. Then it runs the latex generator to present the resume in a beautiful pdf format.
+    This runs the omega theme crew. First it runs the omega theme crew to filter the resume contents. Then it runs the latex generator to present the resume in a beautiful pdf format.
+
 """
 
 

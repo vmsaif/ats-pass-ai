@@ -1,7 +1,9 @@
+```json
 {
-  "missing_keywords_from_the_applicant_skills": {
-    "Programming Languages": [],
-    "AI": ["Claude", "Azure AI", "Amazon Bedrock"],
+  "missing_from_the_applicant_skills": {
+    "Programming Languages": ["Ruby"],
+    "AI": ["LLaMa", "Claude", "Azure AI", "Amazon Bedrock", "Google Vertex", "Prompt Engineering", "Full-stack deployment", "Defensive Design Strategy"],
     "Soft Skills": ["Project Feasibility Assessment"]
   }
 }
+```

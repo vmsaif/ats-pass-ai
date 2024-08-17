@@ -23,6 +23,17 @@ from shared.src.path.output_file_paths import PATHS
 from theme_crews.omega_theme_crew.src.omega_theme_crew.omega_file_paths import OMEGA_PATHS
 
 def main():
+
+    """
+    Run the three projects in the ATS Pass AI pipeline.
+
+    Args:
+        None
+
+    Returns:
+        None    
+    """
+
     # Define the paths to the projects relative to this script
 
     job_description = os.path.abspath(PATHS["jd_text_file"])
@@ -55,16 +66,24 @@ def main():
     try:
         # run_poetry_project(project_a_path, info_collection, job_description)
         # time.sleep(10)
-        run_poetry_project(project_b_path, resume_crew)
+        # run_poetry_project(project_b_path, resume_crew)
         # time.sleep(10)
-        # run_poetry_project(project_c_path, omega_theme_crew)
+        run_poetry_project(project_c_path, omega_theme_crew)
     except Exception as e:
         print(f"Error running projects: {e}")
         exit(1)
 
 
 def delete_files_recursively_from_directory(directory_path):
-    """Delete all files in the given directory recursively."""
+    """
+    Delete all files in the given directory recursively.
+    
+    Args:
+        directory_path (str): The path to the directory to delete files from.
+
+    Returns:
+        None
+    """
     if not os.path.exists(directory_path):
         print(f"Directory does not exist: {directory_path}")
         return
@@ -79,7 +98,16 @@ def delete_files_recursively_from_directory(directory_path):
                 print(f"Error deleting file {file_path}: {e}")
 
 def delete_file_from_path(file_path):
-    """Delete the file at the given path."""
+    """
+    Delete the file at the given path.
+
+    Args:
+        file_path (str): The path to the file to delete.
+
+    Returns:
+        None
+    
+    """
 
     if not os.path.exists(file_path):
         print(f"File does not exist: {file_path}")
@@ -92,8 +120,20 @@ def delete_file_from_path(file_path):
         print(f"Error deleting file {file_path}: {e}")
 
 def run_poetry_project(project_path, command, *args):
-    # Change the directory to the project's directory
-    # fix the / in the path
+    
+    """
+    Run a command in a poetry project. 
+
+    Args:
+        project_path (str): The path to the poetry project. Will chdir to this directory before running the command.
+        command (str): The command to run.
+        *args: Additional arguments to pass to the command.
+
+    Returns:
+        None
+
+    """
+    
     os.chdir(project_path)
     
     # Run the poetry command (e.g., `poetry run script_name`)
@@ -118,7 +158,20 @@ def startFresh(
         delete_info_files: bool = False):
     
         # delete all files recursively from a given directory
-        """Delete the applicant profile files but not the folder, optionally delete pre-task files."""
+        """
+        Delete the applicant profile files but not the folder, optionally delete pre-task files.
+        
+        Args:
+            delete_resume_profiles (bool): Delete the applicant profile files.
+            delete_latex_files (bool): Delete the pre-task files for the Omega Theme Crew.
+            deleteDB (bool): Delete the database files.
+            delete_llm_task_output_dir (bool): Delete the LLM task output directory.
+            delete_info_files (bool): Delete the info files directory. Usually this will never be used.
+
+        Returns:
+            None
+
+        """
 
         to_be_deleted = []
 

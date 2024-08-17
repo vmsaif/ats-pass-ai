@@ -1,107 +1,104 @@
 ```json
 {
-  "selected experiences title": {
-    "Total Object Count": 2,
+  "selected experiences": {
     "Most Recent Experience": {
       "Title": "ATS PASS AI",
       "Timeline": "January 2024 - Present",
       "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search",
-      "Skills": null,
+      "Skills": "AI Development",
       "URL": null,
-      "Short Description": "Developed a system that customizes resumes to match job descriptions. The project showcases problem-solving skills by tackling the challenge of ATS compatibility and using advanced technologies like LangChain, Gemini Pro and RAG search to develop an efficient solution.",
+      "Short Description": "Developed a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies.\n\nEngineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems.\n\nDeveloped scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability.",
       "Key Highlights": [
-        "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development and data management.",
-        "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs.",
-        "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs.",
-        "Developed a functional solution, indicating an ability to move beyond theoretical concepts to deliver tangible results."
+        "Utilized Python and SQL for developing and implementing the AI-driven system, directly aligning with the job description's requirement for these programming languages.",
+        "Applied expertise in Generative AI and RAG Search, showcasing a strong understanding of core concepts sought after for this role.",
+        "Engineered a solution that optimizes for applicant tracking systems, highlighting experience relevant to the job's focus on practical AI applications.",
+        "Demonstrated adaptability and forward-thinking by developing scalable architecture, aligning with the need for building and implementing AI solutions."
       ],
       "Team size": null,
-      "Outcomes": null
+      "Outcomes": "Developed a generative AI system that automates resume creation and optimizes for applicant tracking systems."
     },
-    "Additional Relevant Experiences titles": {
-      "Title": "AI PATHFINDING",
-      "Timeline": "September 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "CI/CD | A* Algorithm | Java | Git",
-      "Skills": null,
-      "URL": null,
-      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.",
-      "Key Highlights": [
-        "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions.",
-        "Utilized the A* algorithm, showcasing knowledge of AI algorithms and their practical applications.",
-        "Employed prompt engineering, directly aligning with a key skill required for the Applied AI Developer role.",
-        "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices."
-      ],
-      "Team size": null,
-      "Outcomes": null
-    }
+    "Additional Relevant Experiences titles": [
+      {
+        "Title": "AI PATHFINDING",
+        "Timeline": "September 2023 - December 2023",
+        "Technologies, frameworks, and tools Used": "CI/CD | A* Algorithm | Java | Git",
+        "Skills": "AI Development",
+        "URL": null,
+        "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.\n\nApplied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.\n\nSuccessfully balanced rapid development and deployment of the AI components within the project.",
+        "Key Highlights": [
+          "Applied AI development skills, aligning with the primary focus of the Applied AI Developer role.",
+          "Utilized CI/CD practices, demonstrating experience with efficient development cycles relevant to building and deploying AI solutions.",
+          "Employed prompt engineering, showcasing direct experience with a key technique used in Generative AI development.",
+          "Successfully balanced rapid development and deployment, highlighting adaptability and problem-solving skills."
+        ],
+        "Team size": null,
+        "Outcomes": "Developed an AI-driven game that utilizes the A* algorithm to enhance user engagement and optimize system efficiency."
+      }
+    ]
   },
   "selection justification": {
     "reasons_for_choice": [
       {
         "title": "ATS PASS AI",
-        "reason": "This project showcases the applicant's direct experience with relevant technologies like Python, AI, and RAG search, aligning perfectly with the Applied AI Developer role's focus on Generative AI. The project's focus on customizing content to match specific criteria demonstrates a practical understanding of how AI can be used to solve real-world business problems, a key requirement of the job."
+        "reason": "Directly matches job requirements including Generative AI, Python, and SQL, as evidenced by its utilization in developing an AI-driven system. The project highlights the applicant's understanding of AI principles and their application in a practical context."
       },
       {
         "title": "AI PATHFINDING",
-        "reason": "This project highlights the applicant's experience in developing and implementing AI solutions using relevant technologies like the A* algorithm and prompt engineering. This directly aligns with the job description's emphasis on applying AI to real-world scenarios. The use of CI/CD practices further demonstrates an understanding of efficient development workflows."
+        "reason": "Demonstrates relevant AI development experience, including the use of CI/CD practices and prompt engineering, directly aligning with the required skills for the Applied AI Developer role."
       }
     ],
     "rejected_experiences": [
       {
         "title": "Programming Mentor",
-        "reason": "While this experience demonstrates mentorship and instructional skills, it lacks direct relevance to the technical requirements of the Applied AI Developer role, which focuses heavily on Generative AI and LLM applications. "
+        "reason": "While showcasing mentorship skills, it lacks direct relevance to AI development or the technologies specified in the job description."
       },
       {
         "title": "Blockchain Car Mileage Tracker",
-        "reason": "Although this project showcases adaptability and an interest in new technologies, it lacks direct relevance to the specific AI and LLM skills required for the Applied AI Developer role."
+        "reason": "Focuses on Blockchain Development which is not a primary requirement for the Applied AI Developer role."
       },
       {
         "title": "Recursive Ray Tracing",
-        "reason": "This project demonstrates expertise in 3D graphics and C++, but lacks direct relevance to Generative AI and LLMs, which are central to the Applied AI Developer position."
+        "reason": "Primarily involves graphics programming, which is not a core requirement for the AI-focused position."
       },
       {
         "title": "Bank Account System",
-        "reason": "While this experience showcases Java skills and object-oriented programming, it lacks direct relevance to the AI-focused requirements of the Applied AI Developer role."
+        "reason": "Demonstrates object-oriented programming skills but lacks direct relevance to AI or the specified technologies."
       },
       {
         "title": "Hosting a Resume on GitHub Pages",
-        "reason": "This experience demonstrates web development skills and documentation abilities, but it doesn't align directly with the core AI and LLM requirements of the Applied AI Developer position."
+        "reason": "Focuses on technical documentation and web hosting, which are not directly relevant to the AI Developer role."
       },
       {
         "title": "ELF Binary Analysis",
-        "reason": "Although showcasing familiarity with software analysis and security, this project lacks direct relevance to Generative AI and LLMs, the core focus of the Applied AI Developer role."
+        "reason": "While showcasing systems programming skills, it lacks direct relevance to Generative AI or the technologies specified in the job description."
       },
       {
         "title": "OpenGL Sphere Lighting",
-        "reason": "This experience demonstrates advanced 3D graphics skills using OpenGL and C++, but lacks direct applicability to Generative AI and LLMs, which are essential for the Applied AI Developer position."
+        "reason": "Focuses on graphics programming and OpenGL, which are not primary requirements for the AI-focused position."
       },
       {
         "title": "Reversible Learning APP",
-        "reason": "This project highlights mobile app development skills using Android Studio and SQL. However, it lacks direct relevance to Generative AI and LLMs, which are central to the Applied AI Developer role."
+        "reason": "While demonstrating Android development skills, it lacks direct relevance to Generative AI or the technologies specified in the job description."
       },
       {
         "title": "Connect 4 Game",
-        "reason": "This project showcases AI decision-making in a game development context, but lacks direct application of Generative AI and LLMs, which are essential for the Applied AI Developer position."
+        "reason": "Focuses on game development and AI decision-making in a limited context, lacking the breadth of experience required for the Applied AI Developer role."
       },
       {
         "title": "TCP Chat Application",
-        "reason": "This experience demonstrates network programming skills using TCP and multithreading, but it doesn't align with the AI and LLM requirements of the Applied AI Developer role."
+        "reason": "While demonstrating network programming skills, it lacks direct relevance to AI development or the technologies specified in the job description."
       },
       {
         "title": "Data Visualization with R",
-        "reason": "This experience highlights data analysis and visualization skills using R, but lacks direct relevance to Generative AI and LLMs, which are crucial for the Applied AI Developer position."
+        "reason": "Focuses on data analysis and visualization, which are not the primary skills required for the Applied AI Developer role."
       },
       {
         "title": "Portfolio Website",
-        "reason": "While demonstrating web development skills using React and Styled Components, this project lacks direct relevance to Generative AI and LLMs, the core focus of the Applied AI Developer role."
+        "reason": "While showcasing web development skills, it lacks direct relevance to AI development or the specified technologies."
       },
       {
         "title": "CPU Scheduling",
-        "reason": "This project showcases parallel processing knowledge using C and multithreading. However, it lacks direct applicability to Generative AI and LLMs, which are essential for the Applied AI Developer position."
-      },
-      {
-        "title": "Go-Back-N Protocol Simulation",
-        "reason": "This experience demonstrates networking protocol understanding using Python. However, it doesn't align with the core AI and LLM requirements of the Applied AI Developer role."
+        "reason": "Focuses on systems programming and operating systems concepts, which are not the core requirements for the Applied AI Developer role."
       }
     ]
   }

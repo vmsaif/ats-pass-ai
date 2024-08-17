@@ -1,0 +1,44 @@
+{
+  "correctly_categorized_skills": {
+    "Programming Languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C++",
+      "C"
+    ],
+    "AI & ML": [
+      "OpenAI",
+      "LangChain",
+      "Google Gemini Pro",
+      "RAG Search",
+      "A* Algorithm"
+    ],
+    "Frontend Development": [
+      "React",
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "Vue.js"
+    ],
+    "Database Management": [
+      "SQL",
+      "HSQLDB"
+    ],
+    "Soft Skills": [
+      "Communication",
+      "Teamwork",
+      "Adaptability",
+      "Problem Solving",
+      "Critical Thinking"
+    ],
+    "Tools & Technologies": [
+      "Git",
+      "Docker",
+      "CI/CD",
+      "OpenAI API",
+      "GitHub Pages"
+    ]
+  }
+} 
+```
