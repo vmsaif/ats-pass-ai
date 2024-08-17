@@ -1,37 +1,38 @@
+```json
 {
-  "selected experiences title": {
-    "Total Object Count": 2,
+  "selected experiences": {
     "Most Recent Experience": {
-      "Title": "ATS Pass AI",
+      "Title": "ATS PASS AI",
       "Timeline": "January 2024 - Present",
-      "Technologies, frameworks, and tools Used": "Python, SQL, Multiagent, AI, RAG Search",
-      "Skills": "Python, SQL, AI, RAG Search, Generative AI, LLM, Prompt Engineering,  Problem-Solving, Communication Skills",
+      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search",
+      "Skills": null,
       "URL": null,
-      "Short Description": "Led the development of a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies. Engineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems. Developed scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability.",
+      "Short Description": "Developed a system that customizes resumes to match job descriptions. The project showcases problem-solving skills by tackling the challenge of ATS compatibility and using advanced technologies like LangChain, Gemini Pro and RAG search to develop an efficient solution.",
       "Key Highlights": [
-        "Led the development of a generative AI-driven system leveraging Python and AI, aligning with the role's focus on applied AI and Python proficiency.",
-        "Engineered an AI solution that personalizes resumes, directly reflecting expertise in prompt engineering and LLM applications.",
-        "Utilized RAG Search for enhanced resume tailoring, demonstrating familiarity with cutting-edge information retrieval techniques relevant to Generative AI.",
-        "Achieved over 85% keyword alignment with job descriptions, showcasing a data-driven approach and a clear understanding of ATS optimization."
+        "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development and data management.",
+        "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs.",
+        "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs.",
+        "Developed a functional solution, indicating an ability to move beyond theoretical concepts to deliver tangible results."
       ],
-      "Team size": "Not Specified",
-      "Outcomes": "Developed a generative AI-driven system for automated resume creation, resulting in enhanced job search efficiency and over 85% keyword alignment with job descriptions."
+      "Team size": null,
+      "Outcomes": null
     },
     "Additional Relevant Experiences titles": {
-      "Project Title": "AI Pathfinding",
+      "Title": "AI PATHFINDING",
       "Timeline": "September 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "CI/CD, A* Algorithm, Java, Git",
-      "Skills": "Java, AI, CI/CD,  Problem-Solving",
+      "Technologies, frameworks, and tools Used": "CI/CD | A* Algorithm | Java | Git",
+      "Skills": null,
       "URL": null,
-      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project.",
+      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.",
       "Key Highlights": [
-        "Developed an AI-driven game, demonstrating practical experience in applying AI concepts and algorithms.",
-        "Utilized Java for game development, showcasing proficiency in a programming language often used alongside Python in AI projects.",
-        "Implemented CI/CD practices, highlighting an understanding of development workflows essential for deploying AI solutions.",
-        "Successfully balanced rapid development and deployment, reflecting adaptability and project management skills valuable in a fast-paced environment."
+        "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions.",
+        "Utilized the A* algorithm, showcasing knowledge of AI algorithms and their practical applications.",
+        "Employed prompt engineering, directly aligning with a key skill required for the Applied AI Developer role.",
+        "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices."
       ],
-      "Team size": "Not Specified",
-      "Outcomes": "Developed an AI-driven game utilizing the A* algorithm, resulting in enhanced user engagement and optimized system efficiency."
+      "Team size": null,
+      "Outcomes": null
     }
   }
 }
+```

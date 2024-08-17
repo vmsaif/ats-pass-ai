@@ -1,1 +1,3 @@
-"Seeking the Applied AI Developer role at Klick, where I can leverage my expertise in GPT and LLaMa 3 to contribute to the democratization of finance and foster an inclusive work environment."
+{
+  "Career Objective": "Passionate Applied AI Developer seeking to join Klick's team and contribute to their mission of improving healthcare outcomes through innovative AI solutions. Committed to leveraging my technical skills and fostering an inclusive, growth-oriented work environment."
+}

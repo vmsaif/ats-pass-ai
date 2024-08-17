@@ -1,6 +1,7 @@
 {
-  "missing_from_the_applicant_skills": [
-    "Prompt Engineering",
-    "Defensive Design Strategy"
-  ]
+  "missing_keywords_from_the_applicant_skills": {
+    "Programming Languages": [],
+    "AI": ["Claude", "Azure AI", "Amazon Bedrock"],
+    "Soft Skills": ["Project Feasibility Assessment"]
+  }
 }

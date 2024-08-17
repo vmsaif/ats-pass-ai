@@ -1,3 +1,20 @@
+"""
+Author: 	Saif Mahmud
+Date: 		August 2024
+Project: 	ATS Pass AI
+
+Description: 
+
+This is the main script that runs the three projects in the ATS Pass AI pipeline.
+
+1. Info Collection: Collects all the information of the applicant and then organizes it. properly in a file.
+
+2. Resume Crew: Creates a database of the applicant's info from the collected information. Then it creates generates all the necessary information for the resume.
+
+3. Omega Theme Crew: Generates the resume in a beautiful format.
+"""
+
+
 import subprocess
 import os
 from textwrap import dedent
@@ -17,8 +34,13 @@ def main():
 
     current_directory = os.path.dirname(os.path.abspath(__file__))
     project_a_path = os.path.join(current_directory, info_collection)
+    project_a_path = os.path.normpath(project_a_path)
+
     project_b_path = os.path.join(current_directory, resume_crew)
+    project_b_path = os.path.normpath(project_b_path)
+
     project_c_path = os.path.join(current_directory, 'theme_crews', omega_theme_crew)
+    project_c_path = os.path.normpath(project_c_path)
 
     startFresh(
         # delete_resume_profiles = True,
@@ -29,11 +51,17 @@ def main():
     )
     
     # Define the command to run in each project
-    # run_poetry_project(project_a_path, info_collection, job_description)
-    # time.sleep(10)
-    # run_poetry_project(project_b_path, resume_crew)
-    # time.sleep(10)
-    run_poetry_project(project_c_path, omega_theme_crew)
+
+    try:
+        # run_poetry_project(project_a_path, info_collection, job_description)
+        # time.sleep(10)
+        run_poetry_project(project_b_path, resume_crew)
+        # time.sleep(10)
+        # run_poetry_project(project_c_path, omega_theme_crew)
+    except Exception as e:
+        print(f"Error running projects: {e}")
+        exit(1)
+
 
 def delete_files_recursively_from_directory(directory_path):
     """Delete all files in the given directory recursively."""
@@ -65,6 +93,7 @@ def delete_file_from_path(file_path):
 
 def run_poetry_project(project_path, command, *args):
     # Change the directory to the project's directory
+    # fix the / in the path
     os.chdir(project_path)
     
     # Run the poetry command (e.g., `poetry run script_name`)

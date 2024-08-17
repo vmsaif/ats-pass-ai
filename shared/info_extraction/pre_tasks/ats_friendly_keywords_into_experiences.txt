@@ -1,64 +1,115 @@
+```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "total object count": 2,
+    "total object count:": 2,
     "Most Recent Experience": {
-      "Title": "ATS Pass AI",
-      "Department/Domain": "Software Development, Artificial Intelligence",
-      "Timeline": "January 2024 - Present",
-      "Duration": "7 months",
-      "Technologies": "Python, SQL, Multiagent, AI, RAG Search",
-      "skills": "Python, SQL, AI, RAG Search, Generative AI, LLM, Prompt Engineering,  Problem-Solving, Communication Skills",
-      "URL": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Led the development of a generative AI-driven system to automate **prompt-engineered** resume creation.",
+      "Title": "ATS PASS AI",
+      "Timeline": "January 2024 - Present (9 months)",
+      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search | LangChain | Gemini Pro",
+      "Skills": "Generative AI | LLMs |  Python | SQL | APIs",
+      "URL": "https://github.com/vmsaif/ATS-PASS-Resume-Builder",
+      "Short Description": "Developed a Generative AI-powered system to customize resumes, showcasing problem-solving skills and expertise in LLMs like Gemini Pro and RAG search.",
       "Key Highlights": [
-        "Led the development of a generative AI-driven system leveraging **Python** and **LLMs**, aligning with the role's focus on applied AI and Python proficiency.",
-        "Engineered an AI solution that personalizes resumes, directly reflecting expertise in **prompt engineering** and **LLM** applications.",
-        "Utilized RAG Search for enhanced resume tailoring, demonstrating familiarity with cutting-edge information retrieval techniques relevant to **Generative AI**."
+        "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development, data management, and ensuring project feasibility.",
+        "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs for practical applications.",
+        "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs through a functional solution."
       ]
     },
     "Work Experience/Project Experience": {
-      "Project Title": "AI Pathfinding",
-      "Department/Domain": "Artificial Intelligence, Game Development",
+      "Project Title": "AI PATHFINDING",
+      "Department/Domain": "AI, Pathfinding, Game Development",
       "Timeline": "September 2023 - December 2023",
-      "Duration": "4 months",
-      "Technologies": "CI/CD, A* Algorithm, Java, Git",
-      "skills": "Java, AI, CI/CD,  Problem-Solving",
-      "URL": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement.",
+      "Duration": "4 Months",
+      "Technologies": "CI/CD | A* Algorithm | Java | Git | Prompt Engineering",
+      "skills": "AI Development | Java | Prompt Engineering | CI/CD",
+      "URL": "https://github.com/vmsaif/pathFindingVisualizer",
+      "Short Description": "Developed an AI-driven game utilizing the A* algorithm, prompt engineering, and CI/CD practices, enhancing user engagement and system efficiency.",
       "Key Highlights": [
-        "Developed an AI-driven game, demonstrating practical experience in applying AI concepts and algorithms.",
-        "Utilized **Java** for game development, showcasing proficiency in a programming language often used alongside **Python** in AI projects.",
-        "Implemented **CI/CD** practices, highlighting an understanding of development workflows essential for deploying AI solutions."
+        "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions to assess project feasibility.",
+        "Utilized the A* algorithm and prompt engineering, showcasing knowledge of AI algorithms, their practical applications, and aligning with the role's key skills.",
+        "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices for delivering solutions."
       ]
     }
   },
   "Report on Changes": {
-    "ATS Pass AI": [
-      {
-        "Original Sentence": "Led the development of a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies. Engineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems. Developed scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability.",
-        "Revised Sentence": "Led the development of a generative AI-driven system to automate prompt-engineered resume creation.",
-        "Keywords Added": [
-          "prompt-engineered"
-        ],
-        "Rationale": "The job description emphasizes \"Prompt Engineering\" as a critical skill. Highlighting its application in the project strengthens the applicant's profile. "
-      },
-      {
-        "Original Sentence": "Led the development of a generative AI-driven system leveraging Python and AI, aligning with the role's focus on applied AI and Python proficiency.",
-        "Revised Sentence": "Led the development of a generative AI-driven system leveraging Python and LLMs, aligning with the role's focus on applied AI and Python proficiency.",
-        "Keywords Added": [
-          "LLMs"
-        ],
-        "Rationale": "The job description frequently mentions \"LLMs,\" indicating its significance. Incorporating it reinforces the applicant's experience with this specific technology."
-      }
-    ],
-    "AI Pathfinding": [
-      {
-        "Original Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project.",
-        "Revised Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement.",
-        "Keywords Added": [],
-        "Rationale": "The original sentence was too long and contained redundant info. Shortened the sentence."
-      }
-    ],
-    "Experience Title": []
+    "ATS PASS AI": {
+      "Short Description": [
+        {
+          "Original Sentence": "Developed a system that customizes resumes to match job descriptions. The project showcases problem-solving skills by tackling the challenge of ATS compatibility and using advanced technologies like LangChain, Gemini Pro and RAG search to develop an efficient solution.",
+          "Revised Sentence": "Developed a Generative AI-powered system to customize resumes, showcasing problem-solving skills and expertise in LLMs like Gemini Pro and RAG search.",
+          "Keywords Added": [
+            "Generative AI",
+            "LLMs"
+          ],
+          "Rationale": "Incorporating \"Generative AI\" and \"LLMs\" directly aligns the project with the core focus of the Applied AI Developer role. Mentioning Gemini Pro and RAG search within the context of LLMs further strengthens the relevance to the job description's emphasis on these technologies."
+        }
+      ],
+      "Key Highlights": [
+        {
+          "Original Sentence": "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development and data management.",
+          "Revised Sentence": "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development, data management, and ensuring project feasibility.",
+          "Keywords Added": [
+            "ensuring project feasibility"
+          ],
+          "Rationale": "The addition of \"ensuring project feasibility\" subtly introduces a soft skill mentioned in the job description, highlighting the applicant's ability to connect technical proficiencies with broader project considerations. This aligns with the requirement for developers to assess the viability of AI solutions."
+        },
+        {
+          "Original Sentence": "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs.",
+          "Revised Sentence": "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs for practical applications.",
+          "Keywords Added": [
+            "practical applications"
+          ],
+          "Rationale": "Adding \"practical applications\" reinforces the applicant's experience in applying theoretical AI knowledge to real-world scenarios, directly addressing the job description's emphasis on solving business problems using Generative AI."
+        },
+        {
+          "Original Sentence": "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs.",
+          "Revised Sentence": "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs through a functional solution.",
+          "Keywords Added": [
+            "functional solution"
+          ],
+          "Rationale": "Incorporating \"functional solution\" emphasizes the tangible outcome of the project, highlighting the applicant's ability to deliver complete and operational AI solutions, a crucial aspect of the Applied AI Developer role."
+        }
+      ]
+    },
+    "AI PATHFINDING": {
+      "Short Description": [
+        {
+          "Original Sentence": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.",
+          "Revised Sentence": "Developed an AI-driven game utilizing the A* algorithm, prompt engineering, and CI/CD practices, enhancing user engagement and system efficiency.",
+          "Keywords Added": [
+            "prompt engineering"
+          ],
+          "Rationale": "Positioning \"prompt engineering\" prominently within the short description immediately highlights a key skill mentioned in the job description. This ensures that the ATS recognizes this essential qualification early on."
+        }
+      ],
+      "Key Highlights": [
+        {
+          "Original Sentence": "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions.",
+          "Revised Sentence": "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions to assess project feasibility.",
+          "Keywords Added": [
+            "assess project feasibility"
+          ],
+          "Rationale": "The addition of \"to assess project feasibility\" subtly connects the applicant's experience in building AI solutions with the ability to evaluate their practicality. This aligns with the job requirement for developers to assess the viability of AI applications."
+        },
+        {
+          "Original Sentence": "Utilized the A* algorithm, showcasing knowledge of AI algorithms and their practical applications.",
+          "Revised Sentence": "Utilized the A* algorithm and prompt engineering, showcasing knowledge of AI algorithms, their practical applications, and aligning with the role's key skills.",
+          "Keywords Added": [
+            "prompt engineering",
+            "aligning with the role's key skills"
+          ],
+          "Rationale": "Integrating \"prompt engineering\" alongside the A* algorithm strengthens the connection to the job description's emphasis on this skill. The phrase \"aligning with the role's key skills\" subtly emphasizes the direct relevance of the applicant's experience to the job requirements."
+        },
+        {
+          "Original Sentence": "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices.",
+          "Revised Sentence": "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices for delivering solutions.",
+          "Keywords Added": [
+            "for delivering solutions"
+          ],
+          "Rationale": "Adding \"for delivering solutions\" emphasizes the practical application of CI/CD practices, highlighting the applicant's understanding of their role in ensuring the successful completion and deployment of projects. This aligns with the job's focus on producing tangible results."
+        }
+      ]
+    }
   }
 }
+```

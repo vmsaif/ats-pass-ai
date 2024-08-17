@@ -3,10 +3,10 @@
   "Work Experience": [
     {
       "Job Title": "Programming Mentor",
-      "Company Name": null,
+      "Company Name": "Computer Systems",
       "Timeline": "February 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "Java, Computer Systems",
-      "Short Description": "Enhanced a student's Java and computer systems skills through personalized tutoring, demonstrating adaptive teaching techniques. Improved student proficiency in software operation and debugging, showcasing my mentorship and instructional skills."
+      "Technologies, frameworks, and tools Used": "Java",
+      "Short Description": "Enhanced student proficiency in software operation and debugging, showcasing mentorship and instructional skills."
     }
   ]
 }

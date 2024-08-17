@@ -1,35 +1,37 @@
+**
+
+```json
 {
   "applicant's Experiences with ATS Keywords": {
-    "total object count": 2,
+    "total object count:": 2,
     "Most Recent Experience": {
-      "Title": "ATS Pass AI",
-      "Department/Domain": "Software Development, Artificial Intelligence",
-      "Timeline": "January 2024 - Present",
-      "Duration": "7 months",
-      "Technologies": "Python, SQL, Multiagent, AI, RAG Search",
-      "skills": "Python, SQL, AI, RAG Search, Generative AI, LLM, Prompt Engineering,  Problem-Solving, Communication Skills",
-      "URL": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Led the development of a generative AI-driven system to automate **prompt-engineered** resume creation.",
+      "Title": "ATS PASS AI",
+      "Timeline": "January 2024 - Present (9 months)",
+      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search | LangChain | Gemini Pro",
+      "Skills": "Generative AI | LLMs |  Python | SQL | APIs",
+      "URL": "https://github.com/vmsaif/ATS-PASS-Resume-Builder",
+      "Short Description": "Developed a Generative AI-powered system to customize resumes, showcasing problem-solving skills and expertise in LLMs like Gemini Pro and RAG search.",
       "Key Highlights": [
-        "Led the development of a generative AI-driven system leveraging **Python** and **LLMs**, aligning with the role's focus on applied AI and Python proficiency.",
-        "Engineered an AI solution that personalizes resumes, directly reflecting expertise in **prompt engineering** and **LLM** applications.",
-        "Utilized RAG Search for enhanced resume tailoring, demonstrating familiarity with cutting-edge information retrieval techniques relevant to **Generative AI**."
+        "Utilized Python and SQL, demonstrating proficiency in languages essential for AI development, data management, and ensuring project feasibility.",
+        "Employed advanced AI techniques, including LangChain and Gemini Pro, aligning with the role's focus on Generative AI and LLMs for practical applications.",
+        "Tackled a real-world problem (ATS compatibility), showcasing practical application of AI skills to address business needs through a functional solution."
       ]
     },
     "Work Experience/Project Experience": {
-      "Project Title": "AI Pathfinding",
-      "Department/Domain": "Artificial Intelligence, Game Development",
+      "Project Title": "AI PATHFINDING",
+      "Department/Domain": "AI, Pathfinding, Game Development",
       "Timeline": "September 2023 - December 2023",
-      "Duration": "4 months",
-      "Technologies": "CI/CD, A* Algorithm, Java, Git",
-      "skills": "Java, AI, CI/CD,  Problem-Solving",
-      "URL": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement.",
+      "Duration": "4 Months",
+      "Technologies": "CI/CD | A* Algorithm | Java | Git | Prompt Engineering",
+      "skills": "AI Development | Java | Prompt Engineering | CI/CD",
+      "URL": "https://github.com/vmsaif/pathFindingVisualizer",
+      "Short Description": "Developed an AI-driven game utilizing the A* algorithm, prompt engineering, and CI/CD practices, enhancing user engagement and system efficiency.",
       "Key Highlights": [
-        "Developed an AI-driven game, demonstrating practical experience in applying AI concepts and algorithms.",
-        "Utilized **Java** for game development, showcasing proficiency in a programming language often used alongside **Python** in AI projects.",
-        "Implemented **CI/CD** practices, highlighting an understanding of development workflows essential for deploying AI solutions."
+        "Developed an AI-driven application, demonstrating experience in building and implementing AI solutions to assess project feasibility.",
+        "Utilized the A* algorithm and prompt engineering, showcasing knowledge of AI algorithms, their practical applications, and aligning with the role's key skills.",
+        "Implemented CI/CD practices, reflecting an understanding of efficient development workflows and best practices for delivering solutions."
       ]
     }
   }
 }
+```

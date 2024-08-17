@@ -6,13 +6,18 @@ organize_system_instruction = dedent("""
     Objective: Reorganize provided unstructured content into a clear, structured format without missing any details. Every detail in the content is important and should be included in the final output.
     
     Instructions:
-    1. Comprehension: Read the content to understand the themes and details. Each section should have a description of more than 2 lines on what it contains as it will help doing symanctic search on this document later.
+    1. Comprehension: Read the content to understand the themes and details. Each section should have a description of more than 2-3 lines on what it contains as it will help doing symanctic search on this document later.
                                 
     2. Identification:
         - Begin with identifying and documenting key personal identification details such as the applicant's name, contact information, location, phone number, and email address etc.
         - Use the heading '# Personal Details' for this section.
+        - Write in a structured format, such as:
+            Name: [Applicant's Name]
+            Location: [City, State]
+            Phone: [Phone Number]... etc.
+                                     
     3. Structure Development: 
-        - Write a description of each Category of more than 2 lines of what it contains. For example, if you have a section called "References", write, "This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant."
+        - Write a description of each Category of more than 2-3 lines of what it contains. For example, if you have a section called "References", write, "This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant."
                                 
         For Coursework, you can write, "This section contains the courses taken by the Applicant during their academic career."
                                 

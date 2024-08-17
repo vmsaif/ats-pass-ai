@@ -1,31 +1,90 @@
 {
-  "applicant_accepted_skills_count": 14,
-  "exact_match_with_job_description": [
-    "Python",
-    "Java",
-    "GPT",
-    "Google Vertex",
-    "AWS Bedrock",
-    "Communication Skills",
-    "Collaboration",
-    "Problem-Solving"
-  ],
-  "partial_match": [
-    {
-      "Name_mentioned_in_the_job_description": "Generative AI",
-      "Relevance": "The applicant lists 'LangChain', 'OpenAI', 'Gemini Pro', and 'CrewAI' under 'Technologies', all of which are tools and frameworks used in Generative AI development. This suggests familiarity and experience with Generative AI concepts."
-    },
-    {
-      "Name_mentioned_in_the_job_description": "Large Language Models (LLMs)",
-      "Relevance": "The applicant mentions 'LLaMa 3' in their 'Technologies', indicating hands-on experience with a specific Large Language Model."
-    },
-    {
-      "Name_mentioned_in_the_job_description": "APIs (OpenAI, Azure AI, Amazon Bedrock, Google Vertex)",
-      "Relevance": "While not explicitly listing all APIs, the applicant's proficiency with 'OpenAI', 'Google Vertex', and 'AWS Bedrock' strongly suggests familiarity with utilizing APIs for AI development."
-    },
-    {
-      "Name_mentioned_in_the_job_description": "Full-stack deployment",
-      "Relevance": "The applicant's experience with 'CI/CD' and 'GitHub Actions', listed under 'Technologies', suggests a strong understanding and practical experience with full-stack deployment processes."
-    }
-  ]
+  "exact_match_with_job_description": {
+    "Programming Languages": ["Python"],
+    "Database Management": ["SQL"],
+    "AI": ["GPT", "LLaMa", "OpenAI", "Google Vertex"]
+  },
+  "partial_match": {
+    "Programming Languages": [
+      {
+        "Job Description Skill": "APIs",
+        "Applicant's Related Skill": "Python",
+        "Relevance": "Python is commonly used for interacting with APIs, making it a relevant skill for utilizing APIs like OpenAI, Azure AI, Amazon Bedrock, and Google Vertex."
+      },
+      {
+        "Job Description Skill": "Full-stack deployment",
+        "Applicant's Related Skill": "Frontend Development",
+        "Relevance": "Applicant's experience with frontend technologies like React, HTML, CSS, JavaScript, and Vue.js contributes to a full-stack development skillset."
+      },
+      {
+        "Job Description Skill": "Full-stack deployment",
+        "Applicant's Related Skill": "Backend Development",
+        "Relevance": "Applicant's proficiency in backend technologies such as Python, Java, and SQL is crucial for full-stack deployment."
+      },
+      {
+        "Job Description Skill": "Full-stack deployment",
+        "Applicant's Related Skill": "DevOps",
+        "Relevance": "Skills like Docker, CI/CD, and GitHub Actions demonstrate the applicant's understanding and experience in deploying and managing applications, aligning with full-stack deployment practices."
+      }
+    ],
+    "AI": [
+      {
+        "Job Description Skill": "Prompt Engineering",
+        "Applicant's Related Skill": "LangChain",
+        "Relevance": "LangChain is a framework specifically designed for developing applications using large language models, directly relevant to prompt engineering."
+      },
+      {
+        "Job Description Skill": "Prompt Engineering",
+        "Applicant's Related Skill": "Gemini Pro",
+        "Relevance": "Gemini Pro, as a large language model, is directly related to prompt engineering techniques for optimizing its performance."
+      },
+      {
+        "Job Description Skill": "Prompt Engineering",
+        "Applicant's Related Skill": "RAG Search",
+        "Relevance": "RAG search is a technique used in conjunction with large language models to enhance information retrieval, aligning with the principles of prompt engineering."
+      },
+      {
+        "Job Description Skill": "Prompt Engineering",
+        "Applicant's Related Skill": "CrewAI",
+        "Relevance": "CrewAI likely involves working with and optimizing AI models, making it relevant to the tasks and techniques involved in prompt engineering."
+      },
+      {
+        "Job Description Skill": "Defensive Design Strategy",
+        "Applicant's Related Skill": "A* Algorithm",
+        "Relevance": "While not directly a defensive design strategy, familiarity with the A* algorithm showcases an understanding of problem-solving and optimization, potentially applicable to designing robust and secure AI systems."
+      },
+      {
+        "Job Description Skill": "LLMs",
+        "Applicant's Related Skill": "LangChain",
+        "Relevance": "LangChain is specifically designed to work with LLMs, indicating the applicant's understanding and experience in leveraging these models."
+      },
+      {
+        "Job Description Skill": "LLMs",
+        "Applicant's Related Skill": "Gemini Pro",
+        "Relevance": "Gemini Pro is classified as an LLM, showcasing the applicant's familiarity with advanced language models."
+      },
+      {
+        "Job Description Skill": "LLMs",
+        "Applicant's Related Skill": "RAG Search",
+        "Relevance": "RAG search is often employed with LLMs, highlighting the applicant's experience in using retrieval-augmented techniques for enhancing LLM capabilities."
+      },
+      {
+        "Job Description Skill": "LLMs",
+        "Applicant's Related Skill": "CrewAI",
+        "Relevance": "CrewAI, by its name, suggests a strong connection to AI and potentially LLMs, making the applicant's experience relevant."
+      }
+    ],
+    "Soft Skills": [
+      {
+        "Job Description Skill": "Collaboration",
+        "Applicant's Related Skill": "Teamwork",
+        "Relevance": "Teamwork is a core aspect of collaboration, indicating the applicant's ability to work effectively with others."
+      },
+      {
+        "Job Description Skill": "Communication Skills",
+        "Applicant's Related Skill": "Communication",
+        "Relevance": "Applicant explicitly lists 'Communication' as a soft skill, directly matching the requirement for strong communication skills."
+      }
+    ]
+  }
 }

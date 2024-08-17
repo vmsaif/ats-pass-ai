@@ -37,8 +37,17 @@ class SearchInChromaDB:
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
         results = vectorstore.similarity_search(query = question, k = 3)
+
+        page_contents = SearchInChromaDB.return_page_contents(results)
         
-        return results
+        return page_contents
+
+    def return_page_contents(results):
+        """Return the page contents from the search results."""
+        page_contents = ""
+        for result in results:
+            page_contents += result.page_content + "\n\n"
+        return page_contents
 
 class RagSearchTool:
 
@@ -106,7 +115,7 @@ class RagSearchTool:
             doc = loader.load()
             # print(doc)
             # Split the content into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=900, chunk_overlap=200)
+            text_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=200)
             splits = text_splitter.split_documents(doc)  # Split large document content
             # print ("Splits: ", splits[0])
             # Now index the content in Chroma DB

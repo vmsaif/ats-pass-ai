@@ -16,8 +16,14 @@ class LLMTask:
 			self._write_to_file(response.text)
 	
 	def _set_model(self):
+
+		if(self.islargeLLM):
+			temp = 2.0
+		else:
+			temp = 1.0
+
 		self.generation_config = {
-				"temperature": 1.0,
+				"temperature": temp,
 				# "top_p": 0.95,
 				# "top_k": 50,
 				"max_output_tokens": 8192,
@@ -83,6 +89,8 @@ class LLMTask:
 			  applicant_info_orgainzed_file_path: str, 
 			  system_instruction: str, override : bool = False,
 			  islargeLLM: bool = False):
+		
+		genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 		self.task_name = task_name
 		self.applicant_info_file_path = applicant_info_file_path
 		self.applicant_info_orgainzed_file_path = applicant_info_orgainzed_file_path
@@ -110,11 +118,36 @@ class LLMTask:
 			},
 		]
 		self._set_model()
+		
 		if(islargeLLM):
 			self.llm_limiter = Limiter(llm_size='LARGE', llm = self.model, langchainMethods=False)
 		else:
 			self.llm_limiter = Limiter(llm_size='SMALL', llm = self.model, langchainMethods=False)
-		genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+		
 
 
-	
+# if __name__ == "__main__":
+# 	models = genai.list_models()
+# 	for model in models:
+# 		if(model.name == "models/gemini-1.5-pro"):
+# 			print(model)
+
+
+# models/chat-bison-001
+# models/text-bison-001
+# models/embedding-gecko-001
+# models/gemini-1.0-pro
+# models/gemini-1.0-pro-001
+# models/gemini-1.0-pro-latest
+# models/gemini-1.0-pro-vision-latest
+# models/gemini-1.5-flash
+# models/gemini-1.5-flash-001
+# models/gemini-1.5-flash-latest
+# models/gemini-1.5-pro
+# models/gemini-1.5-pro-001
+# models/gemini-1.5-pro-latest
+# models/gemini-pro
+# models/gemini-pro-vision
+# models/embedding-001
+# models/text-embedding-004
+# models/aqa

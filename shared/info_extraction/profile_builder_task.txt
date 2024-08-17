@@ -1,50 +1,60 @@
+```json
 {
-  "Applicant Profile": {
-    "Personal Details": {
-      "Full Name": "Saif Mahmud",
-      "Phone Number": "204 955 5064",
-      "Email": "msaifofficial@gmail.com",
-      "LinkedIn": "linkedin.com/in/vmsaif",
-      "Other Social Media Profiles": null,
-      "Personal Website": "saifmahmud.dev",
-      "Portfolio": null,
-      "GitHub": "https://github.com/vmsaif/",
-      "Address": null,
-      "City": "Winnipeg",
-      "State": "MB",
-      "Zip Code": null,
-      "Country": null
+  "Personal Information": {
+    "Full Name": "Saif Mahmud",
+    "Phone Number": "204 955 5064",
+    "Email": "msaifofficial@gmail.com",
+    "Linkedin": "linkedin.com/in/vmsaif",
+    "Other Social Media Profiles": [],
+    "Personal Website": "saifmahmud.dev",
+    "Portfolio": "https://saifmahmud.dev/",
+    "GitHub": "https://github.com/vmsaif",
+    "Address": [],
+    "City": "Winnipeg",
+    "State": "MB",
+    "Zip Code": [],
+    "Country": "Canada"
+  },
+  "Education": {
+    "Degree": "BSc",
+    "Major": "Computer Science",
+    "University": "University of Manitoba",
+    "University Location": "Winnipeg, MB",
+    "Graduation Date": "October 2023",
+    "GPA": [],
+    "Honors/Distinctions": []
+  },
+  "Volunteer Work": [],
+  "Awards and Recognitions": [],
+  "References": [
+    {
+      "Name": "ABU KABIR",
+      "Position": "Director, IT Service Management",
+      "Company": "Microsoft Corporation",
+      "Contact Information": "204-298-3693",
+      "Relationship": []
     },
-    "Education": [
-      {
-        "Degree": "BSc",
-        "Major": "Computer Science",
-        "University": "UNIVERSITY OF MANITOBA",
-        "University Location": null,
-        "Graduation Date": "October 2023",
-        "GPA": null,
-        "Honors/Distinctions": null
-      }
+    {
+      "Name": "SAFIUR MAHDI",
+      "Position": "Software Developer",
+      "Company": "Skip The Dishes",
+      "Contact Information": "204-583-3432",
+      "Relationship": []
+    }
+  ],
+  "Personal Traits and Interests": {
+    "Strengths": "Adaptability, Critical Thinking, Teamwork, Communication, Time Management, Problem Solving",
+    "Hobbies": [],
+    "Passions": []
+  },
+  "Applicant's Philosophy and Goals": {
+    "Philosophy": [
+      "To create a 'magic button' for users, simplifying complex processes into seamless interactions.",
+      "Programs should be intuitive, empowering, and prioritize clarity and efficiency.",
+      "Deeply understand user needs and craft solutions that feel magical."
     ],
-    "Volunteer Work": [],
-    "Awards and Recognitions": [],
-    "References": [
-      {
-        "Name": "ABU KABIR",
-        "Position": "Director, IT Service Management",
-        "Company": "Microsoft Corporation",
-        "Contact Information": "204-298-3693 | Winnipeg, MB",
-        "Relationship": null
-      },
-      {
-        "Name": "SAFIUR MAHDI",
-        "Position": "Software Developer",
-        "Company": "Skip The Dishes",
-        "Contact Information": "204-583-3432 | Winnipeg, MB",
-        "Relationship": null
-      }
-    ],
-    "Personal Traits and Interests": {},
-    "Miscellaneous": {}
+    "Personality Traits": "Proactive, innovative,  team-oriented",
+    "Software Development Approach": "Focuses on continuous improvement and building robust, real-world solutions using AI and software development skills."
   }
 }
+```

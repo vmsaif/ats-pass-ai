@@ -13,7 +13,7 @@ python = ">=3.10,<3.13"
 langchain-google-genai = "^1.0.2"
 google-generativeai = "^0.5.2"
 agentops = "^0.1.9"
-crewai = {extras = ["tools"], version = "^0.32.2"}
+crewai = {extras = ["tools"], version = "^0.51.0"}
 shared = {path = "../../shared"}
 
 

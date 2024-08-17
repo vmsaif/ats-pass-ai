@@ -1,15 +1,8 @@
 {
     "company_name": "Klick",
-    "Job_title": "Applied AI Developer ",
+    "Job_title": "Applied AI Developer",
     "Information needed to create a compelling career objective or summary": [
-        "Klick is consciously creating a culture where everyone can thrive and grow in their careers. The company believes in diversity and inclusion, fostering an environment that values the unique backgrounds, perspectives, and skills of its employees.",
-        "Klick emphasizes collaboration and teamwork, encouraging employees to work together to achieve common goals. The company recognizes the importance of effective communication, particularly in conveying complex technical concepts to non-technical stakeholders.",
-        "Klick is committed to developing an inclusive and barrier-free recruitment process and work environment, accommodating the needs of individuals from diverse backgrounds and providing support to ensure a positive experience for all.",
+      "Klick is a company that values diversity, growth, and creating an environment where everyone can thrive in their careers. They believe that their best work comes from the diverse backgrounds, perspectives, and skills of their employees."
     ],
-    "Phases used in the job description that reflect the company's values and culture": [
-        "Consciously creating a culture where everyone can thrive and grow in their careers.",
-        "Committed to developing an inclusive, barrier-free recruitment process and work environment.",
-        "We believe that our best work comes from our diverse backgrounds, perspectives, and skills.",
-        "We strongly encourage members of historically underrepresented communities to apply."
-    ]
+    "Phases used in the job description that reflect the company's values and culture": [ "consciously creating a culture where everyone can thrive and grow in their careers", "our best work comes from our diverse backgrounds, perspectives, and skills", "committed to developing an inclusive, barrier-free recruitment process and work environment." ]
 }

@@ -5,77 +5,77 @@
 * **Role:** Applied AI Developer
 * **Company:** Klick
 * **Location:** Toronto, ON
-* **Industry:** Advertising Services, Healthcare (implied), Generative AI
+* **Industry:** Advertising Services, Healthcare (implied)
 
-**2. Thorough Analysis:**
+**2. Thorough Analysis:** 
 
-This role focuses on the practical application of existing generative AI technologies (specifically LLMs) to solve real-world business problems, particularly within the healthcare sector. The ideal candidate is a skilled Python developer with experience in deploying AI solutions using popular APIs. Strong communication skills are crucial for collaborating with stakeholders and explaining technical concepts.
+This role requires a strong technical background in applying existing Generative AI, particularly LLMs, to solve real-world business problems within a healthcare context.  Strong communication and collaboration skills are crucial for collaborating with stakeholders and ensuring ethical AI development.
 
 **3. Keyword Categorization:**
 
 **Essential Skills:**
 
 * **Hard Skills:** 
-    * Python
-    * Java
-    * Generative AI
+    * Generative AI 
     * Large Language Models (LLMs)
-    * GPT 
+    * GPT
     * LLaMa
     * Claude
     * Python
-    * APIs (OpenAI, Azure AI, Amazon Bedrock, Google Vertex)
+    * APIs 
+        * OpenAI
+        * Azure AI
+        * Amazon Bedrock
+        * Google Vertex
     * Prompt Engineering
-    * Full-stack deployment
-    * Defensive Design Strategy 
-
+    * Full-stack deployment 
+    * Defensive Design Strategy
+    
 * **Soft Skills:**
     * Communication Skills
     * Collaboration
-    * Problem-Solving
+    * Project Feasibility Assessment
 
 **Industry Terms:**
 
-* Generative AI
-* Large Language Models (LLMs)
-* Prompt Engineering
-* Prompt Injection
-* Healthcare regulations
-* API 
-* Full-stack deployment
+* Generative AI 
+* LLMs
+* APIs
+* Healthcare regulations (implied)
 
 **Company Values & Culture:**
 
 * Diversity & Inclusion
-* Thrive and grow in their careers
-* Inclusive, barrier-free recruitment process
-* Positive experience
+* Thrive and grow
+* Best work from diverse backgrounds 
+* Inclusive, barrier-free recruitment
+* Accessibility needs
 
 **Action Verbs:**
 
 * Building
 * Implementing
-* Solve
-* Lead
-* Overseeing
+* Solving
 * Coding
-* Crafting
+* Crafting 
 * Refining
-* Ensuring
+* Guiding
 * Assessing
 * Collaborating
 * Delegating
 * Communicating
 * Developing
+* Ensuring
+* Explaining 
 
-**4. Prioritization and Relevance:**
+**4.  Prioritization and Relevance:**
 
 **Frequency and Emphasis:**
 
-* **High Emphasis:** Generative AI, LLMs, Python, APIs,  Prompt Engineering, Communication Skills
-* **Moderate Emphasis:** Healthcare regulations, Full-stack deployment,  Defensive Design Strategy, Collaboration
+* **High Frequency/Emphasis:**  Generative AI, LLMs, Python, APIs, Communication, Collaboration 
+* **Moderate Frequency/Emphasis:**  Prompt Engineering, Feasibility Assessment, Defensive Design Strategy, Healthcare regulations
 
 **Essential vs. Preferred Qualifications:**
 
-* **Essential:** Expert knowledge of generative AI & LLMs, Proficiency in Python & APIs, Proven experience in developing Generative AI solutions
-* **Preferred:**  Knowledge of healthcare regulations, Front-end development experience 
+* **Essential:** Expert knowledge of applying Generative AI & LLMs, proficiency in Python & relevant APIs, experience developing Generative AI solutions.
+* **Preferred:** Excellent communication skills (especially technical concepts to non-technical audiences), knowledge of healthcare regulations, front-end development experience. 
