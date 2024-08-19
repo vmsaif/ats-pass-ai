@@ -1,9 +1,0 @@
-```json
-{
-  "Applicant's Philosophy and Goals": {
-    "Philosophy": "Believes in democratizing financial tools to empower individuals.",
-    "Personality Traits": "Persistent, innovative, go-getter.",
-    "Software Development Approach": "Adopts agile methodologies to enhance team productivity and adapt quickly to changing market needs."
-  }
-}
-```

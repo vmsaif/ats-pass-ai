@@ -1,15 +1,36 @@
+```json
 {
+  "Education": {
+    "Section Name": "Education",
+    "Sub Section": {
+      "Degree": "BSc",
+      "Major": "Computer Science",
+      "University": "University of Manitoba",
+      "University Location": "Winnipeg, MB",
+      "Graduation Date": "October 2023"
+    },
+    "Section Relevance Score": 9
+  },
+  "Relevant Coursework": {
+    "Section Name": "Relevant Coursework",
+    "Sub Section": [
+      "Software Engineering (Java | Unit Testing)",
+      "Data Structures and Algorithms (Java)",
+      "Distributed Computing (Python)",
+      "AI and Game Development (Java | Python)"
+    ],
+    "Section Relevance Score": 10
+  },
   "References": {
     "Section Name": "References",
-    "Sub Section 1": [
-      {
-        "Name": "ABU KABIR",
-        "Position": "Director, IT Service Management",
-        "Company": "Microsoft Corporation",
-        "Contact Information": "204-298-3693 | Winnipeg, MB",
-        "Relationship": null
-      }
-    ],
-    "Sub Section 1 Relevance Score": 4
+    "Sub Section": {
+      "Name": "Abu Kabir",
+      "Position": "Director, IT Service Management",
+      "Company": "Microsoft Corporation",
+      "Contact Information": "204-298-3693",
+      "Relationship": null
+    },
+    "Section Relevance Score": 7
   }
 }
+```

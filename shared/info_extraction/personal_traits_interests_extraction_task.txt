@@ -1,3 +1,0 @@
-{
-  "Personal Traits and Interests": {}
-}

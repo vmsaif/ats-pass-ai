@@ -1,69 +1,57 @@
 {
-  "applicant_accepted_skills": {
-    "applicant_accepted_skills_count": 14,
-    "exact_match_with_job_description": {
-      "Programming Languages": [
-        "Python",
-        "Java"
-      ],
-      "AI Frameworks": [
-        "LangChain"
-      ],
-      "Soft Skills": [
-        "Communication",
-        "Problem Solving"
-      ],
-      "Cloud, DevOps": [
-        "CI/CD",
-        "Docker"
-      ]
-    },
-    "partial_match": {
-      "Programming Languages": [
-        {
-          "Name_mentioned_in_the_job_description": "C++",
-          "Relevance": "The applicant has experience in C++, directly aligning with the job description's requirement"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "SQL",
-          "Relevance": "Applicant's proficiency in SQL is a valuable asset as it's often used in software development, particularly for data management"
-        }
-      ],
-      "AI Frameworks": [
-        {
-          "Name_mentioned_in_the_job_description": "OpenAI",
-          "Relevance": "Applicant lists experience with OpenAI, demonstrating familiarity with a key player in AI development"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "RAG Search",
-          "Relevance": "Their experience with RAG Search aligns well with the growing importance of advanced search technologies in software applications"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "Gemini Pro",
-          "Relevance": "Experience with Gemini Pro showcases the applicant's awareness and potential proficiency in using cutting-edge AI models"
-        }
-      ],
-      "Soft Skills": [
-        {
-          "Name_mentioned_in_the_job_description": "Teamwork",
-          "Relevance": "The applicant lists 'Teamwork' as a skill, indicating their ability to collaborate effectively in a team environment"
-        },
-        {
-          "Name_mentioned_in_the_job_description": "Adaptability",
-          "Relevance": "Applicant's self-professed 'Adaptability' is crucial in a fast-paced, ever-evolving field like software development"
-        }
-      ],
-      "System & Technology Integration": [
-        {
-          "Name_mentioned_in_the_job_description": "System & Technology Integration",
-          "Relevance": "Applicant's experience with diverse technologies, including AI, Cloud, and Frontend/Backend development, suggests a strong foundation in system integration principles"
-        }
-      ]
-    }
+  "exact_match_with_job_description": {
+    "Programming Languages": ["Java"],
+    "Frontend Development": ["HTML", "CSS", "JavaScript"],
+    "Soft Skills": ["Teamwork", "Adaptability", "Communication", "Problem Solving"]
   },
-  "missing_from_the_applicant_skills": [
-    "Troubleshooting",
-    "Quality Assurance",
-    "Testing"
-  ]
+  "partial_match": {
+    "Programming Languages": [], 
+    "Frontend Development": [],
+    "Backend Development": [],
+    "Mobile Development": [],
+    "Game Development": [],
+    "Database Management": [],
+    "Data Science": [],
+    "AI": [],
+    "DevOps": [],
+    "Operating Systems": [],
+    "Networking": [],
+    "Cloud Computing": [],
+    "Version Control": [],
+    "Documentation": [],
+    "Software Design": [],
+    "Shell Scripting": [],
+    "Graphics Programming": [],
+    "Project Management": [],
+    "UI/UX Design": [],
+    "Soft Skills": [],
+    "Programming Concepts": [],
+    "Software Development": [],
+    "Web Development": []
+  },
+  "missing_keywords_from_the_applicant_skills": {
+    "Programming Languages": ["JUnit 4", "XML"],
+    "Frontend Development": [],
+    "Backend Development": [],
+    "Mobile Development": [],
+    "Game Development": [],
+    "Database Management": [],
+    "Data Science": [],
+    "AI": [],
+    "DevOps": [],
+    "Operating Systems": [],
+    "Networking": [],
+    "Cloud Computing": [],
+    "Version Control": [],
+    "Documentation": [],
+    "Software Design": [],
+    "Shell Scripting": [],
+    "Graphics Programming": [],
+    "Project Management": [],
+    "UI/UX Design": [],
+    "Soft Skills": [],
+    "Programming Concepts": [],
+    "Software Development": ["Unit Testing", "Code Refactoring", "Bug Fixing", "Agile Development", "Software Development Life Cycle (SDLC)"],
+    "Web Development": []
+  }
 }

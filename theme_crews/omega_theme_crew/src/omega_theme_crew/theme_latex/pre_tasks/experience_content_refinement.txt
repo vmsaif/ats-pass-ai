@@ -1,0 +1,50 @@
+```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "ATS Pass AI": {
+        "Job Title": "ATS Pass AI",
+        "Department/Domain": "AI, Software Development",
+        "Company": "Personal Project",
+        "Location": "N/A",
+        "Timeline": "Jan 2024 - Present",
+        "Duration": "9 Months",
+        "Summary Points": [
+          "Python",
+          "AI",
+          "RAG Search",
+          "CrewAI"
+        ],
+        "Short Description": "Developed an AI-powered resume builder application leveraging **Agile Development** methodologies",
+        "Key Highlights": [
+          "Developed an AI-powered resume builder application leveraging Gemini Pro, LangChain, and RAG search for efficient data extraction and resume tailoring.",
+          "Integrated a Multi-agent System using CrewAI to enhance user data processing and resume customization based on specific job descriptions.",
+          "Achieved over 85% keyword matching with user-provided job descriptions, significantly improving resume effectiveness for Applicant Tracking Systems (ATS).",
+          "See my github \\href{https://github.com/vmsaif/ats-pass-ai}{\\ul{repository}}."
+        ]
+      }
+    },
+    "Work Experience/Project Experience": {
+      "AI PATHFINDING": {
+        "Project Title": "AI PATHFINDING",
+        "Department/Domain": "AI, Game Development",
+        "Timeline": "Sep 2023 - Dec 2023",
+        "Duration": "4 Months",
+        "Summary Points": [
+          "Java",
+          "AI",
+          "A*",
+          "Git"
+        ],
+        "Short Description": "Developed an AI-powered game utilizing **Agile Development** and the A* algorithm.",
+        "Key Highlights": [
+          "Developed an AI-powered game utilizing the A* algorithm for efficient pathfinding, creating a challenging and engaging user experience.",
+          "Implemented prompt engineering techniques to optimize AI response times, resulting in a more seamless and responsive gameplay.",
+          "Employed industry-standard version control practices using Git, ensuring code integrity and facilitating collaborative development.",
+          "See my github \\href{https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm}{\\ul{repository}}."
+        ]
+      }
+    }
+  }
+}
+```

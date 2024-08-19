@@ -1,44 +1,22 @@
-## Job Description Summary
+**Summary of Junior Java Software Engineer Job Description**
 
-**Essential Responsibilities**
+The Junior Java Software Engineer at CMiC is responsible for various tasks related to software development, including:
 
-* Translating user requirements into technical specifications
-* Developing, testing, implementing, and documenting software programs
-* Performing maintenance, troubleshooting, and fault rectification of software systems
-* Ensuring code/configurations adhere to security, performance, and non-functional standards
-* Evaluating new technologies and their impact on systems
-* Following release management processes and applying version controls
-* Assisting in interpreting and documenting client requirements
-* Solving problems and making decisions within given rules
-* Collaborating with functional teams and managing development processes
+**Responsibilities:**
 
-**Essential Qualifications**
+* Creating unit tests
+* Refactoring code
+* Implementing new code and fixing bugs
+* Collaborating with other developers in a large team setting
+* Participating in daily meetings
 
-**Foundational Proficiency**
+**Requirements:**
 
-* Creative thinking
-* Building and managing relationships
-* Emotional agility
-* Quality Assurance and Testing
-* Cloud computing
-* Microservices
-* Adaptability
-* Learning Agility
+* Degree, certificate, or diploma in a relevant field (preferred)
+* Excellent written and oral communication skills
+* Proficiency in Java
+* Familiarity with Junit 4
+* Strong knowledge of J2EE (preferred)
+* Knowledge of JSF (preferred)
 
-**Intermediate Proficiency**
-
-* Programming
-* Applications Integration
-* Test Driven Development
-* System Development Lifecycle
-* Troubleshooting
-* System and Technology Integration
-* Verbal & written communication skills
-* Collaboration & team skills
-* Analytical and problem solving skills
-* Data driven decision making
-
-**Additional Requirements**
-
-* Typically 4-6 years of relevant experience
-* Post-secondary degree in related field of study (or equivalent combination of education and experience)
+This summary provides a concise overview of the essential responsibilities and qualifications for the Junior Java Software Engineer role, enabling the selection of relevant sections from an applicant's resume for further evaluation.

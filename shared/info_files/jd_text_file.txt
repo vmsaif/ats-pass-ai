@@ -1,53 +1,76 @@
-Software Developer (New or Recent Graduate)
-Location Toronto, ON M8X 1C4, Canada Full timePosted Date : 2024-07-10Job ID : R240015354
- 
-Share via FacebookShare via LinkedInShare via twitter
-Application Deadline:
+Junior Java Software Engineer
+CMiC
+3.4
+3.4 out of 5 stars
+Toronto, ON
+Full-time
+Responded to 51-74% of applications in the past 30 days, typically within 2 days.
 
-07/24/2024
-Address:
+Job
 
-100 King Street West
-Job Family Group:
+Company
+Profile insights
+Here’s how the job qualifications align with your profile.
+Skills
 
-Technology
-Drives the overall software development lifecycle including working across functional teams to transform requirements into features, managing development teams and processes, and conducting software testing and maintenance. Specific project areas of focus includes translating user requirements into technical specifications, writing code and managing the preparation of design specifications. Supports system design, provides advice on security requirements and debugs business systems and service applications. Applies deep knowledge of algorithms, data structures and programming languages to develop high quality technology applications and services - including tools, standards, and relevant software platforms based on business requirements.
+XML
 
-Translates user needs into technical specifications by understanding, conceptualizing, and facilitating technical requirements from user.​
-Analyzes, develops, tests, and implements new software programs, and documentation of entire software development life cycle execution.
-Performs preventative and corrective maintenance, troubleshooting and fault rectification of system and core software components​.
-Ensures that code/configurations adhere to the security, logging, error handling, and performance standards and non-functional requirements.​
-Evaluates new technologies for fit with the program/system/eco-system and the associated upstream and downstream impacts on process, data, and risk.
-Follows release management processes and standards, and applies version controls. ​
-Assists in interpreting and documentation of client requirements.​
-Focus is primarily on business/group within BMO; may have broader, enterprise-wide focus.
-Exercises judgment to identify, diagnose, and solve problems within given rules.
-Works independently on a range of complex tasks, which may include unique situations.
-Broader work or accountabilities may be assigned as needed.
-Qualifications:
+JavaScript
 
-Foundational level of proficiency:
+J2EE
++ show more
 
-Creative thinking.
-Building and managing relationships.
-Emotional agility.
-Quality Assurance and Testing.
-Cloud computing.
-Microservices.
-Technology Business Requirements Definition, Analysis and Mapping.
-Adaptability.
-Learning Agility.
-Intermediate level of proficiency:
+Do you have experience in J2EE?
+&nbsp;
+Job details
+Here’s how the job details align with your profile.
+Job type
 
-Programming.
-Applications Integration.
-Test Driven Development.
-System Development Lifecycle.
-Troubleshooting.
-System and Technology Integration.
-Verbal & written communication skills.
-Collaboration & team skills.
-Analytical and problem solving skills.
-Data driven decision making.
-Typically between 4 - 6 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.
-Technical proficiency gained through education and/or business experience.
+Full-time
+&nbsp;
+Location
+Toronto, ON
+&nbsp;
+Benefits
+Pulled from the full job description
+Dental care
+Paid vacation
+RRSP match
+Wellness program
+&nbsp;
+Full job description
+About CMiC
+
+Headquartered in Toronto, CMiC is a software company focused on the Construction industry. We have built a comprehensive platform for construction companies to manage their most important workflows. Our customers can choose between a Cloud or Self-Hosted deployment that includes industry focused modules to manage everything from Financials and Payroll to Project Management and Job Costing. We have a strong market share in North America and rapidly expanding internationally in regions like Europe, Southeast Asia and the Middle East.
+
+Job Overview
+
+The TOOLS team created and maintained several versions of a dynamic engine that generates screens (web pages) based on metadata. The screens are completely dynamic and user configurable, including components, layout, business rules and validations. The engine is written primarily java (ADF framework) and xml with a bit of HTML CSS, JavaScript.
+
+Responsibilities
+
+Creating unit tests
+Code refactoring
+implement new code / fix bugs
+Work in a large dev team and work closely with other developers
+Participate in daily meetings
+Requirements
+
+A degree, certificate or diploma in a relevant area of study is a plus
+Excellent communication skills – both written and oral.
+Java
+Junit 4
+J2EE knowledge is a strong plus
+JSF knowledge is a strong plus
+Benefits
+
+Competitive benefits Package (including Health & Dental benefits)
+Paid vacation and personal days
+Townhall meetings where all employees are encouraged to participate in open discussions
+Located on York University’s campus, easily accessible by transit (TTC, GO, etc.), walking distance to shopping and restaurants
+Outdoor lunch space, including picnic tables
+An active Social Events Committee (past events include annual seasonal parties, pool and bowling tournaments, karaoke nights, Game nights, BBQ’s, and more)
+Health and Wellness focus including virtual yoga classes and wellness webinars
+RRSP Matching Program after 2 years of employment
+Experience in a rapidly growing, socially responsible corporation
+CMiC is an Equal Opportunity Employer. In accordance with the Accessibility for Ontarians with Disabilities Act, 2005 and the Ontario Human Rights Code, CMiC will provide accommodation to applicants with disabilities throughout the recruitment, selection and/or assessment process. If selected to participate in the recruitment, selection and/or assessment process, please inform Human Resources staff of the nature of any accommodation(s) that you may require.

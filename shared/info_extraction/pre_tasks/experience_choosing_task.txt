@@ -1,34 +1,78 @@
 ```json
 {
-  "selected_experiences": {
-    "Total Object Count": 2,
-    "Most Recent Experience": {
-      "title": "ATS Pass AI",
-      "type": "Project",
-      "timeline": "January 2024 - Present",
-      "description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
-    },
-    "Additional Relevant Experiences": [
-      {
-        "title": "AI Path Finding",
-        "type": "Project",
-        "timeline": "September 2023 - December 2023",
-        "description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project."
-      }
-    ]
+  "selected experiences": {
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences title": "AI PATHFINDING"
   },
-  "Selection Justification": {
+  "selection justification": {
     "reasons_for_choice": [
       {
         "title": "ATS Pass AI",
-        "reason": "This project directly aligns with the job description's emphasis on 'Technical Skills' and 'Software Development Lifecycle (SDLC)', as it demonstrates proficiency in advanced AI technologies, multi-agent systems, and resume optimization techniques."
+        "reason": "This project showcases the applicant's up-to-date skills in Java and AI, directly aligning with the company's focus on innovative software solutions. The use of Java for an AI-powered application demonstrates practical experience relevant to the job description. Additionally, the project highlights the applicant's ability to leverage advanced technologies like AI and Multi-agent Systems, indicating a strong potential for contributing to CMiC's technological advancements."
       },
       {
-        "title": "AI Path Finding",
-        "reason": "This project showcases the candidate's expertise in 'Cloud Computing', 'Microservices', and 'Testing' through the development and deployment of an AI-driven game using the A* algorithm and CI/CD practices."
+        "title": "AI PATHFINDING",
+        "reason": "This project demonstrates the applicant's proficiency in Java and their understanding of algorithms (A*), a crucial skill for a software engineer. The project's use of Git for version control aligns with the job description's emphasis on collaborative development practices. Furthermore, the mention of CI/CD implementation highlights the applicant's familiarity with industry-standard software development methodologies, showcasing their readiness to contribute to a professional environment like CMiC."
       }
     ],
-    "rejected_experiences": []
+    "rejected_experiences": [
+      {
+        "title": "Programming Mentor",
+        "reason": "While this experience showcases teaching and communication skills, it lacks direct relevance to the specific technical requirements (Java, JUnit, etc.) outlined in the job description for a Junior Java Software Engineer role. The technologies and frameworks used in this role are not as closely aligned with the desired skillset."
+      },
+      {
+        "title": "Blockchain Car Mileage Tracker",
+        "reason": "Although this project demonstrates the applicant's versatility and interest in emerging technologies, its focus on Blockchain and Vue.js is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer position at CMiC. The technologies used in this project are less relevant compared to other experiences with a stronger Java focus."
+      },
+      {
+        "title": "Recursive Ray Tracing",
+        "reason": "This project highlights the applicant's understanding of 3D graphics and OpenGL but lacks direct relevance to the core Java development skills and web application context emphasized in the job description.  While demonstrating technical capability, it's less aligned with the specific requirements for this role."
+      },
+      {
+        "title": "Bank Account System",
+        "reason": "This project demonstrates foundational Java skills and object-oriented programming principles. However, it lacks the complexity and scale of other projects, making it less impactful for demonstrating the applicant's ability to handle real-world software development challenges in a professional setting."
+      },
+      {
+        "title": "Hosting a Resume on GitHub Pages",
+        "reason": "While showcasing the applicant's understanding of Git and basic web development practices, this project lacks the depth and complexity of other experiences to demonstrate the required skills for a Junior Java Software Engineer. The technical scope of this project is relatively limited compared to other, more relevant experiences."
+      },
+      {
+        "title": "ELF Binary Analysis",
+        "reason": "This experience showcases the applicant's debugging and system analysis skills, but its focus on C programming and Linux OS is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer position at CMiC. The project's focus on C programming, while valuable, is not as directly relevant as other experiences featuring Java development."
+      },
+      {
+        "title": "OpenGL Sphere Lighting",
+        "reason": "This project demonstrates the applicant's grasp of 3D graphics concepts and OpenGL, but its lack of relevance to Java development makes it less suitable for showcasing their qualifications for the Junior Java Software Engineer role at CMiC. While technically impressive, it doesn't directly align with the specific technologies and frameworks required for the position."
+      },
+      {
+        "title": "Reversible Learning APP",
+        "reason": "Although this project highlights teamwork and Android development experience using Java, its relevance is diminished due to its age (2021).  The job description prioritizes recent experience with Java and related technologies, making this project less competitive."
+      },
+      {
+        "title": "Connect 4 Game",
+        "reason": "While showcasing the applicant's ability to implement algorithms and utilize Java for game development, this project lacks the direct relevance to web application development and enterprise software solutions emphasized in the job description. The skills demonstrated in this project are not as directly transferable to the specific requirements of the role."
+      },
+      {
+        "title": "TCP Chat Application",
+        "reason": "This project demonstrates the applicant's understanding of networking concepts and multithreading in Java. However, its focus on low-level networking might not be as relevant to the web application development context outlined in the job description. While showcasing technical proficiency, it might not be the most impactful experience to highlight for this particular role."
+      },
+      {
+        "title": "Data Visualization with R",
+        "reason": "While data analysis is a valuable skill, this project's focus on R programming is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer role at CMiC. The project's emphasis on R programming, while useful in certain contexts, is less aligned with the core technologies required for this specific position."
+      },
+      {
+        "title": "Portfolio Website",
+        "reason": "While demonstrating web development skills, this project primarily uses React and related technologies, which are not the primary focus of the Junior Java Software Engineer position at CMiC.  While a portfolio is valuable, the technologies used (React, GraphQL) are not as directly aligned with the job description's emphasis on Java and related frameworks."
+      },
+      {
+        "title": "CPU Scheduling",
+        "reason": "This project showcases the applicant's ability to work with C and multithreading concepts, but it lacks direct relevance to the Java-based web application development context emphasized in the job description. The project's focus on low-level system programming, while demonstrating technical capability, is not as directly applicable to the requirements of this particular role."
+      },
+      {
+        "title": "Go-Back-N Protocol Simulation",
+        "reason": "This project demonstrates the applicant's understanding of networking protocols, but its focus on Python and simulation might not be directly relevant to the practical Java development skills required for the Junior Java Software Engineer role. While highlighting technical understanding, it doesn't directly translate to the specific technologies and frameworks required for the position."
+      }
+    ]
   }
 }
 ```

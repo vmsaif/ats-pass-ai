@@ -1,296 +1,115 @@
 {
-  "combined skills list of applicant": {
-    "Technologies": [
-      {
-        "Name": "Java",
-        "field": [
-          "Programming Language",
-          "Backend Development"
-        ]
-      },
-      {
-        "Name": "Python",
-        "field": [
-          "Programming Language"
-        ]
-      },
-      {
-        "Name": "SQL",
-        "field": [
-          "Database"
-        ]
-      },
-      {
-        "Name": "OpenGL",
-        "field": [
-          "Graphics Programming"
-        ]
-      },
-      {
-        "Name": "C++",
-        "field": [
-          "Programming Language"
-        ]
-      },
-      {
-        "Name": "C",
-        "field": [
-          "Programming Language"
-        ]
-      },
-      {
-        "Name": "Docker",
-        "field": [
-          "Containerization"
-        ]
-      },
-      {
-        "Name": "Vue.js",
-        "field": [
-          "JavaScript Framework",
-          "Frontend Development"
-        ]
-      },
-      {
-        "Name": "Git",
-        "field": [
-          "Version Control"
-        ]
-      },
-      {
-        "Name": "Android Studio",
-        "field": [
-          "Android Development"
-        ]
-      },
-      {
-        "Name": "LangChain",
-        "field": [
-          "AI Development"
-        ]
-      },
-      {
-        "Name": "OpenAI",
-        "field": [
-          "AI Development"
-        ]
-      },
-      {
-        "Name": "Gemini Pro",
-        "field": [
-          "AI Development"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [
-          "Search Technology"
-        ]
-      },
-      {
-        "Name": "CrewAI",
-        "field": [
-          "AI Development"
-        ]
-      },
-      {
-        "Name": "GPT",
-        "field": [
-          "AI Development"
-        ]
-      },
-      {
-        "Name": "LLaMa 3",
-        "field": [
-          "AI Development"
-        ]
-      },
-      {
-        "Name": "Google Vertex",
-        "field": [
-          "Cloud, DevOps"
-        ]
-      },
-      {
-        "Name": "AWS Bedrock",
-        "field": [
-          "Cloud, DevOps"
-        ]
-      },
-      {
-        "Name": "CI/CD",
-        "field": [
-          "Cloud, DevOps"
-        ]
-      },
-      {
-        "Name": "GitHub Actions",
-        "field": [
-          "Cloud, DevOps"
-        ]
-      },
-      {
-        "Name": "React",
-        "field": [
-          "Front End Development"
-        ]
-      },
-      {
-        "Name": "CSS",
-        "field": [
-          "Front End Development"
-        ]
-      },
-      {
-        "Name": "JavaScript",
-        "field": [
-          "Front End Development"
-        ]
-      },
-      {
-        "Name": "HTML",
-        "field": [
-          "Front End Development"
-        ]
-      }
+  "Applicant's Skills": {
+    "Programming Languages": [
+      "Python",
+      "Java",
+      "C++",
+      "C",
+      "R"
     ],
-    "Frameworks": [
-      {
-        "Name": "AI",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "RAG Search",
-        "field": [
-          "Search Technology"
-        ]
-      },
-      {
-        "Name": "Multiagent",
-        "field": [
-          "Artificial Intelligence"
-        ]
-      },
-      {
-        "Name": "JUnit",
-        "field": [
-          "Testing Framework"
-        ]
-      }
+    "Frontend Development": [
+      "Vue.js",
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript"
     ],
-    "Skills": [
-      {
-        "Name": "Data Analysis",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Mentorship",
-        "field": [
-          "Training and Development"
-        ]
-      },
-      {
-        "Name": "Instruction Skills",
-        "field": [
-          "Training and Development"
-        ]
-      },
-      {
-        "Name": "Problem Solving",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Software Debugging",
-        "field": [
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Object-Oriented Programming",
-        "field": [
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Polymorphism",
-        "field": [
-          "Software Development"
-        ]
-      },
-      {
-        "Name": "Teamwork",
-        "field": [
-          "Collaboration"
-        ]
-      },
-      {
-        "Name": "Project Management",
-        "field": [
-          "Project Management"
-        ]
-      },
-      {
-        "Name": "Public Speaking",
-        "field": [
-          "Communication"
-        ]
-      }
+    "Backend Development": [
+      "Python",
+      "Java"
     ],
+    "Mobile Development": [
+      "Java",
+      "Android Studio"
+    ],
+    "Game Development": [
+      "3D Graphics",
+      "OpenGL",
+      "C++"
+    ],
+    "Database Management": [
+      "SQL",
+      "HSQLDB"
+    ],
+    "Data Science": [
+      "Python",
+      "SQL",
+      "R",
+      "Data Visualization"
+    ],
+    "AI": [
+      "Multiagent Systems",
+      "RAG (Retrieval Augmented Generation)",
+      "A* Search Algorithm",
+      "AI Decision-Making",
+      "LangChain",
+      "OpenAI API",
+      "Google Gemini Pro",
+      "CrewAI",
+      "GPT-4",
+      "LLaMA 2",
+      "AWS Sagemaker",
+      "Google Vertex AI",
+      "AWS Bedrock"
+    ],
+    "DevOps": [
+      "Docker",
+      "CI/CD",
+      "GitHub Actions"
+    ],
+    "Operating Systems": [
+      "Linux",
+      "File Systems",
+      "System Programming"
+    ],
+    "Networking": [
+      "TCP/IP",
+      "Client-Server Communication",
+      "Networking"
+    ],
+    "Cloud Computing": [
+      "AWS Sagemaker",
+      "Google Vertex AI",
+      "AWS Bedrock"
+    ],
+    "Version Control": [
+      "Git"
+    ],
+    "Documentation": [
+      "Markdown"
+    ],
+    "Software Design": [
+      "Object-Oriented Programming"
+    ],
+    "Shell Scripting": [
+      "Bash"
+    ],
+    "Graphics Programming": [
+      "OpenGL"
+    ],
+    "Project Management": [],
+    "UI/UX Design": [],
     "Soft Skills": [
-      {
-        "Name": "Communication",
-        "field": [
-          "Interpersonal Skills"
-        ]
-      },
-      {
-        "Name": "Interpersonal Skills",
-        "field": [
-          "Interpersonal Skills"
-        ]
-      },
-      {
-        "Name": "Adaptability",
-        "field": [
-          "Personal Attributes"
-        ]
-      },
-      {
-        "Name": "Analytical Skills",
-        "field": [
-          "Analytical Skills"
-        ]
-      },
-      {
-        "Name": "Attention to Detail",
-        "field": [
-          "Personal Attributes"
-        ]
-      },
-      {
-        "Name": "Leadership",
-        "field": [
-          "Leadership"
-        ]
-      },
-      {
-        "Name": "Time Management",
-        "field": [
-          "Personal Attributes"
-        ]
-      },
-      {
-        "Name": "Critical Thinking",
-        "field": [
-          "Analytical Skills"
-        ]
-      }
+      "Teamwork",
+      "Adaptability",
+      "Critical Thinking",
+      "Time Management",
+      "Communication",
+      "Problem Solving"
+    ],
+    "Programming Concepts": [
+      "File I/O",
+      "Polymorphism",
+      "Debugging",
+      "Multithreading"
+    ],
+    "Software Development": [],
+    "Web Development": [
+      "Jekyll",
+      "Styled-Components",
+      "Chart.js",
+      "Apollo",
+      "GraphQL"
     ]
   }
 }

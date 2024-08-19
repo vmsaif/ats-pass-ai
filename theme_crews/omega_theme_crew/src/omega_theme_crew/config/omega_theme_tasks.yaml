@@ -33,153 +33,86 @@ concise_jd_task:
   expected_output: >
     A concise summary of the job description, no more than 2000 characters, effectively outlining the main responsibilities and essential qualifications required for the role. This summary should provide enough information to facilitate effective decision-making regarding the inclusion of relevant sections in the applicant's resume.
 
-remove_data:
+final_selection:
   description: >
-    Parse the JSON object and remove elements following the conditions below.
+    This task involves evaluating each major section of the applicant's profile for relevance to the job, assigning relevance scores, and finalizing the selection of prioritized sections based on their assessed relevance.
 
-    **Procedure**:
-      - Remove any fields that are empty (e.g., empty arrays [], objects {}, keys "", or values "").
-      Example of empty fields:
-      {
-        ...,
-        "Key": "",
-        "Key": [],
-        "Key": {},
-        ...
-      }
-      - Specifically remove the "Personal Details" and "Personal Traits and Interests" sections.
-
-    **Output**:
-    - A cleaned JSON object retaining the same structure without the removed sections and empty items.
-  expected_output: >
-    A cleaned JSON object with empty sections and sub-sections, Personal Details, and Personal Traits and Interests removed.
-
-data_extraction:
-  description: >
-    Extract relevant data from the applicant's profile.
-  
     **Input Data**:
-    - A JSON object containing the applicant's profile data.
+    - Extracted and structured profile data:
+      {profile_builder}
+      {coursework_extraction}
+
+    - Job description criteria:
+      {concise_jd}
+      ----Job Description Criteria ends here----
 
     **Procedure**:
-    - If Education and Relevant Courses are provided, separate them into distinct sections.
-    - All the courses (if provided) should be considered as one sub-section of Relevant Courses section.
-    - Make sure all other sections are included as they are.
-  
+
+    1. First ignore sections: "Personal Information", "Personal Traits and Interests", and "Applicant's Philosophy and Goals". After the removal, Follow the next steps.
+
+    2. **Relevance Assessment**:
+      Keep 4 most relevant sub-sections from the given context of the applicant's profile that align with the job description criteria.
+      Use a relevance score between 0 and 10 for each sub-section based on the provided job information. Keep the most relevant sub-sections based on the scores.
+
+    3. If "Relevant Coursework (to the Job Description)" is provided, include all courses as one separate sub-section under the "Relevant Courses" section.
+
+    3. **Final Selection**:
+      - Always include at least one sub-section from the "References" section if provided.
+      - Then include a total of 4 available sub-sections across all sections. Do not make up any sub-sections if they are not available.
+
     **Output**:
-    - A structured and cleaned JSON object ready for further processing.
+    - Generate a formatted JSON object ready for use, incorporating the selected sections and sub-sections based on the defined criteria. This output should clearly present each major section with its detailed content and an associated relevance score. 
+
   expected_output: >
-    A structured JSON object containing the extracted and validated data from the applicant's profile, with empty sections removed and data normalized where necessary.
+    Four most relevant sub-sections from the applicant's profile, related to the job description criteria, with detailed content and relevance scores.
     {
-      "Section": {
+      "Education": {
         "Section Name": "Education",
-        "Sub Section": [
-          {Education Sub Section 1},
-          {Education Sub Section 2},
-        ]
+        "Sub Section": {
+          "Degree": "BSc",
+          "Major": "Computer Science",
+          "University": "University of Manitoba",
+          "University Location": "Winnipeg, MB",
+          "Graduation Date": "October 2023"
+        },
+        "Section Relevance Score": 6
       },
-      "Section": {
-        "Section Name": "Relevant Courses",
-        "Sub Section 1": [
-          "Course 1",
-          "Course 2",
-          ...
-        ]
-      },
-      "Section": {
-        ...
-      }
-    }
-
-relevance_assessment:
-  description: >
-    Evaluate each major section of the applicant's profile for relevance to the job, based on criteria provided in the job description. Assign a prioritization score to each section '{}' reflecting its overall importance to the job.
-  
-    **Input Data**:
-    - Extracted and structured profile data.
-    - Job description criteria.
-  
-    **Procedure**:
-    - Score the relevance of each section based on the provided job information. If a section has an array of elements, set the relevance of each element.
-    - Assign a relevance score to each section reflecting its overall importance in enhancing the applicant's candidacy for the specific job. The score should be between 0 and 10.
-    - Score empty sections or sub-sections as 0.
-
-  expected_output: >
-    JSON object containing each major section with detailed content and an associated relevance score.
-    {
-      "Relevant Courses": {
-        "Section Name": "Relevant Courses",
-        "Sub Section 1": [
-          {
-            "Artificial Intelligence (Python)",
-            "AI and Game Development (Java | Python)",
-            "Distributed Computing (Python)",
-            "Data Structures and Algorithms (Java)",
-            "Software Engineering (Java | Unit Testing)"
-          },       
-          "Sub Section 1 Relevance Score": 9,
-        ]
+      "Volunteer Work": {
+        "Section Name": "Volunteer Work",
+        "Sub Section": {
+          "Organization": ".dev Programming Club",
+          "Role": "Active Member",
+          "Duration": "2019-2023",
+          "Responsibilities": [
+            "Designed and prepared banners, backdrops and brochures for Education Expo 2019.",
+            "Designed the official logo, social media posts, receipts and other official document formats."
+          ]
+        },
+        "Section Relevance Score": 5
       },
       "References": {
         "Section Name": "References",
-        "Sub Section 1": [
-          {
-            "Name": "ABU KABIR",
-            "Position": "Director, IT Service Management",
-            "Company": "Microsoft Corporation",
-            "Contact Information": "204-298-3693",
-            "Location": "Winnipeg, MB",
-            "Relationship": null,
-          },
-          "Sub Section 1 Relevance Score": 4,
-        ],
-        "Sub Section 2": [
-          {
-            "Name": "SAFIUR MAHDI",
-            "Position": "Software Developer",
-            "Company": "Skip The Dishes",
-            "Contact Information": "204-583-3432",
-            "Location": "Winnipeg, MB",
-            "Relationship": null,
-          },
-          "Sub Section 2 Relevance Score": 2,
-        ]
-      },
-      ...
-    }
-
-final_selection:
-  description: >
-    Select and format the final prioritized sections.
-  
-    **Input Data**:
-    - Structured and cleaned JSON object containing the extracted data with relevance scores.
-  
-    Definition of Sections in the JSON object:
-    {
-      "Section": {
-        "sub-section 1": {},
-        "Sub Section 1 Relevance Score: int,
-      },
-      "Section": [
-        {Sub-section 1},
-        "Sub Section 1 Relevance Score: int,
-        {Sub-section 2},
-        "Sub Section 2 Relevance Score: int,
-        ...
-      ],
-      ...
-    }
-
-    **Procedure**:
-    - If References are provided, include at least one sub-section.
-    - In total include up to 4 sub-sections across all sections. Aim for 4 sub-sections if provided and has good relevance scores between 2-10.
-    - If there are more than 4 sub-sections, prioritize based on relevance scores to limit to 4 sub-sections.
-  
-    **Output**:
-    - A formatted JSON ready for use.
-  expected_output: >
-    Formatted JSON object with the final selection of sections and sub-sections.
+        "Sub Section": {
+          "Name": "ABU KABIR",
+          "Position": "Director, IT Service Management",
+          "Company": "Microsoft Corporation",
+          "Contact Information": "204-298-3693",
+          "Location": "Winnipeg, MB",
+          "Relationship": null,
+          "Sub Section 1 Relevance Score": 7
+        },
+        "Sub Section": {
+          "Name": "SAFIUR MAHDI",
+          "Position": "Software Developer",
+          "Company": "Skip The Dishes",
+          "Contact Information": "204-583-3432",
+          "Location": "Winnipeg, MB",
+          "Relationship": null,
+          "Sub Section 2 Relevance Score": 3
+        },
+      }
+    },
+    "Total Sub Section Count": 4
 
 select_first_column_content:
   description: >
@@ -255,8 +188,20 @@ education_section:
     - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
       % \section{}
       % \sectionsep.
+
+    - Output should be latex syntax only.
     Here is the information you need and convert into LaTeX format:
   expected_output: >
+    \section{Education}
+    \customTitle{University of Manitoba}
+    \semiTitle{BSc Major in Computer Science}
+    \subTitle{Graduated, October 2023}
+
+    \newEntryVSpace % use it if there are multiple educations to separate them.
+    \customTitle{Second Institution}
+    ...keep going like this if there are multiple educations.
+
+    \sectionsep
 
 coursework_section:
   description: >
@@ -264,7 +209,7 @@ coursework_section:
 
     **Instructions**:
     - Start with the section title using \section{Relevant Courses} if there are courses available.
-    - List each course in \body{}, formatted as "Course Name (tool | tool) \\"
+    - List each courses in \body{}, formatted as "Course Name (tool | tool) \\"
     - A line ending with '\\' is necessary except for the last line.
 
     **Example Output**:
@@ -277,7 +222,7 @@ coursework_section:
 
     **Conditions**:
     - Absence of course data should be marked with:
-      % \section{}
+      % \section{Relevant Courses}
       % \sectionsep
 
   expected_output: >
@@ -314,27 +259,27 @@ volunteer_section:
     Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
 
     In your output:
-    If there is no volunteer information, write % \section{}, Like this:
+    If there is no volunteer information, write % \section{} as LaTeX comments, like this:
       % \section{Volunteer} 
       % \sectionsep.
 
     If there is volunteer information:
-    - In the first line, use the command `\section{Volunteer}`.
-    - Use `\headingtwo{}` for organization name.
-    - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
-    - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
-    - Do not make more than 2 items.
+      - In the first line, use the command `\section{Volunteer}`.
+      - Use `\headingtwo{}` for organization name.
+      - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
+      - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+      - Do not make more than 2 items.
 
-    Example:
-    '''latex
-    \section{VOLUNTEER}
-      \headingtwo{.dev Programming Club}
-      \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
-      \begin{vitemize}
-        \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
-        \item Designed the official logo, social media posts, receipts and other official document formats.
-      \end{vitemize}
-    '''
+      Example:
+      '''latex
+      \section{VOLUNTEER}
+        \headingtwo{.dev Programming Club}
+        \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+        \begin{vitemize}
+          \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+          \item Designed the official logo, social media posts, receipts and other official document formats.
+        \end{vitemize}
+      '''
   expected_output: >
 
 references_section:
@@ -390,83 +335,58 @@ career_objective_section:
 
   expected_output: >
 
-exp_item_count_chooser:
+experience_content_refinement:
   description: >
-    Evaluate and determine the number of allowable key highlights for each experience entry, adjusting based on link presence and total experience count.
+    This task involves refining and formatting the content of JSON-formatted experiences. The process includes selecting summary points, handling links, and formatting links in LaTeX within the "Key Highlights" array.
 
     **Procedure**:
-      - For each experience entry, determine if a link is included.
-      - Create a field "Link found" either "True" or "False" based on the presence of a link within that entry.
-      - Create a field "Allow Key Highlights Count" with the determined value based on the rules below.
+    1. **Summary Point Selection**:
+       - Review the "Technologies, frameworks, and tools Used" and "Skills" for each experience.
+       - Select 3-4 summary points from these fields, ensuring each point consists of 1-2 words. The combined length of all summary points must not exceed 4 words.
+       - Prioritize the inclusion of specific technologies and skill names that best represent the experience.
+       - Remove the original "Technologies, frameworks, and tools Used" and "Skills" fields from each entry.
+       - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
 
-      Rules:
-      - If a link is present, "Allow Key Highlights Count": "2". No need to actually remove anything.
-      - If no link is present, "Allow Key Highlights Count": "3". No need to actually remove anything.
-      - Do not change or remove any other content of the JSON object in the output.
+    2. **Link Handling**:
+       - If a Link is present in the experience:
+         - Append the "Link" inside the "Key Highlights" array.
+         - Remove only the "Link" field from the experience.
+         - Remove the "Allow Count" and "Count Reason" fields if present.
+         - Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description", etc.
+
+    3. **LaTeX Link Formatting**:
+       - Check if a link is present in the "Key Highlights" array.
+       - If a link is present, format it in LaTeX using the \href{{url}}{{\ul{{link text}}}} command.
+       - Write the link as a sentence in the format: "See my linkedin \href{{https://www.linkedin.com/in/vmsaif/}}{{\ul{{profile}}}}." Understand what the link is about and write the sentence and {{text}} accordingly. 
+       - Do not make up any links or sentences.
+       - Do not change or remove any other content of the JSON object.
+
+    4. For timeline, use 3 letters of the month and year. For example, January 2020 should be Jan 2020. 
 
     **Output**:
-    - A JSON object with the same entries as the input and the "Link found" and "Allow Key Highlights Count" fields added.
-  expected_output: >
-    A JSON object with the same entries as the input and the "Link found" and "Allow Key Highlights Count" fields added.
+    - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, with links appropriately handled and formatted within the "Key Highlights" array.
 
-exp_item_chooser:
-  description: >
-    Trim the "Key Highlights" for each entry based on the "Allow Key Highlights Count," ensuring that the highlights retained are most relevant to the job description.
-
-    **Procedure**:
-    - Check what is the value of "Allow Key Highlights Count" for that entry.
-    - You need to keep only the "Allow Key Highlights Count" number of key highlights for that entry. In case there are more key highlights, keep them based on the: 
-      -- priority of relevance and impact.
-      -- Demonstrate measurable achievements or skills critical to the job.
-      -- Highlight significant contributions or use of key technologies.
-
-    **Output**:
-    - A JSON object that mirrors the structure of the input but includes only the prioritized key highlights for each entry.
-    - For Example, if "Allow Key Highlights Count" is "2", the "Key Highlights" array should contain only the best 2 highlights based on relevance and impact for that entry. 
-    - Similar steps should be followed for all entries.
+    Here is the context you need and convert into LaTeX format:
+    {experience_content}
 
   expected_output: >
-    A JSON object with adjusted "Key Highlights" for each entry, reflecting prioritization based on relevance and impact relative to the job description.
-
-summary_point_selector:
-  description: >
-    **Procedure**:
-    - Review the "Technologies, frameworks, and tools Used" and "Skills" for each experience.
-    - Select 3-4 summary points from these fields, ensuring each point consists of 1-2 words. The combined length of all summary points must not exceed 4 words.
-    - Prioritize the inclusion of specific technologies and skill names that best represent the experience.
-    - Remove the original "Technologies, frameworks, and tools Used" and "Skills" fields from each entry.
-    - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
-
-    **Output**:
-    - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, reflecting the concise highlights of each experience.
-  expected_output: >
-
-link_handler:
-  description: >
-    You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array.
-    
-    If a Link is present in the experience:
-    - Append the "Link" inside the "Key Highlights" array.
-    - Remove only the "Link" field from the experience. 
-    - Remove the "Allow Count" and "Count Reason" fields if present.
-    Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description" etc.
-    - Do not replace any key highlights.
-
-  expected_output: >
-
-link_latex:
-  description: >
-    You are provided with multiple experiences in JSON format where each experience has a "Key Highlights" array. 
-
-    **Procedure**:
-    - If a link is present in the "Key Highlights" array, format it in LaTeX using the \href{}{} command. 
-    - Write the link in as a sentence in the format. Understand what the link is about and write the sentence accordingly.
-      -- Example:
-      Assume the hyperlink is "profile" and the link is "https://www.linkedin.com/in/vmsaif/".
-
-    - "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}."
-    - Do not change or remove any other content of the json object.
-  expected_output: >
+    {
+      "Experience": [
+        {
+          "Title": "Software Engineer",
+          "Role": "Lead Developer",
+          "Timeline": "January 2020 - Present",
+          "Duration": "2 years",
+          "Summary Points": ["Python", "AI"],
+          "Key Highlights": [
+            "Led a team of 10 in developing an AI-based predictive analytics tool.",
+            "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}."
+          ],
+          "Short Description": "Managed project from inception to deployment, significantly improving process efficiencies."
+        },
+        ...other experiences
+      ]
+    }
 
 experience_section:
   description: >
@@ -488,47 +408,18 @@ experience_section:
     - Use textbf{} for texts surrounded by double asterisks (**text**) in the "Key Highlights" array.
     - Format links with \href{}{}, using \ul for underlining.
     - Escape special characters appropriately (e.g., \%, \&, \#).
-
-    Example:
-
+  expected_output: >
     \section{Experience}
-    \customTitle{ATS Pass AI}
-        \summaryPoints{Python | Multiagent | AI}
-        \roleAndTimeline{Resume Automation Tool - January 2024 - Present}
+      \customTitle{ATS Pass AI}
+          \summaryPoints{Python | Multiagent | AI}
+          \roleAndTimeline{Resume Automation Tool - Jan 2024 - Present}
 
-        \shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
+          \shortDescription{Led the development of an AI-driven project, integrating CrewAI to automate tailored resume creation for enhanced job search efficiency.}
 
-        \begin{tightemize}
-            \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
-            \item ... so on from the "Key Highlights" array.
-        \end{tightemize}
+          \begin{tightemize}
+              \item Engineered a system that personalizes resumes using AI, achieving over 85\% keyword alignment with job descriptions for optimal \textbf{ATS optimization.}
+              \item ... so on from the "Key Highlights" array.
+          \end{tightemize}
 
-    \customTitle{Another Experience}
-        ... so on.
-  expected_output: >
-
-exp_latex_verified:
-  description: >
-    You are provided a latex document containing the experience section. You need to verify the latex code and its syntax.
-
-    **Instructions**:
-    - Check the latex code for any syntax errors.
-    - Ensure the curly braces are correctly opened and closed.
-    - do not change the command names.
-    - Check for special characters and escape them properly.
-    - Check for double asterisks (**word**) and format them with \textbf{word}. Final output should not contain double asterisks.
-
-    Latex Syntax Example:
-    ```latex
-    \customTitle{Title}
-        \summaryPoints{item 1 | item 2 | item 3}
-        \roleAndTimeline{Role | Timeline}
-        \shortDescription{Short Description}
-        \begin{tightemize}
-            \item (Key Highlights)
-        \end{tightemize}
-    ```
-
-  expected_output: >
-    A latex document with the experience section that is verified for syntax and correctness.
-
+      \customTitle{Another Experience}
+          ... so on.

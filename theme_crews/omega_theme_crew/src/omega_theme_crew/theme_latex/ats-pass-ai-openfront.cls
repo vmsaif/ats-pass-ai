@@ -184,7 +184,7 @@ Last Updated on \\
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{  % Accepts one parameter
-\vspace{\titemizeVSpaceAdjustment}  % Use the parameter to add vertical space
+\vspace{\titemizeVSpaceAdjustment-7pt}  % Use the parameter to add vertical space
 \itemFont  % Set the font family
 \fontsize{11pt}{14pt}\selectfont  % Set the font size
 \begin{itemize}\itemsep5pt \parskip0pt \parsep0pt  % Start itemize with fewer gaps

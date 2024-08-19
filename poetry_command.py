@@ -24,13 +24,15 @@ def execute_poetry_command(base_path, command):
             os.chdir(root)
             # Execute the specified poetry command
             print(f"Executing 'poetry {command}' in {root}")
-            process = subprocess.run(f"poetry {command}", shell=True, text=True)
-            if process.returncode == 0:
+            try:
+                process = subprocess.run(f"poetry {command}", shell=True, text=True, check=True)
                 print(f"Poetry command '{command}' completed successfully in {root}")
-            else:
-                print(f"Poetry command '{command}' failed in {root} with return code {process.returncode}")
+            except subprocess.CalledProcessError as e:
+                print(f"Poetry command '{command}' failed in {root} with return code {e.returncode}")
+                print(f"Error message: {e.output}")
 
 def main():
+    print("Starting the script to execute Poetry commands on projects with a 'pyproject.toml' file...")
     parser = argparse.ArgumentParser(description="Execute arbitrary Poetry commands on projects with a pyproject.toml.")
     parser.add_argument('command', type=str,
                         help='The full Poetry command to execute (e.g., "install", "update --no-dev", "cache clear pypi --all"). Enter the command within quotes to avoid parsing errors.')
@@ -42,4 +44,5 @@ def main():
     execute_poetry_command(base_directory, args.command)
 
 if __name__ == "__main__":
+    print("Running the main function...")
     main()

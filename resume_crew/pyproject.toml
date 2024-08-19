@@ -14,9 +14,10 @@ langchain-google-genai = "^1.0.2"
 google-generativeai = "^0.5.2"
 agentops = "^0.1.9"
 duckduckgo-search = "5.3.1b1"
-crewai = {extras = ["tools"], version = "^0.32.2"}
+crewai = {extras = ["tools"], version = "0.32.2"}
 sentence-transformers = "^3.0.1"
 shared = {path = "../shared"}
+transformers = "^4.44.0"
 
 [tool.poetry.scripts]
 resume_crew = "resume_crew.main:run"

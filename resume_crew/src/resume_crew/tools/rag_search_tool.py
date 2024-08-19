@@ -1,3 +1,10 @@
+
+"""
+
+    This tool is planned to be removed. It is used to search for relevant content based on a question. The content is indexed in Chroma DB and then searched for relevant content based on the question. The content is then returned as a chunk of relevant content based on the question. The user needs to understand the content and extract the information they need within the chunk without any further calling of this tool.
+
+"""
+
 import os
 import hashlib
 import shutil
@@ -37,8 +44,17 @@ class SearchInChromaDB:
         """
         vectorstore = Chroma(persist_directory=RagSearchTool.persist_directory, embedding_function=embedding_function)
         results = vectorstore.similarity_search(query = question, k = 3)
+
+        page_contents = SearchInChromaDB.return_page_contents(results)
         
-        return results
+        return page_contents
+
+    def return_page_contents(results):
+        """Return the page contents from the search results."""
+        page_contents = ""
+        for result in results:
+            page_contents += result.page_content + "\n\n"
+        return page_contents
 
 class RagSearchTool:
 
@@ -106,7 +122,7 @@ class RagSearchTool:
             doc = loader.load()
             # print(doc)
             # Split the content into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=900, chunk_overlap=200)
+            text_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=200)
             splits = text_splitter.split_documents(doc)  # Split large document content
             # print ("Splits: ", splits[0])
             # Now index the content in Chroma DB

@@ -1,3 +1,3 @@
 {
-  "Career Objective": "Skilled Software Developer eager to contribute to BMO's mission of simplifying finance. Proven experience in Python and AWS, seeking to leverage my abilities for scalable, reliable system development."
+  "Career Objective": "Driven and enthusiastic Junior Java Software Engineer seeking to contribute to CMiC's commitment to innovation in the construction industry, leveraging my technical proficiency and passion for delivering reliable solutions."
 }

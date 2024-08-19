@@ -1,7 +1,27 @@
 {
   "missing_from_the_applicant_skills": [
-    "Troubleshooting",
-    "Quality Assurance",
-    "Testing"
+    "Programming Languages": ["JUnit 4", "XML"],
+    "Frontend Development": [],
+    "Backend Development": [],
+    "Mobile Development": [],
+    "Game Development": [],
+    "Database Management": [],
+    "Data Science": [],
+    "AI": [],
+    "DevOps": [],
+    "Operating Systems": [],
+    "Networking": [],
+    "Cloud Computing": [],
+    "Version Control": [],
+    "Documentation": [],
+    "Software Design": [],
+    "Shell Scripting": [],
+    "Graphics Programming": [],
+    "Project Management": [],
+    "UI/UX Design": [],
+    "Soft Skills": [],
+    "Programming Concepts": [],
+    "Software Development": ["Unit Testing", "Code Refactoring", "Bug Fixing", "Agile Development", "Software Development Life Cycle (SDLC)"],
+    "Web Development": []
   ]
 }

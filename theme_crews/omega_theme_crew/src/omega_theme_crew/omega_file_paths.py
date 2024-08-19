@@ -44,6 +44,8 @@ OMEGA_PATHS = {
     "summary_point_selector": f"{omega_theme_pre_tasks_dir}/summary_point_selector.txt",
     "link_handler": f"{omega_theme_pre_tasks_dir}/link_handler.txt",
     "link_latex": f"{omega_theme_pre_tasks_dir}/link_latex.txt",
-    "experience_section": f"{omega_theme_pre_tasks_dir}/experience_section.txt",
+
+    "experience_content_refinement": f"{omega_theme_pre_tasks_dir}/experience_content_refinement.txt",
+    "experience_section": f"{sub_tex_files_dir}/experience_section.tex",
     "exp_latex_verified": f"{sub_tex_files_dir}/exp_latex_verified.tex",
 }

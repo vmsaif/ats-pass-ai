@@ -1,17 +1,42 @@
+```json
 {
-  "Total Object Count": 2,
-  "Most Recent Experience": {
-    "title": "ATS Pass AI",
-    "type": "Project",
-    "timeline": "January 2024 - Present",
-    "description": "Led the development of a multi-agent system with CrewAI, LangChain, Gemini, and RAG Search to create tailored resumes to enhance job search efficiency. Utilized advanced AI models and multi-agent technologies to dynamically personalize resumes, demonstrating cutting-edge technical and analytical capabilities. Engineered a system that extracts user data and analyzes job descriptions with advanced AI tools like Gemini Pro and RAG Search, achieving over 85% keyword alignment and optimizing resumes for ATS. Developed scalable architecture to anticipate future needs and adaptations, showcasing foresight and a commitment to innovation."
-  },
-  "Additional Relevant Experiences": [
-    {
-      "title": "AI Path Finding",
-      "type": "Project",
-      "timeline": "September 2023 - December 2023",
-      "description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency. Applied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses. Successfully balanced rapid development and deployment of the AI components within the project."
-    }
-  ]
+  "selected experiences": {
+    "Most Recent Experience": [
+      {
+        "Title": "ATS Pass AI",
+        "Timeline": "January 2024 - Present",
+        "Technologies, frameworks, and tools Used": "Python, SQL, Multiagent Systems, AI, RAG Search",
+        "Skills": "AI Development, Programming Languages",
+        "URL/Link": "https://github.com/vmsaif/ats-pass-ai",
+        "Short Description": "This project involves the creation of an AI powered resume builder application. It uses advanced language models such as Gemini Pro, LangChain and RAG search,  with a Multi-agent System driven by CrewAI  for the efficient extraction of user data and resume tailoring based on user input. It boasts over 85% keyword matching with user provided job descriptions, making it extremely efficient for generating resumes for Applicant Tracking Systems (ATS).",
+        "Key Highlights": [
+          "Developed an AI-powered resume builder application leveraging Gemini Pro, LangChain, and RAG search for efficient data extraction and resume tailoring.",
+          "Integrated a Multi-agent System using CrewAI to enhance user data processing and resume customization based on specific job descriptions.",
+          "Achieved over 85% keyword matching with user-provided job descriptions, significantly improving resume effectiveness for Applicant Tracking Systems (ATS).",
+          "Utilized Python and SQL for backend development and database management, ensuring seamless data flow and storage within the application."
+        ],
+        "Team size": "Individual",
+        "Outcomes": "Successfully designed and implemented an AI-powered resume builder application that streamlines the resume creation process and optimizes it for ATS compatibility."
+      }
+    ],
+    "Additional Relevant Experiences title": [
+      {
+        "Title": "AI PATHFINDING",
+        "Timeline": "September 2023 - December 2023",
+        "Technologies, frameworks, and tools Used": "CI/CD, A* Algorithm, Java, Git",
+        "Skills": "Programming Languages, AI Development",
+        "URL/Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
+        "Short Description": "An AI powered game that utilizes the A* algorithm. It uses prompt engineering to enhance the AI generated response times for users. It utilizes industry standard version control and CI/CD best practices such as  Git  for optimal performance.",
+        "Key Highlights": [
+          "Developed an AI-powered game utilizing the A* algorithm for efficient pathfinding, creating a challenging and engaging user experience.",
+          "Implemented prompt engineering techniques to optimize AI response times, resulting in a more seamless and responsive gameplay.",
+          "Employed industry-standard version control practices using Git, ensuring code integrity and facilitating collaborative development.",
+          "Integrated CI/CD principles for streamlined deployment and optimized performance, enhancing the overall efficiency of the development process."
+        ],
+        "Team size": "Individual",
+        "Outcomes": "Successfully created an AI-powered pathfinding game that showcases both technical skills in AI development and a commitment to industry best practices in software engineering."
+      }
+    ]
+  }
 }
+```

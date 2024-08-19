@@ -2,7 +2,9 @@
 """
 	Author: Saif Mahmud
 	Date: 04-23-2024
-	Description: This file contains the main function to run the ATS-PASS-AI
+	Description: 
+
+    This runs the resume crew. It first indexes the applicant's info database to make it searchable. Then it runs the resume crew to generate all the data required to make the resume in text format.
 """
 
 import time
@@ -18,8 +20,8 @@ def run():
 
     # Index Applicant's info DB to make it searchable
     # this will not run if the file is already indexed
-    ragSearchTool = RagSearchTool()
-    ragSearchTool.process_and_index(applicant_info_orgainzed_file_path)
+    # ragSearchTool = RagSearchTool()
+    # ragSearchTool.process_and_index(applicant_info_orgainzed_file_path)
 
     # Run the Resume Crew
     try:

@@ -24,15 +24,23 @@ class OmegaThemeCrew:
 
 	# agentops.init(tags=["resume-crew"])
 
+	safety_settings = {
+		HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+		HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+		HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+		HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+	}
+
 	genAI = GoogleGenerativeAI(
 		model="gemini-pro",
 		temperature=0.7,
-		safety_settings = {
-			HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-			HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-			HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-			HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-		},
+		safety_settings = safety_settings
+	)
+
+	genAILarge = GoogleGenerativeAI(
+		model="gemini-1.5-pro-latest",
+		temperature=1.0,
+		safety_settings=safety_settings,
 	)
 
 	small_limiter = Limiter(llm_size='SMALL', llm = genAI, langchainMethods=True)
@@ -55,12 +63,8 @@ class OmegaThemeCrew:
 			self.name_section(),
 			self.concise_jd_task(),
 
-			# ---- set Column 1 content -----
-			self.remove_data(),
-			self.data_extraction(),
-			self.relevance_assessment(),
+			# ---- set Column 1 content ----
 			self.final_selection(),
-
 
 			# --- latex of column 1 ---
 			self.education_section(),
@@ -72,11 +76,8 @@ class OmegaThemeCrew:
 			# Column 2 content
 			self.career_objective_section(),
 
-			self.summary_point_selector(),
-			self.link_handler(),
-			self.link_latex(),
-			self.experience_section(),
-			self.exp_latex_verified()
+			self.experience_content_refinement(),
+			self.experience_section()
 		]
 		
 		# Return the crew
@@ -117,6 +118,32 @@ class OmegaThemeCrew:
 		)
 	
 	@agent
+	def latex_verifier_agent(self) -> Agent:
+		# load yaml
+		yaml = self.yaml_loader("latex_verifier_agent", False)
+		return Agent(
+			role=yaml[0],
+			goal=yaml[1],
+			backstory=yaml[2],
+			allow_delegation=False,
+			# verbose=True,
+			llm=self.genAILarge,
+		)
+	
+	@agent
+	def experience_refinement_agent(self) -> Agent:
+		# load yaml
+		yaml = self.yaml_loader("experience_refinement_agent", False)
+		return Agent(
+			role=yaml[0],
+			goal=yaml[1],
+			backstory=yaml[2],
+			allow_delegation=False,
+			# verbose=True,
+			llm=self.genAILarge,
+		)
+
+	@agent
 	def basic_agent(self) -> Agent:
 		# load yaml
 		yaml = self.yaml_loader("basic_agent", False)
@@ -140,7 +167,7 @@ class OmegaThemeCrew:
 			backstory=yaml[2],
 			allow_delegation=False,
 			# verbose=True,
-			llm=self.genAI,
+			llm=self.genAILarge,
 			step_callback=self.small_llm_limiter,
 		)
 	
@@ -154,8 +181,7 @@ class OmegaThemeCrew:
 			backstory=yaml[2],
 			allow_delegation=False,
 			# verbose=True,
-			llm=self.genAI,
-			step_callback=self.small_llm_limiter,
+			llm=self.genAILarge
 		)
 
 	@task
@@ -165,7 +191,7 @@ class OmegaThemeCrew:
 		description = yaml[0]
 		expected_output = yaml[1]
 		
-		description = description + "\n\n" + self.load_file(PATHS["personal_information_extraction_task"])
+		description = description + "\n\n" + self.load_file(PATHS["profile_builder_task"])
 
 		return Task(
 			description=description,
@@ -189,122 +215,27 @@ class OmegaThemeCrew:
 			output_file=OMEGA_PATHS["concise_jd_task"],
 			callback=self.small_token_limiter
 		)
-
-	@task
-	def remove_data(self):
-		yaml = self.yaml_loader("remove_data", True)
-		description = yaml[0]
-		expected_output = yaml[1]
-
-		description = description + "\n\n" + self.load_file(PATHS["profile_builder_task"])
-
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.profile_data_extractor_agent(),
-			output_file=OMEGA_PATHS["remove_data"],
-			callback=self.small_token_limiter
-		)
-
-	@task
-	def data_extraction(self):
-		yaml = self.yaml_loader("data_extraction", True)
-		description = yaml[0]
-		expected_output = yaml[1]
-
-		description = description + "\nRelevant Courses:\n" + self.load_file(PATHS["coursework_extraction_task"])
-
-		if self.debugFlag:
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["remove_data"])
-
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.profile_data_extractor_agent(),
-			context=[self.remove_data()],
-			output_file=OMEGA_PATHS["data_extraction"],
-			callback=self.small_token_limiter
-		)
-
-	@task
-	def relevance_assessment(self):
-		yaml = self.yaml_loader("relevance_assessment", True)
-		description = yaml[0]
-		expected_output = yaml[1]
-
-		description = description + "\n\n" + self.load_file(OMEGA_PATHS["concise_jd_task"])
-
-		if self.debugFlag:
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["data_extraction"])
-
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.relevance_and_prioritization_agent(),
-			context=[self.data_extraction()],
-			output_file=OMEGA_PATHS["relevance_assessment"],
-			callback=self.small_token_limiter
-		)
 		
 	@task
 	def final_selection(self):
 		yaml = self.yaml_loader("final_selection", True)
-		description = yaml[0]
+		
 		expected_output = yaml[1]
 
-		if self.debugFlag:
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["relevance_assessment"])
+		concise_jd = self.load_file(OMEGA_PATHS["concise_jd_task"])
+		profile_builder = self.load_file(PATHS["profile_builder_task"])
+		coursework_extraction = self.load_file(PATHS["coursework_extraction_task"])
+
+		description = yaml[0].format(concise_jd=concise_jd, profile_builder=profile_builder, coursework_extraction=coursework_extraction)
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
 			agent=self.relevance_and_prioritization_agent(),
-			context=[self.relevance_assessment()],
+			
 			output_file=OMEGA_PATHS["final_selection"],
 			callback=self.small_token_limiter
 		)
-
-	# @task
-	# def assess_and_prioritize(self):
-	# 	yaml = self.yaml_loader("assess_and_prioritize", True)
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
-
-	# 	if(self.debugFlag):
-	# 		description = description + "\n\n" + self.load_file(OMEGA_PATHS["concise_jd_task"])
-	
-	# 	description = description + "\n\n" + self.load_file(PATHS["profile_builder_task"])
-	# 	description = description + "\n\n" + self.load_file(PATHS["coursework_extraction_task"])
-
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.content_selector_agent(),
-	# 		context=[self.concise_jd_task()],
-	# 		output_file=OMEGA_PATHS["assess_and_prioritize"],
-	# 		callback=self.small_token_limiter
-	# 	)
-
-
-
-	# @task
-	# def split_content_of_select_first_column_content(self):
-	# 	yaml = self.yaml_loader("split_content_of_select_first_column_content", True)
-		
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
-		
-	# 	if self.debugFlag:
-	# 		description += "\n\n" + self.load_file(PATHS["select_first_column_content"])
-
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.basic_agent(),
-	# 		context=[self.select_first_column_content()],
-	# 		output_file=PATHS["split_content_of_select_first_column_content"],
-	# 		callback=self.small_token_limiter
-	# 	)
 
 	@task
 	def education_section(self):
@@ -408,91 +339,25 @@ class OmegaThemeCrew:
 			output_file=OMEGA_PATHS["career_objective_section"],
 			callback=self.small_token_limiter
 		)
-	
-	# @task
-	# def exp_item_count_chooser(self):
-	# 	yaml = self.yaml_loader("exp_item_count_chooser", True)
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
-	# 	description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
-
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.expItemSelectorAgent(),
-	# 		output_file=OMEGA_PATHS["exp_item_count_chooser"],
-	# 		callback=self.small_token_limiter
-	# 	)
-
-	# @task
-	# def exp_item_chooser(self):
-	# 	yaml = self.yaml_loader("exp_item_chooser", True)
-	# 	description = yaml[0]
-	# 	expected_output = yaml[1]
-
-	# 	if(self.debugFlag):
-	# 		description = description + "\n\n" + self.load_file(OMEGA_PATHS["exp_item_count_chooser"])
-
-	# 	return Task(
-	# 		description=description,
-	# 		expected_output=expected_output,
-	# 		agent=self.expItemSelectorAgent(),
-	# 		context=[self.exp_item_count_chooser()],
-	# 		output_file=OMEGA_PATHS["exp_item_chooser"],
-	# 		callback=self.small_token_limiter
-	# 	)
 
 	@task
-	def summary_point_selector(self):
-		yaml = self.yaml_loader("summary_point_selector", True)
-		description = yaml[0]
-		expected_output = yaml[1]
+	def experience_content_refinement(self):
+		yaml = self.yaml_loader("experience_content_refinement", True)
 
-		description = description + "\n\n" + self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
+		experience_content = self.load_file(PATHS["split_context_of_ats_friendly_keywords_into_experiences"])
+
+		description = yaml[0].format(experience_content = experience_content)
+		expected_output = yaml[1]
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.basic_agent(),
-			output_file=OMEGA_PATHS["summary_point_selector"],
+			agent=self.experience_refinement_agent(),
+			
+			output_file=OMEGA_PATHS["experience_content_refinement"],
 			callback=self.small_token_limiter
 		)
-	
-	@task
-	def link_handler(self):
-		yaml = self.yaml_loader("link_handler", True)
-		description = yaml[0]
-		expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["summary_point_selector"])
-
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.basic_agent(),
-			context=[self.summary_point_selector()],
-			output_file=OMEGA_PATHS["link_handler"],
-			callback=self.small_token_limiter
-		)
-	
-	@task
-	def link_latex(self):
-		yaml = self.yaml_loader("link_latex", True)
-		description = yaml[0]
-		expected_output = yaml[1]
-
-		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["link_handler"])
-
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.latex_maker_agent(),
-			context=[self.link_handler()],
-			output_file=OMEGA_PATHS["link_latex"],
-			callback=self.small_token_limiter
-		)
 
 	@task
 	def experience_section(self):
@@ -501,36 +366,35 @@ class OmegaThemeCrew:
 		expected_output = yaml[1]
 
 		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["link_latex"])
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["experience_content_refinement"])
 
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.latex_maker_agent(),
-			callback=self.small_token_limiter,
-			context=[self.link_latex()],
+			agent=self.latex_verifier_agent(),
+			context=[self.experience_content_refinement()],
 			output_file=OMEGA_PATHS["experience_section"],
 			# agent=self.latex_maker_large_agent(),
 			# callback=self.large_token_limiter
 		)
 	
-	@task
-	def exp_latex_verified(self):
-		yaml = self.yaml_loader("exp_latex_verified", True)
-		description = yaml[0]
-		expected_output = yaml[1]
+	# @task
+	# def exp_latex_verified(self):
+	# 	yaml = self.yaml_loader("exp_latex_verified", True)
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
 
-		if(self.debugFlag):
-			description = description + "\n\n" + self.load_file(OMEGA_PATHS["experience_section"])
+	# 	if(self.debugFlag):
+	# 		description = description + "\n\n" + self.load_file(OMEGA_PATHS["experience_section"])
 
-		return Task(
-			description=description,
-			expected_output=expected_output,
-			agent=self.latex_maker_agent(),
-			context=[self.experience_section()],
-			output_file=OMEGA_PATHS["exp_latex_verified"],
-			callback=self.small_token_limiter
-		)
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.latex_verifier_agent(),
+	# 		context=[self.experience_section()],
+	# 		output_file=OMEGA_PATHS["exp_latex_verified"],
+	# 		callback=self.small_token_limiter
+	# 	)
 
 	def load_file(self, file_path):
 		"""Load text file"""

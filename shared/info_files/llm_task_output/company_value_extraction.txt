@@ -1,7 +1,10 @@
 {
-    "company_name": "BMO",
-    "Job_title": "Software Developer",
-    "Information needed to create a compelling career objective or summary": []
+    "company_name": "CMiC",
+    "Job_title": "Junior Java Software Engineer",
+    "Information needed to create a compelling career objective or summary": [
+      "CMiC, a construction software company headquartered in Toronto, is driven by a commitment to providing innovative solutions to its customers."
+    ],
+    "Phases used in the job description that reflect the company's values and culture": [
+      "CMiC is an Equal Opportunity Employer"
+    ]
 }
-
-The provided job description for a Software Developer position at BMO does not contain any information about the company's values or culture, so the information requested cannot be extracted from the given text.

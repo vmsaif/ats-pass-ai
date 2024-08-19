@@ -3,130 +3,64 @@
 # Description: This file contains the task descriptions for the 'ATS Pass AI' project.
 # Version: 1.0
 
-personal_information_extraction_task:
+profile_builder_task :
   description: >
-    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive personal details.
-
-    How you should use the tool:
-    argument:
-    "question": "Give me Personal Details about the applicant"
-
-    The tool will return a large chunk of information. look "deeply" into the chunk to find your data. If you did not find a field, ask the tool again with the missing field.
-    for example, if you didn't find the GitHub, ask the tool "Do the applicant have GitHub?" to get the GitHub link.
-
-    This is what the GitHub profile link looks like: https://github.com/username
-    This is what the GitHub repository link looks like: https://github.com/username/repository_name
-
-    If you find the GitHub repository link, simply remove the repository name from the link to make it a GitHub profile link as it will contain the "username". Use that as the GitHub link.
-  expected_output: >
-      {
-        "Personal Information": {
-          "Full Name": "",
-          "Phone Number": "",
-          "Email": "",
-          "LinkedIn": "",
-          "Other Social Media Profiles": "",
-          "Personal Website": "",
-          "Portfolio": "",
-          "GitHub": "[https://github.com/username/ not https://github.com/username/repository_name]",
-          "Address": "[example: 123 Street]",
-          "City": "",
-          "State": "",
-          "Zip Code": "",
-          "Country": "",
-          ...
-        }
-      }
-
-education_extraction_task:
-  description: >
-    Utilize a semantic search tool to extract detailed education information about the Applicant. Formulate specific queries to retrieve comprehensive details about their academic history, including institutions, qualifications, and achievements. There may be multiple degrees or educational experiences to consider.
-
-    **How to Use the Tool:**
-    - Start by querying the tool with a broad question to gather a complete overview of the Applicant's educational background. If initial results are missing specific details, refine your queries to target these areas.
-
-    **Initial Query:**
-    - "question": "What are all the educational qualifications, academic degrees, and related honors or distinctions obtained by the Applicant?"
-
-    **Refined Query (if needed):**
-    - If the initial query does not return complete details (such as the name of the institution, degree specifics, GPA, etc.), run additional targeted queries for each missing element. For example:
-      - "question": "What is the GPA and graduation year for the Applicant's Bachelor degree?"
-      - "question": "List any academic honors or distinctions received by the Applicant during their university education."
-
-    For the "Honors/Distinctions" field, Do not get confused with non-academic honors like "Employee of the Month" or "Best Team Player". Only include academic honors like "Summa Cum Laude" or "Dean's List" if available.
-
-  expected_output: >
-      {
-        "Education": {
-          "Degree": "",
-          "Major": "",
-          "University": "",
-          "University Location": "",
-          "Graduation Date": "",
-          "GPA": "",
-          "Honors/Distinctions": "
-        },
-        ...
-      }
-
-volunteer_work_extraction_task:
-  description: >
-    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive volunteer work details.
-    How you should use the tool:
-    argument:
-    "question": "Give me a list of all volunteer experiences, including organization names, roles, responsibilities, and dates."
+    This task involves extracting comprehensive information about an applicant across multiple dimensions including personal information, education, volunteer work, awards, references, and personal traits, any philosophy, and goals. The information will be extracted from a structured data source provided in the context.
     
-    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+    For each category, specific questions will be formulated and asked through the tool. Each category requires careful examination of the returned data to ensure all required fields are accurately populated.
 
-    When extracting the data, count the number of characters in the "Organization Name" field and include that count in the output.
-  expected_output: >
-      {
-        "Volunteer Work": [
-          {
-            "Organization Name": "",
-            "Name length in characters": "",
-            "Role": "",
-            "Responsibilities": "(upto 2 sentences, each sentence should not exceed 60 characters)",
-            "Timeline": "",
-            ...
-          },
-          ...
-        ]
-      }
+    Here is the structured data you need to extract the applicant's information from:
+    {applicant_info_organized_data}
 
-awards_recognitions_extraction_task:
-  description: >
-    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive awards and recognition details.
-    How you should use the tool:
-    argument:
-    "question": "Give me a list of all awards and recognitions, including award names, awarding organizations, dates, and reasons for recognition."
-    
-    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
-  expected_output: >
-    In JSON format: 
-      {
-        "Awards and Recognitions": [
-          {
-            "Award Name": "",
-            "Awarding Organization": "",
-            "Date": "",
-            "Reason": "",
-            ...
-          }, 
-          ...
-        ]
-      }
-
-references_extraction_task:
-  description: >
-    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive reference details.
-    How you should use the tool:
-    argument:
-    "question": "Who are the professional references and what are their contact details?" 
-    
-    The tool will return a large chunk of information. Read the chunk to find your data. If you did not find the information, ask the tool again one more time with a "rephrased question". Do not make up any information.
   expected_output: >
     {
+      "Personal Information": {
+        "Full Name": "",
+        "Phone Number": "",
+        "Email": "",
+        "Linkedin": "",
+        "Other Social Media Profiles": "",
+        "Personal Website": "",
+        "Portfolio": "",
+        "GitHub": "[https://github.com/username/ not https://github.com/username/repository_name]",
+        "Address": "[example: 123 Street]",
+        "City": "",
+        "State": "",
+        "Zip Code": "",
+        "Country": "",
+        ...
+      },
+      "Education": {
+        "Degree": "",
+        "Major": "",
+        "University": "",
+        "University Location": "",
+        "Graduation Date": "",
+        "GPA": "",
+        "Honors/Distinctions": ""
+      },
+      
+      "Volunteer Work": [
+        {
+          "Organization Name": "",
+          "Name length in characters": "",
+          "Role": "",
+          "Responsibilities": "(upto 2 sentences, each sentence should not exceed 60 characters or 30 tokens)",
+          "Timeline": "",
+          ...
+        },
+        ...
+      ],
+      "Awards and Recognitions": [
+        {
+          "Award Name": "",
+          "Awarding Organization": "",
+          "Date": "",
+          "Reason": "",
+          ...
+        }, 
+        ...
+      ],
       "References": [
         {
           "Name": "",
@@ -137,26 +71,23 @@ references_extraction_task:
           ...
         }, 
         ...
-      ]
-    }
-
-personal_traits_interests_extraction_task:
-  description: >
-    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive personal traits and interests details.
-    How you should use the tool:
-    argument:
-    "question": "Give me a list of all personal traits and interests, including strengths, weaknesses, hobbies, and passions."
-    
-    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
-  expected_output: >
-    {
+      ],
       "Personal Traits and Interests": {
         "Strengths": "",
         "Hobbies": "",
         "Passions": "",
         ...
+      },
+      "Applicant's Philosophy and Goals": {
+        "Philosophy": [
+        "The applicant believes in trying new things, taking risks, and learning from failures to achieve personal and professional growth.",
+        "The applicant values collaboration, innovation, and continuous learning to drive career success and contribute to team goals.", ...
+        ],
+        "Personality Traits": "Persistent, innovative, go-getter.",
+        "Software Development Approach": "Adopts agile methodologies to enhance team productivity and adapt quickly to changing market needs."
       }
     }
+
 
 work_experience_extraction_task:
   description: >
@@ -203,403 +134,293 @@ project_experience_extraction_task:
     ```
   expected_output: >
 
-skills_from_exp_and_project_task:
-  description: >
-    Extract a list of skills, technologies, frameworks etc used from the applicant's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.
+# skills_from_exp_and_project_task:
+#   description: >
+#     Extract a list of skills, technologies, frameworks etc used from the applicant's work experiences and project experiences. You have been given the context of work experiences and project experiences. Each work experience and project experience contains a "Technologies Used:" and "Skills:" field. Use these fields to extract the skills.
 
-    Inside the body of the project and work experiences, you might find unfamiliar tools or technologies that might not be included in the "Technologies, frameworks, and tools Used" field. Use the provided web search tool to search for the skills and technologies that you are not familiar with. then consider them as a part of the skills. You can list fields or areas of skills and technologies up to 4 items.
-
-    To use the tool, 
-      query: str = Field(description="search query to look up")
+#     Inside the body of the project and work experiences, you might find unfamiliar tools or technologies that might not be included in the "Technologies, frameworks, and tools Used" field. Use the provided web search tool to search for the skills and technologies that you are not familiar with. then consider them as a part of the skills. 
     
-  expected_output: >
-    eg means for example
-      {
-        "Skills List": {
-          "Technologies": {
-            {
-              "Name": "[name of the technology]",
-              "field": "[Possible Category of the technology, eg. Programming Language]"
-            },
-            {
-              "Name": "eg. Java",
-              "field": [ 
-                "Programming Language",
-                "Backend Development",
-                "etc..."
-              ]
+#     You can list fields or areas of skills and technologies up to 4 items.
+
+#     To use the tool, 
+#       query: str = Field(description="search query to look up")
+    
+#   expected_output: >
+#     eg means for example
+#       {
+#         "Skills List": {
+#           "Technologies": {
+#             {
+#               "Name": "[name of the technology]",
+#               "field": "[Possible Category of the technology, eg. Programming Language]"
+#             },
+#             {
+#               "Name": "eg. Java",
+#               "field": [ 
+#                 "Programming Language",
+#                 "Backend Development",
+#                 "etc..."
+#               ]
               
-            }
-          },
-          "Frameworks": {
-            {
-              "Name": "[name of the framework]",
-              "field": "[Possible Category of the framework, eg. Web Development]"
-            },
-            {
-              "Name": "eg. Angular",
-              "field": [ 
-                "JavaScript Framework",
-                "Frontend Development",
-                "etc..."
-              ]
-            }
-          },
-          "Skills": {
-            {
-              "Name": "[name of the skill]",
-              "field": "[Possible Category of the skill, eg. Analytical Skills]"
-            },
-            {
-              "Name": "eg. Data Analysis",
-              "field": [ 
-                "Analytical Skills",
-                "etc..."
-              ]
-            }
-          },
-          "Soft Skills": {
-            {
-              "Name": "[name of the soft skill]",
-              "field": "[Possible Category of the soft skill, eg. Interpersonal Skills]"
-            },
-            {
-              "Name": "eg. Communication",
-              "field": [ 
-                "Interpersonal Skills",
-                "etc..."
-              ]
-            }
-          }
-        }
-      }
+#             }
+#           },
+#           "Frameworks": {
+#             {
+#               "Name": "[name of the framework]",
+#               "field": "[Possible Category of the framework, eg. Web Development]"
+#             },
+#             {
+#               "Name": "eg. Angular",
+#               "field": [ 
+#                 "JavaScript Framework",
+#                 "Frontend Development",
+#                 "etc..."
+#               ]
+#             }
+#           },
+#           "Skills": {
+#             {
+#               "Name": "[name of the skill]",
+#               "field": "[Possible Category of the skill, eg. Analytical Skills]"
+#             },
+#             {
+#               "Name": "eg. Data Analysis",
+#               "field": [ 
+#                 "Analytical Skills",
+#                 "etc..."
+#               ]
+#             }
+#           },
+#           "Soft Skills": {
+#             {
+#               "Name": "[name of the soft skill]",
+#               "field": "[Possible Category of the soft skill, eg. Interpersonal Skills]"
+#             },
+#             {
+#               "Name": "eg. Communication",
+#               "field": [ 
+#                 "Interpersonal Skills",
+#                 "etc..."
+#               ]
+#             }
+#           }
+#         }
+#       }
 
 skills_extraction_task:
   description: >
-    Your task is to combine skills, tools, technologies, frameworks, and soft skills from two different sources into one comprehensive list. 
+    The task involves extracting a comprehensive list of skills, technologies, frameworks, and tools used by the applicant. You will extract this information from the applicant, including both technical and soft skills. The extracted skills should be categorized based on their relevance.
 
-    First Source: You are provided with a list of skills extracted from the applicant's work experiences and project experiences as context.
-    
-    Second Source: Use the provided semantic search tool to gather more skills. Simply ask the tool 
-    
-    "What skills, tools, technologies, frameworks, or soft skills does the applicant have?"
+    When you encounter unfamiliar skills, technologies, or frameworks, use the provided web search tool to research and categorize them accurately. But try to take a guess first before searching.
 
-    Your job is to merge the skills from both sources into a single list, ensuring no items are omitted and that both sources are represented equally.
+    Do not include any project or work experience in the skills list.
 
-    You are also provided another web search tool to search for the skills that you are not familiar with to know in which field or category they belong.
+    Here is the structured data you need to extract the skills from:
+    {applicant_info_organized_data}
 
   expected_output: >
-    eg means for example
-      {
-        "combined skills list of applicant": {
-          "Technologies": {
-            {
-              "Name": "[name of the technology]",
-              "field": [
-                "Possible Category of the technology, eg. Programming Language, Backend Development",
-            },
-            {
-              "Name": "eg. Java",
-              "field": [ 
-                "Programming Language",
-                "Backend Development",
-                "etc..."
-              ]
-            }
-          },
-          "Frameworks": {
-            {
-              "Name": "[name of the framework]",
-              "field": "[Possible Category of the framework, eg. Web Development]"
-            },
-            {
-              "Name": "eg. Angular",
-              "field": [ 
-                "JavaScript Framework",
-                "Frontend Development",
-                "etc..."
-              ]
-            }
-          },
-          "Skills": {
-            {
-              "Name": "[name of the skill]",
-              "field": "[Possible Category of the skill, eg. Analytical Skills]"
-            },
-            {
-              "Name": "eg. Data Analysis",
-              "field": [ 
-                "Analytical Skills",
-                "etc..."
-              ]
-            }
-          },
-          "Soft Skills": {
-            {
-              "Name": "[name of the soft skill]",
-              "field": "[Possible Category of the soft skill, eg. Interpersonal Skills]"
-            },
-            {
-              "Name": "eg. Communication",
-              "field": [ 
-                "Interpersonal Skills",
-                "etc..."
-              ]
-            }
-          }
-        }
-      }
-
-profile_builder_task:
-  description: >
-    Based on the information extracted from the applicant's information, you will create a comprehensive applicant profile by combining all the extracted details.
-
-    You will use the extracted data from the previous tasks as your context input to create a detailed applicant profile. Ensure that the profile is well-organized, and accurate, and includes all the relevant information extracted from the applicant's input.
-
-    In your input context, some tasks will not have any data or say provided context does not have any data, you should ignore those tasks and not include them in the final output. Only look at the data you have found in the context.
-
-    The final output **must not contain** any pair which has "key" = null values. You should only include pairs that have values. Remove any pair that has a null value.
-
-  expected_output: >
-    
-    In JSON format
-      {
-        "applicant Profile": {
-          "Personal Details": {
-            "Full Name": "",
-            "Phone Number": "",
-            "Email": "",
-            "LinkedIn": "",
-            "Other Social Media Profiles": "",
-            "Personal Website": "",
-            "Portfolio": "",
-            "GitHub": "",
-            "Address": "",
-            "City": "",
-            "State": "",
-            "Zip Code": "",
-            "Country": "",
-            ...
-          },
-          
-        "Education": {
-          "Degree": "...",
-          "Major": "...",
-          "University": "...",
-          "Location": "...",
-          "Graduation Date": "...",
-          "GPA": "..."
-        },
-        "Volunteer Work": [
-          {
-            "Organization Name": "",
-            "Role": "",
-            "Responsibilities": "",
-            "Timeline": "",
-            ...
-          }
-        ],
-        "Awards and Recognitions": [
-          {
-            "Award Name": "",
-            "Awarding Organization": "",
-            "Date": "",
-            "Reason": "",
-            ...
-          }
-        ],
-        "References": [
-          {
-            "Name": "",
-            "Position": "",
-            "Company": "",
-            "Contact Information": "",
-            "Relationship": "",
-            ...
-          }
-        ],
-        "Personal Traits and Interests": {
-          "Strengths": "",
-          "Weaknesses": "",
-          "Hobbies": "",
-          "Passions": "",
-          ...
-        },
-        "Miscellaneous": {
-          "Languages Spoken": "",
-          "Certifications": "",
-          "Professional Affiliations": "",
-          "Other Relevant Details": "",
-          ...
-        }
+    {
+      "Applicant's Skills": {
+        "Programming Languages": ["Python", "Java", "C++", "C", "R"],
+        "Frontend Development": ["Vue.js", "React", "HTML", "CSS", "JavaScript", "XML"],
+        "Backend Development": ["Python", "Java"],
+        "Mobile Development": ["Java", "Kotlin", "Android Studio", "Cross-Platform Deployment"],
+        "Game Development": ["3D Graphics", "OpenGL", "C++"],
+        "Database Management": ["SQL", "SQLite", "MySQL", "Microsoft Access"],
+        "Data Science": ["Python", "SQL", "R", "Data Visualization"],
+        "AI": ["Multiagent Systems", "AWS Sagemaker", "RAG (Retrieval Augmented Generation)", "A* Search Algorithm", "AI Decision-Making", "LangChain", "OpenAI API", "Google Gemini Pro", "Hugging Face", "CrewAI", "GPT-4", "LLaMA 2", "Google Vertex AI", "AWS Bedrock"],
+        "DevOps": ["Docker", "CI/CD", "GitHub Actions"],
+        "Operating Systems": ["Linux", "File Systems", "System Programming", "Microsoft Windows", "macOS"],
+        "Networking": ["TCP/IP", "Client-Server Communication", "Networking"],
+        "Cloud Computing": ["AWS Sagemaker", "Google Vertex AI", "AWS Bedrock"],
+        "Version Control": ["Git"],
+        "Documentation": ["LaTeX", "Markdown"],
+        "Software Design": ["Object-Oriented Programming"],
+        "Shell Scripting": ["Bash"],
+        "IT Support": ["Remote Support", "Team Viewer", "Anti-Virus Config, Installation, Patching", "Troubleshooting", " Hardware Installation", "Configuration"],
+        "Graphics Programming": ["OpenGL"],
+        "Data Analysis": ["SQL", "R", "Data Visualization", "Microsoft Excel"],
+        "Project Management": ["Reversible Learning App (Project)"],
+        "UI/UX Design": ["Reversible Learning App (Project)"],
+        "Productivity Software": ["Microsoft Office Suite", "Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Google Workspace"],
+        "Soft Skills": ["Teamwork", "Adaptability", "Critical Thinking", "Time Management"],
+        "Driving": ["Driver's License (Class 5 Full)"],
+        "Programming Concepts": ["File I/O", "Polymorphism", "Debugging", "Multithreading"],
+        "Software Development": ["Cross-Platform Deployment"],
+        "Web Development": ["Jekyll"],
+        "Data Analysis (Microsoft Excel)": ["VLOOKUP"],
+        "Projects": ["Reversible Learning App (Project)"],
+        "Virtual Environments": ["VMware, VirtualBox"]
       }
     }
+
+# profile_builder_task:
+#   description: >
+#     Based on the information extracted from the applicant's information, you will create a comprehensive applicant profile by combining all the extracted details.
+
+#     You will use the extracted data from the previous tasks as your context input to create a detailed applicant profile. Ensure that the profile is well-organized, and accurate, and includes all the relevant information extracted from the applicant's input.
+
+#     In your input context, some tasks will not have any data or say provided context does not have any data, you should ignore those tasks and not include them in the final output. Only look at the data you have found in the context.
+
+#     The final output **must not contain** any pair which has "key" = null values. You should only include pairs that have values. Remove any pair that has a null value.
+
+#   expected_output: >
+    
+#     In JSON format
+#       {
+#         "applicant Profile": {
+#           "Personal Details": {
+#             "Full Name": "",
+#             "Phone Number": "",
+#             "Email": "",
+#             "Linkedin": "",
+#             "Other Social Media Profiles": "",
+#             "Personal Website": "",
+#             "Portfolio": "",
+#             "GitHub": "",
+#             "Address": "",
+#             "City": "",
+#             "State": "",
+#             "Zip Code": "",
+#             "Country": "",
+#             ...
+#           },
+          
+#         "Education": {
+#           "Degree": "...",
+#           "Major": "...",
+#           "University": "...",
+#           "Location": "...",
+#           "Graduation Date": "...",
+#           "GPA": "..."
+#         },
+#         "Volunteer Work": [
+#           {
+#             "Organization Name": "",
+#             "Role": "",
+#             "Responsibilities": "",
+#             "Timeline": "",
+#             ...
+#           }
+#         ],
+#         "Awards and Recognitions": [
+#           {
+#             "Award Name": "",
+#             "Awarding Organization": "",
+#             "Date": "",
+#             "Reason": "",
+#             ...
+#           }
+#         ],
+#         "References": [
+#           {
+#             "Name": "",
+#             "Position": "",
+#             "Company": "",
+#             "Contact Information": "",
+#             "Relationship": "",
+#             ...
+#           }
+#         ],
+#         "Personal Traits and Interests": {
+#           "Strengths": "",
+#           "Weaknesses": "",
+#           "Hobbies": "",
+#           "Passions": "",
+#           ...
+#         },
+#         "Miscellaneous": {
+#           "Languages Spoken": "",
+#           "Certifications": "",
+#           "Professional Affiliations": "",
+#           "Other Relevant Details": "",
+#           ...
+#         }
+#       }
+#     }
 
 # --------------------- Will run each time ---------------------------
 
 ats_friendly_skills_task:
   description: >
-    Analyze and compare the keywords from a job description (Source 1) to the skills listed in the applicant's profile (Source 2). Ensure that partial matches are functionally or contextually related to the job requirements.
+    Compare the skills listed in a job description with the applicant's skills. This task involves identifying exact matches, researching partial matches, and noting any missing skills. The comparison will utilize two sources: job description keywords and the applicant’s combined skills list, provided in a JSON format.
 
-    **Task Instructions**:
+    **Procedure**:
+    1. **Identification of Matches**:
+       - **Exact Match**: Directly compare skills from the job description with the applicant's skills for each category.
+       - **Partial Match**: Identify skills in the applicant’s profile that are similar but not identical to those in the job description. Focus on populating as many partial matches as possible by using an online search tool to research each skill’s scope and relevance. This includes exploring related technologies, frameworks, or methodologies that might not be a direct match but are conceptually or functionally similar.
+       - **Missing Skills**: List skills present in the job description but absent in the applicant’s profile.
 
-    1. **Sources for Comparison**:
-       - **Source 1**: Job Description Keywords.
-       - **Source 2**: A JSON Object "combined skills list of applicant" containing the applicant's skills and technologies.
-
-    2. **Use of Tool**: It will search the internet. Use the tool to search for unfamiliar skills or technologies to understand their relevance to the job description.
-      - Example of an unfamiliar skill: "Langchain". To use the tool,
-      query: str = Field(description="What is Langchain, what is it's comparable tools, technology?")
-      
-    3. **Evaluation Criteria**:
-        - **Exact Match**: Direct correspondence between the job description and the applicant’s qualifications. 
-        
-        - **Partial Match**: Skills that are not exactly the same but share similar applications or functionalities as those required by the job. The Job Description Section contains a "Partial_Match" field. Try to match the applicant's skills with the job description's Partial_Match field 
-        
-        - **missing_from_the_applicant_skills**: Skills that do not align with the job description. Your goal should be to move as many skills as possible from this section to the "Partial Match" after researching their relevance by using the tool. 
-
-       The partial match section has 2 fields per object: 
-        - "Skill Name": The skill mentioned in the job description.
-        - "Relevance": The relevance of the applicant's with the job description's skill.
-
-    4. **Categorization**:
-       - Organize skills into categories such as Programming Languages, Soft Skills, AI Frameworks, etc., based on the job description's requirements. Feel free to create category names as you see fit.
-
-       - Aim for a balanced overview by listing 3-5 skills combining exact and partial matches for all categories.
-
-    5. **Structured Report**:
-       - Generate a JSON report with 'Exact Match' and 'Partial Match' sections, specifying the job-related skill and its relevance to the applicant's skills.
+    2. **Report Generation**:
+       - Prepare a JSON report detailing the types:
+          -- **Exact Matches**: Directly matching skills by category.
+          -- **Partial Matches**: Populate this section robustly by listing each related skill from the applicant's list that has any connection to the job description skills, including a brief on their relevance or how they complement the job skills.
+          -- **Missing Skills**: List skills from the job description that are completely absent in the applicant's skill set.
+       - Emphasize more on the partial matches, exploring every possible connection between the applicant's skills and the job requirements to maximize relevance and coverage.
 
   expected_output: >
-    A JSON structure that accurately reflects matches based on the refined definition of partial matches:
     {
-      "applicant_accepted_skills": {
-        "applicant_accepted_skills_count": "integer value", (aim for 12-15 skills in total for a balanced overview)
-        "exact_match_with_job_description": {
-          "Programming Languages": [
-          "Python",
-          "Java",
-          ],
-          "AI Frameworks": ["LangChain"],
-          "Soft Skills": [
-            "Communication",
-            "Problem-Solving",
-          ]
-        },
-        "partial_match": {
-          "Programming Languages": [
-            {
-              "Name_mentioned_in_the_job_description": "Go",
-              "Relevance": "The applicant has experience in Python, which is similar to Go."
-            },
-            {
-              "Name_mentioned_in_the_job_description": "C++",
-              "Relevance": "The applicant has experience in C#, which is similar to C++."
-            },
-            (As exact match has 3 in this category, Try fetching 2 in this category from the applicant's available skills)
-          ],
-          "AI Frameworks": [
-            {
-              "Name_mentioned_in_the_job_description": "TensorFlow",
-              "Relevance": "The applicant has experience in PyTorch, which is similar to TensorFlow."
-            },
-            {
-              "Name_mentioned_in_the_job_description": "HuggingFace",
-              "Relevance": "The applicant has experience in Langchain, which is similar to HuggingFace."
-            }
-            (As exact match has 1 in this category, Try getting 3-4 in this category from the applicant's available skills)
-          ],
-          "Soft Skills": [
-            {
-              "Name_mentioned_in_the_job_description": "Problem-Solving",
-              "Relevance": "The applicant has experience in Critical Thinking, which is similar to Problem-Solving."
-            },
-            (As exact match has 2 in this category, Try getting 2-3 in this category from the applicant's available skills)
-            ...
-          ]
-        }
+      "exact_match_with_job_description": {
+        "Programming Languages": ["Python", "Java"],
+        "Database Management": ["SQL"],
+        "AI": ["OpenAI"]
       },
-      "missing_from_the_applicant_skills": [
-          "Skill 1",
-          "Skill 2",
+      "partial_match": {
+        "Programming Languages": [
+          {
+            "Job Description Skill": "JavaScript",
+            "Applicant's Related Skill": "TypeScript",
+            "Relevance": "TypeScript is a superset of JavaScript and enhances JavaScript's typing capabilities, making it a valuable skill for projects requiring robust web applications."
+          },
+          {
+            "Job Description Skill": "Ruby",
+            "Applicant's Related Skill": "Python",
+            "Relevance": "Both Python and Ruby are high-level scripting languages, used widely for web development and automation, making Python knowledge beneficial."
+          },
           ...
-        ]
-      }
-    }     
-
-split_context_of_ats_friendly_skills_task:
-  description: >
-    Split the context provided to you at the breaking point "missing_from_the_applicant_skills". In your output, you will provide everything before the "missing_from_the_applicant_skills".
-
-    Also, you will categorize those skills of Exact Match and Partial Match into subcategories whether they are Technical Skills, Frameworks, Tools, Soft Skills or any other category you find suitable.
-
-  expected_output: >
-    {
-      "applicant_skills": {
-        "exact_match_with_job_description": {
-          "Programming Languages": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Frameworks": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Tools": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Soft Skills": [
-            "item 1",
-            "item 2",
-            ...
-          ]
-        },
-
-        "partial_match_with_job_description": {
-          "Programming Languages": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Frameworks": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Tools": [
-            "item 1",
-            "item 2",
-            ...
-          ],
-          "Soft Skills": [
-            "item 1",
-            "item 2",
-            ...
-          ]
-        }
+        ],
+        "AI": [
+          {
+            "Job Description Skill": "Machine Learning",
+            "Applicant's Related Skill": "Neural Networks",
+            "Relevance": "Neural networks are a foundational technology in machine learning, relevant for numerous applications including predictive modeling and AI."
+          },
+          {
+            "Job Description Skill": "Natural Language Processing",
+            "Applicant's Related Skill": "GPT",
+            "Relevance": "GPT models are at the forefront of NLP, offering capabilities that align with advanced text processing and generation requirements."
+          }
+        ],
+        ...
+      },
+      "missing_keywords_from_the_applicant_skills": {
+        "Programming Languages": ["Go"],
+        "AI": ["TensorFlow", "PyTorch"],
+        ...
       }
     }
 
+split_context_of_ats_friendly_skills_task:
+  description: >
+    Split the context provided to you at the breaking point "missing_keywords_from_the_applicant_skills". In your output, you will provide everything before the "missing_keywords_from_the_applicant_skills".
+
+  expected_output: >
+    Everything before the "missing_keywords_from_the_applicant_skills" will be the final output of the task.
+
 split_missing_skills_task:
   description: >
-    Split the context provided to you at the breaking point "missing_from_the_applicant_skills". In your output, you will provide everything of the "missing_from_the_applicant_skills" object.
+    Split the context provided to you at the breaking point "missing_keywords_from_the_applicant_skills". In your output, you will provide everything of the "missing_keywords_from_the_applicant_skills" object.
 
     The context you need to split is provided to you from the previous task.
     
   expected_output: >
-    Everything of the "missing_from_the_applicant_skills" will be the final output of the task.
-
+    Everything of the "missing_keywords_from_the_applicant_skills" will be the final output of the task.
     {
       "missing_from_the_applicant_skills": [
         "Skill 1",
         "Skill 2",
         ...
       ]
-    
     }
 
 correct_categorization_of_skills_task:
@@ -607,40 +428,62 @@ correct_categorization_of_skills_task:
     Ensure all skills listed are correctly categorized according to their relevance to specific job fields.
 
     **Instructions**:
-    - Review each skill provided in the list to determine if it is accurately categorized. Use the web search tool to research unfamiliar skills or to verify the appropriateness of the category they are placed in.
-
-      To use the web search tool, 
-        query: str = Field(description="search query to look up")
+    - Review each skill provided in the list and then determine its appropriate category based on its primary application and industry relevance.
+    
+    - Use the web search tool to research unfamiliar skills or to verify the appropriateness of the category they are placed in.
+    To use the web search tool: 
+      query: str = Field(description="search query to look up")
+    
+    Search multiple times if needed to find the correct category of the skill with different queries. Do not search if you are already familiar with the skill.
 
     - Categorize skills based on their primary application and industry relevance. For instance, differentiate between technical skills like programming languages and more generic skills such as project management.
-    - Reassign misclassified skills to appropriate categories. If a skill does not fit any existing category, create a new one.
-    - Merge similar categories if they are overly specific or have overlapping skills to simplify the structure.
+    
+    - If a skill does not fit any existing category, create a new category that accurately represents its field of application.
 
     **Output**:
-    - Provide a revised list with skills accurately placed in categories that reflect their industry and functional relevance. Each category should have 3-5 skills for balance. Keep upto 6 categories in the final output.
+    - Provide a list with skills accurately placed in categories that reflect their industry and functional relevance. Each category should have 3-5 skills for balance. Keep upto 5 categories in the final output. 
     
-    Example of a Skills List of tech industry:
-    ```json
-    {
-      "Programming Languages": ["Python", "Java", "Go"],
-      "Project Management": ["Agile Methodologies", "Team Leadership"],
-      "Cloud & DevOps": ["AWS", "CI/CD", "Kubernetes"],
-      "Soft Skills": ["Communication", "Problem Solving", "Collaboration"],
-      "Design & Creativity": ["Adobe Photoshop", "UI/UX Design"],
-      "Marketing": ["Digital Marketing", "SEO", "Content Creation"],
-      "AI Frameworks": ["TensorFlow", "PyTorch"], 
-      "Data Science": ["Data Analysis", "Machine Learning"]
-    }
-    ```
+    Remember, "exact_match_with_job_description" and "partial_match" are most prioritized. If their count is not enough to fill the categories, you can add some skills from the "Applicant's Skills" list. Maintain priority for the exact and partial matches and its categories first.
+
+    Here is the list of all the skills the applicant has:
+    {applicant_skills}
+
   expected_output: >
-
-
+    {
+      "correctly_categorized_skills": {
+        "Programming": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Frameworks": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Tools": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "Soft Skills": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+        "(another Category name if needed)": [
+          "item 1",
+          "item 2",
+          ...
+        ],
+      }
+    }
 
 # -------------------------------------------------------- 
 
 experience_choosing_task:
   description: >
-    Select the top 2 relevant experiences from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
+    Select the otal of 2 most relevant experiences from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
 
     **Selection Criteria**:
 
@@ -652,22 +495,21 @@ experience_choosing_task:
     3. **Balanced Selection:** After including the most recent experience, select two additional experiences that best meet the job requirements. Aim to maintain a balance between work and project experiences, based solely on relevance.
 
     **Input:**
-    - **Job Description Keywords:** {jd_keyword}
     - **Applicant's Experiences:** Information provided from the context.
+    - **Job Description Keywords:** 
+    {jd_keyword}
+    --- Job Description ends here ---
 
   expected_output: >
-    Output a combination of 2 total experiences (work, projects, or a mix), selected based on their relevance to the job description. Each selection must be justified with respect to the job's description's requirements: Quote the sentence from the job description that the experience aligns with.
     {
-      "selected_experiences": {
-        "Total Object Count": 2,
-        "Most Recent Experience": "Experience Name 1",
-        "Additional Relevant Experiences": "Experience Name 2",
-        ]
+      "selected experiences": {
+        "Most Recent Experience": "Title Only"
+        "Additional Relevant Experiences title": "Title Only"
       },
-      "Selection Justification": {
+      "selection justification": {
         "reasons_for_choice": [
           {
-            "title": "{experience_title}",
+            "title": "experience_title",
             "reason": "Directly matches job requirements including specified tools, technologies, and skills, as evidenced by [specific examples from the experience]."
           },
           ...
@@ -681,9 +523,7 @@ experience_choosing_task:
         ]
       }
     }
-
-    Ensure each selection and rejection is accompanied by a detailed rationale, explicitly linking the choice to specific job description requirements, and providing clear justifications for the decisions made.
-
+    
 split_context_of_experience_choosing_task:
   description: >
     Split the context provided to you at the breaking point of "Selection Justification". In your output, you will provide everything before the "Selection Justification" as the final output of the task.
@@ -695,66 +535,70 @@ split_context_of_experience_choosing_task:
 
 gather_info_of_chosen_experiences:
   description: >
-    Extract and provide detailed information for each of the "selected_experiences" items using the content below. Maintain the order of each object as they are.
+    Append any missing details or information related to the each of the "selected experiences title" 
 
-    There is a field called "Total Object Count". This field will tell you how many object details **in total** you need to provide.
-
-    **Output**:
-    - Make sure no information is missing from the provided context.
-    [Preserve the order and priority of experiences. First, maintain the order and then group them by their experience type accordingly. Provide the following details for each experience. Be precise with any links provided.]
-        
-    Example:
-    {
-      "Total Object Count": integer value,
-      "Most Recent Experience": {},
-      "Additional Relevant Experiences": [
-        {},
-        {},
-        ...
-      ]
-
-      If it is a work experience, Follow this format:
-      "Example Work Experience": [
-        {
-          "Title": "",
-          "Company Name": "",
-          "Timeline": "",
-          "Technologies, frameworks, and tools Used": "",
-          "Skills": "",
-          "Link": "",
-          "Short Description": "",
-          "Key Highlights": [
-            "",
-            "",
-            "",
-            ""
-          ],
-          "Team size": "",
-          "Outcomes": ""
-        }
-      ]
-
-      If it is a Project Experience, Follow this format:
-      "Example Project Experience, academic Experience": [
-        {
-          "Title": "",
-          "Timeline": "",
-          "Technologies, frameworks, and tools Used": "",
-          "Skills": "",
-          "Link": "",
-          "Short Description": "",
-          "Key Highlights": [
-            "",
-            "",
-            "",
-            ""
-          ],
-          "Team size": "",
-          "Outcomes": ""
-        }
-      ]
-    }
   expected_output: >
+    "selected experiences": {
+        "Most Recent Experience": {see the format below},
+        "Additional Relevant Experiences title": {see the format below}
+        If it is a work experience, Follow this format:
+        "Example Work Experience": [
+          {
+            "Title": "",
+            "Company Name": "",
+            "Timeline": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "URL/Link": "",
+            "Short Description": "",
+            "Key Highlights": [ (Aim for 4 key highlights)
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+
+        If it is a Project Experience, Follow this format:
+        "Example Project Experience, academic Experience": [
+          {
+            "Title": "",
+            "Timeline": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "URL/Link": "",
+            "Short Description": "",
+            "Key Highlights": [ (Aim for 4 key highlights)
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+      },
+    
+add_url_to_the_experiences:
+  description: >
+    You are provided 2 contexts. One is the name of 2 experiences mentioned in the "selected experiences" section. The other context is a large context which might contain the URL or link to the "selected experiences".
+
+    Your task is to search for the URL or link in the context and add it to the respective experience mentioned in the "selected experiences" section. 
+    
+    Procedure:
+    - Look for all the information provided in the context related to the experiences mentioned in the "selected experiences" section all over the context. There is a possibility that the URL or link might be mentioned in different parts of the context where the experiences are mentioned. One place might say there is no URL or link, but there might be a URL or link in another part of the context associated with the experiences.
+
+    - If you find the URL or link, add it to the respective experience mentioned in the "selected experiences" section. If the URL is not available, leave the field empty.  
+
+  expected_output: >
+    Search for the URL or link in the context and add it to the respective experience mentioned in the "selected experiences" section. If the URL is not available, leave the field empty.
+
+    You are looking to edit "URL/Link" field in the experiences.
+
     
 ats_friendly_keywords_into_experiences:
   description: >
@@ -766,7 +610,7 @@ ats_friendly_keywords_into_experiences:
       - **Conciseness and Clarity:** 
         -- Limit the short description to 10-15 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
         -- Keep or make 3 best key highlights for each experience, focusing on the most impactful achievements or skills.
-        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-20 words per key highlight. 
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 15 tokens.
         - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - you are also provided a list of "missing_from_the_applicant_skills" which are in the job description but not in the applicant's experiences. Try to weave some of these words where they fit naturally.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
@@ -777,15 +621,13 @@ ats_friendly_keywords_into_experiences:
     **Missing from the Applicant's Skills:**
     Provided in the context.
 
-    Count the total number of experiences. After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
-
     When you are done with listing the experiences with integrated keywords, provide a detailed report on changes in a new section ## Report on Changes:
 
     ## Report on Changes in structure in JSON:
       - **Original Sentence**: Present the sentence before any updates.
       - **Revised Sentence**: Display the sentence after keywords have been integrated.
       - **Keywords Added**: List each keyword that was newly added, ensuring they were not present before.
-      - **Rationale**: Provide a detailed explanation for each keyword addition, linking the choice to specific requirements or phrases in the job description.
+      - **Rationale**: Provide a detailed explanation for each keyword addition, URLing the choice to specific requirements or phrases in the job description.
 
     To determine the duration of the most recent experience, the present date is {today_date}.
 
@@ -800,9 +642,9 @@ ats_friendly_keywords_into_experiences:
       "Duration": "",
       "Technologies": "",
       "skills": "",
-      "Link": "",
-      "Short Description": "(About 10-13 words)",
-      "Key Highlights": [(Up to 3 key highlights but not required to be 3), upto 10-20 words each
+      "URL": "",
+      "Short Description": "(About 10 tokens)",
+      "Key Highlights": [(Up to 3 key highlights.), around 15 tokens each
         "",
         "",
         ""
@@ -819,9 +661,9 @@ ats_friendly_keywords_into_experiences:
       "Duration": "",
       "Technologies": "",
       "skills": "",
-      "Link": "",
-      "Short Description": "(About 15 words)",
-      "Key Highlights": [(Up to 3 key highlights but not required to be 3), upto 10-20 words each
+      "URL": "",
+      "Short Description": "(About 10 tokens)",
+      "Key Highlights": [(Up to 3 key highlights), around 15 tokens each
         "",
         "",
         ""
@@ -833,7 +675,6 @@ ats_friendly_keywords_into_experiences:
     This should maintain the original structure as in the input context, with the addition of the integrated keywords.
     {
       "applicant's Experiences with ATS Keywords": {
-        "total object count:": "integer value",
         "Most Recent Experience": {},
         "Work Experience/Project Experience": {},
       }
@@ -877,12 +718,7 @@ split_context_of_ats_friendly_keywords_into_experiences:
 
 coursework_extraction_task:
   description: >
-    You are given a tool that retrieves info simply by asking questions as a list of strings. Use the tool to extract comprehensive coursework details.
-    How you should use the tool:
-    argument:
-    "question": "Give me a list of all relevant coursework, including course names."
-    
-    The tool will return a large chunk of information. look into the chunk to find your data. If you did not find a field, ask the tool again with the missing field. Do not make up any information.
+    The task involves extracting relevant coursework from the applicant's courseworks only based on the provided job description keywords.
 
     After extracting the coursework, order them based on relevance to the job description. Relevant courses should be prioritized. Keep 4-6 courses in the final output, ignore the rest. Hint: Look for course names that match the job description keywords.
 
@@ -890,6 +726,10 @@ coursework_extraction_task:
 
     Here are the Job Description Keywords:
     {jd_keyword_extraction}
+
+    Here is the structured data you need to extract the coursework from:
+    {applicant_info_organized_data}
+
   expected_output: >
     Ignore any key if not available. Relevant courses should be prioritized.
       {
@@ -900,7 +740,6 @@ coursework_extraction_task:
           ...
         ]
       }
-
 
 # Career Objective Section
 applicant_philosophy_extraction_task:
@@ -920,7 +759,10 @@ applicant_philosophy_extraction_task:
   expected_output: >
     {
       "Applicant's Philosophy and Goals": {
-        "Philosophy": "Believes in democratizing financial tools to empower individuals.",
+        "Philosophy": [
+        "The applicant believes in trying new things, taking risks, and learning from failures to achieve personal and professional growth.",
+        "The applicant values collaboration, innovation, and continuous learning to drive career success and contribute to team goals.", ...
+        ],
         "Personality Traits": "Persistent, innovative, go-getter.",
         "Software Development Approach": "Adopts agile methodologies to enhance team productivity and adapt quickly to changing market needs."
       }
@@ -932,7 +774,7 @@ career_objective_task:
 
     **Key Elements**:
     - **Unique Value Proposition:** Highlight the applicant's specific skills, experiences, and achievements relevant to high-scale services, cloud technologies, and reliability engineering.
-    - **Alignment with Company Goals:** Integrate details that demonstrate how the applicant’s career goals and technical skills align with the company's mission to democratize finance and the specifics of the Reliability Engineering team.
+    - **Alignment with Company Goals:** Integrate details that demonstrate how the applicant’s career goals and technical skills align with the company's mission.
     - **Conciseness and Impact:** Limit the statement to 30 words, incorporating the job title and company name, and ensuring it uses strong, persuasive language to create a memorable impact.
 
     In the final output, do not say "Seasoned Role" such as "Seasoned Software Developer". It should feel passionate and enthusiastic about the role.
@@ -949,7 +791,7 @@ career_objective_task:
 
 cover_letter_generation_task:
   description: >
-    Generate a customized cover letter for a specific job application using the provided applicant details and job description. The cover letter should persuasively link the applicant’s skills, experiences, and personal philosophy with the job requirements and company culture. Ensure all placeholders are either replaced with relevant information or removed if the information is not available.
+    Generate a customized cover letter for a specific job application using the provided applicant details and job description. The cover letter should persuasively URL the applicant’s skills, experiences, and personal philosophy with the job requirements and company culture. Ensure all placeholders are either replaced with relevant information or removed if the information is not available.
 
     **Information to Include:**
 
@@ -1017,7 +859,7 @@ resume_compilation_task:
 
     [empty line]
     # **[applicant's First and Last Name]**
-    [Phone] | [Email] | [LinkedIn/Profile URL] | [Personal Website URL] 
+    [Phone] | [Email] | [Linkedin/Profile URL] | [Personal Website URL] 
     [Address], [City], [State]
 
     [empty line]
@@ -1049,7 +891,7 @@ resume_compilation_task:
     ### [Project Title 1]
     [Start Month Year] - [End Month Year] ([Duration]) | [City], [State] 
     Technologies, frameworks, and tools used:  [List of technologies, separated by commas]
-    Link: [Link to the project]
+    URL: [URL to the project]
     - [Key achievement 1]
     - [Key achievement 2]
     - ...
@@ -1058,7 +900,7 @@ resume_compilation_task:
     ### [Project Title 2]
     [Start Month Year] - [End Month Year] ([Duration]) | [City], [State] 
     Technologies, frameworks, and tools used:  [List of technologies, separated by commas]
-    Link: [Link to the project]
+    URL: [URL to the project]
     - [Key achievement 1]
     - [Key achievement 2]
     - ...
@@ -1068,7 +910,7 @@ resume_compilation_task:
     ### [Job Title 1]
     [Start Month Year] - [End Month Year] ([Duration]) | [Company Name] | [City], [State]
     Technologies, frameworks, and tools used:  [List of technologies, separated by commas]
-    Link: [Link to the relevant work experience (e.g., company website)]
+    URL: [URL to the relevant work experience (e.g., company website)]
     - [Key achievement 1]
     - [Key achievement 2]
     - ...
@@ -1088,7 +930,7 @@ resume_in_json_task:
   description: >
     Your ONLY task is to organize the following input data into a JSON object representing a professional resume, EXACTLY as instructed below. Do NOT deviate from these guidelines:
 
-    1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "LinkedIn Profile URL", "Personal Website URL", and "Address".
+    1.  **Contact Info:** Extract the following fields: "Full Name", "Phone", "Email", "Linkedin Profile URL", "Personal Website URL", and "Address".
     2.  **Summary:** Write down the summary provided in the input data.
     3.  **Skills:** Follow the structure below to organize the skills into categories. 
       - First, fill this section from the "exact_match_with_job_description", then "partial_match_with_job_description", then after that, fill from "skills" and "technologies" from the experiences. Each category should have up to 5 skills.
@@ -1103,7 +945,7 @@ resume_in_json_task:
         - Ensure no skill is repeated. Combine variations of the same skill (e.g., "Problem-Solving" and "Problem-solving skills").
         - Carefully determine if a skill is technical (related to tools, technologies) or soft (related to personality, work style). 
     
-    4. If "Company Name" or "Link" is not available, omit them.  
+    4. If "Company Name" or "URL" is not available, omit them.  
     5.  **Additional:** Include any other relevant sections, like "References," based on the input data.
 
     **Important:** 
@@ -1122,7 +964,7 @@ resume_in_json_task:
         "Full Name": "...",
         "Phone": "...",
         "Email": "...",
-        "LinkedIn Profile URL": "...", 
+        "Linkedin Profile URL": "...", 
         "Personal Website URL": "...",
         "Address": "..." 
       },
@@ -1142,7 +984,7 @@ resume_in_json_task:
           "Project Title": "...",
           "Timeline": "... (duration)",
           "Technologies": "...",
-          "Link": "...",
+          "URL": "...",
           "Key achievements": [
             "...", 
             "..."
@@ -1157,7 +999,7 @@ resume_in_json_task:
           "Location": "...",
           "Timeline": "... (duration)",
           "Technologies": "...",
-          "Link": "...",
+          "URL": "...",
           "Key achievements": [
             "...",
             "..." 

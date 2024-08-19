@@ -36,7 +36,7 @@ PATHS = {
     "applicant_info_file_path": f"{info_files_dir}/applicant_info.txt",
     "applicant_info_organized": f"{llm_task_output_dir}/applicant_info_organized.txt",
     "jd_text_file": f"{info_files_dir}/jd_text_file.txt",
-    "jd_file_path": f"{info_files_dir}/job_description.txt",
+    "jd_file_path": f"{llm_task_output_dir}/job_description.txt",
     "jd_keyword_extraction": f"{llm_task_output_dir}/job_description_extracted_keywords.txt",
     "company_value_extraction": f"{llm_task_output_dir}/company_value_extraction.txt",
 
@@ -75,6 +75,7 @@ PATHS = {
     "experience_choosing_task": f"{pre_tasks_dir}/experience_choosing_task.txt",
     "split_context_of_experience_choosing_task": f"{pre_tasks_dir}/split_context_of_experience_choosing_task.txt",
     "gather_info_of_chosen_experiences": f"{pre_tasks_dir}/gather_info_of_chosen_experiences.txt",
+    "add_url_to_the_experiences": f"{pre_tasks_dir}/add_url_to_the_experiences.txt",
     "ats_friendly_keywords_into_experiences": f"{pre_tasks_dir}/ats_friendly_keywords_into_experiences.txt",
     "split_context_of_ats_friendly_keywords_into_experiences": f"{info_extraction_dir}/split_context_of_ats_friendly_keywords_into_experiences.txt",
 

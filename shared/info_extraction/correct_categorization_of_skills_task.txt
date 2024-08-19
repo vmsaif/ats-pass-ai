@@ -1,25 +1,37 @@
 {
-  "Programming Languages": [
-    "Python",
-    "Java",
-    "C++",
-    "SQL"
-  ],
-  "AI Frameworks": [
-    "LangChain",
-    "OpenAI",
-    "RAG Search",
-    "Gemini Pro"
-  ],
-  "Soft Skills": [
-    "Communication",
-    "Problem Solving",
-    "Teamwork",
-    "Adaptability"
-  ],
-  "Cloud & DevOps (Previously System & Technology Integration)": [
-    "CI/CD",
-    "Docker",
-    "System & Technology Integration"
-  ]
+  "correctly_categorized_skills": {
+    "Programming Languages": [
+      "Java",
+      "Python",
+      "C++",
+      "C",
+      "R"
+    ],
+    "Frontend Development": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue.js",
+      "React"
+    ],
+    "Soft Skills": [
+      "Teamwork",
+      "Adaptability",
+      "Communication",
+      "Problem Solving",
+      "Critical Thinking"
+    ],
+    "Cloud Computing": [
+      "AWS Sagemaker",
+      "Google Vertex AI",
+      "AWS Bedrock"
+    ],
+    "AI": [
+      "Multiagent Systems",
+      "RAG (Retrieval Augmented Generation)",
+      "A* Search Algorithm",
+      "AI Decision-Making",
+      "LangChain"
+    ]
+  }
 }
