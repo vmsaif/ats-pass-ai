@@ -2,104 +2,119 @@
 {
   "Project Experience": [
     {
-      "Project Title": "ATS PASS AI",
+      "Project Title": "ATS Pass AI",
       "Timeline": "January 2024 - Present",
-      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search",
-      "Skills": "AI Development",
-      "Short Description": "Developed a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies.\n\nEngineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems.\n\nDeveloped scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability."
-    },
-    {
-      "Project Title": "Blockchain Car Mileage Tracker",
-      "Timeline": "January 2023 - Mar 2023",
-      "Technologies, frameworks, and tools Used": "Docker | Vue.js",
-      "Skills": "Blockchain Development",
-      "Short Description": "Developed a blockchain application to securely track and verify vehicle mileage for insurance purposes.\n\nEnhanced data integrity and transparency, showcasing strong analytical skills and attention to detail.\n\nSolved a real-world problem by crafting a **smart contract** for tamper-proof mileage recording, enhancing trust in vehicle history."
+      "Technologies, frameworks, and tools Used": "Python, SQL, Multiagent Systems, AI, RAG Search",
+      "Skills": null,
+      "Short Description": "Developed an AI-powered resume builder that utilizes advanced language models and a Multi-agent System to generate resumes with over 85% keyword matching for Applicant Tracking Systems (ATS)."
     },
     {
       "Project Title": "AI PATHFINDING",
       "Timeline": "September 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "CI/CD | A* Algorithm | Java | Git",
-      "Skills": "AI Development",
-      "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.\n\nApplied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.\n\nSuccessfully balanced rapid development and deployment of the AI components within the project."
+      "Technologies, frameworks, and tools Used": "CI/CD, A* Algorithm, Java, Git",
+      "Skills": null,
+      "Short Description": "Created an AI-powered game that employs the A* algorithm and prompt engineering to enhance response times. Implemented industry standard CI/CD best practices and version control using Git."
+    },
+    {
+      "Project Title": "Blockchain Car Mileage Tracker",
+      "Timeline": "January 2023 - March 2023",
+      "Technologies, frameworks, and tools Used": "Docker, Vue.js, Blockchain, Smart Contracts",
+      "Skills": null,
+      "Short Description": "Developed a blockchain-based application for the automobile industry to track car mileage and reduce instances of fraud by providing tamper-proof data on the blockchain."
     },
     {
       "Project Title": "Recursive Ray Tracing",
       "Timeline": "May 2023 - July 2023",
-      "Technologies, frameworks, and tools Used": "3D Graphics | OpenGL | C++",
-      "Skills": "Graphics Programming",
-      "Short Description": "Implemented a complex 3D graphics rendering technique using OpenGL, demonstrating a deep understanding of C++ and 3D graphics principles.\n\nApplied geometry and generic math skills to calculate light paths and surface interactions."
+      "Technologies, frameworks, and tools Used": "3D Graphics, OpenGL, C++",
+      "Skills": null,
+      "Short Description": "Implemented a 3D graphics rendering technique known as \"Recursive Ray Tracing\" using OpenGL and C++."
     },
     {
       "Project Title": "Bank Account System",
       "Timeline": null,
-      "Technologies, frameworks, and tools Used": "Java | File I/O",
-      "Skills": "Object-Oriented Programming",
-      "Short Description": "Developed scalable Java applications, showcasing a deep understanding of object-oriented programming optimizing process efficiency by 30%.\n\nImplemented an intricate class hierarchy, demonstrating polymorphism with diverse account types and transaction handling."
+      "Technologies, frameworks, and tools Used": "Java, File I/O",
+      "Skills": "Object-Oriented Design, Polymorphism",
+      "Short Description": "Developed a simulation of a bank account system using object-oriented design and polymorphism in Java. Features File I/O operations and is a scalable project with open-source collaboration."
     },
     {
       "Project Title": "Hosting a Resume on GitHub Pages",
-      "Timeline": "Apr 2023 - Apr 2023",
-      "Technologies, frameworks, and tools Used": "None",
-      "Skills": "Technical Documentation",
-      "Short Description": "Authored detailed instructions on using Markdown for resume creation and Jekyll for site generation.\n\nIllustrated the process of setting up a GitHub repository and deploying a static site using GitHub Pages.\n\nEmphasized beginner-friendly methods for web hosting and documentation."
+      "Timeline": "April 2023 - April 2023",
+      "Technologies, frameworks, and tools Used": "Markdown, Jekyll, GitHub Pages, Documentation, Git",
+      "Skills": null,
+      "Short Description": "Provided a comprehensive guide on hosting static websites and technical documentation using GitHub pages. Demonstrated development using Markdown, Jekyll, and Git for version control and deployment."
     },
     {
       "Project Title": "ELF Binary Analysis",
       "Timeline": "Nov 2022 - Dec 2022",
-      "Technologies, frameworks, and tools Used": "C Programming | Debugging | Linux OS",
-      "Skills": "Systems Programming",
-      "Short Description": "Developed a tool to dissect ELF binaries, indicating familiarity with executable structures and the Linux OS, valuable for software analysis and security roles."
-    },
-    {
-      "Project Title": "ELF Binary Analysis",
-      "Timeline": "November 2022 - December 2022",
-      "Technologies, frameworks, and tools Used": "C | Storage System | OS",
-      "Skills": "Systems Programming",
-      "Short Description": "Developed a C program to extract key information from ELF headers of binary files.\n\nImplemented advanced C programming techniques to navigate and interpret ELF formatted binaries, showcasing a strong foundation in software development relevant to product support and application troubleshooting.\n\nUtilized debugging methods to identify and resolve parsing errors, reflecting the job's emphasis on debugging skills and product issue diagnosis.\n\nEnhanced system analysis efficiency by 20%, demonstrating an ability to systematically approach and solve technical challenges—a key trait for supporting LUCID's engineering and product teams.\n\nPrepared detailed documentation and example use cases based on customer scenarios, contributing to the creation and update of product manuals and knowledge base articles as mentioned in the job duties."
+      "Technologies, frameworks, and tools Used": "C Programming, Debugging, Linux OS",
+      "Skills": null,
+      "Short Description": "Developed an ELF header parsing and analysis tool using C to simplify debugging and improve product knowledge base documentation. Emphasized debugging, documentation, and system analysis methodologies, resulting in a 20% improvement in debugging efficiency."
     },
     {
       "Project Title": "OpenGL Sphere Lighting",
       "Timeline": "April 2023 - June 2023",
-      "Technologies, frameworks, and tools Used": "OpenGL | C++",
-      "Skills": "Graphics Programming",
-      "Short Description": "Explored advanced lighting techniques in OpenGL by creating an interactive application to illuminate a sphere with dynamic light sources.\n\nDeveloped an application with three distinct light sources, offering comprehensive insights into lighting effects.\n\nEnhanced user interactivity by 50% through an interactive menu system for real-time modifications of light and material."
+      "Technologies, frameworks, and tools Used": "OpenGL, C++",
+      "Skills": null,
+      "Short Description": "Explored advanced lighting techniques using OpenGL to create an interactive application with three light sources and dynamic lighting for 3D spheres. Implemented a comprehensive interactive menu for changing lighting effects and material properties, improving interactivity by 50%."
     },
     {
       "Project Title": "Reversible Learning APP",
       "Timeline": "January 2021 - April 2021",
-      "Technologies, frameworks, and tools Used": "SQL | Android Studio | Java",
-      "Skills": "Android Development",
-      "Short Description": "Collaborated with a team to develop \"Reversible Learning\", an Android app for enhancing study habits. Utilized Android Studio and HSQLDB, focusing on UI/UX design and robust database management.\n\nEmployed **JUnit** for comprehensive unit and integration testing, **resulting in a 25% decrease** in post-release bugs.\n\nDemonstrated adaptability and effective communication by working in a team environment to meet project deadlines and objectives."
+      "Technologies, frameworks, and tools Used": "SQL, Android Studio, Java, JUnit",
+      "Skills": null,
+      "Short Description": "Collaborated on an Android app to enhance study habits and promote learning. Utilized Junit for robust unit and integration testing, reducing post-release bugs by 25%. Implemented robust database management using HSQLDB and intuitive user interfaces."
     },
     {
       "Project Title": "Connect 4 Game",
       "Timeline": "February 2023 - April 2023",
-      "Technologies, frameworks, and tools Used": "Java",
-      "Skills": "AI Decision-Making",
-      "Short Description": "Developed a digital version of the classic Connect 4 game, facilitating user vs. AI gameplay on a 6x7 grid.\n\nImplemented strategic AI decision-making, enhancing game complexity and player engagement.\n\nImplemented efficient CI/CD workflows to streamline development and deployment processes."
+      "Technologies, frameworks, and tools Used": "Java, AI Decision Making, CI/CD",
+      "Skills": null,
+      "Short Description": "Developed a digital version of the classic game of Connect 4, featuring strategic AI decision-making for a fun and engaging single-player experience. Implemented an agile development framework incorporating CI/CD best practices for streamlined deployment and performance optimization."
     },
     {
       "Project Title": "TCP Chat Application",
       "Timeline": "October 2022 - December 2022",
-      "Technologies, frameworks, and tools Used": "TCP/IP | Multithreading | Network",
-      "Skills": "Network Programming",
-      "Short Description": "Developed a Java chat application for real-time client-server communication using TCP.\n\nImplemented multithreading for simulation efficiency, showcasing a deep understanding of network programming and asynchronous event handling.\n\nImplemented socket programming for robust client-server communication.\n\nEnabled features like room creation, joining/leaving rooms, and viewing room details.\n\n**Achieved a 99.9% uptime and stability** rate, enhancing user experience and application stability."
+      "Technologies, frameworks, and tools Used": "TCP/IP, Multithreading, Networking, Java",
+      "Skills": null,
+      "Short Description": "Created a TCP-powered multi-threaded chat application featuring client-server architecture using TCP/IP. Implemented standard chat application features such as creating and joining chat rooms, viewing room details, and maintaining a 99.9% uptime. Demonstrates proficiency in network programming and understanding of asynchronous event handling using multithreading in Java."
     },
     {
       "Project Title": "Data Visualization with R",
       "Timeline": null,
-      "Technologies, frameworks, and tools Used": null,
-      "Skills": "Data Analysis",
-      "Short Description": "Utilized R for statistical analysis and data visualization, akin to Power BI tasks.\n\nDemonstrated ability to translate complex data into actionable insights.\n\nLearned to create interactive visualizations, enhancing data-driven decision-making."
+      "Technologies, frameworks, and tools Used": "Data Analysis, R Programming Language",
+      "Skills": null,
+      "Short Description": "Applied statistical and data analysis methods using R to process and create useful visualizations. Ideal for demonstrating proficiency in Data Analytics, similar to tools such as Power BI."
     },
     {
       "Project Title": "Portfolio Website",
       "Timeline": "2021",
-      "Technologies, frameworks, and tools Used": "React | Styled-Components",
-      "Skills": "Web Development",
-      "Short Description": "Developed a comprehensive portfolio website to showcase my projects, skills, and experiences. Leveraged React for dynamic UI components and Styled Components for custom styling, ensuring a responsive and interactive user experience. Integrated GitHub Actions for CI/CD, automating deployment to GitHub Pages.\n\nDesigned with a user-centric approach, incorporating SEO strategies to enhance visibility and accessibility.\n\nImplemented a variety of modern web technologies and tools, including Apollo for GraphQL integration and Chart.js for data visualization.\n\nThe site features a blog section, project showcases, and dynamic content fetched from GitHub, demonstrating my full-stack development capabilities."
+      "Technologies, frameworks, and tools Used": "React, Styled-Components, GitHub Actions, CI/CD. Apollo, GraphQL, Chart.js",
+      "Skills": null,
+      "Short Description": "Developed a comprehensive web development project to showcase technical expertise. Built an online presence with dynamic elements to display professional achievements, projects, and skills. Implemented SEO for visibility, accessibility, and dynamic content. Utilized Styled-Components for UI styling, a blog section, GitHub actions for a responsive user interface, and streamlined CI/CD practices for seamless deployment through Github Pages."
     },
     {
       "Project Title": "CPU Scheduling",
       "Timeline": "June 2023 - August 2023",
-      "Technologies, frameworks, and tools Used": "C | Multithreading | Linux | Bash | Git",
+      "Technologies, frameworks, and tools Used": "C, Multithreading, Linux, Bash, Git",
+      "Skills": null,
+      "Short Description": "Developed a multithreaded application that simulates different CPU scheduling techniques using C, Linux, and Bash scripting. Emphasized mastery of parallel processing through the use of Git for code management and collaborative development."
+    },
+    {
+      "Project Title": "Go-Back-N Protocol Simulation",
+      "Timeline": "Nov 2022 - Dec 2022",
+      "Technologies, frameworks, and tools Used": "Python, Networking, Matplotlib",
+      "Skills": null,
+      "Short Description": "Implemented a simulation of the Go-Back-N protocol in Python. Highlighted dynamic window sizing through data visualization tools, such as Matplotlib, to illustrate network flow and protocol performance. Resulted in a 65% increase in understanding of networking protocols and their applications for optimizing data transmission."
+    }
+  ],
+  "Work Experience": [
+    {
+      "Job Title": "Programming Mentor",
+      "Company Name": null,
+      "Timeline": "February 2023 - December 2023",
+      "Technologies, frameworks, and tools Used": "Python, Java, Computer Systems",
+      "Short Description": "Provided one-on-one programming instruction, including software installation, debugging techniques, and computer systems fundamentals."
+    }
+  ]
+}
+```

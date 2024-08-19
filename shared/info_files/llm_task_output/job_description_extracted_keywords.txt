@@ -1,81 +1,36 @@
-## Job Description Keyword and Phrase Extraction: Applied AI Developer at Klick
+## Job Description Keyword and Phrase Extraction - Junior Java Software Engineer - CMiC
 
 **1. Introduction:**
+    - Role: **Junior Java Software Engineer**
+    - Company: **CMiC**
+    - Location: **Toronto, ON**
+    - Industry: **Construction Software, SaaS, Enterprise Software** 
 
-* **Role:** Applied AI Developer
-* **Company:** Klick
-* **Location:** Toronto, ON
-* **Industry:** Advertising Services, Healthcare (implied)
+**2. Thorough Analysis:**
 
-**2. Thorough Analysis:** 
-
-This role requires a strong technical background in applying existing Generative AI, particularly LLMs, to solve real-world business problems within a healthcare context.  Strong communication and collaboration skills are crucial for collaborating with stakeholders and ensuring ethical AI development.
+This job description emphasizes a strong foundation in Java development within the context of a large, dynamic web application framework. The ideal candidate will be comfortable collaborating in a team environment, contributing to code maintenance and new feature implementation. Experience with J2EE, JSF, and unit testing is highly valued.
 
 **3. Keyword Categorization:**
 
-**Essential Skills:**
+* **Essential Skills:**
+    * **Hard Skills:** Java, JUnit 4, XML, HTML, CSS, JavaScript, Unit Testing, Code Refactoring, Bug Fixing, Agile Development,  Software Development Life Cycle (SDLC)
+    * **Soft Skills:**  Excellent communication skills (written and oral), Teamwork, Collaboration, Problem-Solving, Adaptability
+* **Industry Terms:** 
+    * Dynamic Engine, Metadata, User Configurable, Business Rules, Validations, Web Pages, ADF Framework, Cloud Deployment, Self-Hosted Deployment, Project Management, Job Costing
+* **Company Values & Culture:**
+    * Rapidly Growing, Socially Responsible, Teamwork, Open Discussions, Active Social Events, Health and Wellness, Equal Opportunity
+* **Action Verbs:**
+    * Creating, Maintaining, Generating, Configuring, Implementing, Fixing, Working, Participating, Communicating
 
-* **Hard Skills:** 
-    * Generative AI 
-    * Large Language Models (LLMs)
-    * GPT
-    * LLaMa
-    * Claude
-    * Python
-    * APIs 
-        * OpenAI
-        * Azure AI
-        * Amazon Bedrock
-        * Google Vertex
-    * Prompt Engineering
-    * Full-stack deployment 
-    * Defensive Design Strategy
-    
-* **Soft Skills:**
-    * Communication Skills
-    * Collaboration
-    * Project Feasibility Assessment
+**4. Prioritization and Relevance:**
 
-**Industry Terms:**
+* **Frequency and Emphasis:** Java, JUnit 4,  Communication Skills, Teamwork, Code Refactoring, Bug Fixing
+* **Essential vs. Preferred Qualifications:**
+    * **Essential:** Java, JUnit 4, Excellent communication skills (written and oral) 
+    * **Preferred:** J2EE, JSF, Degree/Diploma in a relevant field
 
-* Generative AI 
-* LLMs
-* APIs
-* Healthcare regulations (implied)
+**Additional Notes:**
 
-**Company Values & Culture:**
-
-* Diversity & Inclusion
-* Thrive and grow
-* Best work from diverse backgrounds 
-* Inclusive, barrier-free recruitment
-* Accessibility needs
-
-**Action Verbs:**
-
-* Building
-* Implementing
-* Solving
-* Coding
-* Crafting 
-* Refining
-* Guiding
-* Assessing
-* Collaborating
-* Delegating
-* Communicating
-* Developing
-* Ensuring
-* Explaining 
-
-**4.  Prioritization and Relevance:**
-
-**Frequency and Emphasis:**
-
-* **High Frequency/Emphasis:**  Generative AI, LLMs, Python, APIs, Communication, Collaboration 
-* **Moderate Frequency/Emphasis:**  Prompt Engineering, Feasibility Assessment, Defensive Design Strategy, Healthcare regulations
-
-**Essential vs. Preferred Qualifications:**
-
-* **Essential:** Expert knowledge of applying Generative AI & LLMs, proficiency in Python & relevant APIs, experience developing Generative AI solutions.
-* **Preferred:** Excellent communication skills (especially technical concepts to non-technical audiences), knowledge of healthcare regulations, front-end development experience. 
+* The company highlights its positive and supportive culture through descriptions of its social events, wellness initiatives, and employee benefits. 
+* Familiarity with the construction industry or CMiC’s products is beneficial but not explicitly stated as a requirement.
+* Use the extracted keywords and phrases strategically throughout your resume and cover letter, ensuring they are relevant to your experiences and accomplishments.

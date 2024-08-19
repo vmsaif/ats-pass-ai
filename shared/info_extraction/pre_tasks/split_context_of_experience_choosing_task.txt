@@ -1,40 +1,8 @@
 ```json
 {
   "selected experiences": {
-    "Most Recent Experience": {
-      "Title": "ATS PASS AI",
-      "Timeline": "January 2024 - Present",
-      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search",
-      "Skills": "AI Development",
-      "URL": null,
-      "Short Description": "Developed a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies.\n\nEngineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems.\n\nDeveloped scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability.",
-      "Key Highlights": [
-        "Utilized Python and SQL for developing and implementing the AI-driven system, directly aligning with the job description's requirement for these programming languages.",
-        "Applied expertise in Generative AI and RAG Search, showcasing a strong understanding of core concepts sought after for this role.",
-        "Engineered a solution that optimizes for applicant tracking systems, highlighting experience relevant to the job's focus on practical AI applications.",
-        "Demonstrated adaptability and forward-thinking by developing scalable architecture, aligning with the need for building and implementing AI solutions."
-      ],
-      "Team size": null,
-      "Outcomes": "Developed a generative AI system that automates resume creation and optimizes for applicant tracking systems."
-    },
-    "Additional Relevant Experiences titles": [
-      {
-        "Title": "AI PATHFINDING",
-        "Timeline": "September 2023 - December 2023",
-        "Technologies, frameworks, and tools Used": "CI/CD | A* Algorithm | Java | Git",
-        "Skills": "AI Development",
-        "URL": null,
-        "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.\n\nApplied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.\n\nSuccessfully balanced rapid development and deployment of the AI components within the project.",
-        "Key Highlights": [
-          "Applied AI development skills, aligning with the primary focus of the Applied AI Developer role.",
-          "Utilized CI/CD practices, demonstrating experience with efficient development cycles relevant to building and deploying AI solutions.",
-          "Employed prompt engineering, showcasing direct experience with a key technique used in Generative AI development.",
-          "Successfully balanced rapid development and deployment, highlighting adaptability and problem-solving skills."
-        ],
-        "Team size": null,
-        "Outcomes": "Developed an AI-driven game that utilizes the A* algorithm to enhance user engagement and optimize system efficiency."
-      }
-    ]
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences title": "AI PATHFINDING"
   }
 }
 ```

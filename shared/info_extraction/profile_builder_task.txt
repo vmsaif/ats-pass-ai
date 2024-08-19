@@ -2,17 +2,17 @@
 {
   "Personal Information": {
     "Full Name": "Saif Mahmud",
-    "Phone Number": "204 955 5064",
+    "Phone Number": "204-955-5064",
     "Email": "msaifofficial@gmail.com",
     "Linkedin": "linkedin.com/in/vmsaif",
     "Other Social Media Profiles": [],
     "Personal Website": "saifmahmud.dev",
-    "Portfolio": "https://saifmahmud.dev/",
+    "Portfolio": "saifmahmud.dev",
     "GitHub": "https://github.com/vmsaif",
-    "Address": [],
+    "Address": null,
     "City": "Winnipeg",
     "State": "MB",
-    "Zip Code": [],
+    "Zip Code": null,
     "Country": "Canada"
   },
   "Education": {
@@ -21,40 +21,40 @@
     "University": "University of Manitoba",
     "University Location": "Winnipeg, MB",
     "Graduation Date": "October 2023",
-    "GPA": [],
-    "Honors/Distinctions": []
+    "GPA": null,
+    "Honors/Distinctions": null
   },
   "Volunteer Work": [],
   "Awards and Recognitions": [],
   "References": [
     {
-      "Name": "ABU KABIR",
+      "Name": "Abu Kabir",
       "Position": "Director, IT Service Management",
       "Company": "Microsoft Corporation",
       "Contact Information": "204-298-3693",
-      "Relationship": []
+      "Relationship": null
     },
     {
-      "Name": "SAFIUR MAHDI",
+      "Name": "Safiur Mahdi",
       "Position": "Software Developer",
       "Company": "Skip The Dishes",
       "Contact Information": "204-583-3432",
-      "Relationship": []
+      "Relationship": null
     }
   ],
   "Personal Traits and Interests": {
     "Strengths": "Adaptability, Critical Thinking, Teamwork, Communication, Time Management, Problem Solving",
-    "Hobbies": [],
-    "Passions": []
+    "Hobbies": null,
+    "Passions": "Crafting intuitive and user-friendly software experiences"
   },
   "Applicant's Philosophy and Goals": {
     "Philosophy": [
-      "Saif believes in a \"magic button\" philosophy in software development, striving for intuitive user experiences.",
-      "He focuses on understanding user needs and crafting solutions that prioritize clarity, efficiency, and a touch of magic in software.",
-      "He aims to simplify complexities into seamless interactions, making technology feel effortless and empowering."
+      "Saif believes programs should be as straightforward as a single 'magic button' fulfilling user desires.",
+      "This approach encompasses a deep understanding of user needs, culminating in the development of intuitive and effective software solutions.",
+      "Saif's work reflects a dedication to clean code, efficient algorithms, and a user-centered design ethos."
     ],
-    "Personality Traits": "Proactive, innovative, team-oriented, continuous improvement mindset",
-    "Software Development Approach": "Focuses on user-centric design, AI integration, and efficient development practices like CI/CD for robust, real-world solutions."
+    "Personality Traits": "Proactive, driven by innovation",
+    "Software Development Approach": "Committed to continuous improvement and robust software solutions"
   }
 }
 ```

@@ -1,6 +1,8 @@
 {
   "Relevant Coursework (to the Job Description)": [
-    "*Artificial Intelligence (Python)*",
-    "*AI and Game Development (Java | Python)*"
+    "Software Engineering (Java | Unit Testing)",
+    "Data Structures and Algorithms (Java)",
+    "Distributed Computing (Python)",
+    "AI and Game Development (Java | Python)"
   ]
 }

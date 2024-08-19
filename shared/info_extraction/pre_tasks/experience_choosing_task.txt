@@ -1,104 +1,76 @@
 ```json
 {
   "selected experiences": {
-    "Most Recent Experience": {
-      "Title": "ATS PASS AI",
-      "Timeline": "January 2024 - Present",
-      "Technologies, frameworks, and tools Used": "Python | SQL | Multiagent | AI | RAG Search",
-      "Skills": "AI Development",
-      "URL": null,
-      "Short Description": "Developed a generative AI-driven system to automate tailored resume creation, enhancing job search efficiency with state-of-the-art AI technologies.\n\nEngineered an AI solution that personalizes resumes, achieving over 85% keyword alignment with job descriptions, optimizing for applicant tracking systems.\n\nDeveloped scalable architecture to accommodate future enhancements, demonstrating forward-thinking and adaptability.",
-      "Key Highlights": [
-        "Utilized Python and SQL for developing and implementing the AI-driven system, directly aligning with the job description's requirement for these programming languages.",
-        "Applied expertise in Generative AI and RAG Search, showcasing a strong understanding of core concepts sought after for this role.",
-        "Engineered a solution that optimizes for applicant tracking systems, highlighting experience relevant to the job's focus on practical AI applications.",
-        "Demonstrated adaptability and forward-thinking by developing scalable architecture, aligning with the need for building and implementing AI solutions."
-      ],
-      "Team size": null,
-      "Outcomes": "Developed a generative AI system that automates resume creation and optimizes for applicant tracking systems."
-    },
-    "Additional Relevant Experiences titles": [
-      {
-        "Title": "AI PATHFINDING",
-        "Timeline": "September 2023 - December 2023",
-        "Technologies, frameworks, and tools Used": "CI/CD | A* Algorithm | Java | Git",
-        "Skills": "AI Development",
-        "URL": null,
-        "Short Description": "Developed an AI-driven game utilizing the A* algorithm to enhance user engagement and optimize system efficiency.\n\nApplied CI/CD practices for efficient development cycles and prompt engineering to guide AI responses.\n\nSuccessfully balanced rapid development and deployment of the AI components within the project.",
-        "Key Highlights": [
-          "Applied AI development skills, aligning with the primary focus of the Applied AI Developer role.",
-          "Utilized CI/CD practices, demonstrating experience with efficient development cycles relevant to building and deploying AI solutions.",
-          "Employed prompt engineering, showcasing direct experience with a key technique used in Generative AI development.",
-          "Successfully balanced rapid development and deployment, highlighting adaptability and problem-solving skills."
-        ],
-        "Team size": null,
-        "Outcomes": "Developed an AI-driven game that utilizes the A* algorithm to enhance user engagement and optimize system efficiency."
-      }
-    ]
+    "Most Recent Experience": "ATS Pass AI",
+    "Additional Relevant Experiences title": "AI PATHFINDING"
   },
   "selection justification": {
     "reasons_for_choice": [
       {
-        "title": "ATS PASS AI",
-        "reason": "Directly matches job requirements including Generative AI, Python, and SQL, as evidenced by its utilization in developing an AI-driven system. The project highlights the applicant's understanding of AI principles and their application in a practical context."
+        "title": "ATS Pass AI",
+        "reason": "This project showcases the applicant's up-to-date skills in Java and AI, directly aligning with the company's focus on innovative software solutions. The use of Java for an AI-powered application demonstrates practical experience relevant to the job description. Additionally, the project highlights the applicant's ability to leverage advanced technologies like AI and Multi-agent Systems, indicating a strong potential for contributing to CMiC's technological advancements."
       },
       {
         "title": "AI PATHFINDING",
-        "reason": "Demonstrates relevant AI development experience, including the use of CI/CD practices and prompt engineering, directly aligning with the required skills for the Applied AI Developer role."
+        "reason": "This project demonstrates the applicant's proficiency in Java and their understanding of algorithms (A*), a crucial skill for a software engineer. The project's use of Git for version control aligns with the job description's emphasis on collaborative development practices. Furthermore, the mention of CI/CD implementation highlights the applicant's familiarity with industry-standard software development methodologies, showcasing their readiness to contribute to a professional environment like CMiC."
       }
     ],
     "rejected_experiences": [
       {
         "title": "Programming Mentor",
-        "reason": "While showcasing mentorship skills, it lacks direct relevance to AI development or the technologies specified in the job description."
+        "reason": "While this experience showcases teaching and communication skills, it lacks direct relevance to the specific technical requirements (Java, JUnit, etc.) outlined in the job description for a Junior Java Software Engineer role. The technologies and frameworks used in this role are not as closely aligned with the desired skillset."
       },
       {
         "title": "Blockchain Car Mileage Tracker",
-        "reason": "Focuses on Blockchain Development which is not a primary requirement for the Applied AI Developer role."
+        "reason": "Although this project demonstrates the applicant's versatility and interest in emerging technologies, its focus on Blockchain and Vue.js is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer position at CMiC. The technologies used in this project are less relevant compared to other experiences with a stronger Java focus."
       },
       {
         "title": "Recursive Ray Tracing",
-        "reason": "Primarily involves graphics programming, which is not a core requirement for the AI-focused position."
+        "reason": "This project highlights the applicant's understanding of 3D graphics and OpenGL but lacks direct relevance to the core Java development skills and web application context emphasized in the job description.  While demonstrating technical capability, it's less aligned with the specific requirements for this role."
       },
       {
         "title": "Bank Account System",
-        "reason": "Demonstrates object-oriented programming skills but lacks direct relevance to AI or the specified technologies."
+        "reason": "This project demonstrates foundational Java skills and object-oriented programming principles. However, it lacks the complexity and scale of other projects, making it less impactful for demonstrating the applicant's ability to handle real-world software development challenges in a professional setting."
       },
       {
         "title": "Hosting a Resume on GitHub Pages",
-        "reason": "Focuses on technical documentation and web hosting, which are not directly relevant to the AI Developer role."
+        "reason": "While showcasing the applicant's understanding of Git and basic web development practices, this project lacks the depth and complexity of other experiences to demonstrate the required skills for a Junior Java Software Engineer. The technical scope of this project is relatively limited compared to other, more relevant experiences."
       },
       {
         "title": "ELF Binary Analysis",
-        "reason": "While showcasing systems programming skills, it lacks direct relevance to Generative AI or the technologies specified in the job description."
+        "reason": "This experience showcases the applicant's debugging and system analysis skills, but its focus on C programming and Linux OS is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer position at CMiC. The project's focus on C programming, while valuable, is not as directly relevant as other experiences featuring Java development."
       },
       {
         "title": "OpenGL Sphere Lighting",
-        "reason": "Focuses on graphics programming and OpenGL, which are not primary requirements for the AI-focused position."
+        "reason": "This project demonstrates the applicant's grasp of 3D graphics concepts and OpenGL, but its lack of relevance to Java development makes it less suitable for showcasing their qualifications for the Junior Java Software Engineer role at CMiC. While technically impressive, it doesn't directly align with the specific technologies and frameworks required for the position."
       },
       {
         "title": "Reversible Learning APP",
-        "reason": "While demonstrating Android development skills, it lacks direct relevance to Generative AI or the technologies specified in the job description."
+        "reason": "Although this project highlights teamwork and Android development experience using Java, its relevance is diminished due to its age (2021).  The job description prioritizes recent experience with Java and related technologies, making this project less competitive."
       },
       {
         "title": "Connect 4 Game",
-        "reason": "Focuses on game development and AI decision-making in a limited context, lacking the breadth of experience required for the Applied AI Developer role."
+        "reason": "While showcasing the applicant's ability to implement algorithms and utilize Java for game development, this project lacks the direct relevance to web application development and enterprise software solutions emphasized in the job description. The skills demonstrated in this project are not as directly transferable to the specific requirements of the role."
       },
       {
         "title": "TCP Chat Application",
-        "reason": "While demonstrating network programming skills, it lacks direct relevance to AI development or the technologies specified in the job description."
+        "reason": "This project demonstrates the applicant's understanding of networking concepts and multithreading in Java. However, its focus on low-level networking might not be as relevant to the web application development context outlined in the job description. While showcasing technical proficiency, it might not be the most impactful experience to highlight for this particular role."
       },
       {
         "title": "Data Visualization with R",
-        "reason": "Focuses on data analysis and visualization, which are not the primary skills required for the Applied AI Developer role."
+        "reason": "While data analysis is a valuable skill, this project's focus on R programming is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer role at CMiC. The project's emphasis on R programming, while useful in certain contexts, is less aligned with the core technologies required for this specific position."
       },
       {
         "title": "Portfolio Website",
-        "reason": "While showcasing web development skills, it lacks direct relevance to AI development or the specified technologies."
+        "reason": "While demonstrating web development skills, this project primarily uses React and related technologies, which are not the primary focus of the Junior Java Software Engineer position at CMiC.  While a portfolio is valuable, the technologies used (React, GraphQL) are not as directly aligned with the job description's emphasis on Java and related frameworks."
       },
       {
         "title": "CPU Scheduling",
-        "reason": "Focuses on systems programming and operating systems concepts, which are not the core requirements for the Applied AI Developer role."
+        "reason": "This project showcases the applicant's ability to work with C and multithreading concepts, but it lacks direct relevance to the Java-based web application development context emphasized in the job description. The project's focus on low-level system programming, while demonstrating technical capability, is not as directly applicable to the requirements of this particular role."
+      },
+      {
+        "title": "Go-Back-N Protocol Simulation",
+        "reason": "This project demonstrates the applicant's understanding of networking protocols, but its focus on Python and simulation might not be directly relevant to the practical Java development skills required for the Junior Java Software Engineer role. While highlighting technical understanding, it doesn't directly translate to the specific technologies and frameworks required for the position."
       }
     ]
   }

@@ -1,54 +1,76 @@
-Klick logo
-Klick
-Applied AI Developer 
-Toronto, ON · Reposted 13 hours ago · Over 100 applicants
-Hybrid  Full-time  Entry level
-1,001-5,000 employees · Advertising Services
-1 connection works here · 1 school alum works here
-7 of 10 skills match your profile - you may be a good fit
-See how you compare to over 100 other applicants. Reactivate Premium
+Junior Java Software Engineer
+CMiC
+3.4
+3.4 out of 5 stars
+Toronto, ON
+Full-time
+Responded to 51-74% of applications in the past 30 days, typically within 2 days.
 
+Job
 
-Find me similar jobs
+Company
+Profile insights
+Here’s how the job qualifications align with your profile.
+Skills
 
-How should I prepare for an interview?
+XML
 
-Tell me more about Klick
+JavaScript
 
-Applied 3 weeks ago
-See applicationApplied 3 weeks ago for Applied AI Developer
-Share
-Show more options
-Recommended for you
-Prepare for interviews
-Practice your answers to common interview questions and get feedback.
-About the job
-We are seeking an Applied AI Developer, an expert in generative AI and Large Language Models (LLMs), to join our team. In this role, you would be responsible for building and implementing a wide range of systems that use Generative AI to solve real-world business problems. This is not an R&D role. You will be applying existing generative AI technologies not creating new ones. You will work closely with various internal stakeholders, assessing project feasibility and overseeing the building and implementation of a diverse portfolio of projects. If you excel in translating complex AI requirements into fully-realized, innovative solutions, we’d love to hear from you.
+J2EE
++ show more
 
-Key Responsibilities: 
+Do you have experience in J2EE?
+&nbsp;
+Job details
+Here’s how the job details align with your profile.
+Job type
 
-Building AI Solutions: Lead the development of AI solutions, ensuring alignment with stakeholder requirements and organizational goals. You will oversee the entire development process, from initial conception to full-fledged implementation
-Coding & Prompt Engineering: Utilize Python to integrate various AI services and APIs, creating cohesive AI systems. In prompt engineering, you’ll craft and refine user inputs to effectively guide AI responses, ensuring accurate and contextually relevant outcomes
-Feasibility Assessment: Collaborate with stakeholders to assess project feasibility and craft workable action plans based on client requirements
-Collaboration & Training: Work with tech teams, delegating components as necessary, and communicate generative AI concepts in clear, accessible language
-Defensive Design Strategy: Develop AI solutions with safeguards against abuse, misuse, and prompt injection, ensuring robust, secure systems in line with healthcare standards.
+Full-time
+&nbsp;
+Location
+Toronto, ON
+&nbsp;
+Benefits
+Pulled from the full job description
+Dental care
+Paid vacation
+RRSP match
+Wellness program
+&nbsp;
+Full job description
+About CMiC
 
+Headquartered in Toronto, CMiC is a software company focused on the Construction industry. We have built a comprehensive platform for construction companies to manage their most important workflows. Our customers can choose between a Cloud or Self-Hosted deployment that includes industry focused modules to manage everything from Financials and Payroll to Project Management and Job Costing. We have a strong market share in North America and rapidly expanding internationally in regions like Europe, Southeast Asia and the Middle East.
 
-Required Skills: 
+Job Overview
 
-Expert knowledge of how to apply generative AI - LLMs such as GPT, LLaMa, and Claude
-Proficiency in Python, and APIs such as OpenAI, Azure AI, Amazon Bedrock, and Google Vertex 
-Ability to balance rapid proof of concept development with full-stack deployment
-Proven experience in developing Generative AI solutions
+The TOOLS team created and maintained several versions of a dynamic engine that generates screens (web pages) based on metadata. The screens are completely dynamic and user configurable, including components, layout, business rules and validations. The engine is written primarily java (ADF framework) and xml with a bit of HTML CSS, JavaScript.
 
+Responsibilities
 
-Desirable Qualifications: 
+Creating unit tests
+Code refactoring
+implement new code / fix bugs
+Work in a large dev team and work closely with other developers
+Participate in daily meetings
+Requirements
 
-Excellent communication skills, particularly when explaining complex technical concepts to non-technical stakeholders
-Knowledge of healthcare regulations is a significant plus
-Front-end development experience is beneficial but not required.
+A degree, certificate or diploma in a relevant area of study is a plus
+Excellent communication skills – both written and oral.
+Java
+Junit 4
+J2EE knowledge is a strong plus
+JSF knowledge is a strong plus
+Benefits
 
-
-Klick is consciously creating a culture where everyone can thrive and grow in their careers. We believe that our best work comes from our diverse backgrounds, perspectives, and skills. We strongly encourage members of historically underrepresented communities to apply, including Black people, Indigenous peoples, and other people of colour, people with disabilities, people from gender and sexually diverse communities and people with intersectional identities.
-
-We’re also committed to developing an inclusive, barrier-free recruitment process and work environment. Should you require any accommodation, please contact us at careers@klick.com and we will work with you to meet your accessibility needs and ensure you have a positive experience.
+Competitive benefits Package (including Health & Dental benefits)
+Paid vacation and personal days
+Townhall meetings where all employees are encouraged to participate in open discussions
+Located on York University’s campus, easily accessible by transit (TTC, GO, etc.), walking distance to shopping and restaurants
+Outdoor lunch space, including picnic tables
+An active Social Events Committee (past events include annual seasonal parties, pool and bowling tournaments, karaoke nights, Game nights, BBQ’s, and more)
+Health and Wellness focus including virtual yoga classes and wellness webinars
+RRSP Matching Program after 2 years of employment
+Experience in a rapidly growing, socially responsible corporation
+CMiC is an Equal Opportunity Employer. In accordance with the Accessibility for Ontarians with Disabilities Act, 2005 and the Ontario Human Rights Code, CMiC will provide accommodation to applicants with disabilities throughout the recruitment, selection and/or assessment process. If selected to participate in the recruitment, selection and/or assessment process, please inform Human Resources staff of the nature of any accommodation(s) that you may require.

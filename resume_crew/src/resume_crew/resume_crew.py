@@ -3,8 +3,6 @@
 	Author: Saif Mahmud
 	Date: 04-23-2024
 	Description: This file contains the crew class for the applicant info organizer crew.
-
-
 """
 
 import datetime
@@ -76,7 +74,7 @@ class ResumeCrew:
 		my_tasks = []
 		
 		if(not self.profile_already_created()):
-			my_tasks.append(self.			comprehensive_applicant_information_extraction())
+			my_tasks.append(self.profile_builder_task())
 			my_tasks.append(self.work_experience_extraction_task())
 			my_tasks.append(self.project_experience_extraction_task())
 			my_tasks.append(self.skills_extraction_task())
@@ -94,6 +92,7 @@ class ResumeCrew:
 		my_tasks.append(self.experience_choosing_task()) 
 		my_tasks.append(self.split_context_of_experience_choosing_task())
 		my_tasks.append(self.gather_info_of_chosen_experiences())
+		
 		my_tasks.append(self.ats_friendly_keywords_into_experiences_task()) 
 		my_tasks.append(self.split_context_of_ats_friendly_keywords_into_experiences())
 
@@ -281,7 +280,7 @@ class ResumeCrew:
 		else :	
 			# insert the profile_builder_task at the beginning of the context
 			print("Profile not found. Will wait for the profile to be built.")
-			context.insert(0, self.comprehensive_applicant_information_extraction()) 
+			context.insert(0, self.profile_builder_task()) 
 
 		if(self.debugFlag):
 			pathsArr = [
@@ -303,10 +302,10 @@ class ResumeCrew:
 
 
 	@task
-	def comprehensive_applicant_information_extraction(self):
+	def profile_builder_task(self):
 
 		# Load YAML file
-		yaml = self.yaml_loader('comprehensive_applicant_information_extraction')
+		yaml = self.yaml_loader('profile_builder_task')
 		expected_output = yaml[1]
 
 		description = yaml[0].format(applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"]))
@@ -456,15 +455,15 @@ class ResumeCrew:
 	def correct_categorization_of_skills_task(self):
 		# Load YAML file
 		yaml = self.yaml_loader('correct_categorization_of_skills_task')
-		task_description = yaml[0]
+
+		applicant_skills = self.load_file(PATHS["skills_extraction_task"])
+
+		task_description = yaml[0].format(applicant_skills = applicant_skills)
 		expected_output = yaml[1]
 
-		task_description = task_description + "\n" + self.load_file(PATHS["skills_extraction_task"])
 
 		if(self.debugFlag):
 			task_description = task_description + "\n" + self.load_file(PATHS["split_context_of_ats_friendly_skills_task"])
-
-		
 
 		return Task(
 			description=task_description,
@@ -550,6 +549,29 @@ class ResumeCrew:
 			callback=self.small_token_limiter	
 		)
 
+	# @task
+	# def add_url_to_the_experiences(self):
+	# 	# Load YAML file
+	# 	yaml = self.yaml_loader('add_url_to_the_experiences')
+	# 	task_description = yaml[0]
+	# 	expected_output = yaml[1]
+
+		
+ 
+	# 	if(self.debugFlag):
+	# 		task_description = task_description + "\n" + self.load_file(PATHS["gather_info_of_chosen_experiences"])
+
+	# 	task_description = task_description + "\n" + self.load_file(PATHS["applicant_info_organized"])
+
+	# 	return Task(
+	# 		description=task_description,
+	# 		expected_output=expected_output,
+	# 		agent=self.experience_selector_agent(),
+	# 		context=[self.gather_info_of_chosen_experiences()],
+	# 		output_file=PATHS["add_url_to_the_experiences"],
+	# 		callback=self.large_token_limiter
+	# 	)
+
 	@task
 	def ats_friendly_keywords_into_experiences_task(self):
 		# Load YAML file
@@ -588,7 +610,7 @@ class ResumeCrew:
 		return Task(
 			description=task_description,
 			expected_output=expected_output,
-			agent=self.generalist_agent(),
+			agent=self.ats_keyword_integration_agent(),
 			context=[self.ats_friendly_keywords_into_experiences_task()],
 			output_file=PATHS["split_context_of_ats_friendly_keywords_into_experiences"],
 			callback=self.small_token_limiter
@@ -625,7 +647,7 @@ class ResumeCrew:
 			expected_output=expected_output,
 			agent=self.career_objective_agent(),
 			callback=self.small_token_limiter,
-			context=[self.correct_categorization_of_skills_task(), self.comprehensive_applicant_information_extraction()],
+			context=[self.correct_categorization_of_skills_task(), self.profile_builder_task()],
 			output_file=PATHS["career_objective_task"],
 		)
 	

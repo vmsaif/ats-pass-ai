@@ -54,9 +54,9 @@ def main():
     project_c_path = os.path.normpath(project_c_path)
 
     startFresh(
-        # delete_resume_profiles = True,
-        # delete_latex_files = True, 
-        # deleteDB = True, 
+        # delete_resume_profiles = True, # Delete the previous applicant profile files for new applicants
+        # delete_latex_files = True, # Delete the pre-task files for the Omega Theme Crew
+        # deleteDB = True, # Delete the database files
         # delete_llm_task_output_dir = True, 
         # delete_info_files = False
     )
@@ -64,10 +64,10 @@ def main():
     # Define the command to run in each project
 
     try:
-        # run_poetry_project(project_a_path, info_collection, job_description)
-        # time.sleep(10)
-        # run_poetry_project(project_b_path, resume_crew)
-        # time.sleep(10)
+        run_poetry_project(project_a_path, info_collection, job_description)
+        time.sleep(10)
+        run_poetry_project(project_b_path, resume_crew)
+        time.sleep(10)
         run_poetry_project(project_c_path, omega_theme_crew)
     except Exception as e:
         print(f"Error running projects: {e}")
@@ -157,7 +157,6 @@ def startFresh(
         delete_llm_task_output_dir: bool = False, 
         delete_info_files: bool = False):
     
-        # delete all files recursively from a given directory
         """
         Delete the applicant profile files but not the folder, optionally delete pre-task files.
         

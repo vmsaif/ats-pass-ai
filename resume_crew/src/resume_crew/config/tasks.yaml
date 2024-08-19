@@ -3,7 +3,7 @@
 # Description: This file contains the task descriptions for the 'ATS Pass AI' project.
 # Version: 1.0
 
-comprehensive_applicant_information_extraction :
+profile_builder_task :
   description: >
     This task involves extracting comprehensive information about an applicant across multiple dimensions including personal information, education, volunteer work, awards, references, and personal traits, any philosophy, and goals. The information will be extracted from a structured data source provided in the context.
     
@@ -400,9 +400,6 @@ ats_friendly_skills_task:
       }
     }
 
-
-
-
 split_context_of_ats_friendly_skills_task:
   description: >
     Split the context provided to you at the breaking point "missing_keywords_from_the_applicant_skills". In your output, you will provide everything before the "missing_keywords_from_the_applicant_skills".
@@ -444,10 +441,12 @@ correct_categorization_of_skills_task:
     - If a skill does not fit any existing category, create a new category that accurately represents its field of application.
 
     **Output**:
-    - Provide a list with skills accurately placed in categories that reflect their industry and functional relevance. Each category should have 3-5 skills for balance. Keep upto 6 categories in the final output. 
+    - Provide a list with skills accurately placed in categories that reflect their industry and functional relevance. Each category should have 3-5 skills for balance. Keep upto 5 categories in the final output. 
     
     Remember, "exact_match_with_job_description" and "partial_match" are most prioritized. If their count is not enough to fill the categories, you can add some skills from the "Applicant's Skills" list. Maintain priority for the exact and partial matches and its categories first.
 
+    Here is the list of all the skills the applicant has:
+    {applicant_skills}
 
   expected_output: >
     {
@@ -477,11 +476,6 @@ correct_categorization_of_skills_task:
           "item 2",
           ...
         ],
-        "(another Category name if needed)": [
-          "item 1",
-          "item 2",
-          ...
-        ]
       }
     }
 
@@ -489,7 +483,7 @@ correct_categorization_of_skills_task:
 
 experience_choosing_task:
   description: >
-    Select the top 2 relevant experiences in total from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
+    Select the otal of 2 most relevant experiences from the applicant's work and project history based on the provided job description. Evaluate experiences ensuring relevance and recency, without favoring work over project types.
 
     **Selection Criteria**:
 
@@ -506,52 +500,11 @@ experience_choosing_task:
     {jd_keyword}
     --- Job Description ends here ---
 
-
   expected_output: >
     {
       "selected experiences": {
-        "Most Recent Experience": {see the format below},
-        "Additional Relevant Experiences titles": {see the format below}
-        If it is a work experience, Follow this format:
-        "Example Work Experience": [
-          {
-            "Title": "",
-            "Company Name": "",
-            "Timeline": "",
-            "Technologies, frameworks, and tools Used": "",
-            "Skills": "",
-            "URL": "",
-            "Short Description": "",
-            "Key Highlights": [ (Aim for 4 key highlights)
-              "",
-              "",
-              "",
-              ""
-            ],
-            "Team size": "",
-            "Outcomes": ""
-          }
-        ]
-
-        If it is a Project Experience, Follow this format:
-        "Example Project Experience, academic Experience": [
-          {
-            "Title": "",
-            "Timeline": "",
-            "Technologies, frameworks, and tools Used": "",
-            "Skills": "",
-            "URL": "",
-            "Short Description": "",
-            "Key Highlights": [ (Aim for 4 key highlights)
-              "",
-              "",
-              "",
-              ""
-            ],
-            "Team size": "",
-            "Outcomes": ""
-          }
-        ]
+        "Most Recent Experience": "Title Only"
+        "Additional Relevant Experiences title": "Title Only"
       },
       "selection justification": {
         "reasons_for_choice": [
@@ -584,11 +537,68 @@ gather_info_of_chosen_experiences:
   description: >
     Append any missing details or information related to the each of the "selected experiences title" 
 
-    Specifically, look for any link, url associated with the objects and include them in the output. If there is no URL provided, you can leave the field empty.
+  expected_output: >
+    "selected experiences": {
+        "Most Recent Experience": {see the format below},
+        "Additional Relevant Experiences title": {see the format below}
+        If it is a work experience, Follow this format:
+        "Example Work Experience": [
+          {
+            "Title": "",
+            "Company Name": "",
+            "Timeline": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "URL/Link": "",
+            "Short Description": "",
+            "Key Highlights": [ (Aim for 4 key highlights)
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+
+        If it is a Project Experience, Follow this format:
+        "Example Project Experience, academic Experience": [
+          {
+            "Title": "",
+            "Timeline": "",
+            "Technologies, frameworks, and tools Used": "",
+            "Skills": "",
+            "URL/Link": "",
+            "Short Description": "",
+            "Key Highlights": [ (Aim for 4 key highlights)
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Team size": "",
+            "Outcomes": ""
+          }
+        ]
+      },
+    
+add_url_to_the_experiences:
+  description: >
+    You are provided 2 contexts. One is the name of 2 experiences mentioned in the "selected experiences" section. The other context is a large context which might contain the URL or link to the "selected experiences".
+
+    Your task is to search for the URL or link in the context and add it to the respective experience mentioned in the "selected experiences" section. 
+    
+    Procedure:
+    - Look for all the information provided in the context related to the experiences mentioned in the "selected experiences" section all over the context. There is a possibility that the URL or link might be mentioned in different parts of the context where the experiences are mentioned. One place might say there is no URL or link, but there might be a URL or link in another part of the context associated with the experiences.
+
+    - If you find the URL or link, add it to the respective experience mentioned in the "selected experiences" section. If the URL is not available, leave the field empty.  
 
   expected_output: >
-    Same JSON structure as the input context but with the addition of the missing information.
-    
+    Search for the URL or link in the context and add it to the respective experience mentioned in the "selected experiences" section. If the URL is not available, leave the field empty.
+
+    You are looking to edit "URL/Link" field in the experiences.
+
     
 ats_friendly_keywords_into_experiences:
   description: >
@@ -600,7 +610,7 @@ ats_friendly_keywords_into_experiences:
       - **Conciseness and Clarity:** 
         -- Limit the short description to 10-15 words, focusing on a concise summary of the experience. Make sure it is not redundant with the key highlights below.
         -- Keep or make 3 best key highlights for each experience, focusing on the most impactful achievements or skills.
-        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 10-20 words per key highlight. 
+        -- Employ powerful action verbs and succinct phrases to convey significant achievements in approximately 15 tokens.
         - **Contextual Accuracy:** Choose keywords that accurately reflect the skills and responsibilities in the experience. Avoid using keywords that misrepresent the applicant's role or contributions.
       - you are also provided a list of "missing_from_the_applicant_skills" which are in the job description but not in the applicant's experiences. Try to weave some of these words where they fit naturally.
       - **Avoid Keyword Overload:** Maintain a balanced use of keywords to ensure natural readability and effectiveness of the description.
@@ -610,8 +620,6 @@ ats_friendly_keywords_into_experiences:
 
     **Missing from the Applicant's Skills:**
     Provided in the context.
-
-    Count the total number of experiences. After enhancing the descriptions, provide a detailed report that specifies the changes made, especially any keywords that were integrated.
 
     When you are done with listing the experiences with integrated keywords, provide a detailed report on changes in a new section ## Report on Changes:
 
@@ -635,8 +643,8 @@ ats_friendly_keywords_into_experiences:
       "Technologies": "",
       "skills": "",
       "URL": "",
-      "Short Description": "(About 10-13 words)",
-      "Key Highlights": [(Up to 3 key highlights but not required to be 3), upto 10-20 words each
+      "Short Description": "(About 10 tokens)",
+      "Key Highlights": [(Up to 3 key highlights.), around 15 tokens each
         "",
         "",
         ""
@@ -654,8 +662,8 @@ ats_friendly_keywords_into_experiences:
       "Technologies": "",
       "skills": "",
       "URL": "",
-      "Short Description": "(About 15 words)",
-      "Key Highlights": [(Up to 3 key highlights but not required to be 3), upto 10-20 words each
+      "Short Description": "(About 10 tokens)",
+      "Key Highlights": [(Up to 3 key highlights), around 15 tokens each
         "",
         "",
         ""
@@ -667,7 +675,6 @@ ats_friendly_keywords_into_experiences:
     This should maintain the original structure as in the input context, with the addition of the integrated keywords.
     {
       "applicant's Experiences with ATS Keywords": {
-        "total object count:": "integer value",
         "Most Recent Experience": {},
         "Work Experience/Project Experience": {},
       }

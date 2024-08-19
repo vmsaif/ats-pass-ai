@@ -1,48 +1,115 @@
 {
   "Applicant's Skills": {
-    "Programming Languages": ["Python", "Java", "C++", "C", "JavaScript", "R"],
-    "Frontend Development": ["React", "CSS", "HTML", "JavaScript", "Vue.js"],
-    "Backend Development": ["Python", "Java", "Node.js"],
-    "Mobile Development": ["Android Studio", "Java"],
-    "Game Development": ["OpenGL", "C++"],
-    "Database Management": ["SQL", "HSQLDB"],
-    "Data Science": ["Python", "R", "Data Visualization"],
-    "AI": ["AI Decision-Making", "LangChain", "OpenAI API", "Google Gemini Pro", "A* Algorithm", "RAG Search", "Multiagent Systems"],
-    "DevOps": ["Docker", "CI/CD", "GitHub Actions"],
-    "Operating Systems": ["Linux"],
-    "Networking": ["TCP/IP", "Multithreading"],
-    "Cloud Computing": ["GitHub Pages"],
-    "Version Control": ["Git"],
-    "Documentation": ["Markdown", "Technical Writing"],
-    "Software Design": ["Object-Oriented Programming"],
-    "Shell Scripting": ["Bash"],
-    "Graphics Programming": ["OpenGL", "3D Graphics"],
-    "Data Analysis": ["R", "Data Visualization"],
+    "Programming Languages": [
+      "Python",
+      "Java",
+      "C++",
+      "C",
+      "R"
+    ],
+    "Frontend Development": [
+      "Vue.js",
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "Backend Development": [
+      "Python",
+      "Java"
+    ],
+    "Mobile Development": [
+      "Java",
+      "Android Studio"
+    ],
+    "Game Development": [
+      "3D Graphics",
+      "OpenGL",
+      "C++"
+    ],
+    "Database Management": [
+      "SQL",
+      "HSQLDB"
+    ],
+    "Data Science": [
+      "Python",
+      "SQL",
+      "R",
+      "Data Visualization"
+    ],
+    "AI": [
+      "Multiagent Systems",
+      "RAG (Retrieval Augmented Generation)",
+      "A* Search Algorithm",
+      "AI Decision-Making",
+      "LangChain",
+      "OpenAI API",
+      "Google Gemini Pro",
+      "CrewAI",
+      "GPT-4",
+      "LLaMA 2",
+      "AWS Sagemaker",
+      "Google Vertex AI",
+      "AWS Bedrock"
+    ],
+    "DevOps": [
+      "Docker",
+      "CI/CD",
+      "GitHub Actions"
+    ],
+    "Operating Systems": [
+      "Linux",
+      "File Systems",
+      "System Programming"
+    ],
+    "Networking": [
+      "TCP/IP",
+      "Client-Server Communication",
+      "Networking"
+    ],
+    "Cloud Computing": [
+      "AWS Sagemaker",
+      "Google Vertex AI",
+      "AWS Bedrock"
+    ],
+    "Version Control": [
+      "Git"
+    ],
+    "Documentation": [
+      "Markdown"
+    ],
+    "Software Design": [
+      "Object-Oriented Programming"
+    ],
+    "Shell Scripting": [
+      "Bash"
+    ],
+    "Graphics Programming": [
+      "OpenGL"
+    ],
     "Project Management": [],
     "UI/UX Design": [],
-    "Productivity Software": [],
-    "Soft Skills": ["Teamwork", "Adaptability", "Communication", "Problem Solving", "Critical Thinking", "Time Management"],
-    "Driving": [],
-    "Programming Concepts": ["File I/O", "Polymorphism", "Debugging", "Multithreading"],
-    "Software Development": ["Cross-Platform Deployment"],
-    "Web Development": ["Jekyll", "Styled-Components"],
-    "Data Analysis (Microsoft Excel)": [],
-    "Projects": ["ATS PASS AI",
-      "Blockchain Car Mileage Tracker",
-      "AI PATHFINDING",
-      "Recursive Ray Tracing",
-      "Bank Account System",
-      "Hosting a Resume on GitHub Pages",
-      "ELF Binary Analysis",
-      "ELF Binary Analysis",
-      "OpenGL Sphere Lighting",
-      "Reversible Learning APP",
-      "Connect 4 Game",
-      "TCP Chat Application",
-      "Data Visualization with R",
-      "Portfolio Website",
-      "CPU Scheduling",
-      "Go-Back-N Protocol Simulation"],
-    "Virtual Environments": []
+    "Soft Skills": [
+      "Teamwork",
+      "Adaptability",
+      "Critical Thinking",
+      "Time Management",
+      "Communication",
+      "Problem Solving"
+    ],
+    "Programming Concepts": [
+      "File I/O",
+      "Polymorphism",
+      "Debugging",
+      "Multithreading"
+    ],
+    "Software Development": [],
+    "Web Development": [
+      "Jekyll",
+      "Styled-Components",
+      "Chart.js",
+      "Apollo",
+      "GraphQL"
+    ]
   }
 }

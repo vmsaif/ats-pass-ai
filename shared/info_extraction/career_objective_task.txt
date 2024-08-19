@@ -1,3 +1,3 @@
 {
-  "Career Objective": "Passionate Applied AI Developer eager to contribute to Klick's mission of empowering healthcare professionals. With expertise in LangChain, Google Gemini Pro, and GPT, I aim to leverage AI's capabilities to enhance patient care and advance Klick's commitment to creating an inclusive, barrier-free work environment."
+  "Career Objective": "Driven and enthusiastic Junior Java Software Engineer seeking to contribute to CMiC's commitment to innovation in the construction industry, leveraging my technical proficiency and passion for delivering reliable solutions."
 }

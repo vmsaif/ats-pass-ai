@@ -1,57 +1,57 @@
-```json
 {
   "exact_match_with_job_description": {
-    "Programming Languages": ["Python"],
-    "Database Management": [],
-    "AI": ["OpenAI"]
+    "Programming Languages": ["Java"],
+    "Frontend Development": ["HTML", "CSS", "JavaScript"],
+    "Soft Skills": ["Teamwork", "Adaptability", "Communication", "Problem Solving"]
   },
   "partial_match": {
-    "Programming Languages": [
-      {
-        "Job Description Skill": "JavaScript",
-        "Applicant's Related Skill": "JavaScript",
-        "Relevance": "Applicant lists JavaScript in their programming languages, which is used for both frontend and backend development and can be relevant in an AI context."
-      }
-    ],
-    "AI": [
-      {
-        "Job Description Skill": "Generative AI",
-        "Applicant's Related Skill": "LangChain",
-        "Relevance": "LangChain is a framework specifically designed for developing applications with large language models, indicating experience in Generative AI."
-      },
-      {
-        "Job Description Skill": "LLMs",
-        "Applicant's Related Skill": "Google Gemini Pro",
-        "Relevance": "Google Gemini Pro is a large language model, demonstrating the applicant's familiarity with LLMs"
-      },
-      {
-        "Job Description Skill": "LLMs",
-        "Applicant's Related Skill": "GPT",
-        "Relevance": "The applicant lists GPT, which stands for Generative Pre-trained Transformer, highlighting experience with a key type of LLM."
-      },
-      {
-        "Job Description Skill": "APIs",
-        "Applicant's Related Skill": "OpenAI API",
-        "Relevance": "Experience with the OpenAI API is directly relevant, showing the applicant's ability to interact with AI models programmatically."
-      }
-    ],
-    "Soft Skills": [
-      {
-        "Job Description Skill": "Communication Skills",
-        "Applicant's Related Skill": "Communication",
-        "Relevance": "The applicant lists communication as a soft skill, which is essential for collaborating with stakeholders and explaining technical concepts."
-      },
-      {
-        "Job Description Skill": "Collaboration",
-        "Applicant's Related Skill": "Teamwork",
-        "Relevance": "Listing teamwork as a soft skill suggests the applicant's ability to collaborate effectively in a team environment."
-      }
-    ]
+    "Programming Languages": [], 
+    "Frontend Development": [],
+    "Backend Development": [],
+    "Mobile Development": [],
+    "Game Development": [],
+    "Database Management": [],
+    "Data Science": [],
+    "AI": [],
+    "DevOps": [],
+    "Operating Systems": [],
+    "Networking": [],
+    "Cloud Computing": [],
+    "Version Control": [],
+    "Documentation": [],
+    "Software Design": [],
+    "Shell Scripting": [],
+    "Graphics Programming": [],
+    "Project Management": [],
+    "UI/UX Design": [],
+    "Soft Skills": [],
+    "Programming Concepts": [],
+    "Software Development": [],
+    "Web Development": []
   },
   "missing_keywords_from_the_applicant_skills": {
-    "Programming Languages": ["Ruby"],
-    "AI": ["LLaMa", "Claude", "Azure AI", "Amazon Bedrock", "Google Vertex", "Prompt Engineering", "Full-stack deployment", "Defensive Design Strategy"],
-    "Soft Skills": ["Project Feasibility Assessment"]
+    "Programming Languages": ["JUnit 4", "XML"],
+    "Frontend Development": [],
+    "Backend Development": [],
+    "Mobile Development": [],
+    "Game Development": [],
+    "Database Management": [],
+    "Data Science": [],
+    "AI": [],
+    "DevOps": [],
+    "Operating Systems": [],
+    "Networking": [],
+    "Cloud Computing": [],
+    "Version Control": [],
+    "Documentation": [],
+    "Software Design": [],
+    "Shell Scripting": [],
+    "Graphics Programming": [],
+    "Project Management": [],
+    "UI/UX Design": [],
+    "Soft Skills": [],
+    "Programming Concepts": [],
+    "Software Development": ["Unit Testing", "Code Refactoring", "Bug Fixing", "Agile Development", "Software Development Life Cycle (SDLC)"],
+    "Web Development": []
   }
 }
-```

@@ -1,0 +1,22 @@
+**Summary of Junior Java Software Engineer Job Description**
+
+The Junior Java Software Engineer at CMiC is responsible for various tasks related to software development, including:
+
+**Responsibilities:**
+
+* Creating unit tests
+* Refactoring code
+* Implementing new code and fixing bugs
+* Collaborating with other developers in a large team setting
+* Participating in daily meetings
+
+**Requirements:**
+
+* Degree, certificate, or diploma in a relevant field (preferred)
+* Excellent written and oral communication skills
+* Proficiency in Java
+* Familiarity with Junit 4
+* Strong knowledge of J2EE (preferred)
+* Knowledge of JSF (preferred)
+
+This summary provides a concise overview of the essential responsibilities and qualifications for the Junior Java Software Engineer role, enabling the selection of relevant sections from an applicant's resume for further evaluation.

@@ -75,6 +75,7 @@ PATHS = {
     "experience_choosing_task": f"{pre_tasks_dir}/experience_choosing_task.txt",
     "split_context_of_experience_choosing_task": f"{pre_tasks_dir}/split_context_of_experience_choosing_task.txt",
     "gather_info_of_chosen_experiences": f"{pre_tasks_dir}/gather_info_of_chosen_experiences.txt",
+    "add_url_to_the_experiences": f"{pre_tasks_dir}/add_url_to_the_experiences.txt",
     "ats_friendly_keywords_into_experiences": f"{pre_tasks_dir}/ats_friendly_keywords_into_experiences.txt",
     "split_context_of_ats_friendly_keywords_into_experiences": f"{info_extraction_dir}/split_context_of_ats_friendly_keywords_into_experiences.txt",
 

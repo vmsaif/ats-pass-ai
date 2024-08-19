@@ -34,6 +34,7 @@ ATS Pass AI is an innovative tool designed to automate the creation of personali
 
 The system aims to achieve at least an 85% keyword match with job descriptions, ensuring that the resumes are tailored and ATS-friendly. Here are some practical examples of how this AI system can help you tailor a resume that stands out:
 
+```plaintext
 **Example 1:**
 - **Original Sentence:** "Applied expertise in Generative AI and RAG Search, showcasing a strong understanding of core concepts sought after for this role."
 - **Revised Sentence:** "Applied expertise in **Generative AI** and RAG Search, showcasing a strong understanding of **LLMs**."
@@ -45,9 +46,11 @@ The system aims to achieve at least an 85% keyword match with job descriptions, 
 - **Revised Sentence:** "Led multiple software development projects, focusing on **operational efficiency** and team collaboration."
 - **Keywords Added:** "operational efficiency"
 - **Rationale:** Highlighting "operational efficiency" as it is mentioned in the job description, emphasizing the applicant's alignment with the role's requirements. It also removes the redundant term "high-performing."
+```
 
-### Experience Selection Rationale:
+### Example: Experience Selection Rationale:
 
+```plaintext
 **Selected for the Resume:**
 - **ATS Pass AI:** Directly matches job requirements including Generative AI, Python, and SQL, as evidenced by its utilization in developing an AI-driven system. The project highlights the applicant's understanding of AI principles and their application in a practical context.
 - **AI Pathfinding:** Demonstrates relevant AI development experience, including the use of CI/CD practices and prompt engineering, directly aligning with the required skills for the Applied AI Developer role.
@@ -56,24 +59,25 @@ The system aims to achieve at least an 85% keyword match with job descriptions, 
 - **Programming Mentor:** While showcasing mentorship skills, it lacks direct relevance to AI development or the technologies specified in the job description.
 - **Blockchain Car Mileage Tracker:** Focuses on Blockchain Development, which is not a primary requirement for the Applied AI Developer role.
 - **Recursive Ray Tracing:** Primarily involves graphics programming, which is not a core requirement for the AI-focused position.
+```
 
 Similarly, the system can identify and add relevant keywords, rephrase sentences, prioritize key skills, and optimize the resume's content to align with the job description. This level of customization ensures that the resume is not only ATS-friendly but also tailored to the specific requirements of the job.
 
-## Current Development Status 🚀
+## Stages of Generating the Resume 🚀
 
 The project is currently in the **active development stage**. The following features have been implemented:
 
 1. **User Information Collection** 📋
-   - The system can extract and organize user data provided by the user in an unorganized way. *(Completed)* ✅
+   - The system can extract and organize user data provided by the user in an unorganized way. 
 
 2. **Job Description Analysis** 🤝
-   - The system can analyze job descriptions to identify key keywords and requirements. *(Completed)* ✅
+   - The system can analyze job descriptions to identify key keywords and requirements.
 
 3. **Resume Creation** 🧑‍💼
-   - The system can integrate user information with job description analysis to draft resumes. *(Completed)* ✅
+   - The system can integrate user information with job description analysis to draft resumes.
 
 4. **LaTeX Resume Generation** 🛠️
-   - The system can convert finalized resumes into professionally formatted LaTeX documents. *(95%)* ⏳
+   - The system can convert finalized resumes into professionally formatted LaTeX documents.
 
 ## An Overview of the System
 The user begins by providing their information however they see fit, also can upload their resume. Then the system will extract and organize the user data and understand the user's skills and experiences. The user can then upload job descriptions which will be analyzed to identify key phases, keywords and requirements. 
@@ -143,3 +147,8 @@ Wait for the program to finish processing. The approximate time is 7 minutes.
 ### 7. Retrieve Your Resumes
 - Find the generated resumes in the output/ directory.
 
+## Sample Output
+
+<!-- assets\images\Resume_Example.png -->
+
+![Resume Example](theme_crews/omega_theme_crew/assets/images/Resume_Example.png)

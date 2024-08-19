@@ -1,8 +1,10 @@
 {
-    "company_name": "Klick",
-    "Job_title": "Applied AI Developer",
+    "company_name": "CMiC",
+    "Job_title": "Junior Java Software Engineer",
     "Information needed to create a compelling career objective or summary": [
-      "Klick is a company that values diversity, growth, and creating an environment where everyone can thrive in their careers. They believe that their best work comes from the diverse backgrounds, perspectives, and skills of their employees."
+      "CMiC, a construction software company headquartered in Toronto, is driven by a commitment to providing innovative solutions to its customers."
     ],
-    "Phases used in the job description that reflect the company's values and culture": [ "consciously creating a culture where everyone can thrive and grow in their careers", "our best work comes from our diverse backgrounds, perspectives, and skills", "committed to developing an inclusive, barrier-free recruitment process and work environment." ]
+    "Phases used in the job description that reflect the company's values and culture": [
+      "CMiC is an Equal Opportunity Employer"
+    ]
 }
