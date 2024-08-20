@@ -17,6 +17,7 @@ This is the main script that runs the three projects in the ATS Pass AI pipeline
 
 import subprocess
 import os
+import sys
 from textwrap import dedent
 import time
 from shared.src.path.output_file_paths import PATHS
@@ -28,11 +29,11 @@ def main():
     Run the three projects in the ATS Pass AI pipeline.
 
     Args:
-        None
+
 
     Returns:
         None    
-    """
+    """   
 
     # Define the paths to the projects relative to this script
 
@@ -52,13 +53,14 @@ def main():
 
     project_c_path = os.path.join(current_directory, 'theme_crews', omega_theme_crew)
     project_c_path = os.path.normpath(project_c_path)
-
-    startFresh(
-        # delete_resume_profiles = True, # Delete the previous applicant profile files for new applicants
-        # delete_latex_files = True, # Delete the pre-task files for the Omega Theme Crew
-        # deleteDB = True, # Delete the database files
-        # delete_llm_task_output_dir = True, 
-        # delete_info_files = False
+        
+    startFresh (
+        new_applicant = check_args(), # Delete the previous applicant profile files for new applicants
+        delete_resume_profiles = False, # Delete the previous applicant profile files for new applicants
+        delete_latex_files = False, # Delete the pre-task files for the Omega Theme Crew
+        deleteDB = False, # Delete the database files 
+        delete_llm_task_output_dir = False, # Delete the Applicant Info Organized files. (True for new applicants)
+        delete_info_files = False
     )
     
     # Define the command to run in each project
@@ -73,6 +75,22 @@ def main():
         print(f"Error running projects: {e}")
         exit(1)
 
+def check_args() -> bool:
+    """
+    Check if the user has passed the "new" argument to the script.
+
+    Args:
+        None
+
+    Returns:
+        bool: True if the user has passed the "new" argument, False otherwise.
+    """
+    output = False
+    # argsv length
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "new":
+            output = True
+    return output
 
 def delete_files_recursively_from_directory(directory_path):
     """
@@ -151,6 +169,7 @@ def run_poetry_project(project_path, command, *args):
         print(f"Failed to run command in {project_path} with return code {process.returncode}")
 
 def startFresh(
+        new_applicant: bool = False,
         delete_resume_profiles: bool = False,
         delete_latex_files: bool = False, 
         deleteDB: bool = False, 
@@ -173,6 +192,13 @@ def startFresh(
         """
 
         to_be_deleted = []
+
+        if(new_applicant):
+            delete_resume_profiles = True
+            delete_latex_files = True
+            deleteDB = True
+            delete_llm_task_output_dir = True
+            
 
         if(delete_resume_profiles):
             to_be_deleted.append(PATHS["info_extraction_folder_path"])

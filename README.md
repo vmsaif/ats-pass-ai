@@ -138,8 +138,14 @@ Note: Replace `YOUR_GOOGLE_API_KEY_HERE` with your actual API keys. No need to i
 From the root directory, run the following command:
 
 ```bash
-python main.py
+python main.py new
 
+```
+
+from the next runs, you can run the following command as the user information will be saved.
+
+```bash
+python main.py
 ```
 
 Wait for the program to finish processing. The approximate time is 7 minutes.
