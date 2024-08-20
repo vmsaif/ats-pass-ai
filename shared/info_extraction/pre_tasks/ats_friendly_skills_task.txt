@@ -1,57 +1,36 @@
 {
   "exact_match_with_job_description": {
-    "Programming Languages": ["Java"],
-    "Frontend Development": ["HTML", "CSS", "JavaScript"],
-    "Soft Skills": ["Teamwork", "Adaptability", "Communication", "Problem Solving"]
+    "Programming Languages": [],
+    "Database Management": ["SQL"],
+    "Soft Skills": [
+      "Teamwork",
+      "Adaptability",
+      "Communication",
+      "Problem Solving"
+    ]
   },
-  "partial_match": {
-    "Programming Languages": [], 
-    "Frontend Development": [],
-    "Backend Development": [],
-    "Mobile Development": [],
-    "Game Development": [],
-    "Database Management": [],
-    "Data Science": [],
-    "AI": [],
-    "DevOps": [],
-    "Operating Systems": [],
-    "Networking": [],
-    "Cloud Computing": [],
-    "Version Control": [],
-    "Documentation": [],
-    "Software Design": [],
-    "Shell Scripting": [],
-    "Graphics Programming": [],
-    "Project Management": [],
-    "UI/UX Design": [],
-    "Soft Skills": [],
-    "Programming Concepts": [],
-    "Software Development": [],
-    "Web Development": []
-  },
+  "partial_match": {},
   "missing_keywords_from_the_applicant_skills": {
-    "Programming Languages": ["JUnit 4", "XML"],
-    "Frontend Development": [],
-    "Backend Development": [],
-    "Mobile Development": [],
-    "Game Development": [],
-    "Database Management": [],
-    "Data Science": [],
-    "AI": [],
-    "DevOps": [],
-    "Operating Systems": [],
-    "Networking": [],
-    "Cloud Computing": [],
-    "Version Control": [],
-    "Documentation": [],
-    "Software Design": [],
-    "Shell Scripting": [],
-    "Graphics Programming": [],
-    "Project Management": [],
-    "UI/UX Design": [],
-    "Soft Skills": [],
-    "Programming Concepts": [],
-    "Software Development": ["Unit Testing", "Code Refactoring", "Bug Fixing", "Agile Development", "Software Development Life Cycle (SDLC)"],
-    "Web Development": []
+    "Hard Skills": [
+      "IT Support", 
+      "Technical Support", 
+      "Troubleshooting", 
+      "Software & Hardware Troubleshooting", 
+      "MS Office",  
+      "Ticket Tracking Application Experience",  
+      "Microsoft Certifications", 
+      "Cisco Certifications", 
+      "CompTIA Certifications", 
+      "Customer Service"
+    ],
+    "Soft Skills": [
+      "Interpersonal Skills",
+      "Problem-Solving", 
+      "Attention to Detail", 
+      "Ability to Learn Quickly", 
+      "Ability to Follow Instructions", 
+      "Ability to Work Under Pressure",  
+      "Ability to Work Independently"
+    ]
   }
 }

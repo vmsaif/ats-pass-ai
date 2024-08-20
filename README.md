@@ -132,7 +132,7 @@ Note: Replace `YOUR_GOOGLE_API_KEY_HERE` with your actual API keys. No need to i
 ### 5: Prepare Your Data
 
 - Add your information or resume to `shared/info_files/applicant_info.txt`.
-- Place the job description link in `info_collection\src\info_collection\main.py` in the job_description_link variable. (easier way to do this will be added soon)
+- Place the job description link in `info_collection/src/info_collection/main.py` in the job_description_link variable. (easier way to do this will be added soon)
 
 ### 6: Run the Application
 From the root directory, run the following command:

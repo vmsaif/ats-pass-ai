@@ -1,8 +1,11 @@
+```json
 {
   "Relevant Coursework (to the Job Description)": [
-    "Software Engineering (Java | Unit Testing)",
-    "Data Structures and Algorithms (Java)",
     "Distributed Computing (Python)",
-    "AI and Game Development (Java | Python)"
+    "Database Implementation (Python | SQL)",
+    "Data Structures and Algorithms (Java)",
+    "Software Engineering (Java | Unit Testing)",
+    "Statistics and Computing (R | Charts)"
   ]
 }
+```

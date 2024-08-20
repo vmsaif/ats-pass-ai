@@ -1,22 +1,38 @@
-**Summary of Junior Java Software Engineer Job Description**
-
-The Junior Java Software Engineer at CMiC is responsible for various tasks related to software development, including:
+**Summary of Essential Responsibilities and Qualifications for Support Analyst I**
 
 **Responsibilities:**
 
-* Creating unit tests
-* Refactoring code
-* Implementing new code and fixing bugs
-* Collaborating with other developers in a large team setting
-* Participating in daily meetings
+* Provide technical support to clients remotely and in-person via phone, email, live-chat, and in-person
+* Research and implement solutions for technical problems
+* Diagnose and resolve technical issues encountered by clients
+* Provide advice and training to clients
+* Accurately log support provided and time taken in helpdesk software
+* Pick up tickets from the appropriate ticket queue
+* Document solutions to technical problems in the internal knowledgebase
+* Work with the team to maintain client documentation
+* Work on recurring support tasks
+* Participate in shift rotation to provide support for all clients
 
-**Requirements:**
+**Qualifications:**
 
-* Degree, certificate, or diploma in a relevant field (preferred)
-* Excellent written and oral communication skills
-* Proficiency in Java
-* Familiarity with Junit 4
-* Strong knowledge of J2EE (preferred)
-* Knowledge of JSF (preferred)
+* Degree or diploma in a computer-related program or equivalent certifications
+* Previous experience in customer service is an asset
+* Previous work for a Managed Service Provider is an asset
+* Up-to-date IT qualification (Microsoft, Cisco, CompTIA, etc.)
+* Excellent verbal and written communication skills in English
+* Excellent customer service and interpersonal skills
+* Attention to detail
 
-This summary provides a concise overview of the essential responsibilities and qualifications for the Junior Java Software Engineer role, enabling the selection of relevant sections from an applicant's resume for further evaluation.
+**Knowledge:**
+
+* Software and hardware troubleshooting
+* MS Office
+* Basic server or networking knowledge is an asset
+
+**Abilities:**
+
+* Ability to learn quickly and retain new information
+* Ability to follow instructions, both written and verbal
+* Ability to creatively problem solve
+* Ability to work under pressure in a time-sensitive environment
+* Ability to work independently and seek assistance as required

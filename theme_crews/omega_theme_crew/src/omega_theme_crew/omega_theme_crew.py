@@ -53,7 +53,7 @@ class OmegaThemeCrew:
 
 	debugFlag = False
 
-	# debugFlag = True
+	debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -63,10 +63,10 @@ class OmegaThemeCrew:
 			self.name_section(),
 			self.concise_jd_task(),
 
-			# ---- set Column 1 content ----
+			# # ---- set Column 1 content ----
 			self.final_selection(),
 
-			# --- latex of column 1 ---
+			# # --- latex of column 1 ---
 			self.education_section(),
 			self.coursework_section(),
 			self.volunteer_section(),

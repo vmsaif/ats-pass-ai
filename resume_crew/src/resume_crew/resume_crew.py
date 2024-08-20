@@ -66,7 +66,7 @@ class ResumeCrew:
 
 	debugFlag = False
 	
-	# debugFlag = True
+	debugFlag = True
 
 	@crew
 	def crew(self) -> Crew:
@@ -98,7 +98,7 @@ class ResumeCrew:
 
 		my_tasks.append(self.coursework_extraction_task())
 
-		my_tasks.append(self.career_objective_task()) 
+		my_tasks.append(self.career_objective_task())
 
 		# my_tasks.append(self.cover_letter_generation_task()) 
 				
@@ -330,7 +330,7 @@ class ResumeCrew:
 		return Task(
 			description=description,
 			expected_output=expected_output,
-			agent=self.generalist_agent(),
+			agent=self.technical_details_agent(),
 			output_file=PATHS["coursework_extraction_task"],
 			callback=self.small_token_limiter
 		)
@@ -457,8 +457,9 @@ class ResumeCrew:
 		yaml = self.yaml_loader('correct_categorization_of_skills_task')
 
 		applicant_skills = self.load_file(PATHS["skills_extraction_task"])
+		job_description = self.load_file(PATHS["jd_keyword_extraction"])
 
-		task_description = yaml[0].format(applicant_skills = applicant_skills)
+		task_description = yaml[0].format(applicant_skills = applicant_skills, job_description = job_description)
 		expected_output = yaml[1]
 
 

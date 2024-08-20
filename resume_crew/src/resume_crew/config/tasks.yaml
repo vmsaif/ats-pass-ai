@@ -448,6 +448,9 @@ correct_categorization_of_skills_task:
     Here is the list of all the skills the applicant has:
     {applicant_skills}
 
+    This is the Job Description. You might use this to get the idea of possible categories.
+    {job_description}
+
   expected_output: >
     {
       "correctly_categorized_skills": {
