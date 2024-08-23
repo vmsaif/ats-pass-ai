@@ -1,5 +1,6 @@
 # .gitignore
 
+
 # Ignore Python build artifacts
 __pycache__/
 *.py[cod]
@@ -16,6 +17,16 @@ build/
 
 # Ignore virtual environment
 .venv/
+info_collection/.venv
+info_collection/.vscode/
+resume_crew/.venv/
+resume_crew/.vscode/
+shared/.venv/
+shared/.vscode/
+theme_crews/.venv/
+theme_crews/.vscode/
+
+
 
 # Ignore IDEs and editors artifacts
 .vscode/
