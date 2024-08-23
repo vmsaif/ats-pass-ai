@@ -2,6 +2,17 @@
 
 [![Hits](https://hits.sh/github.com/vmsaif/ats-pass-ai.svg?label=Visits&color=100b75)](https://hits.sh/github.com/vmsaif/ats-pass-ai/)
 
+## Tech Stacks
+
+[![Python](https://img.shields.io/badge/Python-3776AB.svg?&style=flat&logo=python&logoColor=white)](#)
+[![LangChain](https://img.shields.io/badge/langchain-008080.svg?&style=flat&logo=langchain)](#)
+[![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4.svg?&style=flat&logo=google-cloud&logoColor=white)](#)
+[![LaTeX](https://img.shields.io/badge/LaTeX-008080.svg?&style=flat&logo=latex&logoColor=white)](#)
+[![Poetry](https://img.shields.io/badge/Poetry-60A917.svg?&style=flat&logo=poetry&logoColor=white)](#)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-FF4500.svg?&style=flat)](#)
+[![CrewAI](https://img.shields.io/badge/CrewAI-red.svg?logo=data:image/svg%2bxml;base64,https://www.crewai.com/assets/crew_only-2f0252ef56367dfdb75981ffa2906f3538cf91c125a51204b310dbbb137426d8.png)](#)
+
+
 ## Project Description
 
 The idea is to craft one unique resume for one job application. With this approach, every resume is designed anew, ensuring it's **highly** tailored to the specific job description and optimized to pass the Applicant Tracking System (ATS). 
@@ -155,6 +166,43 @@ Wait for the program to finish processing. The approximate time is 7 minutes.
 
 ## Sample Output
 
-<!-- assets\images\Resume_Example.png -->
-
 ![Resume Example](theme_crews/omega_theme_crew/assets/images/Resume_Example.png)
+
+## Future Development
+
+- **Advanced Keyword Matching**: Implement more sophisticated keyword matching algorithms to ensure higher accuracy and relevance.
+- **Resume Optimization**: Incorporate additional optimization techniques to improve the overall quality and readability of the generated resumes.
+- **User Interface**: Develop a user-friendly interface for easier interaction and data input.
+- **Integration with Job Boards**: Integrate the system with popular job boards to streamline the application process.
+- **Resume Template Customization**: Allow users to select from a variety of resume templates to personalize their output.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request to the main repository.
+
+## License
+
+This project is licensed under the Elastic License. See the [LICENCE](LICENCE.md) file for more information.
+
+## Contact
+
+For any questions or feedback, please contact me at [vmsaif@gmail.com](mailto:vmsaif@gmail.com).
+
+## Acknowledgements
+
+This project is built upon the work of many talented individuals and projects. I would like to express my gratitude to the following:
+
+- [Google Cloud](https://cloud.google.com/) for providing the Google Cloud Platform.
+- [LangChain](https://langchain.com/) for providing a framework for building language-based applications.
+- [ChromaDB](https://www.chromadb.com/) for providing a vector database for storing and retrieving embeddings.
+- [CrewAI](https://www.crewai.com//) for providing a platform for building AI-powered applications.
+
+This project is still under development, and I am always looking for ways to improve it. If you have any suggestions or feedback, please feel free to share them with me.
+
+Thank you for your interest in ATS Pass AI!

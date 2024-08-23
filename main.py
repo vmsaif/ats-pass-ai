@@ -222,9 +222,6 @@ def startFresh(
             for directory_path in to_be_deleted:
                 delete_files_recursively_from_directory(directory_path)
 
-def sum()
-    
-
 if __name__ == "__main__":  
     main()
     
