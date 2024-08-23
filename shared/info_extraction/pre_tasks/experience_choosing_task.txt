@@ -2,75 +2,75 @@
 {
   "selected experiences": {
     "Most Recent Experience": "ATS Pass AI",
-    "Additional Relevant Experiences title": "AI PATHFINDING"
+    "Additional Relevant Experiences title": "Programming Mentor"
   },
   "selection justification": {
     "reasons_for_choice": [
       {
         "title": "ATS Pass AI",
-        "reason": "This project showcases the applicant's up-to-date skills in Java and AI, directly aligning with the company's focus on innovative software solutions. The use of Java for an AI-powered application demonstrates practical experience relevant to the job description. Additionally, the project highlights the applicant's ability to leverage advanced technologies like AI and Multi-agent Systems, indicating a strong potential for contributing to CMiC's technological advancements."
+        "reason": "This project showcases direct relevance to the 'IT Support' and 'Technical Support' aspects of the job by demonstrating expertise in AI-powered resume optimization.  The use of 'AI,' 'Multiagent Systems,' and 'Applicant Tracking Systems (ATS)' aligns strongly with the technical focus of the role, while the 85% keyword matching accomplishment emphasizes problem-solving skills and attention to detail relevant to a Support Analyst."
       },
       {
-        "title": "AI PATHFINDING",
-        "reason": "This project demonstrates the applicant's proficiency in Java and their understanding of algorithms (A*), a crucial skill for a software engineer. The project's use of Git for version control aligns with the job description's emphasis on collaborative development practices. Furthermore, the mention of CI/CD implementation highlights the applicant's familiarity with industry-standard software development methodologies, showcasing their readiness to contribute to a professional environment like CMiC."
+        "title": "Programming Mentor",
+        "reason": "This experience highlights the applicant's ability to provide 'Technical Support' and 'Troubleshooting' directly, aligning with key job requirements. The mentorship role inherently involves strong 'Communication Skills' and 'Interpersonal Skills' as they guide individuals through software installation, debugging, and computer systems fundamentals. This experience demonstrates practical application of technical knowledge and a client-focused approach, crucial for a Support Analyst position."
       }
     ],
     "rejected_experiences": [
       {
-        "title": "Programming Mentor",
-        "reason": "While this experience showcases teaching and communication skills, it lacks direct relevance to the specific technical requirements (Java, JUnit, etc.) outlined in the job description for a Junior Java Software Engineer role. The technologies and frameworks used in this role are not as closely aligned with the desired skillset."
+        "title": "AI PATHFINDING",
+        "reason": "While showcasing technical proficiency, this project lacks direct relevance to IT Support or customer service aspects emphasized in the job description. The focus on AI pathfinding and game development, while impressive, doesn't align as strongly with the required skills compared to selected experiences."
       },
       {
         "title": "Blockchain Car Mileage Tracker",
-        "reason": "Although this project demonstrates the applicant's versatility and interest in emerging technologies, its focus on Blockchain and Vue.js is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer position at CMiC. The technologies used in this project are less relevant compared to other experiences with a stronger Java focus."
+        "reason": "This project, while technically advanced, lacks direct alignment with the specific requirements of an IT Support Analyst role. The focus on blockchain technology and fraud prevention doesn't translate as directly to the core responsibilities outlined in the job description compared to other experiences."
       },
       {
         "title": "Recursive Ray Tracing",
-        "reason": "This project highlights the applicant's understanding of 3D graphics and OpenGL but lacks direct relevance to the core Java development skills and web application context emphasized in the job description.  While demonstrating technical capability, it's less aligned with the specific requirements for this role."
+        "reason": "This project, while demonstrating technical skills, is less relevant to the IT Support Analyst role compared to others.  The focus on 3D graphics rendering doesn't align as strongly with the core responsibilities outlined in the job description."
       },
       {
         "title": "Bank Account System",
-        "reason": "This project demonstrates foundational Java skills and object-oriented programming principles. However, it lacks the complexity and scale of other projects, making it less impactful for demonstrating the applicant's ability to handle real-world software development challenges in a professional setting."
+        "reason": "This project demonstrates programming skills but lacks direct relevance to the IT Support and troubleshooting focus of the job description. While object-oriented design is valuable, it's not as directly applicable as experiences with customer interaction and technical assistance."
       },
       {
         "title": "Hosting a Resume on GitHub Pages",
-        "reason": "While showcasing the applicant's understanding of Git and basic web development practices, this project lacks the depth and complexity of other experiences to demonstrate the required skills for a Junior Java Software Engineer. The technical scope of this project is relatively limited compared to other, more relevant experiences."
+        "reason": "This project, while showcasing technical documentation skills, doesn't hold the same level of relevance to IT Support as other experiences. The focus on website hosting and GitHub Pages doesn't directly translate to the core responsibilities of troubleshooting, customer service, or technical support."
       },
       {
         "title": "ELF Binary Analysis",
-        "reason": "This experience showcases the applicant's debugging and system analysis skills, but its focus on C programming and Linux OS is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer position at CMiC. The project's focus on C programming, while valuable, is not as directly relevant as other experiences featuring Java development."
+        "reason": "While this project highlights technical skills and debugging experience, it might be considered less relevant compared to others that showcase direct customer interaction and IT support. The focus on binary analysis and system-level debugging might not directly translate to the day-to-day tasks of a Support Analyst role."
       },
       {
         "title": "OpenGL Sphere Lighting",
-        "reason": "This project demonstrates the applicant's grasp of 3D graphics concepts and OpenGL, but its lack of relevance to Java development makes it less suitable for showcasing their qualifications for the Junior Java Software Engineer role at CMiC. While technically impressive, it doesn't directly align with the specific technologies and frameworks required for the position."
+        "reason": "This project showcases technical skills in 3D graphics and OpenGL, but it lacks direct relevance to the IT Support Analyst role. The focus on lighting techniques and visual effects doesn't align as strongly with the required skills and responsibilities compared to other experiences."
       },
       {
         "title": "Reversible Learning APP",
-        "reason": "Although this project highlights teamwork and Android development experience using Java, its relevance is diminished due to its age (2021).  The job description prioritizes recent experience with Java and related technologies, making this project less competitive."
+        "reason": "While this project demonstrates collaboration and software development skills, its focus on Android app development and learning techniques is not as directly relevant to the IT Support Analyst role as other experiences.  "
       },
       {
         "title": "Connect 4 Game",
-        "reason": "While showcasing the applicant's ability to implement algorithms and utilize Java for game development, this project lacks the direct relevance to web application development and enterprise software solutions emphasized in the job description. The skills demonstrated in this project are not as directly transferable to the specific requirements of the role."
+        "reason": "This project demonstrates programming and AI skills but is less relevant to the IT Support role compared to experiences involving direct customer interaction, troubleshooting, or technical assistance. While game development showcases technical ability, it doesn't align as strongly with the core responsibilities of the position."
       },
       {
         "title": "TCP Chat Application",
-        "reason": "This project demonstrates the applicant's understanding of networking concepts and multithreading in Java. However, its focus on low-level networking might not be as relevant to the web application development context outlined in the job description. While showcasing technical proficiency, it might not be the most impactful experience to highlight for this particular role."
+        "reason": "This project showcases networking knowledge and programming skills but might be considered less relevant compared to others that demonstrate direct customer interaction and technical support. The focus on network programming and chat application development doesn't directly translate to the day-to-day tasks of a Support Analyst role."
       },
       {
         "title": "Data Visualization with R",
-        "reason": "While data analysis is a valuable skill, this project's focus on R programming is not directly applicable to the Java-centric requirements of the Junior Java Software Engineer role at CMiC. The project's emphasis on R programming, while useful in certain contexts, is less aligned with the core technologies required for this specific position."
+        "reason": "While showcasing data analysis skills, this project lacks direct relevance to the IT Support and customer service aspects emphasized in the job description. The focus on data visualization, while valuable, doesn't align as strongly with the required skills compared to selected experiences."
       },
       {
         "title": "Portfolio Website",
-        "reason": "While demonstrating web development skills, this project primarily uses React and related technologies, which are not the primary focus of the Junior Java Software Engineer position at CMiC.  While a portfolio is valuable, the technologies used (React, GraphQL) are not as directly aligned with the job description's emphasis on Java and related frameworks."
+        "reason": "While this project demonstrates web development skills, it is less relevant to the IT Support Analyst role compared to others that showcase direct customer interaction, troubleshooting, or technical assistance."
       },
       {
         "title": "CPU Scheduling",
-        "reason": "This project showcases the applicant's ability to work with C and multithreading concepts, but it lacks direct relevance to the Java-based web application development context emphasized in the job description. The project's focus on low-level system programming, while demonstrating technical capability, is not as directly applicable to the requirements of this particular role."
+        "reason": "While this project showcases technical skills in operating systems and multithreading, its relevance to the IT Support Analyst role is less pronounced compared to experiences involving customer interaction, troubleshooting, or technical support. "
       },
       {
         "title": "Go-Back-N Protocol Simulation",
-        "reason": "This project demonstrates the applicant's understanding of networking protocols, but its focus on Python and simulation might not be directly relevant to the practical Java development skills required for the Junior Java Software Engineer role. While highlighting technical understanding, it doesn't directly translate to the specific technologies and frameworks required for the position."
+        "reason": "This project demonstrates networking knowledge and Python skills but might be considered less relevant compared to others that showcase direct customer interaction and technical support. The focus on network protocol simulation, while technically sound, doesn't directly translate to the day-to-day tasks of a Support Analyst role."
       }
     ]
   }

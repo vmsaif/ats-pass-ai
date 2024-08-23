@@ -1,36 +1,83 @@
-## Job Description Keyword and Phrase Extraction - Junior Java Software Engineer - CMiC
+## Job Description Keyword and Phrase Extraction: Support Analyst I - Clear Concepts
 
 **1. Introduction:**
-    - Role: **Junior Java Software Engineer**
-    - Company: **CMiC**
-    - Location: **Toronto, ON**
-    - Industry: **Construction Software, SaaS, Enterprise Software** 
+    - **Role:** Support Analyst I
+    - **Company:** Clear Concepts
+    - **Location:** Winnipeg, MB
+    - **Industry:** IT, Managed Service Provider (MSP)
 
-**2. Thorough Analysis:**
-
-This job description emphasizes a strong foundation in Java development within the context of a large, dynamic web application framework. The ideal candidate will be comfortable collaborating in a team environment, contributing to code maintenance and new feature implementation. Experience with J2EE, JSF, and unit testing is highly valued.
-
-**3. Keyword Categorization:**
+**2. Keyword Categorization:**
 
 * **Essential Skills:**
-    * **Hard Skills:** Java, JUnit 4, XML, HTML, CSS, JavaScript, Unit Testing, Code Refactoring, Bug Fixing, Agile Development,  Software Development Life Cycle (SDLC)
-    * **Soft Skills:**  Excellent communication skills (written and oral), Teamwork, Collaboration, Problem-Solving, Adaptability
-* **Industry Terms:** 
-    * Dynamic Engine, Metadata, User Configurable, Business Rules, Validations, Web Pages, ADF Framework, Cloud Deployment, Self-Hosted Deployment, Project Management, Job Costing
+    * **Hard Skills:**
+        - IT Support
+        - Technical Support
+        - Troubleshooting (Software & Hardware)
+        - MS Office
+        - Ticket Tracking Application Experience 
+        - Server/Networking Knowledge (Asset)
+        - Microsoft, Cisco, CompTIA certifications (or equivalent)
+    * **Soft Skills:** 
+        - Communication Skills (Verbal & Written)
+        - Customer Service 
+        - Interpersonal Skills
+        - Attention to Detail
+        - Problem Solving
+        - Adaptability
+        - Self-Motivation
+        - Ability to Learn Quickly
+        - Ability to Follow Instructions
+        - Ability to Work Under Pressure
+        - Ability to Work Independently
+        
+* **Industry Terms:**
+    -  Managed Service Provider (MSP)
+    -  SLA (Service Level Agreement)
+    -  Helpdesk Software
+    -  Knowledgebase
+    -  Remote Support
+    -  In-Person Support 
+
 * **Company Values & Culture:**
-    * Rapidly Growing, Socially Responsible, Teamwork, Open Discussions, Active Social Events, Health and Wellness, Equal Opportunity
+    -  Client-Focused
+    -  Teamwork
+    -  Collaboration
+    -  Professionalism 
+    -  Continuous Skill Improvement
+    -  Dynamic Environment
+    -  Supportive Team
+
 * **Action Verbs:**
-    * Creating, Maintaining, Generating, Configuring, Implementing, Fixing, Working, Participating, Communicating
+    - Communicate
+    - Consult
+    - Research
+    - Implement
+    - Reproduce
+    - Diagnose
+    - Resolve
+    - Provide
+    - Log
+    - Pick up
+    - Document
+    - Maintain
+    - Assist
+    - Work
 
-**4. Prioritization and Relevance:**
 
-* **Frequency and Emphasis:** Java, JUnit 4,  Communication Skills, Teamwork, Code Refactoring, Bug Fixing
+**3. Prioritization and Relevance:**
+
+* **Frequency and Emphasis:** 
+    -  **Client-focused**, **Technical Support**,  **Communication Skills**, **Problem Solving**,  **Winnipeg**, **Full-time**,  **Troubleshooting**, **MS Office**,  appear frequently.
+    -  Importance is placed on a **positive attitude, teamwork, and a desire for continuous learning**. 
+
 * **Essential vs. Preferred Qualifications:**
-    * **Essential:** Java, JUnit 4, Excellent communication skills (written and oral) 
-    * **Preferred:** J2EE, JSF, Degree/Diploma in a relevant field
 
-**Additional Notes:**
+    * **Essential:**  Degree/Diploma in Computer-related field or equivalent experience, excellent communication & customer service skills, strong troubleshooting abilities.
+    * **Preferred:** Experience in customer service, MSP environment,  using ticket tracking applications, and server/networking knowledge. 
 
-* The company highlights its positive and supportive culture through descriptions of its social events, wellness initiatives, and employee benefits. 
-* Familiarity with the construction industry or CMiC’s products is beneficial but not explicitly stated as a requirement.
-* Use the extracted keywords and phrases strategically throughout your resume and cover letter, ensuring they are relevant to your experiences and accomplishments.
+
+**4.  Resume Optimization Tips:**
+    -  Use keywords throughout your resume, especially in the  "Skills" and "Experience" sections.
+    -  Quantify your experience using numbers to showcase achievements (e.g., "Resolved 95% of support tickets within SLA"). 
+    -  Highlight your soft skills through concrete examples in your work experience. 
+    -  Tailor your resume to this specific job description, demonstrating a strong understanding of their needs and culture. 

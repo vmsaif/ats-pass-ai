@@ -1,32 +1,13 @@
 {
   "exact_match_with_job_description": {
-    "Programming Languages": ["Java"],
-    "Frontend Development": ["HTML", "CSS", "JavaScript"],
-    "Soft Skills": ["Teamwork", "Adaptability", "Communication", "Problem Solving"]
-  },
-  "partial_match": {
     "Programming Languages": [],
-    "Frontend Development": [],
-    "Backend Development": [],
-    "Mobile Development": [],
-    "Game Development": [],
-    "Database Management": [],
-    "Data Science": [],
-    "AI": [],
-    "DevOps": [],
-    "Operating Systems": [],
-    "Networking": [],
-    "Cloud Computing": [],
-    "Version Control": [],
-    "Documentation": [],
-    "Software Design": [],
-    "Shell Scripting": [],
-    "Graphics Programming": [],
-    "Project Management": [],
-    "UI/UX Design": [],
-    "Soft Skills": [],
-    "Programming Concepts": [],
-    "Software Development": [],
-    "Web Development": []
-  }
+    "Database Management": ["SQL"],
+    "Soft Skills": [
+      "Teamwork",
+      "Adaptability",
+      "Communication",
+      "Problem Solving"
+    ]
+  },
+  "partial_match": {}
 }

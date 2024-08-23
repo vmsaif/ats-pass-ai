@@ -25,12 +25,11 @@ from theme_crews.omega_theme_crew.src.omega_theme_crew.omega_file_paths import O
 
 def main():
 
-    """
+    """ 
     Run the three projects in the ATS Pass AI pipeline.
 
     Args:
-
-
+    
     Returns:
         None    
     """   
@@ -73,6 +72,7 @@ def main():
         run_poetry_project(project_c_path, omega_theme_crew)
     except Exception as e:
         print(f"Error running projects: {e}")
+        
         exit(1)
 
 def check_args() -> bool:

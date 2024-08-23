@@ -1,10 +1,11 @@
 {
-    "company_name": "CMiC",
-    "Job_title": "Junior Java Software Engineer",
+    "company_name": "Clear Concepts",
+    "job_title": "Support Analyst I",
     "Information needed to create a compelling career objective or summary": [
-      "CMiC, a construction software company headquartered in Toronto, is driven by a commitment to providing innovative solutions to its customers."
+        "Clear Concepts is committed to creating a diverse environment and is proud to be an equal opportunity employer.",
+        "This is a very client-focused role that requires excellent communication skills, a strong attention to detail and a professional image."
     ],
     "Phases used in the job description that reflect the company's values and culture": [
-      "CMiC is an Equal Opportunity Employer"
+        "Clear Concepts is committed to creating a diverse environment and is proud to be an equal opportunity employer."
     ]
 }

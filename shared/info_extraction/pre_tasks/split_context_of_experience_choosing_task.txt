@@ -2,7 +2,7 @@
 {
   "selected experiences": {
     "Most Recent Experience": "ATS Pass AI",
-    "Additional Relevant Experiences title": "AI PATHFINDING"
+    "Additional Relevant Experiences title": "Programming Mentor"
   }
 }
 ```

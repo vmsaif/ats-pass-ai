@@ -6,35 +6,36 @@
         "Title": "ATS Pass AI",
         "Timeline": "January 2024 - Present",
         "Technologies, frameworks, and tools Used": "Python, SQL, Multiagent Systems, AI, RAG Search",
-        "Skills": "AI Development, Programming Languages",
+        "Skills": "AI Development, Programming Languages, Cloud, DevOps",
         "URL/Link": "https://github.com/vmsaif/ats-pass-ai",
-        "Short Description": "This project involves the creation of an AI powered resume builder application. It uses advanced language models such as Gemini Pro, LangChain and RAG search,  with a Multi-agent System driven by CrewAI  for the efficient extraction of user data and resume tailoring based on user input. It boasts over 85% keyword matching with user provided job descriptions, making it extremely efficient for generating resumes for Applicant Tracking Systems (ATS).",
+        "Short Description": "An AI-powered resume builder application leveraging advanced language models like Gemini Pro and LangChain with a CrewAI-driven Multi-agent System for efficient user data extraction and resume tailoring based on job descriptions, achieving over 85% keyword matching for ATS optimization.",
         "Key Highlights": [
-          "Developed an AI-powered resume builder application leveraging Gemini Pro, LangChain, and RAG search for efficient data extraction and resume tailoring.",
-          "Integrated a Multi-agent System using CrewAI to enhance user data processing and resume customization based on specific job descriptions.",
-          "Achieved over 85% keyword matching with user-provided job descriptions, significantly improving resume effectiveness for Applicant Tracking Systems (ATS).",
-          "Utilized Python and SQL for backend development and database management, ensuring seamless data flow and storage within the application."
+          "Developed an AI-powered resume builder application designed to optimize resumes for Applicant Tracking Systems (ATS).",
+          "Utilized advanced language models, including Gemini Pro and LangChain, for enhanced natural language processing and resume generation.",
+          "Implemented a Multi-agent System powered by CrewAI to facilitate efficient data extraction from user inputs and tailor resumes accordingly.",
+          "Achieved an impressive 85% keyword matching rate with user-provided job descriptions, significantly increasing the chances of passing ATS screenings."
         ],
-        "Team size": "Individual",
-        "Outcomes": "Successfully designed and implemented an AI-powered resume builder application that streamlines the resume creation process and optimizes it for ATS compatibility."
+        "Team size": "Individual Project",
+        "Outcomes": "Developed a robust and efficient AI-powered resume builder that significantly improves users' chances of passing ATS screenings by achieving a high keyword matching rate."
       }
     ],
     "Additional Relevant Experiences title": [
       {
-        "Title": "AI PATHFINDING",
-        "Timeline": "September 2023 - December 2023",
-        "Technologies, frameworks, and tools Used": "CI/CD, A* Algorithm, Java, Git",
-        "Skills": "Programming Languages, AI Development",
-        "URL/Link": "https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm",
-        "Short Description": "An AI powered game that utilizes the A* algorithm. It uses prompt engineering to enhance the AI generated response times for users. It utilizes industry standard version control and CI/CD best practices such as  Git  for optimal performance.",
+        "Title": "Programming Mentor ",
+        "Company Name": "Self-Employed",
+        "Timeline": "February 2023 - December 2023",
+        "Technologies, frameworks, and tools Used": "Python, Java, Computer Systems",
+        "Skills": "Programming Languages, Soft Skills",
+        "URL/Link": null,
+        "Short Description": "Provided private, adaptive tutoring sessions to a student, focusing on Python and Java programming.  The role involved teaching fundamental programming concepts, debugging techniques, and software installation, while tailoring the learning experience to the student's individual needs and learning style.",
         "Key Highlights": [
-          "Developed an AI-powered game utilizing the A* algorithm for efficient pathfinding, creating a challenging and engaging user experience.",
-          "Implemented prompt engineering techniques to optimize AI response times, resulting in a more seamless and responsive gameplay.",
-          "Employed industry-standard version control practices using Git, ensuring code integrity and facilitating collaborative development.",
-          "Integrated CI/CD principles for streamlined deployment and optimized performance, enhancing the overall efficiency of the development process."
+          "Delivered personalized one-on-one programming tutoring sessions tailored to the student's learning style and pace.",
+          "Provided hands-on, practical programming experience using Python and Java, covering fundamental concepts, debugging techniques, and software installation.",
+          "Successfully imparted knowledge and fostered the student's programming skills through adaptive teaching methods and personalized guidance.",
+          "Enhanced communication and mentorship abilities through effective knowledge transfer and tailored learning experiences."
         ],
         "Team size": "Individual",
-        "Outcomes": "Successfully created an AI-powered pathfinding game that showcases both technical skills in AI development and a commitment to industry best practices in software engineering."
+        "Outcomes": "Successfully mentored a student in their programming journey, fostering their understanding of fundamental programming concepts and practical application through personalized tutoring sessions. This experience enhanced my teaching, communication, and problem-solving skills."
       }
     ]
   }

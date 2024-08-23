@@ -1,37 +1,36 @@
 {
   "correctly_categorized_skills": {
     "Programming Languages": [
-      "Java",
       "Python",
+      "Java",
       "C++",
       "C",
       "R"
     ],
-    "Frontend Development": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Vue.js",
-      "React"
+    "Software & Tools": [
+      "Android Studio",
+      "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "Git"
+    ],
+    "Databases": [
+      "SQL",
+      "HSQLDB"
     ],
     "Soft Skills": [
       "Teamwork",
       "Adaptability",
       "Communication",
-      "Problem Solving",
-      "Critical Thinking"
+      "Problem Solving"
     ],
-    "Cloud Computing": [
-      "AWS Sagemaker",
-      "Google Vertex AI",
-      "AWS Bedrock"
-    ],
-    "AI": [
-      "Multiagent Systems",
-      "RAG (Retrieval Augmented Generation)",
-      "A* Search Algorithm",
-      "AI Decision-Making",
-      "LangChain"
+    "Operating Systems & Networking": [
+      "Linux",
+      "File Systems",
+      "System Programming",
+      "TCP/IP",
+      "Client-Server Communication",
+      "Networking"
     ]
   }
 }
