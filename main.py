@@ -215,7 +215,6 @@ def startFresh(
 
         if delete_llm_task_output_dir:
             print("Deleting LLM task output directory")
-            delete_file_from_path(PATHS["jd_file_path"])
             to_be_deleted.append(PATHS["llm_task_output_dir"])
         
         if len(to_be_deleted) > 0:
