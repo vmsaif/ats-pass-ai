@@ -192,7 +192,7 @@ This project is licensed under the Elastic License. See the [LICENCE](LICENCE.md
 
 ## Contact
 
-For any questions or feedback, please contact me at [vmsaif@gmail.com](mailto:vmsaif@gmail.com).
+For any questions or feedback, please contact me at [vmsaif@gmail.com](mailto:msaifofficial@gmail.com).
 
 ## Acknowledgements
 
