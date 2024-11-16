@@ -1,25 +1,3 @@
 {
-  "missing_from_the_applicant_skills": {
-    "Hard Skills": [
-      "IT Support", 
-      "Technical Support", 
-      "Troubleshooting", 
-      "Software & Hardware Troubleshooting", 
-      "MS Office",  
-      "Ticket Tracking Application Experience",  
-      "Microsoft Certifications", 
-      "Cisco Certifications", 
-      "CompTIA Certifications", 
-      "Customer Service"
-    ],
-    "Soft Skills": [
-      "Interpersonal Skills",
-      "Problem-Solving", 
-      "Attention to Detail", 
-      "Ability to Learn Quickly", 
-      "Ability to Follow Instructions", 
-      "Ability to Work Under Pressure",  
-      "Ability to Work Independently"
-    ]
-  }
+  "missing_from_the_applicant_skills": []
 }

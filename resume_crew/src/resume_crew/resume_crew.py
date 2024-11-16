@@ -300,7 +300,6 @@ class ResumeCrew:
 			callback = self.large_token_limiter
 		)
 
-
 	@task
 	def profile_builder_task(self):
 
@@ -370,7 +369,6 @@ class ResumeCrew:
 			callback=self.small_token_limiter
 		)
 	
-
 	@task
 	def skills_extraction_task(self):
 
@@ -389,6 +387,23 @@ class ResumeCrew:
 			tools=[self.webSearchTool],
 			callback=self.large_token_limiter
 		)
+	
+	# @task
+	# def skills_from_exp_and_project_task(self):
+	# 	# Load YAML file
+	# 	yaml = self.yaml_loader('skills_from_exp_and_project_task')
+	# 	description = yaml[0]
+	# 	expected_output = yaml[1]
+
+	# 	description = description.format(applicant_info_organized_data = self.load_file(PATHS["applicant_info_organized"]))
+
+	# 	return Task(
+	# 		description=description,
+	# 		expected_output=expected_output,
+	# 		agent=self.generalist_agent(),
+	# 		output_file=PATHS["skills_from_exp_and_project_task"],
+	# 		callback=self.small_token_limiter
+	# 	)
 
 	# # ----------------- Skills Match Identification -----------------
 	

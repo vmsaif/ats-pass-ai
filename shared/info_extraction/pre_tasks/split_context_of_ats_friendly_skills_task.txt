@@ -1,13 +1,1 @@
-{
-  "exact_match_with_job_description": {
-    "Programming Languages": [],
-    "Database Management": ["SQL"],
-    "Soft Skills": [
-      "Teamwork",
-      "Adaptability",
-      "Communication",
-      "Problem Solving"
-    ]
-  },
-  "partial_match": {}
-}
+I need more information. Please provide the job description and the applicant's skills in JSON format.

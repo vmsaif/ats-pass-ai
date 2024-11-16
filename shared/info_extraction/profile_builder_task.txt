@@ -1,60 +1,78 @@
 ```json
 {
   "Personal Information": {
-    "Full Name": "Saif Mahmud",
-    "Phone Number": "204-955-5064",
-    "Email": "msaifofficial@gmail.com",
-    "Linkedin": "linkedin.com/in/vmsaif",
-    "Other Social Media Profiles": [],
-    "Personal Website": "saifmahmud.dev",
-    "Portfolio": "saifmahmud.dev",
-    "GitHub": "https://github.com/vmsaif",
-    "Address": null,
-    "City": "Winnipeg",
-    "State": "MB",
-    "Zip Code": null,
+    "Full Name": "Tanvir Haider",
+    "Phone Number": "2365919712",
+    "Email": "tanvirhaider34@gmail.com",
+    "Linkedin": "",
+    "Other Social Media Profiles": "",
+    "Personal Website": "",
+    "Portfolio": "",
+    "GitHub": "",
+    "Address": "",
+    "City": "Burnaby",
+    "State": "BC",
+    "Zip Code": "",
     "Country": "Canada"
   },
   "Education": {
-    "Degree": "BSc",
-    "Major": "Computer Science",
-    "University": "University of Manitoba",
-    "University Location": "Winnipeg, MB",
-    "Graduation Date": "October 2023",
-    "GPA": null,
-    "Honors/Distinctions": null
+    "Degree": "",
+    "Major": "SCHOOL OF COMMUNICATION",
+    "University": "Simon Fraser University",
+    "University Location": "Burnaby, BC",
+    "Graduation Date": "12/2024",
+    "GPA": "",
+    "Honors/Distinctions": ""
   },
   "Volunteer Work": [],
-  "Awards and Recognitions": [],
-  "References": [
+  "Awards and Recognitions": [
     {
-      "Name": "Abu Kabir",
-      "Position": "Director, IT Service Management",
-      "Company": "Microsoft Corporation",
-      "Contact Information": "204-298-3693",
-      "Relationship": null
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
     },
     {
-      "Name": "Safiur Mahdi",
-      "Position": "Software Developer",
-      "Company": "Skip The Dishes",
-      "Contact Information": "204-583-3432",
-      "Relationship": null
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP Recruiter",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    {
+      "Award Name": "MOST IMPROVEMENT AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
     }
   ],
+  "References": [],
   "Personal Traits and Interests": {
-    "Strengths": "Adaptability, Critical Thinking, Teamwork, Communication, Time Management, Problem Solving",
-    "Hobbies": null,
-    "Passions": "Crafting intuitive and user-friendly software experiences"
+    "Strengths": "Sales, Marketing, Branding, CRM Software, Data Analysis, Market Research, Budgeting, Project Management, Strategic Planning, Training, Operations, Communications, Digital Marketing, Cold Calling, Performance Management, Client Relations",
+    "Hobbies": "",
+    "Passions": ""
   },
   "Applicant's Philosophy and Goals": {
-    "Philosophy": [
-      "Saif believes programs should be as straightforward as a single 'magic button' fulfilling user desires.",
-      "This approach encompasses a deep understanding of user needs, culminating in the development of intuitive and effective software solutions.",
-      "Saif's work reflects a dedication to clean code, efficient algorithms, and a user-centered design ethos."
-    ],
-    "Personality Traits": "Proactive, driven by innovation",
-    "Software Development Approach": "Committed to continuous improvement and robust software solutions"
+    "Philosophy": [],
+    "Personality Traits": "",
+    "Software Development Approach": ""
   }
 }
 ```

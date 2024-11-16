@@ -57246,3 +57246,1521 @@ agent=LaTeX Code Generator2024-08-20 10:40:39: task=\section{Relevant Courses}
   Software Engineering (Java | Unit Testing) \\
   Statistics and Computing (R | Charts)
 }2024-08-20 10:40:39: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:18: task=Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,  - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}. - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol. - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province. - Pipeline '|' should be used to separate the data and must not be the last character of the output.
+Example: ```latex
+  \namesection{Saif}{Mahmud}
+  {
+    \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+    \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+  }
+```
+Here is the information you need and convert into LaTeX format:
+
+
+```json
+{
+  "Personal Information": {
+    "Full Name": "Tanvir Haider",
+    "Phone Number": "236-591-9712",
+    "Email": "tanvirhaider34@gmail.com",
+    "Linkedin": "",
+    "Other Social Media Profiles": "",
+    "Personal Website": "",
+    "Portfolio": "",
+    "GitHub": "",
+    "Address": "",
+    "City": "Burnaby",
+    "State": "BC",
+    "Zip Code": "",
+    "Country": "Canada"
+  },
+  "Education": {
+    "Degree": "",
+    "Major": "School of Communication",
+    "University": "Simon Fraser University",
+    "University Location": "Burnaby, BC",
+    "Graduation Date": "12/2024",
+    "GPA": "",
+    "Honors/Distinctions": ""
+  },
+  
+  "Volunteer Work": [],
+  "Awards and Recognitions": [
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP Recruiter",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": "Recognizing exceptional recruitment performance."
+    },
+    {
+      "Award Name": "MOST IMPROVEMENT AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": "Recognizing significant improvement and growth."
+    }
+  ],
+  "References": [],
+  "Personal Traits and Interests": {
+    "Strengths": "Sales, Marketing, Branding, CRM Software, Data Analysis, Market Research, Budgeting, Project Management, Strategic Planning, Training, Operations, Communications, Digital Marketing, Cold Calling, Performance Management, Client Relations",
+    "Hobbies": "",
+    "Passions": ""
+  },
+  "Applicant's Philosophy and Goals": {
+    "Philosophy": [],
+    "Personality Traits": "",
+    "Software Development Approach": ""
+  }
+}
+```2024-09-07 23:54:18: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:20: task=```latex
+\namesection{Tanvir}{Haider}
+{
+  \href{mailto:tanvirhaider34@gmail.com}{tanvirhaider34@gmail.com} | 236-591-9712 | Burnaby |
+}
+```2024-09-07 23:54:20: status=completed
+agent=All Purpose Agent2024-09-07 23:54:20: task=Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+
+
+Sales and Business Development Specialist
+Aragon Launchpad Academy
+350-889 Harbourside Dr, North Vancouver, BC
+Full-time
+&nbsp;
+Profile insights
+Here’s how the job qualifications align with your profile.
+Skills
+
+Communication skills
+&nbsp;
+Job details
+Here’s how the job details align with your profile.
+Job type
+
+Full-time
+Shift and schedule
+
+Monday to Friday
+&nbsp;
+Location
+350-889 Harbourside Dr, North Vancouver, BC
+&nbsp;
+Benefits
+Pulled from the full job description
+Dental care
+Extended health care
+Paid time off
+&nbsp;
+Full job description
+About Us:
+
+Aragon Launchpad Academy Inc. is a business accelerator, located in North Vancouver. We help entrepreneurs to launch and scale their businesses. Our services include consulting, mentoring, business planning, funding and more. We are looking for motivated Business Development and Sales Representatives to join our team and drive our mission forward.
+
+About this opportunity:
+
+We are seeking a highly motivated, proactive individual to join and grow within our sales Organization.
+
+Key responsibilities include designing and operating outreach campaigns, conducting market research, maintaining CRM, writing blog posts and managing social media presence, creating inbound interest, optimizing SEO, as well as generating and maintaining sales & marketing KPIs.
+
+Responsibilities:
+
+● Lead Generation and Qualification:
+
+o Proactively seek out and identify potential clients through a mix of:
+
+▪ Door-to-door canvassing in targeted neighborhoods
+
+▪ Cold calling and email outreach
+
+▪ Social media engagement and networking
+
+o Conduct initial needs assessments to determine suitability for the company's services
+
+● Appointment Setting and Sales Conversion:
+
+o Secure consultations or demos for qualified leads, accommodating both in-person and virtual preferences
+
+o Deliver persuasive sales presentations, highlighting the value proposition and overcoming client objections
+
+o Successfully close sales and book appointments, ensuring a seamless handover to the service team
+
+o Maintain contact with potential clients who haven't yet converted, fostering relationships for future business
+
+● Territory and Data Management:
+
+o Strategically manage a designated sales territory to maximize outreach efficiency
+
+o Meticulously maintain lead, interaction, and sales activity records within the CRM system
+
+o Contribute insights to market research efforts, staying informed about industry trends and competitive landscape
+
+Key Skills and Attributes:
+
+● Exceptional communication and interpersonal skills to establish rapport and build trust with clients
+
+● Persuasive sales acumen to effectively present offerings and guide clients toward a purchasing decision
+
+● Self-motivated and resilient to proactively generate leads and overcome challenges
+
+● Highly organized to manage leads, appointments, and territory efficiently
+
+● Adaptable to connect with clients through both in-person and virtual channels
+
+Benefits of this Combined Role:
+
+● Comprehensive Sales Approach: Integrates both direct and indirect sales tactics for wider reach
+
+● Stronger Client Relationships: Fosters connections with clients through diverse communication channels
+
+● Full Sales Cycle Ownership: Empowers the representative to manage the entire sales process
+
+● Optimized Efficiency: Streamlines lead management and ensures a seamless client experience
+
+●
+
+How to apply:
+
+Please submit your resume via Indeed. Candidates of interest will typically be contacted within one week of applying. Please note that only suitable candidates may be contacted for an interview.
+
+Aragon Launchpad Academy Inc. is an Equal Opportunity Employer. Our policy is to provide a fair and equal employment opportunity to all qualified applicants regardless of factors such as race, color, age, religion, national origin, physical or mental disability, gender identity or sexual orientation.
+
+Benefits:
+
+● Lucrative commission structure based on sales performance.
+
+● Opportunities for professional development and career growth.
+
+● Collaborative and supportive work environment.
+
+If you're passionate about sales, networking and self growth, we want to hear from you! Apply today to join our growing team at Aragon Launchpad Academy Inc.
+
+Job Type: Full-time
+
+Pay: $50.00 per day
+
+Additional pay:
+
+Commission pay
+Benefits:
+
+Dental care
+Extended health care
+Paid time off
+Flexible language requirement:
+
+French not required
+Schedule:
+
+Monday to Friday
+Work Location: In person2024-09-07 23:54:20: status=started
+agent=All Purpose Agent2024-09-07 23:54:22: task=**
+Aragon Launchpad Academy Inc. seeks a motivated Sales and Business Development Specialist to join their team. Responsibilities include lead generation through door-to-door canvassing, cold calling, email outreach, and social media engagement. The ideal candidate will possess exceptional communication and interpersonal skills, persuasive sales acumen, and self-motivation. They will be responsible for appointment setting, sales conversion, and maintaining contact with potential clients. Territory and data management are also key aspects of the role. Applicants with experience in both direct and indirect sales are preferred.2024-09-07 23:54:22: status=completed
+agent=Profile Relevance Evaluator2024-09-07 23:54:22: task=This task involves evaluating each major section of the applicant's profile for relevance to the job, assigning relevance scores, and finalizing the selection of prioritized sections based on their assessed relevance.
+**Input Data**: - Extracted and structured profile data:
+  ```json
+{
+  "Personal Information": {
+    "Full Name": "Tanvir Haider",
+    "Phone Number": "236-591-9712",
+    "Email": "tanvirhaider34@gmail.com",
+    "Linkedin": "",
+    "Other Social Media Profiles": "",
+    "Personal Website": "",
+    "Portfolio": "",
+    "GitHub": "",
+    "Address": "",
+    "City": "Burnaby",
+    "State": "BC",
+    "Zip Code": "",
+    "Country": "Canada"
+  },
+  "Education": {
+    "Degree": "",
+    "Major": "School of Communication",
+    "University": "Simon Fraser University",
+    "University Location": "Burnaby, BC",
+    "Graduation Date": "12/2024",
+    "GPA": "",
+    "Honors/Distinctions": ""
+  },
+  
+  "Volunteer Work": [],
+  "Awards and Recognitions": [
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    {
+      "Award Name": "TOP Recruiter",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": "Recognizing exceptional recruitment performance."
+    },
+    {
+      "Award Name": "MOST IMPROVEMENT AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": "Recognizing significant improvement and growth."
+    }
+  ],
+  "References": [],
+  "Personal Traits and Interests": {
+    "Strengths": "Sales, Marketing, Branding, CRM Software, Data Analysis, Market Research, Budgeting, Project Management, Strategic Planning, Training, Operations, Communications, Digital Marketing, Cold Calling, Performance Management, Client Relations",
+    "Hobbies": "",
+    "Passions": ""
+  },
+  "Applicant's Philosophy and Goals": {
+    "Philosophy": [],
+    "Personality Traits": "",
+    "Software Development Approach": ""
+  }
+}
+```
+  ```json
+{
+  "Relevant Coursework (to the Job Description)": []
+}
+```
+
+- Job description criteria:
+  
+  ----Job Description Criteria ends here----
+
+**Procedure**:
+1. First ignore sections: "Personal Information", "Personal Traits and Interests", and "Applicant's Philosophy and Goals". After the removal, Follow the next steps.
+2. **Relevance Assessment**:
+  Keep 4 most relevant sub-sections from the given context of the applicant's profile that align with the job description criteria.
+  Use a relevance score between 0 and 10 for each sub-section based on the provided job information. Keep the most relevant sub-sections based on the scores.
+
+3. If "Relevant Coursework (to the Job Description)" is provided, include all courses as one separate sub-section under the "Relevant Courses" section.
+3. **Final Selection**:
+  - Always include at least one sub-section from the "References" section if provided.
+  - Then include a total of 4 available sub-sections across all sections. Do not make up any sub-sections if they are not available.
+
+**Output**: - Generate a formatted JSON object ready for use, incorporating the selected sections and sub-sections based on the defined criteria. This output should clearly present each major section with its detailed content and an associated relevance score. 
+2024-09-07 23:54:22: status=started
+agent=Profile Relevance Evaluator2024-09-07 23:54:30: task={
+  "Education": {
+    "Section Name": "Education",
+    "Sub Section": {
+      "Degree": "",
+      "Major": "School of Communication",
+      "University": "Simon Fraser University",
+      "University Location": "Burnaby, BC",
+      "Graduation Date": "12/2024"
+    },
+    "Section Relevance Score": 7
+  },
+  "Awards and Recognitions": {
+    "Section Name": "Awards and Recognitions",
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    "Section Relevance Score": 9
+  },
+  "Awards and Recognitions": {
+    "Section Name": "Awards and Recognitions",
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": "Recognizing exceptional sales performance."
+    },
+    "Section Relevance Score": 9
+  },
+  "References": {
+    "Section Name": "References",
+    "Sub Section": {},
+    "Section Relevance Score": 0
+  }
+}, "Total Sub Section Count": 42024-09-07 23:54:30: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:30: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,
+If there is no educational information, write % \section{}, Like this:
+  % \section{Education} 
+
+If there is educational information, - The first line contains the section named "Education". Use the command \section{Education}. - The next line contains the institution name. Use the command \customTitle{Institution Name}. - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}. - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}. - If there are multiple education entries, the next line contains the command \newEntryVSpace to separate the education. - Do not choose more than two educations. Choose the most recent ones.
+Example: ```latex \section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.
+  \customTitle{Second Institution}
+  ...
+
+\sectionsep ```
+Conditions: - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+  % \section{}
+  % \sectionsep.
+
+- Output should be latex syntax only. Here is the information you need and convert into LaTeX format:
+
+
+2024-09-07 23:54:30: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:31: task=\section{Education}
+  \customTitle{Simon Fraser University}
+  \semiTitle{School of Communication}
+  \subTitle{Graduation Date: 12/2024}
+\sectionsep2024-09-07 23:54:31: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:31: task=Format the applicant's coursework information into LaTeX under the "Relevant Courses" section.
+**Instructions**: - Start with the section title using \section{Relevant Courses} if there are courses available. - List each courses in \body{}, formatted as "Course Name (tool | tool) \\" - A line ending with '\\' is necessary except for the last line.
+**Example Output**: \section{Relevant Courses} \body{
+  Operating Systems (Linux | C) \\
+  Distributed Computing (Python) \\
+  Database Implementation (Python | SQL)
+}
+**Conditions**: - Absence of course data should be marked with:
+  % \section{Relevant Courses}
+  % \sectionsep
+
+
+2024-09-07 23:54:31: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:32: task=% \section{Relevant Courses}
+% \sectionsep2024-09-07 23:54:32: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:32: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
+In your output: If there is no volunteer information, write % \section{} as LaTeX comments, like this:
+  % \section{Volunteer} 
+  % \sectionsep.
+
+If there is volunteer information:
+  - In the first line, use the command `\section{Volunteer}`.
+  - Use `\headingtwo{}` for organization name.
+  - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
+  - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+  - Do not make more than 2 items.
+
+  Example:
+  '''latex
+  \section{VOLUNTEER}
+    \headingtwo{.dev Programming Club}
+    \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+    \begin{vitemize}
+      \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+      \item Designed the official logo, social media posts, receipts and other official document formats.
+    \end{vitemize}
+  '''
+
+
+2024-09-07 23:54:32: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:33: task=% \section{Volunteer}
+% \sectionsep.2024-09-07 23:54:33: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:33: task=Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, If there is no reference information, write % \section{}, Like this:
+  % \section{References} 
+  % \sectionsep.
+
+Otherwise, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the reference information in the following format:
+  - Start with the command \section{Reference} if there is at least one reference.
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference in the format of phone number and location, email if available.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, each line starting with '%' like this:
+  % \section{}
+  % \sectionsep.
+
+Here is the information you need and convert into LaTeX format:
+
+
+2024-09-07 23:54:33: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:34: task=% \section{}
+% \sectionsep.2024-09-07 23:54:34: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:34: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use `\subTitle{}` to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
+3. The expected output is only the category and items, not any explanation or additional text. 4. If You are confused about any skill, put it in the "Others" category.
+Example: ```latex \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI}
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} ```
+
+
+{
+  "correctly_categorized_skills": {
+    "Sales": [
+      "Lead Generation",
+      "Sales Conversion",
+      "Cold Calling",
+      "Appointment Setting",
+      "Sales Presentations"
+    ],
+    "Marketing": [
+      "Market Research",
+      "SEO Optimization",
+      "Social Media Management",
+      "Blog Post Writing",
+      "Email Outreach"
+    ],
+    "Soft Skills": [
+      "Communication Skills",
+      "Interpersonal Skills",
+      "Persuasion",
+      "Self-Motivation",
+      "Resilience"
+    ],
+    "Client Relationship Management": [
+      "CRM Management",
+      "Needs Assessment",
+      "Client Relationships"
+    ],
+    "Business Development": [
+      "Door-to-Door Canvassing", 
+      "Territory Management",
+      "Competitive Landscape"
+    ]
+  }
+}2024-09-07 23:54:34: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:37: task=\section{Skills}
+\subTitle{Sales:}
+\body{
+- Lead Generation
+- Sales Conversion
+- Cold Calling
+- Appointment Setting
+- Sales Presentations
+}
+\subTitle{Marketing:}
+\body{
+- Market Research
+- SEO Optimization
+- Social Media Management
+- Blog Post Writing
+- Email Outreach
+}
+\subTitle{Soft Skills:}
+\body{
+- Communication Skills
+- Interpersonal Skills
+- Persuasion
+- Self-Motivation
+- Resilience
+}
+\subTitle{Client Relationship Management:}
+\body{
+- CRM Management
+- Needs Assessment
+- Client Relationships
+}
+\subTitle{Business Development:}
+\body{
+- Door-to-Door Canvassing
+- Territory Management
+- Competitive Landscape
+}2024-09-07 23:54:37: status=completed
+agent=LaTeX Code Generator2024-09-07 23:54:37: task=Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section named "Career Objective". Use the command \section{Career Objective}. - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+Example: \section{Career Goal}
+    \careerGoalBody{
+        Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+
+{
+  "Career Objective": "Highly motivated and sales-driven, I am seeking a challenging role as a Sales and Business Development Specialist at Aragon Launchpad Academy. I am eager to leverage my skills in lead generation, networking, and sales conversion to drive revenue growth and support the company's mission of empowering entrepreneurs. With my passion for developing lasting client relationships and my commitment to delivering exceptional customer service, I am confident that I can make a significant contribution to the team."
+}2024-09-07 23:54:37: status=started
+agent=LaTeX Code Generator2024-09-07 23:54:40: task=\section{Career Objective}
+\careerGoalBody{
+Highly motivated and sales-driven, I am seeking a challenging role as a Sales and Business Development Specialist at Aragon Launchpad Academy. I am eager to leverage my skills in lead generation, networking, and sales conversion to drive revenue growth and support the company's mission of empowering entrepreneurs. With my passion for developing lasting client relationships and my commitment to delivering exceptional customer service, I am confident that I can make a significant contribution to the team.}2024-09-07 23:54:40: status=completed
+agent=Experience Refinement Specialist2024-09-07 23:54:40: task=This task involves refining and formatting the content of JSON-formatted experiences. The process includes selecting summary points, handling links, and formatting links in LaTeX within the "Key Highlights" array.
+**Procedure**: 1. **Summary Point Selection**:
+   - Review the "Technologies, frameworks, and tools Used" and "Skills" for each experience.
+   - Select 3-4 summary points from these fields, ensuring each point consists of 1-2 words. The combined length of all summary points must not exceed 4 words.
+   - Prioritize the inclusion of specific technologies and skill names that best represent the experience.
+   - Remove the original "Technologies, frameworks, and tools Used" and "Skills" fields from each entry.
+   - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
+
+2. **Link Handling**:
+   - If a Link is present in the experience:
+     - Append the "Link" inside the "Key Highlights" array.
+     - Remove only the "Link" field from the experience.
+     - Remove the "Allow Count" and "Count Reason" fields if present.
+     - Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description", etc.
+
+3. **LaTeX Link Formatting**:
+   - Check if a link is present in the "Key Highlights" array.
+   - If a link is present, format it in LaTeX using the \href{url}{\ul{link text}} command.
+   - Write the link as a sentence in the format: "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}." Understand what the link is about and write the sentence and {text} accordingly. 
+   - Do not make up any links or sentences.
+   - Do not change or remove any other content of the JSON object.
+
+4. For timeline, use 3 letters of the month and year. For example, January 2020 should be Jan 2020. 
+**Output**: - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, with links appropriately handled and formatted within the "Key Highlights" array.
+Here is the context you need and convert into LaTeX format: ```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Job Title": "Sales Manager",
+      "Department/Domain": "Sales and Marketing",
+      "Company": "Go Sales",
+      "Location": "Not specified",
+      "Timeline": "05/2021 - 08/2024",
+      "Duration": "3 years 3 months",
+      "Technologies": "CRM software, Sales Tracking Tools, Digital Marketing Platforms",
+      "skills": "Sales, Marketing, Customer Loyalty Building, Digital Marketing, Team Leadership, Data Analysis, Strategic Planning",
+      "URL": "",
+      "Short Description": "As a Sales Manager, spearheaded sales efforts, exceeding sales targets and driving revenue growth.",
+      "Key Highlights": [
+        "Exceeded sales targets by 20%, consistently achieving 120% of goals, driving revenue growth for TELUS home services and KOODO mobility services.",
+        "Boosted customer loyalty by 25% through effective after-sales service and referral programs, contributing to long-term customer retention.",
+        "Managed and mentored a team of 20 sales representatives, providing training, guidance, and support to enhance individual and team performance by 15%."
+      ]
+    },
+    "Work Experience/Project Experience": {
+      "Additional Relevant Experiences title": {
+        "Job Title": "Director of Sales and Business Development",
+        "Department/Domain": "Sales and Business Development",
+        "Company": "CLEANROOM DRESS Bangladesh",
+        "Location": "Bangladesh",
+        "Timeline": "01/2020 - 02/2022",
+        "Duration": "2 years 2 months",
+        "Technologies": "Not specified",
+        "skills": "Sales, Business Development, Strategic Planning, Team Leadership, Client Relationship Management, Contract Negotiation, Market Research",
+        "URL": "",
+        "Short Description": "As Director of Sales and Business Development, spearheaded revenue generation, exceeding targets, and driving market expansion.",
+        "Key Highlights": [
+          "Spearheaded sales and business development operations, achieving a 25% increase in annual revenue, exceeding growth targets.",
+          "Developed and executed long-term growth strategies that expanded the company's market share by 30%, demonstrating strategic planning expertise.",
+          "Led a sales team of 15, implementing training programs that boosted productivity and sales efficiency by 20%, fostering a culture of high performance."
+        ]
+      }
+    }
+  }
+}
+```
+2024-09-07 23:54:40: status=started
+agent=Experience Refinement Specialist2024-09-07 23:54:51: task=```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Job Title": "Sales Manager",
+      "Department/Domain": "Sales and Marketing",
+      "Company": "Go Sales",
+      "Location": "Not specified",
+      "Timeline": "May 2021 - Aug 2024",
+      "Duration": "3 years 3 months",
+      "Summary Points": [
+        "CRM",
+        "Sales",
+        "Marketing",
+        "Digital"
+      ],
+      "Short Description": "As a Sales Manager, spearheaded sales efforts, exceeding sales targets and driving revenue growth.",
+      "Key Highlights": [
+        "Exceeded sales targets by 20%, consistently achieving 120% of goals, driving revenue growth for TELUS home services and KOODO mobility services.",
+        "Boosted customer loyalty by 25% through effective after-sales service and referral programs, contributing to long-term customer retention.",
+        "Managed and mentored a team of 20 sales representatives, providing training, guidance, and support to enhance individual and team performance by 15%."
+      ]
+    },
+    "Work Experience/Project Experience": {
+      "Additional Relevant Experiences title": {
+        "Job Title": "Director of Sales and Business Development",
+        "Department/Domain": "Sales and Business Development",
+        "Company": "CLEANROOM DRESS Bangladesh",
+        "Location": "Bangladesh",
+        "Timeline": "Jan 2020 - Feb 2022",
+        "Duration": "2 years 2 months",
+        "Summary Points": [
+          "Sales",
+          "Business",
+          "Planning",
+          "Team"
+        ],
+        "Short Description": "As Director of Sales and Business Development, spearheaded revenue generation, exceeding targets, and driving market expansion.",
+        "Key Highlights": [
+          "Spearheaded sales and business development operations, achieving a 25% increase in annual revenue, exceeding growth targets.",
+          "Developed and executed long-term growth strategies that expanded the company's market share by 30%, demonstrating strategic planning expertise.",
+          "Led a sales team of 15, implementing training programs that boosted productivity and sales efficiency by 20%, fostering a culture of high performance."
+        ]
+      }
+    }
+  }
+}
+```2024-09-07 23:54:51: status=completed
+agent=LaTeX Code Verifier2024-09-07 23:54:51: task=Format the applicant's experiences from the provided data into LaTeX format. 
+- Start with a suitable section title like \section{Experience} It will be only 1 time for all experiences.
+Organize the experiences as follows: - Title: Use \customTitle{Title}. It is simply the title of the experience. No need to add any additional text.  - Summary points: use \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: The provided role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: use \shortDescription{Short Description}. - Key responsibilities and achievements: 
+  -- start 'tightemize' environment with \begin{tightemize} 
+  -- Each entry of "Key Highlights" will be each \item. Do not remove any key highlights.
+  -- End the environment with \end{tightemize}.
+
+Special Character Handling: - Use textbf{} for texts surrounded by double asterisks (**text**) in the "Key Highlights" array. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+2024-09-07 23:54:51: status=started
+agent=LaTeX Code Verifier2024-09-07 23:55:00: task=```latex
+\section{Experience}
+  \customTitle{Sales Manager}
+      \summaryPoints{CRM | Sales | Marketing | Digital}
+      \roleAndTimeline{Go Sales | May 2021 - Aug 2024}
+
+      \shortDescription{As a Sales Manager, spearheaded sales efforts, exceeding sales targets and driving revenue growth.}
+
+      \begin{tightemize}
+          \item Exceeded sales targets by 20\%, consistently achieving 120\% of goals, driving revenue growth for TELUS home services and KOODO mobility services.
+          \item Boosted customer loyalty by 25\% through effective after-sales service and referral programs, contributing to long-term customer retention.
+          \item Managed and mentored a team of 20 sales representatives, providing training, guidance, and support to enhance individual and team performance by 15\%.
+      \end{tightemize}
+
+  \customTitle{Director of Sales and Business Development}
+      \summaryPoints{Sales | Business | Planning | Team}
+      \roleAndTimeline{CLEANROOM DRESS Bangladesh | Jan 2020 - Feb 2022}
+
+      \shortDescription{As Director of Sales and Business Development, spearheaded revenue generation, exceeding targets, and driving market expansion.}
+
+      \begin{tightemize}
+          \item Spearheaded sales and business development operations, achieving a 25\% increase in annual revenue, exceeding growth targets.
+          \item Developed and executed long-term growth strategies that expanded the company's market share by 30\%, demonstrating strategic planning expertise.
+          \item Led a sales team of 15, implementing training programs that boosted productivity and sales efficiency by 20\%, fostering a culture of high performance.
+      \end{tightemize}
+```2024-09-07 23:55:00: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:15: task=Extract the personal information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,  - The first line contains the name. Use the command \namesection{First Name and Middle Name if available}{Last Name}. - Then the next line will contain the URLs. Use the command \urlstyle{same} to keep the URLs in the same style as the text. The line will contain urls up to 2. then \\ to linebreak. Use \href for the URLs. The argument of \href should be the URL and the text should be the URL without the protocol. - The third line will contain the email, phone number, and location. Use the command \href for the email. The argument of \href should be the email and the text should be the email. The phone number should be in the format of 204 955 5064. The location should be in the format of a City or province. - Pipeline '|' should be used to separate the data and must not be the last character of the output.
+Example: ```latex
+  \namesection{Saif}{Mahmud}
+  {
+    \urlstyle{same}\href{https://saifmahmud.dev}{saifmahmud.dev} | \href{https://www.linkedin.com/in/vmsaif/}{linkedin.com/in/vmsaif}\\
+    \href{mailto:msaifofficial@gmail.com}{msaifofficial@gmail.com} | 204 955 5064 | Winnipeg, MB
+  }
+```
+Here is the information you need and convert into LaTeX format:
+
+
+```json
+{
+  "Personal Information": {
+    "Full Name": "Tanvir Haider",
+    "Phone Number": "2365919712",
+    "Email": "tanvirhaider34@gmail.com",
+    "Linkedin": "",
+    "Other Social Media Profiles": "",
+    "Personal Website": "",
+    "Portfolio": "",
+    "GitHub": "",
+    "Address": "",
+    "City": "Burnaby",
+    "State": "BC",
+    "Zip Code": "",
+    "Country": "Canada"
+  },
+  "Education": {
+    "Degree": "",
+    "Major": "SCHOOL OF COMMUNICATION",
+    "University": "Simon Fraser University",
+    "University Location": "Burnaby, BC",
+    "Graduation Date": "12/2024",
+    "GPA": "",
+    "Honors/Distinctions": ""
+  },
+  "Volunteer Work": [],
+  "Awards and Recognitions": [
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP Recruiter",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    {
+      "Award Name": "MOST IMPROVEMENT AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
+    }
+  ],
+  "References": [],
+  "Personal Traits and Interests": {
+    "Strengths": "Sales, Marketing, Branding, CRM Software, Data Analysis, Market Research, Budgeting, Project Management, Strategic Planning, Training, Operations, Communications, Digital Marketing, Cold Calling, Performance Management, Client Relations",
+    "Hobbies": "",
+    "Passions": ""
+  },
+  "Applicant's Philosophy and Goals": {
+    "Philosophy": [],
+    "Personality Traits": "",
+    "Software Development Approach": ""
+  }
+}
+```2024-09-09 18:29:15: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:17: task=```latex
+\namesection{Tanvir}{Haider}
+{
+  \href{mailto:tanvirhaider34@gmail.com}{tanvirhaider34@gmail.com} | 2365919712 | Burnaby, BC | Canada
+}
+```2024-09-09 18:29:17: status=completed
+agent=All Purpose Agent2024-09-09 18:29:17: task=Summarize the provided job description into a concise format that highlights the essential responsibilities and requirements of the role. This summary should efficiently encapsulate the key elements of the job to aid in determining which sections of an applicant's profile (such as Education, Volunteer Work, Awards and Recognitions, References, Personal Traits and Interests, Miscellaneous) are most relevant and should be included in a resume. The summary should serve as a reference for another agent responsible for selecting the appropriate resume sections based on the job alignment.
+The concise summary should be both informative and succinct, providing clear guidance without overwhelming detail. No need to hint which sections to select, just summarize the job description with the next agent's task in mind.
+
+
+Home
+Company reviews
+Salary guide
+Employers / Post Job
+Start of main content
+What
+Job title, keywords, or company
+Where
+canada
+Virtual Hiring Event for New Business Development Specialist
+GroupHEALTH Benefit Solutions
+Langley, BC
+Hybrid work
+$45,000 a year - Permanent, Full-time
+&nbsp;
+Profile insights
+Your profile might be missing qualifications mentioned in the job description
+Skills
+
+Sales
+
+Cold calling
+
+Business development
+
+Do you have experience in Sales?
+&nbsp;
+Job details
+Here’s how the job details align with your profile.
+Pay
+
+$45,000 a year
+Job type
+
+Full-time
+
+Permanent
+Shift and schedule
+
+Overtime
+
+No weekends
+
+Monday to Friday
+&nbsp;
+Interview details
+Virtual interview
+The interview will take place on Indeed so you won't need to download anything.
+Dates and times
+Pacific Daylight Saving Time
+Sep 10, 2024 | 11 a.m.–1 p.m.
+Show more dates and times
+Estimated duration
+30 minutes
+Each candidate will have their own time slot.
+&nbsp;
+Location
+Langley, BC
+&nbsp;
+Benefits
+Pulled from the full job description
+Dental care
+Disability insurance
+Employee assistance program
+Extended health care
+Flexible schedule
+Life insurance
+On-site gym
+On-site parking
+Paid time off
+RRSP match
+Tuition reimbursement
+Vision care
+Wellness program
+Work from home
+&nbsp;
+Full job description
+Please note this role is hybrid and based out of our office in Surrey, BC (15315 31st Ave #400, Surrey, BC).
+
+THE OPPORTUNITY
+
+We are leading the charge to disrupt the status quo in the Canadian benefits sector. Our high-skill, high-volume, and high-reward teams are driving this transformation, and we’re looking for talented individuals who are eager to make an impact. If you’re passionate about sales and want to be part of a company that’s making a real difference, this could be the perfect opportunity for you.
+
+YOUR ROLE
+
+As a New Business Development Specialist, your mission is to introduce Canadian business leaders to a more effective way of providing employee benefits. You will be responsible for identifying and connecting with high-potential clients across Canada, setting up appointments for them with our licensed advisors who will help them transition to our innovative plans.
+
+WHAT TO EXPECT
+
+We believe that success starts with a strong foundation. That’s why we’ve designed a comprehensive onboarding program to ensure you’re fully prepared to excel in your role. During your onboarding period, you’ll be paired with a dedicated trainer who will provide ongoing support as you learn the ins and outs of our business.
+
+Your training will cover everything from:
+
+Understanding our company’s mission and values, learning about our target markets, products, and what sets us apart from our competitors.
+You’ll gain a deep understanding of the challenges faced by small and medium-sized businesses in the benefits space, and how our solutions can help them overcome these challenges.
+By the end of your onboarding, you’ll be equipped with the knowledge and skills needed to succeed as a New Business Development Specialist.
+WHAT YOU’LL DO
+
+You’ll use various tools and strategies to identify small and medium-sized businesses across Canada that would benefit from GroupHEALTH’s innovative employee benefits solutions.
+You’ll engage with prospective clients via phone and email to introduce GroupHEALTH and its offerings.
+You'll assess the needs and readiness of potential clients to determine if they are a good fit for our services.
+You'll schedule meetings between qualified prospects and our licensed advisors, ensuring a smooth handoff for detailed sales conversations.
+You’ll maintain an organized record of all interactions with prospects in our CRM system, tracking progress and ensuring timely follow-ups.
+You'll work closely with other sales professionals, sharing insights, strategies, and best practices to optimize performance.
+You’ll consistently work towards meeting or surpassing individual and team goals for lead generation and appointments set.
+You’ll represent GroupHEALTH with Professionalism and ensure that every interaction reflects the company’s values and commitment to excellence, fostering positive relationships with all potential clients.
+THIS IS YOU
+
+Experience in cold-calling, prospecting, or business development.
+You are professional and articulate, with strong communication skills.
+You are highly motivated, with a relentless drive to achieve your goals.
+You have a strong desire to succeed and aren’t afraid to push your limits.
+You are passionate about sales and thrive in a fast-paced environment.
+You think quickly on your feet and can adapt to changing situations.
+You are eager to learn, grow, and take on new challenges.
+You are tech-savvy, with a good understanding of modern sales tools.
+WHAT YOU'LL GET
+
+Comfortable and competitive compensation and benefits.
+Enjoy a minimum of 3 weeks' vacation with our company-wide policy.
+Benefit from flex days to maintain a healthy work-life balance.
+Engage in wellness programs to support your well-being.
+Grow your skills and knowledge through our employee education program.
+YOUR COMPENSATION
+
+At the time of this posting, the estimated annual base salary for this position is $45,000. Individual compensation within this range is determined by factors such as job-related skills, relevant experience, and education/training. This range reflects the annual base salary only and does not encompass our comprehensive total rewards, benefits, and potential bonuses that we proudly offer.
+
+THE PERKS
+
+The sky’s the limit with our uncapped commission structure, allowing you to maximize your earnings based on your performance.
+On-target earnings Year 1: $55,000+
+On-target earnings Year 2: $65,000+
+On-target earnings Year 3: $75,000+
+Achieve your targets and be rewarded with additional bonuses and incentives.
+Maintain a healthy work-life balance with consistent hours and a predictable schedule.
+The Happy Friday Program, enjoy every second Friday off, providing you with regular long weekends to rest and recharge.
+Enjoy a hybrid work schedule – 2 days from the office and 3 from home!
+WHY YOU WILL LOVE WORKING FOR GroupHEALTH
+
+Professional Development
+
+We are a fast-growing company and as a result, there are ample opportunities for career growth and professional development when you join our team. From a transparent promotion structure and defined career paths to a wide range of learning and development opportunities, we do what it takes to invest in your career and help you hone your skills so you can grow alongside us!
+
+Health & Wellness Benefits
+
+We offer a comprehensive array of health and wellness benefits that provide choices so you can tune your benefits plan to fit your unique needs.
+
+Events and Socials
+
+When you join our team, you’ll enjoy everything from virtual company-wide teaching and training days, industry events, Happy Fridays, team social events and much more!
+
+Job Types: Full-time, Permanent
+
+Pay: $45,000.00 per year
+
+Additional pay:
+
+Bonus pay
+Commission pay
+Overtime pay
+Benefits:
+
+Dental care
+Disability insurance
+Employee assistance program
+Extended health care
+Flexible schedule
+Life insurance
+On-site gym
+On-site parking
+Paid time off
+RRSP match
+Tuition reimbursement
+Vision care
+Wellness program
+Work from home
+Schedule:
+
+Monday to Friday
+No weekends
+Work Location: In person
+
+&nbsp;
+What is a virtual hiring event?
+Virtual hiring events are a great way for employers and jobseekers to connect, even if they aren't in the same physical location. Hiring is a human process, and they would like to talk with you online (either through chat, on the phone, or video) to see if you’re a fit!
+&nbsp;
+New Business Specialist jobs in Langley, BC
+Jobs at GroupHEALTH Benefit Solutions in Langley, BC
+New Business Specialist salaries in Langley, BC
+Hiring Lab
+Career advice
+Browse Jobs
+Browse Companies
+Resume help
+Salaries
+Indeed Events
+Work at Indeed
+Countries
+About
+Help Centre
+ESG at Indeed
+© 2024 Indeed
+Accessibility at Indeed
+Privacy Centre and Ad Choices
+Terms2024-09-09 18:29:17: status=started
+agent=All Purpose Agent2024-09-09 18:29:22: task=**Job Summary for New Business Development Specialist at GroupHEALTH Benefit Solutions**
+
+**Essential Responsibilities:**
+
+* Identify potential clients across Canada using various tools and strategies
+* Initiate contact with prospective clients through phone and email to introduce GroupHEALTH's offerings
+* Assess client needs and readiness to determine their suitability for GroupHEALTH's services
+* Schedule appointments between qualified prospects and licensed advisors
+* Maintain organized records of client interactions and track progress
+* Collaborate with sales professionals to share insights and best practices
+* Meet or exceed individual and team goals for lead generation and appointments set
+* Represent GroupHEALTH with professionalism and uphold the company's values in all interactions
+
+**Essential Qualifications:**
+
+* Experience in cold-calling, prospecting, or business development
+* Strong communication and interpersonal skills
+* Self-motivated and driven to achieve goals
+* Ability to think quickly and adapt to changing situations
+* Eagerness to learn and take on new challenges
+* Proficiency in modern sales tools
+
+**Additional Perks and Benefits:**
+
+* Competitive salary and benefits package
+* Uncapped commission structure with potential for high earnings
+* Hybrid work schedule (2 days in office, 3 days at home)
+* Flexible schedule and a predictable work schedule to maintain work-life balance
+* Health and wellness benefits, including dental care, extended health care, and wellness programs
+* Professional development opportunities and career growth potential2024-09-09 18:29:22: status=completed
+agent=Profile Relevance Evaluator2024-09-09 18:29:22: task=This task involves evaluating each major section of the applicant's profile for relevance to the job, assigning relevance scores, and finalizing the selection of prioritized sections based on their assessed relevance.
+**Input Data**: - Extracted and structured profile data:
+  ```json
+{
+  "Personal Information": {
+    "Full Name": "Tanvir Haider",
+    "Phone Number": "2365919712",
+    "Email": "tanvirhaider34@gmail.com",
+    "Linkedin": "",
+    "Other Social Media Profiles": "",
+    "Personal Website": "",
+    "Portfolio": "",
+    "GitHub": "",
+    "Address": "",
+    "City": "Burnaby",
+    "State": "BC",
+    "Zip Code": "",
+    "Country": "Canada"
+  },
+  "Education": {
+    "Degree": "",
+    "Major": "SCHOOL OF COMMUNICATION",
+    "University": "Simon Fraser University",
+    "University Location": "Burnaby, BC",
+    "Graduation Date": "12/2024",
+    "GPA": "",
+    "Honors/Distinctions": ""
+  },
+  "Volunteer Work": [],
+  "Awards and Recognitions": [
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": ""
+    },
+    {
+      "Award Name": "TOP Recruiter",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    {
+      "Award Name": "MOST IMPROVEMENT AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
+    }
+  ],
+  "References": [],
+  "Personal Traits and Interests": {
+    "Strengths": "Sales, Marketing, Branding, CRM Software, Data Analysis, Market Research, Budgeting, Project Management, Strategic Planning, Training, Operations, Communications, Digital Marketing, Cold Calling, Performance Management, Client Relations",
+    "Hobbies": "",
+    "Passions": ""
+  },
+  "Applicant's Philosophy and Goals": {
+    "Philosophy": [],
+    "Personality Traits": "",
+    "Software Development Approach": ""
+  }
+}
+```
+  ```json
+{
+    "Relevant Coursework (to the Job Description)": []
+  }
+```
+
+- Job description criteria:
+  
+  ----Job Description Criteria ends here----
+
+**Procedure**:
+1. First ignore sections: "Personal Information", "Personal Traits and Interests", and "Applicant's Philosophy and Goals". After the removal, Follow the next steps.
+2. **Relevance Assessment**:
+  Keep 4 most relevant sub-sections from the given context of the applicant's profile that align with the job description criteria.
+  Use a relevance score between 0 and 10 for each sub-section based on the provided job information. Keep the most relevant sub-sections based on the scores.
+
+3. If "Relevant Coursework (to the Job Description)" is provided, include all courses as one separate sub-section under the "Relevant Courses" section.
+3. **Final Selection**:
+  - Always include at least one sub-section from the "References" section if provided.
+  - Then include a total of 4 available sub-sections across all sections. Do not make up any sub-sections if they are not available.
+
+**Output**: - Generate a formatted JSON object ready for use, incorporating the selected sections and sub-sections based on the defined criteria. This output should clearly present each major section with its detailed content and an associated relevance score. 
+2024-09-09 18:29:22: status=started
+agent=Profile Relevance Evaluator2024-09-09 18:29:34: task={
+  "Awards and Recognitions": {
+    "Section Name": "Awards and Recognitions",
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
+    },
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": ""
+    },
+    "Sub Section": {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": ""
+    },
+    "Section Relevance Score": 9
+  },
+  "References": {
+    "Section Name": "References",
+    "Sub Section": [],
+    "Section Relevance Score": 0
+  }
+}, "Total Sub Section Count": 22024-09-09 18:29:34: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:34: task=Extract the education information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. If you don't find any information at all, the output should be empty.
+In the output,
+If there is no educational information, write % \section{}, Like this:
+  % \section{Education} 
+
+If there is educational information, - The first line contains the section named "Education". Use the command \section{Education}. - The next line contains the institution name. Use the command \customTitle{Institution Name}. - The next line contains the degree and major. Use the command \semiTitle{Degree and Major}. - The next line contains the graduation status and date. Use the command \subTitle{Graduation Status, Graduation Date}. - If there are multiple education entries, the next line contains the command \newEntryVSpace to separate the education. - Do not choose more than two educations. Choose the most recent ones.
+Example: ```latex \section{Education}
+  \customTitle{University of Manitoba}
+  \semiTitle{BSc Major in Computer Science}
+  \subTitle{Graduated, October 2023}
+
+  \newEntryVSpace % use it if there are multiple educations to separate them.
+  \customTitle{Second Institution}
+  ...
+
+\sectionsep ```
+Conditions: - Only generate the \section{Education} if there is at least one element provided. If there is no education information, each line of the output should be latex comments, starting with '%'. 
+  % \section{}
+  % \sectionsep.
+
+- Output should be latex syntax only. Here is the information you need and convert into LaTeX format:
+
+
+2024-09-09 18:29:34: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:35: task=% \section{}
+% \sectionsep2024-09-09 18:29:35: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:35: task=Format the applicant's coursework information into LaTeX under the "Relevant Courses" section.
+**Instructions**: - Start with the section title using \section{Relevant Courses} if there are courses available. - List each courses in \body{}, formatted as "Course Name (tool | tool) \\" - A line ending with '\\' is necessary except for the last line.
+**Example Output**: \section{Relevant Courses} \body{
+  Operating Systems (Linux | C) \\
+  Distributed Computing (Python) \\
+  Database Implementation (Python | SQL)
+}
+**Conditions**: - Absence of course data should be marked with:
+  % \section{Relevant Courses}
+  % \sectionsep
+
+
+2024-09-09 18:29:35: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:36: task=% \section{Relevant Courses}
+% \sectionsep2024-09-09 18:29:36: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:36: task=Convert the volunteer work information of the applicant from the provided data into the LaTeX format.
+In your output: If there is no volunteer information, write % \section{} as LaTeX comments, like this:
+  % \section{Volunteer} 
+  % \sectionsep.
+
+If there is volunteer information:
+  - In the first line, use the command `\section{Volunteer}`.
+  - Use `\headingtwo{}` for organization name.
+  - \subTitle{} for the role, duration. Use pipe '|' to separate the role and duration except the last one.
+  - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+  - Do not make more than 2 items.
+
+  Example:
+  '''latex
+  \section{VOLUNTEER}
+    \headingtwo{.dev Programming Club}
+    \subTitle{Active Member | University of Manitoba Students Union (UMSU) | 2019-2023}
+    \begin{vitemize}
+      \item Designed and prepared banners, backdrops and brochures for Education Expo 2019.
+      \item Designed the official logo, social media posts, receipts and other official document formats.
+    \end{vitemize}
+  '''
+
+
+2024-09-09 18:29:36: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:37: task=% \section{Volunteer} 
+% \sectionsep.2024-09-09 18:29:37: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:37: task=Convert the awards and recognition information of the applicant from the provided data into the LaTeX format.
+In your output: If there is no award information, write % \section{} as LaTeX comments, like this:
+  % \section{Awards and Recognition} 
+  % \sectionsep.
+
+If there is award information:
+  - In the first line, use the command `\section{Awards and Recognition}`.
+  - Use `\headingtwo{}` for the award name.
+  - Use `\subTitle{}` for the organization name and the year of the award. Use pipe '|' to separate the organization name and the year of the award.
+  - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+  - Do not make more than 2 items.
+
+  Example:
+  '''latex
+  \section{Awards and Recognition}
+    \headingtwo{Dean's List}
+    \subTitle{University of Manitoba | 2022}
+    \begin{vitemize}
+      \item Achieved a GPA of 3.8 or higher for the academic year.
+      \item Recognized for outstanding academic performance.
+    \end{vitemize}
+  '''
+
+
+2024-09-09 18:29:37: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:39: task=```latex
+\section{Awards and Recognition}
+\headingtwo{TOP WIRELINE SALES AWARD}
+\subTitle{Go Sales | 2021}
+\headingtwo{TOP WIRELINE SALES AWARD}
+\subTitle{Go Sales | 2022}
+\headingtwo{TOP WIRELINE SALES AWARD}
+\subTitle{Go Sales | 2023}
+\headingtwo{TOP Q1 WIRELINE SALES AWARD}
+\subTitle{Go Sales | 2024}
+```2024-09-09 18:29:39: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:39: task=Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, If there is no reference information, write % \section{}, Like this:
+  % \section{References} 
+  % \sectionsep.
+
+Otherwise, - The first line contains the section name "References". Use the command \section{References}. - The next lines contain the reference information in the following format:
+  - Start with the command \section{Reference} if there is at least one reference.
+  - Use the command \subsection{} for the name of the reference.
+  - Use the command \subTitle{} for the position and company of the reference.
+  - Use the command \body{} for the contact information of the reference in the format of phone number and location, email if available.
+
+Example: \section{References}
+    \subsection{Abu Kabir}
+    \subTitle{Director, IT Service Management}
+    \subTitle{Microsoft Corporation}
+    \body{204-298-3693 | Winnipeg, MB}
+
+    \subsection{Safiur Mahdi}
+    \subTitle{Software Developer}
+    \subTitle{Skip The Dishes}
+    \body{204-583-3432 | Winnipeg, MB}
+
+Conditions: - Only generate the \section{References} if there is at least one reference provided. Otherwise, the output should be latex comments, each line starting with '%' like this:
+  % \section{}
+  % \sectionsep.
+
+Here is the information you need and convert into LaTeX format:
+
+
+2024-09-09 18:29:39: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:40: task=% \section{References} 
+% \sectionsep.2024-09-09 18:29:40: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:40: task=Convert the applicant's skills data into LaTeX format.
+**Instructions**: 1. **Section Header**: Begin with the section title using \section{Skills}. 2. **Skill Categories**: 
+   - Use `\subTitle{}` to introduce each skill category.
+   - List skills in each category using \body{}, separating items with \textbullet{} and nothing else like commas, hiphen, etc.
+3. The expected output is only the category and items, not any explanation or additional text. 4. If You are confused about any skill, put it in the "Others" category.
+Example: ```latex \section{Skills} \subTitle{Programming Languages:} \body{Python \textbullet{} Java \textbullet{} C++ \textbullet{} C \textbullet{} JavaScript}
+\subTitle{AI and Machine Learning:} \body{LangChain \textbullet{} OpenAI \textbullet{} Gemini Pro \textbullet{} RAG Search \textbullet{} CrewAI}
+\subTitle{Soft Skills:} \body{Leadership \textbullet{} Communication \textbody{} Problem Solving \textbullet{} Adaptability \textbullet{} Teamwork} ```
+
+
+I need more information. Please provide the job description and the applicant's skills in JSON format.2024-09-09 18:29:40: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:42: task=\section{Skills}
+\subTitle{Programming Languages:}
+\body{Java \textbullet{} C++ \textbullet{} Python}
+\subTitle{AI and Machine Learning:}
+\body{Scikit-Learn \textbullet{} TensorFlow}
+\subTitle{Soft Skills:}
+\body{Leadership \textbullet{} Communication \textbullet{} Teamwork \textbullet{} Problem Solving}
+\subTitle{Other:}
+\body{Electrical}2024-09-09 18:29:42: status=completed
+agent=LaTeX Code Generator2024-09-09 18:29:42: task=Extract the career objective information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 
+In the output, - The first line contains the section named "Career Objective". Use the command \section{Career Objective}. - The next line contains the career objective statement. Use the command \careerGoalBody{} for the career objective statement.
+Example: \section{Career Goal}
+    \careerGoalBody{
+        Proactive Computer Science graduate with a focus on AI and software development, aiming to apply my skills in the tech industry to drive innovation and efficiency. I seek to contribute to teams where continuous improvement and robust software solutions meet real-world demands.}
+
+
+```json
+{
+  "Career Objective": "Passionate Software Engineer eager to contribute expertise in high-scale services, cloud technologies, and reliability engineering to the advancement of Robinhood's mission in democratizing finance."
+}
+```2024-09-09 18:29:42: status=started
+agent=LaTeX Code Generator2024-09-09 18:29:44: task=\section{Career Objective}
+\careerGoalBody{
+Passionate Software Engineer eager to contribute expertise in high-scale services, cloud technologies, and reliability engineering to the advancement of Robinhood's mission in democratizing finance.}2024-09-09 18:29:44: status=completed
+agent=Experience Refinement Specialist2024-09-09 18:29:44: task=This task involves refining and formatting the content of JSON-formatted experiences. The process includes selecting summary points, handling links, and formatting links in LaTeX within the "Key Highlights" array.
+**Procedure**: 1. **Summary Point Selection**:
+   - Review the "Technologies, frameworks, and tools Used" and "Skills" for each experience.
+   - Select 3-4 summary points from these fields, ensuring each point consists of 1-2 words. The combined length of all summary points must not exceed 4 words.
+   - Prioritize the inclusion of specific technologies and skill names that best represent the experience.
+   - Remove the original "Technologies, frameworks, and tools Used" and "Skills" fields from each entry.
+   - Add a new field named "Summary Points" to each experience entry, containing the selected summary points.
+
+2. **Link Handling**:
+   - If a Link is present in the experience:
+     - Append the "Link" inside the "Key Highlights" array.
+     - Remove only the "Link" field from the experience.
+     - Remove the "Allow Count" and "Count Reason" fields if present.
+     - Keep all other fields as they are such as "Title", "Role", "Timeline", "Duration", "Summary Points", "Short Description", etc.
+
+3. **LaTeX Link Formatting**:
+   - Check if a link is present in the "Key Highlights" array.
+   - If a link is present, format it in LaTeX using the \href{url}{\ul{link text}} command.
+   - Write the link as a sentence in the format: "See my linkedin \href{https://www.linkedin.com/in/vmsaif/}{\ul{profile}}." Understand what the link is about and write the sentence and {text} accordingly. 
+   - Do not make up any links or sentences.
+   - Do not change or remove any other content of the JSON object.
+
+4. For timeline, use 3 letters of the month and year. For example, January 2020 should be Jan 2020. 
+**Output**: - A JSON object that retains the original structure but includes the new "Summary Points" field in each entry, with links appropriately handled and formatted within the "Key Highlights" array.
+Here is the context you need and convert into LaTeX format: ```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Job Title": "Sales Manager",
+      "Department/Domain": "Sales and Marketing",
+      "Company": "Go Sales",
+      "Location": "Not Specified",
+      "Timeline": "May 2021 - August 2024",
+      "Duration": "3 Years 4 Months",
+      "Technologies": "CRM software, Sales Tracking Software, Digital Marketing Platforms",
+      "skills": "Sales Team Leadership, Marketing Strategy, Customer Relationship Management (CRM), Data Analysis, Digital Marketing, Recruitment & Training, Performance Reporting, Sales Target Exceedance, Customer Loyalty Improvement, Online Presence Management",
+      "URL": "N/A",
+      "Short Description": "Successfully led a team of 20 sales representatives, consistently exceeding sales targets by 20% while orchestrating effective marketing strategies.",
+      "Key Highlights": [
+        "Spearheaded sales efforts resulting in consistent achievement of 120% of sales targets, showcasing strong leadership and team management skills.",
+        "Orchestrated impactful marketing strategies across diverse channels, resulting in a 30% increase in sales for TELUS home services and KOODO mobility services.",
+        "Boosted customer loyalty by an impressive 25% through the strategic implementation of after-sales service programs and effective referral programs."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Job Title": "Director of Sales and Business Development",
+        "Department/Domain": "Sales and Business Development",
+        "Company": "CLEANROOM DRESS Bangladesh",
+        "Location": "Bangladesh",
+        "Timeline": "January 2020 - February 2022",
+        "Duration": "2 Years 2 Months",
+        "Technologies": "CRM software, Sales Tracking Software, Market Research Tools",
+        "skills": "Sales & Business Development Leadership, Long-Term Growth Strategy, Team Training & Development, Client Relationship Management, Contract Negotiation, Market Research & Analysis, Team Collaboration, Sales Performance Reporting",
+        "URL": "N/A",
+        "Short Description": "Directed sales and business development operations, achieving a 25% increase in annual revenue and a 30% expansion in market share.",
+        "Key Highlights": [
+          "Directed sales and business development operations, exceeding revenue goals and securing a 25% increase in annual revenue.",
+          "Developed and executed strategic long-term growth strategies, successfully expanding the company’s market share by an impressive 30%.",
+          "Led and mentored a high-performing sales team of 15 members, implementing impactful training programs that enhanced productivity and sales efficiency by 20%."
+        ]
+      }
+    ]
+  }
+}
+```
+2024-09-09 18:29:44: status=started
+agent=Experience Refinement Specialist2024-09-09 18:29:56: task=```json
+{
+  "applicant's Experiences with ATS Keywords": {
+    "Most Recent Experience": {
+      "Job Title": "Sales Manager",
+      "Department/Domain": "Sales and Marketing",
+      "Company": "Go Sales",
+      "Location": "Not Specified",
+      "Timeline": "May 2021 - Aug 2024",
+      "Duration": "3 Years 4 Months",
+      "Summary Points": [
+        "CRM",
+        "Sales"
+      ],
+      "Short Description": "Successfully led a team of 20 sales representatives, consistently exceeding sales targets by 20% while orchestrating effective marketing strategies.",
+      "Key Highlights": [
+        "Spearheaded sales efforts resulting in consistent achievement of 120% of sales targets, showcasing strong leadership and team management skills.",
+        "Orchestrated impactful marketing strategies across diverse channels, resulting in a 30% increase in sales for TELUS home services and KOODO mobility services.",
+        "Boosted customer loyalty by an impressive 25% through the strategic implementation of after-sales service programs and effective referral programs."
+      ]
+    },
+    "Work Experience/Project Experience": [
+      {
+        "Job Title": "Director of Sales and Business Development",
+        "Department/Domain": "Sales and Business Development",
+        "Company": "CLEANROOM DRESS Bangladesh",
+        "Location": "Bangladesh",
+        "Timeline": "Jan 2020 - Feb 2022",
+        "Duration": "2 Years 2 Months",
+        "Summary Points": [
+          "CRM",
+          "Sales"
+        ],
+        "Short Description": "Directed sales and business development operations, achieving a 25% increase in annual revenue and a 30% expansion in market share.",
+        "Key Highlights": [
+          "Directed sales and business development operations, exceeding revenue goals and securing a 25% increase in annual revenue.",
+          "Developed and executed strategic long-term growth strategies, successfully expanding the company’s market share by an impressive 30%.",
+          "Led and mentored a high-performing sales team of 15 members, implementing impactful training programs that enhanced productivity and sales efficiency by 20%."
+        ]
+      }
+    ]
+  }
+}
+```2024-09-09 18:29:56: status=completed
+agent=LaTeX Code Verifier2024-09-09 18:29:56: task=Format the applicant's experiences from the provided data into LaTeX format. 
+- Start with a suitable section title like \section{Experience} It will be only 1 time for all experiences.
+Organize the experiences as follows: - Title: Use \customTitle{Title}. It is simply the title of the experience. No need to add any additional text.  - Summary points: use \summaryPoints{item 1 | item 2 | item 3}.  - Role and timeline: The provided role and its duration using \roleAndTimeline{Role | Timeline}. - Short description: use \shortDescription{Short Description}. - Key responsibilities and achievements: 
+  -- start 'tightemize' environment with \begin{tightemize} 
+  -- Each entry of "Key Highlights" will be each \item. Do not remove any key highlights.
+  -- End the environment with \end{tightemize}.
+
+Special Character Handling: - Use textbf{} for texts surrounded by double asterisks (**text**) in the "Key Highlights" array. - Format links with \href{}{}, using \ul for underlining. - Escape special characters appropriately (e.g., \%, \&, \#).
+
+
+2024-09-09 18:29:56: status=started
+agent=LaTeX Code Verifier2024-09-09 18:30:06: task=```latex
+\section{Experience}
+  \customTitle{Sales Manager}
+      \summaryPoints{CRM | Sales}
+      \roleAndTimeline{Go Sales | May 2021 - Aug 2024}
+
+      \shortDescription{Successfully led a team of 20 sales representatives, consistently exceeding sales targets by 20\% while orchestrating effective marketing strategies.}
+
+      \begin{tightemize}
+          \item Spearheaded sales efforts resulting in consistent achievement of 120\% of sales targets, showcasing strong leadership and team management skills.
+          \item Orchestrated impactful marketing strategies across diverse channels, resulting in a 30\% increase in sales for TELUS home services and KOODO mobility services.
+          \item Boosted customer loyalty by an impressive 25\% through the strategic implementation of after-sales service programs and effective referral programs.
+      \end{tightemize}
+
+  \customTitle{Director of Sales and Business Development}
+      \summaryPoints{CRM | Sales}
+      \roleAndTimeline{CLEANROOM DRESS Bangladesh | Jan 2020 - Feb 2022}
+
+      \shortDescription{Directed sales and business development operations, achieving a 25\% increase in annual revenue and a 30\% expansion in market share.}
+
+      \begin{tightemize}
+          \item Directed sales and business development operations, exceeding revenue goals and securing a 25\% increase in annual revenue.
+          \item Developed and executed strategic long-term growth strategies, successfully expanding the company’s market share by an impressive 30\%.
+          \item Led and mentored a high-performing sales team of 15 members, implementing impactful training programs that enhanced productivity and sales efficiency by 20\%.
+      \end{tightemize}
+```2024-09-09 18:30:06: status=completed

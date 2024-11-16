@@ -70,6 +70,7 @@ class OmegaThemeCrew:
 			self.education_section(),
 			self.coursework_section(),
 			self.volunteer_section(),
+			self.awards_recognization(),
 			self.references_section(), 
 			self.skill_section(),
 
@@ -307,6 +308,26 @@ class OmegaThemeCrew:
 			callback=self.small_token_limiter
 		)
 	
+	@task
+	def awards_recognization(self):
+		yaml = self.yaml_loader("awards_recognization", True)
+		description = yaml[0]
+		expected_output = yaml[1]
+
+		if(self.debugFlag):
+			description = description + "\n\n" + self.load_file(OMEGA_PATHS["final_selection"])
+
+		return Task(
+			description=description,
+			expected_output=expected_output,
+			agent=self.latex_maker_agent(),
+			context=[self.final_selection()],
+			output_file=OMEGA_PATHS["awards_recognization"],
+			callback=self.small_token_limiter
+		)
+	
+
+
 	@task
 	def references_section(self):
 		yaml = self.yaml_loader("references_section", True)

@@ -1,50 +1,35 @@
-```json
 {
-  "Education": {
-    "Section Name": "Education",
+  "Awards and Recognitions": {
+    "Section Name": "Awards and Recognitions",
     "Sub Section": {
-      "Degree": "BSc",
-      "Major": "Computer Science",
-      "University": "University of Manitoba",
-      "University Location": "Winnipeg, MB",
-      "Graduation Date": "October 2023"
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2021",
+      "Reason": ""
+    },
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2022",
+      "Reason": ""
+    },
+    "Sub Section": {
+      "Award Name": "TOP WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2023",
+      "Reason": ""
+    },
+    "Sub Section": {
+      "Award Name": "TOP Q1 WIRELINE SALES AWARD",
+      "Awarding Organization": "Go Sales",
+      "Date": "2024",
+      "Reason": ""
     },
     "Section Relevance Score": 9
   },
-  "Relevant Courses": {
-    "Section Name": "Relevant Courses",
-    "Sub Section": [
-      "Distributed Computing (Python)",
-      "Database Implementation (Python | SQL)",
-      "Data Structures and Algorithms (Java)",
-      "Software Engineering (Java | Unit Testing)",
-      "Statistics and Computing (R | Charts)"
-    ],
-    "Section Relevance Score": 8
-  },
   "References": {
     "Section Name": "References",
-    "Sub Section": {
-      "Name": "Abu Kabir",
-      "Position": "Director, IT Service Management",
-      "Company": "Microsoft Corporation",
-      "Contact Information": "204-298-3693",
-      "Relationship": null,
-      "Sub Section Relevance Score": 10
-    },
-    "Sub Section": {
-      "Name": "Safiur Mahdi",
-      "Position": "Software Developer",
-      "Company": "Skip The Dishes",
-      "Contact Information": "204-583-3432",
-      "Relationship": null,
-      "Sub Section Relevance Score": 4
-    }
-  },
-  "Awards and Recognitions": {
-    "Section Name": "Awards and Recognitions",
     "Sub Section": [],
     "Section Relevance Score": 0
   }
-}
-```
+}, "Total Sub Section Count": 2

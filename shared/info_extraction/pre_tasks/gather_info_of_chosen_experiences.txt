@@ -3,39 +3,40 @@
   "selected experiences": {
     "Most Recent Experience": [
       {
-        "Title": "ATS Pass AI",
-        "Timeline": "January 2024 - Present",
-        "Technologies, frameworks, and tools Used": "Python, SQL, Multiagent Systems, AI, RAG Search",
-        "Skills": "AI Development, Programming Languages, Cloud, DevOps",
-        "URL/Link": "https://github.com/vmsaif/ats-pass-ai",
-        "Short Description": "An AI-powered resume builder application leveraging advanced language models like Gemini Pro and LangChain with a CrewAI-driven Multi-agent System for efficient user data extraction and resume tailoring based on job descriptions, achieving over 85% keyword matching for ATS optimization.",
+        "Title": "Sales Manager",
+        "Company Name": "Go Sales",
+        "Timeline": "May 2021 - August 2024",
+        "Technologies, frameworks, and tools Used": "CRM software (Not specified), Sales Tracking Software (Not specified), Digital Marketing Platforms (Not specified)",
+        "Skills": "Sales Team Leadership, Marketing Strategy, Customer Relationship Management (CRM), Data Analysis, Digital Marketing, Recruitment & Training, Performance Reporting, Sales Target Exceedance, Customer Loyalty Improvement, Online Presence Management",
+        "URL/Link": "N/A",
+        "Short Description": "Successfully led a team of 20 sales representatives, consistently exceeding sales targets by 20% while orchestrating effective marketing strategies that boosted sales and customer loyalty for TELUS and KOODO services.",
         "Key Highlights": [
-          "Developed an AI-powered resume builder application designed to optimize resumes for Applicant Tracking Systems (ATS).",
-          "Utilized advanced language models, including Gemini Pro and LangChain, for enhanced natural language processing and resume generation.",
-          "Implemented a Multi-agent System powered by CrewAI to facilitate efficient data extraction from user inputs and tailor resumes accordingly.",
-          "Achieved an impressive 85% keyword matching rate with user-provided job descriptions, significantly increasing the chances of passing ATS screenings."
+          "Spearheaded sales efforts resulting in consistent achievement of 120% of sales targets, showcasing strong leadership and team management skills.",
+          "Orchestrated impactful marketing strategies across diverse channels, resulting in a 30% increase in sales for TELUS home services and KOODO mobility services.",
+          "Boosted customer loyalty by an impressive 25% through the strategic implementation of after-sales service programs and effective referral programs.",
+          "Managed and optimized the company's online presence, achieving a significant 40% increase in engagement through targeted and data-driven digital marketing campaigns."
         ],
-        "Team size": "Individual Project",
-        "Outcomes": "Developed a robust and efficient AI-powered resume builder that significantly improves users' chances of passing ATS screenings by achieving a high keyword matching rate."
+        "Team size": "20",
+        "Outcomes": "Consistently exceeded sales targets by 20%, increased sales for TELUS home services and KOODO mobility services by 30%, boosted customer loyalty by 25%, and elevated online engagement by 40%."
       }
     ],
     "Additional Relevant Experiences title": [
       {
-        "Title": "Programming Mentor ",
-        "Company Name": "Self-Employed",
-        "Timeline": "February 2023 - December 2023",
-        "Technologies, frameworks, and tools Used": "Python, Java, Computer Systems",
-        "Skills": "Programming Languages, Soft Skills",
-        "URL/Link": null,
-        "Short Description": "Provided private, adaptive tutoring sessions to a student, focusing on Python and Java programming.  The role involved teaching fundamental programming concepts, debugging techniques, and software installation, while tailoring the learning experience to the student's individual needs and learning style.",
+        "Title": "Director of Sales and Business Development",
+        "Company Name": "CLEANROOM DRESS Bangladesh",
+        "Timeline": "January 2020 - February 2022",
+        "Technologies, frameworks, and tools Used": "CRM software (Not specified), Sales Tracking Software (Not specified), Market Research Tools (Not specified)",
+        "Skills": "Sales & Business Development Leadership, Long-Term Growth Strategy, Team Training & Development, Client Relationship Management, Contract Negotiation, Market Research & Analysis, Team Collaboration, Sales Performance Reporting",
+        "URL/Link": "N/A",
+        "Short Description": "Successfully directed sales and business development operations, achieving a remarkable 25% increase in annual revenue. Developed and executed impactful long-term growth strategies, leading to a 30% expansion in market share.",
         "Key Highlights": [
-          "Delivered personalized one-on-one programming tutoring sessions tailored to the student's learning style and pace.",
-          "Provided hands-on, practical programming experience using Python and Java, covering fundamental concepts, debugging techniques, and software installation.",
-          "Successfully imparted knowledge and fostered the student's programming skills through adaptive teaching methods and personalized guidance.",
-          "Enhanced communication and mentorship abilities through effective knowledge transfer and tailored learning experiences."
+          "Directed sales and business development operations, exceeding revenue goals and securing a 25% increase in annual revenue.",
+          "Developed and executed strategic long-term growth strategies, successfully expanding the company’s market share by an impressive 30%.",
+          "Led and mentored a high-performing sales team of 15 members, implementing impactful training programs that enhanced productivity and sales efficiency by 20%.",
+          "Cultivated and nurtured relationships with key clients, playing a crucial role in achieving a 40% improvement in customer retention rates."
         ],
-        "Team size": "Individual",
-        "Outcomes": "Successfully mentored a student in their programming journey, fostering their understanding of fundamental programming concepts and practical application through personalized tutoring sessions. This experience enhanced my teaching, communication, and problem-solving skills."
+        "Team size": "15",
+        "Outcomes": "Achieved a 25% increase in annual revenue, expanded the company’s market share by 30%, boosted productivity and sales efficiency by 20%, and improved customer retention rates by 40%."
       }
     ]
   }

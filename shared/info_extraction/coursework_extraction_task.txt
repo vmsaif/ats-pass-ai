@@ -1,11 +1,5 @@
 ```json
 {
-  "Relevant Coursework (to the Job Description)": [
-    "Distributed Computing (Python)",
-    "Database Implementation (Python | SQL)",
-    "Data Structures and Algorithms (Java)",
-    "Software Engineering (Java | Unit Testing)",
-    "Statistics and Computing (R | Charts)"
-  ]
-}
+    "Relevant Coursework (to the Job Description)": []
+  }
 ```

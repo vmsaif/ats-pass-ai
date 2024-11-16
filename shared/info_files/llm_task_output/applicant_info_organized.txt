@@ -1,169 +1,117 @@
 # Personal Details
-Name: Saif Mahmud
-Location: Winnipeg, MB
-Phone: 204-955-5064
-Email: msaifofficial@gmail.com
-Website: saifmahmud.dev
-LinkedIn: linkedin.com/in/vmsaif
+Name: Tanvir Haider
+Location: Burnaby, BC
+Phone: 2365919712
+Email: tanvirhaider34@gmail.com
 
-##  Summary
-This section contains a summarized version of the Applicant's personal philosophy towards Software Development and the development of their skills.
-Saif Mahmud is a computer science graduate with a passion for crafting intuitive and user-friendly software experiences. Driven by a philosophy centered on user needs and innovation, Saif's journey in software development is marked by a dedication to creating solutions that feel seamless and empowering.
+# Summary
 
-Saif's commitment to simplifying complexities shines through in their belief that programs should be as straightforward as a single "magic button" fulfilling user desires. This approach extends beyond mere interaction simplification to encompass a deep understanding of user needs, culminating in the development of intuitive and effective software solutions.
+This section provides a concise overview of Tanvir Haider's professional background and key skills, summarizing their experience in sales, marketing, and business development.
 
-Throughout their academic and professional endeavors, Saif has consistently striven to translate this philosophy into tangible results. Their work reflects a dedication to clean code, efficient algorithms, and a user-centered design ethos.
-
-# Education
- This section contains the Educational background of the applicant. 
-## University of Manitoba 
-    BSc Major in Computer Science
-    Graduated: October 2023
-
-#  Relevant Coursework
- This section contains the courses taken by the Applicant during their academic career.
- * Artificial Intelligence (Python)
-* AI and Game Development (Java | Python)
-* Statistics and Computing (R | Charts)
-* Distributed Computing (Python)
-* Database Implementation (Python | SQL)
-* Data Structures and Algorithms (Java)
-* Software Engineering (Java | Unit Testing) 
-
-# Skills
-This section contains the technical and non-technical skills possesed by the applicant.
-## Programming Languages:
-* Python • Java • C++ • C • JavaScript
-##  AI Development:
-* LangChain • OpenAI • Gemini Pro • RAG Search • CrewAI • GPT • LLaMa 3
-## Cloud, DevOps:
-* Google Vertex • AWS Bedrock • CI/CD • GitHub Actions • Docker
-## Front End Development:
-* React • CSS • JavaScript • HTML
-## Soft Skills:
-* Adaptability • Critical Thinking • Teamwork • Communication • Time Management • Problem Solving
-
-# Career Goal
-This section contain's the applicant's goals for their professional career.
-Proactive Computer Science graduate with a focus on AI and software development, aiming to apply skills to the tech industry to drive innovation and efficiency. Seeking to contribute to teams where continuous improvement and robust software solutions meet real-world demands.
-
-#  Project Experience 
-This section contains the project experience acquired by the Applicant during their professional and academic career.
-
-## ATS Pass AI 
- * **Description:** This project involves the creation of an AI powered resume builder application. It uses advanced language models such as Gemini Pro, LangChain and RAG search,  with a Multi-agent System driven by CrewAI  for the efficient extraction of user data and resume tailoring based on user input. It boasts over 85% keyword matching with user provided job descriptions, making it extremely efficient for generating resumes for Applicant Tracking Systems (ATS).
-* **Technical Stack**: Python, SQL, Multiagent Systems, AI, RAG Search
-* **Duration**: January 2024 - Present
-* **GitHub**:  [https://github.com/vmsaif/ats-pass-ai](https://github.com/vmsaif/ats-pass-ai)
-
-
-## AI PATHFINDING 
-* **Description:** An AI powered game that utilizes the A* algorithm. It uses prompt engineering to enhance the AI generated response times for users. It utilizes industry standard version control and CI/CD best practices such as  Git  for optimal performance.
-* **Technical Stack:** CI/CD, A* Algorithm, Java, Git
-* **Duration**:  September 2023 - December 2023
-* **Github**: [https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm](https://github.com/vmsaif/ant-path-finding-using-A-Star-algorithm)
-
-
-## Blockchain Car Mileage Tracker
-* **Description:** A blockchain based application designed for use in the automobile industry, by insurance companies, as a system to track car mileage, Built using Docker and Vue.js, it  is a completely transparent solution to reduce instances of car mileage fraud by providing tamper proof car mileage data via the blockchain.  
-* **Technical Stack:** Docker, Vue.js, Blockchain, Smart Contracts
-* **Duration:** January 2023 - March 2023
-* **Github**:  [https://github.com/vmsaif/blockChainCarMilageTracker](https://github.com/vmsaif/blockChainCarMilageTracker)
-
-## Recursive Ray Tracing 
-* **Description:**  Developed using  OpenGL and C++ this program implements the 3D graphics rendering technique know as  "Recursive Ray Tracing".
-* **Technical Stack:** 3D Graphics, OpenGL, C++ 
-* **Duration:** May 2023 - July 2023
-* **Github**: [https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL](https://github.com/vmsaif/recursive-ray-tracing-program-in-openGL)
-
-
-## Bank Account System
-* **Description:** This project contains a simulation of a bank account system that makes use of  object-oriented design and polymorphism using Java and File I/O operations.  It's a scalable project that has open-source collaboration features via detailed documentation and public access provided through Github. 
-* **Technical Stack:** Java, File I/O
-* **Duration:** Object-Oriented Design, Polymorphism
-* **Github:** [https://github.com/vmsaif/bankAccountSystem](https://github.com/vmsaif/bankAccountSystem)
-
-## Hosting a Resume on GitHub Pages 
-* **Description:** This project provides a detailed and comprehensive, beginner-friendly, guide on hosting static websites and technical documentation using GitHub pages. It illustrates the development processes using  Markdown, Jekyll and  Git  for optimal version control and ease of deployment to GitHub pages. 
-* **Technical Stack:**  Markdown, Jekyll, GitHub Pages, Documentation,  Git. 
-* **Duration**:  April 2023 - April 2023
-* **Github**:  [https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/](https://github.com/vmsaif/hosting-a-resume-on-gitHub-pages/)
-
-## ELF Binary Analysis 
-* **Description**:  This project implements an ELF header parsing and analysis tool using C that greatly simplifies and improves the debugging experience and product knowledge base documentation.  The project emphasized using a variety of debugging, documentation, and system analysis methodologies resulting in a project with  a 20%  improvement in debugging efficiency.
-* **Technical Stack**: C Programming, Debugging, Linux OS. 
-* **Duration**:  Nov 2022 - Dec 2022
-* **Github**:  [https://github.com/vmsaif/readingAndInterpretingBinary](https://github.com/vmsaif/readingAndInterpretingBinary)
-
-## OpenGL Sphere Lighting 
-* **Description**: Explores advanced lighting techniques using the 3D graphics library,  OpenGL,   by developing an interactive application, featuring three light sources, to provide dynamic lighting for  3D spheres, made with glutSolidSphere. The project features  a comprehensive interactive menu for changing the lighting effects and their respective material properties,  leading to an overall improvement in interactivity by 50%.
-* **Technical Stack**: OpenGL,  C++.
-* **Duration**:  April 2023 - June 2023
-* **Github**: [https://github.com/vmsaif/openGL-sphere-lighting-program](https://github.com/vmsaif/openGL-sphere-lighting-program) 
-
-## Reversible Learning APP
-* **Description**: A collaborative project focused on enhancing study habits and promoting learning using an Android app. The "Reversible Learning"  app is developed using Java in Android studio, it leverages  Junit  for a robust unit and integration testing suite leading to a decrease in post-release bugs by 25%. The app features robust database management using HSQLDB, as well as intuitive user interfaces to improve the user experience and UI/UX design.
-* **Technical Stack:** SQL, Android Studio, Java, JUnit
-* **Duration**: January 2021 - April 2021 
-* **Github**: [https://github.com/vmsaif/reversibleLearning](https://github.com/vmsaif/reversibleLearning)
-
-## Connect 4 Game
-* **Description**: An implementation of the classic game of connect 4 in a digital format, featuring strategic AI decision-making for a fun and engaging single-player experience. The game was developed using an agile development framework incorporating  CI/CD best practices and workflow for streamlined deployment and optimized performance.  Users are pitted against the game's AI on a  6x7  grid. 
-* **Technical Stack:**  Java, AI Decision Making,  CI/CD 
-* **Duration**:  February 2023 - April 2023
-* **Github**:  [https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java](https://github.com/vmsaif/connect4-with-minimax-algorithm-in-java)
-
-## TCP Chat Application 
-* **Description**: This project is a  TCP  powered multi-threaded chat application developed in Java featuring client-server based architecture using the TCP/IP  protocol, it includes standard features expected from chat applications such as the ability to join/leave chat rooms, create rooms, view room details, and has an uptime of  99.9%   This project is ideal for demonstrating network programming capabilities and  understanding asynchronous event handling through the use of  multithreading in Java.
-* **Technical Stack:**  TCP/IP, Multithreading,  Networking,  Java.
-* **Duration**:  October 2022 - December 2022 
-* **Github**: [https://github.com/vmsaif/tcpChatJava](https://github.com/vmsaif/tcpChatJava)
-
-##  Data Visualization with R
-* **Description:**  The application of statistical and data analysis methods  to process and create useful visualizations using  R, this project is ideal to demonstrate Data Analytics proficiency similar to what would be encountered with a tool such as  Power BI.
-* **Technical Stack**: Data Analysis, R Programming Language
-* **Duration:**  Course Project
-
-## Portfolio Website
-* **Description:**   A comprehensive  web development project to showcase technical expertise by building an online presence with dynamic elements to display professional achievements such as past projects and skills using  React,   it features,  search engine optimization(SEO) for visibility, accessibility and dynamic content,  Styled-components for styling  UI, a blog section, GitHub actions for a robust and responsive user interface, as well as, streamlined  CI/CD practices for seamless deployment through Github Pages. 
-* **Technical Stack**: React, Styled-Components, Github Actions, CI/CD.  Apollo, GraphQL, Chart.js
-* **Duration**: 2021
-* **Website**:  [saifmahmud.dev/](saifmahmud.dev/)
-
-
-## CPU Scheduling
-* **Description**: Developed using C this multithreaded application simulates different  CPU scheduling techniques using Linux and Bash scripting,  as well as the  Git version control for industry standard code management and streamlined collaborative development, this project is an excellent demonstration of mastery with parallel processing. 
-* **Technical Stack**: C, Multithreading, Linux,  Bash,  Git.
-* **Duration**: June 2023 - August 2023
-* **Github**:  [https://github.com/vmsaif/cpu_scheduling](https://github.com/vmsaif/cpu_scheduling)
-
-## Go-Back-N Protocol Simulation 
-* **Description**: Developed in python,  this project implements a simulation of the  Go-Back-N  protocol, emphasizing the role of  dynamic window sizing  through the use of data visualization tools for tasks such as generating plots, illustrating network flow, network protocol performance  using matplotlib  It resulted in a  65%  increase in the understanding of networking protocols, and their applications for optimizing data transmission.
-* **Technical Stack:** Python, Networking, Matplotlib.
-* **Duration**: Nov 2022 - Dec 2022
-* **Github:** [https://github.com/vmsaif/gbnProtocolSimulation](https://github.com/vmsaif/gbnProtocolSimulation)
-
+Tanvir is a highly accomplished sales and marketing professional with a proven track record of exceeding targets and driving business growth. He possesses extensive experience in leading teams, developing marketing strategies, and building strong client relationships. His expertise in data analysis and market research enables him to identify trends, capitalize on opportunities, and deliver strategic recommendations.
 
 # Experience
-This section contains the applicant's professional experience
 
-##  Programming Mentor 
-* **Description:**  This section contains details on the applicant's work experience teaching a student in a one-on-one setting using custom tailored learning resources and providing hands on, practical programming experience, including;  installing software, using basic debugging tools and principles and, explaining basic computer system concepts for applications programmed using  Python  and Java.   The teaching methodology adopted was designed around providing custom tailored, adaptive,  tutoring sessions based on student's learning style. This position played a key role in solidifying the applicants skills as a  Systems Engineer  by solidifying computer systems  fundamentals. 
-* **Technical Stack**: Private Tutoring, Python, Java, Computer Systems. 
-* **Employer/Location**:  Winnipeg, MB
-* **Duration**:  February 2023 - December 2023 
+This section meticulously outlines Tanvir's employment history, presenting a chronological overview of his professional journey and key responsibilities within each role. 
 
-#  References
-This section contains the personnel who can provide references, testimonials or recommendations for the Aplicant.
+## Go Sales | BC, Vancouver
+Sales Manager | 05/2021 - 08/2024
+- Directed a team of 20 sales representatives, consistently achieving 120% of sales targets.
+- Orchestrated marketing strategies across various channels, resulting in a 30% increase in sales for TELUS home services and KOODO mobility services.
+- Boosted customer loyalty by 25% through effective after-sales service and referral programs.
+- Managed the company's online presence, elevating engagement by 40% through targeted digital marketing campaigns.
+- Recruited and mentored team members, enhancing performance by 15% through continuous training programs.
+- Analyzed sales data to identify trends and opportunities, leading to a 10% increase in sales efficiency.
+- Executed promotional campaigns, resulting in a 20% increase in new customer acquisitions.
+- Collaborated with cross-functional teams to ensure seamless implementation of marketing strategies.
+- Explored new market opportunities, leading to successful expansion and innovative sales techniques.
+- Provided performance reports to senior management, highlighting key achievements and strategic recommendations.
 
-##  Abu Kabir
-Director, IT Service Management 
-Microsoft Corporation
-Phone:  204-298-3693 
-Location: Winnipeg, MB
+## TRICYCLE GAMES INC | BC, Vancouver
+Social Media Manager | 01/2020 - 04/2021
+- Promoted gaming applications, increasing downloads by 50% on Google Play Store and App Store through targeted social media campaigns.
+- Executed physical and virtual events, enhancing customer engagement by 35%.
+- Developed social media strategies, resulting in a 40% increase in followers and engagement.
+- Explored new marketing strategies, growing market share by 20%.
+- Collaborated with the creative team to produce compelling content, leading to a 25% increase in social media interactions.
+- Monitored social media metrics to track campaign effectiveness and make data-driven decisions.
+- Managed social media advertising budgets, achieving a 15% reduction in cost per acquisition.
+- Responded to customer inquiries and feedback on social media, improving overall customer satisfaction.
 
-## Safiur Mahdi 
-Software Developer 
-Skip The Dishes 
-Phone: 204-583-3432 
-Location:  Winnipeg, MB
+## UNICK CHECK | Dhaka, Bangladesh
+Business Development Manager | 09/2020 - 04/2021
+- Spearheaded business development efforts, driving a 15% growth in new client acquisitions.
+- Established partnerships with key industry players, enhancing the company’s market presence.
+- Developed and executed strategies to penetrate new markets, resulting in a 20% increase in revenue.
+- Negotiated contracts and pricing structures, leading to a 10% improvement in profit margins.
+- Conducted market research to identify growth opportunities, driving product innovation and development.
+- Led presentations and product demonstrations, contributing to successful client onboarding.
+- Collaborated with cross-functional teams to align business objectives with client needs.
+- Tracked and reported on KPIs, providing actionable insights for strategic decision-making.
+
+## CLEANROOM DRESS Bangladesh | Dhaka, Bangladesh
+Director of Sales and Business Development | 01/2020 - 02/2022
+- Directed sales and business development operations, achieving a 25% increase in annual revenue.
+- Developed and executed long-term growth strategies that expanded the company’s market share by 30%.
+- Led a sales team of 15, implementing training programs that boosted productivity and sales efficiency by 20%.
+- Established and nurtured relationships with key clients, contributing to a 40% improvement in customer retention.
+- Negotiated and secured high-value contracts, increasing the company’s profitability by 15%.
+- Conducted market research and competitive analysis to drive strategic business decisions.
+- Collaborated with internal teams to streamline operations and enhance customer satisfaction.
+- Presented quarterly sales performance reports to the board, highlighting key achievements and growth opportunities.
+
+## CANADIAN TIRE | BC, Canada
+Triangle Mastercard Sales Team Manager | 04/2019 – 02/2020
+- Managed and led a high-performing team responsible for promoting and selling Triangle Mastercards across multiple retail locations.
+- Consistently exceeded monthly sales targets by 15%, contributing to overall company revenue growth.
+- Developed and implemented sales strategies that increased application conversion rates by 20%.
+- Trained and mentored team members, fostering professional growth and improving sales performance by 25%.
+- Conducted performance reviews and set actionable goals, leading to improved team efficiency and morale.
+- Collaborated with store management to align sales strategies with customer needs and promotional events.
+- Provided detailed sales reports and performance analysis to senior management, offering insights for continued growth.
+
+# Skills
+This section enumerates Tanvir's core competencies, showcasing his diverse skill set applicable to sales, marketing, and business operations. 
+
+- Sales
+- Marketing
+- Branding
+- CRM Software
+- Data Analysis
+- Market Research
+- Budgeting
+- Project Management
+- Strategic Planning
+- Training
+- Operations
+- Communications
+- Digital Marketing
+- Cold Calling
+- Performance Management
+- Client Relations
+
+# Education
+
+This segment details Tanvir's educational background, specifying his degree, major, institution, and anticipated graduation date.
+
+Simon Fraser University | Burnaby, BC
+SCHOOL OF COMMUNICATION | 12/2024
+
+# Languages
+This section highlights Tanvir's linguistic capabilities, listing the languages he is proficient in.
+
+- English
+- Bengali
+- Hindi
+- Urdu
+
+# Awards
+
+This section acknowledges Tanvir's achievements and accolades received throughout his career, demonstrating his exceptional performance in sales and leadership. 
+
+- TOP WIRELINE SALES AWARD 2021
+- TOP WIRELINE SALES AWARD 2022
+- TOP WIRELINE SALES AWARD 2023
+- TOP Q1 WIRELINE SALES AWARD 2024
+- TOP Recruiter 2022
+- MOST IMPROVEMENT AWARD 2021 

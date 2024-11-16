@@ -29,6 +29,7 @@ resume_crew_src_dir = 'src/resume_crew'
 draft_output_dir = f'{info_extraction_dir}/draft_output'
 
 limiter_db_dir = 'custom_db'
+info_collection_hashes_path_dir = 'info_collection_hashes_path_dir'
 
 # Config dictionary with all paths
 
@@ -42,6 +43,7 @@ PATHS = {
 
     "limiter_db_dir": limiter_db_dir,
     "limiter_db_file": f"{limiter_db_dir}/request_limiter.db",
+    "info_collection_hashes_path" : f"{info_collection_hashes_path_dir}/task_hashes.json",
     
     "resume_crew_src_dir": resume_crew_src_dir,
     "info_files_dir": info_files_dir,
@@ -56,7 +58,7 @@ PATHS = {
     "personal_information_extraction_task": f"{pre_tasks_dir}/personal_information_extraction_task.txt",
     "education_extraction_task": f"{info_extraction_dir}/education_extraction_task.txt",
     "volunteer_work_extraction_task": f"{info_extraction_dir}/volunteer_work_extraction_task.txt",
-    "awards_recognitions_extraction_task": f"{info_extraction_dir}/awards_recognitions_extraction_task.txt",
+    "awards_extraction_task": f"{info_extraction_dir}/awards_extraction_task.txt",
     "references_extraction_task": f"{info_extraction_dir}/references_extraction_task.txt",
     "personal_traits_interests_extraction_task": f"{info_extraction_dir}/personal_traits_interests_extraction_task.txt",
     "profile_builder_task": f"{info_extraction_dir}/profile_builder_task.txt",

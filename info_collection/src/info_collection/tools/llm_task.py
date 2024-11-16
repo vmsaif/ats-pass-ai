@@ -10,8 +10,11 @@
 
 """
 
+import hashlib
+import json
 import os
 import google.generativeai as genai
+from path.output_file_paths import PATHS
 
 from util.limiter import Limiter
 
@@ -73,31 +76,49 @@ class LLMTask:
 			safety_settings=self.safety_settings
 			)
 			self.content = self.content + '\n' + self.system_instruction 
-		
-	def _shouldRun(self) -> bool:
+	
+	def _get_file_hash(self, file_path: str) -> str:
+		"""Compute and return the MD5 hash of the file content."""
+		with open(file_path, 'rb') as file:
+			file_content = file.read()
+		return hashlib.md5(file_content).hexdigest()
 
-		"""
-		Check if the llm task should run. If the output file already exists, the task will not run unless the override flag is set to True.
-
-		Returns:
-			bool: True if the task should run, False otherwise
-		"""
-
-		if self.override:
-			print(f"Starting {self.task_name} task...")
-			return True
-		
+	def _load_task_hashes(self) -> dict:
+		"""Load the stored hashes from a JSON file."""
 		try:
-			with open(self.applicant_info_orgainzed_file_path, 'r', encoding='utf-8') as f:
-				content = f.read()
-			if len(content) < 50:
-				print(f"{self.task_name} output file found but it is most likely empty.")
-				raise FileNotFoundError
-			print(f"{self.task_name} output file already found and will not re-run this task. Please delete the file or it's content if you want to re-run.")
-			return False
-		except FileNotFoundError as e:
-			print(f"Starting {self.task_name} task...")
-			return True
+			with open(PATHS["info_collection_hashes_path"], 'r') as file:
+				return json.load(file)
+		except FileNotFoundError:
+			return {}  # Return an empty dictionary if the file does not exist
+
+	def _save_task_hashes(self, hashes: dict):
+		"""Save the updated hashes to a JSON file."""
+
+		# if file not available, create
+		if not os.path.exists(os.path.dirname(PATHS["info_collection_hashes_path"])):
+			os.makedirs(os.path.dirname(PATHS["info_collection_hashes_path"]))
+
+		with open(PATHS["info_collection_hashes_path"], 'w') as file:
+			json.dump(hashes, file)
+
+	def _shouldRun(self) -> bool:
+		"""
+		Determine if the task should run based on whether the hash of the input file has changed.
+		
+		Returns:
+			bool: True if the task should run, False otherwise.
+		"""
+		hashes = self._load_task_hashes()
+		current_hash = self._get_file_hash(self.applicant_info_file_path)
+
+		# Check if the task name exists in the hashes and if the hash has changed
+		if self.task_name in hashes and hashes[self.task_name] == current_hash:
+			return False  # Hash is the same, no need to run
+
+		# Update the hash for this task and save the hashes
+		hashes[self.task_name] = current_hash
+		self._save_task_hashes(hashes)
+		return True  # Hash is different or new task, need to run
 
 			
 	def _read_file(self, file_path) -> str:
@@ -142,8 +163,8 @@ class LLMTask:
 	
 
 	def __init__(self, task_name: str, 
-			  applicant_info_file_path: str, 
-			  applicant_info_orgainzed_file_path: str, 
+			  input_content_path: str, 
+			  output_path: str, 
 			  system_instruction: str, override : bool = False,
 			  islargeLLM: bool = False):
 		
@@ -151,9 +172,9 @@ class LLMTask:
 		Initialize the LLM Task with the given parameters.
 
 		Args:
-			task_name (str): The name of the task
-			applicant_info_file_path (str): The path to the file containing the applicant's information
-			applicant_info_orgainzed_file_path (str): The path to the file to write the organized applicant's information
+			task_name (str): The Name of the task
+			input_content_path (str): The path to the input file
+			output_path (str): The path to the output file			
 			system_instruction (str): The system instruction to generate content
 			override (bool): Whether to override the output file if it already exists
 			islargeLLM (bool): Whether to use the large LLM model
@@ -162,8 +183,8 @@ class LLMTask:
 		
 		genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 		self.task_name = task_name
-		self.applicant_info_file_path = applicant_info_file_path
-		self.applicant_info_orgainzed_file_path = applicant_info_orgainzed_file_path
+		self.applicant_info_file_path = input_content_path
+		self.applicant_info_orgainzed_file_path = output_path
 		self.content = ""
 		self.system_instruction = system_instruction
 		self.override = override
@@ -188,6 +209,7 @@ class LLMTask:
 			},
 		]
 		self._set_model()
+		self.hash_path = PATHS["info_collection_hashes_path"]
 		
 		if(islargeLLM):
 			self.llm_limiter = Limiter(llm_size='LARGE', llm = self.model, langchainMethods=False)

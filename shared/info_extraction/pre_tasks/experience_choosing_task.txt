@@ -1,76 +1,32 @@
 ```json
 {
   "selected experiences": {
-    "Most Recent Experience": "ATS Pass AI",
-    "Additional Relevant Experiences title": "Programming Mentor"
+    "Most Recent Experience": "Sales Manager",
+    "Additional Relevant Experiences title": "Director of Sales and Business Development"
   },
   "selection justification": {
     "reasons_for_choice": [
       {
-        "title": "ATS Pass AI",
-        "reason": "This project showcases direct relevance to the 'IT Support' and 'Technical Support' aspects of the job by demonstrating expertise in AI-powered resume optimization.  The use of 'AI,' 'Multiagent Systems,' and 'Applicant Tracking Systems (ATS)' aligns strongly with the technical focus of the role, while the 85% keyword matching accomplishment emphasizes problem-solving skills and attention to detail relevant to a Support Analyst."
+        "title": "Sales Manager",
+        "reason": "This is the most recent experience and demonstrates a strong track record of exceeding sales targets, managing teams, and developing marketing strategies. The description highlights expertise in customer loyalty, digital marketing, data analysis, and collaboration, all of which are valuable assets in a sales-oriented role."
       },
       {
-        "title": "Programming Mentor",
-        "reason": "This experience highlights the applicant's ability to provide 'Technical Support' and 'Troubleshooting' directly, aligning with key job requirements. The mentorship role inherently involves strong 'Communication Skills' and 'Interpersonal Skills' as they guide individuals through software installation, debugging, and computer systems fundamentals. This experience demonstrates practical application of technical knowledge and a client-focused approach, crucial for a Support Analyst position."
+        "title": "Director of Sales and Business Development",
+        "reason": "This experience showcases leadership in sales and business development, with a focus on revenue growth, market share expansion, and team management.  The candidate's achievements in securing high-value contracts and driving customer retention demonstrate a strategic and results-oriented approach."
       }
     ],
     "rejected_experiences": [
       {
-        "title": "AI PATHFINDING",
-        "reason": "While showcasing technical proficiency, this project lacks direct relevance to IT Support or customer service aspects emphasized in the job description. The focus on AI pathfinding and game development, while impressive, doesn't align as strongly with the required skills compared to selected experiences."
+        "title": "Social Media Manager",
+        "reason": "While this role involved marketing and customer engagement, it lacks the direct sales focus and team leadership responsibilities outlined in the target job description."
       },
       {
-        "title": "Blockchain Car Mileage Tracker",
-        "reason": "This project, while technically advanced, lacks direct alignment with the specific requirements of an IT Support Analyst role. The focus on blockchain technology and fraud prevention doesn't translate as directly to the core responsibilities outlined in the job description compared to other experiences."
+        "title": "Business Development Manager",
+        "reason": "Although relevant to business growth, this experience appears less focused on sales team leadership and revenue generation compared to the selected roles."
       },
       {
-        "title": "Recursive Ray Tracing",
-        "reason": "This project, while demonstrating technical skills, is less relevant to the IT Support Analyst role compared to others.  The focus on 3D graphics rendering doesn't align as strongly with the core responsibilities outlined in the job description."
-      },
-      {
-        "title": "Bank Account System",
-        "reason": "This project demonstrates programming skills but lacks direct relevance to the IT Support and troubleshooting focus of the job description. While object-oriented design is valuable, it's not as directly applicable as experiences with customer interaction and technical assistance."
-      },
-      {
-        "title": "Hosting a Resume on GitHub Pages",
-        "reason": "This project, while showcasing technical documentation skills, doesn't hold the same level of relevance to IT Support as other experiences. The focus on website hosting and GitHub Pages doesn't directly translate to the core responsibilities of troubleshooting, customer service, or technical support."
-      },
-      {
-        "title": "ELF Binary Analysis",
-        "reason": "While this project highlights technical skills and debugging experience, it might be considered less relevant compared to others that showcase direct customer interaction and IT support. The focus on binary analysis and system-level debugging might not directly translate to the day-to-day tasks of a Support Analyst role."
-      },
-      {
-        "title": "OpenGL Sphere Lighting",
-        "reason": "This project showcases technical skills in 3D graphics and OpenGL, but it lacks direct relevance to the IT Support Analyst role. The focus on lighting techniques and visual effects doesn't align as strongly with the required skills and responsibilities compared to other experiences."
-      },
-      {
-        "title": "Reversible Learning APP",
-        "reason": "While this project demonstrates collaboration and software development skills, its focus on Android app development and learning techniques is not as directly relevant to the IT Support Analyst role as other experiences.  "
-      },
-      {
-        "title": "Connect 4 Game",
-        "reason": "This project demonstrates programming and AI skills but is less relevant to the IT Support role compared to experiences involving direct customer interaction, troubleshooting, or technical assistance. While game development showcases technical ability, it doesn't align as strongly with the core responsibilities of the position."
-      },
-      {
-        "title": "TCP Chat Application",
-        "reason": "This project showcases networking knowledge and programming skills but might be considered less relevant compared to others that demonstrate direct customer interaction and technical support. The focus on network programming and chat application development doesn't directly translate to the day-to-day tasks of a Support Analyst role."
-      },
-      {
-        "title": "Data Visualization with R",
-        "reason": "While showcasing data analysis skills, this project lacks direct relevance to the IT Support and customer service aspects emphasized in the job description. The focus on data visualization, while valuable, doesn't align as strongly with the required skills compared to selected experiences."
-      },
-      {
-        "title": "Portfolio Website",
-        "reason": "While this project demonstrates web development skills, it is less relevant to the IT Support Analyst role compared to others that showcase direct customer interaction, troubleshooting, or technical assistance."
-      },
-      {
-        "title": "CPU Scheduling",
-        "reason": "While this project showcases technical skills in operating systems and multithreading, its relevance to the IT Support Analyst role is less pronounced compared to experiences involving customer interaction, troubleshooting, or technical support. "
-      },
-      {
-        "title": "Go-Back-N Protocol Simulation",
-        "reason": "This project demonstrates networking knowledge and Python skills but might be considered less relevant compared to others that showcase direct customer interaction and technical support. The focus on network protocol simulation, while technically sound, doesn't directly translate to the day-to-day tasks of a Support Analyst role."
+        "title": "Triangle Mastercard Sales Team Manager",
+        "reason": "This experience, while demonstrating sales team management, is less recent and potentially less relevant to a broader sales leadership role compared to the chosen experiences."
       }
     ]
   }

@@ -39,7 +39,6 @@ profile_builder_task :
         "GPA": "",
         "Honors/Distinctions": ""
       },
-      
       "Volunteer Work": [
         {
           "Organization Name": "",
@@ -357,7 +356,8 @@ ats_friendly_skills_task:
           -- **Partial Matches**: Populate this section robustly by listing each related skill from the applicant's list that has any connection to the job description skills, including a brief on their relevance or how they complement the job skills.
           -- **Missing Skills**: List skills from the job description that are completely absent in the applicant's skill set.
        - Emphasize more on the partial matches, exploring every possible connection between the applicant's skills and the job requirements to maximize relevance and coverage.
-
+   
+      The expected output I am providing you is example output. The Categories may vary depending on the job description.
   expected_output: >
     {
       "exact_match_with_job_description": {
@@ -602,7 +602,6 @@ add_url_to_the_experiences:
 
     You are looking to edit "URL/Link" field in the experiences.
 
-    
 ats_friendly_keywords_into_experiences:
   description: >
     Enhance the descriptions of the applicant's experiences by integrating key job description keywords to make them more appealing to Applicant Tracking Systems (ATS) while ensuring they remain readable and relevant.
@@ -684,27 +683,39 @@ ats_friendly_keywords_into_experiences:
     }
 
     {
-      "Report on Changes": {
-        "ATS Pass AI": {
-          [
-            "Original Sentence": "Original Sentence: Developed a machine learning algorithm for image recognition using Python and TensorFlow.",
-            "Revised Sentence": "Developed a **Python**-based machine learning algorithm for image recognition, utilizing **data analysis** and **data visualization** techniques.",
-            "Keywords Added": ["Data Analysis", "Data Visualization"],
-            "Rationale": "The job description emphasized these technical skills as critical for the role, making their inclusion essential for aligning the applicant’s experiences with the job requirements."
-          ],
-          [
-            "Original Sentence": "...",
-            "Revised Sentence": "...",
-            "Keywords Added": ["..."],
-            "Rationale": "..."
-          ],
-          ...
+      "Report on Changes": [
+        {
+          "Project/experience Title": "ATS Pass AI",
+          "Changes": [
+            {
+              "Original Sentence": "Developed a machine learning algorithm for image recognition using Python and TensorFlow.",
+              "Revised Sentence": "Developed a **Python**-based machine learning algorithm for image recognition, utilizing **data analysis** and **data visualization** techniques.",
+              "Keywords Added": ["Data Analysis", "Data Visualization"],
+              "Rationale": "The job description emphasized these technical skills as critical for the role, making their inclusion essential for aligning the applicant’s experiences with the job requirements."
+            },
+            {
+              "Original Sentence": "...",
+              "Revised Sentence": "...",
+              "Keywords Added": ["..."],
+              "Rationale": "..."
+            }
+          ]
         },
-        "Experience Title": {
-          similar structure to the above.
+        {
+          "Experience Title": {
+            "Changes": [
+              {
+                "Original Sentence": "...",
+                "Revised Sentence": "...",
+                "Keywords Added": ["..."],
+                "Rationale": "..."
+              }
+            ]
+          }
         }
-      }
+      ]
     }
+
 
 split_context_of_ats_friendly_keywords_into_experiences:
   description: >

@@ -282,6 +282,35 @@ volunteer_section:
       '''
   expected_output: >
 
+awards_recognization:
+  description: >
+    Convert the awards and recognition information of the applicant from the provided data into the LaTeX format.
+
+    In your output:
+    If there is no award information, write % \section{} as LaTeX comments, like this:
+      % \section{Awards and Recognition} 
+      % \sectionsep.
+
+    If there is award information:
+      - In the first line, use the command `\section{Awards and Recognition}`.
+      - Use `\headingtwo{}` for the award name.
+      - Use `\subTitle{}` for the organization name and the year of the award. Use pipe '|' to separate the organization name and the year of the award.
+      - Use the custom-made `vitemize` environment to list the responsibilities and achievements of the volunteer role. Each item should start with `\item`. 
+      - Do not make more than 2 items.
+
+      Example:
+      '''latex
+      \section{Awards and Recognition}
+        \headingtwo{Dean's List}
+        \subTitle{University of Manitoba | 2022}
+        \begin{vitemize}
+          \item Achieved a GPA of 3.8 or higher for the academic year.
+          \item Recognized for outstanding academic performance.
+        \end{vitemize}
+      '''
+  expected_output: >
+
+
 references_section:
   description: >
     Extract the reference information of the applicant from the provided data. Then convert the extracted data into the LaTeX format. 

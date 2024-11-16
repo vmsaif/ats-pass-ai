@@ -2,11 +2,39 @@
 {
   "Work Experience": [
     {
-      "Job Title": "Programming Mentor",
-      "Company Name": null,
-      "Timeline": "February 2023 - December 2023",
-      "Technologies, frameworks, and tools Used": "Python, Java, Computer Systems",
-      "Short Description": "Provided one-on-one programming instruction, including software installation, debugging techniques, and computer systems fundamentals."
+      "Job Title": "Sales Manager",
+      "Company Name": "Go Sales",
+      "Timeline": "05/2021 - 08/2024",
+      "Technologies, frameworks, and tools Used": "",
+      "Short Description": "- Directed a team of 20 sales representatives, consistently achieving 120% of sales targets.\n- Orchestrated marketing strategies across various channels, resulting in a 30% increase in sales for TELUS home services and KOODO mobility services.\n- Boosted customer loyalty by 25% through effective after-sales service and referral programs.\n- Managed the company's online presence, elevating engagement by 40% through targeted digital marketing campaigns.\n- Recruited and mentored team members, enhancing performance by 15% through continuous training programs.\n- Analyzed sales data to identify trends and opportunities, leading to a 10% increase in sales efficiency.\n- Executed promotional campaigns, resulting in a 20% increase in new customer acquisitions.\n- Collaborated with cross-functional teams to ensure seamless implementation of marketing strategies.\n- Explored new market opportunities, leading to successful expansion and innovative sales techniques.\n- Provided performance reports to senior management, highlighting key achievements and strategic recommendations."
+    },
+    {
+      "Job Title": "Social Media Manager",
+      "Company Name": "TRICYCLE GAMES INC",
+      "Timeline": "01/2020 - 04/2021",
+      "Technologies, frameworks, and tools Used": "",
+      "Short Description": "- Promoted gaming applications, increasing downloads by 50% on Google Play Store and App Store through targeted social media campaigns.\n- Executed physical and virtual events, enhancing customer engagement by 35%.\n- Developed social media strategies, resulting in a 40% increase in followers and engagement.\n- Explored new marketing strategies, growing market share by 20%.\n- Collaborated with the creative team to produce compelling content, leading to a 25% increase in social media interactions.\n- Monitored social media metrics to track campaign effectiveness and make data-driven decisions.\n- Managed social media advertising budgets, achieving a 15% reduction in cost per acquisition.\n- Responded to customer inquiries and feedback on social media, improving overall customer satisfaction."
+    },
+    {
+      "Job Title": "Business Development Manager",
+      "Company Name": "UNICK CHECK",
+      "Timeline": "09/2020 - 04/2021",
+      "Technologies, frameworks, and tools Used": "",
+      "Short Description": "- Spearheaded business development efforts, driving a 15% growth in new client acquisitions.\n- Established partnerships with key industry players, enhancing the company’s market presence.\n- Developed and executed strategies to penetrate new markets, resulting in a 20% increase in revenue.\n- Negotiated contracts and pricing structures, leading to a 10% improvement in profit margins.\n- Conducted market research to identify growth opportunities, driving product innovation and development.\n- Led presentations and product demonstrations, contributing to successful client onboarding.\n- Collaborated with cross-functional teams to align business objectives with client needs.\n- Tracked and reported on KPIs, providing actionable insights for strategic decision-making."
+    },
+    {
+      "Job Title": "Director of Sales and Business Development",
+      "Company Name": "CLEANROOM DRESS Bangladesh",
+      "Timeline": "01/2020 - 02/2022",
+      "Technologies, frameworks, and tools Used": "",
+      "Short Description": "- Directed sales and business development operations, achieving a 25% increase in annual revenue.\n- Developed and executed long-term growth strategies that expanded the company’s market share by 30%.\n- Led a sales team of 15, implementing training programs that boosted productivity and sales efficiency by 20%.\n- Established and nurtured relationships with key clients, contributing to a 40% improvement in customer retention.\n- Negotiated and secured high-value contracts, increasing the company’s profitability by 15%.\n- Conducted market research and competitive analysis to drive strategic business decisions.\n- Collaborated with internal teams to streamline operations and enhance customer satisfaction.\n- Presented quarterly sales performance reports to the board, highlighting key achievements and growth opportunities."
+    },
+    {
+      "Job Title": "Triangle Mastercard Sales Team Manager",
+      "Company Name": "CANADIAN TIRE",
+      "Timeline": "04/2019 – 02/2020",
+      "Technologies, frameworks, and tools Used": "",
+      "Short Description": "- Managed and led a high-performing team responsible for promoting and selling Triangle Mastercards across multiple retail locations.\n- Consistently exceeded monthly sales targets by 15%, contributing to overall company revenue growth.\n- Developed and implemented sales strategies that increased application conversion rates by 20%.\n- Trained and mentored team members, fostering professional growth and improving sales performance by 25%.\n- Conducted performance reviews and set actionable goals, leading to improved team efficiency and morale.\n- Collaborated with store management to align sales strategies with customer needs and promotional events.\n- Provided detailed sales reports and performance analysis to senior management, offering insights for continued growth."
     }
   ]
 }

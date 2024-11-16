@@ -2,39 +2,38 @@
 {
   "applicant's Experiences with ATS Keywords": {
     "Most Recent Experience": {
-      "Job Title": "ATS Pass AI",
-      "Department/Domain": "Software Development",
-      "Company": "Self-Employed/Personal Project",
-      "Location": "N/A",
-      "Timeline": "January 2024 - Present",
-      "Duration": "9 months",
-      "Technologies": "Python, SQL, Multiagent Systems, AI, RAG Search",
-      "skills": "AI Development, Programming Languages, Cloud, DevOps",
-      "URL": "https://github.com/vmsaif/ats-pass-ai",
-      "Short Description": "Developed an AI-powered resume builder application leveraging Gemini Pro and LangChain.",
+      "Job Title": "Sales Manager",
+      "Department/Domain": "Sales and Marketing",
+      "Company": "Go Sales",
+      "Location": "Not Specified",
+      "Timeline": "May 2021 - August 2024",
+      "Duration": "3 Years 4 Months",
+      "Technologies": "CRM software, Sales Tracking Software, Digital Marketing Platforms",
+      "skills": "Sales Team Leadership, Marketing Strategy, Customer Relationship Management (CRM), Data Analysis, Digital Marketing, Recruitment & Training, Performance Reporting, Sales Target Exceedance, Customer Loyalty Improvement, Online Presence Management",
+      "URL": "N/A",
+      "Short Description": "Successfully led a team of 20 sales representatives, consistently exceeding sales targets by 20% while orchestrating effective marketing strategies.",
       "Key Highlights": [
-        "Developed an AI-powered resume builder application designed to optimize resumes for Applicant Tracking Systems (ATS), improving keyword matching.",
-        "Utilized advanced language models, including Gemini Pro and LangChain, for enhanced natural language processing and resume generation to improve readability and impact.",
-        "Implemented a Multi-agent System powered by CrewAI to facilitate efficient data extraction from user inputs and tailor resumes accordingly for ATS compatibility.",
-        "Achieved an impressive 85% keyword matching rate with user-provided job descriptions, significantly increasing the chances of passing ATS screenings."
+        "Spearheaded sales efforts resulting in consistent achievement of 120% of sales targets, showcasing strong leadership and team management skills.",
+        "Orchestrated impactful marketing strategies across diverse channels, resulting in a 30% increase in sales for TELUS home services and KOODO mobility services.",
+        "Boosted customer loyalty by an impressive 25% through the strategic implementation of after-sales service programs and effective referral programs."
       ]
     },
     "Work Experience/Project Experience": [
       {
-        "Job Title": "Programming Mentor",
-        "Department/Domain": "Education, Programming",
-        "Company": "Self-Employed",
-        "Location": "N/A",
-        "Timeline": "February 2023 - December 2023",
-        "Duration": "11 Months",
-        "Technologies": "Python, Java, Computer Systems",
-        "skills": "Programming Languages, Soft Skills",
-        "URL": null,
-        "Short Description": "Provided private tutoring sessions focused on Python and Java programming, incorporating debugging techniques and software installation.",
+        "Job Title": "Director of Sales and Business Development",
+        "Department/Domain": "Sales and Business Development",
+        "Company": "CLEANROOM DRESS Bangladesh",
+        "Location": "Bangladesh",
+        "Timeline": "January 2020 - February 2022",
+        "Duration": "2 Years 2 Months",
+        "Technologies": "CRM software, Sales Tracking Software, Market Research Tools",
+        "skills": "Sales & Business Development Leadership, Long-Term Growth Strategy, Team Training & Development, Client Relationship Management, Contract Negotiation, Market Research & Analysis, Team Collaboration, Sales Performance Reporting",
+        "URL": "N/A",
+        "Short Description": "Directed sales and business development operations, achieving a 25% increase in annual revenue and a 30% expansion in market share.",
         "Key Highlights": [
-          "Delivered personalized one-on-one programming tutoring sessions tailored to the student's learning style and pace, demonstrating strong communication and interpersonal skills.",
-          "Provided hands-on, practical programming experience using Python and Java, covering fundamental concepts, debugging techniques, and software installation, enhancing problem-solving skills.",
-          "Successfully imparted knowledge and fostered the student's programming skills through adaptive teaching methods and personalized guidance."
+          "Directed sales and business development operations, exceeding revenue goals and securing a 25% increase in annual revenue.",
+          "Developed and executed strategic long-term growth strategies, successfully expanding the company’s market share by an impressive 30%.",
+          "Led and mentored a high-performing sales team of 15 members, implementing impactful training programs that enhanced productivity and sales efficiency by 20%."
         ]
       }
     ]

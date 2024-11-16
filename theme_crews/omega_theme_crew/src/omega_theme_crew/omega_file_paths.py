@@ -36,6 +36,7 @@ OMEGA_PATHS = {
     "skill_section": f"{sub_tex_files_dir}/skill_section.tex",
     "coursework_section": f"{sub_tex_files_dir}/coursework_section.tex",
     "volunteer_section": f"{sub_tex_files_dir}/volunteer_section.tex",
+    "awards_recognization": f"{sub_tex_files_dir}/awards_recognization.tex",
     "references_section": f"{sub_tex_files_dir}/references_section.tex",
     "career_objective_section": f"{sub_tex_files_dir}/career_objective_section.tex",
     

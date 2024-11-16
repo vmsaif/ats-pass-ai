@@ -16,7 +16,6 @@
 """
 
 
-import os
 import sys
 from info_collection.tools.llm_task import LLMTask
 from info_collection.llm_tasks_instructions import organize_system_instruction, jd_extraction_system_instruction, company_value_extraction_system_instruction, job_description_fetch_system_instruction
